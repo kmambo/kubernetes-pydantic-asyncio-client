@@ -215,8 +215,6 @@ Method | HTTP request | Description
 # **connect_delete_namespaced_pod_proxy**
 > str connect_delete_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect DELETE requests to proxy of Pod
 
 ### Example
@@ -296,8 +294,6 @@ Name | Type | Description  | Notes
 
 # **connect_delete_namespaced_pod_proxy_with_path**
 > str connect_delete_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect DELETE requests to proxy of Pod
 
@@ -381,8 +377,6 @@ Name | Type | Description  | Notes
 # **connect_delete_namespaced_service_proxy**
 > str connect_delete_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect DELETE requests to proxy of Service
 
 ### Example
@@ -462,8 +456,6 @@ Name | Type | Description  | Notes
 
 # **connect_delete_namespaced_service_proxy_with_path**
 > str connect_delete_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect DELETE requests to proxy of Service
 
@@ -547,8 +539,6 @@ Name | Type | Description  | Notes
 # **connect_delete_node_proxy**
 > str connect_delete_node_proxy(name, path=path)
 
-
-
 connect DELETE requests to proxy of Node
 
 ### Example
@@ -626,8 +616,6 @@ Name | Type | Description  | Notes
 
 # **connect_delete_node_proxy_with_path**
 > str connect_delete_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect DELETE requests to proxy of Node
 
@@ -708,8 +696,6 @@ Name | Type | Description  | Notes
 
 # **connect_get_namespaced_pod_attach**
 > str connect_get_namespaced_pod_attach(name, namespace, container=container, stderr=stderr, stdin=stdin, stdout=stdout, tty=tty)
-
-
 
 connect GET requests to attach of Pod
 
@@ -798,8 +784,6 @@ Name | Type | Description  | Notes
 
 # **connect_get_namespaced_pod_exec**
 > str connect_get_namespaced_pod_exec(name, namespace, command=command, container=container, stderr=stderr, stdin=stdin, stdout=stdout, tty=tty)
-
-
 
 connect GET requests to exec of Pod
 
@@ -891,8 +875,6 @@ Name | Type | Description  | Notes
 # **connect_get_namespaced_pod_portforward**
 > str connect_get_namespaced_pod_portforward(name, namespace, ports=ports)
 
-
-
 connect GET requests to portforward of Pod
 
 ### Example
@@ -973,8 +955,6 @@ Name | Type | Description  | Notes
 # **connect_get_namespaced_pod_proxy**
 > str connect_get_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect GET requests to proxy of Pod
 
 ### Example
@@ -1054,8 +1034,6 @@ Name | Type | Description  | Notes
 
 # **connect_get_namespaced_pod_proxy_with_path**
 > str connect_get_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect GET requests to proxy of Pod
 
@@ -1139,8 +1117,6 @@ Name | Type | Description  | Notes
 # **connect_get_namespaced_service_proxy**
 > str connect_get_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect GET requests to proxy of Service
 
 ### Example
@@ -1220,8 +1196,6 @@ Name | Type | Description  | Notes
 
 # **connect_get_namespaced_service_proxy_with_path**
 > str connect_get_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect GET requests to proxy of Service
 
@@ -1305,8 +1279,6 @@ Name | Type | Description  | Notes
 # **connect_get_node_proxy**
 > str connect_get_node_proxy(name, path=path)
 
-
-
 connect GET requests to proxy of Node
 
 ### Example
@@ -1384,8 +1356,6 @@ Name | Type | Description  | Notes
 
 # **connect_get_node_proxy_with_path**
 > str connect_get_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect GET requests to proxy of Node
 
@@ -1467,8 +1437,6 @@ Name | Type | Description  | Notes
 # **connect_head_namespaced_pod_proxy**
 > str connect_head_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect HEAD requests to proxy of Pod
 
 ### Example
@@ -1548,8 +1516,6 @@ Name | Type | Description  | Notes
 
 # **connect_head_namespaced_pod_proxy_with_path**
 > str connect_head_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect HEAD requests to proxy of Pod
 
@@ -1633,8 +1599,6 @@ Name | Type | Description  | Notes
 # **connect_head_namespaced_service_proxy**
 > str connect_head_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect HEAD requests to proxy of Service
 
 ### Example
@@ -1714,8 +1678,6 @@ Name | Type | Description  | Notes
 
 # **connect_head_namespaced_service_proxy_with_path**
 > str connect_head_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect HEAD requests to proxy of Service
 
@@ -1799,8 +1761,6 @@ Name | Type | Description  | Notes
 # **connect_head_node_proxy**
 > str connect_head_node_proxy(name, path=path)
 
-
-
 connect HEAD requests to proxy of Node
 
 ### Example
@@ -1878,8 +1838,6 @@ Name | Type | Description  | Notes
 
 # **connect_head_node_proxy_with_path**
 > str connect_head_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect HEAD requests to proxy of Node
 
@@ -1961,8 +1919,6 @@ Name | Type | Description  | Notes
 # **connect_options_namespaced_pod_proxy**
 > str connect_options_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect OPTIONS requests to proxy of Pod
 
 ### Example
@@ -2042,8 +1998,6 @@ Name | Type | Description  | Notes
 
 # **connect_options_namespaced_pod_proxy_with_path**
 > str connect_options_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect OPTIONS requests to proxy of Pod
 
@@ -2127,8 +2081,6 @@ Name | Type | Description  | Notes
 # **connect_options_namespaced_service_proxy**
 > str connect_options_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect OPTIONS requests to proxy of Service
 
 ### Example
@@ -2208,8 +2160,6 @@ Name | Type | Description  | Notes
 
 # **connect_options_namespaced_service_proxy_with_path**
 > str connect_options_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect OPTIONS requests to proxy of Service
 
@@ -2293,8 +2243,6 @@ Name | Type | Description  | Notes
 # **connect_options_node_proxy**
 > str connect_options_node_proxy(name, path=path)
 
-
-
 connect OPTIONS requests to proxy of Node
 
 ### Example
@@ -2372,8 +2320,6 @@ Name | Type | Description  | Notes
 
 # **connect_options_node_proxy_with_path**
 > str connect_options_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect OPTIONS requests to proxy of Node
 
@@ -2455,8 +2401,6 @@ Name | Type | Description  | Notes
 # **connect_patch_namespaced_pod_proxy**
 > str connect_patch_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect PATCH requests to proxy of Pod
 
 ### Example
@@ -2536,8 +2480,6 @@ Name | Type | Description  | Notes
 
 # **connect_patch_namespaced_pod_proxy_with_path**
 > str connect_patch_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect PATCH requests to proxy of Pod
 
@@ -2621,8 +2563,6 @@ Name | Type | Description  | Notes
 # **connect_patch_namespaced_service_proxy**
 > str connect_patch_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect PATCH requests to proxy of Service
 
 ### Example
@@ -2702,8 +2642,6 @@ Name | Type | Description  | Notes
 
 # **connect_patch_namespaced_service_proxy_with_path**
 > str connect_patch_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect PATCH requests to proxy of Service
 
@@ -2787,8 +2725,6 @@ Name | Type | Description  | Notes
 # **connect_patch_node_proxy**
 > str connect_patch_node_proxy(name, path=path)
 
-
-
 connect PATCH requests to proxy of Node
 
 ### Example
@@ -2866,8 +2802,6 @@ Name | Type | Description  | Notes
 
 # **connect_patch_node_proxy_with_path**
 > str connect_patch_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect PATCH requests to proxy of Node
 
@@ -2948,8 +2882,6 @@ Name | Type | Description  | Notes
 
 # **connect_post_namespaced_pod_attach**
 > str connect_post_namespaced_pod_attach(name, namespace, container=container, stderr=stderr, stdin=stdin, stdout=stdout, tty=tty)
-
-
 
 connect POST requests to attach of Pod
 
@@ -3038,8 +2970,6 @@ Name | Type | Description  | Notes
 
 # **connect_post_namespaced_pod_exec**
 > str connect_post_namespaced_pod_exec(name, namespace, command=command, container=container, stderr=stderr, stdin=stdin, stdout=stdout, tty=tty)
-
-
 
 connect POST requests to exec of Pod
 
@@ -3131,8 +3061,6 @@ Name | Type | Description  | Notes
 # **connect_post_namespaced_pod_portforward**
 > str connect_post_namespaced_pod_portforward(name, namespace, ports=ports)
 
-
-
 connect POST requests to portforward of Pod
 
 ### Example
@@ -3213,8 +3141,6 @@ Name | Type | Description  | Notes
 # **connect_post_namespaced_pod_proxy**
 > str connect_post_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect POST requests to proxy of Pod
 
 ### Example
@@ -3294,8 +3220,6 @@ Name | Type | Description  | Notes
 
 # **connect_post_namespaced_pod_proxy_with_path**
 > str connect_post_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect POST requests to proxy of Pod
 
@@ -3379,8 +3303,6 @@ Name | Type | Description  | Notes
 # **connect_post_namespaced_service_proxy**
 > str connect_post_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect POST requests to proxy of Service
 
 ### Example
@@ -3460,8 +3382,6 @@ Name | Type | Description  | Notes
 
 # **connect_post_namespaced_service_proxy_with_path**
 > str connect_post_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect POST requests to proxy of Service
 
@@ -3545,8 +3465,6 @@ Name | Type | Description  | Notes
 # **connect_post_node_proxy**
 > str connect_post_node_proxy(name, path=path)
 
-
-
 connect POST requests to proxy of Node
 
 ### Example
@@ -3624,8 +3542,6 @@ Name | Type | Description  | Notes
 
 # **connect_post_node_proxy_with_path**
 > str connect_post_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect POST requests to proxy of Node
 
@@ -3707,8 +3623,6 @@ Name | Type | Description  | Notes
 # **connect_put_namespaced_pod_proxy**
 > str connect_put_namespaced_pod_proxy(name, namespace, path=path)
 
-
-
 connect PUT requests to proxy of Pod
 
 ### Example
@@ -3788,8 +3702,6 @@ Name | Type | Description  | Notes
 
 # **connect_put_namespaced_pod_proxy_with_path**
 > str connect_put_namespaced_pod_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect PUT requests to proxy of Pod
 
@@ -3873,8 +3785,6 @@ Name | Type | Description  | Notes
 # **connect_put_namespaced_service_proxy**
 > str connect_put_namespaced_service_proxy(name, namespace, path=path)
 
-
-
 connect PUT requests to proxy of Service
 
 ### Example
@@ -3954,8 +3864,6 @@ Name | Type | Description  | Notes
 
 # **connect_put_namespaced_service_proxy_with_path**
 > str connect_put_namespaced_service_proxy_with_path(name, namespace, path, path2=path2)
-
-
 
 connect PUT requests to proxy of Service
 
@@ -4039,8 +3947,6 @@ Name | Type | Description  | Notes
 # **connect_put_node_proxy**
 > str connect_put_node_proxy(name, path=path)
 
-
-
 connect PUT requests to proxy of Node
 
 ### Example
@@ -4118,8 +4024,6 @@ Name | Type | Description  | Notes
 
 # **connect_put_node_proxy_with_path**
 > str connect_put_node_proxy_with_path(name, path, path2=path2)
-
-
 
 connect PUT requests to proxy of Node
 
@@ -4200,8 +4104,6 @@ Name | Type | Description  | Notes
 
 # **create_namespace**
 > V1Namespace create_namespace(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a Namespace
 
@@ -4289,8 +4191,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_binding**
 > V1Binding create_namespaced_binding(namespace, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
-
-
 
 create a Binding
 
@@ -4381,8 +4281,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_config_map**
 > V1ConfigMap create_namespaced_config_map(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ConfigMap
 
 ### Example
@@ -4471,8 +4369,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_endpoints**
 > V1Endpoints create_namespaced_endpoints(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create Endpoints
 
@@ -4563,8 +4459,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_event**
 > CoreV1Event create_namespaced_event(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create an Event
 
 ### Example
@@ -4653,8 +4547,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_limit_range**
 > V1LimitRange create_namespaced_limit_range(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a LimitRange
 
@@ -4745,8 +4637,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_persistent_volume_claim**
 > V1PersistentVolumeClaim create_namespaced_persistent_volume_claim(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a PersistentVolumeClaim
 
 ### Example
@@ -4836,8 +4726,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_pod**
 > V1Pod create_namespaced_pod(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a Pod
 
 ### Example
@@ -4926,8 +4814,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_pod_binding**
 > V1Binding create_namespaced_pod_binding(name, namespace, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
-
-
 
 create binding of a Pod
 
@@ -5020,8 +4906,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_pod_eviction**
 > V1Eviction create_namespaced_pod_eviction(name, namespace, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 create eviction of a Pod
 
 ### Example
@@ -5113,8 +4997,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_pod_template**
 > V1PodTemplate create_namespaced_pod_template(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a PodTemplate
 
 ### Example
@@ -5203,8 +5085,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_replication_controller**
 > V1ReplicationController create_namespaced_replication_controller(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a ReplicationController
 
@@ -5295,8 +5175,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_resource_quota**
 > V1ResourceQuota create_namespaced_resource_quota(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ResourceQuota
 
 ### Example
@@ -5385,8 +5263,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_secret**
 > V1Secret create_namespaced_secret(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a Secret
 
@@ -5477,8 +5353,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_service**
 > V1Service create_namespaced_service(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a Service
 
 ### Example
@@ -5568,8 +5442,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_service_account**
 > V1ServiceAccount create_namespaced_service_account(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ServiceAccount
 
 ### Example
@@ -5658,8 +5530,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_service_account_token**
 > AuthenticationV1TokenRequest create_namespaced_service_account_token(name, namespace, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
-
-
 
 create token of a ServiceAccount
 
@@ -5752,8 +5622,6 @@ Name | Type | Description  | Notes
 # **create_node**
 > V1Node create_node(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a Node
 
 ### Example
@@ -5841,8 +5709,6 @@ Name | Type | Description  | Notes
 # **create_persistent_volume**
 > V1PersistentVolume create_persistent_volume(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a PersistentVolume
 
 ### Example
@@ -5929,8 +5795,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_config_map**
 > V1Status delete_collection_namespaced_config_map(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of ConfigMap
 
@@ -6040,8 +5904,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_endpoints**
 > V1Status delete_collection_namespaced_endpoints(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of Endpoints
 
 ### Example
@@ -6149,8 +6011,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_event**
 > V1Status delete_collection_namespaced_event(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of Event
 
@@ -6260,8 +6120,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_limit_range**
 > V1Status delete_collection_namespaced_limit_range(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of LimitRange
 
 ### Example
@@ -6369,8 +6227,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_persistent_volume_claim**
 > V1Status delete_collection_namespaced_persistent_volume_claim(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of PersistentVolumeClaim
 
@@ -6480,8 +6336,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_pod**
 > V1Status delete_collection_namespaced_pod(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of Pod
 
 ### Example
@@ -6589,8 +6443,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_pod_template**
 > V1Status delete_collection_namespaced_pod_template(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of PodTemplate
 
@@ -6700,8 +6552,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_replication_controller**
 > V1Status delete_collection_namespaced_replication_controller(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ReplicationController
 
 ### Example
@@ -6809,8 +6659,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_resource_quota**
 > V1Status delete_collection_namespaced_resource_quota(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of ResourceQuota
 
@@ -6920,8 +6768,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_secret**
 > V1Status delete_collection_namespaced_secret(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of Secret
 
 ### Example
@@ -7029,8 +6875,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_service**
 > V1Status delete_collection_namespaced_service(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of Service
 
@@ -7140,8 +6984,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_service_account**
 > V1Status delete_collection_namespaced_service_account(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ServiceAccount
 
 ### Example
@@ -7250,8 +7092,6 @@ Name | Type | Description  | Notes
 # **delete_collection_node**
 > V1Status delete_collection_node(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of Node
 
 ### Example
@@ -7357,8 +7197,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_persistent_volume**
 > V1Status delete_collection_persistent_volume(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of PersistentVolume
 
@@ -7466,8 +7304,6 @@ Name | Type | Description  | Notes
 # **delete_namespace**
 > V1Status delete_namespace(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a Namespace
 
 ### Example
@@ -7560,8 +7396,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_config_map**
 > V1Status delete_namespaced_config_map(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a ConfigMap
 
@@ -7658,8 +7492,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_endpoints**
 > V1Status delete_namespaced_endpoints(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete Endpoints
 
 ### Example
@@ -7754,8 +7586,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_event**
 > V1Status delete_namespaced_event(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete an Event
 
@@ -7852,8 +7682,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_limit_range**
 > V1Status delete_namespaced_limit_range(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a LimitRange
 
 ### Example
@@ -7948,8 +7776,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_persistent_volume_claim**
 > V1PersistentVolumeClaim delete_namespaced_persistent_volume_claim(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a PersistentVolumeClaim
 
@@ -8046,8 +7872,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_pod**
 > V1Pod delete_namespaced_pod(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a Pod
 
 ### Example
@@ -8142,8 +7966,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_pod_template**
 > V1PodTemplate delete_namespaced_pod_template(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a PodTemplate
 
@@ -8240,8 +8062,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_replication_controller**
 > V1Status delete_namespaced_replication_controller(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ReplicationController
 
 ### Example
@@ -8336,8 +8156,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_resource_quota**
 > V1ResourceQuota delete_namespaced_resource_quota(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a ResourceQuota
 
@@ -8434,8 +8252,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_secret**
 > V1Status delete_namespaced_secret(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a Secret
 
 ### Example
@@ -8530,8 +8346,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_service**
 > V1Service delete_namespaced_service(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a Service
 
@@ -8628,8 +8442,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_service_account**
 > V1ServiceAccount delete_namespaced_service_account(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ServiceAccount
 
 ### Example
@@ -8725,8 +8537,6 @@ Name | Type | Description  | Notes
 # **delete_node**
 > V1Status delete_node(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a Node
 
 ### Example
@@ -8819,8 +8629,6 @@ Name | Type | Description  | Notes
 
 # **delete_persistent_volume**
 > V1PersistentVolume delete_persistent_volume(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a PersistentVolume
 
@@ -8915,8 +8723,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -8989,8 +8795,6 @@ This endpoint does not need any parameter.
 
 # **list_component_status**
 > V1ComponentStatusList list_component_status(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list objects of kind ComponentStatus
 
@@ -9089,8 +8893,6 @@ Name | Type | Description  | Notes
 # **list_config_map_for_all_namespaces**
 > V1ConfigMapList list_config_map_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ConfigMap
 
 ### Example
@@ -9187,8 +8989,6 @@ Name | Type | Description  | Notes
 
 # **list_endpoints_for_all_namespaces**
 > V1EndpointsList list_endpoints_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Endpoints
 
@@ -9287,8 +9087,6 @@ Name | Type | Description  | Notes
 # **list_event_for_all_namespaces**
 > CoreV1EventList list_event_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Event
 
 ### Example
@@ -9385,8 +9183,6 @@ Name | Type | Description  | Notes
 
 # **list_limit_range_for_all_namespaces**
 > V1LimitRangeList list_limit_range_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind LimitRange
 
@@ -9485,8 +9281,6 @@ Name | Type | Description  | Notes
 # **list_namespace**
 > V1NamespaceList list_namespace(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Namespace
 
 ### Example
@@ -9583,8 +9377,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_config_map**
 > V1ConfigMapList list_namespaced_config_map(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ConfigMap
 
@@ -9685,8 +9477,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_endpoints**
 > V1EndpointsList list_namespaced_endpoints(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Endpoints
 
 ### Example
@@ -9785,8 +9575,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_event**
 > CoreV1EventList list_namespaced_event(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Event
 
@@ -9887,8 +9675,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_limit_range**
 > V1LimitRangeList list_namespaced_limit_range(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind LimitRange
 
 ### Example
@@ -9987,8 +9773,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_persistent_volume_claim**
 > V1PersistentVolumeClaimList list_namespaced_persistent_volume_claim(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind PersistentVolumeClaim
 
@@ -10089,8 +9873,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_pod**
 > V1PodList list_namespaced_pod(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Pod
 
 ### Example
@@ -10189,8 +9971,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_pod_template**
 > V1PodTemplateList list_namespaced_pod_template(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind PodTemplate
 
@@ -10291,8 +10071,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_replication_controller**
 > V1ReplicationControllerList list_namespaced_replication_controller(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ReplicationController
 
 ### Example
@@ -10391,8 +10169,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_resource_quota**
 > V1ResourceQuotaList list_namespaced_resource_quota(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ResourceQuota
 
@@ -10493,8 +10269,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_secret**
 > V1SecretList list_namespaced_secret(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Secret
 
 ### Example
@@ -10593,8 +10367,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_service**
 > V1ServiceList list_namespaced_service(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Service
 
@@ -10695,8 +10467,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_service_account**
 > V1ServiceAccountList list_namespaced_service_account(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ServiceAccount
 
 ### Example
@@ -10796,8 +10566,6 @@ Name | Type | Description  | Notes
 # **list_node**
 > V1NodeList list_node(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Node
 
 ### Example
@@ -10894,8 +10662,6 @@ Name | Type | Description  | Notes
 
 # **list_persistent_volume**
 > V1PersistentVolumeList list_persistent_volume(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind PersistentVolume
 
@@ -10994,8 +10760,6 @@ Name | Type | Description  | Notes
 # **list_persistent_volume_claim_for_all_namespaces**
 > V1PersistentVolumeClaimList list_persistent_volume_claim_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind PersistentVolumeClaim
 
 ### Example
@@ -11092,8 +10856,6 @@ Name | Type | Description  | Notes
 
 # **list_pod_for_all_namespaces**
 > V1PodList list_pod_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Pod
 
@@ -11192,8 +10954,6 @@ Name | Type | Description  | Notes
 # **list_pod_template_for_all_namespaces**
 > V1PodTemplateList list_pod_template_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind PodTemplate
 
 ### Example
@@ -11290,8 +11050,6 @@ Name | Type | Description  | Notes
 
 # **list_replication_controller_for_all_namespaces**
 > V1ReplicationControllerList list_replication_controller_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ReplicationController
 
@@ -11390,8 +11148,6 @@ Name | Type | Description  | Notes
 # **list_resource_quota_for_all_namespaces**
 > V1ResourceQuotaList list_resource_quota_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ResourceQuota
 
 ### Example
@@ -11488,8 +11244,6 @@ Name | Type | Description  | Notes
 
 # **list_secret_for_all_namespaces**
 > V1SecretList list_secret_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Secret
 
@@ -11588,8 +11342,6 @@ Name | Type | Description  | Notes
 # **list_service_account_for_all_namespaces**
 > V1ServiceAccountList list_service_account_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ServiceAccount
 
 ### Example
@@ -11686,8 +11438,6 @@ Name | Type | Description  | Notes
 
 # **list_service_for_all_namespaces**
 > V1ServiceList list_service_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Service
 
@@ -11786,8 +11536,6 @@ Name | Type | Description  | Notes
 # **patch_namespace**
 > V1Namespace patch_namespace(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified Namespace
 
 ### Example
@@ -11878,8 +11626,6 @@ Name | Type | Description  | Notes
 # **patch_namespace_status**
 > V1Namespace patch_namespace_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified Namespace
 
 ### Example
@@ -11969,8 +11715,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_config_map**
 > V1ConfigMap patch_namespaced_config_map(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified ConfigMap
 
@@ -12064,8 +11808,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_endpoints**
 > V1Endpoints patch_namespaced_endpoints(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified Endpoints
 
 ### Example
@@ -12157,8 +11899,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_event**
 > CoreV1Event patch_namespaced_event(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified Event
 
@@ -12252,8 +11992,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_limit_range**
 > V1LimitRange patch_namespaced_limit_range(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified LimitRange
 
 ### Example
@@ -12345,8 +12083,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_persistent_volume_claim**
 > V1PersistentVolumeClaim patch_namespaced_persistent_volume_claim(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified PersistentVolumeClaim
 
@@ -12440,8 +12176,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_persistent_volume_claim_status**
 > V1PersistentVolumeClaim patch_namespaced_persistent_volume_claim_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified PersistentVolumeClaim
 
 ### Example
@@ -12533,8 +12267,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_pod**
 > V1Pod patch_namespaced_pod(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified Pod
 
@@ -12628,8 +12360,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_pod_ephemeralcontainers**
 > V1Pod patch_namespaced_pod_ephemeralcontainers(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update ephemeralcontainers of the specified Pod
 
 ### Example
@@ -12721,8 +12451,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_pod_resize**
 > V1Pod patch_namespaced_pod_resize(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update resize of the specified Pod
 
@@ -12816,8 +12544,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_pod_status**
 > V1Pod patch_namespaced_pod_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified Pod
 
 ### Example
@@ -12909,8 +12635,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_pod_template**
 > V1PodTemplate patch_namespaced_pod_template(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified PodTemplate
 
@@ -13004,8 +12728,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_replication_controller**
 > V1ReplicationController patch_namespaced_replication_controller(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ReplicationController
 
 ### Example
@@ -13097,8 +12819,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_replication_controller_scale**
 > V1Scale patch_namespaced_replication_controller_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update scale of the specified ReplicationController
 
@@ -13192,8 +12912,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_replication_controller_status**
 > V1ReplicationController patch_namespaced_replication_controller_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified ReplicationController
 
 ### Example
@@ -13285,8 +13003,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_resource_quota**
 > V1ResourceQuota patch_namespaced_resource_quota(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified ResourceQuota
 
@@ -13380,8 +13096,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_resource_quota_status**
 > V1ResourceQuota patch_namespaced_resource_quota_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified ResourceQuota
 
 ### Example
@@ -13473,8 +13187,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_secret**
 > V1Secret patch_namespaced_secret(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified Secret
 
@@ -13568,8 +13280,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_service**
 > V1Service patch_namespaced_service(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified Service
 
 ### Example
@@ -13661,8 +13371,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_service_account**
 > V1ServiceAccount patch_namespaced_service_account(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified ServiceAccount
 
@@ -13756,8 +13464,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_service_status**
 > V1Service patch_namespaced_service_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified Service
 
 ### Example
@@ -13850,8 +13556,6 @@ Name | Type | Description  | Notes
 # **patch_node**
 > V1Node patch_node(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified Node
 
 ### Example
@@ -13941,8 +13645,6 @@ Name | Type | Description  | Notes
 
 # **patch_node_status**
 > V1Node patch_node_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified Node
 
@@ -14034,8 +13736,6 @@ Name | Type | Description  | Notes
 # **patch_persistent_volume**
 > V1PersistentVolume patch_persistent_volume(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified PersistentVolume
 
 ### Example
@@ -14125,8 +13825,6 @@ Name | Type | Description  | Notes
 
 # **patch_persistent_volume_status**
 > V1PersistentVolume patch_persistent_volume_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified PersistentVolume
 
@@ -14218,8 +13916,6 @@ Name | Type | Description  | Notes
 # **read_component_status**
 > V1ComponentStatus read_component_status(name, pretty=pretty)
 
-
-
 read the specified ComponentStatus
 
 ### Example
@@ -14298,8 +13994,6 @@ Name | Type | Description  | Notes
 
 # **read_namespace**
 > V1Namespace read_namespace(name, pretty=pretty)
-
-
 
 read the specified Namespace
 
@@ -14380,8 +14074,6 @@ Name | Type | Description  | Notes
 # **read_namespace_status**
 > V1Namespace read_namespace_status(name, pretty=pretty)
 
-
-
 read status of the specified Namespace
 
 ### Example
@@ -14460,8 +14152,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_config_map**
 > V1ConfigMap read_namespaced_config_map(name, namespace, pretty=pretty)
-
-
 
 read the specified ConfigMap
 
@@ -14544,8 +14234,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_endpoints**
 > V1Endpoints read_namespaced_endpoints(name, namespace, pretty=pretty)
 
-
-
 read the specified Endpoints
 
 ### Example
@@ -14626,8 +14314,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_event**
 > CoreV1Event read_namespaced_event(name, namespace, pretty=pretty)
-
-
 
 read the specified Event
 
@@ -14710,8 +14396,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_limit_range**
 > V1LimitRange read_namespaced_limit_range(name, namespace, pretty=pretty)
 
-
-
 read the specified LimitRange
 
 ### Example
@@ -14792,8 +14476,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_persistent_volume_claim**
 > V1PersistentVolumeClaim read_namespaced_persistent_volume_claim(name, namespace, pretty=pretty)
-
-
 
 read the specified PersistentVolumeClaim
 
@@ -14876,8 +14558,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_persistent_volume_claim_status**
 > V1PersistentVolumeClaim read_namespaced_persistent_volume_claim_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified PersistentVolumeClaim
 
 ### Example
@@ -14958,8 +14638,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_pod**
 > V1Pod read_namespaced_pod(name, namespace, pretty=pretty)
-
-
 
 read the specified Pod
 
@@ -15042,8 +14720,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_pod_ephemeralcontainers**
 > V1Pod read_namespaced_pod_ephemeralcontainers(name, namespace, pretty=pretty)
 
-
-
 read ephemeralcontainers of the specified Pod
 
 ### Example
@@ -15124,8 +14800,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_pod_log**
 > str read_namespaced_pod_log(name, namespace, container=container, follow=follow, insecure_skip_tls_verify_backend=insecure_skip_tls_verify_backend, limit_bytes=limit_bytes, pretty=pretty, previous=previous, since_seconds=since_seconds, stream=stream, tail_lines=tail_lines, timestamps=timestamps)
-
-
 
 read log of the specified Pod
 
@@ -15225,8 +14899,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_pod_resize**
 > V1Pod read_namespaced_pod_resize(name, namespace, pretty=pretty)
 
-
-
 read resize of the specified Pod
 
 ### Example
@@ -15307,8 +14979,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_pod_status**
 > V1Pod read_namespaced_pod_status(name, namespace, pretty=pretty)
-
-
 
 read status of the specified Pod
 
@@ -15391,8 +15061,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_pod_template**
 > V1PodTemplate read_namespaced_pod_template(name, namespace, pretty=pretty)
 
-
-
 read the specified PodTemplate
 
 ### Example
@@ -15473,8 +15141,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_replication_controller**
 > V1ReplicationController read_namespaced_replication_controller(name, namespace, pretty=pretty)
-
-
 
 read the specified ReplicationController
 
@@ -15557,8 +15223,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_replication_controller_scale**
 > V1Scale read_namespaced_replication_controller_scale(name, namespace, pretty=pretty)
 
-
-
 read scale of the specified ReplicationController
 
 ### Example
@@ -15639,8 +15303,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_replication_controller_status**
 > V1ReplicationController read_namespaced_replication_controller_status(name, namespace, pretty=pretty)
-
-
 
 read status of the specified ReplicationController
 
@@ -15723,8 +15385,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_resource_quota**
 > V1ResourceQuota read_namespaced_resource_quota(name, namespace, pretty=pretty)
 
-
-
 read the specified ResourceQuota
 
 ### Example
@@ -15805,8 +15465,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_resource_quota_status**
 > V1ResourceQuota read_namespaced_resource_quota_status(name, namespace, pretty=pretty)
-
-
 
 read status of the specified ResourceQuota
 
@@ -15889,8 +15547,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_secret**
 > V1Secret read_namespaced_secret(name, namespace, pretty=pretty)
 
-
-
 read the specified Secret
 
 ### Example
@@ -15971,8 +15627,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_service**
 > V1Service read_namespaced_service(name, namespace, pretty=pretty)
-
-
 
 read the specified Service
 
@@ -16055,8 +15709,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_service_account**
 > V1ServiceAccount read_namespaced_service_account(name, namespace, pretty=pretty)
 
-
-
 read the specified ServiceAccount
 
 ### Example
@@ -16137,8 +15789,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_service_status**
 > V1Service read_namespaced_service_status(name, namespace, pretty=pretty)
-
-
 
 read status of the specified Service
 
@@ -16221,8 +15871,6 @@ Name | Type | Description  | Notes
 # **read_node**
 > V1Node read_node(name, pretty=pretty)
 
-
-
 read the specified Node
 
 ### Example
@@ -16301,8 +15949,6 @@ Name | Type | Description  | Notes
 
 # **read_node_status**
 > V1Node read_node_status(name, pretty=pretty)
-
-
 
 read status of the specified Node
 
@@ -16383,8 +16029,6 @@ Name | Type | Description  | Notes
 # **read_persistent_volume**
 > V1PersistentVolume read_persistent_volume(name, pretty=pretty)
 
-
-
 read the specified PersistentVolume
 
 ### Example
@@ -16464,8 +16108,6 @@ Name | Type | Description  | Notes
 # **read_persistent_volume_status**
 > V1PersistentVolume read_persistent_volume_status(name, pretty=pretty)
 
-
-
 read status of the specified PersistentVolume
 
 ### Example
@@ -16544,8 +16186,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespace**
 > V1Namespace replace_namespace(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified Namespace
 
@@ -16635,8 +16275,6 @@ Name | Type | Description  | Notes
 # **replace_namespace_finalize**
 > V1Namespace replace_namespace_finalize(name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 replace finalize of the specified Namespace
 
 ### Example
@@ -16725,8 +16363,6 @@ Name | Type | Description  | Notes
 # **replace_namespace_status**
 > V1Namespace replace_namespace_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified Namespace
 
 ### Example
@@ -16814,8 +16450,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_config_map**
 > V1ConfigMap replace_namespaced_config_map(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ConfigMap
 
@@ -16907,8 +16541,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_endpoints**
 > V1Endpoints replace_namespaced_endpoints(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified Endpoints
 
 ### Example
@@ -16998,8 +16630,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_event**
 > CoreV1Event replace_namespaced_event(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified Event
 
@@ -17091,8 +16721,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_limit_range**
 > V1LimitRange replace_namespaced_limit_range(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified LimitRange
 
 ### Example
@@ -17182,8 +16810,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_persistent_volume_claim**
 > V1PersistentVolumeClaim replace_namespaced_persistent_volume_claim(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified PersistentVolumeClaim
 
@@ -17275,8 +16901,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_persistent_volume_claim_status**
 > V1PersistentVolumeClaim replace_namespaced_persistent_volume_claim_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified PersistentVolumeClaim
 
 ### Example
@@ -17366,8 +16990,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_pod**
 > V1Pod replace_namespaced_pod(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified Pod
 
@@ -17459,8 +17081,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_pod_ephemeralcontainers**
 > V1Pod replace_namespaced_pod_ephemeralcontainers(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace ephemeralcontainers of the specified Pod
 
 ### Example
@@ -17550,8 +17170,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_pod_resize**
 > V1Pod replace_namespaced_pod_resize(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace resize of the specified Pod
 
@@ -17643,8 +17261,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_pod_status**
 > V1Pod replace_namespaced_pod_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified Pod
 
 ### Example
@@ -17734,8 +17350,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_pod_template**
 > V1PodTemplate replace_namespaced_pod_template(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified PodTemplate
 
@@ -17827,8 +17441,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_replication_controller**
 > V1ReplicationController replace_namespaced_replication_controller(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified ReplicationController
 
 ### Example
@@ -17918,8 +17530,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_replication_controller_scale**
 > V1Scale replace_namespaced_replication_controller_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace scale of the specified ReplicationController
 
@@ -18011,8 +17621,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_replication_controller_status**
 > V1ReplicationController replace_namespaced_replication_controller_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified ReplicationController
 
 ### Example
@@ -18102,8 +17710,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_resource_quota**
 > V1ResourceQuota replace_namespaced_resource_quota(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ResourceQuota
 
@@ -18195,8 +17801,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_resource_quota_status**
 > V1ResourceQuota replace_namespaced_resource_quota_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified ResourceQuota
 
 ### Example
@@ -18286,8 +17890,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_secret**
 > V1Secret replace_namespaced_secret(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified Secret
 
@@ -18379,8 +17981,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_service**
 > V1Service replace_namespaced_service(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified Service
 
 ### Example
@@ -18470,8 +18070,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_service_account**
 > V1ServiceAccount replace_namespaced_service_account(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ServiceAccount
 
@@ -18563,8 +18161,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_service_status**
 > V1Service replace_namespaced_service_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified Service
 
 ### Example
@@ -18655,8 +18251,6 @@ Name | Type | Description  | Notes
 # **replace_node**
 > V1Node replace_node(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified Node
 
 ### Example
@@ -18744,8 +18338,6 @@ Name | Type | Description  | Notes
 
 # **replace_node_status**
 > V1Node replace_node_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified Node
 
@@ -18835,8 +18427,6 @@ Name | Type | Description  | Notes
 # **replace_persistent_volume**
 > V1PersistentVolume replace_persistent_volume(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified PersistentVolume
 
 ### Example
@@ -18924,8 +18514,6 @@ Name | Type | Description  | Notes
 
 # **replace_persistent_volume_status**
 > V1PersistentVolume replace_persistent_volume_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified PersistentVolume
 

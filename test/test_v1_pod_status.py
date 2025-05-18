@@ -93,6 +93,7 @@ class TestV1PodStatus(unittest.TestCase):
                         restart_count = 56, 
                         started = True, 
                         state = kubernetes_asyncio.client.models.v1/container_state.v1.ContainerState(), 
+                        stop_signal = '', 
                         user = kubernetes_asyncio.client.models.v1/container_user.v1.ContainerUser(
                             linux = kubernetes_asyncio.client.models.v1/linux_container_user.v1.LinuxContainerUser(
                                 gid = 56, 
@@ -156,6 +157,7 @@ class TestV1PodStatus(unittest.TestCase):
                         restart_count = 56, 
                         started = True, 
                         state = kubernetes_asyncio.client.models.v1/container_state.v1.ContainerState(), 
+                        stop_signal = '', 
                         user = kubernetes_asyncio.client.models.v1/container_user.v1.ContainerUser(
                             linux = kubernetes_asyncio.client.models.v1/linux_container_user.v1.LinuxContainerUser(
                                 gid = 56, 
@@ -224,6 +226,7 @@ class TestV1PodStatus(unittest.TestCase):
                         restart_count = 56, 
                         started = True, 
                         state = kubernetes_asyncio.client.models.v1/container_state.v1.ContainerState(), 
+                        stop_signal = '', 
                         user = kubernetes_asyncio.client.models.v1/container_user.v1.ContainerUser(
                             linux = kubernetes_asyncio.client.models.v1/linux_container_user.v1.LinuxContainerUser(
                                 gid = 56, 

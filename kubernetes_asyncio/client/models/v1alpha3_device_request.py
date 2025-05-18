@@ -21,6 +21,7 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing import Any, ClassVar, Dict, List, Optional
 from kubernetes_asyncio.client.models.v1alpha3_device_selector import V1alpha3DeviceSelector
 from kubernetes_asyncio.client.models.v1alpha3_device_sub_request import V1alpha3DeviceSubRequest
+from kubernetes_asyncio.client.models.v1alpha3_device_toleration import V1alpha3DeviceToleration
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -35,7 +36,8 @@ class V1alpha3DeviceRequest(BaseModel):
     first_available: Optional[List[V1alpha3DeviceSubRequest]] = Field(default=None, description="FirstAvailable contains subrequests, of which exactly one will be satisfied by the scheduler to satisfy this request. It tries to satisfy them in the order in which they are listed here. So if there are two entries in the list, the scheduler will only check the second one if it determines that the first one cannot be used.  This field may only be set in the entries of DeviceClaim.Requests.  DRA does not yet implement scoring, so the scheduler will select the first set of devices that satisfies all the requests in the claim. And if the requirements can be satisfied on more than one node, other scheduling features will determine which node is chosen. This means that the set of devices allocated to a claim might not be the optimal set available to the cluster. Scoring will be implemented later.", alias="firstAvailable")
     name: StrictStr = Field(description="Name can be used to reference this request in a pod.spec.containers[].resources.claims entry and in a constraint of the claim.  Must be a DNS label.")
     selectors: Optional[List[V1alpha3DeviceSelector]] = Field(default=None, description="Selectors define criteria which must be satisfied by a specific device in order for that device to be considered for this request. All selectors must be satisfied for a device to be considered.  This field can only be set when deviceClassName is set and no subrequests are specified in the firstAvailable list.")
-    __properties: ClassVar[List[str]] = ["adminAccess", "allocationMode", "count", "deviceClassName", "firstAvailable", "name", "selectors"]
+    tolerations: Optional[List[V1alpha3DeviceToleration]] = Field(default=None, description="If specified, the request's tolerations.  Tolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.  In addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.  The maximum number of tolerations is 16.  This field can only be set when deviceClassName is set and no subrequests are specified in the firstAvailable list.  This is an alpha field and requires enabling the DRADeviceTaints feature gate.")
+    __properties: ClassVar[List[str]] = ["adminAccess", "allocationMode", "count", "deviceClassName", "firstAvailable", "name", "selectors", "tolerations"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,6 +92,13 @@ class V1alpha3DeviceRequest(BaseModel):
                 if _item_selectors:
                     _items.append(_item_selectors.to_dict())
             _dict['selectors'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in tolerations (list)
+        _items = []
+        if self.tolerations:
+            for _item_tolerations in self.tolerations:
+                if _item_tolerations:
+                    _items.append(_item_tolerations.to_dict())
+            _dict['tolerations'] = _items
         return _dict
 
     @classmethod
@@ -108,7 +117,8 @@ class V1alpha3DeviceRequest(BaseModel):
             "deviceClassName": obj.get("deviceClassName"),
             "firstAvailable": [V1alpha3DeviceSubRequest.from_dict(_item) for _item in obj["firstAvailable"]] if obj.get("firstAvailable") is not None else None,
             "name": obj.get("name"),
-            "selectors": [V1alpha3DeviceSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None
+            "selectors": [V1alpha3DeviceSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
+            "tolerations": [V1alpha3DeviceToleration.from_dict(_item) for _item in obj["tolerations"]] if obj.get("tolerations") is not None else None
         })
         return _obj
 

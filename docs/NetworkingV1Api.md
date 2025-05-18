@@ -53,8 +53,6 @@ Method | HTTP request | Description
 # **create_ingress_class**
 > V1IngressClass create_ingress_class(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create an IngressClass
 
 ### Example
@@ -142,8 +140,6 @@ Name | Type | Description  | Notes
 # **create_ip_address**
 > V1IPAddress create_ip_address(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create an IPAddress
 
 ### Example
@@ -230,8 +226,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_ingress**
 > V1Ingress create_namespaced_ingress(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create an Ingress
 
@@ -322,8 +316,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_network_policy**
 > V1NetworkPolicy create_namespaced_network_policy(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a NetworkPolicy
 
 ### Example
@@ -413,8 +405,6 @@ Name | Type | Description  | Notes
 # **create_service_cidr**
 > V1ServiceCIDR create_service_cidr(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ServiceCIDR
 
 ### Example
@@ -501,8 +491,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_ingress_class**
 > V1Status delete_collection_ingress_class(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of IngressClass
 
@@ -610,8 +598,6 @@ Name | Type | Description  | Notes
 # **delete_collection_ip_address**
 > V1Status delete_collection_ip_address(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of IPAddress
 
 ### Example
@@ -717,8 +703,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_ingress**
 > V1Status delete_collection_namespaced_ingress(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of Ingress
 
@@ -828,8 +812,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_network_policy**
 > V1Status delete_collection_namespaced_network_policy(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of NetworkPolicy
 
 ### Example
@@ -938,8 +920,6 @@ Name | Type | Description  | Notes
 # **delete_collection_service_cidr**
 > V1Status delete_collection_service_cidr(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ServiceCIDR
 
 ### Example
@@ -1046,8 +1026,6 @@ Name | Type | Description  | Notes
 # **delete_ingress_class**
 > V1Status delete_ingress_class(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete an IngressClass
 
 ### Example
@@ -1141,8 +1119,6 @@ Name | Type | Description  | Notes
 # **delete_ip_address**
 > V1Status delete_ip_address(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete an IPAddress
 
 ### Example
@@ -1235,8 +1211,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_ingress**
 > V1Status delete_namespaced_ingress(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete an Ingress
 
@@ -1333,8 +1307,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_network_policy**
 > V1Status delete_namespaced_network_policy(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a NetworkPolicy
 
 ### Example
@@ -1430,8 +1402,6 @@ Name | Type | Description  | Notes
 # **delete_service_cidr**
 > V1Status delete_service_cidr(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ServiceCIDR
 
 ### Example
@@ -1525,8 +1495,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -1599,8 +1567,6 @@ This endpoint does not need any parameter.
 
 # **list_ingress_class**
 > V1IngressClassList list_ingress_class(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind IngressClass
 
@@ -1699,8 +1665,6 @@ Name | Type | Description  | Notes
 # **list_ingress_for_all_namespaces**
 > V1IngressList list_ingress_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Ingress
 
 ### Example
@@ -1798,8 +1762,6 @@ Name | Type | Description  | Notes
 # **list_ip_address**
 > V1IPAddressList list_ip_address(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind IPAddress
 
 ### Example
@@ -1896,8 +1858,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_ingress**
 > V1IngressList list_namespaced_ingress(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Ingress
 
@@ -1998,8 +1958,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_network_policy**
 > V1NetworkPolicyList list_namespaced_network_policy(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind NetworkPolicy
 
 ### Example
@@ -2099,8 +2057,6 @@ Name | Type | Description  | Notes
 # **list_network_policy_for_all_namespaces**
 > V1NetworkPolicyList list_network_policy_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind NetworkPolicy
 
 ### Example
@@ -2197,8 +2153,6 @@ Name | Type | Description  | Notes
 
 # **list_service_cidr**
 > V1ServiceCIDRList list_service_cidr(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ServiceCIDR
 
@@ -2297,8 +2251,6 @@ Name | Type | Description  | Notes
 # **patch_ingress_class**
 > V1IngressClass patch_ingress_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified IngressClass
 
 ### Example
@@ -2389,8 +2341,6 @@ Name | Type | Description  | Notes
 # **patch_ip_address**
 > V1IPAddress patch_ip_address(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified IPAddress
 
 ### Example
@@ -2480,8 +2430,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_ingress**
 > V1Ingress patch_namespaced_ingress(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified Ingress
 
@@ -2575,8 +2523,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_ingress_status**
 > V1Ingress patch_namespaced_ingress_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified Ingress
 
 ### Example
@@ -2668,8 +2614,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_network_policy**
 > V1NetworkPolicy patch_namespaced_network_policy(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified NetworkPolicy
 
@@ -2763,8 +2707,6 @@ Name | Type | Description  | Notes
 # **patch_service_cidr**
 > V1ServiceCIDR patch_service_cidr(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ServiceCIDR
 
 ### Example
@@ -2854,8 +2796,6 @@ Name | Type | Description  | Notes
 
 # **patch_service_cidr_status**
 > V1ServiceCIDR patch_service_cidr_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified ServiceCIDR
 
@@ -2947,8 +2887,6 @@ Name | Type | Description  | Notes
 # **read_ingress_class**
 > V1IngressClass read_ingress_class(name, pretty=pretty)
 
-
-
 read the specified IngressClass
 
 ### Example
@@ -3028,8 +2966,6 @@ Name | Type | Description  | Notes
 # **read_ip_address**
 > V1IPAddress read_ip_address(name, pretty=pretty)
 
-
-
 read the specified IPAddress
 
 ### Example
@@ -3108,8 +3044,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_ingress**
 > V1Ingress read_namespaced_ingress(name, namespace, pretty=pretty)
-
-
 
 read the specified Ingress
 
@@ -3192,8 +3126,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_ingress_status**
 > V1Ingress read_namespaced_ingress_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified Ingress
 
 ### Example
@@ -3274,8 +3206,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_network_policy**
 > V1NetworkPolicy read_namespaced_network_policy(name, namespace, pretty=pretty)
-
-
 
 read the specified NetworkPolicy
 
@@ -3358,8 +3288,6 @@ Name | Type | Description  | Notes
 # **read_service_cidr**
 > V1ServiceCIDR read_service_cidr(name, pretty=pretty)
 
-
-
 read the specified ServiceCIDR
 
 ### Example
@@ -3439,8 +3367,6 @@ Name | Type | Description  | Notes
 # **read_service_cidr_status**
 > V1ServiceCIDR read_service_cidr_status(name, pretty=pretty)
 
-
-
 read status of the specified ServiceCIDR
 
 ### Example
@@ -3519,8 +3445,6 @@ Name | Type | Description  | Notes
 
 # **replace_ingress_class**
 > V1IngressClass replace_ingress_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified IngressClass
 
@@ -3610,8 +3534,6 @@ Name | Type | Description  | Notes
 # **replace_ip_address**
 > V1IPAddress replace_ip_address(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified IPAddress
 
 ### Example
@@ -3699,8 +3621,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_ingress**
 > V1Ingress replace_namespaced_ingress(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified Ingress
 
@@ -3792,8 +3712,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_ingress_status**
 > V1Ingress replace_namespaced_ingress_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified Ingress
 
 ### Example
@@ -3883,8 +3801,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_network_policy**
 > V1NetworkPolicy replace_namespaced_network_policy(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified NetworkPolicy
 
@@ -3976,8 +3892,6 @@ Name | Type | Description  | Notes
 # **replace_service_cidr**
 > V1ServiceCIDR replace_service_cidr(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified ServiceCIDR
 
 ### Example
@@ -4065,8 +3979,6 @@ Name | Type | Description  | Notes
 
 # **replace_service_cidr_status**
 > V1ServiceCIDR replace_service_cidr_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified ServiceCIDR
 

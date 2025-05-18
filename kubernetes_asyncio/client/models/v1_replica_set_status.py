@@ -33,7 +33,7 @@ class V1ReplicaSetStatus(BaseModel):
     observed_generation: Optional[StrictInt] = Field(default=None, description="ObservedGeneration reflects the generation of the most recently observed ReplicaSet.", alias="observedGeneration")
     ready_replicas: Optional[StrictInt] = Field(default=None, description="The number of non-terminating pods targeted by this ReplicaSet with a Ready Condition.", alias="readyReplicas")
     replicas: StrictInt = Field(description="Replicas is the most recently observed number of non-terminating pods. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset")
-    terminating_replicas: Optional[StrictInt] = Field(default=None, description="The number of terminating pods for this replica set. Terminating pods have a non-null .metadata.deletionTimestamp and have not yet reached the Failed or Succeeded .status.phase.  This is an alpha field. Enable DeploymentPodReplacementPolicy to be able to use this field.", alias="terminatingReplicas")
+    terminating_replicas: Optional[StrictInt] = Field(default=None, description="The number of terminating pods for this replica set. Terminating pods have a non-null .metadata.deletionTimestamp and have not yet reached the Failed or Succeeded .status.phase.  This is an alpha field. Enable DeploymentReplicaSetTerminatingReplicas to be able to use this field.", alias="terminatingReplicas")
     __properties: ClassVar[List[str]] = ["availableReplicas", "conditions", "fullyLabeledReplicas", "observedGeneration", "readyReplicas", "replicas", "terminatingReplicas"]
 
     model_config = ConfigDict(

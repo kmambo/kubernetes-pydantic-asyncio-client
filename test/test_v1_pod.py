@@ -164,7 +164,8 @@ class TestV1Pod(unittest.TestCase):
                                     tcp_socket = kubernetes_asyncio.client.models.v1/tcp_socket_action.v1.TCPSocketAction(
                                         host = '', 
                                         port = kubernetes_asyncio.client.models.port.port(), ), ), 
-                                pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), ), 
+                                pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), 
+                                stop_signal = '', ), 
                             liveness_probe = kubernetes_asyncio.client.models.v1/probe.v1.Probe(
                                 failure_threshold = 56, 
                                 grpc = kubernetes_asyncio.client.models.v1/grpc_action.v1.GRPCAction(
@@ -692,6 +693,7 @@ class TestV1Pod(unittest.TestCase):
                             restart_count = 56, 
                             started = True, 
                             state = kubernetes_asyncio.client.models.v1/container_state.v1.ContainerState(), 
+                            stop_signal = '', 
                             user = kubernetes_asyncio.client.models.v1/container_user.v1.ContainerUser(
                                 linux = kubernetes_asyncio.client.models.v1/linux_container_user.v1.LinuxContainerUser(
                                     gid = 56, 
@@ -715,7 +717,8 @@ class TestV1Pod(unittest.TestCase):
                             name = '', 
                             ready = True, 
                             restart_count = 56, 
-                            started = True, )
+                            started = True, 
+                            stop_signal = '', )
                         ], 
                     host_ip = '', 
                     host_ips = [

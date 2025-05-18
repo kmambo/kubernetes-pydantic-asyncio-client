@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **log_file_handler**
 > log_file_handler(logpath)
 
-
-
 ### Example
 
 * Api Key Authentication (BearerToken):
@@ -83,8 +81,6 @@ void (empty response body)
 
 # **log_file_list_handler**
 > log_file_list_handler()
-
-
 
 ### Example
 

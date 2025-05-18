@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,14 +28,18 @@ class VersionInfo(BaseModel):
     """ # noqa: E501
     build_date: StrictStr = Field(alias="buildDate")
     compiler: StrictStr
+    emulation_major: Optional[StrictStr] = Field(default=None, description="EmulationMajor is the major version of the emulation version", alias="emulationMajor")
+    emulation_minor: Optional[StrictStr] = Field(default=None, description="EmulationMinor is the minor version of the emulation version", alias="emulationMinor")
     git_commit: StrictStr = Field(alias="gitCommit")
     git_tree_state: StrictStr = Field(alias="gitTreeState")
     git_version: StrictStr = Field(alias="gitVersion")
     go_version: StrictStr = Field(alias="goVersion")
-    major: StrictStr
-    minor: StrictStr
+    major: StrictStr = Field(description="Major is the major version of the binary version")
+    min_compatibility_major: Optional[StrictStr] = Field(default=None, description="MinCompatibilityMajor is the major version of the minimum compatibility version", alias="minCompatibilityMajor")
+    min_compatibility_minor: Optional[StrictStr] = Field(default=None, description="MinCompatibilityMinor is the minor version of the minimum compatibility version", alias="minCompatibilityMinor")
+    minor: StrictStr = Field(description="Minor is the minor version of the binary version")
     platform: StrictStr
-    __properties: ClassVar[List[str]] = ["buildDate", "compiler", "gitCommit", "gitTreeState", "gitVersion", "goVersion", "major", "minor", "platform"]
+    __properties: ClassVar[List[str]] = ["buildDate", "compiler", "emulationMajor", "emulationMinor", "gitCommit", "gitTreeState", "gitVersion", "goVersion", "major", "minCompatibilityMajor", "minCompatibilityMinor", "minor", "platform"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,11 +94,15 @@ class VersionInfo(BaseModel):
         _obj = cls.model_validate({
             "buildDate": obj.get("buildDate"),
             "compiler": obj.get("compiler"),
+            "emulationMajor": obj.get("emulationMajor"),
+            "emulationMinor": obj.get("emulationMinor"),
             "gitCommit": obj.get("gitCommit"),
             "gitTreeState": obj.get("gitTreeState"),
             "gitVersion": obj.get("gitVersion"),
             "goVersion": obj.get("goVersion"),
             "major": obj.get("major"),
+            "minCompatibilityMajor": obj.get("minCompatibilityMajor"),
+            "minCompatibilityMinor": obj.get("minCompatibilityMinor"),
             "minor": obj.get("minor"),
             "platform": obj.get("platform")
         })

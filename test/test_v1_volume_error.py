@@ -35,6 +35,7 @@ class TestV1VolumeError(unittest.TestCase):
         model = V1VolumeError()
         if include_optional:
             return V1VolumeError(
+                error_code = 56,
                 message = '',
                 time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
             )

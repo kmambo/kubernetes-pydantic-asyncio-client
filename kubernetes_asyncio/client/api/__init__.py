@@ -25,9 +25,11 @@ from kubernetes_asyncio.client.api.batch_v1_api import BatchV1Api
 from kubernetes_asyncio.client.api.certificates_api import CertificatesApi
 from kubernetes_asyncio.client.api.certificates_v1_api import CertificatesV1Api
 from kubernetes_asyncio.client.api.certificates_v1alpha1_api import CertificatesV1alpha1Api
+from kubernetes_asyncio.client.api.certificates_v1beta1_api import CertificatesV1beta1Api
 from kubernetes_asyncio.client.api.coordination_api import CoordinationApi
 from kubernetes_asyncio.client.api.coordination_v1_api import CoordinationV1Api
 from kubernetes_asyncio.client.api.coordination_v1alpha2_api import CoordinationV1alpha2Api
+from kubernetes_asyncio.client.api.coordination_v1beta1_api import CoordinationV1beta1Api
 from kubernetes_asyncio.client.api.core_api import CoreApi
 from kubernetes_asyncio.client.api.core_v1_api import CoreV1Api
 from kubernetes_asyncio.client.api.custom_objects_api import CustomObjectsApi
@@ -53,6 +55,7 @@ from kubernetes_asyncio.client.api.rbac_authorization_v1_api import RbacAuthoriz
 from kubernetes_asyncio.client.api.resource_api import ResourceApi
 from kubernetes_asyncio.client.api.resource_v1alpha3_api import ResourceV1alpha3Api
 from kubernetes_asyncio.client.api.resource_v1beta1_api import ResourceV1beta1Api
+from kubernetes_asyncio.client.api.resource_v1beta2_api import ResourceV1beta2Api
 from kubernetes_asyncio.client.api.scheduling_api import SchedulingApi
 from kubernetes_asyncio.client.api.scheduling_v1_api import SchedulingV1Api
 from kubernetes_asyncio.client.api.storage_api import StorageApi

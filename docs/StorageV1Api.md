@@ -49,8 +49,6 @@ Method | HTTP request | Description
 # **create_csi_driver**
 > V1CSIDriver create_csi_driver(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a CSIDriver
 
 ### Example
@@ -138,8 +136,6 @@ Name | Type | Description  | Notes
 # **create_csi_node**
 > V1CSINode create_csi_node(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a CSINode
 
 ### Example
@@ -226,8 +222,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_csi_storage_capacity**
 > V1CSIStorageCapacity create_namespaced_csi_storage_capacity(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a CSIStorageCapacity
 
@@ -318,8 +312,6 @@ Name | Type | Description  | Notes
 # **create_storage_class**
 > V1StorageClass create_storage_class(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a StorageClass
 
 ### Example
@@ -407,8 +399,6 @@ Name | Type | Description  | Notes
 # **create_volume_attachment**
 > V1VolumeAttachment create_volume_attachment(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a VolumeAttachment
 
 ### Example
@@ -495,8 +485,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_csi_driver**
 > V1Status delete_collection_csi_driver(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of CSIDriver
 
@@ -604,8 +592,6 @@ Name | Type | Description  | Notes
 # **delete_collection_csi_node**
 > V1Status delete_collection_csi_node(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of CSINode
 
 ### Example
@@ -711,8 +697,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_csi_storage_capacity**
 > V1Status delete_collection_namespaced_csi_storage_capacity(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of CSIStorageCapacity
 
@@ -822,8 +806,6 @@ Name | Type | Description  | Notes
 # **delete_collection_storage_class**
 > V1Status delete_collection_storage_class(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of StorageClass
 
 ### Example
@@ -929,8 +911,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_volume_attachment**
 > V1Status delete_collection_volume_attachment(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of VolumeAttachment
 
@@ -1038,8 +1018,6 @@ Name | Type | Description  | Notes
 # **delete_csi_driver**
 > V1CSIDriver delete_csi_driver(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a CSIDriver
 
 ### Example
@@ -1133,8 +1111,6 @@ Name | Type | Description  | Notes
 # **delete_csi_node**
 > V1CSINode delete_csi_node(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a CSINode
 
 ### Example
@@ -1227,8 +1203,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_csi_storage_capacity**
 > V1Status delete_namespaced_csi_storage_capacity(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a CSIStorageCapacity
 
@@ -1325,8 +1299,6 @@ Name | Type | Description  | Notes
 # **delete_storage_class**
 > V1StorageClass delete_storage_class(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a StorageClass
 
 ### Example
@@ -1419,8 +1391,6 @@ Name | Type | Description  | Notes
 
 # **delete_volume_attachment**
 > V1VolumeAttachment delete_volume_attachment(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a VolumeAttachment
 
@@ -1515,8 +1485,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -1589,8 +1557,6 @@ This endpoint does not need any parameter.
 
 # **list_csi_driver**
 > V1CSIDriverList list_csi_driver(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind CSIDriver
 
@@ -1689,8 +1655,6 @@ Name | Type | Description  | Notes
 # **list_csi_node**
 > V1CSINodeList list_csi_node(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind CSINode
 
 ### Example
@@ -1788,8 +1752,6 @@ Name | Type | Description  | Notes
 # **list_csi_storage_capacity_for_all_namespaces**
 > V1CSIStorageCapacityList list_csi_storage_capacity_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind CSIStorageCapacity
 
 ### Example
@@ -1886,8 +1848,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_csi_storage_capacity**
 > V1CSIStorageCapacityList list_namespaced_csi_storage_capacity(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind CSIStorageCapacity
 
@@ -1988,8 +1948,6 @@ Name | Type | Description  | Notes
 # **list_storage_class**
 > V1StorageClassList list_storage_class(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind StorageClass
 
 ### Example
@@ -2086,8 +2044,6 @@ Name | Type | Description  | Notes
 
 # **list_volume_attachment**
 > V1VolumeAttachmentList list_volume_attachment(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind VolumeAttachment
 
@@ -2186,8 +2142,6 @@ Name | Type | Description  | Notes
 # **patch_csi_driver**
 > V1CSIDriver patch_csi_driver(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified CSIDriver
 
 ### Example
@@ -2278,8 +2232,6 @@ Name | Type | Description  | Notes
 # **patch_csi_node**
 > V1CSINode patch_csi_node(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified CSINode
 
 ### Example
@@ -2369,8 +2321,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_csi_storage_capacity**
 > V1CSIStorageCapacity patch_namespaced_csi_storage_capacity(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified CSIStorageCapacity
 
@@ -2464,8 +2414,6 @@ Name | Type | Description  | Notes
 # **patch_storage_class**
 > V1StorageClass patch_storage_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified StorageClass
 
 ### Example
@@ -2555,8 +2503,6 @@ Name | Type | Description  | Notes
 
 # **patch_volume_attachment**
 > V1VolumeAttachment patch_volume_attachment(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified VolumeAttachment
 
@@ -2648,8 +2594,6 @@ Name | Type | Description  | Notes
 # **patch_volume_attachment_status**
 > V1VolumeAttachment patch_volume_attachment_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified VolumeAttachment
 
 ### Example
@@ -2740,8 +2684,6 @@ Name | Type | Description  | Notes
 # **read_csi_driver**
 > V1CSIDriver read_csi_driver(name, pretty=pretty)
 
-
-
 read the specified CSIDriver
 
 ### Example
@@ -2821,8 +2763,6 @@ Name | Type | Description  | Notes
 # **read_csi_node**
 > V1CSINode read_csi_node(name, pretty=pretty)
 
-
-
 read the specified CSINode
 
 ### Example
@@ -2901,8 +2841,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_csi_storage_capacity**
 > V1CSIStorageCapacity read_namespaced_csi_storage_capacity(name, namespace, pretty=pretty)
-
-
 
 read the specified CSIStorageCapacity
 
@@ -2985,8 +2923,6 @@ Name | Type | Description  | Notes
 # **read_storage_class**
 > V1StorageClass read_storage_class(name, pretty=pretty)
 
-
-
 read the specified StorageClass
 
 ### Example
@@ -3065,8 +3001,6 @@ Name | Type | Description  | Notes
 
 # **read_volume_attachment**
 > V1VolumeAttachment read_volume_attachment(name, pretty=pretty)
-
-
 
 read the specified VolumeAttachment
 
@@ -3147,8 +3081,6 @@ Name | Type | Description  | Notes
 # **read_volume_attachment_status**
 > V1VolumeAttachment read_volume_attachment_status(name, pretty=pretty)
 
-
-
 read status of the specified VolumeAttachment
 
 ### Example
@@ -3227,8 +3159,6 @@ Name | Type | Description  | Notes
 
 # **replace_csi_driver**
 > V1CSIDriver replace_csi_driver(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified CSIDriver
 
@@ -3318,8 +3248,6 @@ Name | Type | Description  | Notes
 # **replace_csi_node**
 > V1CSINode replace_csi_node(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified CSINode
 
 ### Example
@@ -3407,8 +3335,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_csi_storage_capacity**
 > V1CSIStorageCapacity replace_namespaced_csi_storage_capacity(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified CSIStorageCapacity
 
@@ -3500,8 +3426,6 @@ Name | Type | Description  | Notes
 # **replace_storage_class**
 > V1StorageClass replace_storage_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified StorageClass
 
 ### Example
@@ -3590,8 +3514,6 @@ Name | Type | Description  | Notes
 # **replace_volume_attachment**
 > V1VolumeAttachment replace_volume_attachment(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified VolumeAttachment
 
 ### Example
@@ -3679,8 +3601,6 @@ Name | Type | Description  | Notes
 
 # **replace_volume_attachment_status**
 > V1VolumeAttachment replace_volume_attachment_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified VolumeAttachment
 

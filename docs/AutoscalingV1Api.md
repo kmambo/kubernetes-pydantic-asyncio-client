@@ -21,8 +21,6 @@ Method | HTTP request | Description
 # **create_namespaced_horizontal_pod_autoscaler**
 > V1HorizontalPodAutoscaler create_namespaced_horizontal_pod_autoscaler(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a HorizontalPodAutoscaler
 
 ### Example
@@ -111,8 +109,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_horizontal_pod_autoscaler**
 > V1Status delete_collection_namespaced_horizontal_pod_autoscaler(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of HorizontalPodAutoscaler
 
@@ -222,8 +218,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_horizontal_pod_autoscaler**
 > V1Status delete_namespaced_horizontal_pod_autoscaler(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a HorizontalPodAutoscaler
 
 ### Example
@@ -319,8 +313,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -393,8 +385,6 @@ This endpoint does not need any parameter.
 
 # **list_horizontal_pod_autoscaler_for_all_namespaces**
 > V1HorizontalPodAutoscalerList list_horizontal_pod_autoscaler_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind HorizontalPodAutoscaler
 
@@ -492,8 +482,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_horizontal_pod_autoscaler**
 > V1HorizontalPodAutoscalerList list_namespaced_horizontal_pod_autoscaler(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind HorizontalPodAutoscaler
 
@@ -594,8 +582,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_horizontal_pod_autoscaler**
 > V1HorizontalPodAutoscaler patch_namespaced_horizontal_pod_autoscaler(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified HorizontalPodAutoscaler
 
 ### Example
@@ -687,8 +673,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_horizontal_pod_autoscaler_status**
 > V1HorizontalPodAutoscaler patch_namespaced_horizontal_pod_autoscaler_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified HorizontalPodAutoscaler
 
@@ -782,8 +766,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_horizontal_pod_autoscaler**
 > V1HorizontalPodAutoscaler read_namespaced_horizontal_pod_autoscaler(name, namespace, pretty=pretty)
 
-
-
 read the specified HorizontalPodAutoscaler
 
 ### Example
@@ -865,8 +847,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_horizontal_pod_autoscaler_status**
 > V1HorizontalPodAutoscaler read_namespaced_horizontal_pod_autoscaler_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified HorizontalPodAutoscaler
 
 ### Example
@@ -947,8 +927,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_horizontal_pod_autoscaler**
 > V1HorizontalPodAutoscaler replace_namespaced_horizontal_pod_autoscaler(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified HorizontalPodAutoscaler
 
@@ -1039,8 +1017,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_horizontal_pod_autoscaler_status**
 > V1HorizontalPodAutoscaler replace_namespaced_horizontal_pod_autoscaler_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified HorizontalPodAutoscaler
 

@@ -185,7 +185,8 @@ class TestV1StatefulSetSpec(unittest.TestCase):
                                         tcp_socket = kubernetes_asyncio.client.models.v1/tcp_socket_action.v1.TCPSocketAction(
                                             host = '', 
                                             port = kubernetes_asyncio.client.models.port.port(), ), ), 
-                                    pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), ), 
+                                    pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), 
+                                    stop_signal = '', ), 
                                 liveness_probe = kubernetes_asyncio.client.models.v1/probe.v1.Probe(
                                     failure_threshold = 56, 
                                     grpc = kubernetes_asyncio.client.models.v1/grpc_action.v1.GRPCAction(
@@ -739,7 +740,6 @@ class TestV1StatefulSetSpec(unittest.TestCase):
                     match_labels = {
                         'key' : ''
                         }, ),
-                service_name = '',
                 template = kubernetes_asyncio.client.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = kubernetes_asyncio.client.models.v1/object_meta.v1.ObjectMeta(
                         annotations = {
@@ -868,7 +868,8 @@ class TestV1StatefulSetSpec(unittest.TestCase):
                                         tcp_socket = kubernetes_asyncio.client.models.v1/tcp_socket_action.v1.TCPSocketAction(
                                             host = '', 
                                             port = kubernetes_asyncio.client.models.port.port(), ), ), 
-                                    pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), ), 
+                                    pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), 
+                                    stop_signal = '', ), 
                                 liveness_probe = kubernetes_asyncio.client.models.v1/probe.v1.Probe(
                                     failure_threshold = 56, 
                                     grpc = kubernetes_asyncio.client.models.v1/grpc_action.v1.GRPCAction(

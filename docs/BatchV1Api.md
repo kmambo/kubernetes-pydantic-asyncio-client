@@ -32,8 +32,6 @@ Method | HTTP request | Description
 # **create_namespaced_cron_job**
 > V1CronJob create_namespaced_cron_job(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a CronJob
 
 ### Example
@@ -123,8 +121,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_job**
 > V1Job create_namespaced_job(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a Job
 
 ### Example
@@ -213,8 +209,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_cron_job**
 > V1Status delete_collection_namespaced_cron_job(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of CronJob
 
@@ -324,8 +318,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_job**
 > V1Status delete_collection_namespaced_job(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of Job
 
 ### Example
@@ -434,8 +426,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_cron_job**
 > V1Status delete_namespaced_cron_job(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a CronJob
 
 ### Example
@@ -530,8 +520,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_job**
 > V1Status delete_namespaced_job(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a Job
 
@@ -628,8 +616,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -702,8 +688,6 @@ This endpoint does not need any parameter.
 
 # **list_cron_job_for_all_namespaces**
 > V1CronJobList list_cron_job_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind CronJob
 
@@ -802,8 +786,6 @@ Name | Type | Description  | Notes
 # **list_job_for_all_namespaces**
 > V1JobList list_job_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Job
 
 ### Example
@@ -900,8 +882,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_cron_job**
 > V1CronJobList list_namespaced_cron_job(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind CronJob
 
@@ -1002,8 +982,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_job**
 > V1JobList list_namespaced_job(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Job
 
 ### Example
@@ -1103,8 +1081,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_cron_job**
 > V1CronJob patch_namespaced_cron_job(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified CronJob
 
 ### Example
@@ -1196,8 +1172,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_cron_job_status**
 > V1CronJob patch_namespaced_cron_job_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified CronJob
 
@@ -1291,8 +1265,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_job**
 > V1Job patch_namespaced_job(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified Job
 
 ### Example
@@ -1384,8 +1356,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_job_status**
 > V1Job patch_namespaced_job_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified Job
 
@@ -1479,8 +1449,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_cron_job**
 > V1CronJob read_namespaced_cron_job(name, namespace, pretty=pretty)
 
-
-
 read the specified CronJob
 
 ### Example
@@ -1561,8 +1529,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_cron_job_status**
 > V1CronJob read_namespaced_cron_job_status(name, namespace, pretty=pretty)
-
-
 
 read status of the specified CronJob
 
@@ -1645,8 +1611,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_job**
 > V1Job read_namespaced_job(name, namespace, pretty=pretty)
 
-
-
 read the specified Job
 
 ### Example
@@ -1728,8 +1692,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_job_status**
 > V1Job read_namespaced_job_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified Job
 
 ### Example
@@ -1810,8 +1772,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_cron_job**
 > V1CronJob replace_namespaced_cron_job(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified CronJob
 
@@ -1903,8 +1863,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_cron_job_status**
 > V1CronJob replace_namespaced_cron_job_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified CronJob
 
 ### Example
@@ -1995,8 +1953,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_job**
 > V1Job replace_namespaced_job(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified Job
 
 ### Example
@@ -2086,8 +2042,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_job_status**
 > V1Job replace_namespaced_job_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified Job
 

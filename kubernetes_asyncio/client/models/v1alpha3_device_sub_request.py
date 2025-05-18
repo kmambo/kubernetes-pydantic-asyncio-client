@@ -20,6 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from kubernetes_asyncio.client.models.v1alpha3_device_selector import V1alpha3DeviceSelector
+from kubernetes_asyncio.client.models.v1alpha3_device_toleration import V1alpha3DeviceToleration
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,12 +28,13 @@ class V1alpha3DeviceSubRequest(BaseModel):
     """
     DeviceSubRequest describes a request for device provided in the claim.spec.devices.requests[].firstAvailable array. Each is typically a request for a single resource like a device, but can also ask for several identical devices.  DeviceSubRequest is similar to Request, but doesn't expose the AdminAccess or FirstAvailable fields, as those can only be set on the top-level request. AdminAccess is not supported for requests with a prioritized list, and recursive FirstAvailable fields are not supported.
     """ # noqa: E501
-    allocation_mode: Optional[StrictStr] = Field(default=None, description="AllocationMode and its related fields define how devices are allocated to satisfy this request. Supported values are:  - ExactCount: This request is for a specific number of devices.   This is the default. The exact number is provided in the   count field.  - All: This request is for all of the matching devices in a pool.   Allocation will fail if some devices are already allocated,   unless adminAccess is requested.  If AlloctionMode is not specified, the default mode is ExactCount. If the mode is ExactCount and count is not specified, the default count is one. Any other requests must specify this field.  More modes may get added in the future. Clients must refuse to handle requests with unknown modes.", alias="allocationMode")
+    allocation_mode: Optional[StrictStr] = Field(default=None, description="AllocationMode and its related fields define how devices are allocated to satisfy this request. Supported values are:  - ExactCount: This request is for a specific number of devices.   This is the default. The exact number is provided in the   count field.  - All: This request is for all of the matching devices in a pool.   Allocation will fail if some devices are already allocated,   unless adminAccess is requested.  If AllocationMode is not specified, the default mode is ExactCount. If the mode is ExactCount and count is not specified, the default count is one. Any other requests must specify this field.  More modes may get added in the future. Clients must refuse to handle requests with unknown modes.", alias="allocationMode")
     count: Optional[StrictInt] = Field(default=None, description="Count is used only when the count mode is \"ExactCount\". Must be greater than zero. If AllocationMode is ExactCount and this field is not specified, the default is one.")
     device_class_name: StrictStr = Field(description="DeviceClassName references a specific DeviceClass, which can define additional configuration and selectors to be inherited by this subrequest.  A class is required. Which classes are available depends on the cluster.  Administrators may use this to restrict which devices may get requested by only installing classes with selectors for permitted devices. If users are free to request anything without restrictions, then administrators can create an empty DeviceClass for users to reference.", alias="deviceClassName")
     name: StrictStr = Field(description="Name can be used to reference this subrequest in the list of constraints or the list of configurations for the claim. References must use the format <main request>/<subrequest>.  Must be a DNS label.")
     selectors: Optional[List[V1alpha3DeviceSelector]] = Field(default=None, description="Selectors define criteria which must be satisfied by a specific device in order for that device to be considered for this request. All selectors must be satisfied for a device to be considered.")
-    __properties: ClassVar[List[str]] = ["allocationMode", "count", "deviceClassName", "name", "selectors"]
+    tolerations: Optional[List[V1alpha3DeviceToleration]] = Field(default=None, description="If specified, the request's tolerations.  Tolerations for NoSchedule are required to allocate a device which has a taint with that effect. The same applies to NoExecute.  In addition, should any of the allocated devices get tainted with NoExecute after allocation and that effect is not tolerated, then all pods consuming the ResourceClaim get deleted to evict them. The scheduler will not let new pods reserve the claim while it has these tainted devices. Once all pods are evicted, the claim will get deallocated.  The maximum number of tolerations is 16.  This is an alpha field and requires enabling the DRADeviceTaints feature gate.")
+    __properties: ClassVar[List[str]] = ["allocationMode", "count", "deviceClassName", "name", "selectors", "tolerations"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,6 +82,13 @@ class V1alpha3DeviceSubRequest(BaseModel):
                 if _item_selectors:
                     _items.append(_item_selectors.to_dict())
             _dict['selectors'] = _items
+        # override the default output from pydantic by calling `to_dict()` of each item in tolerations (list)
+        _items = []
+        if self.tolerations:
+            for _item_tolerations in self.tolerations:
+                if _item_tolerations:
+                    _items.append(_item_tolerations.to_dict())
+            _dict['tolerations'] = _items
         return _dict
 
     @classmethod
@@ -96,7 +105,8 @@ class V1alpha3DeviceSubRequest(BaseModel):
             "count": obj.get("count"),
             "deviceClassName": obj.get("deviceClassName"),
             "name": obj.get("name"),
-            "selectors": [V1alpha3DeviceSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None
+            "selectors": [V1alpha3DeviceSelector.from_dict(_item) for _item in obj["selectors"]] if obj.get("selectors") is not None else None,
+            "tolerations": [V1alpha3DeviceToleration.from_dict(_item) for _item in obj["tolerations"]] if obj.get("tolerations") is not None else None
         })
         return _obj
 

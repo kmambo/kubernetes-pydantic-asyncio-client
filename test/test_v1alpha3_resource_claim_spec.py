@@ -65,11 +65,27 @@ class TestV1alpha3ResourceClaimSpec(unittest.TestCase):
                                         kubernetes_asyncio.client.models.v1alpha3/device_selector.v1alpha3.DeviceSelector(
                                             cel = kubernetes_asyncio.client.models.v1alpha3/cel_device_selector.v1alpha3.CELDeviceSelector(
                                                 expression = '', ), )
+                                        ], 
+                                    tolerations = [
+                                        kubernetes_asyncio.client.models.v1alpha3/device_toleration.v1alpha3.DeviceToleration(
+                                            effect = '', 
+                                            key = '', 
+                                            operator = '', 
+                                            toleration_seconds = 56, 
+                                            value = '', )
                                         ], )
                                 ], 
                             name = '', 
                             selectors = [
                                 kubernetes_asyncio.client.models.v1alpha3/device_selector.v1alpha3.DeviceSelector()
+                                ], 
+                            tolerations = [
+                                kubernetes_asyncio.client.models.v1alpha3/device_toleration.v1alpha3.DeviceToleration(
+                                    effect = '', 
+                                    key = '', 
+                                    operator = '', 
+                                    toleration_seconds = 56, 
+                                    value = '', )
                                 ], )
                         ], )
             )

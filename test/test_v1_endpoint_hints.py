@@ -35,6 +35,10 @@ class TestV1EndpointHints(unittest.TestCase):
         model = V1EndpointHints()
         if include_optional:
             return V1EndpointHints(
+                for_nodes = [
+                    kubernetes_asyncio.client.models.v1/for_node.v1.ForNode(
+                        name = '', )
+                    ],
                 for_zones = [
                     kubernetes_asyncio.client.models.v1/for_zone.v1.ForZone(
                         name = '', )

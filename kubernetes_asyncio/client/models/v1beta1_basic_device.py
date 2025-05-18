@@ -17,10 +17,13 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from kubernetes_asyncio.client.models.v1_node_selector import V1NodeSelector
 from kubernetes_asyncio.client.models.v1beta1_device_attribute import V1beta1DeviceAttribute
 from kubernetes_asyncio.client.models.v1beta1_device_capacity import V1beta1DeviceCapacity
+from kubernetes_asyncio.client.models.v1beta1_device_counter_consumption import V1beta1DeviceCounterConsumption
+from kubernetes_asyncio.client.models.v1beta1_device_taint import V1beta1DeviceTaint
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -28,9 +31,14 @@ class V1beta1BasicDevice(BaseModel):
     """
     BasicDevice defines one device instance.
     """ # noqa: E501
+    all_nodes: Optional[StrictBool] = Field(default=None, description="AllNodes indicates that all nodes have access to the device.  Must only be set if Spec.PerDeviceNodeSelection is set to true. At most one of NodeName, NodeSelector and AllNodes can be set.", alias="allNodes")
     attributes: Optional[Dict[str, V1beta1DeviceAttribute]] = Field(default=None, description="Attributes defines the set of attributes for this device. The name of each attribute must be unique in that set.  The maximum number of attributes and capacities combined is 32.")
     capacity: Optional[Dict[str, V1beta1DeviceCapacity]] = Field(default=None, description="Capacity defines the set of capacities for this device. The name of each capacity must be unique in that set.  The maximum number of attributes and capacities combined is 32.")
-    __properties: ClassVar[List[str]] = ["attributes", "capacity"]
+    consumes_counters: Optional[List[V1beta1DeviceCounterConsumption]] = Field(default=None, description="ConsumesCounters defines a list of references to sharedCounters and the set of counters that the device will consume from those counter sets.  There can only be a single entry per counterSet.  The total number of device counter consumption entries must be <= 32. In addition, the total number in the entire ResourceSlice must be <= 1024 (for example, 64 devices with 16 counters each).", alias="consumesCounters")
+    node_name: Optional[StrictStr] = Field(default=None, description="NodeName identifies the node where the device is available.  Must only be set if Spec.PerDeviceNodeSelection is set to true. At most one of NodeName, NodeSelector and AllNodes can be set.", alias="nodeName")
+    node_selector: Optional[V1NodeSelector] = Field(default=None, alias="nodeSelector")
+    taints: Optional[List[V1beta1DeviceTaint]] = Field(default=None, description="If specified, these are the driver-defined taints.  The maximum number of taints is 4.  This is an alpha field and requires enabling the DRADeviceTaints feature gate.")
+    __properties: ClassVar[List[str]] = ["allNodes", "attributes", "capacity", "consumesCounters", "nodeName", "nodeSelector", "taints"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,6 +93,23 @@ class V1beta1BasicDevice(BaseModel):
                 if self.capacity[_key_capacity]:
                     _field_dict[_key_capacity] = self.capacity[_key_capacity].to_dict()
             _dict['capacity'] = _field_dict
+        # override the default output from pydantic by calling `to_dict()` of each item in consumes_counters (list)
+        _items = []
+        if self.consumes_counters:
+            for _item_consumes_counters in self.consumes_counters:
+                if _item_consumes_counters:
+                    _items.append(_item_consumes_counters.to_dict())
+            _dict['consumesCounters'] = _items
+        # override the default output from pydantic by calling `to_dict()` of node_selector
+        if self.node_selector:
+            _dict['nodeSelector'] = self.node_selector.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in taints (list)
+        _items = []
+        if self.taints:
+            for _item_taints in self.taints:
+                if _item_taints:
+                    _items.append(_item_taints.to_dict())
+            _dict['taints'] = _items
         return _dict
 
     @classmethod
@@ -97,6 +122,7 @@ class V1beta1BasicDevice(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "allNodes": obj.get("allNodes"),
             "attributes": dict(
                 (_k, V1beta1DeviceAttribute.from_dict(_v))
                 for _k, _v in obj["attributes"].items()
@@ -108,7 +134,11 @@ class V1beta1BasicDevice(BaseModel):
                 for _k, _v in obj["capacity"].items()
             )
             if obj.get("capacity") is not None
-            else None
+            else None,
+            "consumesCounters": [V1beta1DeviceCounterConsumption.from_dict(_item) for _item in obj["consumesCounters"]] if obj.get("consumesCounters") is not None else None,
+            "nodeName": obj.get("nodeName"),
+            "nodeSelector": V1NodeSelector.from_dict(obj["nodeSelector"]) if obj.get("nodeSelector") is not None else None,
+            "taints": [V1beta1DeviceTaint.from_dict(_item) for _item in obj["taints"]] if obj.get("taints") is not None else None
         })
         return _obj
 

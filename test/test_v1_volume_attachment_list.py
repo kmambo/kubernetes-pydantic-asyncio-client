@@ -271,6 +271,7 @@ class TestV1VolumeAttachmentList(unittest.TestCase):
                                 persistent_volume_name = '', ), ), 
                         status = kubernetes_asyncio.client.models.v1/volume_attachment_status.v1.VolumeAttachmentStatus(
                             attach_error = kubernetes_asyncio.client.models.v1/volume_error.v1.VolumeError(
+                                error_code = 56, 
                                 message = '', 
                                 time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
                             attached = True, 
@@ -278,6 +279,7 @@ class TestV1VolumeAttachmentList(unittest.TestCase):
                                 'key' : ''
                                 }, 
                             detach_error = kubernetes_asyncio.client.models.v1/volume_error.v1.VolumeError(
+                                error_code = 56, 
                                 message = '', 
                                 time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), ), )
                     ],
@@ -525,6 +527,7 @@ class TestV1VolumeAttachmentList(unittest.TestCase):
                                 persistent_volume_name = '', ), ), 
                         status = kubernetes_asyncio.client.models.v1/volume_attachment_status.v1.VolumeAttachmentStatus(
                             attach_error = kubernetes_asyncio.client.models.v1/volume_error.v1.VolumeError(
+                                error_code = 56, 
                                 message = '', 
                                 time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), 
                             attached = True, 
@@ -532,6 +535,7 @@ class TestV1VolumeAttachmentList(unittest.TestCase):
                                 'key' : ''
                                 }, 
                             detach_error = kubernetes_asyncio.client.models.v1/volume_error.v1.VolumeError(
+                                error_code = 56, 
                                 message = '', 
                                 time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ), ), )
                     ],

@@ -43,8 +43,6 @@ Method | HTTP request | Description
 # **create_device_class**
 > V1beta1DeviceClass create_device_class(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a DeviceClass
 
 ### Example
@@ -131,8 +129,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_resource_claim**
 > V1beta1ResourceClaim create_namespaced_resource_claim(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a ResourceClaim
 
@@ -223,8 +219,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_resource_claim_template**
 > V1beta1ResourceClaimTemplate create_namespaced_resource_claim_template(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ResourceClaimTemplate
 
 ### Example
@@ -314,8 +308,6 @@ Name | Type | Description  | Notes
 # **create_resource_slice**
 > V1beta1ResourceSlice create_resource_slice(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ResourceSlice
 
 ### Example
@@ -402,8 +394,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_device_class**
 > V1Status delete_collection_device_class(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of DeviceClass
 
@@ -510,8 +500,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_resource_claim**
 > V1Status delete_collection_namespaced_resource_claim(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of ResourceClaim
 
@@ -621,8 +609,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_resource_claim_template**
 > V1Status delete_collection_namespaced_resource_claim_template(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ResourceClaimTemplate
 
 ### Example
@@ -731,8 +717,6 @@ Name | Type | Description  | Notes
 # **delete_collection_resource_slice**
 > V1Status delete_collection_resource_slice(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ResourceSlice
 
 ### Example
@@ -839,8 +823,6 @@ Name | Type | Description  | Notes
 # **delete_device_class**
 > V1beta1DeviceClass delete_device_class(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a DeviceClass
 
 ### Example
@@ -933,8 +915,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_resource_claim**
 > V1beta1ResourceClaim delete_namespaced_resource_claim(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a ResourceClaim
 
@@ -1031,8 +1011,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_resource_claim_template**
 > V1beta1ResourceClaimTemplate delete_namespaced_resource_claim_template(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ResourceClaimTemplate
 
 ### Example
@@ -1128,8 +1106,6 @@ Name | Type | Description  | Notes
 # **delete_resource_slice**
 > V1beta1ResourceSlice delete_resource_slice(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ResourceSlice
 
 ### Example
@@ -1223,8 +1199,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -1297,8 +1271,6 @@ This endpoint does not need any parameter.
 
 # **list_device_class**
 > V1beta1DeviceClassList list_device_class(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind DeviceClass
 
@@ -1396,8 +1368,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_resource_claim**
 > V1beta1ResourceClaimList list_namespaced_resource_claim(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ResourceClaim
 
@@ -1498,8 +1468,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_resource_claim_template**
 > V1beta1ResourceClaimTemplateList list_namespaced_resource_claim_template(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ResourceClaimTemplate
 
 ### Example
@@ -1599,8 +1567,6 @@ Name | Type | Description  | Notes
 # **list_resource_claim_for_all_namespaces**
 > V1beta1ResourceClaimList list_resource_claim_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ResourceClaim
 
 ### Example
@@ -1697,8 +1663,6 @@ Name | Type | Description  | Notes
 
 # **list_resource_claim_template_for_all_namespaces**
 > V1beta1ResourceClaimTemplateList list_resource_claim_template_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ResourceClaimTemplate
 
@@ -1797,8 +1761,6 @@ Name | Type | Description  | Notes
 # **list_resource_slice**
 > V1beta1ResourceSliceList list_resource_slice(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ResourceSlice
 
 ### Example
@@ -1896,8 +1858,6 @@ Name | Type | Description  | Notes
 # **patch_device_class**
 > V1beta1DeviceClass patch_device_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified DeviceClass
 
 ### Example
@@ -1987,8 +1947,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_resource_claim**
 > V1beta1ResourceClaim patch_namespaced_resource_claim(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified ResourceClaim
 
@@ -2082,8 +2040,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_resource_claim_status**
 > V1beta1ResourceClaim patch_namespaced_resource_claim_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified ResourceClaim
 
 ### Example
@@ -2175,8 +2131,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_resource_claim_template**
 > V1beta1ResourceClaimTemplate patch_namespaced_resource_claim_template(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified ResourceClaimTemplate
 
@@ -2270,8 +2224,6 @@ Name | Type | Description  | Notes
 # **patch_resource_slice**
 > V1beta1ResourceSlice patch_resource_slice(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ResourceSlice
 
 ### Example
@@ -2362,8 +2314,6 @@ Name | Type | Description  | Notes
 # **read_device_class**
 > V1beta1DeviceClass read_device_class(name, pretty=pretty)
 
-
-
 read the specified DeviceClass
 
 ### Example
@@ -2442,8 +2392,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_resource_claim**
 > V1beta1ResourceClaim read_namespaced_resource_claim(name, namespace, pretty=pretty)
-
-
 
 read the specified ResourceClaim
 
@@ -2526,8 +2474,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_resource_claim_status**
 > V1beta1ResourceClaim read_namespaced_resource_claim_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified ResourceClaim
 
 ### Example
@@ -2608,8 +2554,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_resource_claim_template**
 > V1beta1ResourceClaimTemplate read_namespaced_resource_claim_template(name, namespace, pretty=pretty)
-
-
 
 read the specified ResourceClaimTemplate
 
@@ -2692,8 +2636,6 @@ Name | Type | Description  | Notes
 # **read_resource_slice**
 > V1beta1ResourceSlice read_resource_slice(name, pretty=pretty)
 
-
-
 read the specified ResourceSlice
 
 ### Example
@@ -2772,8 +2714,6 @@ Name | Type | Description  | Notes
 
 # **replace_device_class**
 > V1beta1DeviceClass replace_device_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified DeviceClass
 
@@ -2862,8 +2802,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_resource_claim**
 > V1beta1ResourceClaim replace_namespaced_resource_claim(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ResourceClaim
 
@@ -2955,8 +2893,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_resource_claim_status**
 > V1beta1ResourceClaim replace_namespaced_resource_claim_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified ResourceClaim
 
 ### Example
@@ -3047,8 +2983,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_resource_claim_template**
 > V1beta1ResourceClaimTemplate replace_namespaced_resource_claim_template(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified ResourceClaimTemplate
 
 ### Example
@@ -3138,8 +3072,6 @@ Name | Type | Description  | Notes
 
 # **replace_resource_slice**
 > V1beta1ResourceSlice replace_resource_slice(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ResourceSlice
 

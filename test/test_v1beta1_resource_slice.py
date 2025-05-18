@@ -81,6 +81,7 @@ class TestV1beta1ResourceSlice(unittest.TestCase):
                     devices = [
                         kubernetes_asyncio.client.models.v1beta1/device.v1beta1.Device(
                             basic = kubernetes_asyncio.client.models.v1beta1/basic_device.v1beta1.BasicDevice(
+                                all_nodes = True, 
                                 attributes = {
                                     'key' : kubernetes_asyncio.client.models.v1beta1/device_attribute.v1beta1.DeviceAttribute(
                                         bool = True, 
@@ -91,32 +92,61 @@ class TestV1beta1ResourceSlice(unittest.TestCase):
                                 capacity = {
                                     'key' : kubernetes_asyncio.client.models.v1beta1/device_capacity.v1beta1.DeviceCapacity(
                                         value = '', )
-                                    }, ), 
+                                    }, 
+                                consumes_counters = [
+                                    kubernetes_asyncio.client.models.v1beta1/device_counter_consumption.v1beta1.DeviceCounterConsumption(
+                                        counter_set = '', 
+                                        counters = {
+                                            'key' : kubernetes_asyncio.client.models.v1beta1/counter.v1beta1.Counter(
+                                                value = '', )
+                                            }, )
+                                    ], 
+                                node_name = '', 
+                                node_selector = kubernetes_asyncio.client.models.v1/node_selector.v1.NodeSelector(
+                                    node_selector_terms = [
+                                        kubernetes_asyncio.client.models.v1/node_selector_term.v1.NodeSelectorTerm(
+                                            match_expressions = [
+                                                kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
+                                                    key = '', 
+                                                    operator = '', 
+                                                    values = [
+                                                        ''
+                                                        ], )
+                                                ], 
+                                            match_fields = [
+                                                kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
+                                                    key = '', 
+                                                    operator = '', )
+                                                ], )
+                                        ], ), 
+                                taints = [
+                                    kubernetes_asyncio.client.models.v1beta1/device_taint.v1beta1.DeviceTaint(
+                                        effect = '', 
+                                        key = '', 
+                                        time_added = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                                        value = '', )
+                                    ], ), 
                             name = '', )
                         ], 
                     driver = '', 
                     node_name = '', 
                     node_selector = kubernetes_asyncio.client.models.v1/node_selector.v1.NodeSelector(
                         node_selector_terms = [
-                            kubernetes_asyncio.client.models.v1/node_selector_term.v1.NodeSelectorTerm(
-                                match_expressions = [
-                                    kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
-                                        key = '', 
-                                        operator = '', 
-                                        values = [
-                                            ''
-                                            ], )
-                                    ], 
-                                match_fields = [
-                                    kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
-                                        key = '', 
-                                        operator = '', )
-                                    ], )
+                            kubernetes_asyncio.client.models.v1/node_selector_term.v1.NodeSelectorTerm()
                             ], ), 
+                    per_device_node_selection = True, 
                     pool = kubernetes_asyncio.client.models.v1beta1/resource_pool.v1beta1.ResourcePool(
                         generation = 56, 
                         name = '', 
-                        resource_slice_count = 56, ), )
+                        resource_slice_count = 56, ), 
+                    shared_counters = [
+                        kubernetes_asyncio.client.models.v1beta1/counter_set.v1beta1.CounterSet(
+                            counters = {
+                                'key' : kubernetes_asyncio.client.models.v1beta1/counter.v1beta1.Counter(
+                                    value = '', )
+                                }, 
+                            name = '', )
+                        ], )
             )
         else:
             return V1beta1ResourceSlice(
@@ -125,6 +155,7 @@ class TestV1beta1ResourceSlice(unittest.TestCase):
                     devices = [
                         kubernetes_asyncio.client.models.v1beta1/device.v1beta1.Device(
                             basic = kubernetes_asyncio.client.models.v1beta1/basic_device.v1beta1.BasicDevice(
+                                all_nodes = True, 
                                 attributes = {
                                     'key' : kubernetes_asyncio.client.models.v1beta1/device_attribute.v1beta1.DeviceAttribute(
                                         bool = True, 
@@ -135,32 +166,61 @@ class TestV1beta1ResourceSlice(unittest.TestCase):
                                 capacity = {
                                     'key' : kubernetes_asyncio.client.models.v1beta1/device_capacity.v1beta1.DeviceCapacity(
                                         value = '', )
-                                    }, ), 
+                                    }, 
+                                consumes_counters = [
+                                    kubernetes_asyncio.client.models.v1beta1/device_counter_consumption.v1beta1.DeviceCounterConsumption(
+                                        counter_set = '', 
+                                        counters = {
+                                            'key' : kubernetes_asyncio.client.models.v1beta1/counter.v1beta1.Counter(
+                                                value = '', )
+                                            }, )
+                                    ], 
+                                node_name = '', 
+                                node_selector = kubernetes_asyncio.client.models.v1/node_selector.v1.NodeSelector(
+                                    node_selector_terms = [
+                                        kubernetes_asyncio.client.models.v1/node_selector_term.v1.NodeSelectorTerm(
+                                            match_expressions = [
+                                                kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
+                                                    key = '', 
+                                                    operator = '', 
+                                                    values = [
+                                                        ''
+                                                        ], )
+                                                ], 
+                                            match_fields = [
+                                                kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
+                                                    key = '', 
+                                                    operator = '', )
+                                                ], )
+                                        ], ), 
+                                taints = [
+                                    kubernetes_asyncio.client.models.v1beta1/device_taint.v1beta1.DeviceTaint(
+                                        effect = '', 
+                                        key = '', 
+                                        time_added = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                                        value = '', )
+                                    ], ), 
                             name = '', )
                         ], 
                     driver = '', 
                     node_name = '', 
                     node_selector = kubernetes_asyncio.client.models.v1/node_selector.v1.NodeSelector(
                         node_selector_terms = [
-                            kubernetes_asyncio.client.models.v1/node_selector_term.v1.NodeSelectorTerm(
-                                match_expressions = [
-                                    kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
-                                        key = '', 
-                                        operator = '', 
-                                        values = [
-                                            ''
-                                            ], )
-                                    ], 
-                                match_fields = [
-                                    kubernetes_asyncio.client.models.v1/node_selector_requirement.v1.NodeSelectorRequirement(
-                                        key = '', 
-                                        operator = '', )
-                                    ], )
+                            kubernetes_asyncio.client.models.v1/node_selector_term.v1.NodeSelectorTerm()
                             ], ), 
+                    per_device_node_selection = True, 
                     pool = kubernetes_asyncio.client.models.v1beta1/resource_pool.v1beta1.ResourcePool(
                         generation = 56, 
                         name = '', 
-                        resource_slice_count = 56, ), ),
+                        resource_slice_count = 56, ), 
+                    shared_counters = [
+                        kubernetes_asyncio.client.models.v1beta1/counter_set.v1beta1.CounterSet(
+                            counters = {
+                                'key' : kubernetes_asyncio.client.models.v1beta1/counter.v1beta1.Counter(
+                                    value = '', )
+                                }, 
+                            name = '', )
+                        ], ),
         )
         """
 

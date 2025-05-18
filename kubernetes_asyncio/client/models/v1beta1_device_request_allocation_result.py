@@ -19,6 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from kubernetes_asyncio.client.models.v1beta1_device_toleration import V1beta1DeviceToleration
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,7 +32,8 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
     driver: StrictStr = Field(description="Driver specifies the name of the DRA driver whose kubelet plugin should be invoked to process the allocation once the claim is needed on a node.  Must be a DNS subdomain and should end with a DNS domain owned by the vendor of the driver.")
     pool: StrictStr = Field(description="This name together with the driver name and the device name field identify which device was allocated (`<driver name>/<pool name>/<device name>`).  Must not be longer than 253 characters and may contain one or more DNS sub-domains separated by slashes.")
     request: StrictStr = Field(description="Request is the name of the request in the claim which caused this device to be allocated. If it references a subrequest in the firstAvailable list on a DeviceRequest, this field must include both the name of the main request and the subrequest using the format <main request>/<subrequest>.  Multiple devices may have been allocated per request.")
-    __properties: ClassVar[List[str]] = ["adminAccess", "device", "driver", "pool", "request"]
+    tolerations: Optional[List[V1beta1DeviceToleration]] = Field(default=None, description="A copy of all tolerations specified in the request at the time when the device got allocated.  The maximum number of tolerations is 16.  This is an alpha field and requires enabling the DRADeviceTaints feature gate.")
+    __properties: ClassVar[List[str]] = ["adminAccess", "device", "driver", "pool", "request", "tolerations"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,6 +74,13 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in tolerations (list)
+        _items = []
+        if self.tolerations:
+            for _item_tolerations in self.tolerations:
+                if _item_tolerations:
+                    _items.append(_item_tolerations.to_dict())
+            _dict['tolerations'] = _items
         return _dict
 
     @classmethod
@@ -88,7 +97,8 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
             "device": obj.get("device"),
             "driver": obj.get("driver"),
             "pool": obj.get("pool"),
-            "request": obj.get("request")
+            "request": obj.get("request"),
+            "tolerations": [V1beta1DeviceToleration.from_dict(_item) for _item in obj["tolerations"]] if obj.get("tolerations") is not None else None
         })
         return _obj
 

@@ -53,7 +53,15 @@ class TestV1alpha3ResourceClaimStatus(unittest.TestCase):
                                 device = '', 
                                 driver = '', 
                                 pool = '', 
-                                request = '', )
+                                request = '', 
+                                tolerations = [
+                                    kubernetes_asyncio.client.models.v1alpha3/device_toleration.v1alpha3.DeviceToleration(
+                                        effect = '', 
+                                        key = '', 
+                                        operator = '', 
+                                        toleration_seconds = 56, 
+                                        value = '', )
+                                    ], )
                             ], ), 
                     node_selector = kubernetes_asyncio.client.models.v1/node_selector.v1.NodeSelector(
                         node_selector_terms = [

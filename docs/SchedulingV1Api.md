@@ -17,8 +17,6 @@ Method | HTTP request | Description
 # **create_priority_class**
 > V1PriorityClass create_priority_class(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a PriorityClass
 
 ### Example
@@ -105,8 +103,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_priority_class**
 > V1Status delete_collection_priority_class(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of PriorityClass
 
@@ -214,8 +210,6 @@ Name | Type | Description  | Notes
 # **delete_priority_class**
 > V1Status delete_priority_class(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a PriorityClass
 
 ### Example
@@ -309,8 +303,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -383,8 +375,6 @@ This endpoint does not need any parameter.
 
 # **list_priority_class**
 > V1PriorityClassList list_priority_class(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind PriorityClass
 
@@ -483,8 +473,6 @@ Name | Type | Description  | Notes
 # **patch_priority_class**
 > V1PriorityClass patch_priority_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified PriorityClass
 
 ### Example
@@ -575,8 +563,6 @@ Name | Type | Description  | Notes
 # **read_priority_class**
 > V1PriorityClass read_priority_class(name, pretty=pretty)
 
-
-
 read the specified PriorityClass
 
 ### Example
@@ -655,8 +641,6 @@ Name | Type | Description  | Notes
 
 # **replace_priority_class**
 > V1PriorityClass replace_priority_class(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified PriorityClass
 

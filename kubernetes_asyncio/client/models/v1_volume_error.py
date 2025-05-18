@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,9 +27,10 @@ class V1VolumeError(BaseModel):
     """
     VolumeError captures an error encountered during a volume operation.
     """ # noqa: E501
+    error_code: Optional[StrictInt] = Field(default=None, description="errorCode is a numeric gRPC code representing the error encountered during Attach or Detach operations.  This is an optional, alpha field that requires the MutableCSINodeAllocatableCount feature gate being enabled to be set.", alias="errorCode")
     message: Optional[StrictStr] = Field(default=None, description="message represents the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.")
     time: Optional[datetime] = Field(default=None, description="time represents the time the error was encountered.")
-    __properties: ClassVar[List[str]] = ["message", "time"]
+    __properties: ClassVar[List[str]] = ["errorCode", "message", "time"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,6 +83,7 @@ class V1VolumeError(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "errorCode": obj.get("errorCode"),
             "message": obj.get("message"),
             "time": obj.get("time")
         })

@@ -50,6 +50,10 @@ class TestV1EndpointSlice(unittest.TestCase):
                             'key' : ''
                             }, 
                         hints = kubernetes_asyncio.client.models.v1/endpoint_hints.v1.EndpointHints(
+                            for_nodes = [
+                                kubernetes_asyncio.client.models.v1/for_node.v1.ForNode(
+                                    name = '', )
+                                ], 
                             for_zones = [
                                 kubernetes_asyncio.client.models.v1/for_zone.v1.ForZone(
                                     name = '', )
@@ -130,6 +134,10 @@ class TestV1EndpointSlice(unittest.TestCase):
                             'key' : ''
                             }, 
                         hints = kubernetes_asyncio.client.models.v1/endpoint_hints.v1.EndpointHints(
+                            for_nodes = [
+                                kubernetes_asyncio.client.models.v1/for_node.v1.ForNode(
+                                    name = '', )
+                                ], 
                             for_zones = [
                                 kubernetes_asyncio.client.models.v1/for_zone.v1.ForZone(
                                     name = '', )

@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **create_self_subject_review**
 > V1SelfSubjectReview create_self_subject_review(body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 create a SelfSubjectReview
 
 ### Example
@@ -101,8 +99,6 @@ Name | Type | Description  | Notes
 # **create_token_review**
 > V1TokenReview create_token_review(body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 create a TokenReview
 
 ### Example
@@ -189,8 +185,6 @@ Name | Type | Description  | Notes
 
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
-
-
 
 get available resources
 

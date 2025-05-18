@@ -74,7 +74,8 @@ class TestV1Lifecycle(unittest.TestCase):
                         seconds = 56, ), 
                     tcp_socket = kubernetes_asyncio.client.models.v1/tcp_socket_action.v1.TCPSocketAction(
                         host = '', 
-                        port = kubernetes_asyncio.client.models.port.port(), ), )
+                        port = kubernetes_asyncio.client.models.port.port(), ), ),
+                stop_signal = ''
             )
         else:
             return V1Lifecycle(

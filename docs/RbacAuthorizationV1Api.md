@@ -40,8 +40,6 @@ Method | HTTP request | Description
 # **create_cluster_role**
 > V1ClusterRole create_cluster_role(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ClusterRole
 
 ### Example
@@ -129,8 +127,6 @@ Name | Type | Description  | Notes
 # **create_cluster_role_binding**
 > V1ClusterRoleBinding create_cluster_role_binding(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ClusterRoleBinding
 
 ### Example
@@ -217,8 +213,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_role**
 > V1Role create_namespaced_role(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a Role
 
@@ -309,8 +303,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_role_binding**
 > V1RoleBinding create_namespaced_role_binding(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a RoleBinding
 
 ### Example
@@ -399,8 +391,6 @@ Name | Type | Description  | Notes
 
 # **delete_cluster_role**
 > V1Status delete_cluster_role(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a ClusterRole
 
@@ -495,8 +485,6 @@ Name | Type | Description  | Notes
 # **delete_cluster_role_binding**
 > V1Status delete_cluster_role_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ClusterRoleBinding
 
 ### Example
@@ -589,8 +577,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_cluster_role**
 > V1Status delete_collection_cluster_role(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of ClusterRole
 
@@ -698,8 +684,6 @@ Name | Type | Description  | Notes
 # **delete_collection_cluster_role_binding**
 > V1Status delete_collection_cluster_role_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ClusterRoleBinding
 
 ### Example
@@ -805,8 +789,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_role**
 > V1Status delete_collection_namespaced_role(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of Role
 
@@ -916,8 +898,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_role_binding**
 > V1Status delete_collection_namespaced_role_binding(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of RoleBinding
 
 ### Example
@@ -1026,8 +1006,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_role**
 > V1Status delete_namespaced_role(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a Role
 
 ### Example
@@ -1122,8 +1100,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_role_binding**
 > V1Status delete_namespaced_role_binding(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a RoleBinding
 
@@ -1220,8 +1196,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -1294,8 +1268,6 @@ This endpoint does not need any parameter.
 
 # **list_cluster_role**
 > V1ClusterRoleList list_cluster_role(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ClusterRole
 
@@ -1394,8 +1366,6 @@ Name | Type | Description  | Notes
 # **list_cluster_role_binding**
 > V1ClusterRoleBindingList list_cluster_role_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ClusterRoleBinding
 
 ### Example
@@ -1492,8 +1462,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_role**
 > V1RoleList list_namespaced_role(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Role
 
@@ -1594,8 +1562,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_role_binding**
 > V1RoleBindingList list_namespaced_role_binding(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind RoleBinding
 
 ### Example
@@ -1695,8 +1661,6 @@ Name | Type | Description  | Notes
 # **list_role_binding_for_all_namespaces**
 > V1RoleBindingList list_role_binding_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind RoleBinding
 
 ### Example
@@ -1793,8 +1757,6 @@ Name | Type | Description  | Notes
 
 # **list_role_for_all_namespaces**
 > V1RoleList list_role_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Role
 
@@ -1893,8 +1855,6 @@ Name | Type | Description  | Notes
 # **patch_cluster_role**
 > V1ClusterRole patch_cluster_role(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ClusterRole
 
 ### Example
@@ -1985,8 +1945,6 @@ Name | Type | Description  | Notes
 # **patch_cluster_role_binding**
 > V1ClusterRoleBinding patch_cluster_role_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ClusterRoleBinding
 
 ### Example
@@ -2076,8 +2034,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_role**
 > V1Role patch_namespaced_role(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified Role
 
@@ -2171,8 +2127,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_role_binding**
 > V1RoleBinding patch_namespaced_role_binding(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified RoleBinding
 
 ### Example
@@ -2265,8 +2219,6 @@ Name | Type | Description  | Notes
 # **read_cluster_role**
 > V1ClusterRole read_cluster_role(name, pretty=pretty)
 
-
-
 read the specified ClusterRole
 
 ### Example
@@ -2346,8 +2298,6 @@ Name | Type | Description  | Notes
 # **read_cluster_role_binding**
 > V1ClusterRoleBinding read_cluster_role_binding(name, pretty=pretty)
 
-
-
 read the specified ClusterRoleBinding
 
 ### Example
@@ -2426,8 +2376,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_role**
 > V1Role read_namespaced_role(name, namespace, pretty=pretty)
-
-
 
 read the specified Role
 
@@ -2510,8 +2458,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_role_binding**
 > V1RoleBinding read_namespaced_role_binding(name, namespace, pretty=pretty)
 
-
-
 read the specified RoleBinding
 
 ### Example
@@ -2592,8 +2538,6 @@ Name | Type | Description  | Notes
 
 # **replace_cluster_role**
 > V1ClusterRole replace_cluster_role(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ClusterRole
 
@@ -2683,8 +2627,6 @@ Name | Type | Description  | Notes
 # **replace_cluster_role_binding**
 > V1ClusterRoleBinding replace_cluster_role_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified ClusterRoleBinding
 
 ### Example
@@ -2772,8 +2714,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_role**
 > V1Role replace_namespaced_role(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified Role
 
@@ -2864,8 +2804,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_role_binding**
 > V1RoleBinding replace_namespaced_role_binding(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified RoleBinding
 

@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_service_account_issuer_open_id_configuration**
 > str get_service_account_issuer_open_id_configuration()
 
-
-
 get service account issuer OpenID configuration, also known as the 'OIDC discovery doc'
 
 ### Example

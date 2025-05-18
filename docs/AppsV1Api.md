@@ -71,8 +71,6 @@ Method | HTTP request | Description
 # **create_namespaced_controller_revision**
 > V1ControllerRevision create_namespaced_controller_revision(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ControllerRevision
 
 ### Example
@@ -161,8 +159,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_daemon_set**
 > V1DaemonSet create_namespaced_daemon_set(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a DaemonSet
 
@@ -253,8 +249,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_deployment**
 > V1Deployment create_namespaced_deployment(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a Deployment
 
 ### Example
@@ -343,8 +337,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_replica_set**
 > V1ReplicaSet create_namespaced_replica_set(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 create a ReplicaSet
 
@@ -435,8 +427,6 @@ Name | Type | Description  | Notes
 # **create_namespaced_stateful_set**
 > V1StatefulSet create_namespaced_stateful_set(namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a StatefulSet
 
 ### Example
@@ -525,8 +515,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_controller_revision**
 > V1Status delete_collection_namespaced_controller_revision(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of ControllerRevision
 
@@ -636,8 +624,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_daemon_set**
 > V1Status delete_collection_namespaced_daemon_set(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of DaemonSet
 
 ### Example
@@ -745,8 +731,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_deployment**
 > V1Status delete_collection_namespaced_deployment(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of Deployment
 
@@ -856,8 +840,6 @@ Name | Type | Description  | Notes
 # **delete_collection_namespaced_replica_set**
 > V1Status delete_collection_namespaced_replica_set(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ReplicaSet
 
 ### Example
@@ -965,8 +947,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_stateful_set**
 > V1Status delete_collection_namespaced_stateful_set(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of StatefulSet
 
@@ -1076,8 +1056,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_controller_revision**
 > V1Status delete_namespaced_controller_revision(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ControllerRevision
 
 ### Example
@@ -1172,8 +1150,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_daemon_set**
 > V1Status delete_namespaced_daemon_set(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a DaemonSet
 
@@ -1270,8 +1246,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_deployment**
 > V1Status delete_namespaced_deployment(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a Deployment
 
 ### Example
@@ -1366,8 +1340,6 @@ Name | Type | Description  | Notes
 
 # **delete_namespaced_replica_set**
 > V1Status delete_namespaced_replica_set(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a ReplicaSet
 
@@ -1464,8 +1436,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_stateful_set**
 > V1Status delete_namespaced_stateful_set(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a StatefulSet
 
 ### Example
@@ -1561,8 +1531,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -1635,8 +1603,6 @@ This endpoint does not need any parameter.
 
 # **list_controller_revision_for_all_namespaces**
 > V1ControllerRevisionList list_controller_revision_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ControllerRevision
 
@@ -1735,8 +1701,6 @@ Name | Type | Description  | Notes
 # **list_daemon_set_for_all_namespaces**
 > V1DaemonSetList list_daemon_set_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind DaemonSet
 
 ### Example
@@ -1834,8 +1798,6 @@ Name | Type | Description  | Notes
 # **list_deployment_for_all_namespaces**
 > V1DeploymentList list_deployment_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind Deployment
 
 ### Example
@@ -1932,8 +1894,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_controller_revision**
 > V1ControllerRevisionList list_namespaced_controller_revision(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ControllerRevision
 
@@ -2034,8 +1994,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_daemon_set**
 > V1DaemonSetList list_namespaced_daemon_set(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind DaemonSet
 
 ### Example
@@ -2134,8 +2092,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_deployment**
 > V1DeploymentList list_namespaced_deployment(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind Deployment
 
@@ -2236,8 +2192,6 @@ Name | Type | Description  | Notes
 # **list_namespaced_replica_set**
 > V1ReplicaSetList list_namespaced_replica_set(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ReplicaSet
 
 ### Example
@@ -2336,8 +2290,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_stateful_set**
 > V1StatefulSetList list_namespaced_stateful_set(namespace, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind StatefulSet
 
@@ -2438,8 +2390,6 @@ Name | Type | Description  | Notes
 # **list_replica_set_for_all_namespaces**
 > V1ReplicaSetList list_replica_set_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ReplicaSet
 
 ### Example
@@ -2536,8 +2486,6 @@ Name | Type | Description  | Notes
 
 # **list_stateful_set_for_all_namespaces**
 > V1StatefulSetList list_stateful_set_for_all_namespaces(allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, pretty=pretty, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind StatefulSet
 
@@ -2636,8 +2584,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_controller_revision**
 > V1ControllerRevision patch_namespaced_controller_revision(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ControllerRevision
 
 ### Example
@@ -2729,8 +2675,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_daemon_set**
 > V1DaemonSet patch_namespaced_daemon_set(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified DaemonSet
 
@@ -2824,8 +2768,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_daemon_set_status**
 > V1DaemonSet patch_namespaced_daemon_set_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified DaemonSet
 
 ### Example
@@ -2917,8 +2859,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_deployment**
 > V1Deployment patch_namespaced_deployment(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified Deployment
 
@@ -3012,8 +2952,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_deployment_scale**
 > V1Scale patch_namespaced_deployment_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update scale of the specified Deployment
 
 ### Example
@@ -3105,8 +3043,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_deployment_status**
 > V1Deployment patch_namespaced_deployment_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified Deployment
 
@@ -3200,8 +3136,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_replica_set**
 > V1ReplicaSet patch_namespaced_replica_set(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ReplicaSet
 
 ### Example
@@ -3293,8 +3227,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_replica_set_scale**
 > V1Scale patch_namespaced_replica_set_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update scale of the specified ReplicaSet
 
@@ -3388,8 +3320,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_replica_set_status**
 > V1ReplicaSet patch_namespaced_replica_set_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified ReplicaSet
 
 ### Example
@@ -3481,8 +3411,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_stateful_set**
 > V1StatefulSet patch_namespaced_stateful_set(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified StatefulSet
 
@@ -3576,8 +3504,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_stateful_set_scale**
 > V1Scale patch_namespaced_stateful_set_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update scale of the specified StatefulSet
 
 ### Example
@@ -3669,8 +3595,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_stateful_set_status**
 > V1StatefulSet patch_namespaced_stateful_set_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified StatefulSet
 
@@ -3764,8 +3688,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_controller_revision**
 > V1ControllerRevision read_namespaced_controller_revision(name, namespace, pretty=pretty)
 
-
-
 read the specified ControllerRevision
 
 ### Example
@@ -3846,8 +3768,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_daemon_set**
 > V1DaemonSet read_namespaced_daemon_set(name, namespace, pretty=pretty)
-
-
 
 read the specified DaemonSet
 
@@ -3930,8 +3850,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_daemon_set_status**
 > V1DaemonSet read_namespaced_daemon_set_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified DaemonSet
 
 ### Example
@@ -4012,8 +3930,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_deployment**
 > V1Deployment read_namespaced_deployment(name, namespace, pretty=pretty)
-
-
 
 read the specified Deployment
 
@@ -4096,8 +4012,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_deployment_scale**
 > V1Scale read_namespaced_deployment_scale(name, namespace, pretty=pretty)
 
-
-
 read scale of the specified Deployment
 
 ### Example
@@ -4178,8 +4092,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_deployment_status**
 > V1Deployment read_namespaced_deployment_status(name, namespace, pretty=pretty)
-
-
 
 read status of the specified Deployment
 
@@ -4262,8 +4174,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_replica_set**
 > V1ReplicaSet read_namespaced_replica_set(name, namespace, pretty=pretty)
 
-
-
 read the specified ReplicaSet
 
 ### Example
@@ -4344,8 +4254,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_replica_set_scale**
 > V1Scale read_namespaced_replica_set_scale(name, namespace, pretty=pretty)
-
-
 
 read scale of the specified ReplicaSet
 
@@ -4428,8 +4336,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_replica_set_status**
 > V1ReplicaSet read_namespaced_replica_set_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified ReplicaSet
 
 ### Example
@@ -4510,8 +4416,6 @@ Name | Type | Description  | Notes
 
 # **read_namespaced_stateful_set**
 > V1StatefulSet read_namespaced_stateful_set(name, namespace, pretty=pretty)
-
-
 
 read the specified StatefulSet
 
@@ -4594,8 +4498,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_stateful_set_scale**
 > V1Scale read_namespaced_stateful_set_scale(name, namespace, pretty=pretty)
 
-
-
 read scale of the specified StatefulSet
 
 ### Example
@@ -4677,8 +4579,6 @@ Name | Type | Description  | Notes
 # **read_namespaced_stateful_set_status**
 > V1StatefulSet read_namespaced_stateful_set_status(name, namespace, pretty=pretty)
 
-
-
 read status of the specified StatefulSet
 
 ### Example
@@ -4759,8 +4659,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_controller_revision**
 > V1ControllerRevision replace_namespaced_controller_revision(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ControllerRevision
 
@@ -4852,8 +4750,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_daemon_set**
 > V1DaemonSet replace_namespaced_daemon_set(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified DaemonSet
 
 ### Example
@@ -4943,8 +4839,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_daemon_set_status**
 > V1DaemonSet replace_namespaced_daemon_set_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified DaemonSet
 
@@ -5036,8 +4930,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_deployment**
 > V1Deployment replace_namespaced_deployment(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified Deployment
 
 ### Example
@@ -5127,8 +5019,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_deployment_scale**
 > V1Scale replace_namespaced_deployment_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace scale of the specified Deployment
 
@@ -5220,8 +5110,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_deployment_status**
 > V1Deployment replace_namespaced_deployment_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the specified Deployment
 
 ### Example
@@ -5311,8 +5199,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_replica_set**
 > V1ReplicaSet replace_namespaced_replica_set(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ReplicaSet
 
@@ -5404,8 +5290,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_replica_set_scale**
 > V1Scale replace_namespaced_replica_set_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace scale of the specified ReplicaSet
 
 ### Example
@@ -5495,8 +5379,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_replica_set_status**
 > V1ReplicaSet replace_namespaced_replica_set_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified ReplicaSet
 
@@ -5588,8 +5470,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_stateful_set**
 > V1StatefulSet replace_namespaced_stateful_set(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified StatefulSet
 
 ### Example
@@ -5680,8 +5560,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_stateful_set_scale**
 > V1Scale replace_namespaced_stateful_set_scale(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace scale of the specified StatefulSet
 
 ### Example
@@ -5771,8 +5649,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_stateful_set_status**
 > V1StatefulSet replace_namespaced_stateful_set_status(name, namespace, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified StatefulSet
 

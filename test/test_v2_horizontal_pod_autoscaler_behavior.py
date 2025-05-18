@@ -43,7 +43,8 @@ class TestV2HorizontalPodAutoscalerBehavior(unittest.TestCase):
                             value = 56, )
                         ], 
                     select_policy = '', 
-                    stabilization_window_seconds = 56, ),
+                    stabilization_window_seconds = 56, 
+                    tolerance = '', ),
                 scale_up = kubernetes_asyncio.client.models.v2/hpa_scaling_rules.v2.HPAScalingRules(
                     policies = [
                         kubernetes_asyncio.client.models.v2/hpa_scaling_policy.v2.HPAScalingPolicy(
@@ -52,7 +53,8 @@ class TestV2HorizontalPodAutoscalerBehavior(unittest.TestCase):
                             value = 56, )
                         ], 
                     select_policy = '', 
-                    stabilization_window_seconds = 56, )
+                    stabilization_window_seconds = 56, 
+                    tolerance = '', )
             )
         else:
             return V2HorizontalPodAutoscalerBehavior(

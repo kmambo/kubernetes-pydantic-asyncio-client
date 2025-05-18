@@ -152,6 +152,7 @@ class TestV1Node(unittest.TestCase):
                         machine_id = '', 
                         operating_system = '', 
                         os_image = '', 
+                        swap = kubernetes_asyncio.client.models.v1/node_swap_status.v1.NodeSwapStatus(), 
                         system_uuid = '', ), 
                     phase = '', 
                     runtime_handlers = [

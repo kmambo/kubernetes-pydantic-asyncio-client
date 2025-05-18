@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_namespaced_local_subject_access_review**
 > V1LocalSubjectAccessReview create_namespaced_local_subject_access_review(namespace, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 create a LocalSubjectAccessReview
 
 ### Example
@@ -105,8 +103,6 @@ Name | Type | Description  | Notes
 # **create_self_subject_access_review**
 > V1SelfSubjectAccessReview create_self_subject_access_review(body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 create a SelfSubjectAccessReview
 
 ### Example
@@ -193,8 +189,6 @@ Name | Type | Description  | Notes
 
 # **create_self_subject_rules_review**
 > V1SelfSubjectRulesReview create_self_subject_rules_review(body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
-
-
 
 create a SelfSubjectRulesReview
 
@@ -283,8 +277,6 @@ Name | Type | Description  | Notes
 # **create_subject_access_review**
 > V1SubjectAccessReview create_subject_access_review(body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, pretty=pretty)
 
-
-
 create a SubjectAccessReview
 
 ### Example
@@ -371,8 +363,6 @@ Name | Type | Description  | Notes
 
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
-
-
 
 get available resources
 

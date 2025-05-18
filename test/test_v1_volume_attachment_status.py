@@ -36,6 +36,7 @@ class TestV1VolumeAttachmentStatus(unittest.TestCase):
         if include_optional:
             return V1VolumeAttachmentStatus(
                 attach_error = kubernetes_asyncio.client.models.v1/volume_error.v1.VolumeError(
+                    error_code = 56, 
                     message = '', 
                     time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
                 attached = True,
@@ -43,6 +44,7 @@ class TestV1VolumeAttachmentStatus(unittest.TestCase):
                     'key' : ''
                     },
                 detach_error = kubernetes_asyncio.client.models.v1/volume_error.v1.VolumeError(
+                    error_code = 56, 
                     message = '', 
                     time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
             )

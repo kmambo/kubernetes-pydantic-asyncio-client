@@ -49,6 +49,14 @@ class TestV1beta1DeviceRequest(unittest.TestCase):
                             kubernetes_asyncio.client.models.v1beta1/device_selector.v1beta1.DeviceSelector(
                                 cel = kubernetes_asyncio.client.models.v1beta1/cel_device_selector.v1beta1.CELDeviceSelector(
                                     expression = '', ), )
+                            ], 
+                        tolerations = [
+                            kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                                effect = '', 
+                                key = '', 
+                                operator = '', 
+                                toleration_seconds = 56, 
+                                value = '', )
                             ], )
                     ],
                 name = '',
@@ -56,6 +64,14 @@ class TestV1beta1DeviceRequest(unittest.TestCase):
                     kubernetes_asyncio.client.models.v1beta1/device_selector.v1beta1.DeviceSelector(
                         cel = kubernetes_asyncio.client.models.v1beta1/cel_device_selector.v1beta1.CELDeviceSelector(
                             expression = '', ), )
+                    ],
+                tolerations = [
+                    kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                        effect = '', 
+                        key = '', 
+                        operator = '', 
+                        toleration_seconds = 56, 
+                        value = '', )
                     ]
             )
         else:

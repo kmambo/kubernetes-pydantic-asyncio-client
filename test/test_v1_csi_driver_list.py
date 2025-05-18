@@ -82,6 +82,7 @@ class TestV1CSIDriverList(unittest.TestCase):
                         spec = kubernetes_asyncio.client.models.v1/csi_driver_spec.v1.CSIDriverSpec(
                             attach_required = True, 
                             fs_group_policy = '', 
+                            node_allocatable_update_period_seconds = 56, 
                             pod_info_on_mount = True, 
                             requires_republish = True, 
                             se_linux_mount = True, 
@@ -150,6 +151,7 @@ class TestV1CSIDriverList(unittest.TestCase):
                         spec = kubernetes_asyncio.client.models.v1/csi_driver_spec.v1.CSIDriverSpec(
                             attach_required = True, 
                             fs_group_policy = '', 
+                            node_allocatable_update_period_seconds = 56, 
                             pod_info_on_mount = True, 
                             requires_republish = True, 
                             se_linux_mount = True, 

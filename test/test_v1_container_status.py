@@ -94,6 +94,7 @@ class TestV1ContainerStatus(unittest.TestCase):
                     waiting = kubernetes_asyncio.client.models.v1/container_state_waiting.v1.ContainerStateWaiting(
                         message = '', 
                         reason = '', ), ),
+                stop_signal = '',
                 user = kubernetes_asyncio.client.models.v1/container_user.v1.ContainerUser(
                     linux = kubernetes_asyncio.client.models.v1/linux_container_user.v1.LinuxContainerUser(
                         gid = 56, 

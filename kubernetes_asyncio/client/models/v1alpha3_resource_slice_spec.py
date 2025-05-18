@@ -20,6 +20,7 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from kubernetes_asyncio.client.models.v1_node_selector import V1NodeSelector
+from kubernetes_asyncio.client.models.v1alpha3_counter_set import V1alpha3CounterSet
 from kubernetes_asyncio.client.models.v1alpha3_device import V1alpha3Device
 from kubernetes_asyncio.client.models.v1alpha3_resource_pool import V1alpha3ResourcePool
 from typing import Optional, Set
@@ -29,13 +30,15 @@ class V1alpha3ResourceSliceSpec(BaseModel):
     """
     ResourceSliceSpec contains the information published by the driver in one ResourceSlice.
     """ # noqa: E501
-    all_nodes: Optional[StrictBool] = Field(default=None, description="AllNodes indicates that all nodes have access to the resources in the pool.  Exactly one of NodeName, NodeSelector and AllNodes must be set.", alias="allNodes")
+    all_nodes: Optional[StrictBool] = Field(default=None, description="AllNodes indicates that all nodes have access to the resources in the pool.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set.", alias="allNodes")
     devices: Optional[List[V1alpha3Device]] = Field(default=None, description="Devices lists some or all of the devices in this pool.  Must not have more than 128 entries.")
     driver: StrictStr = Field(description="Driver identifies the DRA driver providing the capacity information. A field selector can be used to list only ResourceSlice objects with a certain driver name.  Must be a DNS subdomain and should end with a DNS domain owned by the vendor of the driver. This field is immutable.")
-    node_name: Optional[StrictStr] = Field(default=None, description="NodeName identifies the node which provides the resources in this pool. A field selector can be used to list only ResourceSlice objects belonging to a certain node.  This field can be used to limit access from nodes to ResourceSlices with the same node name. It also indicates to autoscalers that adding new nodes of the same type as some old node might also make new resources available.  Exactly one of NodeName, NodeSelector and AllNodes must be set. This field is immutable.", alias="nodeName")
+    node_name: Optional[StrictStr] = Field(default=None, description="NodeName identifies the node which provides the resources in this pool. A field selector can be used to list only ResourceSlice objects belonging to a certain node.  This field can be used to limit access from nodes to ResourceSlices with the same node name. It also indicates to autoscalers that adding new nodes of the same type as some old node might also make new resources available.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set. This field is immutable.", alias="nodeName")
     node_selector: Optional[V1NodeSelector] = Field(default=None, alias="nodeSelector")
+    per_device_node_selection: Optional[StrictBool] = Field(default=None, description="PerDeviceNodeSelection defines whether the access from nodes to resources in the pool is set on the ResourceSlice level or on each device. If it is set to true, every device defined the ResourceSlice must specify this individually.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set.", alias="perDeviceNodeSelection")
     pool: V1alpha3ResourcePool
-    __properties: ClassVar[List[str]] = ["allNodes", "devices", "driver", "nodeName", "nodeSelector", "pool"]
+    shared_counters: Optional[List[V1alpha3CounterSet]] = Field(default=None, description="SharedCounters defines a list of counter sets, each of which has a name and a list of counters available.  The names of the SharedCounters must be unique in the ResourceSlice.  The maximum number of SharedCounters is 32.", alias="sharedCounters")
+    __properties: ClassVar[List[str]] = ["allNodes", "devices", "driver", "nodeName", "nodeSelector", "perDeviceNodeSelection", "pool", "sharedCounters"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,6 +92,13 @@ class V1alpha3ResourceSliceSpec(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of pool
         if self.pool:
             _dict['pool'] = self.pool.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in shared_counters (list)
+        _items = []
+        if self.shared_counters:
+            for _item_shared_counters in self.shared_counters:
+                if _item_shared_counters:
+                    _items.append(_item_shared_counters.to_dict())
+            _dict['sharedCounters'] = _items
         return _dict
 
     @classmethod
@@ -106,7 +116,9 @@ class V1alpha3ResourceSliceSpec(BaseModel):
             "driver": obj.get("driver"),
             "nodeName": obj.get("nodeName"),
             "nodeSelector": V1NodeSelector.from_dict(obj["nodeSelector"]) if obj.get("nodeSelector") is not None else None,
-            "pool": V1alpha3ResourcePool.from_dict(obj["pool"]) if obj.get("pool") is not None else None
+            "perDeviceNodeSelection": obj.get("perDeviceNodeSelection"),
+            "pool": V1alpha3ResourcePool.from_dict(obj["pool"]) if obj.get("pool") is not None else None,
+            "sharedCounters": [V1alpha3CounterSet.from_dict(_item) for _item in obj["sharedCounters"]] if obj.get("sharedCounters") is not None else None
         })
         return _obj
 

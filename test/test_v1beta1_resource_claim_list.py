@@ -110,11 +110,27 @@ class TestV1beta1ResourceClaimList(unittest.TestCase):
                                                     kubernetes_asyncio.client.models.v1beta1/device_selector.v1beta1.DeviceSelector(
                                                         cel = kubernetes_asyncio.client.models.v1beta1/cel_device_selector.v1beta1.CELDeviceSelector(
                                                             expression = '', ), )
+                                                    ], 
+                                                tolerations = [
+                                                    kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                                                        effect = '', 
+                                                        key = '', 
+                                                        operator = '', 
+                                                        toleration_seconds = 56, 
+                                                        value = '', )
                                                     ], )
                                             ], 
                                         name = '', 
                                         selectors = [
                                             kubernetes_asyncio.client.models.v1beta1/device_selector.v1beta1.DeviceSelector()
+                                            ], 
+                                        tolerations = [
+                                            kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                                                effect = '', 
+                                                key = '', 
+                                                operator = '', 
+                                                toleration_seconds = 56, 
+                                                value = '', )
                                             ], )
                                     ], ), ), 
                         status = kubernetes_asyncio.client.models.v1beta1/resource_claim_status.v1beta1.ResourceClaimStatus(
@@ -227,11 +243,27 @@ class TestV1beta1ResourceClaimList(unittest.TestCase):
                                                     kubernetes_asyncio.client.models.v1beta1/device_selector.v1beta1.DeviceSelector(
                                                         cel = kubernetes_asyncio.client.models.v1beta1/cel_device_selector.v1beta1.CELDeviceSelector(
                                                             expression = '', ), )
+                                                    ], 
+                                                tolerations = [
+                                                    kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                                                        effect = '', 
+                                                        key = '', 
+                                                        operator = '', 
+                                                        toleration_seconds = 56, 
+                                                        value = '', )
                                                     ], )
                                             ], 
                                         name = '', 
                                         selectors = [
                                             kubernetes_asyncio.client.models.v1beta1/device_selector.v1beta1.DeviceSelector()
+                                            ], 
+                                        tolerations = [
+                                            kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                                                effect = '', 
+                                                key = '', 
+                                                operator = '', 
+                                                toleration_seconds = 56, 
+                                                value = '', )
                                             ], )
                                     ], ), ), 
                         status = kubernetes_asyncio.client.models.v1beta1/resource_claim_status.v1beta1.ResourceClaimStatus(

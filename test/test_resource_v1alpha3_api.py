@@ -32,6 +32,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_create_device_taint_rule(self) -> None:
+        """Test case for create_device_taint_rule
+
+        """
+        pass
+
     async def test_create_namespaced_resource_claim(self) -> None:
         """Test case for create_namespaced_resource_claim
 
@@ -56,6 +62,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_delete_collection_device_taint_rule(self) -> None:
+        """Test case for delete_collection_device_taint_rule
+
+        """
+        pass
+
     async def test_delete_collection_namespaced_resource_claim(self) -> None:
         """Test case for delete_collection_namespaced_resource_claim
 
@@ -76,6 +88,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_delete_device_class(self) -> None:
         """Test case for delete_device_class
+
+        """
+        pass
+
+    async def test_delete_device_taint_rule(self) -> None:
+        """Test case for delete_device_taint_rule
 
         """
         pass
@@ -106,6 +124,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_list_device_class(self) -> None:
         """Test case for list_device_class
+
+        """
+        pass
+
+    async def test_list_device_taint_rule(self) -> None:
+        """Test case for list_device_taint_rule
 
         """
         pass
@@ -146,6 +170,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_patch_device_taint_rule(self) -> None:
+        """Test case for patch_device_taint_rule
+
+        """
+        pass
+
     async def test_patch_namespaced_resource_claim(self) -> None:
         """Test case for patch_namespaced_resource_claim
 
@@ -176,6 +206,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_read_device_taint_rule(self) -> None:
+        """Test case for read_device_taint_rule
+
+        """
+        pass
+
     async def test_read_namespaced_resource_claim(self) -> None:
         """Test case for read_namespaced_resource_claim
 
@@ -202,6 +238,12 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_replace_device_class(self) -> None:
         """Test case for replace_device_class
+
+        """
+        pass
+
+    async def test_replace_device_taint_rule(self) -> None:
+        """Test case for replace_device_taint_rule
 
         """
         pass

@@ -39,7 +39,15 @@ class TestV1alpha3DeviceRequestAllocationResult(unittest.TestCase):
                 device = '',
                 driver = '',
                 pool = '',
-                request = ''
+                request = '',
+                tolerations = [
+                    kubernetes_asyncio.client.models.v1alpha3/device_toleration.v1alpha3.DeviceToleration(
+                        effect = '', 
+                        key = '', 
+                        operator = '', 
+                        toleration_seconds = 56, 
+                        value = '', )
+                    ]
             )
         else:
             return V1alpha3DeviceRequestAllocationResult(

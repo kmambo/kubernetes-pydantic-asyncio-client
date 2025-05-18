@@ -95,7 +95,8 @@ class TestV1EphemeralContainer(unittest.TestCase):
                         tcp_socket = kubernetes_asyncio.client.models.v1/tcp_socket_action.v1.TCPSocketAction(
                             host = '', 
                             port = kubernetes_asyncio.client.models.port.port(), ), ), 
-                    pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), ),
+                    pre_stop = kubernetes_asyncio.client.models.v1/lifecycle_handler.v1.LifecycleHandler(), 
+                    stop_signal = '', ),
                 liveness_probe = kubernetes_asyncio.client.models.v1/probe.v1.Probe(
                     exec = kubernetes_asyncio.client.models.v1/exec_action.v1.ExecAction(
                         command = [

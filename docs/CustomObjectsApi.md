@@ -37,8 +37,6 @@ Method | HTTP request | Description
 # **create_cluster_custom_object**
 > object create_cluster_custom_object(group, version, plural, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 Creates a cluster scoped Custom object
 
 ### Example
@@ -128,8 +126,6 @@ Name | Type | Description  | Notes
 
 # **create_namespaced_custom_object**
 > object create_namespaced_custom_object(group, version, namespace, plural, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 Creates a namespace scoped Custom object
 
@@ -223,8 +219,6 @@ Name | Type | Description  | Notes
 # **delete_cluster_custom_object**
 > object delete_cluster_custom_object(group, version, plural, name, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, dry_run=dry_run, body=body)
 
-
-
 Deletes the specified cluster scoped custom object
 
 ### Example
@@ -317,8 +311,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_cluster_custom_object**
 > object delete_collection_cluster_custom_object(group, version, plural, pretty=pretty, label_selector=label_selector, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, dry_run=dry_run, body=body)
-
-
 
 Delete collection of cluster scoped custom objects
 
@@ -414,8 +406,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_namespaced_custom_object**
 > object delete_collection_namespaced_custom_object(group, version, namespace, plural, pretty=pretty, label_selector=label_selector, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, dry_run=dry_run, field_selector=field_selector, body=body)
-
-
 
 Delete collection of namespace scoped custom objects
 
@@ -516,8 +506,6 @@ Name | Type | Description  | Notes
 # **delete_namespaced_custom_object**
 > object delete_namespaced_custom_object(group, version, namespace, plural, name, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, dry_run=dry_run, body=body)
 
-
-
 Deletes the specified namespace scoped custom object
 
 ### Example
@@ -613,8 +601,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources(group, version)
 
-
-
 get available resources
 
 ### Example
@@ -693,8 +679,6 @@ Name | Type | Description  | Notes
 
 # **get_cluster_custom_object**
 > object get_cluster_custom_object(group, version, plural, name)
-
-
 
 Returns a cluster scoped custom object
 
@@ -778,8 +762,6 @@ Name | Type | Description  | Notes
 # **get_cluster_custom_object_scale**
 > object get_cluster_custom_object_scale(group, version, plural, name)
 
-
-
 read scale of the specified custom object
 
 ### Example
@@ -862,8 +844,6 @@ Name | Type | Description  | Notes
 # **get_cluster_custom_object_status**
 > object get_cluster_custom_object_status(group, version, plural, name)
 
-
-
 read status of the specified cluster scoped custom object
 
 ### Example
@@ -945,8 +925,6 @@ Name | Type | Description  | Notes
 
 # **get_namespaced_custom_object**
 > object get_namespaced_custom_object(group, version, namespace, plural, name)
-
-
 
 Returns a namespace scoped custom object
 
@@ -1032,8 +1010,6 @@ Name | Type | Description  | Notes
 # **get_namespaced_custom_object_scale**
 > object get_namespaced_custom_object_scale(group, version, namespace, plural, name)
 
-
-
 read scale of the specified namespace scoped custom object
 
 ### Example
@@ -1118,8 +1094,6 @@ Name | Type | Description  | Notes
 # **get_namespaced_custom_object_status**
 > object get_namespaced_custom_object_status(group, version, namespace, plural, name)
 
-
-
 read status of the specified namespace scoped custom object
 
 ### Example
@@ -1203,8 +1177,6 @@ Name | Type | Description  | Notes
 
 # **list_cluster_custom_object**
 > object list_cluster_custom_object(group, version, plural, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch cluster scoped custom objects
 
@@ -1306,8 +1278,6 @@ Name | Type | Description  | Notes
 # **list_custom_object_for_all_namespaces**
 > object list_custom_object_for_all_namespaces(group, version, resource_plural, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch namespace scoped custom objects
 
 ### Example
@@ -1407,8 +1377,6 @@ Name | Type | Description  | Notes
 
 # **list_namespaced_custom_object**
 > object list_namespaced_custom_object(group, version, namespace, plural, pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch namespace scoped custom objects
 
@@ -1512,8 +1480,6 @@ Name | Type | Description  | Notes
 # **patch_cluster_custom_object**
 > object patch_cluster_custom_object(group, version, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 patch the specified cluster scoped custom object
 
 ### Example
@@ -1605,8 +1571,6 @@ Name | Type | Description  | Notes
 
 # **patch_cluster_custom_object_scale**
 > object patch_cluster_custom_object_scale(group, version, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update scale of the specified cluster scoped custom object
 
@@ -1700,8 +1664,6 @@ Name | Type | Description  | Notes
 # **patch_cluster_custom_object_status**
 > object patch_cluster_custom_object_status(group, version, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified cluster scoped custom object
 
 ### Example
@@ -1793,8 +1755,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_custom_object**
 > object patch_namespaced_custom_object(group, version, namespace, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 patch the specified namespace scoped custom object
 
@@ -1890,8 +1850,6 @@ Name | Type | Description  | Notes
 # **patch_namespaced_custom_object_scale**
 > object patch_namespaced_custom_object_scale(group, version, namespace, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update scale of the specified namespace scoped custom object
 
 ### Example
@@ -1985,8 +1943,6 @@ Name | Type | Description  | Notes
 
 # **patch_namespaced_custom_object_status**
 > object patch_namespaced_custom_object_status(group, version, namespace, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified namespace scoped custom object
 
@@ -2082,8 +2038,6 @@ Name | Type | Description  | Notes
 # **replace_cluster_custom_object**
 > object replace_cluster_custom_object(group, version, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified cluster scoped custom object
 
 ### Example
@@ -2173,8 +2127,6 @@ Name | Type | Description  | Notes
 
 # **replace_cluster_custom_object_scale**
 > object replace_cluster_custom_object_scale(group, version, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace scale of the specified cluster scoped custom object
 
@@ -2267,8 +2219,6 @@ Name | Type | Description  | Notes
 # **replace_cluster_custom_object_status**
 > object replace_cluster_custom_object_status(group, version, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace status of the cluster scoped specified custom object
 
 ### Example
@@ -2359,8 +2309,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_custom_object**
 > object replace_namespaced_custom_object(group, version, namespace, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified namespace scoped custom object
 
@@ -2454,8 +2402,6 @@ Name | Type | Description  | Notes
 # **replace_namespaced_custom_object_scale**
 > object replace_namespaced_custom_object_scale(group, version, namespace, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace scale of the specified namespace scoped custom object
 
 ### Example
@@ -2548,8 +2494,6 @@ Name | Type | Description  | Notes
 
 # **replace_namespaced_custom_object_status**
 > object replace_namespaced_custom_object_status(group, version, namespace, plural, name, body, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified namespace scoped custom object
 

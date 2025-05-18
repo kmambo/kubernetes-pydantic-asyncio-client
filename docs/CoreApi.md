@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_api_versions**
 > V1APIVersions get_api_versions()
 
-
-
 get available API versions
 
 ### Example

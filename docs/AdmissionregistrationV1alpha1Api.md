@@ -24,8 +24,6 @@ Method | HTTP request | Description
 # **create_mutating_admission_policy**
 > V1alpha1MutatingAdmissionPolicy create_mutating_admission_policy(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a MutatingAdmissionPolicy
 
 ### Example
@@ -113,8 +111,6 @@ Name | Type | Description  | Notes
 # **create_mutating_admission_policy_binding**
 > V1alpha1MutatingAdmissionPolicyBinding create_mutating_admission_policy_binding(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a MutatingAdmissionPolicyBinding
 
 ### Example
@@ -201,8 +197,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_mutating_admission_policy**
 > V1Status delete_collection_mutating_admission_policy(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of MutatingAdmissionPolicy
 
@@ -310,8 +304,6 @@ Name | Type | Description  | Notes
 # **delete_collection_mutating_admission_policy_binding**
 > V1Status delete_collection_mutating_admission_policy_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of MutatingAdmissionPolicyBinding
 
 ### Example
@@ -418,8 +410,6 @@ Name | Type | Description  | Notes
 # **delete_mutating_admission_policy**
 > V1Status delete_mutating_admission_policy(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a MutatingAdmissionPolicy
 
 ### Example
@@ -512,8 +502,6 @@ Name | Type | Description  | Notes
 
 # **delete_mutating_admission_policy_binding**
 > V1Status delete_mutating_admission_policy_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a MutatingAdmissionPolicyBinding
 
@@ -608,8 +596,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -682,8 +668,6 @@ This endpoint does not need any parameter.
 
 # **list_mutating_admission_policy**
 > V1alpha1MutatingAdmissionPolicyList list_mutating_admission_policy(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind MutatingAdmissionPolicy
 
@@ -782,8 +766,6 @@ Name | Type | Description  | Notes
 # **list_mutating_admission_policy_binding**
 > V1alpha1MutatingAdmissionPolicyBindingList list_mutating_admission_policy_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind MutatingAdmissionPolicyBinding
 
 ### Example
@@ -881,8 +863,6 @@ Name | Type | Description  | Notes
 # **patch_mutating_admission_policy**
 > V1alpha1MutatingAdmissionPolicy patch_mutating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified MutatingAdmissionPolicy
 
 ### Example
@@ -972,8 +952,6 @@ Name | Type | Description  | Notes
 
 # **patch_mutating_admission_policy_binding**
 > V1alpha1MutatingAdmissionPolicyBinding patch_mutating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified MutatingAdmissionPolicyBinding
 
@@ -1065,8 +1043,6 @@ Name | Type | Description  | Notes
 # **read_mutating_admission_policy**
 > V1alpha1MutatingAdmissionPolicy read_mutating_admission_policy(name, pretty=pretty)
 
-
-
 read the specified MutatingAdmissionPolicy
 
 ### Example
@@ -1146,8 +1122,6 @@ Name | Type | Description  | Notes
 # **read_mutating_admission_policy_binding**
 > V1alpha1MutatingAdmissionPolicyBinding read_mutating_admission_policy_binding(name, pretty=pretty)
 
-
-
 read the specified MutatingAdmissionPolicyBinding
 
 ### Example
@@ -1226,8 +1200,6 @@ Name | Type | Description  | Notes
 
 # **replace_mutating_admission_policy**
 > V1alpha1MutatingAdmissionPolicy replace_mutating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified MutatingAdmissionPolicy
 
@@ -1316,8 +1288,6 @@ Name | Type | Description  | Notes
 
 # **replace_mutating_admission_policy_binding**
 > V1alpha1MutatingAdmissionPolicyBinding replace_mutating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified MutatingAdmissionPolicyBinding
 

@@ -44,10 +44,12 @@ class TestV2HorizontalPodAutoscalerSpec(unittest.TestCase):
                                 value = 56, )
                             ], 
                         select_policy = '', 
-                        stabilization_window_seconds = 56, ), 
+                        stabilization_window_seconds = 56, 
+                        tolerance = '', ), 
                     scale_up = kubernetes_asyncio.client.models.v2/hpa_scaling_rules.v2.HPAScalingRules(
                         select_policy = '', 
-                        stabilization_window_seconds = 56, ), ),
+                        stabilization_window_seconds = 56, 
+                        tolerance = '', ), ),
                 max_replicas = 56,
                 metrics = [
                     kubernetes_asyncio.client.models.v2/metric_spec.v2.MetricSpec(

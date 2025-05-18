@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_api_group**
 > V1APIGroup get_api_group()
 
-
-
 get information of a group
 
 ### Example

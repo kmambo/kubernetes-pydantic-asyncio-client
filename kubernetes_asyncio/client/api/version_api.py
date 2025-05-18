@@ -54,7 +54,7 @@ class VersionApi:
     ) -> VersionInfo:
         """get_code
 
-        get the code version
+        get the version information for this server
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -118,7 +118,7 @@ class VersionApi:
     ) -> ApiResponse[VersionInfo]:
         """get_code
 
-        get the code version
+        get the version information for this server
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -182,7 +182,7 @@ class VersionApi:
     ) -> RESTResponseType:
         """get_code
 
-        get the code version
+        get the version information for this server
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

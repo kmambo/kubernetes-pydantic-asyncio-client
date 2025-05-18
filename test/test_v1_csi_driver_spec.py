@@ -37,6 +37,7 @@ class TestV1CSIDriverSpec(unittest.TestCase):
             return V1CSIDriverSpec(
                 attach_required = True,
                 fs_group_policy = '',
+                node_allocatable_update_period_seconds = 56,
                 pod_info_on_mount = True,
                 requires_republish = True,
                 se_linux_mount = True,

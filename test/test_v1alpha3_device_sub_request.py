@@ -43,6 +43,14 @@ class TestV1alpha3DeviceSubRequest(unittest.TestCase):
                     kubernetes_asyncio.client.models.v1alpha3/device_selector.v1alpha3.DeviceSelector(
                         cel = kubernetes_asyncio.client.models.v1alpha3/cel_device_selector.v1alpha3.CELDeviceSelector(
                             expression = '', ), )
+                    ],
+                tolerations = [
+                    kubernetes_asyncio.client.models.v1alpha3/device_toleration.v1alpha3.DeviceToleration(
+                        effect = '', 
+                        key = '', 
+                        operator = '', 
+                        toleration_seconds = 56, 
+                        value = '', )
                     ]
             )
         else:

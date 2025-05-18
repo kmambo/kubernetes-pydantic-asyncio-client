@@ -37,11 +37,15 @@ class TestVersionInfo(unittest.TestCase):
             return VersionInfo(
                 build_date = '',
                 compiler = '',
+                emulation_major = '',
+                emulation_minor = '',
                 git_commit = '',
                 git_tree_state = '',
                 git_version = '',
                 go_version = '',
                 major = '',
+                min_compatibility_major = '',
+                min_compatibility_minor = '',
                 minor = '',
                 platform = ''
             )

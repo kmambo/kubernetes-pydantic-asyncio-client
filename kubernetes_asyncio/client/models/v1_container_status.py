@@ -43,9 +43,10 @@ class V1ContainerStatus(BaseModel):
     restart_count: StrictInt = Field(description="RestartCount holds the number of times the container has been restarted. Kubelet makes an effort to always increment the value, but there are cases when the state may be lost due to node restarts and then the value may be reset to 0. The value is never negative.", alias="restartCount")
     started: Optional[StrictBool] = Field(default=None, description="Started indicates whether the container has finished its postStart lifecycle hook and passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. In both cases, startup probes will run again. Is always true when no startupProbe is defined and container is running and has passed the postStart lifecycle hook. The null value must be treated the same as false.")
     state: Optional[V1ContainerState] = None
+    stop_signal: Optional[StrictStr] = Field(default=None, description="StopSignal reports the effective stop signal for this container", alias="stopSignal")
     user: Optional[V1ContainerUser] = None
     volume_mounts: Optional[List[V1VolumeMountStatus]] = Field(default=None, description="Status of volume mounts.", alias="volumeMounts")
-    __properties: ClassVar[List[str]] = ["allocatedResources", "allocatedResourcesStatus", "containerID", "image", "imageID", "lastState", "name", "ready", "resources", "restartCount", "started", "state", "user", "volumeMounts"]
+    __properties: ClassVar[List[str]] = ["allocatedResources", "allocatedResourcesStatus", "containerID", "image", "imageID", "lastState", "name", "ready", "resources", "restartCount", "started", "state", "stopSignal", "user", "volumeMounts"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -136,6 +137,7 @@ class V1ContainerStatus(BaseModel):
             "restartCount": obj.get("restartCount"),
             "started": obj.get("started"),
             "state": V1ContainerState.from_dict(obj["state"]) if obj.get("state") is not None else None,
+            "stopSignal": obj.get("stopSignal"),
             "user": V1ContainerUser.from_dict(obj["user"]) if obj.get("user") is not None else None,
             "volumeMounts": [V1VolumeMountStatus.from_dict(_item) for _item in obj["volumeMounts"]] if obj.get("volumeMounts") is not None else None
         })

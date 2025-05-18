@@ -51,7 +51,15 @@ class TestV1beta1DeviceAllocationResult(unittest.TestCase):
                         device = '', 
                         driver = '', 
                         pool = '', 
-                        request = '', )
+                        request = '', 
+                        tolerations = [
+                            kubernetes_asyncio.client.models.v1beta1/device_toleration.v1beta1.DeviceToleration(
+                                effect = '', 
+                                key = '', 
+                                operator = '', 
+                                toleration_seconds = 56, 
+                                value = '', )
+                            ], )
                     ]
             )
         else:

@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_service_account_issuer_open_id_keyset**
 > str get_service_account_issuer_open_id_keyset()
 
-
-
 get service account issuer OpenID JSON Web Key Set (contains public token verification keys)
 
 ### Example

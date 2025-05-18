@@ -20,8 +20,6 @@ Method | HTTP request | Description
 # **create_api_service**
 > V1APIService create_api_service(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create an APIService
 
 ### Example
@@ -108,8 +106,6 @@ Name | Type | Description  | Notes
 
 # **delete_api_service**
 > V1Status delete_api_service(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete an APIService
 
@@ -203,8 +199,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_api_service**
 > V1Status delete_collection_api_service(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of APIService
 
@@ -312,8 +306,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -386,8 +378,6 @@ This endpoint does not need any parameter.
 
 # **list_api_service**
 > V1APIServiceList list_api_service(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind APIService
 
@@ -486,8 +476,6 @@ Name | Type | Description  | Notes
 # **patch_api_service**
 > V1APIService patch_api_service(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified APIService
 
 ### Example
@@ -577,8 +565,6 @@ Name | Type | Description  | Notes
 
 # **patch_api_service_status**
 > V1APIService patch_api_service_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update status of the specified APIService
 
@@ -670,8 +656,6 @@ Name | Type | Description  | Notes
 # **read_api_service**
 > V1APIService read_api_service(name, pretty=pretty)
 
-
-
 read the specified APIService
 
 ### Example
@@ -751,8 +735,6 @@ Name | Type | Description  | Notes
 # **read_api_service_status**
 > V1APIService read_api_service_status(name, pretty=pretty)
 
-
-
 read status of the specified APIService
 
 ### Example
@@ -831,8 +813,6 @@ Name | Type | Description  | Notes
 
 # **replace_api_service**
 > V1APIService replace_api_service(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified APIService
 
@@ -921,8 +901,6 @@ Name | Type | Description  | Notes
 
 # **replace_api_service_status**
 > V1APIService replace_api_service_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified APIService
 

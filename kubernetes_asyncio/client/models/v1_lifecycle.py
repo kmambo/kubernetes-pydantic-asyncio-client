@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from kubernetes_asyncio.client.models.v1_lifecycle_handler import V1LifecycleHandler
 from typing import Optional, Set
@@ -29,7 +29,8 @@ class V1Lifecycle(BaseModel):
     """ # noqa: E501
     post_start: Optional[V1LifecycleHandler] = Field(default=None, alias="postStart")
     pre_stop: Optional[V1LifecycleHandler] = Field(default=None, alias="preStop")
-    __properties: ClassVar[List[str]] = ["postStart", "preStop"]
+    stop_signal: Optional[StrictStr] = Field(default=None, description="StopSignal defines which signal will be sent to a container when it is being stopped. If not specified, the default is defined by the container runtime in use. StopSignal can only be set for Pods with a non-empty .spec.os.name", alias="stopSignal")
+    __properties: ClassVar[List[str]] = ["postStart", "preStop", "stopSignal"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,7 +90,8 @@ class V1Lifecycle(BaseModel):
 
         _obj = cls.model_validate({
             "postStart": V1LifecycleHandler.from_dict(obj["postStart"]) if obj.get("postStart") is not None else None,
-            "preStop": V1LifecycleHandler.from_dict(obj["preStop"]) if obj.get("preStop") is not None else None
+            "preStop": V1LifecycleHandler.from_dict(obj["preStop"]) if obj.get("preStop") is not None else None,
+            "stopSignal": obj.get("stopSignal")
         })
         return _obj
 

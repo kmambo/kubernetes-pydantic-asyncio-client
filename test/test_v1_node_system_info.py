@@ -44,6 +44,8 @@ class TestV1NodeSystemInfo(unittest.TestCase):
                 machine_id = '',
                 operating_system = '',
                 os_image = '',
+                swap = kubernetes_asyncio.client.models.v1/node_swap_status.v1.NodeSwapStatus(
+                    capacity = 56, ),
                 system_uuid = ''
             )
         else:

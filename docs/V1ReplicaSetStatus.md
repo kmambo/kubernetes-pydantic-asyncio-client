@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **observed_generation** | **int** | ObservedGeneration reflects the generation of the most recently observed ReplicaSet. | [optional] 
 **ready_replicas** | **int** | The number of non-terminating pods targeted by this ReplicaSet with a Ready Condition. | [optional] 
 **replicas** | **int** | Replicas is the most recently observed number of non-terminating pods. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset | 
-**terminating_replicas** | **int** | The number of terminating pods for this replica set. Terminating pods have a non-null .metadata.deletionTimestamp and have not yet reached the Failed or Succeeded .status.phase.  This is an alpha field. Enable DeploymentPodReplacementPolicy to be able to use this field. | [optional] 
+**terminating_replicas** | **int** | The number of terminating pods for this replica set. Terminating pods have a non-null .metadata.deletionTimestamp and have not yet reached the Failed or Succeeded .status.phase.  This is an alpha field. Enable DeploymentReplicaSetTerminatingReplicas to be able to use this field. | [optional] 
 
 ## Example
 

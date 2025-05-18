@@ -27,8 +27,6 @@ Method | HTTP request | Description
 # **create_validating_admission_policy**
 > V1beta1ValidatingAdmissionPolicy create_validating_admission_policy(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ValidatingAdmissionPolicy
 
 ### Example
@@ -116,8 +114,6 @@ Name | Type | Description  | Notes
 # **create_validating_admission_policy_binding**
 > V1beta1ValidatingAdmissionPolicyBinding create_validating_admission_policy_binding(body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 create a ValidatingAdmissionPolicyBinding
 
 ### Example
@@ -204,8 +200,6 @@ Name | Type | Description  | Notes
 
 # **delete_collection_validating_admission_policy**
 > V1Status delete_collection_validating_admission_policy(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
-
-
 
 delete collection of ValidatingAdmissionPolicy
 
@@ -313,8 +307,6 @@ Name | Type | Description  | Notes
 # **delete_collection_validating_admission_policy_binding**
 > V1Status delete_collection_validating_admission_policy_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, body=body)
 
-
-
 delete collection of ValidatingAdmissionPolicyBinding
 
 ### Example
@@ -421,8 +413,6 @@ Name | Type | Description  | Notes
 # **delete_validating_admission_policy**
 > V1Status delete_validating_admission_policy(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
 
-
-
 delete a ValidatingAdmissionPolicy
 
 ### Example
@@ -515,8 +505,6 @@ Name | Type | Description  | Notes
 
 # **delete_validating_admission_policy_binding**
 > V1Status delete_validating_admission_policy_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, body=body)
-
-
 
 delete a ValidatingAdmissionPolicyBinding
 
@@ -611,8 +599,6 @@ Name | Type | Description  | Notes
 # **get_api_resources**
 > V1APIResourceList get_api_resources()
 
-
-
 get available resources
 
 ### Example
@@ -685,8 +671,6 @@ This endpoint does not need any parameter.
 
 # **list_validating_admission_policy**
 > V1beta1ValidatingAdmissionPolicyList list_validating_admission_policy(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-
-
 
 list or watch objects of kind ValidatingAdmissionPolicy
 
@@ -785,8 +769,6 @@ Name | Type | Description  | Notes
 # **list_validating_admission_policy_binding**
 > V1beta1ValidatingAdmissionPolicyBindingList list_validating_admission_policy_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-
-
 list or watch objects of kind ValidatingAdmissionPolicyBinding
 
 ### Example
@@ -884,8 +866,6 @@ Name | Type | Description  | Notes
 # **patch_validating_admission_policy**
 > V1beta1ValidatingAdmissionPolicy patch_validating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update the specified ValidatingAdmissionPolicy
 
 ### Example
@@ -975,8 +955,6 @@ Name | Type | Description  | Notes
 
 # **patch_validating_admission_policy_binding**
 > V1beta1ValidatingAdmissionPolicyBinding patch_validating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-
-
 
 partially update the specified ValidatingAdmissionPolicyBinding
 
@@ -1068,8 +1046,6 @@ Name | Type | Description  | Notes
 # **patch_validating_admission_policy_status**
 > V1beta1ValidatingAdmissionPolicy patch_validating_admission_policy_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-
-
 partially update status of the specified ValidatingAdmissionPolicy
 
 ### Example
@@ -1160,8 +1136,6 @@ Name | Type | Description  | Notes
 # **read_validating_admission_policy**
 > V1beta1ValidatingAdmissionPolicy read_validating_admission_policy(name, pretty=pretty)
 
-
-
 read the specified ValidatingAdmissionPolicy
 
 ### Example
@@ -1240,8 +1214,6 @@ Name | Type | Description  | Notes
 
 # **read_validating_admission_policy_binding**
 > V1beta1ValidatingAdmissionPolicyBinding read_validating_admission_policy_binding(name, pretty=pretty)
-
-
 
 read the specified ValidatingAdmissionPolicyBinding
 
@@ -1322,8 +1294,6 @@ Name | Type | Description  | Notes
 # **read_validating_admission_policy_status**
 > V1beta1ValidatingAdmissionPolicy read_validating_admission_policy_status(name, pretty=pretty)
 
-
-
 read status of the specified ValidatingAdmissionPolicy
 
 ### Example
@@ -1402,8 +1372,6 @@ Name | Type | Description  | Notes
 
 # **replace_validating_admission_policy**
 > V1beta1ValidatingAdmissionPolicy replace_validating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace the specified ValidatingAdmissionPolicy
 
@@ -1493,8 +1461,6 @@ Name | Type | Description  | Notes
 # **replace_validating_admission_policy_binding**
 > V1beta1ValidatingAdmissionPolicyBinding replace_validating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-
-
 replace the specified ValidatingAdmissionPolicyBinding
 
 ### Example
@@ -1582,8 +1548,6 @@ Name | Type | Description  | Notes
 
 # **replace_validating_admission_policy_status**
 > V1beta1ValidatingAdmissionPolicy replace_validating_admission_policy_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-
 
 replace status of the specified ValidatingAdmissionPolicy
 

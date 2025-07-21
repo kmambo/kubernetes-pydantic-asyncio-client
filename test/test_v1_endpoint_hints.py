@@ -35,9 +35,6 @@ class TestV1EndpointHints(unittest.TestCase):
         model = V1EndpointHints()
         if include_optional:
             return V1EndpointHints(
-                for_nodes = [
-                    null
-                    ],
                 for_zones = [
                     null
                     ]

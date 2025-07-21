@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kubernetes_asyncio"
-version = "1.33.3"
+version = "1.32.7"
 description = "merged spec"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

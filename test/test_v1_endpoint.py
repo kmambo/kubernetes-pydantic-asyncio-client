@@ -46,9 +46,6 @@ class TestV1Endpoint(unittest.TestCase):
                     'key' : ''
                     },
                 hints = kubernetes_asyncio.models.v1/endpoint_hints.v1.EndpointHints(
-                    for_nodes = [
-                        null
-                        ], 
                     for_zones = [
                         null
                         ], ),

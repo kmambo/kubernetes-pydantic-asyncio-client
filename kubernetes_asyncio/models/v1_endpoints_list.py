@@ -28,7 +28,7 @@ from kubernetes_asyncio.models.v1_list_meta import V1ListMeta
 
 class V1EndpointsList(BaseModel):
     """
-    EndpointsList is a list of endpoints. Deprecated: This API is deprecated in v1.33+.
+    EndpointsList is a list of endpoints.
     """  # noqa: E501
 
     api_version: Optional[StrictStr] = Field(

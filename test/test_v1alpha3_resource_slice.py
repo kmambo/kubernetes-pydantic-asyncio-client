@@ -71,11 +71,7 @@ class TestV1alpha3ResourceSlice(unittest.TestCase):
                     driver = '', 
                     node_name = '', 
                     node_selector = null, 
-                    per_device_node_selection = True, 
-                    pool = null, 
-                    shared_counters = [
-                        null
-                        ], )
+                    pool = null, )
             )
         else:
             return V1alpha3ResourceSlice(
@@ -87,11 +83,7 @@ class TestV1alpha3ResourceSlice(unittest.TestCase):
                     driver = '', 
                     node_name = '', 
                     node_selector = null, 
-                    per_device_node_selection = True, 
-                    pool = null, 
-                    shared_counters = [
-                        null
-                        ], ),
+                    pool = null, ),
         )
         """
 

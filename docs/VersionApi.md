@@ -10,7 +10,7 @@ Method | HTTP request | Description
 # **get_code**
 > VersionInfo get_code()
 
-get the version information for this server
+get the code version
 
 ### Example
 

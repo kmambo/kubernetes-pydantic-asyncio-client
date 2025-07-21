@@ -51,8 +51,7 @@ class TestV1Container(unittest.TestCase):
                 image_pull_policy = '',
                 lifecycle = kubernetes_asyncio.models.v1/lifecycle.v1.Lifecycle(
                     post_start = null, 
-                    pre_stop = null, 
-                    stop_signal = '', ),
+                    pre_stop = null, ),
                 liveness_probe = kubernetes_asyncio.models.v1/probe.v1.Probe(
                     exec = null, 
                     failure_threshold = 56, 

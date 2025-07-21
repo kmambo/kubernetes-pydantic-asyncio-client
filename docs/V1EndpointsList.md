@@ -1,6 +1,6 @@
 # V1EndpointsList
 
-EndpointsList is a list of endpoints. Deprecated: This API is deprecated in v1.33+.
+EndpointsList is a list of endpoints.
 
 ## Properties
 

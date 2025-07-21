@@ -20,7 +20,7 @@ import re  # noqa: F401
 from datetime import datetime
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1_container_status import V1ContainerStatus
@@ -75,11 +75,6 @@ class V1PodStatus(BaseModel):
         description="nominatedNodeName is set only when this pod preempts other pods on the node, but it cannot be scheduled right away as preemption victims receive their graceful termination periods. This field does not guarantee that the pod will be scheduled on this node. Scheduler may decide to place the pod elsewhere if other nodes become available sooner. Scheduler may also decide to give the resources on this node to a higher priority pod that is created after preemption. As a result, this field may be different than PodSpec.nodeName when the pod is scheduled.",
         alias="nominatedNodeName",
     )
-    observed_generation: Optional[StrictInt] = Field(
-        default=None,
-        description="If set, this represents the .metadata.generation that the pod status was set based upon. This is an alpha field. Enable PodObservedGenerationTracking to be able to use this field.",
-        alias="observedGeneration",
-    )
     phase: Optional[StrictStr] = Field(
         default=None,
         description="The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle. The conditions array, the reason and message fields, and the individual container status arrays contain more detail about the pod's status. There are five possible phase values:  Pending: The pod has been accepted by the Kubernetes system, but one or more of the container images has not been created. This includes time before being scheduled as well as time spent downloading images over the network, which could take a while. Running: The pod has been bound to a node, and all of the containers have been created. At least one container is still running, or is in the process of starting or restarting. Succeeded: All containers in the pod have terminated in success, and will not be restarted. Failed: All containers in the pod have terminated, and at least one container has terminated in failure. The container either exited with non-zero status or was terminated by the system. Unknown: For some reason the state of the pod could not be obtained, typically due to an error in communicating with the host of the pod.  More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase",
@@ -105,7 +100,7 @@ class V1PodStatus(BaseModel):
     )
     resize: Optional[StrictStr] = Field(
         default=None,
-        description='Status of resources resize desired for pod\'s containers. It is empty if no resources resize is pending. Any changes to container resources will automatically set this to "Proposed" Deprecated: Resize status is moved to two pod conditions PodResizePending and PodResizeInProgress. PodResizePending will track states where the spec has been resized, but the Kubelet has not yet allocated the resources. PodResizeInProgress will track in-progress resizes, and should be present whenever allocated resources != acknowledged resources.',
+        description='Status of resources resize desired for pod\'s containers. It is empty if no resources resize is pending. Any changes to container resources will automatically set this to "Proposed"',
     )
     resource_claim_statuses: Optional[List[V1PodResourceClaimStatus]] = Field(
         default=None,
@@ -126,7 +121,6 @@ class V1PodStatus(BaseModel):
         "initContainerStatuses",
         "message",
         "nominatedNodeName",
-        "observedGeneration",
         "phase",
         "podIP",
         "podIPs",
@@ -273,7 +267,6 @@ class V1PodStatus(BaseModel):
                 ),
                 "message": obj.get("message"),
                 "nominatedNodeName": obj.get("nominatedNodeName"),
-                "observedGeneration": obj.get("observedGeneration"),
                 "phase": obj.get("phase"),
                 "podIP": obj.get("podIP"),
                 "podIPs": (

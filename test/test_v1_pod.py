@@ -149,7 +149,6 @@ class TestV1Pod(unittest.TestCase):
                         ], 
                     message = '', 
                     nominated_node_name = '', 
-                    observed_generation = 56, 
                     phase = '', 
                     pod_ip = '', 
                     pod_ips = [

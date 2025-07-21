@@ -32,12 +32,6 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_create_ip_address(self) -> None:
-        """Test case for create_ip_address
-
-        """
-        pass
-
     async def test_create_namespaced_ingress(self) -> None:
         """Test case for create_namespaced_ingress
 
@@ -50,20 +44,8 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_create_service_cidr(self) -> None:
-        """Test case for create_service_cidr
-
-        """
-        pass
-
     async def test_delete_collection_ingress_class(self) -> None:
         """Test case for delete_collection_ingress_class
-
-        """
-        pass
-
-    async def test_delete_collection_ip_address(self) -> None:
-        """Test case for delete_collection_ip_address
 
         """
         pass
@@ -80,20 +62,8 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_delete_collection_service_cidr(self) -> None:
-        """Test case for delete_collection_service_cidr
-
-        """
-        pass
-
     async def test_delete_ingress_class(self) -> None:
         """Test case for delete_ingress_class
-
-        """
-        pass
-
-    async def test_delete_ip_address(self) -> None:
-        """Test case for delete_ip_address
 
         """
         pass
@@ -106,12 +76,6 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_delete_namespaced_network_policy(self) -> None:
         """Test case for delete_namespaced_network_policy
-
-        """
-        pass
-
-    async def test_delete_service_cidr(self) -> None:
-        """Test case for delete_service_cidr
 
         """
         pass
@@ -134,12 +98,6 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_list_ip_address(self) -> None:
-        """Test case for list_ip_address
-
-        """
-        pass
-
     async def test_list_namespaced_ingress(self) -> None:
         """Test case for list_namespaced_ingress
 
@@ -158,20 +116,8 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_list_service_cidr(self) -> None:
-        """Test case for list_service_cidr
-
-        """
-        pass
-
     async def test_patch_ingress_class(self) -> None:
         """Test case for patch_ingress_class
-
-        """
-        pass
-
-    async def test_patch_ip_address(self) -> None:
-        """Test case for patch_ip_address
 
         """
         pass
@@ -194,26 +140,8 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_patch_service_cidr(self) -> None:
-        """Test case for patch_service_cidr
-
-        """
-        pass
-
-    async def test_patch_service_cidr_status(self) -> None:
-        """Test case for patch_service_cidr_status
-
-        """
-        pass
-
     async def test_read_ingress_class(self) -> None:
         """Test case for read_ingress_class
-
-        """
-        pass
-
-    async def test_read_ip_address(self) -> None:
-        """Test case for read_ip_address
 
         """
         pass
@@ -236,26 +164,8 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_read_service_cidr(self) -> None:
-        """Test case for read_service_cidr
-
-        """
-        pass
-
-    async def test_read_service_cidr_status(self) -> None:
-        """Test case for read_service_cidr_status
-
-        """
-        pass
-
     async def test_replace_ingress_class(self) -> None:
         """Test case for replace_ingress_class
-
-        """
-        pass
-
-    async def test_replace_ip_address(self) -> None:
-        """Test case for replace_ip_address
 
         """
         pass
@@ -274,18 +184,6 @@ class TestNetworkingV1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_replace_namespaced_network_policy(self) -> None:
         """Test case for replace_namespaced_network_policy
-
-        """
-        pass
-
-    async def test_replace_service_cidr(self) -> None:
-        """Test case for replace_service_cidr
-
-        """
-        pass
-
-    async def test_replace_service_cidr_status(self) -> None:
-        """Test case for replace_service_cidr_status
 
         """
         pass

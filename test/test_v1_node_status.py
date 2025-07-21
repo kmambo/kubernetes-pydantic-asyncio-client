@@ -69,7 +69,6 @@ class TestV1NodeStatus(unittest.TestCase):
                     machine_id = '', 
                     operating_system = '', 
                     os_image = '', 
-                    swap = null, 
                     system_uuid = '', ),
                 phase = '',
                 runtime_handlers = [

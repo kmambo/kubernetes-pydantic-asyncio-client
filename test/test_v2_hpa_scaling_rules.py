@@ -39,8 +39,7 @@ class TestV2HPAScalingRules(unittest.TestCase):
                     null
                     ],
                 select_policy = '',
-                stabilization_window_seconds = 56,
-                tolerance = None
+                stabilization_window_seconds = 56
             )
         else:
             return V2HPAScalingRules(

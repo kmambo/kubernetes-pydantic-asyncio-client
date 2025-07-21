@@ -19,7 +19,7 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1_lifecycle_handler import V1LifecycleHandler
@@ -40,12 +40,7 @@ class V1Lifecycle(BaseModel):
         description="PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks",
         alias="preStop",
     )
-    stop_signal: Optional[StrictStr] = Field(
-        default=None,
-        description="StopSignal defines which signal will be sent to a container when it is being stopped. If not specified, the default is defined by the container runtime in use. StopSignal can only be set for Pods with a non-empty .spec.os.name",
-        alias="stopSignal",
-    )
-    __properties: ClassVar[List[str]] = ["postStart", "preStop", "stopSignal"]
+    __properties: ClassVar[List[str]] = ["postStart", "preStop"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -113,7 +108,6 @@ class V1Lifecycle(BaseModel):
                     if obj.get("preStop") is not None
                     else None
                 ),
-                "stopSignal": obj.get("stopSignal"),
             }
         )
         return _obj

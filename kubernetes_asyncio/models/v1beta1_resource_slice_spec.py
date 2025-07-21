@@ -23,7 +23,6 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1_node_selector import V1NodeSelector
-from kubernetes_asyncio.models.v1beta1_counter_set import V1beta1CounterSet
 from kubernetes_asyncio.models.v1beta1_device import V1beta1Device
 from kubernetes_asyncio.models.v1beta1_resource_pool import V1beta1ResourcePool
 
@@ -35,7 +34,7 @@ class V1beta1ResourceSliceSpec(BaseModel):
 
     all_nodes: Optional[StrictBool] = Field(
         default=None,
-        description="AllNodes indicates that all nodes have access to the resources in the pool.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set.",
+        description="AllNodes indicates that all nodes have access to the resources in the pool.  Exactly one of NodeName, NodeSelector and AllNodes must be set.",
         alias="allNodes",
     )
     devices: Optional[List[V1beta1Device]] = Field(
@@ -47,26 +46,16 @@ class V1beta1ResourceSliceSpec(BaseModel):
     )
     node_name: Optional[StrictStr] = Field(
         default=None,
-        description="NodeName identifies the node which provides the resources in this pool. A field selector can be used to list only ResourceSlice objects belonging to a certain node.  This field can be used to limit access from nodes to ResourceSlices with the same node name. It also indicates to autoscalers that adding new nodes of the same type as some old node might also make new resources available.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set. This field is immutable.",
+        description="NodeName identifies the node which provides the resources in this pool. A field selector can be used to list only ResourceSlice objects belonging to a certain node.  This field can be used to limit access from nodes to ResourceSlices with the same node name. It also indicates to autoscalers that adding new nodes of the same type as some old node might also make new resources available.  Exactly one of NodeName, NodeSelector and AllNodes must be set. This field is immutable.",
         alias="nodeName",
     )
     node_selector: Optional[V1NodeSelector] = Field(
         default=None,
-        description="NodeSelector defines which nodes have access to the resources in the pool, when that pool is not limited to a single node.  Must use exactly one term.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set.",
+        description="NodeSelector defines which nodes have access to the resources in the pool, when that pool is not limited to a single node.  Must use exactly one term.  Exactly one of NodeName, NodeSelector and AllNodes must be set.",
         alias="nodeSelector",
-    )
-    per_device_node_selection: Optional[StrictBool] = Field(
-        default=None,
-        description="PerDeviceNodeSelection defines whether the access from nodes to resources in the pool is set on the ResourceSlice level or on each device. If it is set to true, every device defined the ResourceSlice must specify this individually.  Exactly one of NodeName, NodeSelector, AllNodes, and PerDeviceNodeSelection must be set.",
-        alias="perDeviceNodeSelection",
     )
     pool: V1beta1ResourcePool = Field(
         description="Pool describes the pool that this ResourceSlice belongs to."
-    )
-    shared_counters: Optional[List[V1beta1CounterSet]] = Field(
-        default=None,
-        description="SharedCounters defines a list of counter sets, each of which has a name and a list of counters available.  The names of the SharedCounters must be unique in the ResourceSlice.  The maximum number of SharedCounters is 32.",
-        alias="sharedCounters",
     )
     __properties: ClassVar[List[str]] = [
         "allNodes",
@@ -74,9 +63,7 @@ class V1beta1ResourceSliceSpec(BaseModel):
         "driver",
         "nodeName",
         "nodeSelector",
-        "perDeviceNodeSelection",
         "pool",
-        "sharedCounters",
     ]
 
     model_config = ConfigDict(
@@ -129,13 +116,6 @@ class V1beta1ResourceSliceSpec(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of pool
         if self.pool:
             _dict["pool"] = self.pool.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in shared_counters (list)
-        _items = []
-        if self.shared_counters:
-            for _item_shared_counters in self.shared_counters:
-                if _item_shared_counters:
-                    _items.append(_item_shared_counters.to_dict())
-            _dict["sharedCounters"] = _items
         return _dict
 
     @classmethod
@@ -162,18 +142,9 @@ class V1beta1ResourceSliceSpec(BaseModel):
                     if obj.get("nodeSelector") is not None
                     else None
                 ),
-                "perDeviceNodeSelection": obj.get("perDeviceNodeSelection"),
                 "pool": (
                     V1beta1ResourcePool.from_dict(obj["pool"])
                     if obj.get("pool") is not None
-                    else None
-                ),
-                "sharedCounters": (
-                    [
-                        V1beta1CounterSet.from_dict(_item)
-                        for _item in obj["sharedCounters"]
-                    ]
-                    if obj.get("sharedCounters") is not None
                     else None
                 ),
             }

@@ -6,13 +6,13 @@ ResourceMetricStatus indicates the current value of a resource metric known to K
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) |  | 
-**name** | **str** | name is the name of the resource in question. | 
+**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) | current contains the current value for the given metric | 
+**name** | **str** | name is the name of the resource in question. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_resource_metric_status import V2ResourceMetricStatus
+from kubernetes_asyncio.models.v2_resource_metric_status import V2ResourceMetricStatus
 
 # TODO update the JSON string below
 json = "{}"

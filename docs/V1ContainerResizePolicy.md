@@ -6,13 +6,13 @@ ContainerResizePolicy represents resource resize policy for the container.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource_name** | **str** | Name of the resource to which this resource resize policy applies. Supported values: cpu, memory. | 
-**restart_policy** | **str** | Restart policy to apply when specified resource is resized. If not specified, it defaults to NotRequired. | 
+**resource_name** | **str** | Name of the resource to which this resource resize policy applies. Supported values: cpu, memory. | [default to '']
+**restart_policy** | **str** | Restart policy to apply when specified resource is resized. If not specified, it defaults to NotRequired. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_container_resize_policy import V1ContainerResizePolicy
+from kubernetes_asyncio.models.v1_container_resize_policy import V1ContainerResizePolicy
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,13 +6,13 @@ ResourceMetricSource indicates how to scale on a resource metric known to Kubern
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | name is the name of the resource in question. | 
-**target** | [**V2MetricTarget**](V2MetricTarget.md) |  | 
+**name** | **str** | name is the name of the resource in question. | [default to '']
+**target** | [**V2MetricTarget**](V2MetricTarget.md) | target specifies the target value for the given metric | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_resource_metric_source import V2ResourceMetricSource
+from kubernetes_asyncio.models.v2_resource_metric_source import V2ResourceMetricSource
 
 # TODO update the JSON string below
 json = "{}"

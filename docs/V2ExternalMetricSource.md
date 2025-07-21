@@ -6,13 +6,13 @@ ExternalMetricSource indicates how to scale on a metric not associated with any 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) |  | 
-**target** | [**V2MetricTarget**](V2MetricTarget.md) |  | 
+**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) | metric identifies the target metric by name and selector | 
+**target** | [**V2MetricTarget**](V2MetricTarget.md) | target specifies the target value for the given metric | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_external_metric_source import V2ExternalMetricSource
+from kubernetes_asyncio.models.v2_external_metric_source import V2ExternalMetricSource
 
 # TODO update the JSON string below
 json = "{}"

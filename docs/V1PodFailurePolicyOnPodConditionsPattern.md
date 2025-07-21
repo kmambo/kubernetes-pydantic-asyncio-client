@@ -6,13 +6,13 @@ PodFailurePolicyOnPodConditionsPattern describes a pattern for matching an actua
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **str** | Specifies the required Pod condition status. To match a pod condition it is required that the specified status equals the pod condition status. Defaults to True. | 
-**type** | **str** | Specifies the required Pod condition type. To match a pod condition it is required that specified type equals the pod condition type. | 
+**status** | **str** | Specifies the required Pod condition status. To match a pod condition it is required that the specified status equals the pod condition status. Defaults to True. | [default to '']
+**type** | **str** | Specifies the required Pod condition type. To match a pod condition it is required that specified type equals the pod condition type. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_failure_policy_on_pod_conditions_pattern import V1PodFailurePolicyOnPodConditionsPattern
+from kubernetes_asyncio.models.v1_pod_failure_policy_on_pod_conditions_pattern import V1PodFailurePolicyOnPodConditionsPattern
 
 # TODO update the JSON string below
 json = "{}"

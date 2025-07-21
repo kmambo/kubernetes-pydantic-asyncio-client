@@ -6,14 +6,14 @@ Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not sup
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **str** | path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs | 
+**path** | **str** | path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs | [default to '']
 **read_only** | **bool** | readOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs | [optional] 
-**server** | **str** | server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs | 
+**server** | **str** | server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_nfs_volume_source import V1NFSVolumeSource
+from kubernetes_asyncio.models.v1_nfs_volume_source import V1NFSVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

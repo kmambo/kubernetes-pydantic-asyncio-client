@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_failure_policy import V1PodFailurePolicy
+from kubernetes_asyncio.models.v1_pod_failure_policy import V1PodFailurePolicy
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_success_policy_rule import V1SuccessPolicyRule
+from kubernetes_asyncio.models.v1_success_policy_rule import V1SuccessPolicyRule
 
 # TODO update the JSON string below
 json = "{}"

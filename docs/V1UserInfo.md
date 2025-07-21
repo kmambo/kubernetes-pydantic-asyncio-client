@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_user_info import V1UserInfo
+from kubernetes_asyncio.models.v1_user_info import V1UserInfo
 
 # TODO update the JSON string below
 json = "{}"

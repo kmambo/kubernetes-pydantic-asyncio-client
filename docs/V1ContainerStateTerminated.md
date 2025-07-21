@@ -7,17 +7,17 @@ ContainerStateTerminated is a terminated state of a container.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **container_id** | **str** | Container&#39;s ID in the format &#39;&lt;type&gt;://&lt;container_id&gt;&#39; | [optional] 
-**exit_code** | **int** | Exit status from the last termination of the container | 
-**finished_at** | **datetime** | Time at which the container last terminated | [optional] 
+**exit_code** | **int** | Exit status from the last termination of the container | [default to 0]
+**finished_at** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | Message regarding the last termination of the container | [optional] 
 **reason** | **str** | (brief) reason from the last termination of the container | [optional] 
 **signal** | **int** | Signal from the last termination of the container | [optional] 
-**started_at** | **datetime** | Time at which previous execution of the container started | [optional] 
+**started_at** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_container_state_terminated import V1ContainerStateTerminated
+from kubernetes_asyncio.models.v1_container_state_terminated import V1ContainerStateTerminated
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,13 +6,13 @@ PodsMetricSource indicates how to scale on a metric describing each pod in the c
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) |  | 
-**target** | [**V2MetricTarget**](V2MetricTarget.md) |  | 
+**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) | metric identifies the target metric by name and selector | 
+**target** | [**V2MetricTarget**](V2MetricTarget.md) | target specifies the target value for the given metric | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_pods_metric_source import V2PodsMetricSource
+from kubernetes_asyncio.models.v2_pods_metric_source import V2PodsMetricSource
 
 # TODO update the JSON string below
 json = "{}"

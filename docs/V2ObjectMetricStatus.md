@@ -6,14 +6,14 @@ ObjectMetricStatus indicates the current value of a metric describing a kubernet
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) |  | 
-**described_object** | [**V2CrossVersionObjectReference**](V2CrossVersionObjectReference.md) |  | 
-**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) |  | 
+**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) | current contains the current value for the given metric | 
+**described_object** | [**V2CrossVersionObjectReference**](V2CrossVersionObjectReference.md) | DescribedObject specifies the descriptions of a object,such as kind,name apiVersion | 
+**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) | metric identifies the target metric by name and selector | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_object_metric_status import V2ObjectMetricStatus
+from kubernetes_asyncio.models.v2_object_metric_status import V2ObjectMetricStatus
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,13 +6,13 @@ ConfigMapEnvSource selects a ConfigMap to populate the environment variables wit
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [optional] 
+**name** | **str** | Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [optional] [default to '']
 **optional** | **bool** | Specify whether the ConfigMap must be defined | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_config_map_env_source import V1ConfigMapEnvSource
+from kubernetes_asyncio.models.v1_config_map_env_source import V1ConfigMapEnvSource
 
 # TODO update the JSON string below
 json = "{}"

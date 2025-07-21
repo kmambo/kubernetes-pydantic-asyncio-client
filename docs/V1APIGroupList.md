@@ -1,6 +1,6 @@
 # V1APIGroupList
 
-APIGroupList is a list of APIGroup, to allow kubernetes_asyncio.clients to discover the API at /apis.
+APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.
 
 ## Properties
 
@@ -8,12 +8,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
 **groups** | [**List[V1APIGroup]**](V1APIGroup.md) | groups is a list of APIGroup. | 
-**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the kubernetes_asyncio.client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
+**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_api_group_list import V1APIGroupList
+from kubernetes_asyncio.models.v1_api_group_list import V1APIGroupList
 
 # TODO update the JSON string below
 json = "{}"

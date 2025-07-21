@@ -6,14 +6,14 @@ Selects a key from a ConfigMap.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | The key to select. | 
-**name** | **str** | Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [optional] 
+**key** | **str** | The key to select. | [default to '']
+**name** | **str** | Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [optional] [default to '']
 **optional** | **bool** | Specify whether the ConfigMap or its key must be defined | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_config_map_key_selector import V1ConfigMapKeySelector
+from kubernetes_asyncio.models.v1_config_map_key_selector import V1ConfigMapKeySelector
 
 # TODO update the JSON string below
 json = "{}"

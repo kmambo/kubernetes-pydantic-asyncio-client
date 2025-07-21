@@ -7,15 +7,15 @@ VolumeAttachment captures the intent to attach or detach the specified volume to
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
-**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the kubernetes_asyncio.client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1VolumeAttachmentSpec**](V1VolumeAttachmentSpec.md) |  | 
-**status** | [**V1VolumeAttachmentStatus**](V1VolumeAttachmentStatus.md) |  | [optional] 
+**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata | [optional] 
+**spec** | [**V1VolumeAttachmentSpec**](V1VolumeAttachmentSpec.md) | spec represents specification of the desired attach/detach volume behavior. Populated by the Kubernetes system. | 
+**status** | [**V1VolumeAttachmentStatus**](V1VolumeAttachmentStatus.md) | status represents status of the VolumeAttachment request. Populated by the entity completing the attach or detach operation, i.e. the external-attacher. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_attachment import V1VolumeAttachment
+from kubernetes_asyncio.models.v1_volume_attachment import V1VolumeAttachment
 
 # TODO update the JSON string below
 json = "{}"

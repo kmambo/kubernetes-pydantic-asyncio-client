@@ -6,13 +6,13 @@ PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects a
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1PersistentVolumeClaimSpec**](V1PersistentVolumeClaimSpec.md) |  | 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation. | [optional] 
+**spec** | [**V1PersistentVolumeClaimSpec**](V1PersistentVolumeClaimSpec.md) | The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_persistent_volume_claim_template import V1PersistentVolumeClaimTemplate
+from kubernetes_asyncio.models.v1_persistent_volume_claim_template import V1PersistentVolumeClaimTemplate
 
 # TODO update the JSON string below
 json = "{}"

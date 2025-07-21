@@ -8,15 +8,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **group** | **str** | group to map volume access to Default is no group | [optional] 
 **read_only** | **bool** | readOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false. | [optional] 
-**registry** | **str** | registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes | 
+**registry** | **str** | registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes | [default to '']
 **tenant** | **str** | tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin | [optional] 
 **user** | **str** | user to map volume access to Defaults to serivceaccount user | [optional] 
-**volume** | **str** | volume is a string that references an already created Quobyte volume by name. | 
+**volume** | **str** | volume is a string that references an already created Quobyte volume by name. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_quobyte_volume_source import V1QuobyteVolumeSource
+from kubernetes_asyncio.models.v1_quobyte_volume_source import V1QuobyteVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,13 +6,13 @@ ExternalMetricStatus indicates the current value of a global metric not associat
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) |  | 
-**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) |  | 
+**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) | current contains the current value for the given metric | 
+**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) | metric identifies the target metric by name and selector | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_external_metric_status import V2ExternalMetricStatus
+from kubernetes_asyncio.models.v2_external_metric_status import V2ExternalMetricStatus
 
 # TODO update the JSON string below
 json = "{}"

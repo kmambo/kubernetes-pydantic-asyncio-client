@@ -6,15 +6,15 @@ The node this Taint is attached to has the \"effect\" on any pod that does not t
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**effect** | **str** | Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute. | 
-**key** | **str** | Required. The taint key to be applied to a node. | 
-**time_added** | **datetime** | TimeAdded represents the time at which the taint was added. | [optional] 
+**effect** | **str** | Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute. | [default to '']
+**key** | **str** | Required. The taint key to be applied to a node. | [default to '']
+**time_added** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **value** | **str** | The taint value corresponding to the taint key. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_taint import V1Taint
+from kubernetes_asyncio.models.v1_taint import V1Taint
 
 # TODO update the JSON string below
 json = "{}"

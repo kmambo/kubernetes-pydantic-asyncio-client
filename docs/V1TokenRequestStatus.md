@@ -6,13 +6,13 @@ TokenRequestStatus is the result of a token request.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**expiration_timestamp** | **datetime** | ExpirationTimestamp is the time of expiration of the returned token. | 
-**token** | **str** | Token is the opaque bearer token. | 
+**expiration_timestamp** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | 
+**token** | **str** | Token is the opaque bearer token. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_token_request_status import V1TokenRequestStatus
+from kubernetes_asyncio.models.v1_token_request_status import V1TokenRequestStatus
 
 # TODO update the JSON string below
 json = "{}"

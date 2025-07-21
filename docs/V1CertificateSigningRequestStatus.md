@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_certificate_signing_request_status import V1CertificateSigningRequestStatus
+from kubernetes_asyncio.models.v1_certificate_signing_request_status import V1CertificateSigningRequestStatus
 
 # TODO update the JSON string below
 json = "{}"

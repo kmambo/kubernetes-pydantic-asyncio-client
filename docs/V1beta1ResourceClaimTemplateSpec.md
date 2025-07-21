@@ -6,13 +6,13 @@ ResourceClaimTemplateSpec contains the metadata and fields for a ResourceClaim.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1beta1ResourceClaimSpec**](V1beta1ResourceClaimSpec.md) |  | 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | ObjectMeta may contain labels and annotations that will be copied into the ResourceClaim when creating it. No other fields are allowed and will be rejected during validation. | [optional] 
+**spec** | [**V1beta1ResourceClaimSpec**](V1beta1ResourceClaimSpec.md) | Spec for the ResourceClaim. The entire content is copied unchanged into the ResourceClaim that gets created from this template. The same fields as in a ResourceClaim are also valid here. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_resource_claim_template_spec import V1beta1ResourceClaimTemplateSpec
+from kubernetes_asyncio.models.v1beta1_resource_claim_template_spec import V1beta1ResourceClaimTemplateSpec
 
 # TODO update the JSON string below
 json = "{}"

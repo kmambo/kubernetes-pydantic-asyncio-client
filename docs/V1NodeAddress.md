@@ -6,13 +6,13 @@ NodeAddress contains information for the node's address.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | **str** | The node address. | 
-**type** | **str** | Node address type, one of Hostname, ExternalIP or InternalIP. | 
+**address** | **str** | The node address. | [default to '']
+**type** | **str** | Node address type, one of Hostname, ExternalIP or InternalIP. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_address import V1NodeAddress
+from kubernetes_asyncio.models.v1_node_address import V1NodeAddress
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,12 +6,12 @@ VolumeNodeAffinity defines constraints that limit what nodes this volume can be 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**required** | [**V1NodeSelector**](V1NodeSelector.md) |  | [optional] 
+**required** | [**V1NodeSelector**](V1NodeSelector.md) | required specifies hard node constraints that must be met. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_node_affinity import V1VolumeNodeAffinity
+from kubernetes_asyncio.models.v1_volume_node_affinity import V1VolumeNodeAffinity
 
 # TODO update the JSON string below
 json = "{}"

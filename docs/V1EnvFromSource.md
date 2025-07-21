@@ -6,14 +6,14 @@ EnvFromSource represents the source of a set of ConfigMaps or Secrets
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config_map_ref** | [**V1ConfigMapEnvSource**](V1ConfigMapEnvSource.md) |  | [optional] 
+**config_map_ref** | [**V1ConfigMapEnvSource**](V1ConfigMapEnvSource.md) | The ConfigMap to select from | [optional] 
 **prefix** | **str** | Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER. | [optional] 
-**secret_ref** | [**V1SecretEnvSource**](V1SecretEnvSource.md) |  | [optional] 
+**secret_ref** | [**V1SecretEnvSource**](V1SecretEnvSource.md) | The Secret to select from | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_env_from_source import V1EnvFromSource
+from kubernetes_asyncio.models.v1_env_from_source import V1EnvFromSource
 
 # TODO update the JSON string below
 json = "{}"

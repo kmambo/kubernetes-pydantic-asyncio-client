@@ -6,13 +6,13 @@ HTTPHeader describes a custom header to be used in HTTP probes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header. | 
-**value** | **str** | The header field value | 
+**name** | **str** | The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header. | [default to '']
+**value** | **str** | The header field value | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_http_header import V1HTTPHeader
+from kubernetes_asyncio.models.v1_http_header import V1HTTPHeader
 
 # TODO update the JSON string below
 json = "{}"

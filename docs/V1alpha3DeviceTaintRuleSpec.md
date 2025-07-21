@@ -6,13 +6,13 @@ DeviceTaintRuleSpec specifies the selector and one taint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_selector** | [**V1alpha3DeviceTaintSelector**](V1alpha3DeviceTaintSelector.md) |  | [optional] 
-**taint** | [**V1alpha3DeviceTaint**](V1alpha3DeviceTaint.md) |  | 
+**device_selector** | [**V1alpha3DeviceTaintSelector**](V1alpha3DeviceTaintSelector.md) | DeviceSelector defines which device(s) the taint is applied to. All selector criteria must be satified for a device to match. The empty selector matches all devices. Without a selector, no devices are matches. | [optional] 
+**taint** | [**V1alpha3DeviceTaint**](V1alpha3DeviceTaint.md) | The taint that gets applied to matching devices. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1alpha3_device_taint_rule_spec import V1alpha3DeviceTaintRuleSpec
+from kubernetes_asyncio.models.v1alpha3_device_taint_rule_spec import V1alpha3DeviceTaintRuleSpec
 
 # TODO update the JSON string below
 json = "{}"

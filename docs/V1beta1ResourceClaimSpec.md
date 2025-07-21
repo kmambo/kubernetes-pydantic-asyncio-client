@@ -6,12 +6,12 @@ ResourceClaimSpec defines what is being requested in a ResourceClaim and how to 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**devices** | [**V1beta1DeviceClaim**](V1beta1DeviceClaim.md) |  | [optional] 
+**devices** | [**V1beta1DeviceClaim**](V1beta1DeviceClaim.md) | Devices defines how to request devices. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_resource_claim_spec import V1beta1ResourceClaimSpec
+from kubernetes_asyncio.models.v1beta1_resource_claim_spec import V1beta1ResourceClaimSpec
 
 # TODO update the JSON string below
 json = "{}"

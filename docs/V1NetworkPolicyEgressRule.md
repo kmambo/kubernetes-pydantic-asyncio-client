@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_network_policy_egress_rule import V1NetworkPolicyEgressRule
+from kubernetes_asyncio.models.v1_network_policy_egress_rule import V1NetworkPolicyEgressRule
 
 # TODO update the JSON string below
 json = "{}"

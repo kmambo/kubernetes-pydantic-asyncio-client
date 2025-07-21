@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_rule_with_operations import V1RuleWithOperations
+from kubernetes_asyncio.models.v1_rule_with_operations import V1RuleWithOperations
 
 # TODO update the JSON string below
 json = "{}"

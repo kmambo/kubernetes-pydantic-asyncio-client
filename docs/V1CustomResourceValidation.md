@@ -6,12 +6,12 @@ CustomResourceValidation is a list of validation methods for CustomResources.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**open_apiv3_schema** | [**V1JSONSchemaProps**](V1JSONSchemaProps.md) |  | [optional] 
+**open_apiv3_schema** | [**V1JSONSchemaProps**](V1JSONSchemaProps.md) | openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_custom_resource_validation import V1CustomResourceValidation
+from kubernetes_asyncio.models.v1_custom_resource_validation import V1CustomResourceValidation
 
 # TODO update the JSON string below
 json = "{}"

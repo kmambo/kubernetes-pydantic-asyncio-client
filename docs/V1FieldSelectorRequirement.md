@@ -6,14 +6,14 @@ FieldSelectorRequirement is a selector that contains values, a key, and an opera
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | key is the field selector key that the requirement applies to. | 
-**operator** | **str** | operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. The list of operators may grow in the future. | 
+**key** | **str** | key is the field selector key that the requirement applies to. | [default to '']
+**operator** | **str** | operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. The list of operators may grow in the future. | [default to '']
 **values** | **List[str]** | values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_field_selector_requirement import V1FieldSelectorRequirement
+from kubernetes_asyncio.models.v1_field_selector_requirement import V1FieldSelectorRequirement
 
 # TODO update the JSON string below
 json = "{}"

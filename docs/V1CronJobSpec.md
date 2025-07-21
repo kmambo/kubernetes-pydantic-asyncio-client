@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **concurrency_policy** | **str** | Specifies how to treat concurrent executions of a Job. Valid values are:  - \&quot;Allow\&quot; (default): allows CronJobs to run concurrently; - \&quot;Forbid\&quot;: forbids concurrent runs, skipping next run if previous run hasn&#39;t finished yet; - \&quot;Replace\&quot;: cancels currently running job and replaces it with a new one | [optional] 
 **failed_jobs_history_limit** | **int** | The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1. | [optional] 
-**job_template** | [**V1JobTemplateSpec**](V1JobTemplateSpec.md) |  | 
-**schedule** | **str** | The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron. | 
+**job_template** | [**V1JobTemplateSpec**](V1JobTemplateSpec.md) | Specifies the job that will be created when executing a CronJob. | 
+**schedule** | **str** | The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron. | [default to '']
 **starting_deadline_seconds** | **int** | Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones. | [optional] 
 **successful_jobs_history_limit** | **int** | The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3. | [optional] 
 **suspend** | **bool** | This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false. | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_cron_job_spec import V1CronJobSpec
+from kubernetes_asyncio.models.v1_cron_job_spec import V1CronJobSpec
 
 # TODO update the JSON string below
 json = "{}"

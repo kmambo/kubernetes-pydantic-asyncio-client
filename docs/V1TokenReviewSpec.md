@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_token_review_spec import V1TokenReviewSpec
+from kubernetes_asyncio.models.v1_token_review_spec import V1TokenReviewSpec
 
 # TODO update the JSON string below
 json = "{}"

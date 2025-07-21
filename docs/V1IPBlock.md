@@ -6,13 +6,13 @@ IPBlock describes a particular CIDR (Ex. \"192.168.1.0/24\",\"2001:db8::/64\") t
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cidr** | **str** | cidr is a string representing the IPBlock Valid examples are \&quot;192.168.1.0/24\&quot; or \&quot;2001:db8::/64\&quot; | 
+**cidr** | **str** | cidr is a string representing the IPBlock Valid examples are \&quot;192.168.1.0/24\&quot; or \&quot;2001:db8::/64\&quot; | [default to '']
 **var_except** | **List[str]** | except is a slice of CIDRs that should not be included within an IPBlock Valid examples are \&quot;192.168.1.0/24\&quot; or \&quot;2001:db8::/64\&quot; Except values will be rejected if they are outside the cidr range | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ip_block import V1IPBlock
+from kubernetes_asyncio.models.v1_ip_block import V1IPBlock
 
 # TODO update the JSON string below
 json = "{}"

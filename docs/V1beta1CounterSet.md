@@ -7,12 +7,12 @@ CounterSet defines a named set of counters that are available to be used by devi
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **counters** | [**Dict[str, V1beta1Counter]**](V1beta1Counter.md) | Counters defines the set of counters for this CounterSet The name of each counter must be unique in that set and must be a DNS label.  The maximum number of counters is 32. | 
-**name** | **str** | Name defines the name of the counter set. It must be a DNS label. | 
+**name** | **str** | Name defines the name of the counter set. It must be a DNS label. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_counter_set import V1beta1CounterSet
+from kubernetes_asyncio.models.v1beta1_counter_set import V1beta1CounterSet
 
 # TODO update the JSON string below
 json = "{}"

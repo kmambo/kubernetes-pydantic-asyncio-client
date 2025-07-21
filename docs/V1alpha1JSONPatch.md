@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1alpha1_json_patch import V1alpha1JSONPatch
+from kubernetes_asyncio.models.v1alpha1_json_patch import V1alpha1JSONPatch
 
 # TODO update the JSON string below
 json = "{}"

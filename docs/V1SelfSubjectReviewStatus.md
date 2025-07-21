@@ -6,12 +6,12 @@ SelfSubjectReviewStatus is filled by the kube-apiserver and sent back to a user.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_info** | [**V1UserInfo**](V1UserInfo.md) |  | [optional] 
+**user_info** | [**V1UserInfo**](V1UserInfo.md) | User attributes of the user making this request. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_self_subject_review_status import V1SelfSubjectReviewStatus
+from kubernetes_asyncio.models.v1_self_subject_review_status import V1SelfSubjectReviewStatus
 
 # TODO update the JSON string below
 json = "{}"

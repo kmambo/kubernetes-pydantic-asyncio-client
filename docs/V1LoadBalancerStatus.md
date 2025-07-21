@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_load_balancer_status import V1LoadBalancerStatus
+from kubernetes_asyncio.models.v1_load_balancer_status import V1LoadBalancerStatus
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,12 +6,12 @@ SelectableField specifies the JSON path of a field that may be used with field s
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**json_path** | **str** | jsonPath is a simple JSON path which is evaluated against each custom resource to produce a field selector value. Only JSON paths without the array notation are allowed. Must point to a field of type string, boolean or integer. Types with enum values and strings with formats are allowed. If jsonPath refers to absent field in a resource, the jsonPath evaluates to an empty string. Must not point to metdata fields. Required. | 
+**json_path** | **str** | jsonPath is a simple JSON path which is evaluated against each custom resource to produce a field selector value. Only JSON paths without the array notation are allowed. Must point to a field of type string, boolean or integer. Types with enum values and strings with formats are allowed. If jsonPath refers to absent field in a resource, the jsonPath evaluates to an empty string. Must not point to metdata fields. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_selectable_field import V1SelectableField
+from kubernetes_asyncio.models.v1_selectable_field import V1SelectableField
 
 # TODO update the JSON string below
 json = "{}"

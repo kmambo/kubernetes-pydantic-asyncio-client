@@ -6,14 +6,14 @@ ContainerResourceMetricSource indicates how to scale on a resource metric known 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**container** | **str** | container is the name of the container in the pods of the scaling target | 
-**name** | **str** | name is the name of the resource in question. | 
-**target** | [**V2MetricTarget**](V2MetricTarget.md) |  | 
+**container** | **str** | container is the name of the container in the pods of the scaling target | [default to '']
+**name** | **str** | name is the name of the resource in question. | [default to '']
+**target** | [**V2MetricTarget**](V2MetricTarget.md) | target specifies the target value for the given metric | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_container_resource_metric_source import V2ContainerResourceMetricSource
+from kubernetes_asyncio.models.v2_container_resource_metric_source import V2ContainerResourceMetricSource
 
 # TODO update the JSON string below
 json = "{}"

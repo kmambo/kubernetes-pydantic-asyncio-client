@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ingress_rule import V1IngressRule
+from kubernetes_asyncio.models.v1_ingress_rule import V1IngressRule
 
 # TODO update the JSON string below
 json = "{}"

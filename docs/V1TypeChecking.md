@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_type_checking import V1TypeChecking
+from kubernetes_asyncio.models.v1_type_checking import V1TypeChecking
 
 # TODO update the JSON string below
 json = "{}"

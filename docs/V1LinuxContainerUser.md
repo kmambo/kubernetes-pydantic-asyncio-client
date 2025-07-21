@@ -6,14 +6,14 @@ LinuxContainerUser represents user identity information in Linux containers
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**gid** | **int** | GID is the primary gid initially attached to the first process in the container | 
+**gid** | **int** | GID is the primary gid initially attached to the first process in the container | [default to 0]
 **supplemental_groups** | **List[int]** | SupplementalGroups are the supplemental groups initially attached to the first process in the container | [optional] 
-**uid** | **int** | UID is the primary uid initially attached to the first process in the container | 
+**uid** | **int** | UID is the primary uid initially attached to the first process in the container | [default to 0]
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_linux_container_user import V1LinuxContainerUser
+from kubernetes_asyncio.models.v1_linux_container_user import V1LinuxContainerUser
 
 # TODO update the JSON string below
 json = "{}"

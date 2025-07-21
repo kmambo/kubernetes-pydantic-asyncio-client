@@ -6,12 +6,12 @@ DaemonEndpoint contains information about a single Daemon endpoint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**port** | **int** | Port number of the given endpoint. | 
+**port** | **int** | Port number of the given endpoint. | [default to 0]
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_daemon_endpoint import V1DaemonEndpoint
+from kubernetes_asyncio.models.v1_daemon_endpoint import V1DaemonEndpoint
 
 # TODO update the JSON string below
 json = "{}"

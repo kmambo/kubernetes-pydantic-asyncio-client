@@ -6,14 +6,14 @@ A label selector requirement is a selector that contains values, a key, and an o
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | key is the label key that the selector applies to. | 
-**operator** | **str** | operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist. | 
+**key** | **str** | key is the label key that the selector applies to. | [default to '']
+**operator** | **str** | operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist. | [default to '']
 **values** | **List[str]** | values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_label_selector_requirement import V1LabelSelectorRequirement
+from kubernetes_asyncio.models.v1_label_selector_requirement import V1LabelSelectorRequirement
 
 # TODO update the JSON string below
 json = "{}"

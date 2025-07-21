@@ -6,12 +6,12 @@ SessionAffinityConfig represents the configurations of session affinity.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kubernetes_asyncio.client_ip** | [**V1ClientIPConfig**](V1ClientIPConfig.md) |  | [optional] 
+**client_ip** | [**V1ClientIPConfig**](V1ClientIPConfig.md) | clientIP contains the configurations of Client IP based session affinity. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_session_affinity_config import V1SessionAffinityConfig
+from kubernetes_asyncio.models.v1_session_affinity_config import V1SessionAffinityConfig
 
 # TODO update the JSON string below
 json = "{}"

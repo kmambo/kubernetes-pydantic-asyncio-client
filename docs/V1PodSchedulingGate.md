@@ -6,12 +6,12 @@ PodSchedulingGate is associated to a Pod to guard its scheduling.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of the scheduling gate. Each scheduling gate must have a unique name field. | 
+**name** | **str** | Name of the scheduling gate. Each scheduling gate must have a unique name field. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_scheduling_gate import V1PodSchedulingGate
+from kubernetes_asyncio.models.v1_pod_scheduling_gate import V1PodSchedulingGate
 
 # TODO update the JSON string below
 json = "{}"

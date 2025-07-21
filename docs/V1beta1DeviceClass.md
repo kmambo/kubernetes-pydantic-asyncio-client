@@ -7,14 +7,14 @@ DeviceClass is a vendor- or admin-provided resource that contains device configu
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
-**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the kubernetes_asyncio.client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1beta1DeviceClassSpec**](V1beta1DeviceClassSpec.md) |  | 
+**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | Standard object metadata | [optional] 
+**spec** | [**V1beta1DeviceClassSpec**](V1beta1DeviceClassSpec.md) | Spec defines what can be allocated and how to configure it.  This is mutable. Consumers have to be prepared for classes changing at any time, either because they get updated or replaced. Claim allocations are done once based on whatever was set in classes at the time of allocation.  Changing the spec automatically increments the metadata.generation number. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_device_class import V1beta1DeviceClass
+from kubernetes_asyncio.models.v1beta1_device_class import V1beta1DeviceClass
 
 # TODO update the JSON string below
 json = "{}"

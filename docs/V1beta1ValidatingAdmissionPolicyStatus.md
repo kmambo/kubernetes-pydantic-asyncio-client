@@ -8,12 +8,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conditions** | [**List[V1Condition]**](V1Condition.md) | The conditions represent the latest available observations of a policy&#39;s current state. | [optional] 
 **observed_generation** | **int** | The generation observed by the controller. | [optional] 
-**type_checking** | [**V1beta1TypeChecking**](V1beta1TypeChecking.md) |  | [optional] 
+**type_checking** | [**V1beta1TypeChecking**](V1beta1TypeChecking.md) | The results of type checking for each expression. Presence of this field indicates the completion of the type checking. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_validating_admission_policy_status import V1beta1ValidatingAdmissionPolicyStatus
+from kubernetes_asyncio.models.v1beta1_validating_admission_policy_status import V1beta1ValidatingAdmissionPolicyStatus
 
 # TODO update the JSON string below
 json = "{}"

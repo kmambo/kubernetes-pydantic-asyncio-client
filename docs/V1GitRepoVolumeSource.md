@@ -7,13 +7,13 @@ Represents a volume that is populated with the contents of a git repository. Git
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **directory** | **str** | directory is the target directory name. Must not contain or start with &#39;..&#39;.  If &#39;.&#39; is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name. | [optional] 
-**repository** | **str** | repository is the URL | 
+**repository** | **str** | repository is the URL | [default to '']
 **revision** | **str** | revision is the commit hash for the specified revision. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_git_repo_volume_source import V1GitRepoVolumeSource
+from kubernetes_asyncio.models.v1_git_repo_volume_source import V1GitRepoVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

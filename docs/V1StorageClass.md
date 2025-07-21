@@ -9,18 +9,18 @@ Name | Type | Description | Notes
 **allow_volume_expansion** | **bool** | allowVolumeExpansion shows whether the storage class allow volume expand. | [optional] 
 **allowed_topologies** | [**List[V1TopologySelectorTerm]**](V1TopologySelectorTerm.md) | allowedTopologies restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature. | [optional] 
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
-**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the kubernetes_asyncio.client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
+**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata | [optional] 
 **mount_options** | **List[str]** | mountOptions controls the mountOptions for dynamically provisioned PersistentVolumes of this storage class. e.g. [\&quot;ro\&quot;, \&quot;soft\&quot;]. Not validated - mount of the PVs will simply fail if one is invalid. | [optional] 
 **parameters** | **Dict[str, str]** | parameters holds the parameters for the provisioner that should create volumes of this storage class. | [optional] 
-**provisioner** | **str** | provisioner indicates the type of the provisioner. | 
+**provisioner** | **str** | provisioner indicates the type of the provisioner. | [default to '']
 **reclaim_policy** | **str** | reclaimPolicy controls the reclaimPolicy for dynamically provisioned PersistentVolumes of this storage class. Defaults to Delete. | [optional] 
 **volume_binding_mode** | **str** | volumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_storage_class import V1StorageClass
+from kubernetes_asyncio.models.v1_storage_class import V1StorageClass
 
 # TODO update the JSON string below
 json = "{}"

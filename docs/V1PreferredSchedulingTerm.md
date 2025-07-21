@@ -6,13 +6,13 @@ An empty preferred scheduling term matches all objects with implicit weight 0 (i
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preference** | [**V1NodeSelectorTerm**](V1NodeSelectorTerm.md) |  | 
-**weight** | **int** | Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100. | 
+**preference** | [**V1NodeSelectorTerm**](V1NodeSelectorTerm.md) | A node selector term, associated with the corresponding weight. | 
+**weight** | **int** | Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100. | [default to 0]
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
+from kubernetes_asyncio.models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 
 # TODO update the JSON string below
 json = "{}"

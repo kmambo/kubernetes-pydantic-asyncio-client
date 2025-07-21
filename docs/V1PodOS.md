@@ -6,12 +6,12 @@ PodOS defines the OS parameters of a pod.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name is the name of the operating system. The currently supported values are linux and windows. Additional value may be defined in future and can be one of: https://github.com/opencontainers/runtime-spec/blob/master/config.md#platform-specific-configuration Clients should expect to handle additional values and treat unrecognized values in this field as os: null | 
+**name** | **str** | Name is the name of the operating system. The currently supported values are linux and windows. Additional value may be defined in future and can be one of: https://github.com/opencontainers/runtime-spec/blob/master/config.md#platform-specific-configuration Clients should expect to handle additional values and treat unrecognized values in this field as os: null | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_os import V1PodOS
+from kubernetes_asyncio.models.v1_pod_os import V1PodOS
 
 # TODO update the JSON string below
 json = "{}"

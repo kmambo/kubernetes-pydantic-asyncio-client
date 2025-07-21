@@ -6,17 +6,17 @@ LimitRangeItem defines a min/max usage limit for any resource that matches on ki
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**default** | **Dict[str, str]** | Default resource requirement limit value by resource name if resource limit is omitted. | [optional] 
-**default_request** | **Dict[str, str]** | DefaultRequest is the default resource requirement request value by resource name if resource request is omitted. | [optional] 
-**max** | **Dict[str, str]** | Max usage constraints on this kind by resource name. | [optional] 
-**max_limit_request_ratio** | **Dict[str, str]** | MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource. | [optional] 
-**min** | **Dict[str, str]** | Min usage constraints on this kind by resource name. | [optional] 
-**type** | **str** | Type of resource that this limit applies to. | 
+**default** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Default resource requirement limit value by resource name if resource limit is omitted. | [optional] 
+**default_request** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | DefaultRequest is the default resource requirement request value by resource name if resource request is omitted. | [optional] 
+**max** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Max usage constraints on this kind by resource name. | [optional] 
+**max_limit_request_ratio** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource. | [optional] 
+**min** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Min usage constraints on this kind by resource name. | [optional] 
+**type** | **str** | Type of resource that this limit applies to. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_limit_range_item import V1LimitRangeItem
+from kubernetes_asyncio.models.v1_limit_range_item import V1LimitRangeItem
 
 # TODO update the JSON string below
 json = "{}"

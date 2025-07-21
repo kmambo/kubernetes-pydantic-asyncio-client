@@ -7,12 +7,12 @@ Represents a Photon Controller persistent disk resource.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fs_type** | **str** | fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \&quot;ext4\&quot;, \&quot;xfs\&quot;, \&quot;ntfs\&quot;. Implicitly inferred to be \&quot;ext4\&quot; if unspecified. | [optional] 
-**pd_id** | **str** | pdID is the ID that identifies Photon Controller persistent disk | 
+**pd_id** | **str** | pdID is the ID that identifies Photon Controller persistent disk | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_photon_persistent_disk_volume_source import V1PhotonPersistentDiskVolumeSource
+from kubernetes_asyncio.models.v1_photon_persistent_disk_volume_source import V1PhotonPersistentDiskVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

@@ -22,12 +22,12 @@ Name | Type | Description | Notes
 **reason** | **str** | A brief CamelCase message indicating details about why the pod is in this state. e.g. &#39;Evicted&#39; | [optional] 
 **resize** | **str** | Status of resources resize desired for pod&#39;s containers. It is empty if no resources resize is pending. Any changes to container resources will automatically set this to \&quot;Proposed\&quot; Deprecated: Resize status is moved to two pod conditions PodResizePending and PodResizeInProgress. PodResizePending will track states where the spec has been resized, but the Kubelet has not yet allocated the resources. PodResizeInProgress will track in-progress resizes, and should be present whenever allocated resources !&#x3D; acknowledged resources. | [optional] 
 **resource_claim_statuses** | [**List[V1PodResourceClaimStatus]**](V1PodResourceClaimStatus.md) | Status of resource claims. | [optional] 
-**start_time** | **datetime** | RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is before the Kubelet pulled the container image(s) for the pod. | [optional] 
+**start_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_status import V1PodStatus
+from kubernetes_asyncio.models.v1_pod_status import V1PodStatus
 
 # TODO update the JSON string below
 json = "{}"

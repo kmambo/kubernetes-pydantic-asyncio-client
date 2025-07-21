@@ -6,12 +6,12 @@ NodeDaemonEndpoints lists ports opened by daemons running on the Node.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kubelet_endpoint** | [**V1DaemonEndpoint**](V1DaemonEndpoint.md) |  | [optional] 
+**kubelet_endpoint** | [**V1DaemonEndpoint**](V1DaemonEndpoint.md) | Endpoint on which Kubelet is listening. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_daemon_endpoints import V1NodeDaemonEndpoints
+from kubernetes_asyncio.models.v1_node_daemon_endpoints import V1NodeDaemonEndpoints
 
 # TODO update the JSON string below
 json = "{}"

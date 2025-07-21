@@ -6,13 +6,13 @@ VolumeAttachmentSource represents a volume that should be attached. Right now on
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**inline_volume_spec** | [**V1PersistentVolumeSpec**](V1PersistentVolumeSpec.md) |  | [optional] 
+**inline_volume_spec** | [**V1PersistentVolumeSpec**](V1PersistentVolumeSpec.md) | inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod&#39;s inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod&#39;s inline VolumeSource to a PersistentVolumeSpec. This field is beta-level and is only honored by servers that enabled the CSIMigration feature. | [optional] 
 **persistent_volume_name** | **str** | persistentVolumeName represents the name of the persistent volume to attach. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_attachment_source import V1VolumeAttachmentSource
+from kubernetes_asyncio.models.v1_volume_attachment_source import V1VolumeAttachmentSource
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,14 +6,14 @@ EndpointSubset is a group of addresses with a common set of ports. The expanded 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addresses** | [**List[V1EndpointAddress]**](V1EndpointAddress.md) | IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and kubernetes_asyncio.clients to utilize. | [optional] 
+**addresses** | [**List[V1EndpointAddress]**](V1EndpointAddress.md) | IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize. | [optional] 
 **not_ready_addresses** | [**List[V1EndpointAddress]**](V1EndpointAddress.md) | IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check. | [optional] 
-**ports** | [**List[CoreV1EndpointPort]**](CoreV1EndpointPort.md) | Port numbers available on the related IP addresses. | [optional] 
+**ports** | [**List[V1EndpointPort]**](V1EndpointPort.md) | Port numbers available on the related IP addresses. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_endpoint_subset import V1EndpointSubset
+from kubernetes_asyncio.models.v1_endpoint_subset import V1EndpointSubset
 
 # TODO update the JSON string below
 json = "{}"

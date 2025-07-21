@@ -7,12 +7,12 @@ IngressClassSpec provides information about the class of an Ingress.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **controller** | **str** | controller refers to the name of the controller that should handle this class. This allows for different \&quot;flavors\&quot; that are controlled by the same controller. For example, you may have different parameters for the same implementing controller. This should be specified as a domain-prefixed path no more than 250 characters in length, e.g. \&quot;acme.io/ingress-controller\&quot;. This field is immutable. | [optional] 
-**parameters** | [**V1IngressClassParametersReference**](V1IngressClassParametersReference.md) |  | [optional] 
+**parameters** | [**V1IngressClassParametersReference**](V1IngressClassParametersReference.md) | parameters is a link to a custom resource containing additional configuration for the controller. This is optional if the controller does not require extra parameters. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ingress_class_spec import V1IngressClassSpec
+from kubernetes_asyncio.models.v1_ingress_class_spec import V1IngressClassSpec
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,14 +6,14 @@ EnvVar represents an environment variable present in a Container.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of the environment variable. Must be a C_IDENTIFIER. | 
+**name** | **str** | Name of the environment variable. Must be a C_IDENTIFIER. | [default to '']
 **value** | **str** | Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. \&quot;$$(VAR_NAME)\&quot; will produce the string literal \&quot;$(VAR_NAME)\&quot;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to \&quot;\&quot;. | [optional] 
-**value_from** | [**V1EnvVarSource**](V1EnvVarSource.md) |  | [optional] 
+**value_from** | [**V1EnvVarSource**](V1EnvVarSource.md) | Source for the environment variable&#39;s value. Cannot be used if value is not empty. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_env_var import V1EnvVar
+from kubernetes_asyncio.models.v1_env_var import V1EnvVar
 
 # TODO update the JSON string below
 json = "{}"

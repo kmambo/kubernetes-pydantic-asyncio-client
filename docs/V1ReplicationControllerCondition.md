@@ -6,16 +6,16 @@ ReplicationControllerCondition describes the state of a replication controller a
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_transition_time** | **datetime** | The last time the condition transitioned from one status to another. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | A human readable message indicating details about the transition. | [optional] 
 **reason** | **str** | The reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | Status of the condition, one of True, False, Unknown. | 
-**type** | **str** | Type of replication controller condition. | 
+**status** | **str** | Status of the condition, one of True, False, Unknown. | [default to '']
+**type** | **str** | Type of replication controller condition. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_replication_controller_condition import V1ReplicationControllerCondition
+from kubernetes_asyncio.models.v1_replication_controller_condition import V1ReplicationControllerCondition
 
 # TODO update the JSON string below
 json = "{}"

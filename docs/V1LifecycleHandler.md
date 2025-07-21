@@ -6,15 +6,15 @@ LifecycleHandler defines a specific action that should be taken in a lifecycle h
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**var_exec** | [**V1ExecAction**](V1ExecAction.md) |  | [optional] 
-**http_get** | [**V1HTTPGetAction**](V1HTTPGetAction.md) |  | [optional] 
-**sleep** | [**V1SleepAction**](V1SleepAction.md) |  | [optional] 
-**tcp_socket** | [**V1TCPSocketAction**](V1TCPSocketAction.md) |  | [optional] 
+**var_exec** | [**V1ExecAction**](V1ExecAction.md) | Exec specifies a command to execute in the container. | [optional] 
+**http_get** | [**V1HTTPGetAction**](V1HTTPGetAction.md) | HTTPGet specifies an HTTP GET request to perform. | [optional] 
+**sleep** | [**V1SleepAction**](V1SleepAction.md) | Sleep represents a duration that the container should sleep. | [optional] 
+**tcp_socket** | [**V1TCPSocketAction**](V1TCPSocketAction.md) | Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_lifecycle_handler import V1LifecycleHandler
+from kubernetes_asyncio.models.v1_lifecycle_handler import V1LifecycleHandler
 
 # TODO update the JSON string below
 json = "{}"

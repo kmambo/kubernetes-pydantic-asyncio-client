@@ -6,16 +6,16 @@ NamespaceCondition contains details about state of namespace.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_transition_time** | **datetime** | Last time the condition transitioned from one status to another. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | Human-readable message indicating details about last transition. | [optional] 
 **reason** | **str** | Unique, one-word, CamelCase reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | Status of the condition, one of True, False, Unknown. | 
-**type** | **str** | Type of namespace controller condition. | 
+**status** | **str** | Status of the condition, one of True, False, Unknown. | [default to '']
+**type** | **str** | Type of namespace controller condition. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_namespace_condition import V1NamespaceCondition
+from kubernetes_asyncio.models.v1_namespace_condition import V1NamespaceCondition
 
 # TODO update the JSON string below
 json = "{}"

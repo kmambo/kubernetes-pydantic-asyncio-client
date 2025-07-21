@@ -6,13 +6,13 @@ VolumeResourceRequirements describes the storage resource requirements for a vol
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**limits** | **Dict[str, str]** | Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ | [optional] 
-**requests** | **Dict[str, str]** | Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ | [optional] 
+**limits** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ | [optional] 
+**requests** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/ | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_resource_requirements import V1VolumeResourceRequirements
+from kubernetes_asyncio.models.v1_volume_resource_requirements import V1VolumeResourceRequirements
 
 # TODO update the JSON string below
 json = "{}"

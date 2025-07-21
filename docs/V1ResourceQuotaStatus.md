@@ -6,13 +6,13 @@ ResourceQuotaStatus defines the enforced hard limits and observed use.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hard** | **Dict[str, str]** | Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/ | [optional] 
-**used** | **Dict[str, str]** | Used is the current observed total usage of the resource in the namespace. | [optional] 
+**hard** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/ | [optional] 
+**used** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | Used is the current observed total usage of the resource in the namespace. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_resource_quota_status import V1ResourceQuotaStatus
+from kubernetes_asyncio.models.v1_resource_quota_status import V1ResourceQuotaStatus
 
 # TODO update the JSON string below
 json = "{}"

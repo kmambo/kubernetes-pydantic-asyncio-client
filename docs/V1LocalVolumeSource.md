@@ -7,12 +7,12 @@ Local represents directly-attached storage with node affinity
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fs_type** | **str** | fsType is the filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. \&quot;ext4\&quot;, \&quot;xfs\&quot;, \&quot;ntfs\&quot;. The default value is to auto-select a filesystem if unspecified. | [optional] 
-**path** | **str** | path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...). | 
+**path** | **str** | path of the full path to the volume on the node. It can be either a directory or block device (disk, partition, ...). | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_local_volume_source import V1LocalVolumeSource
+from kubernetes_asyncio.models.v1_local_volume_source import V1LocalVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

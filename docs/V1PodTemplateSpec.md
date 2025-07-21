@@ -6,13 +6,13 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1PodSpec**](V1PodSpec.md) |  | [optional] 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata | [optional] 
+**spec** | [**V1PodSpec**](V1PodSpec.md) | Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_template_spec import V1PodTemplateSpec
+from kubernetes_asyncio.models.v1_pod_template_spec import V1PodTemplateSpec
 
 # TODO update the JSON string below
 json = "{}"

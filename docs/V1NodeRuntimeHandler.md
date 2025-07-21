@@ -6,13 +6,13 @@ NodeRuntimeHandler is a set of runtime handler information.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**features** | [**V1NodeRuntimeHandlerFeatures**](V1NodeRuntimeHandlerFeatures.md) |  | [optional] 
-**name** | **str** | Runtime handler name. Empty for the default runtime handler. | [optional] 
+**features** | [**V1NodeRuntimeHandlerFeatures**](V1NodeRuntimeHandlerFeatures.md) | Supported features. | [optional] 
+**name** | **str** | Runtime handler name. Empty for the default runtime handler. | [optional] [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_runtime_handler import V1NodeRuntimeHandler
+from kubernetes_asyncio.models.v1_node_runtime_handler import V1NodeRuntimeHandler
 
 # TODO update the JSON string below
 json = "{}"

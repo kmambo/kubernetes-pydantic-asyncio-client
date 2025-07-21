@@ -7,13 +7,13 @@ CronJobStatus represents the current state of a cron job.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **active** | [**List[V1ObjectReference]**](V1ObjectReference.md) | A list of pointers to currently running jobs. | [optional] 
-**last_schedule_time** | **datetime** | Information when was the last time the job was successfully scheduled. | [optional] 
-**last_successful_time** | **datetime** | Information when was the last time the job successfully completed. | [optional] 
+**last_schedule_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
+**last_successful_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_cron_job_status import V1CronJobStatus
+from kubernetes_asyncio.models.v1_cron_job_status import V1CronJobStatus
 
 # TODO update the JSON string below
 json = "{}"

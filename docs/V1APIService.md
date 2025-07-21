@@ -7,15 +7,15 @@ APIService represents a server for a particular GroupVersion. Name must be \"ver
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
-**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the kubernetes_asyncio.client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1APIServiceSpec**](V1APIServiceSpec.md) |  | [optional] 
-**status** | [**V1APIServiceStatus**](V1APIServiceStatus.md) |  | [optional] 
+**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata | [optional] 
+**spec** | [**V1APIServiceSpec**](V1APIServiceSpec.md) | Spec contains information for locating and communicating with a server | [optional] 
+**status** | [**V1APIServiceStatus**](V1APIServiceStatus.md) | Status contains derived information about an API server | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_api_service import V1APIService
+from kubernetes_asyncio.models.v1_api_service import V1APIService
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,12 +6,12 @@ PodReadinessGate contains the reference to a pod condition
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**condition_type** | **str** | ConditionType refers to a condition in the pod&#39;s condition list with matching type. | 
+**condition_type** | **str** | ConditionType refers to a condition in the pod&#39;s condition list with matching type. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_readiness_gate import V1PodReadinessGate
+from kubernetes_asyncio.models.v1_pod_readiness_gate import V1PodReadinessGate
 
 # TODO update the JSON string below
 json = "{}"

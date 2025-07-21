@@ -6,13 +6,13 @@ DeploymentStrategy describes how to replace existing pods with new ones.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rolling_update** | [**V1RollingUpdateDeployment**](V1RollingUpdateDeployment.md) |  | [optional] 
+**rolling_update** | [**V1RollingUpdateDeployment**](V1RollingUpdateDeployment.md) | Rolling update config params. Present only if DeploymentStrategyType &#x3D; RollingUpdate. | [optional] 
 **type** | **str** | Type of deployment. Can be \&quot;Recreate\&quot; or \&quot;RollingUpdate\&quot;. Default is RollingUpdate. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_deployment_strategy import V1DeploymentStrategy
+from kubernetes_asyncio.models.v1_deployment_strategy import V1DeploymentStrategy
 
 # TODO update the JSON string below
 json = "{}"

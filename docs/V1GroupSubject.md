@@ -6,12 +6,12 @@ GroupSubject holds detailed information for group-kind subject.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | name is the user group that matches, or \&quot;*\&quot; to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required. | 
+**name** | **str** | name is the user group that matches, or \&quot;*\&quot; to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_group_subject import V1GroupSubject
+from kubernetes_asyncio.models.v1_group_subject import V1GroupSubject
 
 # TODO update the JSON string below
 json = "{}"

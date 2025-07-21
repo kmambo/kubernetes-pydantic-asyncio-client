@@ -6,7 +6,7 @@ NodeSpec describes the attributes that a node is created with.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config_source** | [**V1NodeConfigSource**](V1NodeConfigSource.md) |  | [optional] 
+**config_source** | [**V1NodeConfigSource**](V1NodeConfigSource.md) | Deprecated: Previously used to specify the source of the node&#39;s configuration for the DynamicKubeletConfig feature. This feature is removed. | [optional] 
 **external_id** | **str** | Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966 | [optional] 
 **pod_cidr** | **str** | PodCIDR represents the pod IP range assigned to the node. | [optional] 
 **pod_cidrs** | **List[str]** | podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6. | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_spec import V1NodeSpec
+from kubernetes_asyncio.models.v1_node_spec import V1NodeSpec
 
 # TODO update the JSON string below
 json = "{}"

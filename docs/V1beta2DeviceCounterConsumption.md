@@ -6,13 +6,13 @@ DeviceCounterConsumption defines a set of counters that a device will consume fr
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**counter_set** | **str** | CounterSet is the name of the set from which the counters defined will be consumed. | 
+**counter_set** | **str** | CounterSet is the name of the set from which the counters defined will be consumed. | [default to '']
 **counters** | [**Dict[str, V1beta2Counter]**](V1beta2Counter.md) | Counters defines the counters that will be consumed by the device.  The maximum number counters in a device is 32. In addition, the maximum number of all counters in all devices is 1024 (for example, 64 devices with 16 counters each). | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta2_device_counter_consumption import V1beta2DeviceCounterConsumption
+from kubernetes_asyncio.models.v1beta2_device_counter_consumption import V1beta2DeviceCounterConsumption
 
 # TODO update the JSON string below
 json = "{}"

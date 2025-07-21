@@ -6,12 +6,12 @@ ContainerUser represents user identity information
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**linux** | [**V1LinuxContainerUser**](V1LinuxContainerUser.md) |  | [optional] 
+**linux** | [**V1LinuxContainerUser**](V1LinuxContainerUser.md) | Linux holds user identity information initially attached to the first process of the containers in Linux. Note that the actual running identity can be changed if the process has enough privilege to do so. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_container_user import V1ContainerUser
+from kubernetes_asyncio.models.v1_container_user import V1ContainerUser
 
 # TODO update the JSON string below
 json = "{}"

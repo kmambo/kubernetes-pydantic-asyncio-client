@@ -6,13 +6,13 @@ AllocationResult contains attributes of an allocated resource.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**devices** | [**V1beta2DeviceAllocationResult**](V1beta2DeviceAllocationResult.md) |  | [optional] 
-**node_selector** | [**V1NodeSelector**](V1NodeSelector.md) |  | [optional] 
+**devices** | [**V1beta2DeviceAllocationResult**](V1beta2DeviceAllocationResult.md) | Devices is the result of allocating devices. | [optional] 
+**node_selector** | [**V1NodeSelector**](V1NodeSelector.md) | NodeSelector defines where the allocated resources are available. If unset, they are available everywhere. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta2_allocation_result import V1beta2AllocationResult
+from kubernetes_asyncio.models.v1beta2_allocation_result import V1beta2AllocationResult
 
 # TODO update the JSON string below
 json = "{}"

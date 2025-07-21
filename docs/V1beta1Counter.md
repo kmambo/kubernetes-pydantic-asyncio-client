@@ -6,12 +6,12 @@ Counter describes a quantity associated with a device.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **str** | Value defines how much of a certain device counter is available. | 
+**value** | [**V1beta1CounterValue**](V1beta1CounterValue.md) |  | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_counter import V1beta1Counter
+from kubernetes_asyncio.models.v1beta1_counter import V1beta1Counter
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_scheduling import V1Scheduling
+from kubernetes_asyncio.models.v1_scheduling import V1Scheduling
 
 # TODO update the JSON string below
 json = "{}"

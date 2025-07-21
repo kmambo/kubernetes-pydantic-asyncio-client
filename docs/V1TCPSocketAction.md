@@ -7,12 +7,12 @@ TCPSocketAction describes an action based on opening a socket
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host** | **str** | Optional: Host name to connect to, defaults to the pod IP. | [optional] 
-**port** | **object** | Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. | 
+**port** | [**IntstrIntOrString**](IntstrIntOrString.md) | Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_tcp_socket_action import V1TCPSocketAction
+from kubernetes_asyncio.models.v1_tcp_socket_action import V1TCPSocketAction
 
 # TODO update the JSON string below
 json = "{}"

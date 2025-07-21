@@ -6,13 +6,13 @@ CustomResourceConversion describes how to convert different versions of a CR.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**strategy** | **str** | strategy specifies how custom resources are converted between versions. Allowed values are: - &#x60;\&quot;None\&quot;&#x60;: The converter only change the apiVersion and would not touch any other field in the custom resource. - &#x60;\&quot;Webhook\&quot;&#x60;: API Server will call to an external webhook to do the conversion. Additional information   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set. | 
-**webhook** | [**V1WebhookConversion**](V1WebhookConversion.md) |  | [optional] 
+**strategy** | **str** | strategy specifies how custom resources are converted between versions. Allowed values are: - &#x60;\&quot;None\&quot;&#x60;: The converter only change the apiVersion and would not touch any other field in the custom resource. - &#x60;\&quot;Webhook\&quot;&#x60;: API Server will call to an external webhook to do the conversion. Additional information   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set. | [default to '']
+**webhook** | [**V1WebhookConversion**](V1WebhookConversion.md) | webhook describes how to call the conversion webhook. Required when &#x60;strategy&#x60; is set to &#x60;\&quot;Webhook\&quot;&#x60;. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_custom_resource_conversion import V1CustomResourceConversion
+from kubernetes_asyncio.models.v1_custom_resource_conversion import V1CustomResourceConversion
 
 # TODO update the JSON string below
 json = "{}"

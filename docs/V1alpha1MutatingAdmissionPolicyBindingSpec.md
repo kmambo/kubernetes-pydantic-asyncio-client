@@ -6,14 +6,14 @@ MutatingAdmissionPolicyBindingSpec is the specification of the MutatingAdmission
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**match_resources** | [**V1alpha1MatchResources**](V1alpha1MatchResources.md) |  | [optional] 
-**param_ref** | [**V1alpha1ParamRef**](V1alpha1ParamRef.md) |  | [optional] 
+**match_resources** | [**V1alpha1MatchResources**](V1alpha1MatchResources.md) | matchResources limits what resources match this binding and may be mutated by it. Note that if matchResources matches a resource, the resource must also match a policy&#39;s matchConstraints and matchConditions before the resource may be mutated. When matchResources is unset, it does not constrain resource matching, and only the policy&#39;s matchConstraints and matchConditions must match for the resource to be mutated. Additionally, matchResources.resourceRules are optional and do not constraint matching when unset. Note that this is differs from MutatingAdmissionPolicy matchConstraints, where resourceRules are required. The CREATE, UPDATE and CONNECT operations are allowed.  The DELETE operation may not be matched. &#39;*&#39; matches CREATE, UPDATE and CONNECT. | [optional] 
+**param_ref** | [**V1alpha1ParamRef**](V1alpha1ParamRef.md) | paramRef specifies the parameter resource used to configure the admission control policy. It should point to a resource of the type specified in spec.ParamKind of the bound MutatingAdmissionPolicy. If the policy specifies a ParamKind and the resource referred to by ParamRef does not exist, this binding is considered mis-configured and the FailurePolicy of the MutatingAdmissionPolicy applied. If the policy does not specify a ParamKind then this field is ignored, and the rules are evaluated without a param. | [optional] 
 **policy_name** | **str** | policyName references a MutatingAdmissionPolicy name which the MutatingAdmissionPolicyBinding binds to. If the referenced resource does not exist, this binding is considered invalid and will be ignored Required. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1alpha1_mutating_admission_policy_binding_spec import V1alpha1MutatingAdmissionPolicyBindingSpec
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding_spec import V1alpha1MutatingAdmissionPolicyBindingSpec
 
 # TODO update the JSON string below
 json = "{}"

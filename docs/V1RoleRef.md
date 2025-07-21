@@ -6,14 +6,14 @@ RoleRef contains information that points to the role being used
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**api_group** | **str** | APIGroup is the group for the resource being referenced | 
-**kind** | **str** | Kind is the type of resource being referenced | 
-**name** | **str** | Name is the name of resource being referenced | 
+**api_group** | **str** | APIGroup is the group for the resource being referenced | [default to '']
+**kind** | **str** | Kind is the type of resource being referenced | [default to '']
+**name** | **str** | Name is the name of resource being referenced | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_role_ref import V1RoleRef
+from kubernetes_asyncio.models.v1_role_ref import V1RoleRef
 
 # TODO update the JSON string below
 json = "{}"

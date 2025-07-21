@@ -6,12 +6,12 @@ ForZone provides information about which zones should consume this endpoint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | name represents the name of the zone. | 
+**name** | **str** | name represents the name of the zone. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_for_zone import V1ForZone
+from kubernetes_asyncio.models.v1_for_zone import V1ForZone
 
 # TODO update the JSON string below
 json = "{}"

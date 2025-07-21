@@ -9,14 +9,14 @@ Name | Type | Description | Notes
 **conditions** | [**List[V2HorizontalPodAutoscalerCondition]**](V2HorizontalPodAutoscalerCondition.md) | conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met. | [optional] 
 **current_metrics** | [**List[V2MetricStatus]**](V2MetricStatus.md) | currentMetrics is the last read state of the metrics used by this autoscaler. | [optional] 
 **current_replicas** | **int** | currentReplicas is current number of replicas of pods managed by this autoscaler, as last seen by the autoscaler. | [optional] 
-**desired_replicas** | **int** | desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler. | 
-**last_scale_time** | **datetime** | lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods, used by the autoscaler to control how often the number of pods is changed. | [optional] 
+**desired_replicas** | **int** | desiredReplicas is the desired number of replicas of pods managed by this autoscaler, as last calculated by the autoscaler. | [default to 0]
+**last_scale_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **observed_generation** | **int** | observedGeneration is the most recent generation observed by this autoscaler. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_horizontal_pod_autoscaler_status import V2HorizontalPodAutoscalerStatus
+from kubernetes_asyncio.models.v2_horizontal_pod_autoscaler_status import V2HorizontalPodAutoscalerStatus
 
 # TODO update the JSON string below
 json = "{}"

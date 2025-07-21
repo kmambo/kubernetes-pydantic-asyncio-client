@@ -6,13 +6,13 @@ PersistentVolumeClaimVolumeSource references the user's PVC in the same namespac
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**claim_name** | **str** | claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims | 
+**claim_name** | **str** | claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims | [default to '']
 **read_only** | **bool** | readOnly Will force the ReadOnly setting in VolumeMounts. Default false. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
+from kubernetes_asyncio.models.v1_persistent_volume_claim_volume_source import V1PersistentVolumeClaimVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

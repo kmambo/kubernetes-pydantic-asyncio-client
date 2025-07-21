@@ -6,13 +6,13 @@ ScaleStatus represents the current status of a scale subresource.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**replicas** | **int** | replicas is the actual number of observed instances of the scaled object. | 
-**selector** | **str** | selector is the label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by kubernetes_asyncio.clients. The string will be in the same format as the query-param syntax. More info about label selectors: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/ | [optional] 
+**replicas** | **int** | replicas is the actual number of observed instances of the scaled object. | [default to 0]
+**selector** | **str** | selector is the label query over pods that should match the replicas count. This is same as the label selector but in the string format to avoid introspection by clients. The string will be in the same format as the query-param syntax. More info about label selectors: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/ | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_scale_status import V1ScaleStatus
+from kubernetes_asyncio.models.v1_scale_status import V1ScaleStatus
 
 # TODO update the JSON string below
 json = "{}"

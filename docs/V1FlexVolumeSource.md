@@ -6,16 +6,16 @@ FlexVolume represents a generic volume resource that is provisioned/attached usi
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**driver** | **str** | driver is the name of the driver to use for this volume. | 
+**driver** | **str** | driver is the name of the driver to use for this volume. | [default to '']
 **fs_type** | **str** | fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \&quot;ext4\&quot;, \&quot;xfs\&quot;, \&quot;ntfs\&quot;. The default filesystem depends on FlexVolume script. | [optional] 
 **options** | **Dict[str, str]** | options is Optional: this field holds extra command options if any. | [optional] 
 **read_only** | **bool** | readOnly is Optional: defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. | [optional] 
-**secret_ref** | [**V1LocalObjectReference**](V1LocalObjectReference.md) |  | [optional] 
+**secret_ref** | [**V1LocalObjectReference**](V1LocalObjectReference.md) | secretRef is Optional: secretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_flex_volume_source import V1FlexVolumeSource
+from kubernetes_asyncio.models.v1_flex_volume_source import V1FlexVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

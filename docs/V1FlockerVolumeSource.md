@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_flocker_volume_source import V1FlockerVolumeSource
+from kubernetes_asyncio.models.v1_flocker_volume_source import V1FlockerVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

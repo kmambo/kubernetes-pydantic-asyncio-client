@@ -6,16 +6,16 @@ HorizontalPodAutoscalerCondition describes the state of a HorizontalPodAutoscale
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_transition_time** | **datetime** | lastTransitionTime is the last time the condition transitioned from one status to another | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | message is a human-readable explanation containing details about the transition | [optional] 
 **reason** | **str** | reason is the reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | status is the status of the condition (True, False, Unknown) | 
-**type** | **str** | type describes the current condition | 
+**status** | **str** | status is the status of the condition (True, False, Unknown) | [default to '']
+**type** | **str** | type describes the current condition | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_horizontal_pod_autoscaler_condition import V2HorizontalPodAutoscalerCondition
+from kubernetes_asyncio.models.v2_horizontal_pod_autoscaler_condition import V2HorizontalPodAutoscalerCondition
 
 # TODO update the JSON string below
 json = "{}"

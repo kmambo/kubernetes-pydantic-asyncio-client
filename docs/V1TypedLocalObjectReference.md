@@ -7,13 +7,13 @@ TypedLocalObjectReference contains enough information to let you locate the type
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_group** | **str** | APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required. | [optional] 
-**kind** | **str** | Kind is the type of resource being referenced | 
-**name** | **str** | Name is the name of resource being referenced | 
+**kind** | **str** | Kind is the type of resource being referenced | [default to '']
+**name** | **str** | Name is the name of resource being referenced | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_typed_local_object_reference import V1TypedLocalObjectReference
+from kubernetes_asyncio.models.v1_typed_local_object_reference import V1TypedLocalObjectReference
 
 # TODO update the JSON string below
 json = "{}"

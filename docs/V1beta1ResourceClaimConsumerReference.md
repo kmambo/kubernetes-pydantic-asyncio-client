@@ -7,14 +7,14 @@ ResourceClaimConsumerReference contains enough information to let you locate the
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_group** | **str** | APIGroup is the group for the resource being referenced. It is empty for the core API. This matches the group in the APIVersion that is used when creating the resources. | [optional] 
-**name** | **str** | Name is the name of resource being referenced. | 
-**resource** | **str** | Resource is the type of resource being referenced, for example \&quot;pods\&quot;. | 
-**uid** | **str** | UID identifies exactly one incarnation of the resource. | 
+**name** | **str** | Name is the name of resource being referenced. | [default to '']
+**resource** | **str** | Resource is the type of resource being referenced, for example \&quot;pods\&quot;. | [default to '']
+**uid** | **str** | UID identifies exactly one incarnation of the resource. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_resource_claim_consumer_reference import V1beta1ResourceClaimConsumerReference
+from kubernetes_asyncio.models.v1beta1_resource_claim_consumer_reference import V1beta1ResourceClaimConsumerReference
 
 # TODO update the JSON string below
 json = "{}"

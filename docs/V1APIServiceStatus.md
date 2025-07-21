@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_api_service_status import V1APIServiceStatus
+from kubernetes_asyncio.models.v1_api_service_status import V1APIServiceStatus
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,12 +6,12 @@ UserSubject holds detailed information for user-kind subject.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | &#x60;name&#x60; is the username that matches, or \&quot;*\&quot; to match all usernames. Required. | 
+**name** | **str** | &#x60;name&#x60; is the username that matches, or \&quot;*\&quot; to match all usernames. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_user_subject import V1UserSubject
+from kubernetes_asyncio.models.v1_user_subject import V1UserSubject
 
 # TODO update the JSON string below
 json = "{}"

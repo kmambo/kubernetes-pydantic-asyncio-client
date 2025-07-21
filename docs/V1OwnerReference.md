@@ -6,17 +6,17 @@ OwnerReference contains enough information to let you identify an owning object.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**api_version** | **str** | API version of the referent. | 
+**api_version** | **str** | API version of the referent. | [default to '']
 **block_owner_deletion** | **bool** | If true, AND if the owner has the \&quot;foregroundDeletion\&quot; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. See https://kubernetes.io/docs/concepts/architecture/garbage-collection/#foreground-deletion for how the garbage collector interacts with this field and enforces the foreground deletion. Defaults to false. To set this field, a user needs \&quot;delete\&quot; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. | [optional] 
 **controller** | **bool** | If true, this reference points to the managing controller. | [optional] 
-**kind** | **str** | Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | 
-**name** | **str** | Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names | 
-**uid** | **str** | UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids | 
+**kind** | **str** | Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [default to '']
+**name** | **str** | Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#names | [default to '']
+**uid** | **str** | UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names#uids | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_owner_reference import V1OwnerReference
+from kubernetes_asyncio.models.v1_owner_reference import V1OwnerReference
 
 # TODO update the JSON string below
 json = "{}"

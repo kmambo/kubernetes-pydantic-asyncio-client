@@ -6,13 +6,13 @@ Sysctl defines a kernel parameter to be set
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of a property to set | 
-**value** | **str** | Value of a property to set | 
+**name** | **str** | Name of a property to set | [default to '']
+**value** | **str** | Value of a property to set | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_sysctl import V1Sysctl
+from kubernetes_asyncio.models.v1_sysctl import V1Sysctl
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_parent_reference import V1ParentReference
+from kubernetes_asyncio.models.v1_parent_reference import V1ParentReference
 
 # TODO update the JSON string below
 json = "{}"

@@ -7,12 +7,12 @@ ResourceHealth represents the health of a resource. It has the latest device hea
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **health** | **str** | Health of the resource. can be one of:  - Healthy: operates as normal  - Unhealthy: reported unhealthy. We consider this a temporary health issue               since we do not have a mechanism today to distinguish               temporary and permanent issues.  - Unknown: The status cannot be determined.             For example, Device Plugin got unregistered and hasn&#39;t been re-registered since.  In future we may want to introduce the PermanentlyUnhealthy Status. | [optional] 
-**resource_id** | **str** | ResourceID is the unique identifier of the resource. See the ResourceID type for more information. | 
+**resource_id** | **str** | ResourceID is the unique identifier of the resource. See the ResourceID type for more information. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_resource_health import V1ResourceHealth
+from kubernetes_asyncio.models.v1_resource_health import V1ResourceHealth
 
 # TODO update the JSON string below
 json = "{}"

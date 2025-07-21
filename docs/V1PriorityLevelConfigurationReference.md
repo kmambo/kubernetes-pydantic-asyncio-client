@@ -6,12 +6,12 @@ PriorityLevelConfigurationReference contains information that points to the \"re
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | &#x60;name&#x60; is the name of the priority level configuration being referenced Required. | 
+**name** | **str** | &#x60;name&#x60; is the name of the priority level configuration being referenced Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_priority_level_configuration_reference import V1PriorityLevelConfigurationReference
+from kubernetes_asyncio.models.v1_priority_level_configuration_reference import V1PriorityLevelConfigurationReference
 
 # TODO update the JSON string below
 json = "{}"

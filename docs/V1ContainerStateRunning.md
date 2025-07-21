@@ -6,12 +6,12 @@ ContainerStateRunning is a running state of a container.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**started_at** | **datetime** | Time at which the container was last (re-)started | [optional] 
+**started_at** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_container_state_running import V1ContainerStateRunning
+from kubernetes_asyncio.models.v1_container_state_running import V1ContainerStateRunning
 
 # TODO update the JSON string below
 json = "{}"

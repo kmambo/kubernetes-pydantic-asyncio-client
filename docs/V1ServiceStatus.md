@@ -7,12 +7,12 @@ ServiceStatus represents the current status of a service.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conditions** | [**List[V1Condition]**](V1Condition.md) | Current service state | [optional] 
-**load_balancer** | [**V1LoadBalancerStatus**](V1LoadBalancerStatus.md) |  | [optional] 
+**load_balancer** | [**V1LoadBalancerStatus**](V1LoadBalancerStatus.md) | LoadBalancer contains the current status of the load-balancer, if one is present. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_service_status import V1ServiceStatus
+from kubernetes_asyncio.models.v1_service_status import V1ServiceStatus
 
 # TODO update the JSON string below
 json = "{}"

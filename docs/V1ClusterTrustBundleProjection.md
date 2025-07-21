@@ -6,16 +6,16 @@ ClusterTrustBundleProjection describes how to select a set of ClusterTrustBundle
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**label_selector** | [**V1LabelSelector**](V1LabelSelector.md) |  | [optional] 
+**label_selector** | [**V1LabelSelector**](V1LabelSelector.md) | Select all ClusterTrustBundles that match this label selector.  Only has effect if signerName is set.  Mutually-exclusive with name.  If unset, interpreted as \&quot;match nothing\&quot;.  If set but empty, interpreted as \&quot;match everything\&quot;. | [optional] 
 **name** | **str** | Select a single ClusterTrustBundle by object name.  Mutually-exclusive with signerName and labelSelector. | [optional] 
 **optional** | **bool** | If true, don&#39;t block pod startup if the referenced ClusterTrustBundle(s) aren&#39;t available.  If using name, then the named ClusterTrustBundle is allowed not to exist.  If using signerName, then the combination of signerName and labelSelector is allowed to match zero ClusterTrustBundles. | [optional] 
-**path** | **str** | Relative path from the volume root to write the bundle. | 
+**path** | **str** | Relative path from the volume root to write the bundle. | [default to '']
 **signer_name** | **str** | Select all ClusterTrustBundles that match this signer name. Mutually-exclusive with name.  The contents of all selected ClusterTrustBundles will be unified and deduplicated. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_cluster_trust_bundle_projection import V1ClusterTrustBundleProjection
+from kubernetes_asyncio.models.v1_cluster_trust_bundle_projection import V1ClusterTrustBundleProjection
 
 # TODO update the JSON string below
 json = "{}"

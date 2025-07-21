@@ -6,17 +6,17 @@ NodeCondition contains condition information for a node.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_heartbeat_time** | **datetime** | Last time we got an update on a given condition. | [optional] 
-**last_transition_time** | **datetime** | Last time the condition transit from one status to another. | [optional] 
+**last_heartbeat_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | Human readable message indicating details about last transition. | [optional] 
 **reason** | **str** | (brief) reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | Status of the condition, one of True, False, Unknown. | 
-**type** | **str** | Type of node condition. | 
+**status** | **str** | Status of the condition, one of True, False, Unknown. | [default to '']
+**type** | **str** | Type of node condition. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_condition import V1NodeCondition
+from kubernetes_asyncio.models.v1_node_condition import V1NodeCondition
 
 # TODO update the JSON string below
 json = "{}"

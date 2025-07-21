@@ -7,15 +7,15 @@ current status of a horizontal pod autoscaler
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **current_cpu_utilization_percentage** | **int** | currentCPUUtilizationPercentage is the current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU. | [optional] 
-**current_replicas** | **int** | currentReplicas is the current number of replicas of pods managed by this autoscaler. | 
-**desired_replicas** | **int** | desiredReplicas is the  desired number of replicas of pods managed by this autoscaler. | 
-**last_scale_time** | **datetime** | lastScaleTime is the last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed. | [optional] 
+**current_replicas** | **int** | currentReplicas is the current number of replicas of pods managed by this autoscaler. | [default to 0]
+**desired_replicas** | **int** | desiredReplicas is the  desired number of replicas of pods managed by this autoscaler. | [default to 0]
+**last_scale_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **observed_generation** | **int** | observedGeneration is the most recent generation observed by this autoscaler. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_horizontal_pod_autoscaler_status import V1HorizontalPodAutoscalerStatus
+from kubernetes_asyncio.models.v1_horizontal_pod_autoscaler_status import V1HorizontalPodAutoscalerStatus
 
 # TODO update the JSON string below
 json = "{}"

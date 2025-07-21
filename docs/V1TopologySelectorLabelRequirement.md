@@ -6,13 +6,13 @@ A topology selector requirement is a selector that matches given label. This is 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | The label key that the selector applies to. | 
+**key** | **str** | The label key that the selector applies to. | [default to '']
 **values** | **List[str]** | An array of string values. One value must match the label to be selected. Each entry in Values is ORed. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_topology_selector_label_requirement import V1TopologySelectorLabelRequirement
+from kubernetes_asyncio.models.v1_topology_selector_label_requirement import V1TopologySelectorLabelRequirement
 
 # TODO update the JSON string below
 json = "{}"

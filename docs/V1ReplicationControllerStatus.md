@@ -11,12 +11,12 @@ Name | Type | Description | Notes
 **fully_labeled_replicas** | **int** | The number of pods that have labels matching the labels of the pod template of the replication controller. | [optional] 
 **observed_generation** | **int** | ObservedGeneration reflects the generation of the most recently observed replication controller. | [optional] 
 **ready_replicas** | **int** | The number of ready replicas for this replication controller. | [optional] 
-**replicas** | **int** | Replicas is the most recently observed number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller | 
+**replicas** | **int** | Replicas is the most recently observed number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller | [default to 0]
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_replication_controller_status import V1ReplicationControllerStatus
+from kubernetes_asyncio.models.v1_replication_controller_status import V1ReplicationControllerStatus
 
 # TODO update the JSON string below
 json = "{}"

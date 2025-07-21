@@ -6,13 +6,13 @@ ServiceAccountSubject holds detailed information for service-account-kind subjec
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | &#x60;name&#x60; is the name of matching ServiceAccount objects, or \&quot;*\&quot; to match regardless of name. Required. | 
-**namespace** | **str** | &#x60;namespace&#x60; is the namespace of matching ServiceAccount objects. Required. | 
+**name** | **str** | &#x60;name&#x60; is the name of matching ServiceAccount objects, or \&quot;*\&quot; to match regardless of name. Required. | [default to '']
+**namespace** | **str** | &#x60;namespace&#x60; is the namespace of matching ServiceAccount objects. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_service_account_subject import V1ServiceAccountSubject
+from kubernetes_asyncio.models.v1_service_account_subject import V1ServiceAccountSubject
 
 # TODO update the JSON string below
 json = "{}"

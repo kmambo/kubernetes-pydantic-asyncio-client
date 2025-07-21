@@ -6,13 +6,13 @@ Represents a host path mapped into a pod. Host path volumes do not support owner
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **str** | path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath | 
+**path** | **str** | path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath | [default to '']
 **type** | **str** | type for HostPath Volume Defaults to \&quot;\&quot; More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_host_path_volume_source import V1HostPathVolumeSource
+from kubernetes_asyncio.models.v1_host_path_volume_source import V1HostPathVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,17 +6,17 @@ JobCondition describes current state of a job.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_probe_time** | **datetime** | Last time the condition was checked. | [optional] 
-**last_transition_time** | **datetime** | Last time the condition transit from one status to another. | [optional] 
+**last_probe_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | Human readable message indicating details about last transition. | [optional] 
 **reason** | **str** | (brief) reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | Status of the condition, one of True, False, Unknown. | 
-**type** | **str** | Type of job condition, Complete or Failed. | 
+**status** | **str** | Status of the condition, one of True, False, Unknown. | [default to '']
+**type** | **str** | Type of job condition, Complete or Failed. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_job_condition import V1JobCondition
+from kubernetes_asyncio.models.v1_job_condition import V1JobCondition
 
 # TODO update the JSON string below
 json = "{}"

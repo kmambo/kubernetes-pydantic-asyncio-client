@@ -7,12 +7,12 @@ CounterSet defines a named set of counters that are available to be used by devi
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **counters** | [**Dict[str, V1alpha3Counter]**](V1alpha3Counter.md) | Counters defines the counters that will be consumed by the device. The name of each counter must be unique in that set and must be a DNS label.  To ensure this uniqueness, capacities defined by the vendor must be listed without the driver name as domain prefix in their name. All others must be listed with their domain prefix.  The maximum number of counters is 32. | 
-**name** | **str** | CounterSet is the name of the set from which the counters defined will be consumed. | 
+**name** | **str** | CounterSet is the name of the set from which the counters defined will be consumed. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1alpha3_counter_set import V1alpha3CounterSet
+from kubernetes_asyncio.models.v1alpha3_counter_set import V1alpha3CounterSet
 
 # TODO update the JSON string below
 json = "{}"

@@ -7,14 +7,14 @@ EndpointAddress is a tuple that describes single IP address. Deprecated: This AP
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hostname** | **str** | The Hostname of this endpoint | [optional] 
-**ip** | **str** | The IP of this endpoint. May not be loopback (127.0.0.0/8 or ::1), link-local (169.254.0.0/16 or fe80::/10), or link-local multicast (224.0.0.0/24 or ff02::/16). | 
+**ip** | **str** | The IP of this endpoint. May not be loopback (127.0.0.0/8 or ::1), link-local (169.254.0.0/16 or fe80::/10), or link-local multicast (224.0.0.0/24 or ff02::/16). | [default to '']
 **node_name** | **str** | Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node. | [optional] 
-**target_ref** | [**V1ObjectReference**](V1ObjectReference.md) |  | [optional] 
+**target_ref** | [**V1ObjectReference**](V1ObjectReference.md) | Reference to object providing the endpoint. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_endpoint_address import V1EndpointAddress
+from kubernetes_asyncio.models.v1_endpoint_address import V1EndpointAddress
 
 # TODO update the JSON string below
 json = "{}"

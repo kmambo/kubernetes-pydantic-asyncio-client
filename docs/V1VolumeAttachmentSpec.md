@@ -6,14 +6,14 @@ VolumeAttachmentSpec is the specification of a VolumeAttachment request.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attacher** | **str** | attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName(). | 
-**node_name** | **str** | nodeName represents the node that the volume should be attached to. | 
-**source** | [**V1VolumeAttachmentSource**](V1VolumeAttachmentSource.md) |  | 
+**attacher** | **str** | attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName(). | [default to '']
+**node_name** | **str** | nodeName represents the node that the volume should be attached to. | [default to '']
+**source** | [**V1VolumeAttachmentSource**](V1VolumeAttachmentSource.md) | source represents the volume that should be attached. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_attachment_spec import V1VolumeAttachmentSpec
+from kubernetes_asyncio.models.v1_volume_attachment_spec import V1VolumeAttachmentSpec
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,16 +6,16 @@ ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kubelet_config_key** | **str** | KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases. | 
-**name** | **str** | Name is the metadata.name of the referenced ConfigMap. This field is required in all cases. | 
-**namespace** | **str** | Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases. | 
+**kubelet_config_key** | **str** | KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases. | [default to '']
+**name** | **str** | Name is the metadata.name of the referenced ConfigMap. This field is required in all cases. | [default to '']
+**namespace** | **str** | Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases. | [default to '']
 **resource_version** | **str** | ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status. | [optional] 
 **uid** | **str** | UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_config_map_node_config_source import V1ConfigMapNodeConfigSource
+from kubernetes_asyncio.models.v1_config_map_node_config_source import V1ConfigMapNodeConfigSource
 
 # TODO update the JSON string below
 json = "{}"

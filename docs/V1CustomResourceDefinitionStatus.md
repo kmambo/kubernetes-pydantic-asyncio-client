@@ -6,14 +6,14 @@ CustomResourceDefinitionStatus indicates the state of the CustomResourceDefiniti
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**accepted_names** | [**V1CustomResourceDefinitionNames**](V1CustomResourceDefinitionNames.md) |  | [optional] 
+**accepted_names** | [**V1CustomResourceDefinitionNames**](V1CustomResourceDefinitionNames.md) | acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec. | [optional] 
 **conditions** | [**List[V1CustomResourceDefinitionCondition]**](V1CustomResourceDefinitionCondition.md) | conditions indicate state for particular aspects of a CustomResourceDefinition | [optional] 
 **stored_versions** | **List[str]** | storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from &#x60;spec.versions&#x60; while they exist in this list. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_custom_resource_definition_status import V1CustomResourceDefinitionStatus
+from kubernetes_asyncio.models.v1_custom_resource_definition_status import V1CustomResourceDefinitionStatus
 
 # TODO update the JSON string below
 json = "{}"

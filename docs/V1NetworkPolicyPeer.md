@@ -6,14 +6,14 @@ NetworkPolicyPeer describes a peer to allow traffic to/from. Only certain combin
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ip_block** | [**V1IPBlock**](V1IPBlock.md) |  | [optional] 
-**namespace_selector** | [**V1LabelSelector**](V1LabelSelector.md) |  | [optional] 
-**pod_selector** | [**V1LabelSelector**](V1LabelSelector.md) |  | [optional] 
+**ip_block** | [**V1IPBlock**](V1IPBlock.md) | ipBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be. | [optional] 
+**namespace_selector** | [**V1LabelSelector**](V1LabelSelector.md) | namespaceSelector selects namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.  If podSelector is also set, then the NetworkPolicyPeer as a whole selects the pods matching podSelector in the namespaces selected by namespaceSelector. Otherwise it selects all pods in the namespaces selected by namespaceSelector. | [optional] 
+**pod_selector** | [**V1LabelSelector**](V1LabelSelector.md) | podSelector is a label selector which selects pods. This field follows standard label selector semantics; if present but empty, it selects all pods.  If namespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the pods matching podSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the pods matching podSelector in the policy&#39;s own namespace. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_network_policy_peer import V1NetworkPolicyPeer
+from kubernetes_asyncio.models.v1_network_policy_peer import V1NetworkPolicyPeer
 
 # TODO update the JSON string below
 json = "{}"

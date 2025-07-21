@@ -6,15 +6,15 @@ VolumeMountStatus shows status of volume mounts.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mount_path** | **str** | MountPath corresponds to the original VolumeMount. | 
-**name** | **str** | Name corresponds to the name of the original VolumeMount. | 
+**mount_path** | **str** | MountPath corresponds to the original VolumeMount. | [default to '']
+**name** | **str** | Name corresponds to the name of the original VolumeMount. | [default to '']
 **read_only** | **bool** | ReadOnly corresponds to the original VolumeMount. | [optional] 
 **recursive_read_only** | **str** | RecursiveReadOnly must be set to Disabled, Enabled, or unspecified (for non-readonly mounts). An IfPossible value in the original VolumeMount must be translated to Disabled or Enabled, depending on the mount result. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_mount_status import V1VolumeMountStatus
+from kubernetes_asyncio.models.v1_volume_mount_status import V1VolumeMountStatus
 
 # TODO update the JSON string below
 json = "{}"

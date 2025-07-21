@@ -6,12 +6,12 @@ DeviceCapacity describes a quantity associated with a device.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **str** | Value defines how much of a certain device capacity is available. | 
+**value** | [**V1beta1DeviceCapacityValue**](V1beta1DeviceCapacityValue.md) |  | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta2_device_capacity import V1beta2DeviceCapacity
+from kubernetes_asyncio.models.v1beta2_device_capacity import V1beta2DeviceCapacity
 
 # TODO update the JSON string below
 json = "{}"

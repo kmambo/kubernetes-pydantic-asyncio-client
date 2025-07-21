@@ -6,16 +6,16 @@ CustomResourceDefinitionCondition contains details for the current condition of 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_transition_time** | **datetime** | lastTransitionTime last time the condition transitioned from one status to another. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | message is a human-readable message indicating details about last transition. | [optional] 
 **reason** | **str** | reason is a unique, one-word, CamelCase reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | status is the status of the condition. Can be True, False, Unknown. | 
-**type** | **str** | type is the type of the condition. Types include Established, NamesAccepted and Terminating. | 
+**status** | **str** | status is the status of the condition. Can be True, False, Unknown. | [default to '']
+**type** | **str** | type is the type of the condition. Types include Established, NamesAccepted and Terminating. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_custom_resource_definition_condition import V1CustomResourceDefinitionCondition
+from kubernetes_asyncio.models.v1_custom_resource_definition_condition import V1CustomResourceDefinitionCondition
 
 # TODO update the JSON string below
 json = "{}"

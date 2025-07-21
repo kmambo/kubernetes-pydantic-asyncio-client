@@ -6,12 +6,12 @@ DeviceClassConfiguration is used in DeviceClass.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**opaque** | [**V1beta2OpaqueDeviceConfiguration**](V1beta2OpaqueDeviceConfiguration.md) |  | [optional] 
+**opaque** | [**V1beta2OpaqueDeviceConfiguration**](V1beta2OpaqueDeviceConfiguration.md) | Opaque provides driver-specific configuration parameters. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta2_device_class_configuration import V1beta2DeviceClassConfiguration
+from kubernetes_asyncio.models.v1beta2_device_class_configuration import V1beta2DeviceClassConfiguration
 
 # TODO update the JSON string below
 json = "{}"

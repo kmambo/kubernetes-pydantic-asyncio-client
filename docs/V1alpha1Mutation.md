@@ -6,14 +6,14 @@ Mutation specifies the CEL expression which is used to apply the Mutation.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**apply_configuration** | [**V1alpha1ApplyConfiguration**](V1alpha1ApplyConfiguration.md) |  | [optional] 
-**json_patch** | [**V1alpha1JSONPatch**](V1alpha1JSONPatch.md) |  | [optional] 
-**patch_type** | **str** | patchType indicates the patch strategy used. Allowed values are \&quot;ApplyConfiguration\&quot; and \&quot;JSONPatch\&quot;. Required. | 
+**apply_configuration** | [**V1alpha1ApplyConfiguration**](V1alpha1ApplyConfiguration.md) | applyConfiguration defines the desired configuration values of an object. The configuration is applied to the admission object using [structured merge diff](https://github.com/kubernetes-sigs/structured-merge-diff). A CEL expression is used to create apply configuration. | [optional] 
+**json_patch** | [**V1alpha1JSONPatch**](V1alpha1JSONPatch.md) | jsonPatch defines a [JSON patch](https://jsonpatch.com/) operation to perform a mutation to the object. A CEL expression is used to create the JSON patch. | [optional] 
+**patch_type** | **str** | patchType indicates the patch strategy used. Allowed values are \&quot;ApplyConfiguration\&quot; and \&quot;JSONPatch\&quot;. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1alpha1_mutation import V1alpha1Mutation
+from kubernetes_asyncio.models.v1alpha1_mutation import V1alpha1Mutation
 
 # TODO update the JSON string below
 json = "{}"

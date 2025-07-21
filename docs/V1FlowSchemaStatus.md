@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_flow_schema_status import V1FlowSchemaStatus
+from kubernetes_asyncio.models.v1_flow_schema_status import V1FlowSchemaStatus
 
 # TODO update the JSON string below
 json = "{}"

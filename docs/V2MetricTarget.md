@@ -7,14 +7,14 @@ MetricTarget defines the target value, average value, or average utilization of 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **average_utilization** | **int** | averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type | [optional] 
-**average_value** | **str** | averageValue is the target value of the average of the metric across all relevant pods (as a quantity) | [optional] 
-**type** | **str** | type represents whether the metric type is Utilization, Value, or AverageValue | 
-**value** | **str** | value is the target value of the metric (as a quantity). | [optional] 
+**average_value** | [**V2MetricTargetAverageValue**](V2MetricTargetAverageValue.md) |  | [optional] 
+**type** | **str** | type represents whether the metric type is Utilization, Value, or AverageValue | [default to '']
+**value** | [**V2MetricTargetValue**](V2MetricTargetValue.md) |  | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_metric_target import V2MetricTarget
+from kubernetes_asyncio.models.v2_metric_target import V2MetricTarget
 
 # TODO update the JSON string below
 json = "{}"

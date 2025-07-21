@@ -6,17 +6,17 @@ DeploymentCondition describes the state of a deployment at a certain point.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_transition_time** | **datetime** | Last time the condition transitioned from one status to another. | [optional] 
-**last_update_time** | **datetime** | The last time this condition was updated. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
+**last_update_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | A human readable message indicating details about the transition. | [optional] 
 **reason** | **str** | The reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | Status of the condition, one of True, False, Unknown. | 
-**type** | **str** | Type of deployment condition. | 
+**status** | **str** | Status of the condition, one of True, False, Unknown. | [default to '']
+**type** | **str** | Type of deployment condition. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_deployment_condition import V1DeploymentCondition
+from kubernetes_asyncio.models.v1_deployment_condition import V1DeploymentCondition
 
 # TODO update the JSON string below
 json = "{}"

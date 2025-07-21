@@ -6,14 +6,14 @@ ContainerResourceMetricStatus indicates the current value of a resource metric k
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**container** | **str** | container is the name of the container in the pods of the scaling target | 
-**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) |  | 
-**name** | **str** | name is the name of the resource in question. | 
+**container** | **str** | container is the name of the container in the pods of the scaling target | [default to '']
+**current** | [**V2MetricValueStatus**](V2MetricValueStatus.md) | current contains the current value for the given metric | 
+**name** | **str** | name is the name of the resource in question. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_container_resource_metric_status import V2ContainerResourceMetricStatus
+from kubernetes_asyncio.models.v2_container_resource_metric_status import V2ContainerResourceMetricStatus
 
 # TODO update the JSON string below
 json = "{}"

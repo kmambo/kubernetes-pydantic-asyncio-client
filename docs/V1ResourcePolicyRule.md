@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_resource_policy_rule import V1ResourcePolicyRule
+from kubernetes_asyncio.models.v1_resource_policy_rule import V1ResourcePolicyRule
 
 # TODO update the JSON string below
 json = "{}"

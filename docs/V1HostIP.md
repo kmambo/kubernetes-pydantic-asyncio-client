@@ -6,12 +6,12 @@ HostIP represents a single IP address allocated to the host.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ip** | **str** | IP is the IP address assigned to the host | 
+**ip** | **str** | IP is the IP address assigned to the host | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_host_ip import V1HostIP
+from kubernetes_asyncio.models.v1_host_ip import V1HostIP
 
 # TODO update the JSON string below
 json = "{}"

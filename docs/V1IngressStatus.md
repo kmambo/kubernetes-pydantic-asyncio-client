@@ -6,12 +6,12 @@ IngressStatus describe the current state of the Ingress.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**load_balancer** | [**V1IngressLoadBalancerStatus**](V1IngressLoadBalancerStatus.md) |  | [optional] 
+**load_balancer** | [**V1IngressLoadBalancerStatus**](V1IngressLoadBalancerStatus.md) | loadBalancer contains the current status of the load-balancer. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ingress_status import V1IngressStatus
+from kubernetes_asyncio.models.v1_ingress_status import V1IngressStatus
 
 # TODO update the JSON string below
 json = "{}"

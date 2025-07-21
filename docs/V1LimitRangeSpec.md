@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_limit_range_spec import V1LimitRangeSpec
+from kubernetes_asyncio.models.v1_limit_range_spec import V1LimitRangeSpec
 
 # TODO update the JSON string below
 json = "{}"

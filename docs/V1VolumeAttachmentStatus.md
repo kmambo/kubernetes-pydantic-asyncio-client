@@ -6,15 +6,15 @@ VolumeAttachmentStatus is the status of a VolumeAttachment request.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attach_error** | [**V1VolumeError**](V1VolumeError.md) |  | [optional] 
-**attached** | **bool** | attached indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher. | 
+**attach_error** | [**V1VolumeError**](V1VolumeError.md) | attachError represents the last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher. | [optional] 
+**attached** | **bool** | attached indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher. | [default to False]
 **attachment_metadata** | **Dict[str, str]** | attachmentMetadata is populated with any information returned by the attach operation, upon successful attach, that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher. | [optional] 
-**detach_error** | [**V1VolumeError**](V1VolumeError.md) |  | [optional] 
+**detach_error** | [**V1VolumeError**](V1VolumeError.md) | detachError represents the last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_attachment_status import V1VolumeAttachmentStatus
+from kubernetes_asyncio.models.v1_volume_attachment_status import V1VolumeAttachmentStatus
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,12 +6,12 @@ IPAddressSpec describe the attributes in an IP Address.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**parent_ref** | [**V1ParentReference**](V1ParentReference.md) |  | 
+**parent_ref** | [**V1ParentReference**](V1ParentReference.md) | ParentRef references the resource that an IPAddress is attached to. An IPAddress must reference a parent object. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ip_address_spec import V1IPAddressSpec
+from kubernetes_asyncio.models.v1_ip_address_spec import V1IPAddressSpec
 
 # TODO update the JSON string below
 json = "{}"

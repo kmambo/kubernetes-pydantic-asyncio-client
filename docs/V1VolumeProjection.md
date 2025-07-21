@@ -6,16 +6,16 @@ Projection that may be projected along with other supported volume types. Exactl
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cluster_trust_bundle** | [**V1ClusterTrustBundleProjection**](V1ClusterTrustBundleProjection.md) |  | [optional] 
-**config_map** | [**V1ConfigMapProjection**](V1ConfigMapProjection.md) |  | [optional] 
-**downward_api** | [**V1DownwardAPIProjection**](V1DownwardAPIProjection.md) |  | [optional] 
-**secret** | [**V1SecretProjection**](V1SecretProjection.md) |  | [optional] 
-**service_account_token** | [**V1ServiceAccountTokenProjection**](V1ServiceAccountTokenProjection.md) |  | [optional] 
+**cluster_trust_bundle** | [**V1ClusterTrustBundleProjection**](V1ClusterTrustBundleProjection.md) | ClusterTrustBundle allows a pod to access the &#x60;.spec.trustBundle&#x60; field of ClusterTrustBundle objects in an auto-updating file.  Alpha, gated by the ClusterTrustBundleProjection feature gate.  ClusterTrustBundle objects can either be selected by name, or by the combination of signer name and a label selector.  Kubelet performs aggressive normalization of the PEM contents written into the pod filesystem.  Esoteric PEM features such as inter-block comments and block headers are stripped.  Certificates are deduplicated. The ordering of certificates within the file is arbitrary, and Kubelet may change the order over time. | [optional] 
+**config_map** | [**V1ConfigMapProjection**](V1ConfigMapProjection.md) | configMap information about the configMap data to project | [optional] 
+**downward_api** | [**V1DownwardAPIProjection**](V1DownwardAPIProjection.md) | downwardAPI information about the downwardAPI data to project | [optional] 
+**secret** | [**V1SecretProjection**](V1SecretProjection.md) | secret information about the secret data to project | [optional] 
+**service_account_token** | [**V1ServiceAccountTokenProjection**](V1ServiceAccountTokenProjection.md) | serviceAccountToken is information about the serviceAccountToken data to project | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_projection import V1VolumeProjection
+from kubernetes_asyncio.models.v1_volume_projection import V1VolumeProjection
 
 # TODO update the JSON string below
 json = "{}"

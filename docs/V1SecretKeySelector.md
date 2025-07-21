@@ -6,14 +6,14 @@ SecretKeySelector selects a key of a Secret.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | The key of the secret to select from.  Must be a valid secret key. | 
-**name** | **str** | Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [optional] 
+**key** | **str** | The key of the secret to select from.  Must be a valid secret key. | [default to '']
+**name** | **str** | Name of the referent. This field is effectively required, but due to backwards compatibility is allowed to be empty. Instances of this type with an empty value here are almost certainly wrong. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [optional] [default to '']
 **optional** | **bool** | Specify whether the Secret or its key must be defined | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_secret_key_selector import V1SecretKeySelector
+from kubernetes_asyncio.models.v1_secret_key_selector import V1SecretKeySelector
 
 # TODO update the JSON string below
 json = "{}"

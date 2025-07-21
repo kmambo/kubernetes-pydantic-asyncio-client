@@ -6,14 +6,14 @@ ContainerState holds a possible state of container. Only one of its members may 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**running** | [**V1ContainerStateRunning**](V1ContainerStateRunning.md) |  | [optional] 
-**terminated** | [**V1ContainerStateTerminated**](V1ContainerStateTerminated.md) |  | [optional] 
-**waiting** | [**V1ContainerStateWaiting**](V1ContainerStateWaiting.md) |  | [optional] 
+**running** | [**V1ContainerStateRunning**](V1ContainerStateRunning.md) | Details about a running container | [optional] 
+**terminated** | [**V1ContainerStateTerminated**](V1ContainerStateTerminated.md) | Details about a terminated container | [optional] 
+**waiting** | [**V1ContainerStateWaiting**](V1ContainerStateWaiting.md) | Details about a waiting container | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_container_state import V1ContainerState
+from kubernetes_asyncio.models.v1_container_state import V1ContainerState
 
 # TODO update the JSON string below
 json = "{}"

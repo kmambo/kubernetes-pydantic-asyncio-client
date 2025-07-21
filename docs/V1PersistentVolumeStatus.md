@@ -6,7 +6,7 @@ PersistentVolumeStatus is the current status of a persistent volume.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_phase_transition_time** | **datetime** | lastPhaseTransitionTime is the time the phase transitioned from one to another and automatically resets to current time everytime a volume phase transitions. | [optional] 
+**last_phase_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | message is a human-readable message indicating details about why the volume is in this state. | [optional] 
 **phase** | **str** | phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase | [optional] 
 **reason** | **str** | reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI. | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_persistent_volume_status import V1PersistentVolumeStatus
+from kubernetes_asyncio.models.v1_persistent_volume_status import V1PersistentVolumeStatus
 
 # TODO update the JSON string below
 json = "{}"

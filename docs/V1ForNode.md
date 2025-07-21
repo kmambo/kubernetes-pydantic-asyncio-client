@@ -6,12 +6,12 @@ ForNode provides information about which nodes should consume this endpoint.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | name represents the name of the node. | 
+**name** | **str** | name represents the name of the node. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_for_node import V1ForNode
+from kubernetes_asyncio.models.v1_for_node import V1ForNode
 
 # TODO update the JSON string below
 json = "{}"

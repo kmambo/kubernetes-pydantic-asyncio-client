@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 **fs_type** | **str** | fsType is filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \&quot;ext4\&quot;, \&quot;xfs\&quot;, \&quot;ntfs\&quot;. Implicitly inferred to be \&quot;ext4\&quot; if unspecified. | [optional] 
 **storage_policy_id** | **str** | storagePolicyID is the storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName. | [optional] 
 **storage_policy_name** | **str** | storagePolicyName is the storage Policy Based Management (SPBM) profile name. | [optional] 
-**volume_path** | **str** | volumePath is the path that identifies vSphere volume vmdk | 
+**volume_path** | **str** | volumePath is the path that identifies vSphere volume vmdk | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_vsphere_virtual_disk_volume_source import V1VsphereVirtualDiskVolumeSource
+from kubernetes_asyncio.models.v1_vsphere_virtual_disk_volume_source import V1VsphereVirtualDiskVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

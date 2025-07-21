@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_windows_security_context_options import V1WindowsSecurityContextOptions
+from kubernetes_asyncio.models.v1_windows_security_context_options import V1WindowsSecurityContextOptions
 
 # TODO update the JSON string below
 json = "{}"

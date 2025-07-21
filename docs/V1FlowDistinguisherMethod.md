@@ -6,12 +6,12 @@ FlowDistinguisherMethod specifies the method of a flow distinguisher.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | &#x60;type&#x60; is the type of flow distinguisher method The supported types are \&quot;ByUser\&quot; and \&quot;ByNamespace\&quot;. Required. | 
+**type** | **str** | &#x60;type&#x60; is the type of flow distinguisher method The supported types are \&quot;ByUser\&quot; and \&quot;ByNamespace\&quot;. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_flow_distinguisher_method import V1FlowDistinguisherMethod
+from kubernetes_asyncio.models.v1_flow_distinguisher_method import V1FlowDistinguisherMethod
 
 # TODO update the JSON string below
 json = "{}"

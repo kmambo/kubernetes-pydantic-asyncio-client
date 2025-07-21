@@ -6,13 +6,13 @@ StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rolling_update** | [**V1RollingUpdateStatefulSetStrategy**](V1RollingUpdateStatefulSetStrategy.md) |  | [optional] 
+**rolling_update** | [**V1RollingUpdateStatefulSetStrategy**](V1RollingUpdateStatefulSetStrategy.md) | RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType. | [optional] 
 **type** | **str** | Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_stateful_set_update_strategy import V1StatefulSetUpdateStrategy
+from kubernetes_asyncio.models.v1_stateful_set_update_strategy import V1StatefulSetUpdateStrategy
 
 # TODO update the JSON string below
 json = "{}"

@@ -7,12 +7,12 @@ SeccompProfile defines a pod/container's seccomp profile settings. Only one prof
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **localhost_profile** | **str** | localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet&#39;s configured seccomp profile location. Must be set if type is \&quot;Localhost\&quot;. Must NOT be set for any other type. | [optional] 
-**type** | **str** | type indicates which kind of seccomp profile will be applied. Valid options are:  Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied. | 
+**type** | **str** | type indicates which kind of seccomp profile will be applied. Valid options are:  Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_seccomp_profile import V1SeccompProfile
+from kubernetes_asyncio.models.v1_seccomp_profile import V1SeccompProfile
 
 # TODO update the JSON string below
 json = "{}"

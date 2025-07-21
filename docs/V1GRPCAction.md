@@ -6,13 +6,13 @@ GRPCAction specifies an action involving a GRPC service.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**port** | **int** | Port number of the gRPC service. Number must be in the range 1 to 65535. | 
-**service** | **str** | Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).  If this is not specified, the default behavior is defined by gRPC. | [optional] 
+**port** | **int** | Port number of the gRPC service. Number must be in the range 1 to 65535. | [default to 0]
+**service** | **str** | Service is the name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).  If this is not specified, the default behavior is defined by gRPC. | [optional] [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_grpc_action import V1GRPCAction
+from kubernetes_asyncio.models.v1_grpc_action import V1GRPCAction
 
 # TODO update the JSON string below
 json = "{}"

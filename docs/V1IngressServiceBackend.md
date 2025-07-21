@@ -6,13 +6,13 @@ IngressServiceBackend references a Kubernetes Service as a Backend.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | name is the referenced service. The service must exist in the same namespace as the Ingress object. | 
-**port** | [**V1ServiceBackendPort**](V1ServiceBackendPort.md) |  | [optional] 
+**name** | **str** | name is the referenced service. The service must exist in the same namespace as the Ingress object. | [default to '']
+**port** | [**V1ServiceBackendPort**](V1ServiceBackendPort.md) | port of the referenced service. A port name or port number is required for a IngressServiceBackend. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ingress_service_backend import V1IngressServiceBackend
+from kubernetes_asyncio.models.v1_ingress_service_backend import V1IngressServiceBackend
 
 # TODO update the JSON string below
 json = "{}"

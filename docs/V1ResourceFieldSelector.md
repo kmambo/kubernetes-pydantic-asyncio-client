@@ -7,13 +7,13 @@ ResourceFieldSelector represents container resources (cpu, memory) and their out
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **container_name** | **str** | Container name: required for volumes, optional for env vars | [optional] 
-**divisor** | **str** | Specifies the output format of the exposed resources, defaults to \&quot;1\&quot; | [optional] 
-**resource** | **str** | Required: resource to select | 
+**divisor** | [**V1ResourceFieldSelectorDivisor**](V1ResourceFieldSelectorDivisor.md) |  | [optional] 
+**resource** | **str** | Required: resource to select | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_resource_field_selector import V1ResourceFieldSelector
+from kubernetes_asyncio.models.v1_resource_field_selector import V1ResourceFieldSelector
 
 # TODO update the JSON string below
 json = "{}"

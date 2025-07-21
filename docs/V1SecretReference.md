@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_secret_reference import V1SecretReference
+from kubernetes_asyncio.models.v1_secret_reference import V1SecretReference
 
 # TODO update the JSON string below
 json = "{}"

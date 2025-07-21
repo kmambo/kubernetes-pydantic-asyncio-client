@@ -6,12 +6,12 @@ Overhead structure represents the resource overhead associated with running a po
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pod_fixed** | **Dict[str, str]** | podFixed represents the fixed resource overhead associated with running a pod. | [optional] 
+**pod_fixed** | [**Dict[str, V1PodSpecOverheadValue]**](V1PodSpecOverheadValue.md) | podFixed represents the fixed resource overhead associated with running a pod. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_overhead import V1Overhead
+from kubernetes_asyncio.models.v1_overhead import V1Overhead
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,13 +6,13 @@ LimitResponse defines how to handle requests that can not be executed right now.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**queuing** | [**V1QueuingConfiguration**](V1QueuingConfiguration.md) |  | [optional] 
-**type** | **str** | &#x60;type&#x60; is \&quot;Queue\&quot; or \&quot;Reject\&quot;. \&quot;Queue\&quot; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. \&quot;Reject\&quot; means that requests that can not be executed upon arrival are rejected. Required. | 
+**queuing** | [**V1QueuingConfiguration**](V1QueuingConfiguration.md) | &#x60;queuing&#x60; holds the configuration parameters for queuing. This field may be non-empty only if &#x60;type&#x60; is &#x60;\&quot;Queue\&quot;&#x60;. | [optional] 
+**type** | **str** | &#x60;type&#x60; is \&quot;Queue\&quot; or \&quot;Reject\&quot;. \&quot;Queue\&quot; means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. \&quot;Reject\&quot; means that requests that can not be executed upon arrival are rejected. Required. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_limit_response import V1LimitResponse
+from kubernetes_asyncio.models.v1_limit_response import V1LimitResponse
 
 # TODO update the JSON string below
 json = "{}"

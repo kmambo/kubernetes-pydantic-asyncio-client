@@ -6,14 +6,14 @@ ObjectMetricSource indicates how to scale on a metric describing a kubernetes ob
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**described_object** | [**V2CrossVersionObjectReference**](V2CrossVersionObjectReference.md) |  | 
-**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) |  | 
-**target** | [**V2MetricTarget**](V2MetricTarget.md) |  | 
+**described_object** | [**V2CrossVersionObjectReference**](V2CrossVersionObjectReference.md) | describedObject specifies the descriptions of a object,such as kind,name apiVersion | 
+**metric** | [**V2MetricIdentifier**](V2MetricIdentifier.md) | metric identifies the target metric by name and selector | 
+**target** | [**V2MetricTarget**](V2MetricTarget.md) | target specifies the target value for the given metric | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_object_metric_source import V2ObjectMetricSource
+from kubernetes_asyncio.models.v2_object_metric_source import V2ObjectMetricSource
 
 # TODO update the JSON string below
 json = "{}"

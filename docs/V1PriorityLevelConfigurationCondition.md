@@ -6,7 +6,7 @@ PriorityLevelConfigurationCondition defines the condition of priority level.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_transition_time** | **datetime** | &#x60;lastTransitionTime&#x60; is the last time the condition transitioned from one status to another. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | &#x60;message&#x60; is a human-readable message indicating details about last transition. | [optional] 
 **reason** | **str** | &#x60;reason&#x60; is a unique, one-word, CamelCase reason for the condition&#39;s last transition. | [optional] 
 **status** | **str** | &#x60;status&#x60; is the status of the condition. Can be True, False, Unknown. Required. | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_priority_level_configuration_condition import V1PriorityLevelConfigurationCondition
+from kubernetes_asyncio.models.v1_priority_level_configuration_condition import V1PriorityLevelConfigurationCondition
 
 # TODO update the JSON string below
 json = "{}"

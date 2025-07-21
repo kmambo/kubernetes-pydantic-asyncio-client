@@ -6,13 +6,13 @@ volumeDevice describes a mapping of a raw block device within a container.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_path** | **str** | devicePath is the path inside of the container that the device will be mapped to. | 
-**name** | **str** | name must match the name of a persistentVolumeClaim in the pod | 
+**device_path** | **str** | devicePath is the path inside of the container that the device will be mapped to. | [default to '']
+**name** | **str** | name must match the name of a persistentVolumeClaim in the pod | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_volume_device import V1VolumeDevice
+from kubernetes_asyncio.models.v1_volume_device import V1VolumeDevice
 
 # TODO update the JSON string below
 json = "{}"

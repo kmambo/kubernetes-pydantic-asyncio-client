@@ -6,14 +6,14 @@ HPAScalingPolicy is a single policy which must hold true for a specified past in
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**period_seconds** | **int** | periodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min). | 
-**type** | **str** | type is used to specify the scaling policy. | 
-**value** | **int** | value contains the amount of change which is permitted by the policy. It must be greater than zero | 
+**period_seconds** | **int** | periodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min). | [default to 0]
+**type** | **str** | type is used to specify the scaling policy. | [default to '']
+**value** | **int** | value contains the amount of change which is permitted by the policy. It must be greater than zero | [default to 0]
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_hpa_scaling_policy import V2HPAScalingPolicy
+from kubernetes_asyncio.models.v2_hpa_scaling_policy import V2HPAScalingPolicy
 
 # TODO update the JSON string below
 json = "{}"

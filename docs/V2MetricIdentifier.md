@@ -6,13 +6,13 @@ MetricIdentifier defines the name and optionally selector for a metric
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | name is the name of the given metric | 
-**selector** | [**V1LabelSelector**](V1LabelSelector.md) |  | [optional] 
+**name** | **str** | name is the name of the given metric | [default to '']
+**selector** | [**V1LabelSelector**](V1LabelSelector.md) | selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v2_metric_identifier import V2MetricIdentifier
+from kubernetes_asyncio.models.v2_metric_identifier import V2MetricIdentifier
 
 # TODO update the JSON string below
 json = "{}"

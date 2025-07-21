@@ -7,13 +7,13 @@ CrossVersionObjectReference contains enough information to let you identify the 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | apiVersion is the API version of the referent | [optional] 
-**kind** | **str** | kind is the kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | 
-**name** | **str** | name is the name of the referent; More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | 
+**kind** | **str** | kind is the kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [default to '']
+**name** | **str** | name is the name of the referent; More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_cross_version_object_reference import V1CrossVersionObjectReference
+from kubernetes_asyncio.models.v1_cross_version_object_reference import V1CrossVersionObjectReference
 
 # TODO update the JSON string below
 json = "{}"

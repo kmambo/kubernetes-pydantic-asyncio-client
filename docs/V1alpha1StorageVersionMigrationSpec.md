@@ -7,12 +7,12 @@ Spec of the storage version migration.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **continue_token** | **str** | The token used in the list options to get the next chunk of objects to migrate. When the .status.conditions indicates the migration is \&quot;Running\&quot;, users can use this token to check the progress of the migration. | [optional] 
-**resource** | [**V1alpha1GroupVersionResource**](V1alpha1GroupVersionResource.md) |  | 
+**resource** | [**V1alpha1GroupVersionResource**](V1alpha1GroupVersionResource.md) | The resource that is being migrated. The migrator sends requests to the endpoint serving the resource. Immutable. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1alpha1_storage_version_migration_spec import V1alpha1StorageVersionMigrationSpec
+from kubernetes_asyncio.models.v1alpha1_storage_version_migration_spec import V1alpha1StorageVersionMigrationSpec
 
 # TODO update the JSON string below
 json = "{}"

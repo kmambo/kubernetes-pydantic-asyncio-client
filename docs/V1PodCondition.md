@@ -6,18 +6,18 @@ PodCondition contains details for the current condition of this pod.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_probe_time** | **datetime** | Last time we probed the condition. | [optional] 
-**last_transition_time** | **datetime** | Last time the condition transitioned from one status to another. | [optional] 
+**last_probe_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
+**last_transition_time** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **message** | **str** | Human-readable message indicating details about last transition. | [optional] 
 **observed_generation** | **int** | If set, this represents the .metadata.generation that the pod condition was set based upon. This is an alpha field. Enable PodObservedGenerationTracking to be able to use this field. | [optional] 
 **reason** | **str** | Unique, one-word, CamelCase reason for the condition&#39;s last transition. | [optional] 
-**status** | **str** | Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions | 
-**type** | **str** | Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions | 
+**status** | **str** | Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions | [default to '']
+**type** | **str** | Type is the type of the condition. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_pod_condition import V1PodCondition
+from kubernetes_asyncio.models.v1_pod_condition import V1PodCondition
 
 # TODO update the JSON string below
 json = "{}"

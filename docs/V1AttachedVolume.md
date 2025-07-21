@@ -6,13 +6,13 @@ AttachedVolume describes a volume attached to a node
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_path** | **str** | DevicePath represents the device path where the volume should be available | 
-**name** | **str** | Name of the attached volume | 
+**device_path** | **str** | DevicePath represents the device path where the volume should be available | [default to '']
+**name** | **str** | Name of the attached volume | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_attached_volume import V1AttachedVolume
+from kubernetes_asyncio.models.v1_attached_volume import V1AttachedVolume
 
 # TODO update the JSON string below
 json = "{}"

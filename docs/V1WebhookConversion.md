@@ -6,13 +6,13 @@ WebhookConversion describes how to call a conversion webhook
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kubernetes_asyncio.client_config** | [**ApiextensionsV1WebhookClientConfig**](ApiextensionsV1WebhookClientConfig.md) |  | [optional] 
+**client_config** | [**V1WebhookClientConfig1**](V1WebhookClientConfig1.md) | clientConfig is the instructions for how to call the webhook if strategy is &#x60;Webhook&#x60;. | [optional] 
 **conversion_review_versions** | **List[str]** | conversionReviewVersions is an ordered list of preferred &#x60;ConversionReview&#x60; versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_webhook_conversion import V1WebhookConversion
+from kubernetes_asyncio.models.v1_webhook_conversion import V1WebhookConversion
 
 # TODO update the JSON string below
 json = "{}"

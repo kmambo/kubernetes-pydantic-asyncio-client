@@ -8,12 +8,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **non_resource_rules** | [**List[V1NonResourcePolicyRule]**](V1NonResourcePolicyRule.md) | &#x60;nonResourceRules&#x60; is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL. | [optional] 
 **resource_rules** | [**List[V1ResourcePolicyRule]**](V1ResourcePolicyRule.md) | &#x60;resourceRules&#x60; is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of &#x60;resourceRules&#x60; and &#x60;nonResourceRules&#x60; has to be non-empty. | [optional] 
-**subjects** | [**List[FlowcontrolV1Subject]**](FlowcontrolV1Subject.md) | subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required. | 
+**subjects** | [**List[V1Subject1]**](V1Subject1.md) | subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required. | 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_policy_rules_with_subjects import V1PolicyRulesWithSubjects
+from kubernetes_asyncio.models.v1_policy_rules_with_subjects import V1PolicyRulesWithSubjects
 
 # TODO update the JSON string below
 json = "{}"

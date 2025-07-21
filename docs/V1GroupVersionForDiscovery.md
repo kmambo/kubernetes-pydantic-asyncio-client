@@ -6,13 +6,13 @@ GroupVersion contains the \"group/version\" and \"version\" string of a version.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**group_version** | **str** | groupVersion specifies the API group and version in the form \&quot;group/version\&quot; | 
-**version** | **str** | version specifies the version in the form of \&quot;version\&quot;. This is to save the kubernetes_asyncio.clients the trouble of splitting the GroupVersion. | 
+**group_version** | **str** | groupVersion specifies the API group and version in the form \&quot;group/version\&quot; | [default to '']
+**version** | **str** | version specifies the version in the form of \&quot;version\&quot;. This is to save the clients the trouble of splitting the GroupVersion. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
+from kubernetes_asyncio.models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
 
 # TODO update the JSON string below
 json = "{}"

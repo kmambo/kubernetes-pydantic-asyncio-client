@@ -7,15 +7,15 @@ StatefulSet represents a set of pods with consistent identities. Identities are 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
-**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the kubernetes_asyncio.client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
-**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) |  | [optional] 
-**spec** | [**V1StatefulSetSpec**](V1StatefulSetSpec.md) |  | [optional] 
-**status** | [**V1StatefulSetStatus**](V1StatefulSetStatus.md) |  | [optional] 
+**kind** | **str** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
+**metadata** | [**V1ObjectMeta**](V1ObjectMeta.md) | Standard object&#39;s metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata | [optional] 
+**spec** | [**V1StatefulSetSpec**](V1StatefulSetSpec.md) | Spec defines the desired identities of pods in this set. | [optional] 
+**status** | [**V1StatefulSetStatus**](V1StatefulSetStatus.md) | Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_stateful_set import V1StatefulSet
+from kubernetes_asyncio.models.v1_stateful_set import V1StatefulSet
 
 # TODO update the JSON string below
 json = "{}"

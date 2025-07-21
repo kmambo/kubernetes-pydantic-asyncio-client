@@ -7,12 +7,12 @@ Represents an empty directory for a pod. Empty directory volumes support ownersh
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **medium** | **str** | medium represents what type of storage medium should back this directory. The default is \&quot;\&quot; which means to use the node&#39;s default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir | [optional] 
-**size_limit** | **str** | sizeLimit is the total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir | [optional] 
+**size_limit** | [**V1EmptyDirVolumeSourceSizeLimit**](V1EmptyDirVolumeSourceSizeLimit.md) |  | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_empty_dir_volume_source import V1EmptyDirVolumeSource
+from kubernetes_asyncio.models.v1_empty_dir_volume_source import V1EmptyDirVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

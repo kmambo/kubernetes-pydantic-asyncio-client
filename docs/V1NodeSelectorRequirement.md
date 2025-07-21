@@ -6,14 +6,14 @@ A node selector requirement is a selector that contains values, a key, and an op
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **str** | The label key that the selector applies to. | 
-**operator** | **str** | Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt. | 
+**key** | **str** | The label key that the selector applies to. | [default to '']
+**operator** | **str** | Represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt. | [default to '']
 **values** | **List[str]** | An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_selector_requirement import V1NodeSelectorRequirement
+from kubernetes_asyncio.models.v1_node_selector_requirement import V1NodeSelectorRequirement
 
 # TODO update the JSON string below
 json = "{}"

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_exec_action import V1ExecAction
+from kubernetes_asyncio.models.v1_exec_action import V1ExecAction
 
 # TODO update the JSON string below
 json = "{}"

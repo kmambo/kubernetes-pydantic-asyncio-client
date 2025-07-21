@@ -6,12 +6,12 @@ DeviceSelector must have exactly one field set.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cel** | [**V1beta1CELDeviceSelector**](V1beta1CELDeviceSelector.md) |  | [optional] 
+**cel** | [**V1beta1CELDeviceSelector**](V1beta1CELDeviceSelector.md) | CEL contains a CEL expression for selecting a device. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta1_device_selector import V1beta1DeviceSelector
+from kubernetes_asyncio.models.v1beta1_device_selector import V1beta1DeviceSelector
 
 # TODO update the JSON string below
 json = "{}"

@@ -6,12 +6,12 @@ NodeConfigSource specifies a source of node configuration. Exactly one subfield 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config_map** | [**V1ConfigMapNodeConfigSource**](V1ConfigMapNodeConfigSource.md) |  | [optional] 
+**config_map** | [**V1ConfigMapNodeConfigSource**](V1ConfigMapNodeConfigSource.md) | ConfigMap is a reference to a Node&#39;s ConfigMap | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_node_config_source import V1NodeConfigSource
+from kubernetes_asyncio.models.v1_node_config_source import V1NodeConfigSource
 
 # TODO update the JSON string below
 json = "{}"

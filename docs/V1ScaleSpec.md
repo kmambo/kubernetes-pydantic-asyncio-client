@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_scale_spec import V1ScaleSpec
+from kubernetes_asyncio.models.v1_scale_spec import V1ScaleSpec
 
 # TODO update the JSON string below
 json = "{}"

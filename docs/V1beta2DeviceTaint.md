@@ -6,15 +6,15 @@ The device this taint is attached to has the \"effect\" on any claim which does 
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**effect** | **str** | The effect of the taint on claims that do not tolerate the taint and through such claims on the pods using them. Valid effects are NoSchedule and NoExecute. PreferNoSchedule as used for nodes is not valid here. | 
-**key** | **str** | The taint key to be applied to a device. Must be a label name. | 
-**time_added** | **datetime** | TimeAdded represents the time at which the taint was added. Added automatically during create or update if not set. | [optional] 
+**effect** | **str** | The effect of the taint on claims that do not tolerate the taint and through such claims on the pods using them. Valid effects are NoSchedule and NoExecute. PreferNoSchedule as used for nodes is not valid here. | [default to '']
+**key** | **str** | The taint key to be applied to a device. Must be a label name. | [default to '']
+**time_added** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **value** | **str** | The taint value corresponding to the taint key. Must be a label value. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1beta2_device_taint import V1beta2DeviceTaint
+from kubernetes_asyncio.models.v1beta2_device_taint import V1beta2DeviceTaint
 
 # TODO update the JSON string below
 json = "{}"

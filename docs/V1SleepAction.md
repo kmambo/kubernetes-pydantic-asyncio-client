@@ -6,12 +6,12 @@ SleepAction describes a \"sleep\" action.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**seconds** | **int** | Seconds is the number of seconds to sleep. | 
+**seconds** | **int** | Seconds is the number of seconds to sleep. | [default to 0]
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_sleep_action import V1SleepAction
+from kubernetes_asyncio.models.v1_sleep_action import V1SleepAction
 
 # TODO update the JSON string below
 json = "{}"

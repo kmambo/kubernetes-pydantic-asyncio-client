@@ -1,10 +1,10 @@
-# kubernetes_asyncio.client.WellKnownApi
+# kubernetes_asyncio.WellKnownApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_service_account_issuer_open_id_configuration**](WellKnownApi.md#get_service_account_issuer_open_id_configuration) | **GET** /.well-known/openid-configuration | 
+[**get_service_account_issuer_open_id_configuration**](WellKnownApi.md#get_service_account_issuer_open_id_configuration) | **GET** /.well-known/openid-configuration/ | 
 
 
 # **get_service_account_issuer_open_id_configuration**
@@ -14,34 +14,23 @@ get service account issuer OpenID configuration, also known as the 'OIDC discove
 
 ### Example
 
-* Api Key Authentication (BearerToken):
 
 ```python
-import kubernetes_asyncio.client
-from kubernetes_asyncio.client.rest import ApiException
+import kubernetes_asyncio
+from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.client.Configuration(
-    host = "http://localhost"
+configuration = kubernetes_asyncio.Configuration(
+    host = "http://localhost:8080"
 )
 
-# The kubernetes_asyncio.client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
 
-# Configure API key authorization: BearerToken
-configuration.api_key['BearerToken'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['BearerToken'] = 'Bearer'
-
-# Enter a context with an instance of the API kubernetes_asyncio.client
-async with kubernetes_asyncio.client.ApiClient(configuration) as api_client:
+# Enter a context with an instance of the API client
+async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.client.WellKnownApi(api_client)
+    api_instance = kubernetes_asyncio.WellKnownApi(api_client)
 
     try:
         api_response = await api_instance.get_service_account_issuer_open_id_configuration()
@@ -63,7 +52,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken)
+No authorization required
 
 ### HTTP request headers
 

@@ -1,18 +1,18 @@
 # V1ServerAddressByClientCIDR
 
-ServerAddressByClientCIDR helps the kubernetes_asyncio.client to determine the server address that they should use, depending on the kubernetes_asyncio.clientCIDR that they match.
+ServerAddressByClientCIDR helps the client to determine the server address that they should use, depending on the clientCIDR that they match.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kubernetes_asyncio.client_cidr** | **str** | The CIDR with which kubernetes_asyncio.clients can match their IP to figure out the server address that they should use. | 
-**server_address** | **str** | Address of this server, suitable for a kubernetes_asyncio.client that matches the above CIDR. This can be a hostname, hostname:port, IP or IP:port. | 
+**client_cidr** | **str** | The CIDR with which clients can match their IP to figure out the server address that they should use. | [default to '']
+**server_address** | **str** | Address of this server, suitable for a client that matches the above CIDR. This can be a hostname, hostname:port, IP or IP:port. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
+from kubernetes_asyncio.models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
 
 # TODO update the JSON string below
 json = "{}"

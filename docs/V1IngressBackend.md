@@ -6,13 +6,13 @@ IngressBackend describes all endpoints for a given service and port.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource** | [**V1TypedLocalObjectReference**](V1TypedLocalObjectReference.md) |  | [optional] 
-**service** | [**V1IngressServiceBackend**](V1IngressServiceBackend.md) |  | [optional] 
+**resource** | [**V1TypedLocalObjectReference**](V1TypedLocalObjectReference.md) | resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with \&quot;Service\&quot;. | [optional] 
+**service** | [**V1IngressServiceBackend**](V1IngressServiceBackend.md) | service references a service as a backend. This is a mutually exclusive setting with \&quot;Resource\&quot;. | [optional] 
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_ingress_backend import V1IngressBackend
+from kubernetes_asyncio.models.v1_ingress_backend import V1IngressBackend
 
 # TODO update the JSON string below
 json = "{}"

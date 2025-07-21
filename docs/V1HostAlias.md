@@ -7,12 +7,12 @@ HostAlias holds the mapping between IP and hostnames that will be injected as an
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hostnames** | **List[str]** | Hostnames for the above IP address. | [optional] 
-**ip** | **str** | IP address of the host file entry. | 
+**ip** | **str** | IP address of the host file entry. | [default to '']
 
 ## Example
 
 ```python
-from kubernetes_asyncio.client.models.v1_host_alias import V1HostAlias
+from kubernetes_asyncio.models.v1_host_alias import V1HostAlias
 
 # TODO update the JSON string below
 json = "{}"

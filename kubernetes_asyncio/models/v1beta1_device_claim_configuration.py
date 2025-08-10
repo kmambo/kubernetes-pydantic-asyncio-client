@@ -38,7 +38,7 @@ class V1beta1DeviceClaimConfiguration(BaseModel):
     )
     requests: Optional[List[StrictStr]] = Field(
         default=None,
-        description="Requests lists the names of requests where the configuration applies. If empty, it applies to all requests.",
+        description="Requests lists the names of requests where the configuration applies. If empty, it applies to all requests.  References to subrequests must include the name of the main request and may include the subrequest using the format <main request>[/<subrequest>]. If just the main request is given, the configuration applies to all subrequests.",
     )
     __properties: ClassVar[List[str]] = ["opaque", "requests"]
 

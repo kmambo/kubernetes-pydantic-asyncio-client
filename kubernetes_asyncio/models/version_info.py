@@ -30,21 +30,49 @@ class VersionInfo(BaseModel):
 
     build_date: StrictStr = Field(alias="buildDate")
     compiler: StrictStr
+    emulation_major: Optional[StrictStr] = Field(
+        default=None,
+        description="EmulationMajor is the major version of the emulation version",
+        alias="emulationMajor",
+    )
+    emulation_minor: Optional[StrictStr] = Field(
+        default=None,
+        description="EmulationMinor is the minor version of the emulation version",
+        alias="emulationMinor",
+    )
     git_commit: StrictStr = Field(alias="gitCommit")
     git_tree_state: StrictStr = Field(alias="gitTreeState")
     git_version: StrictStr = Field(alias="gitVersion")
     go_version: StrictStr = Field(alias="goVersion")
-    major: StrictStr
-    minor: StrictStr
+    major: StrictStr = Field(
+        description="Major is the major version of the binary version"
+    )
+    min_compatibility_major: Optional[StrictStr] = Field(
+        default=None,
+        description="MinCompatibilityMajor is the major version of the minimum compatibility version",
+        alias="minCompatibilityMajor",
+    )
+    min_compatibility_minor: Optional[StrictStr] = Field(
+        default=None,
+        description="MinCompatibilityMinor is the minor version of the minimum compatibility version",
+        alias="minCompatibilityMinor",
+    )
+    minor: StrictStr = Field(
+        description="Minor is the minor version of the binary version"
+    )
     platform: StrictStr
     __properties: ClassVar[List[str]] = [
         "buildDate",
         "compiler",
+        "emulationMajor",
+        "emulationMinor",
         "gitCommit",
         "gitTreeState",
         "gitVersion",
         "goVersion",
         "major",
+        "minCompatibilityMajor",
+        "minCompatibilityMinor",
         "minor",
         "platform",
     ]
@@ -105,6 +133,8 @@ class VersionInfo(BaseModel):
                 "compiler": (
                     obj.get("compiler") if obj.get("compiler") is not None else ""
                 ),
+                "emulationMajor": obj.get("emulationMajor"),
+                "emulationMinor": obj.get("emulationMinor"),
                 "gitCommit": (
                     obj.get("gitCommit") if obj.get("gitCommit") is not None else ""
                 ),
@@ -120,6 +150,8 @@ class VersionInfo(BaseModel):
                     obj.get("goVersion") if obj.get("goVersion") is not None else ""
                 ),
                 "major": obj.get("major") if obj.get("major") is not None else "",
+                "minCompatibilityMajor": obj.get("minCompatibilityMajor"),
+                "minCompatibilityMinor": obj.get("minCompatibilityMinor"),
                 "minor": obj.get("minor") if obj.get("minor") is not None else "",
                 "platform": (
                     obj.get("platform") if obj.get("platform") is not None else ""

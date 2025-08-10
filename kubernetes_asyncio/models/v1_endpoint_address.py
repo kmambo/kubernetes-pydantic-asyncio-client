@@ -27,7 +27,7 @@ from kubernetes_asyncio.models.v1_object_reference import V1ObjectReference
 
 class V1EndpointAddress(BaseModel):
     """
-    EndpointAddress is a tuple that describes single IP address.
+    EndpointAddress is a tuple that describes single IP address. Deprecated: This API is deprecated in v1.33+.
     """  # noqa: E501
 
     hostname: Optional[StrictStr] = Field(

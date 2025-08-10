@@ -71,7 +71,11 @@ class TestV1beta1ResourceSlice(unittest.TestCase):
                     driver = '', 
                     node_name = '', 
                     node_selector = null, 
-                    pool = null, )
+                    per_device_node_selection = True, 
+                    pool = null, 
+                    shared_counters = [
+                        null
+                        ], )
             )
         else:
             return V1beta1ResourceSlice(
@@ -83,7 +87,11 @@ class TestV1beta1ResourceSlice(unittest.TestCase):
                     driver = '', 
                     node_name = '', 
                     node_selector = null, 
-                    pool = null, ),
+                    per_device_node_selection = True, 
+                    pool = null, 
+                    shared_counters = [
+                        null
+                        ], ),
         )
         """
 

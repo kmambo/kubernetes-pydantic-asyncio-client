@@ -1,8 +1,8 @@
 [project]
 name = "kubernetes_asyncio_pydantic"
-version = "1.32.7"
+version = "1.33.2"
 description = "Kubernetes client"
-requires-python = ">=3.12,<4.0"
+requires-python = ">=3.13,<4.0"
 authors = [
     {name = "Partho Bhowmick",email = "partho.bhowmick@icloud.com"}
 ]
@@ -19,10 +19,12 @@ packages = [{include = "kubernetes_asyncio"}]
 pytest = ">=7.2.1"
 pytest-cov = ">=2.8.1"
 tox = ">=3.9.0"
-flake8 = ">=4.0.0"
 types-python-dateutil = ">=2.8.19.14"
+flake8 = ">=4.0.0"
 mypy = ">=1.5"
-black = ">24.10.0"
+black = ">=25.1.0"
+isort = ">=6.0.1"
+pyright = ">=1.1.385"
 
 
 [tool.poetry.dependencies]
@@ -41,7 +43,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "client",
+  "kubernetes_asyncio",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -96,7 +98,7 @@ warn_return_any = true
 
 [tool.black]
 line-length = 88
-target-version = ["py312", "py313"]
+target-version = ["py313"]
 
 [tool.isort]
 profile = "black"

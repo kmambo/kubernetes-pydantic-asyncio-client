@@ -39,14 +39,19 @@ class TestV1beta1DeviceRequest(unittest.TestCase):
                 allocation_mode = '',
                 count = 56,
                 device_class_name = '',
+                first_available = [
+                    null
+                    ],
                 name = '',
                 selectors = [
+                    null
+                    ],
+                tolerations = [
                     null
                     ]
             )
         else:
             return V1beta1DeviceRequest(
-                device_class_name = '',
                 name = '',
         )
         """

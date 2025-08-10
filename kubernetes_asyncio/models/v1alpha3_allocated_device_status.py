@@ -35,7 +35,7 @@ class V1alpha3AllocatedDeviceStatus(BaseModel):
 
     conditions: Optional[List[V1Condition]] = Field(
         default=None,
-        description="Conditions contains the latest observation of the device's state. If the device has been configured according to the class and claim config references, the `Ready` condition should be True.",
+        description="Conditions contains the latest observation of the device's state. If the device has been configured according to the class and claim config references, the `Ready` condition should be True.  Must not contain more than 8 entries.",
     )
     data: Optional[Dict[str, Any]] = Field(
         default=None,

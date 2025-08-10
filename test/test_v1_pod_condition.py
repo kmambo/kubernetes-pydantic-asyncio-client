@@ -38,6 +38,7 @@ class TestV1PodCondition(unittest.TestCase):
                 last_probe_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 last_transition_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 message = '',
+                observed_generation = 56,
                 reason = '',
                 status = '',
                 type = ''

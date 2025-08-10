@@ -37,7 +37,7 @@ class V1ReplicaSetList(BaseModel):
         alias="apiVersion",
     )
     items: List[V1ReplicaSet] = Field(
-        description="List of ReplicaSets. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller"
+        description="List of ReplicaSets. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset"
     )
     kind: Optional[StrictStr] = Field(
         default=None,

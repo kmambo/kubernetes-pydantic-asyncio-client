@@ -45,10 +45,14 @@ class TestV1alpha3ResourceSliceSpec(unittest.TestCase):
                     node_selector_terms = [
                         null
                         ], ),
+                per_device_node_selection = True,
                 pool = kubernetes_asyncio.models.v1alpha3/resource_pool.v1alpha3.ResourcePool(
                     generation = 56, 
                     name = '', 
-                    resource_slice_count = 56, )
+                    resource_slice_count = 56, ),
+                shared_counters = [
+                    null
+                    ]
             )
         else:
             return V1alpha3ResourceSliceSpec(

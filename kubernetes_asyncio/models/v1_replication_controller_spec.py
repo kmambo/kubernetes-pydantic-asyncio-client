@@ -31,12 +31,12 @@ class V1ReplicationControllerSpec(BaseModel):
     """  # noqa: E501
 
     min_ready_seconds: Optional[StrictInt] = Field(
-        default=None,
+        default=0,
         description="Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)",
         alias="minReadySeconds",
     )
     replicas: Optional[StrictInt] = Field(
-        default=None,
+        default=1,
         description="Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller",
     )
     selector: Optional[Dict[str, StrictStr]] = Field(
@@ -107,8 +107,14 @@ class V1ReplicationControllerSpec(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "minReadySeconds": obj.get("minReadySeconds"),
-                "replicas": obj.get("replicas"),
+                "minReadySeconds": (
+                    obj.get("minReadySeconds")
+                    if obj.get("minReadySeconds") is not None
+                    else 0
+                ),
+                "replicas": (
+                    obj.get("replicas") if obj.get("replicas") is not None else 1
+                ),
                 "selector": obj.get("selector"),
                 "template": (
                     V1PodTemplateSpec.from_dict(obj["template"])

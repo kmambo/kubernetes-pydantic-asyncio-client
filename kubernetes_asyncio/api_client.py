@@ -31,15 +31,7 @@ from kubernetes_asyncio import rest
 from kubernetes_asyncio.api_response import ApiResponse
 from kubernetes_asyncio.api_response import T as ApiResponseT
 from kubernetes_asyncio.configuration import Configuration
-from kubernetes_asyncio.exceptions import (
-    ApiException,
-    ApiValueError,
-    BadRequestException,
-    ForbiddenException,
-    NotFoundException,
-    ServiceException,
-    UnauthorizedException,
-)
+from kubernetes_asyncio.exceptions import ApiException, ApiValueError
 
 RequestSerialized = Tuple[str, str, Dict[str, str], Optional[str], List[str]]
 
@@ -88,7 +80,7 @@ class ApiClient:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = "OpenAPI-Generator/1.33.2/python"
+        self.user_agent = "OpenAPI-Generator/1.33.4/python"
         self.client_side_validation = configuration.client_side_validation
 
     async def __aenter__(self):

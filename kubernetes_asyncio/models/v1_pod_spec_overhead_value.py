@@ -16,19 +16,18 @@ from __future__ import annotations
 
 import json
 import pprint
-from typing import Any, Dict, List, Optional, Set, Union
+from typing import Any, Dict, Optional, Set, Union
 
 from pydantic import (
     BaseModel,
     ConfigDict,
-    Field,
     StrictFloat,
     StrictInt,
     StrictStr,
     ValidationError,
     field_validator,
 )
-from typing_extensions import Literal, Self
+from typing_extensions import Self
 
 V1PODSPECOVERHEADVALUE_ONE_OF_SCHEMAS = ["float", "str"]
 

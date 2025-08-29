@@ -54,13 +54,6 @@ class TestV1NetworkPolicySpec(unittest.TestCase):
             )
         else:
             return V1NetworkPolicySpec(
-                pod_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
-                    match_expressions = [
-                        null
-                        ], 
-                    match_labels = {
-                        'key' : ''
-                        }, ),
         )
         """
 

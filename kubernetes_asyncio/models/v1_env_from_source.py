@@ -36,7 +36,7 @@ class V1EnvFromSource(BaseModel):
     )
     prefix: Optional[StrictStr] = Field(
         default=None,
-        description="Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.",
+        description="Optional text to prepend to the name of each environment variable. May consist of any printable ASCII characters except '='.",
     )
     secret_ref: Optional[V1SecretEnvSource] = Field(
         default=None, description="The Secret to select from", alias="secretRef"

@@ -36,6 +36,7 @@ class TestV1beta2ResourceClaimStatus(unittest.TestCase):
         if include_optional:
             return V1beta2ResourceClaimStatus(
                 allocation = kubernetes_asyncio.models.v1beta2/allocation_result.v1beta2.AllocationResult(
+                    allocation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     devices = null, 
                     node_selector = null, ),
                 devices = [

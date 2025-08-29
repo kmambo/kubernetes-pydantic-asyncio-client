@@ -29,7 +29,7 @@ class V1ScaleSpec(BaseModel):
     """  # noqa: E501
 
     replicas: Optional[StrictInt] = Field(
-        default=None,
+        default=0,
         description="replicas is the desired number of instances for the scaled object.",
     )
     __properties: ClassVar[List[str]] = ["replicas"]
@@ -82,5 +82,7 @@ class V1ScaleSpec(BaseModel):
         if not isinstance(obj, dict):
             return cls.model_validate(obj)
 
-        _obj = cls.model_validate({"replicas": obj.get("replicas")})
+        _obj = cls.model_validate(
+            {"replicas": obj.get("replicas") if obj.get("replicas") is not None else 0}
+        )
         return _obj

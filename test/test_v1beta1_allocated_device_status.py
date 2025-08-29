@@ -47,7 +47,8 @@ class TestV1beta1AllocatedDeviceStatus(unittest.TestCase):
                     ips = [
                         ''
                         ], ),
-                pool = ''
+                pool = '',
+                share_id = ''
             )
         else:
             return V1beta1AllocatedDeviceStatus(

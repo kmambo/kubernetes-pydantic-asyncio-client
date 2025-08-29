@@ -19,11 +19,14 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1beta1_device_capacity_value import (
     V1beta1DeviceCapacityValue,
+)
+from kubernetes_asyncio.models.v1beta2_capacity_request_policy import (
+    V1beta2CapacityRequestPolicy,
 )
 
 
@@ -32,8 +35,13 @@ class V1beta2DeviceCapacity(BaseModel):
     DeviceCapacity describes a quantity associated with a device.
     """  # noqa: E501
 
+    request_policy: Optional[V1beta2CapacityRequestPolicy] = Field(
+        default=None,
+        description="RequestPolicy defines how this DeviceCapacity must be consumed when the device is allowed to be shared by multiple allocations.  The Device must have allowMultipleAllocations set to true in order to set a requestPolicy.  If unset, capacity requests are unconstrained: requests can consume any amount of capacity, as long as the total consumed across all allocations does not exceed the device's defined capacity. If request is also unset, default is the full capacity value.",
+        alias="requestPolicy",
+    )
     value: V1beta1DeviceCapacityValue
-    __properties: ClassVar[List[str]] = ["value"]
+    __properties: ClassVar[List[str]] = ["requestPolicy", "value"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,6 +80,9 @@ class V1beta2DeviceCapacity(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of request_policy
+        if self.request_policy:
+            _dict["requestPolicy"] = self.request_policy.to_dict()
         # override the default output from pydantic by calling `to_dict()` of value
         if self.value:
             _dict["value"] = self.value.to_dict()
@@ -88,11 +99,16 @@ class V1beta2DeviceCapacity(BaseModel):
 
         _obj = cls.model_validate(
             {
+                "requestPolicy": (
+                    V1beta2CapacityRequestPolicy.from_dict(obj["requestPolicy"])
+                    if obj.get("requestPolicy") is not None
+                    else None
+                ),
                 "value": (
                     V1beta1DeviceCapacityValue.from_dict(obj["value"])
                     if obj.get("value") is not None
                     else None
-                )
+                ),
             }
         )
         return _obj

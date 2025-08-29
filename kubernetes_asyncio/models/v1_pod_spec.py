@@ -95,7 +95,7 @@ class V1PodSpec(BaseModel):
     )
     host_network: Optional[StrictBool] = Field(
         default=None,
-        description="Host networking requested for this pod. Use the host's network namespace. If this option is set, the ports that will be used must be specified. Default to false.",
+        description="Host networking requested for this pod. Use the host's network namespace. When using HostNetwork you should specify ports so the scheduler is aware. When `hostNetwork` is true, specified `hostPort` fields in port definitions must match `containerPort`, and unspecified `hostPort` fields in port definitions are defaulted to match `containerPort`. Default to false.",
         alias="hostNetwork",
     )
     host_pid: Optional[StrictBool] = Field(
@@ -111,6 +111,11 @@ class V1PodSpec(BaseModel):
     hostname: Optional[StrictStr] = Field(
         default=None,
         description="Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a system-defined value.",
+    )
+    hostname_override: Optional[StrictStr] = Field(
+        default=None,
+        description="HostnameOverride specifies an explicit override for the pod's hostname as perceived by the pod. This field only specifies the pod's hostname and does not affect its DNS records. When this field is set to a non-empty string: - It takes precedence over the values set in `hostname` and `subdomain`. - The Pod's hostname will be set to this value. - `setHostnameAsFQDN` must be nil or set to false. - `hostNetwork` must be set to false.  This field must be a valid DNS subdomain as defined in RFC 1123 and contain at most 64 characters. Requires the HostnameOverride feature gate to be enabled.",
+        alias="hostnameOverride",
     )
     image_pull_secrets: Optional[List[V1LocalObjectReference]] = Field(
         default=None,
@@ -134,7 +139,7 @@ class V1PodSpec(BaseModel):
     )
     os: Optional[V1PodOS] = Field(
         default=None,
-        description="Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.  If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions  If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.securityContext.appArmorProfile - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.securityContext.supplementalGroupsPolicy - spec.containers[*].securityContext.appArmorProfile - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup",
+        description="Specifies the OS of the containers in the pod. Some pod and container fields are restricted if this is set.  If the OS field is set to linux, the following fields must be unset: -securityContext.windowsOptions  If the OS field is set to windows, following fields must be unset: - spec.hostPID - spec.hostIPC - spec.hostUsers - spec.resources - spec.securityContext.appArmorProfile - spec.securityContext.seLinuxOptions - spec.securityContext.seccompProfile - spec.securityContext.fsGroup - spec.securityContext.fsGroupChangePolicy - spec.securityContext.sysctls - spec.shareProcessNamespace - spec.securityContext.runAsUser - spec.securityContext.runAsGroup - spec.securityContext.supplementalGroups - spec.securityContext.supplementalGroupsPolicy - spec.containers[*].securityContext.appArmorProfile - spec.containers[*].securityContext.seLinuxOptions - spec.containers[*].securityContext.seccompProfile - spec.containers[*].securityContext.capabilities - spec.containers[*].securityContext.readOnlyRootFilesystem - spec.containers[*].securityContext.privileged - spec.containers[*].securityContext.allowPrivilegeEscalation - spec.containers[*].securityContext.procMount - spec.containers[*].securityContext.runAsUser - spec.containers[*].securityContext.runAsGroup",
     )
     overhead: Optional[Dict[str, V1PodSpecOverheadValue]] = Field(
         default=None,
@@ -166,7 +171,7 @@ class V1PodSpec(BaseModel):
     )
     resources: Optional[V1ResourceRequirements] = Field(
         default=None,
-        description='Resources is the total amount of CPU and Memory resources required by all containers in the pod. It supports specifying Requests and Limits for "cpu" and "memory" resource names only. ResourceClaims are not supported.  This field enables fine-grained control over resource allocation for the entire pod, allowing resource sharing among containers in a pod.  This is an alpha field and requires enabling the PodLevelResources feature gate.',
+        description='Resources is the total amount of CPU and Memory resources required by all containers in the pod. It supports specifying Requests and Limits for "cpu", "memory" and "hugepages-" resource names only. ResourceClaims are not supported.  This field enables fine-grained control over resource allocation for the entire pod, allowing resource sharing among containers in a pod.  This is an alpha field and requires enabling the PodLevelResources feature gate.',
     )
     restart_policy: Optional[StrictStr] = Field(
         default=None,
@@ -249,6 +254,7 @@ class V1PodSpec(BaseModel):
         "hostPID",
         "hostUsers",
         "hostname",
+        "hostnameOverride",
         "imagePullSecrets",
         "initContainers",
         "nodeName",
@@ -463,6 +469,7 @@ class V1PodSpec(BaseModel):
                 "hostPID": obj.get("hostPID"),
                 "hostUsers": obj.get("hostUsers"),
                 "hostname": obj.get("hostname"),
+                "hostnameOverride": obj.get("hostnameOverride"),
                 "imagePullSecrets": (
                     [
                         V1LocalObjectReference.from_dict(_item)

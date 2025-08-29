@@ -40,7 +40,7 @@ class V1JobSpec(BaseModel):
     )
     backoff_limit: Optional[StrictInt] = Field(
         default=None,
-        description="Specifies the number of retries before marking this job failed. Defaults to 6",
+        description="Specifies the number of retries before marking this job failed. Defaults to 6, unless backoffLimitPerIndex (only Indexed Job) is specified. When backoffLimitPerIndex is specified, backoffLimit defaults to 2147483647.",
         alias="backoffLimit",
     )
     backoff_limit_per_index: Optional[StrictInt] = Field(
@@ -83,7 +83,7 @@ class V1JobSpec(BaseModel):
     )
     pod_replacement_policy: Optional[StrictStr] = Field(
         default=None,
-        description="podReplacementPolicy specifies when to create replacement Pods. Possible values are: - TerminatingOrFailed means that we recreate pods   when they are terminating (has a metadata.deletionTimestamp) or failed. - Failed means to wait until a previously created Pod is fully terminated (has phase   Failed or Succeeded) before creating a replacement Pod.  When using podFailurePolicy, Failed is the the only allowed value. TerminatingOrFailed and Failed are allowed values when podFailurePolicy is not in use. This is an beta field. To use this, enable the JobPodReplacementPolicy feature toggle. This is on by default.",
+        description="podReplacementPolicy specifies when to create replacement Pods. Possible values are: - TerminatingOrFailed means that we recreate pods   when they are terminating (has a metadata.deletionTimestamp) or failed. - Failed means to wait until a previously created Pod is fully terminated (has phase   Failed or Succeeded) before creating a replacement Pod.  When using podFailurePolicy, Failed is the the only allowed value. TerminatingOrFailed and Failed are allowed values when podFailurePolicy is not in use.",
         alias="podReplacementPolicy",
     )
     selector: Optional[V1LabelSelector] = Field(

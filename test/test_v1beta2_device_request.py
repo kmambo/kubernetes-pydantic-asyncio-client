@@ -38,6 +38,7 @@ class TestV1beta2DeviceRequest(unittest.TestCase):
                 exactly = kubernetes_asyncio.models.v1beta2/exact_device_request.v1beta2.ExactDeviceRequest(
                     admin_access = True, 
                     allocation_mode = '', 
+                    capacity = null, 
                     count = 56, 
                     device_class_name = '', 
                     selectors = [

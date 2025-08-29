@@ -36,6 +36,10 @@ class TestV1beta2DeviceSubRequest(unittest.TestCase):
         if include_optional:
             return V1beta2DeviceSubRequest(
                 allocation_mode = '',
+                capacity = kubernetes_asyncio.models.v1beta2/capacity_requirements.v1beta2.CapacityRequirements(
+                    requests = {
+                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        }, ),
                 count = 56,
                 device_class_name = '',
                 name = '',

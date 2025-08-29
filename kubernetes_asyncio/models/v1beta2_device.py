@@ -41,9 +41,29 @@ class V1beta2Device(BaseModel):
         description="AllNodes indicates that all nodes have access to the device.  Must only be set if Spec.PerDeviceNodeSelection is set to true. At most one of NodeName, NodeSelector and AllNodes can be set.",
         alias="allNodes",
     )
+    allow_multiple_allocations: Optional[StrictBool] = Field(
+        default=None,
+        description="AllowMultipleAllocations marks whether the device is allowed to be allocated to multiple DeviceRequests.  If AllowMultipleAllocations is set to true, the device can be allocated more than once, and all of its capacity is consumable, regardless of whether the requestPolicy is defined or not.",
+        alias="allowMultipleAllocations",
+    )
     attributes: Optional[Dict[str, V1beta2DeviceAttribute]] = Field(
         default=None,
         description="Attributes defines the set of attributes for this device. The name of each attribute must be unique in that set.  The maximum number of attributes and capacities combined is 32.",
+    )
+    binding_conditions: Optional[List[StrictStr]] = Field(
+        default=None,
+        description="BindingConditions defines the conditions for proceeding with binding. All of these conditions must be set in the per-device status conditions with a value of True to proceed with binding the pod to the node while scheduling the pod.  The maximum number of binding conditions is 4.  The conditions must be a valid condition type string.  This is an alpha field and requires enabling the DRADeviceBindingConditions and DRAResourceClaimDeviceStatus feature gates.",
+        alias="bindingConditions",
+    )
+    binding_failure_conditions: Optional[List[StrictStr]] = Field(
+        default=None,
+        description='BindingFailureConditions defines the conditions for binding failure. They may be set in the per-device status conditions. If any is set to "True", a binding failure occurred.  The maximum number of binding failure conditions is 4.  The conditions must be a valid condition type string.  This is an alpha field and requires enabling the DRADeviceBindingConditions and DRAResourceClaimDeviceStatus feature gates.',
+        alias="bindingFailureConditions",
+    )
+    binds_to_node: Optional[StrictBool] = Field(
+        default=None,
+        description="BindsToNode indicates if the usage of an allocation involving this device has to be limited to exactly the node that was chosen when allocating the claim. If set to true, the scheduler will set the ResourceClaim.Status.Allocation.NodeSelector to match the node where the allocation was made.  This is an alpha field and requires enabling the DRADeviceBindingConditions and DRAResourceClaimDeviceStatus feature gates.",
+        alias="bindsToNode",
     )
     capacity: Optional[Dict[str, V1beta2DeviceCapacity]] = Field(
         default=None,
@@ -73,7 +93,11 @@ class V1beta2Device(BaseModel):
     )
     __properties: ClassVar[List[str]] = [
         "allNodes",
+        "allowMultipleAllocations",
         "attributes",
+        "bindingConditions",
+        "bindingFailureConditions",
+        "bindsToNode",
         "capacity",
         "consumesCounters",
         "name",
@@ -166,6 +190,7 @@ class V1beta2Device(BaseModel):
         _obj = cls.model_validate(
             {
                 "allNodes": obj.get("allNodes"),
+                "allowMultipleAllocations": obj.get("allowMultipleAllocations"),
                 "attributes": (
                     dict(
                         (_k, V1beta2DeviceAttribute.from_dict(_v))
@@ -174,6 +199,9 @@ class V1beta2Device(BaseModel):
                     if obj.get("attributes") is not None
                     else None
                 ),
+                "bindingConditions": obj.get("bindingConditions"),
+                "bindingFailureConditions": obj.get("bindingFailureConditions"),
+                "bindsToNode": obj.get("bindsToNode"),
                 "capacity": (
                     dict(
                         (_k, V1beta2DeviceCapacity.from_dict(_v))

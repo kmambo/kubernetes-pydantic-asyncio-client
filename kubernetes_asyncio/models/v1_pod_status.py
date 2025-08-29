@@ -26,6 +26,9 @@ from typing_extensions import Self
 from kubernetes_asyncio.models.v1_container_status import V1ContainerStatus
 from kubernetes_asyncio.models.v1_host_ip import V1HostIP
 from kubernetes_asyncio.models.v1_pod_condition import V1PodCondition
+from kubernetes_asyncio.models.v1_pod_extended_resource_claim_status import (
+    V1PodExtendedResourceClaimStatus,
+)
 from kubernetes_asyncio.models.v1_pod_ip import V1PodIP
 from kubernetes_asyncio.models.v1_pod_resource_claim_status import (
     V1PodResourceClaimStatus,
@@ -50,6 +53,11 @@ class V1PodStatus(BaseModel):
         default=None,
         description="Statuses for any ephemeral containers that have run in this pod. Each ephemeral container in the pod should have at most one status in this list, and all statuses should be for containers in the pod. However this is not enforced. If a status for a non-existent container is present in the list, or the list has duplicate names, the behavior of various Kubernetes components is not defined and those statuses might be ignored. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status",
         alias="ephemeralContainerStatuses",
+    )
+    extended_resource_claim_status: Optional[V1PodExtendedResourceClaimStatus] = Field(
+        default=None,
+        description="Status of extended resource claim backed by DRA.",
+        alias="extendedResourceClaimStatus",
     )
     host_ip: Optional[StrictStr] = Field(
         default=None,
@@ -121,6 +129,7 @@ class V1PodStatus(BaseModel):
         "conditions",
         "containerStatuses",
         "ephemeralContainerStatuses",
+        "extendedResourceClaimStatus",
         "hostIP",
         "hostIPs",
         "initContainerStatuses",
@@ -195,6 +204,11 @@ class V1PodStatus(BaseModel):
                 if _item_ephemeral_container_statuses:
                     _items.append(_item_ephemeral_container_statuses.to_dict())
             _dict["ephemeralContainerStatuses"] = _items
+        # override the default output from pydantic by calling `to_dict()` of extended_resource_claim_status
+        if self.extended_resource_claim_status:
+            _dict["extendedResourceClaimStatus"] = (
+                self.extended_resource_claim_status.to_dict()
+            )
         # override the default output from pydantic by calling `to_dict()` of each item in host_ips (list)
         _items = []
         if self.host_ips:
@@ -255,6 +269,13 @@ class V1PodStatus(BaseModel):
                         for _item in obj["ephemeralContainerStatuses"]
                     ]
                     if obj.get("ephemeralContainerStatuses") is not None
+                    else None
+                ),
+                "extendedResourceClaimStatus": (
+                    V1PodExtendedResourceClaimStatus.from_dict(
+                        obj["extendedResourceClaimStatus"]
+                    )
+                    if obj.get("extendedResourceClaimStatus") is not None
                     else None
                 ),
                 "hostIP": obj.get("hostIP"),

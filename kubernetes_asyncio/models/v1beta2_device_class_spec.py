@@ -19,7 +19,7 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1beta2_device_class_configuration import (
@@ -37,11 +37,16 @@ class V1beta2DeviceClassSpec(BaseModel):
         default=None,
         description="Config defines configuration parameters that apply to each device that is claimed via this class. Some classses may potentially be satisfied by multiple drivers, so each instance of a vendor configuration applies to exactly one driver.  They are passed to the driver, but are not considered while allocating the claim.",
     )
+    extended_resource_name: Optional[StrictStr] = Field(
+        default=None,
+        description="ExtendedResourceName is the extended resource name for the devices of this class. The devices of this class can be used to satisfy a pod's extended resource requests. It has the same format as the name of a pod's extended resource. It should be unique among all the device classes in a cluster. If two device classes have the same name, then the class created later is picked to satisfy a pod's extended resource requests. If two classes are created at the same time, then the name of the class lexicographically sorted first is picked.  This is an alpha field.",
+        alias="extendedResourceName",
+    )
     selectors: Optional[List[V1beta2DeviceSelector]] = Field(
         default=None,
         description="Each selector must be satisfied by a device which is claimed via this class.",
     )
-    __properties: ClassVar[List[str]] = ["config", "selectors"]
+    __properties: ClassVar[List[str]] = ["config", "extendedResourceName", "selectors"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -115,6 +120,7 @@ class V1beta2DeviceClassSpec(BaseModel):
                     if obj.get("config") is not None
                     else None
                 ),
+                "extendedResourceName": obj.get("extendedResourceName"),
                 "selectors": (
                     [
                         V1beta2DeviceSelector.from_dict(_item)

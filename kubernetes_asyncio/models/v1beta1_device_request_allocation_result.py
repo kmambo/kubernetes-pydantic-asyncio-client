@@ -22,6 +22,7 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing_extensions import Self
 
+from kubernetes_asyncio.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
 from kubernetes_asyncio.models.v1beta1_device_toleration import V1beta1DeviceToleration
 
 
@@ -35,6 +36,21 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
         description="AdminAccess indicates that this device was allocated for administrative access. See the corresponding request field for a definition of mode.  This is an alpha field and requires enabling the DRAAdminAccess feature gate. Admin access is disabled if this field is unset or set to false, otherwise it is enabled.",
         alias="adminAccess",
     )
+    binding_conditions: Optional[List[StrictStr]] = Field(
+        default=None,
+        description="BindingConditions contains a copy of the BindingConditions from the corresponding ResourceSlice at the time of allocation.  This is an alpha field and requires enabling the DRADeviceBindingConditions and DRAResourceClaimDeviceStatus feature gates.",
+        alias="bindingConditions",
+    )
+    binding_failure_conditions: Optional[List[StrictStr]] = Field(
+        default=None,
+        description="BindingFailureConditions contains a copy of the BindingFailureConditions from the corresponding ResourceSlice at the time of allocation.  This is an alpha field and requires enabling the DRADeviceBindingConditions and DRAResourceClaimDeviceStatus feature gates.",
+        alias="bindingFailureConditions",
+    )
+    consumed_capacity: Optional[Dict[str, V1PodSpecOverheadValue]] = Field(
+        default=None,
+        description="ConsumedCapacity tracks the amount of capacity consumed per device as part of the claim request. The consumed amount may differ from the requested amount: it is rounded up to the nearest valid value based on the device’s requestPolicy if applicable (i.e., may not be less than the requested amount).  The total consumed capacity for each device must not exceed the DeviceCapacity's Value.  This field is populated only for devices that allow multiple allocations. All capacity entries are included, even if the consumed amount is zero.",
+        alias="consumedCapacity",
+    )
     device: StrictStr = Field(
         description="Device references one device instance via its name in the driver's resource pool. It must be a DNS label."
     )
@@ -47,16 +63,25 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
     request: StrictStr = Field(
         description="Request is the name of the request in the claim which caused this device to be allocated. If it references a subrequest in the firstAvailable list on a DeviceRequest, this field must include both the name of the main request and the subrequest using the format <main request>/<subrequest>.  Multiple devices may have been allocated per request."
     )
+    share_id: Optional[StrictStr] = Field(
+        default=None,
+        description="ShareID uniquely identifies an individual allocation share of the device, used when the device supports multiple simultaneous allocations. It serves as an additional map key to differentiate concurrent shares of the same device.",
+        alias="shareID",
+    )
     tolerations: Optional[List[V1beta1DeviceToleration]] = Field(
         default=None,
         description="A copy of all tolerations specified in the request at the time when the device got allocated.  The maximum number of tolerations is 16.  This is an alpha field and requires enabling the DRADeviceTaints feature gate.",
     )
     __properties: ClassVar[List[str]] = [
         "adminAccess",
+        "bindingConditions",
+        "bindingFailureConditions",
+        "consumedCapacity",
         "device",
         "driver",
         "pool",
         "request",
+        "shareID",
         "tolerations",
     ]
 
@@ -97,6 +122,15 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each value in consumed_capacity (dict)
+        _field_dict = {}
+        if self.consumed_capacity:
+            for _key_consumed_capacity in self.consumed_capacity:
+                if self.consumed_capacity[_key_consumed_capacity]:
+                    _field_dict[_key_consumed_capacity] = self.consumed_capacity[
+                        _key_consumed_capacity
+                    ].to_dict()
+            _dict["consumedCapacity"] = _field_dict
         # override the default output from pydantic by calling `to_dict()` of each item in tolerations (list)
         _items = []
         if self.tolerations:
@@ -118,10 +152,21 @@ class V1beta1DeviceRequestAllocationResult(BaseModel):
         _obj = cls.model_validate(
             {
                 "adminAccess": obj.get("adminAccess"),
+                "bindingConditions": obj.get("bindingConditions"),
+                "bindingFailureConditions": obj.get("bindingFailureConditions"),
+                "consumedCapacity": (
+                    dict(
+                        (_k, V1PodSpecOverheadValue.from_dict(_v))
+                        for _k, _v in obj["consumedCapacity"].items()
+                    )
+                    if obj.get("consumedCapacity") is not None
+                    else None
+                ),
                 "device": obj.get("device") if obj.get("device") is not None else "",
                 "driver": obj.get("driver") if obj.get("driver") is not None else "",
                 "pool": obj.get("pool") if obj.get("pool") is not None else "",
                 "request": obj.get("request") if obj.get("request") is not None else "",
+                "shareID": obj.get("shareID"),
                 "tolerations": (
                     [
                         V1beta1DeviceToleration.from_dict(_item)

@@ -93,6 +93,9 @@ class TestV1EphemeralContainer(unittest.TestCase):
                         'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 restart_policy = '',
+                restart_policy_rules = [
+                    null
+                    ],
                 security_context = kubernetes_asyncio.models.v1/security_context.v1.SecurityContext(
                     allow_privilege_escalation = True, 
                     app_armor_profile = null, 

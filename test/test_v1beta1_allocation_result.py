@@ -35,6 +35,7 @@ class TestV1beta1AllocationResult(unittest.TestCase):
         model = V1beta1AllocationResult()
         if include_optional:
             return V1beta1AllocationResult(
+                allocation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 devices = kubernetes_asyncio.models.v1beta1/device_allocation_result.v1beta1.DeviceAllocationResult(
                     config = [
                         null

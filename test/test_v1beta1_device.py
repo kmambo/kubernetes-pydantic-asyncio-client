@@ -37,9 +37,17 @@ class TestV1beta1Device(unittest.TestCase):
             return V1beta1Device(
                 basic = kubernetes_asyncio.models.v1beta1/basic_device.v1beta1.BasicDevice(
                     all_nodes = True, 
+                    allow_multiple_allocations = True, 
                     attributes = {
                         'key' : null
                         }, 
+                    binding_conditions = [
+                        ''
+                        ], 
+                    binding_failure_conditions = [
+                        ''
+                        ], 
+                    binds_to_node = True, 
                     capacity = {
                         'key' : null
                         }, 

@@ -82,6 +82,7 @@ class TestV1PodTemplateSpec(unittest.TestCase):
                     host_pid = True, 
                     host_users = True, 
                     hostname = '', 
+                    hostname_override = '', 
                     image_pull_secrets = [
                         null
                         ], 

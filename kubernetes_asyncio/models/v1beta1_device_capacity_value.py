@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1beta1DeviceCapacityValue(BaseModel):
     """
-    Value defines how much of a certain device capacity is available.
+    Value defines how much of a certain capacity that device has.  This field reflects the fixed total capacity and does not change. The consumed amount is tracked separately by scheduler and does not affect this value.
     """  # noqa: E501
 
     __properties: ClassVar[List[str]] = []

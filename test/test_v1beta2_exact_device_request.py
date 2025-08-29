@@ -37,6 +37,10 @@ class TestV1beta2ExactDeviceRequest(unittest.TestCase):
             return V1beta2ExactDeviceRequest(
                 admin_access = True,
                 allocation_mode = '',
+                capacity = kubernetes_asyncio.models.v1beta2/capacity_requirements.v1beta2.CapacityRequirements(
+                    requests = {
+                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        }, ),
                 count = 56,
                 device_class_name = '',
                 selectors = [

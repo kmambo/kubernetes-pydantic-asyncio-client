@@ -138,7 +138,7 @@ class V1JSONSchemaProps(BaseModel):
     )
     x_kubernetes_validations: Optional[List[V1ValidationRule]] = Field(
         default=None,
-        description="x-kubernetes-validations describes a list of validation rules written in the CEL expression language. This field is an alpha-level. Using this field requires the feature gate `CustomResourceValidationExpressions` to be enabled.",
+        description="x-kubernetes-validations describes a list of validation rules written in the CEL expression language.",
         alias="x-kubernetes-validations",
     )
     __properties: ClassVar[List[str]] = [

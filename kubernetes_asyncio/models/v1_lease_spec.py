@@ -36,12 +36,12 @@ class V1LeaseSpec(BaseModel):
     )
     holder_identity: Optional[StrictStr] = Field(
         default=None,
-        description="holderIdentity contains the identity of the holder of a current lease.",
+        description="holderIdentity contains the identity of the holder of a current lease. If Coordinated Leader Election is used, the holder identity must be equal to the elected LeaseCandidate.metadata.name field.",
         alias="holderIdentity",
     )
     lease_duration_seconds: Optional[StrictInt] = Field(
         default=None,
-        description="leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed renewTime.",
+        description="leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measured against the time of last observed renewTime.",
         alias="leaseDurationSeconds",
     )
     lease_transitions: Optional[StrictInt] = Field(
@@ -49,17 +49,28 @@ class V1LeaseSpec(BaseModel):
         description="leaseTransitions is the number of transitions of a lease between holders.",
         alias="leaseTransitions",
     )
+    preferred_holder: Optional[StrictStr] = Field(
+        default=None,
+        description="PreferredHolder signals to a lease holder that the lease has a more optimal holder and should be given up. This field can only be set if Strategy is also set.",
+        alias="preferredHolder",
+    )
     renew_time: Optional[datetime] = Field(
         default=None,
         description="MicroTime is version of Time with microsecond level precision.",
         alias="renewTime",
+    )
+    strategy: Optional[StrictStr] = Field(
+        default=None,
+        description="Strategy indicates the strategy for picking the leader for coordinated leader election. If the field is not specified, there is no active coordination for this lease. (Alpha) Using this field requires the CoordinatedLeaderElection feature gate to be enabled.",
     )
     __properties: ClassVar[List[str]] = [
         "acquireTime",
         "holderIdentity",
         "leaseDurationSeconds",
         "leaseTransitions",
+        "preferredHolder",
         "renewTime",
+        "strategy",
     ]
 
     model_config = ConfigDict(
@@ -116,7 +127,9 @@ class V1LeaseSpec(BaseModel):
                 "holderIdentity": obj.get("holderIdentity"),
                 "leaseDurationSeconds": obj.get("leaseDurationSeconds"),
                 "leaseTransitions": obj.get("leaseTransitions"),
+                "preferredHolder": obj.get("preferredHolder"),
                 "renewTime": obj.get("renewTime"),
+                "strategy": obj.get("strategy"),
             }
         )
         return _obj

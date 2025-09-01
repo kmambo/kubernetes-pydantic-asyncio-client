@@ -35,7 +35,17 @@ class TestV1ResourceAttributes(unittest.TestCase):
         model = V1ResourceAttributes()
         if include_optional:
             return V1ResourceAttributes(
+                field_selector = kubernetes_asyncio.models.v1/field_selector_attributes.v1.FieldSelectorAttributes(
+                    raw_selector = '', 
+                    requirements = [
+                        null
+                        ], ),
                 group = '',
+                label_selector = kubernetes_asyncio.models.v1/label_selector_attributes.v1.LabelSelectorAttributes(
+                    raw_selector = '', 
+                    requirements = [
+                        null
+                        ], ),
                 name = '',
                 namespace = '',
                 resource = '',

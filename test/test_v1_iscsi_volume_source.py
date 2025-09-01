@@ -40,7 +40,7 @@ class TestV1ISCSIVolumeSource(unittest.TestCase):
                 fs_type = '',
                 initiator_name = '',
                 iqn = '',
-                iscsi_interface = '',
+                iscsi_interface = 'default',
                 lun = 56,
                 portals = [
                     ''

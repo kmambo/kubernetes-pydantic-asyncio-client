@@ -37,15 +37,15 @@ class TestV1RBDVolumeSource(unittest.TestCase):
             return V1RBDVolumeSource(
                 fs_type = '',
                 image = '',
-                keyring = '',
+                keyring = '/etc/ceph/keyring',
                 monitors = [
                     ''
                     ],
-                pool = '',
+                pool = 'rbd',
                 read_only = True,
                 secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
-                user = ''
+                user = 'admin'
             )
         else:
             return V1RBDVolumeSource(

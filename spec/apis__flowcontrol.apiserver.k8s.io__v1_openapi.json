@@ -1035,6 +1035,11 @@
           {
             "group": "coordination.k8s.io",
             "kind": "DeleteOptions",
+            "version": "v1alpha1"
+          },
+          {
+            "group": "coordination.k8s.io",
+            "kind": "DeleteOptions",
             "version": "v1beta1"
           },
           {
@@ -1150,7 +1155,7 @@
           {
             "group": "resource.k8s.io",
             "kind": "DeleteOptions",
-            "version": "v1alpha2"
+            "version": "v1alpha3"
           },
           {
             "group": "scheduling.k8s.io",
@@ -1482,11 +1487,6 @@
             "group": "",
             "kind": "Status",
             "version": "v1"
-          },
-          {
-            "group": "resource.k8s.io",
-            "kind": "Status",
-            "version": "v1alpha2"
           }
         ]
       },
@@ -1714,6 +1714,11 @@
           {
             "group": "coordination.k8s.io",
             "kind": "WatchEvent",
+            "version": "v1alpha1"
+          },
+          {
+            "group": "coordination.k8s.io",
+            "kind": "WatchEvent",
             "version": "v1beta1"
           },
           {
@@ -1829,7 +1834,7 @@
           {
             "group": "resource.k8s.io",
             "kind": "WatchEvent",
-            "version": "v1alpha2"
+            "version": "v1alpha3"
           },
           {
             "group": "scheduling.k8s.io",
@@ -1880,7 +1885,7 @@
   },
   "info": {
     "title": "Kubernetes",
-    "version": "1.30.14"
+    "version": "1.31.12"
   },
   "openapi": "3.0.0",
   "paths": {

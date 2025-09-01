@@ -35,11 +35,11 @@ class TestV1AzureDiskVolumeSource(unittest.TestCase):
         model = V1AzureDiskVolumeSource()
         if include_optional:
             return V1AzureDiskVolumeSource(
-                caching_mode = '',
+                caching_mode = 'ReadWrite',
                 disk_name = '',
                 disk_uri = '',
-                fs_type = '',
-                kind = '',
+                fs_type = 'ext4',
+                kind = 'Shared',
                 read_only = True
             )
         else:

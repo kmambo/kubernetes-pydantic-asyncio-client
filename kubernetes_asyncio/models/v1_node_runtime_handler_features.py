@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1NodeRuntimeHandlerFeatures(BaseModel):
     """
-    NodeRuntimeHandlerFeatures is a set of runtime features.
+    NodeRuntimeHandlerFeatures is a set of features implemented by the runtime handler.
     """  # noqa: E501
 
     recursive_read_only_mounts: Optional[StrictBool] = Field(
@@ -33,7 +33,12 @@ class V1NodeRuntimeHandlerFeatures(BaseModel):
         description="RecursiveReadOnlyMounts is set to true if the runtime handler supports RecursiveReadOnlyMounts.",
         alias="recursiveReadOnlyMounts",
     )
-    __properties: ClassVar[List[str]] = ["recursiveReadOnlyMounts"]
+    user_namespaces: Optional[StrictBool] = Field(
+        default=None,
+        description="UserNamespaces is set to true if the runtime handler supports UserNamespaces, including for volumes.",
+        alias="userNamespaces",
+    )
+    __properties: ClassVar[List[str]] = ["recursiveReadOnlyMounts", "userNamespaces"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -84,6 +89,9 @@ class V1NodeRuntimeHandlerFeatures(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate(
-            {"recursiveReadOnlyMounts": obj.get("recursiveReadOnlyMounts")}
+            {
+                "recursiveReadOnlyMounts": obj.get("recursiveReadOnlyMounts"),
+                "userNamespaces": obj.get("userNamespaces"),
+            }
         )
         return _obj

@@ -52,7 +52,7 @@ class V1ISCSIPersistentVolumeSource(BaseModel):
     )
     iqn: StrictStr = Field(description="iqn is Target iSCSI Qualified Name.")
     iscsi_interface: Optional[StrictStr] = Field(
-        default=None,
+        default="default",
         description="iscsiInterface is the interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).",
         alias="iscsiInterface",
     )
@@ -147,7 +147,11 @@ class V1ISCSIPersistentVolumeSource(BaseModel):
                 "fsType": obj.get("fsType"),
                 "initiatorName": obj.get("initiatorName"),
                 "iqn": obj.get("iqn") if obj.get("iqn") is not None else "",
-                "iscsiInterface": obj.get("iscsiInterface"),
+                "iscsiInterface": (
+                    obj.get("iscsiInterface")
+                    if obj.get("iscsiInterface") is not None
+                    else "default"
+                ),
                 "lun": obj.get("lun") if obj.get("lun") is not None else 0,
                 "portals": obj.get("portals"),
                 "readOnly": obj.get("readOnly"),

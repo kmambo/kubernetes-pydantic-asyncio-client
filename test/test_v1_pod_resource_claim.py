@@ -36,9 +36,8 @@ class TestV1PodResourceClaim(unittest.TestCase):
         if include_optional:
             return V1PodResourceClaim(
                 name = '',
-                source = kubernetes_asyncio.models.v1/claim_source.v1.ClaimSource(
-                    resource_claim_name = '', 
-                    resource_claim_template_name = '', )
+                resource_claim_name = '',
+                resource_claim_template_name = ''
             )
         else:
             return V1PodResourceClaim(

@@ -90,6 +90,7 @@ class TestV1Node(unittest.TestCase):
                         ], 
                     config = null, 
                     daemon_endpoints = null, 
+                    features = null, 
                     images = [
                         null
                         ], 

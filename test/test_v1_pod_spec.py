@@ -109,6 +109,7 @@ class TestV1PodSpec(unittest.TestCase):
                     supplemental_groups = [
                         56
                         ], 
+                    supplemental_groups_policy = '', 
                     sysctls = [
                         null
                         ], 

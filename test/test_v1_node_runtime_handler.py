@@ -36,7 +36,8 @@ class TestV1NodeRuntimeHandler(unittest.TestCase):
         if include_optional:
             return V1NodeRuntimeHandler(
                 features = kubernetes_asyncio.models.v1/node_runtime_handler_features.v1.NodeRuntimeHandlerFeatures(
-                    recursive_read_only_mounts = True, ),
+                    recursive_read_only_mounts = True, 
+                    user_namespaces = True, ),
                 name = ''
             )
         else:

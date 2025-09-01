@@ -31,7 +31,11 @@ class V1ResourceClaim(BaseModel):
     name: StrictStr = Field(
         description="Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container."
     )
-    __properties: ClassVar[List[str]] = ["name"]
+    request: Optional[StrictStr] = Field(
+        default=None,
+        description="Request is the name chosen for a request in the referenced claim. If empty, everything from the claim is made available, otherwise only the result of this request.",
+    )
+    __properties: ClassVar[List[str]] = ["name", "request"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,6 +86,9 @@ class V1ResourceClaim(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate(
-            {"name": obj.get("name") if obj.get("name") is not None else ""}
+            {
+                "name": obj.get("name") if obj.get("name") is not None else "",
+                "request": obj.get("request"),
+            }
         )
         return _obj

@@ -35,7 +35,8 @@ class TestV1NodeRuntimeHandlerFeatures(unittest.TestCase):
         model = V1NodeRuntimeHandlerFeatures()
         if include_optional:
             return V1NodeRuntimeHandlerFeatures(
-                recursive_read_only_mounts = True
+                recursive_read_only_mounts = True,
+                user_namespaces = True
             )
         else:
             return V1NodeRuntimeHandlerFeatures(

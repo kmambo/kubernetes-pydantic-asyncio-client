@@ -35,14 +35,14 @@ class TestV1ScaleIOVolumeSource(unittest.TestCase):
         model = V1ScaleIOVolumeSource()
         if include_optional:
             return V1ScaleIOVolumeSource(
-                fs_type = '',
+                fs_type = 'xfs',
                 gateway = '',
                 protection_domain = '',
                 read_only = True,
                 secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 ssl_enabled = True,
-                storage_mode = '',
+                storage_mode = 'ThinProvisioned',
                 storage_pool = '',
                 system = '',
                 volume_name = ''

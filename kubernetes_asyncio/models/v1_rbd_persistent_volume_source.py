@@ -39,14 +39,14 @@ class V1RBDPersistentVolumeSource(BaseModel):
         description="image is the rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
     )
     keyring: Optional[StrictStr] = Field(
-        default=None,
+        default="/etc/ceph/keyring",
         description="keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it",
     )
     monitors: List[StrictStr] = Field(
         description="monitors is a collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it"
     )
     pool: Optional[StrictStr] = Field(
-        default=None,
+        default="rbd",
         description="pool is the rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it",
     )
     read_only: Optional[StrictBool] = Field(
@@ -60,7 +60,7 @@ class V1RBDPersistentVolumeSource(BaseModel):
         alias="secretRef",
     )
     user: Optional[StrictStr] = Field(
-        default=None,
+        default="admin",
         description="user is the rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it",
     )
     __properties: ClassVar[List[str]] = [
@@ -129,16 +129,20 @@ class V1RBDPersistentVolumeSource(BaseModel):
             {
                 "fsType": obj.get("fsType"),
                 "image": obj.get("image") if obj.get("image") is not None else "",
-                "keyring": obj.get("keyring"),
+                "keyring": (
+                    obj.get("keyring")
+                    if obj.get("keyring") is not None
+                    else "/etc/ceph/keyring"
+                ),
                 "monitors": obj.get("monitors"),
-                "pool": obj.get("pool"),
+                "pool": obj.get("pool") if obj.get("pool") is not None else "rbd",
                 "readOnly": obj.get("readOnly"),
                 "secretRef": (
                     V1SecretReference.from_dict(obj["secretRef"])
                     if obj.get("secretRef") is not None
                     else None
                 ),
-                "user": obj.get("user"),
+                "user": obj.get("user") if obj.get("user") is not None else "admin",
             }
         )
         return _obj

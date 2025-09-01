@@ -41,7 +41,8 @@ class V1NodeSystemInfo(BaseModel):
         alias="kernelVersion",
     )
     kube_proxy_version: StrictStr = Field(
-        description="KubeProxy Version reported by the node.", alias="kubeProxyVersion"
+        description="Deprecated: KubeProxy Version reported by the node.",
+        alias="kubeProxyVersion",
     )
     kubelet_version: StrictStr = Field(
         description="Kubelet Version reported by the node.", alias="kubeletVersion"

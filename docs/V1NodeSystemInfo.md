@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **boot_id** | **str** | Boot ID reported by the node. | [default to '']
 **container_runtime_version** | **str** | ContainerRuntime Version reported by the node through runtime remote API (e.g. containerd://1.4.2). | [default to '']
 **kernel_version** | **str** | Kernel Version reported by the node from &#39;uname -r&#39; (e.g. 3.16.0-0.bpo.4-amd64). | [default to '']
-**kube_proxy_version** | **str** | KubeProxy Version reported by the node. | [default to '']
+**kube_proxy_version** | **str** | Deprecated: KubeProxy Version reported by the node. | [default to '']
 **kubelet_version** | **str** | Kubelet Version reported by the node. | [default to '']
 **machine_id** | **str** | MachineID reported by the node. For unique machine identification in the cluster this field is preferred. Learn more from man(5) machine-id: http://man7.org/linux/man-pages/man5/machine-id.5.html | [default to '']
 **operating_system** | **str** | The Operating System reported by the node | [default to '']

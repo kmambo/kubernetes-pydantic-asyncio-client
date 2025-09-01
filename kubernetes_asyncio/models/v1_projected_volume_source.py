@@ -36,7 +36,8 @@ class V1ProjectedVolumeSource(BaseModel):
         alias="defaultMode",
     )
     sources: Optional[List[V1VolumeProjection]] = Field(
-        default=None, description="sources is the list of volume projections"
+        default=None,
+        description="sources is the list of volume projections. Each entry in this list handles one source.",
     )
     __properties: ClassVar[List[str]] = ["defaultMode", "sources"]
 

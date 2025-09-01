@@ -54,6 +54,8 @@ class TestV1NodeStatus(unittest.TestCase):
                     last_known_good = null, ),
                 daemon_endpoints = kubernetes_asyncio.models.v1/node_daemon_endpoints.v1.NodeDaemonEndpoints(
                     kubelet_endpoint = null, ),
+                features = kubernetes_asyncio.models.v1/node_features.v1.NodeFeatures(
+                    supplemental_groups_policy = True, ),
                 images = [
                     null
                     ],

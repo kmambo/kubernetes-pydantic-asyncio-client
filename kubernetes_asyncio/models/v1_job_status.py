@@ -62,7 +62,8 @@ class V1JobStatus(BaseModel):
         alias="failedIndexes",
     )
     ready: Optional[StrictInt] = Field(
-        default=None, description="The number of pods which have a Ready condition."
+        default=None,
+        description="The number of active pods which have a Ready condition and are not terminating (without a deletionTimestamp).",
     )
     start_time: Optional[datetime] = Field(
         default=None,

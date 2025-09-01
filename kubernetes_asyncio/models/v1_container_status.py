@@ -23,8 +23,10 @@ from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, Strict
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1_container_state import V1ContainerState
+from kubernetes_asyncio.models.v1_container_user import V1ContainerUser
 from kubernetes_asyncio.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
 from kubernetes_asyncio.models.v1_resource_requirements import V1ResourceRequirements
+from kubernetes_asyncio.models.v1_resource_status import V1ResourceStatus
 from kubernetes_asyncio.models.v1_volume_mount_status import V1VolumeMountStatus
 
 
@@ -37,6 +39,11 @@ class V1ContainerStatus(BaseModel):
         default=None,
         description="AllocatedResources represents the compute resources allocated for this container by the node. Kubelet sets this value to Container.Resources.Requests upon successful pod admission and after successfully admitting desired pod resize.",
         alias="allocatedResources",
+    )
+    allocated_resources_status: Optional[List[V1ResourceStatus]] = Field(
+        default=None,
+        description="AllocatedResourcesStatus represents the status of various resources allocated for this Pod.",
+        alias="allocatedResourcesStatus",
     )
     container_id: Optional[StrictStr] = Field(
         default=None,
@@ -77,11 +84,16 @@ class V1ContainerStatus(BaseModel):
         default=None,
         description="State holds details about the container's current condition.",
     )
+    user: Optional[V1ContainerUser] = Field(
+        default=None,
+        description="User represents user identity information initially attached to the first process of the container",
+    )
     volume_mounts: Optional[List[V1VolumeMountStatus]] = Field(
         default=None, description="Status of volume mounts.", alias="volumeMounts"
     )
     __properties: ClassVar[List[str]] = [
         "allocatedResources",
+        "allocatedResourcesStatus",
         "containerID",
         "image",
         "imageID",
@@ -92,6 +104,7 @@ class V1ContainerStatus(BaseModel):
         "restartCount",
         "started",
         "state",
+        "user",
         "volumeMounts",
     ]
 
@@ -141,6 +154,13 @@ class V1ContainerStatus(BaseModel):
                         _key_allocated_resources
                     ].to_dict()
             _dict["allocatedResources"] = _field_dict
+        # override the default output from pydantic by calling `to_dict()` of each item in allocated_resources_status (list)
+        _items = []
+        if self.allocated_resources_status:
+            for _item_allocated_resources_status in self.allocated_resources_status:
+                if _item_allocated_resources_status:
+                    _items.append(_item_allocated_resources_status.to_dict())
+            _dict["allocatedResourcesStatus"] = _items
         # override the default output from pydantic by calling `to_dict()` of last_state
         if self.last_state:
             _dict["lastState"] = self.last_state.to_dict()
@@ -150,6 +170,9 @@ class V1ContainerStatus(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of state
         if self.state:
             _dict["state"] = self.state.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of user
+        if self.user:
+            _dict["user"] = self.user.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in volume_mounts (list)
         _items = []
         if self.volume_mounts:
@@ -178,6 +201,14 @@ class V1ContainerStatus(BaseModel):
                     if obj.get("allocatedResources") is not None
                     else None
                 ),
+                "allocatedResourcesStatus": (
+                    [
+                        V1ResourceStatus.from_dict(_item)
+                        for _item in obj["allocatedResourcesStatus"]
+                    ]
+                    if obj.get("allocatedResourcesStatus") is not None
+                    else None
+                ),
                 "containerID": obj.get("containerID"),
                 "image": obj.get("image") if obj.get("image") is not None else "",
                 "imageID": obj.get("imageID") if obj.get("imageID") is not None else "",
@@ -202,6 +233,11 @@ class V1ContainerStatus(BaseModel):
                 "state": (
                     V1ContainerState.from_dict(obj["state"])
                     if obj.get("state") is not None
+                    else None
+                ),
+                "user": (
+                    V1ContainerUser.from_dict(obj["user"])
+                    if obj.get("user") is not None
                     else None
                 ),
                 "volumeMounts": (

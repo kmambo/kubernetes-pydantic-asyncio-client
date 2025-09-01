@@ -22,21 +22,30 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing_extensions import Self
 
-from kubernetes_asyncio.models.v1_claim_source import V1ClaimSource
-
 
 class V1PodResourceClaim(BaseModel):
     """
-    PodResourceClaim references exactly one ResourceClaim through a ClaimSource. It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.
+    PodResourceClaim references exactly one ResourceClaim, either directly or by naming a ResourceClaimTemplate which is then turned into a ResourceClaim for the pod.  It adds a name to it that uniquely identifies the ResourceClaim inside the Pod. Containers that need access to the ResourceClaim reference it with this name.
     """  # noqa: E501
 
     name: StrictStr = Field(
         description="Name uniquely identifies this resource claim inside the pod. This must be a DNS_LABEL."
     )
-    source: Optional[V1ClaimSource] = Field(
-        default=None, description="Source describes where to find the ResourceClaim."
+    resource_claim_name: Optional[StrictStr] = Field(
+        default=None,
+        description="ResourceClaimName is the name of a ResourceClaim object in the same namespace as this pod.  Exactly one of ResourceClaimName and ResourceClaimTemplateName must be set.",
+        alias="resourceClaimName",
     )
-    __properties: ClassVar[List[str]] = ["name", "source"]
+    resource_claim_template_name: Optional[StrictStr] = Field(
+        default=None,
+        description="ResourceClaimTemplateName is the name of a ResourceClaimTemplate object in the same namespace as this pod.  The template will be used to create a new ResourceClaim, which will be bound to this pod. When this pod is deleted, the ResourceClaim will also be deleted. The pod name and resource name, along with a generated component, will be used to form a unique name for the ResourceClaim, which will be recorded in pod.status.resourceClaimStatuses.  This field is immutable and no changes will be made to the corresponding ResourceClaim by the control plane after creating the ResourceClaim.  Exactly one of ResourceClaimName and ResourceClaimTemplateName must be set.",
+        alias="resourceClaimTemplateName",
+    )
+    __properties: ClassVar[List[str]] = [
+        "name",
+        "resourceClaimName",
+        "resourceClaimTemplateName",
+    ]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -75,9 +84,6 @@ class V1PodResourceClaim(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of source
-        if self.source:
-            _dict["source"] = self.source.to_dict()
         return _dict
 
     @classmethod
@@ -92,11 +98,8 @@ class V1PodResourceClaim(BaseModel):
         _obj = cls.model_validate(
             {
                 "name": obj.get("name") if obj.get("name") is not None else "",
-                "source": (
-                    V1ClaimSource.from_dict(obj["source"])
-                    if obj.get("source") is not None
-                    else None
-                ),
+                "resourceClaimName": obj.get("resourceClaimName"),
+                "resourceClaimTemplateName": obj.get("resourceClaimTemplateName"),
             }
         )
         return _obj

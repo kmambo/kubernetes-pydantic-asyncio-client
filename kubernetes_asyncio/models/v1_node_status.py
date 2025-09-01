@@ -28,6 +28,7 @@ from kubernetes_asyncio.models.v1_node_address import V1NodeAddress
 from kubernetes_asyncio.models.v1_node_condition import V1NodeCondition
 from kubernetes_asyncio.models.v1_node_config_status import V1NodeConfigStatus
 from kubernetes_asyncio.models.v1_node_daemon_endpoints import V1NodeDaemonEndpoints
+from kubernetes_asyncio.models.v1_node_features import V1NodeFeatures
 from kubernetes_asyncio.models.v1_node_runtime_handler import V1NodeRuntimeHandler
 from kubernetes_asyncio.models.v1_node_system_info import V1NodeSystemInfo
 from kubernetes_asyncio.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
@@ -48,7 +49,7 @@ class V1NodeStatus(BaseModel):
     )
     capacity: Optional[Dict[str, V1PodSpecOverheadValue]] = Field(
         default=None,
-        description="Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity",
+        description="Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/reference/node/node-status/#capacity",
     )
     conditions: Optional[List[V1NodeCondition]] = Field(
         default=None,
@@ -62,6 +63,10 @@ class V1NodeStatus(BaseModel):
         default=None,
         description="Endpoints of daemons running on the Node.",
         alias="daemonEndpoints",
+    )
+    features: Optional[V1NodeFeatures] = Field(
+        default=None,
+        description="Features describes the set of features implemented by the CRI implementation.",
     )
     images: Optional[List[V1ContainerImage]] = Field(
         default=None, description="List of container images on this node"
@@ -97,6 +102,7 @@ class V1NodeStatus(BaseModel):
         "conditions",
         "config",
         "daemonEndpoints",
+        "features",
         "images",
         "nodeInfo",
         "phase",
@@ -178,6 +184,9 @@ class V1NodeStatus(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of daemon_endpoints
         if self.daemon_endpoints:
             _dict["daemonEndpoints"] = self.daemon_endpoints.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of features
+        if self.features:
+            _dict["features"] = self.features.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in images (list)
         _items = []
         if self.images:
@@ -249,6 +258,11 @@ class V1NodeStatus(BaseModel):
                 "daemonEndpoints": (
                     V1NodeDaemonEndpoints.from_dict(obj["daemonEndpoints"])
                     if obj.get("daemonEndpoints") is not None
+                    else None
+                ),
+                "features": (
+                    V1NodeFeatures.from_dict(obj["features"])
+                    if obj.get("features") is not None
                     else None
                 ),
                 "images": (

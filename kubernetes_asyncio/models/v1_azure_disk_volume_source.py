@@ -29,7 +29,7 @@ class V1AzureDiskVolumeSource(BaseModel):
     """  # noqa: E501
 
     caching_mode: Optional[StrictStr] = Field(
-        default=None,
+        default="ReadWrite",
         description="cachingMode is the Host Caching mode: None, Read Only, Read Write.",
         alias="cachingMode",
     )
@@ -42,16 +42,16 @@ class V1AzureDiskVolumeSource(BaseModel):
         alias="diskURI",
     )
     fs_type: Optional[StrictStr] = Field(
-        default=None,
+        default="ext4",
         description='fsType is Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.',
         alias="fsType",
     )
     kind: Optional[StrictStr] = Field(
-        default=None,
+        default="Shared",
         description="kind expected values are Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared",
     )
     read_only: Optional[StrictBool] = Field(
-        default=None,
+        default=False,
         description="readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.",
         alias="readOnly",
     )
@@ -114,14 +114,22 @@ class V1AzureDiskVolumeSource(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "cachingMode": obj.get("cachingMode"),
+                "cachingMode": (
+                    obj.get("cachingMode")
+                    if obj.get("cachingMode") is not None
+                    else "ReadWrite"
+                ),
                 "diskName": (
                     obj.get("diskName") if obj.get("diskName") is not None else ""
                 ),
                 "diskURI": obj.get("diskURI") if obj.get("diskURI") is not None else "",
-                "fsType": obj.get("fsType"),
-                "kind": obj.get("kind"),
-                "readOnly": obj.get("readOnly"),
+                "fsType": (
+                    obj.get("fsType") if obj.get("fsType") is not None else "ext4"
+                ),
+                "kind": obj.get("kind") if obj.get("kind") is not None else "Shared",
+                "readOnly": (
+                    obj.get("readOnly") if obj.get("readOnly") is not None else False
+                ),
             }
         )
         return _obj

@@ -47,7 +47,9 @@ class TestV1SubjectAccessReviewSpec(unittest.TestCase):
                     path = '', 
                     verb = '', ),
                 resource_attributes = kubernetes_asyncio.models.v1/resource_attributes.v1.ResourceAttributes(
+                    field_selector = null, 
                     group = '', 
+                    label_selector = null, 
                     name = '', 
                     namespace = '', 
                     resource = '', 

@@ -41,11 +41,11 @@ class TestV1Volume(unittest.TestCase):
                     read_only = True, 
                     volume_id = '', ),
                 azure_disk = kubernetes_asyncio.models.v1/azure_disk_volume_source.v1.AzureDiskVolumeSource(
-                    caching_mode = '', 
+                    caching_mode = 'ReadWrite', 
                     disk_name = '', 
                     disk_uri = '', 
-                    fs_type = '', 
-                    kind = '', 
+                    fs_type = 'ext4', 
+                    kind = 'Shared', 
                     read_only = True, ),
                 azure_file = kubernetes_asyncio.models.v1/azure_file_volume_source.v1.AzureFileVolumeSource(
                     read_only = True, 
@@ -127,13 +127,16 @@ class TestV1Volume(unittest.TestCase):
                 host_path = kubernetes_asyncio.models.v1/host_path_volume_source.v1.HostPathVolumeSource(
                     path = '', 
                     type = '', ),
+                image = kubernetes_asyncio.models.v1/image_volume_source.v1.ImageVolumeSource(
+                    pull_policy = '', 
+                    reference = '', ),
                 iscsi = kubernetes_asyncio.models.v1/iscsi_volume_source.v1.ISCSIVolumeSource(
                     chap_auth_discovery = True, 
                     chap_auth_session = True, 
                     fs_type = '', 
                     initiator_name = '', 
                     iqn = '', 
-                    iscsi_interface = '', 
+                    iscsi_interface = 'default', 
                     lun = 56, 
                     portals = [
                         ''
@@ -171,22 +174,22 @@ class TestV1Volume(unittest.TestCase):
                 rbd = kubernetes_asyncio.models.v1/rbd_volume_source.v1.RBDVolumeSource(
                     fs_type = '', 
                     image = '', 
-                    keyring = '', 
+                    keyring = '/etc/ceph/keyring', 
                     monitors = [
                         ''
                         ], 
-                    pool = '', 
+                    pool = 'rbd', 
                     read_only = True, 
                     secret_ref = null, 
-                    user = '', ),
+                    user = 'admin', ),
                 scale_io = kubernetes_asyncio.models.v1/scale_io_volume_source.v1.ScaleIOVolumeSource(
-                    fs_type = '', 
+                    fs_type = 'xfs', 
                     gateway = '', 
                     protection_domain = '', 
                     read_only = True, 
                     secret_ref = null, 
                     ssl_enabled = True, 
-                    storage_mode = '', 
+                    storage_mode = 'ThinProvisioned', 
                     storage_pool = '', 
                     system = '', 
                     volume_name = '', ),

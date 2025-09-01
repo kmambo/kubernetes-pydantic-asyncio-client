@@ -54,6 +54,7 @@ class TestV1PodSecurityContext(unittest.TestCase):
                 supplemental_groups = [
                     56
                     ],
+                supplemental_groups_policy = '',
                 sysctls = [
                     null
                     ],

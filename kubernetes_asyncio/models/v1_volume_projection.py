@@ -35,7 +35,7 @@ from kubernetes_asyncio.models.v1_service_account_token_projection import (
 
 class V1VolumeProjection(BaseModel):
     """
-    Projection that may be projected along with other supported volume types
+    Projection that may be projected along with other supported volume types. Exactly one of these fields must be set.
     """  # noqa: E501
 
     cluster_trust_bundle: Optional[V1ClusterTrustBundleProjection] = Field(

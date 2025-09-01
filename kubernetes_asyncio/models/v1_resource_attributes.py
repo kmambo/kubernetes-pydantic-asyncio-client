@@ -22,15 +22,32 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing_extensions import Self
 
+from kubernetes_asyncio.models.v1_field_selector_attributes import (
+    V1FieldSelectorAttributes,
+)
+from kubernetes_asyncio.models.v1_label_selector_attributes import (
+    V1LabelSelectorAttributes,
+)
+
 
 class V1ResourceAttributes(BaseModel):
     """
     ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface
     """  # noqa: E501
 
+    field_selector: Optional[V1FieldSelectorAttributes] = Field(
+        default=None,
+        description="fieldSelector describes the limitation on access based on field.  It can only limit access, not broaden it.  This field  is alpha-level. To use this field, you must enable the `AuthorizeWithSelectors` feature gate (disabled by default).",
+        alias="fieldSelector",
+    )
     group: Optional[StrictStr] = Field(
         default=None,
         description='Group is the API Group of the Resource.  "*" means all.',
+    )
+    label_selector: Optional[V1LabelSelectorAttributes] = Field(
+        default=None,
+        description="labelSelector describes the limitation on access based on labels.  It can only limit access, not broaden it.  This field  is alpha-level. To use this field, you must enable the `AuthorizeWithSelectors` feature gate (disabled by default).",
+        alias="labelSelector",
     )
     name: Optional[StrictStr] = Field(
         default=None,
@@ -57,7 +74,9 @@ class V1ResourceAttributes(BaseModel):
         description='Version is the API Version of the Resource.  "*" means all.',
     )
     __properties: ClassVar[List[str]] = [
+        "fieldSelector",
         "group",
+        "labelSelector",
         "name",
         "namespace",
         "resource",
@@ -103,6 +122,12 @@ class V1ResourceAttributes(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of field_selector
+        if self.field_selector:
+            _dict["fieldSelector"] = self.field_selector.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of label_selector
+        if self.label_selector:
+            _dict["labelSelector"] = self.label_selector.to_dict()
         return _dict
 
     @classmethod
@@ -116,7 +141,17 @@ class V1ResourceAttributes(BaseModel):
 
         _obj = cls.model_validate(
             {
+                "fieldSelector": (
+                    V1FieldSelectorAttributes.from_dict(obj["fieldSelector"])
+                    if obj.get("fieldSelector") is not None
+                    else None
+                ),
                 "group": obj.get("group"),
+                "labelSelector": (
+                    V1LabelSelectorAttributes.from_dict(obj["labelSelector"])
+                    if obj.get("labelSelector") is not None
+                    else None
+                ),
                 "name": obj.get("name"),
                 "namespace": obj.get("namespace"),
                 "resource": obj.get("resource"),

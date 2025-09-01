@@ -31,7 +31,7 @@ class V1ScaleIOVolumeSource(BaseModel):
     """  # noqa: E501
 
     fs_type: Optional[StrictStr] = Field(
-        default=None,
+        default="xfs",
         description='fsType is the filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".',
         alias="fsType",
     )
@@ -58,7 +58,7 @@ class V1ScaleIOVolumeSource(BaseModel):
         alias="sslEnabled",
     )
     storage_mode: Optional[StrictStr] = Field(
-        default=None,
+        default="ThinProvisioned",
         description="storageMode indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.",
         alias="storageMode",
     )
@@ -141,7 +141,7 @@ class V1ScaleIOVolumeSource(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "fsType": obj.get("fsType"),
+                "fsType": obj.get("fsType") if obj.get("fsType") is not None else "xfs",
                 "gateway": obj.get("gateway") if obj.get("gateway") is not None else "",
                 "protectionDomain": obj.get("protectionDomain"),
                 "readOnly": obj.get("readOnly"),
@@ -151,7 +151,11 @@ class V1ScaleIOVolumeSource(BaseModel):
                     else None
                 ),
                 "sslEnabled": obj.get("sslEnabled"),
-                "storageMode": obj.get("storageMode"),
+                "storageMode": (
+                    obj.get("storageMode")
+                    if obj.get("storageMode") is not None
+                    else "ThinProvisioned"
+                ),
                 "storagePool": obj.get("storagePool"),
                 "system": obj.get("system") if obj.get("system") is not None else "",
                 "volumeName": obj.get("volumeName"),

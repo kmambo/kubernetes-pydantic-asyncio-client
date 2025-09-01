@@ -44,11 +44,11 @@ class TestV1PersistentVolumeSpec(unittest.TestCase):
                     read_only = True, 
                     volume_id = '', ),
                 azure_disk = kubernetes_asyncio.models.v1/azure_disk_volume_source.v1.AzureDiskVolumeSource(
-                    caching_mode = '', 
+                    caching_mode = 'ReadWrite', 
                     disk_name = '', 
                     disk_uri = '', 
-                    fs_type = '', 
-                    kind = '', 
+                    fs_type = 'ext4', 
+                    kind = 'Shared', 
                     read_only = True, ),
                 azure_file = kubernetes_asyncio.models.v1/azure_file_persistent_volume_source.v1.AzureFilePersistentVolumeSource(
                     read_only = True, 
@@ -133,7 +133,7 @@ class TestV1PersistentVolumeSpec(unittest.TestCase):
                     fs_type = '', 
                     initiator_name = '', 
                     iqn = '', 
-                    iscsi_interface = '', 
+                    iscsi_interface = 'default', 
                     lun = 56, 
                     portals = [
                         ''
@@ -171,22 +171,22 @@ class TestV1PersistentVolumeSpec(unittest.TestCase):
                 rbd = kubernetes_asyncio.models.v1/rbd_persistent_volume_source.v1.RBDPersistentVolumeSource(
                     fs_type = '', 
                     image = '', 
-                    keyring = '', 
+                    keyring = '/etc/ceph/keyring', 
                     monitors = [
                         ''
                         ], 
-                    pool = '', 
+                    pool = 'rbd', 
                     read_only = True, 
                     secret_ref = null, 
-                    user = '', ),
+                    user = 'admin', ),
                 scale_io = kubernetes_asyncio.models.v1/scale_io_persistent_volume_source.v1.ScaleIOPersistentVolumeSource(
-                    fs_type = '', 
+                    fs_type = 'xfs', 
                     gateway = '', 
                     protection_domain = '', 
                     read_only = True, 
                     secret_ref = null, 
                     ssl_enabled = True, 
-                    storage_mode = '', 
+                    storage_mode = 'ThinProvisioned', 
                     storage_pool = '', 
                     system = '', 
                     volume_name = '', ),

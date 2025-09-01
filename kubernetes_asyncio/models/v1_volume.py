@@ -51,6 +51,7 @@ from kubernetes_asyncio.models.v1_gce_persistent_disk_volume_source import (
 from kubernetes_asyncio.models.v1_git_repo_volume_source import V1GitRepoVolumeSource
 from kubernetes_asyncio.models.v1_glusterfs_volume_source import V1GlusterfsVolumeSource
 from kubernetes_asyncio.models.v1_host_path_volume_source import V1HostPathVolumeSource
+from kubernetes_asyncio.models.v1_image_volume_source import V1ImageVolumeSource
 from kubernetes_asyncio.models.v1_iscsi_volume_source import V1ISCSIVolumeSource
 from kubernetes_asyncio.models.v1_nfs_volume_source import V1NFSVolumeSource
 from kubernetes_asyncio.models.v1_persistent_volume_claim_volume_source import (
@@ -156,6 +157,10 @@ class V1Volume(BaseModel):
         description="hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath",
         alias="hostPath",
     )
+    image: Optional[V1ImageVolumeSource] = Field(
+        default=None,
+        description="image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath). The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.",
+    )
     iscsi: Optional[V1ISCSIVolumeSource] = Field(
         default=None,
         description="iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md",
@@ -230,6 +235,7 @@ class V1Volume(BaseModel):
         "gitRepo",
         "glusterfs",
         "hostPath",
+        "image",
         "iscsi",
         "name",
         "nfs",
@@ -333,6 +339,9 @@ class V1Volume(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of host_path
         if self.host_path:
             _dict["hostPath"] = self.host_path.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of image
+        if self.image:
+            _dict["image"] = self.image.to_dict()
         # override the default output from pydantic by calling `to_dict()` of iscsi
         if self.iscsi:
             _dict["iscsi"] = self.iscsi.to_dict()
@@ -467,6 +476,11 @@ class V1Volume(BaseModel):
                 "hostPath": (
                     V1HostPathVolumeSource.from_dict(obj["hostPath"])
                     if obj.get("hostPath") is not None
+                    else None
+                ),
+                "image": (
+                    V1ImageVolumeSource.from_dict(obj["image"])
+                    if obj.get("image") is not None
                     else None
                 ),
                 "iscsi": (

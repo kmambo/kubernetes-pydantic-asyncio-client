@@ -46,13 +46,13 @@ class V1StatefulSetSpec(BaseModel):
     )
     ordinals: Optional[V1StatefulSetOrdinals] = Field(
         default=None,
-        description='ordinals controls the numbering of replica indices in a StatefulSet. The default ordinals behavior assigns a "0" index to the first replica and increments the index by one for each additional replica requested. Using the ordinals field requires the StatefulSetStartOrdinal feature gate to be enabled, which is beta.',
+        description='ordinals controls the numbering of replica indices in a StatefulSet. The default ordinals behavior assigns a "0" index to the first replica and increments the index by one for each additional replica requested.',
     )
     persistent_volume_claim_retention_policy: Optional[
         V1StatefulSetPersistentVolumeClaimRetentionPolicy
     ] = Field(
         default=None,
-        description="persistentVolumeClaimRetentionPolicy describes the lifecycle of persistent volume claims created from volumeClaimTemplates. By default, all persistent volume claims are created as needed and retained until manually deleted. This policy allows the lifecycle to be altered, for example by deleting persistent volume claims when their stateful set is deleted, or when their pod is scaled down. This requires the StatefulSetAutoDeletePVC feature gate to be enabled, which is alpha.  +optional",
+        description="persistentVolumeClaimRetentionPolicy describes the lifecycle of persistent volume claims created from volumeClaimTemplates. By default, all persistent volume claims are created as needed and retained until manually deleted. This policy allows the lifecycle to be altered, for example by deleting persistent volume claims when their stateful set is deleted, or when their pod is scaled down. This requires the StatefulSetAutoDeletePVC feature gate to be enabled, which is beta.",
         alias="persistentVolumeClaimRetentionPolicy",
     )
     pod_management_policy: Optional[StrictStr] = Field(

@@ -37,16 +37,16 @@ class TestV1RBDPersistentVolumeSource(unittest.TestCase):
             return V1RBDPersistentVolumeSource(
                 fs_type = '',
                 image = '',
-                keyring = '',
+                keyring = '/etc/ceph/keyring',
                 monitors = [
                     ''
                     ],
-                pool = '',
+                pool = 'rbd',
                 read_only = True,
                 secret_ref = kubernetes_asyncio.models.v1/secret_reference.v1.SecretReference(
                     name = '', 
                     namespace = '', ),
-                user = ''
+                user = 'admin'
             )
         else:
             return V1RBDPersistentVolumeSource(

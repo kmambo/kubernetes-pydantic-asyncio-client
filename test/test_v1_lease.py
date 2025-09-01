@@ -68,7 +68,9 @@ class TestV1Lease(unittest.TestCase):
                     holder_identity = '', 
                     lease_duration_seconds = 56, 
                     lease_transitions = 56, 
-                    renew_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
+                    preferred_holder = '', 
+                    renew_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                    strategy = '', )
             )
         else:
             return V1Lease(

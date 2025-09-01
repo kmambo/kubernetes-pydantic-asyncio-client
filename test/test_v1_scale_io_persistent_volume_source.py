@@ -35,7 +35,7 @@ class TestV1ScaleIOPersistentVolumeSource(unittest.TestCase):
         model = V1ScaleIOPersistentVolumeSource()
         if include_optional:
             return V1ScaleIOPersistentVolumeSource(
-                fs_type = '',
+                fs_type = 'xfs',
                 gateway = '',
                 protection_domain = '',
                 read_only = True,
@@ -43,7 +43,7 @@ class TestV1ScaleIOPersistentVolumeSource(unittest.TestCase):
                     name = '', 
                     namespace = '', ),
                 ssl_enabled = True,
-                storage_mode = '',
+                storage_mode = 'ThinProvisioned',
                 storage_pool = '',
                 system = '',
                 volume_name = ''

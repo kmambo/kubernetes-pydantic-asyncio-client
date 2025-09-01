@@ -35,7 +35,8 @@ class TestV1ResourceClaim(unittest.TestCase):
         model = V1ResourceClaim()
         if include_optional:
             return V1ResourceClaim(
-                name = ''
+                name = '',
+                request = ''
             )
         else:
             return V1ResourceClaim(

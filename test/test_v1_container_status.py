@@ -38,6 +38,9 @@ class TestV1ContainerStatus(unittest.TestCase):
                 allocated_resources = {
                     'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
+                allocated_resources_status = [
+                    null
+                    ],
                 container_id = '',
                 image = '',
                 image_id = '',
@@ -63,6 +66,8 @@ class TestV1ContainerStatus(unittest.TestCase):
                     running = null, 
                     terminated = null, 
                     waiting = null, ),
+                user = kubernetes_asyncio.models.v1/container_user.v1.ContainerUser(
+                    linux = null, ),
                 volume_mounts = [
                     null
                     ]

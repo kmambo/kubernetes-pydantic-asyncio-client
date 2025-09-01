@@ -35,12 +35,24 @@ class TestV1alpha3BasicDevice(unittest.TestCase):
         model = V1alpha3BasicDevice()
         if include_optional:
             return V1alpha3BasicDevice(
+                all_nodes = True,
                 attributes = {
                     'key' : null
                     },
                 capacity = {
                     'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
-                    }
+                    },
+                consumes_counters = [
+                    null
+                    ],
+                node_name = '',
+                node_selector = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
+                    node_selector_terms = [
+                        null
+                        ], ),
+                taints = [
+                    null
+                    ]
             )
         else:
             return V1alpha3BasicDevice(

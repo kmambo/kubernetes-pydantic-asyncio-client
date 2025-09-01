@@ -652,6 +652,11 @@
             "version": "v1beta1"
           },
           {
+            "group": "resource.k8s.io",
+            "kind": "DeleteOptions",
+            "version": "v1beta2"
+          },
+          {
             "group": "scheduling.k8s.io",
             "kind": "DeleteOptions",
             "version": "v1"
@@ -1336,6 +1341,11 @@
             "version": "v1beta1"
           },
           {
+            "group": "resource.k8s.io",
+            "kind": "WatchEvent",
+            "version": "v1beta2"
+          },
+          {
             "group": "scheduling.k8s.io",
             "kind": "WatchEvent",
             "version": "v1"
@@ -1384,7 +1394,7 @@
   },
   "info": {
     "title": "Kubernetes",
-    "version": "1.32.8"
+    "version": "1.33.4"
   },
   "openapi": "3.0.0",
   "paths": {

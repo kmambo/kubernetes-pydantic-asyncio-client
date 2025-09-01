@@ -32,7 +32,7 @@ class V1DeploymentStatus(BaseModel):
 
     available_replicas: Optional[StrictInt] = Field(
         default=None,
-        description="Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.",
+        description="Total number of available non-terminating pods (ready for at least minReadySeconds) targeted by this deployment.",
         alias="availableReplicas",
     )
     collision_count: Optional[StrictInt] = Field(
@@ -51,12 +51,17 @@ class V1DeploymentStatus(BaseModel):
     )
     ready_replicas: Optional[StrictInt] = Field(
         default=None,
-        description="readyReplicas is the number of pods targeted by this Deployment with a Ready Condition.",
+        description="Total number of non-terminating pods targeted by this Deployment with a Ready Condition.",
         alias="readyReplicas",
     )
     replicas: Optional[StrictInt] = Field(
         default=None,
-        description="Total number of non-terminated pods targeted by this deployment (their labels match the selector).",
+        description="Total number of non-terminating pods targeted by this deployment (their labels match the selector).",
+    )
+    terminating_replicas: Optional[StrictInt] = Field(
+        default=None,
+        description="Total number of terminating pods targeted by this deployment. Terminating pods have a non-null .metadata.deletionTimestamp and have not yet reached the Failed or Succeeded .status.phase.  This is an alpha field. Enable DeploymentReplicaSetTerminatingReplicas to be able to use this field.",
+        alias="terminatingReplicas",
     )
     unavailable_replicas: Optional[StrictInt] = Field(
         default=None,
@@ -65,7 +70,7 @@ class V1DeploymentStatus(BaseModel):
     )
     updated_replicas: Optional[StrictInt] = Field(
         default=None,
-        description="Total number of non-terminated pods targeted by this deployment that have the desired template spec.",
+        description="Total number of non-terminating pods targeted by this deployment that have the desired template spec.",
         alias="updatedReplicas",
     )
     __properties: ClassVar[List[str]] = [
@@ -75,6 +80,7 @@ class V1DeploymentStatus(BaseModel):
         "observedGeneration",
         "readyReplicas",
         "replicas",
+        "terminatingReplicas",
         "unavailableReplicas",
         "updatedReplicas",
     ]
@@ -149,6 +155,7 @@ class V1DeploymentStatus(BaseModel):
                 "observedGeneration": obj.get("observedGeneration"),
                 "readyReplicas": obj.get("readyReplicas"),
                 "replicas": obj.get("replicas"),
+                "terminatingReplicas": obj.get("terminatingReplicas"),
                 "unavailableReplicas": obj.get("unavailableReplicas"),
                 "updatedReplicas": obj.get("updatedReplicas"),
             }

@@ -20,7 +20,7 @@ import re  # noqa: F401
 from datetime import datetime
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing_extensions import Self
 
 
@@ -43,6 +43,11 @@ class V1PodCondition(BaseModel):
         default=None,
         description="Human-readable message indicating details about last transition.",
     )
+    observed_generation: Optional[StrictInt] = Field(
+        default=None,
+        description="If set, this represents the .metadata.generation that the pod condition was set based upon. This is an alpha field. Enable PodObservedGenerationTracking to be able to use this field.",
+        alias="observedGeneration",
+    )
     reason: Optional[StrictStr] = Field(
         default=None,
         description="Unique, one-word, CamelCase reason for the condition's last transition.",
@@ -57,6 +62,7 @@ class V1PodCondition(BaseModel):
         "lastProbeTime",
         "lastTransitionTime",
         "message",
+        "observedGeneration",
         "reason",
         "status",
         "type",
@@ -115,6 +121,7 @@ class V1PodCondition(BaseModel):
                 "lastProbeTime": obj.get("lastProbeTime"),
                 "lastTransitionTime": obj.get("lastTransitionTime"),
                 "message": obj.get("message"),
+                "observedGeneration": obj.get("observedGeneration"),
                 "reason": obj.get("reason"),
                 "status": obj.get("status") if obj.get("status") is not None else "",
                 "type": obj.get("type") if obj.get("type") is not None else "",

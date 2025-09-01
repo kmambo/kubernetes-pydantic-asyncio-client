@@ -28,7 +28,7 @@ from kubernetes_asyncio.models.v1_secret_env_source import V1SecretEnvSource
 
 class V1EnvFromSource(BaseModel):
     """
-    EnvFromSource represents the source of a set of ConfigMaps
+    EnvFromSource represents the source of a set of ConfigMaps or Secrets
     """  # noqa: E501
 
     config_map_ref: Optional[V1ConfigMapEnvSource] = Field(
@@ -36,7 +36,7 @@ class V1EnvFromSource(BaseModel):
     )
     prefix: Optional[StrictStr] = Field(
         default=None,
-        description="An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.",
+        description="Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.",
     )
     secret_ref: Optional[V1SecretEnvSource] = Field(
         default=None, description="The Secret to select from", alias="secretRef"

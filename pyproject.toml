@@ -1,6 +1,6 @@
 [project]
 name = "kubernetes_asyncio_pydantic"
-version = "1.32.8"
+version = "1.33.4"
 description = "Kubernetes client"
 requires-python = ">=3.13,<4.0"
 authors = [

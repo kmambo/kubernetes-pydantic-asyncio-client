@@ -1,13 +1,13 @@
 # V1EnvFromSource
 
-EnvFromSource represents the source of a set of ConfigMaps
+EnvFromSource represents the source of a set of ConfigMaps or Secrets
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **config_map_ref** | [**V1ConfigMapEnvSource**](V1ConfigMapEnvSource.md) | The ConfigMap to select from | [optional] 
-**prefix** | **str** | An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. | [optional] 
+**prefix** | **str** | Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER. | [optional] 
 **secret_ref** | [**V1SecretEnvSource**](V1SecretEnvSource.md) | The Secret to select from | [optional] 
 
 ## Example

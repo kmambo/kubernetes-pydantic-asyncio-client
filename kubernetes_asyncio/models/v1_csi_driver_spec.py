@@ -19,7 +19,7 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1_token_request import V1TokenRequest
@@ -39,6 +39,11 @@ class V1CSIDriverSpec(BaseModel):
         default=None,
         description="fsGroupPolicy defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details.  This field was immutable in Kubernetes < 1.29 and now is mutable.  Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.",
         alias="fsGroupPolicy",
+    )
+    node_allocatable_update_period_seconds: Optional[StrictInt] = Field(
+        default=None,
+        description="nodeAllocatableUpdatePeriodSeconds specifies the interval between periodic updates of the CSINode allocatable capacity for this driver. When set, both periodic updates and updates triggered by capacity-related failures are enabled. If not set, no updates occur (neither periodic nor upon detecting capacity-related failures), and the allocatable.count remains static. The minimum allowed value for this field is 10 seconds.  This is an alpha feature and requires the MutableCSINodeAllocatableCount feature gate to be enabled.  This field is mutable.",
+        alias="nodeAllocatableUpdatePeriodSeconds",
     )
     pod_info_on_mount: Optional[StrictBool] = Field(
         default=None,
@@ -73,6 +78,7 @@ class V1CSIDriverSpec(BaseModel):
     __properties: ClassVar[List[str]] = [
         "attachRequired",
         "fsGroupPolicy",
+        "nodeAllocatableUpdatePeriodSeconds",
         "podInfoOnMount",
         "requiresRepublish",
         "seLinuxMount",
@@ -140,6 +146,9 @@ class V1CSIDriverSpec(BaseModel):
             {
                 "attachRequired": obj.get("attachRequired"),
                 "fsGroupPolicy": obj.get("fsGroupPolicy"),
+                "nodeAllocatableUpdatePeriodSeconds": obj.get(
+                    "nodeAllocatableUpdatePeriodSeconds"
+                ),
                 "podInfoOnMount": obj.get("podInfoOnMount"),
                 "requiresRepublish": obj.get("requiresRepublish"),
                 "seLinuxMount": obj.get("seLinuxMount"),

@@ -53,7 +53,7 @@ class V1alpha2LeaseCandidateSpec(BaseModel):
         alias="renewTime",
     )
     strategy: StrictStr = Field(
-        description="Strategy is the strategy that coordinated leader election will use for picking the leader. If multiple candidates for the same Lease return different strategies, the strategy provided by the candidate with the latest BinaryVersion will be used. If there is still conflict, this is a user error and coordinated leader election will not operate the Lease until resolved. (Alpha) Using this field requires the CoordinatedLeaderElection feature gate to be enabled."
+        description="Strategy is the strategy that coordinated leader election will use for picking the leader. If multiple candidates for the same Lease return different strategies, the strategy provided by the candidate with the latest BinaryVersion will be used. If there is still conflict, this is a user error and coordinated leader election will not operate the Lease until resolved."
     )
     __properties: ClassVar[List[str]] = [
         "binaryVersion",

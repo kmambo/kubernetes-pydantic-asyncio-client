@@ -44,7 +44,8 @@ class TestV1Lifecycle(unittest.TestCase):
                     exec = null, 
                     http_get = null, 
                     sleep = null, 
-                    tcp_socket = null, )
+                    tcp_socket = null, ),
+                stop_signal = ''
             )
         else:
             return V1Lifecycle(

@@ -81,6 +81,7 @@ class TestV1Deployment(unittest.TestCase):
                     observed_generation = 56, 
                     ready_replicas = 56, 
                     replicas = 56, 
+                    terminating_replicas = 56, 
                     unavailable_replicas = 56, 
                     updated_replicas = 56, )
             )

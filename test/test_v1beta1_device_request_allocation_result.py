@@ -39,7 +39,10 @@ class TestV1beta1DeviceRequestAllocationResult(unittest.TestCase):
                 device = '',
                 driver = '',
                 pool = '',
-                request = ''
+                request = '',
+                tolerations = [
+                    null
+                    ]
             )
         else:
             return V1beta1DeviceRequestAllocationResult(

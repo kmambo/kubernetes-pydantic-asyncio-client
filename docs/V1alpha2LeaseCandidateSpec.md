@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **lease_name** | **str** | LeaseName is the name of the lease for which this candidate is contending. This field is immutable. | [default to '']
 **ping_time** | **datetime** | MicroTime is version of Time with microsecond level precision. | [optional] 
 **renew_time** | **datetime** | MicroTime is version of Time with microsecond level precision. | [optional] 
-**strategy** | **str** | Strategy is the strategy that coordinated leader election will use for picking the leader. If multiple candidates for the same Lease return different strategies, the strategy provided by the candidate with the latest BinaryVersion will be used. If there is still conflict, this is a user error and coordinated leader election will not operate the Lease until resolved. (Alpha) Using this field requires the CoordinatedLeaderElection feature gate to be enabled. | 
+**strategy** | **str** | Strategy is the strategy that coordinated leader election will use for picking the leader. If multiple candidates for the same Lease return different strategies, the strategy provided by the candidate with the latest BinaryVersion will be used. If there is still conflict, this is a user error and coordinated leader election will not operate the Lease until resolved. | 
 
 ## Example
 

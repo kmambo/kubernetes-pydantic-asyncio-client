@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1EndpointPort(BaseModel):
     """
-    EndpointPort is a tuple that describes a single port.
+    EndpointPort is a tuple that describes a single port. Deprecated: This API is deprecated in v1.33+.
     """  # noqa: E501
 
     app_protocol: Optional[StrictStr] = Field(

@@ -36,12 +36,21 @@ class TestV1beta1Device(unittest.TestCase):
         if include_optional:
             return V1beta1Device(
                 basic = kubernetes_asyncio.models.v1beta1/basic_device.v1beta1.BasicDevice(
+                    all_nodes = True, 
                     attributes = {
                         'key' : null
                         }, 
                     capacity = {
                         'key' : null
-                        }, ),
+                        }, 
+                    consumes_counters = [
+                        null
+                        ], 
+                    node_name = '', 
+                    node_selector = null, 
+                    taints = [
+                        null
+                        ], ),
                 name = ''
             )
         else:

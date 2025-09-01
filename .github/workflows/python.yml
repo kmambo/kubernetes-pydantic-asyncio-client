@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Test
+name: Python - Test and build
 
 on: [push, pull_request]
 

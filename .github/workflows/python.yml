@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: client Python package
+name: Python - Test and build
 
 on: [push, pull_request]
 
@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.12", "3.13"]
-        poetry-version: ["latest"]
+        python-version: [ "3.13" ]
+        poetry-version: [ "latest" ]
+      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
@@ -21,13 +22,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Setup poetry
-        uses: abatilo/actions-poetry@v3
+        uses: abatilo/actions-poetry@v4
         with:
           poetry-version: ${{ matrix.poetry-version }}
       - name: Setup a local virtual environment (if no poetry.toml file)
         run: |
-            poetry config virtualenvs.create true --local
-            poetry config virtualenvs.in-project true --local
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
       - uses: actions/cache@v3
         name: Define a cache for the virtual environment based on the dependencies lock file
         with:
@@ -35,8 +36,30 @@ jobs:
           key: venv-${{ hashFiles('poetry.lock') }}
       - name: Install the project dependencies
         run: poetry install --no-root
-      - name: Run the automated tests (for example)
-        run: poetry run pytest -v
-      - name: Test with pytest
+      - name: Test with pytest (with coverage)
         run: |
-          poetry run pytest --cov=kubernetes
+          poetry run pytest \
+            --cov=kubernetes_asyncio \
+            --cov-report=xml:coverage-${{ matrix.python-version }}.xml \
+            --cov-report html:htmlcov-${{ matrix.python-version }}
+      - name: Upload pytest test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results-${{ matrix.python-version }}
+          path: |
+            coverage-${{ matrix.python-version }}.xml
+            htmlcov-${{ matrix.python-version }}
+          # Use always() to always run this step to publish test results when there are test failures
+        if: ${{ always() }}
+      - name: Build sdist
+        run: poetry build --clean --format=sdist
+      - name: Upload sdist
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+
+
+
+

@@ -51,8 +51,12 @@ jobs:
             htmlcov-${{ matrix.python-version }}
           # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
-      - name: Build dist
-        run: poetry build
+      - name: Build sdist
+        run: poetry build --clean --format=sdist
+      - name: Upload sdist
+        uses: actions/upload-artifact@v4
+        path: dist/*.tar.gz
+
 
 
 

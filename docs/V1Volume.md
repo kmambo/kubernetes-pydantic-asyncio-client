@@ -1,0 +1,59 @@
+# V1Volume
+
+Volume represents a named volume in a pod that may be accessed by any container in the pod.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**aws_elastic_block_store** | [**V1AWSElasticBlockStoreVolumeSource**](V1AWSElasticBlockStoreVolumeSource.md) | awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore | [optional] 
+**azure_disk** | [**V1AzureDiskVolumeSource**](V1AzureDiskVolumeSource.md) | azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. | [optional] 
+**azure_file** | [**V1AzureFileVolumeSource**](V1AzureFileVolumeSource.md) | azureFile represents an Azure File Service mount on the host and bind mount to the pod. | [optional] 
+**cephfs** | [**V1CephFSVolumeSource**](V1CephFSVolumeSource.md) | cephFS represents a Ceph FS mount on the host that shares a pod&#39;s lifetime | [optional] 
+**cinder** | [**V1CinderVolumeSource**](V1CinderVolumeSource.md) | cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md | [optional] 
+**config_map** | [**V1ConfigMapVolumeSource**](V1ConfigMapVolumeSource.md) | configMap represents a configMap that should populate this volume | [optional] 
+**csi** | [**V1CSIVolumeSource**](V1CSIVolumeSource.md) | csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature). | [optional] 
+**downward_api** | [**V1DownwardAPIVolumeSource**](V1DownwardAPIVolumeSource.md) | downwardAPI represents downward API about the pod that should populate this volume | [optional] 
+**empty_dir** | [**V1EmptyDirVolumeSource**](V1EmptyDirVolumeSource.md) | emptyDir represents a temporary directory that shares a pod&#39;s lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir | [optional] 
+**ephemeral** | [**V1EphemeralVolumeSource**](V1EphemeralVolumeSource.md) | ephemeral represents a volume that is handled by a cluster storage driver. The volume&#39;s lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.  Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity    tracking are needed, c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through    a PersistentVolumeClaim (see EphemeralVolumeSource for more    information on the connection between this volume type    and PersistentVolumeClaim).  Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.  Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.  A pod can use both types of ephemeral volumes and persistent volumes at the same time. | [optional] 
+**fc** | [**V1FCVolumeSource**](V1FCVolumeSource.md) | fc represents a Fibre Channel resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. | [optional] 
+**flex_volume** | [**V1FlexVolumeSource**](V1FlexVolumeSource.md) | flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. | [optional] 
+**flocker** | [**V1FlockerVolumeSource**](V1FlockerVolumeSource.md) | flocker represents a Flocker volume attached to a kubelet&#39;s host machine. This depends on the Flocker control service being running | [optional] 
+**gce_persistent_disk** | [**V1GCEPersistentDiskVolumeSource**](V1GCEPersistentDiskVolumeSource.md) | gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk | [optional] 
+**git_repo** | [**V1GitRepoVolumeSource**](V1GitRepoVolumeSource.md) | gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod&#39;s container. | [optional] 
+**glusterfs** | [**V1GlusterfsVolumeSource**](V1GlusterfsVolumeSource.md) | glusterfs represents a Glusterfs mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md | [optional] 
+**host_path** | [**V1HostPathVolumeSource**](V1HostPathVolumeSource.md) | hostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath | [optional] 
+**iscsi** | [**V1ISCSIVolumeSource**](V1ISCSIVolumeSource.md) | iscsi represents an ISCSI Disk resource that is attached to a kubelet&#39;s host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md | [optional] 
+**name** | **str** | name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [default to '']
+**nfs** | [**V1NFSVolumeSource**](V1NFSVolumeSource.md) | nfs represents an NFS mount on the host that shares a pod&#39;s lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs | [optional] 
+**persistent_volume_claim** | [**V1PersistentVolumeClaimVolumeSource**](V1PersistentVolumeClaimVolumeSource.md) | persistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims | [optional] 
+**photon_persistent_disk** | [**V1PhotonPersistentDiskVolumeSource**](V1PhotonPersistentDiskVolumeSource.md) | photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine | [optional] 
+**portworx_volume** | [**V1PortworxVolumeSource**](V1PortworxVolumeSource.md) | portworxVolume represents a portworx volume attached and mounted on kubelets host machine | [optional] 
+**projected** | [**V1ProjectedVolumeSource**](V1ProjectedVolumeSource.md) | projected items for all in one resources secrets, configmaps, and downward API | [optional] 
+**quobyte** | [**V1QuobyteVolumeSource**](V1QuobyteVolumeSource.md) | quobyte represents a Quobyte mount on the host that shares a pod&#39;s lifetime | [optional] 
+**rbd** | [**V1RBDVolumeSource**](V1RBDVolumeSource.md) | rbd represents a Rados Block Device mount on the host that shares a pod&#39;s lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md | [optional] 
+**scale_io** | [**V1ScaleIOVolumeSource**](V1ScaleIOVolumeSource.md) | scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. | [optional] 
+**secret** | [**V1SecretVolumeSource**](V1SecretVolumeSource.md) | secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret | [optional] 
+**storageos** | [**V1StorageOSVolumeSource**](V1StorageOSVolumeSource.md) | storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes. | [optional] 
+**vsphere_volume** | [**V1VsphereVirtualDiskVolumeSource**](V1VsphereVirtualDiskVolumeSource.md) | vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine | [optional] 
+
+## Example
+
+```python
+from kubernetes_asyncio.models.v1_volume import V1Volume
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of V1Volume from a JSON string
+v1_volume_instance = V1Volume.from_json(json)
+# print the JSON string representation of the object
+print(V1Volume.to_json())
+
+# convert the object into a dict
+v1_volume_dict = v1_volume_instance.to_dict()
+# create an instance of V1Volume from a dict
+v1_volume_from_dict = V1Volume.from_dict(v1_volume_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

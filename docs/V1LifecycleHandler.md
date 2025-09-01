@@ -1,0 +1,33 @@
+# V1LifecycleHandler
+
+LifecycleHandler defines a specific action that should be taken in a lifecycle hook. One and only one of the fields, except TCPSocket must be specified.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**var_exec** | [**V1ExecAction**](V1ExecAction.md) | Exec specifies the action to take. | [optional] 
+**http_get** | [**V1HTTPGetAction**](V1HTTPGetAction.md) | HTTPGet specifies the http request to perform. | [optional] 
+**sleep** | [**V1SleepAction**](V1SleepAction.md) | Sleep represents the duration that the container should sleep before being terminated. | [optional] 
+**tcp_socket** | [**V1TCPSocketAction**](V1TCPSocketAction.md) | Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified. | [optional] 
+
+## Example
+
+```python
+from kubernetes_asyncio.models.v1_lifecycle_handler import V1LifecycleHandler
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of V1LifecycleHandler from a JSON string
+v1_lifecycle_handler_instance = V1LifecycleHandler.from_json(json)
+# print the JSON string representation of the object
+print(V1LifecycleHandler.to_json())
+
+# convert the object into a dict
+v1_lifecycle_handler_dict = v1_lifecycle_handler_instance.to_dict()
+# create an instance of V1LifecycleHandler from a dict
+v1_lifecycle_handler_from_dict = V1LifecycleHandler.from_dict(v1_lifecycle_handler_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

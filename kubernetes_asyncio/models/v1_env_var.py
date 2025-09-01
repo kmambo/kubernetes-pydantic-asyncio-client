@@ -31,7 +31,7 @@ class V1EnvVar(BaseModel):
     """  # noqa: E501
 
     name: StrictStr = Field(
-        description="Name of the environment variable. Must be a C_IDENTIFIER."
+        description="Name of the environment variable. May consist of any printable ASCII characters except '='."
     )
     value: Optional[StrictStr] = Field(
         default=None,

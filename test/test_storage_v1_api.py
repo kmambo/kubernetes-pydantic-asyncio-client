@@ -56,6 +56,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_create_volume_attributes_class(self) -> None:
+        """Test case for create_volume_attributes_class
+
+        """
+        pass
+
     async def test_delete_collection_csi_driver(self) -> None:
         """Test case for delete_collection_csi_driver
 
@@ -86,6 +92,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_delete_collection_volume_attributes_class(self) -> None:
+        """Test case for delete_collection_volume_attributes_class
+
+        """
+        pass
+
     async def test_delete_csi_driver(self) -> None:
         """Test case for delete_csi_driver
 
@@ -112,6 +124,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_delete_volume_attachment(self) -> None:
         """Test case for delete_volume_attachment
+
+        """
+        pass
+
+    async def test_delete_volume_attributes_class(self) -> None:
+        """Test case for delete_volume_attributes_class
 
         """
         pass
@@ -158,6 +176,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_list_volume_attributes_class(self) -> None:
+        """Test case for list_volume_attributes_class
+
+        """
+        pass
+
     async def test_patch_csi_driver(self) -> None:
         """Test case for patch_csi_driver
 
@@ -190,6 +214,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_patch_volume_attachment_status(self) -> None:
         """Test case for patch_volume_attachment_status
+
+        """
+        pass
+
+    async def test_patch_volume_attributes_class(self) -> None:
+        """Test case for patch_volume_attributes_class
 
         """
         pass
@@ -230,6 +260,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_read_volume_attributes_class(self) -> None:
+        """Test case for read_volume_attributes_class
+
+        """
+        pass
+
     async def test_replace_csi_driver(self) -> None:
         """Test case for replace_csi_driver
 
@@ -262,6 +298,12 @@ class TestStorageV1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_replace_volume_attachment_status(self) -> None:
         """Test case for replace_volume_attachment_status
+
+        """
+        pass
+
+    async def test_replace_volume_attributes_class(self) -> None:
+        """Test case for replace_volume_attributes_class
 
         """
         pass

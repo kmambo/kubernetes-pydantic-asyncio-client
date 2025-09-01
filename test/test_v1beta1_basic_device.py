@@ -36,9 +36,17 @@ class TestV1beta1BasicDevice(unittest.TestCase):
         if include_optional:
             return V1beta1BasicDevice(
                 all_nodes = True,
+                allow_multiple_allocations = True,
                 attributes = {
                     'key' : null
                     },
+                binding_conditions = [
+                    ''
+                    ],
+                binding_failure_conditions = [
+                    ''
+                    ],
+                binds_to_node = True,
                 capacity = {
                     'key' : null
                     },

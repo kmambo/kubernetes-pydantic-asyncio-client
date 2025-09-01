@@ -67,6 +67,7 @@ class TestV1beta1DeviceClass(unittest.TestCase):
                     config = [
                         null
                         ], 
+                    extended_resource_name = '', 
                     selectors = [
                         null
                         ], )
@@ -77,6 +78,7 @@ class TestV1beta1DeviceClass(unittest.TestCase):
                     config = [
                         null
                         ], 
+                    extended_resource_name = '', 
                     selectors = [
                         null
                         ], ),

@@ -44,6 +44,11 @@ class TestV1PodStatus(unittest.TestCase):
                 ephemeral_container_statuses = [
                     null
                     ],
+                extended_resource_claim_status = kubernetes_asyncio.models.v1/pod_extended_resource_claim_status.v1.PodExtendedResourceClaimStatus(
+                    request_mappings = [
+                        null
+                        ], 
+                    resource_claim_name = '', ),
                 host_ip = '',
                 host_ips = [
                     null

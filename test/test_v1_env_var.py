@@ -40,6 +40,7 @@ class TestV1EnvVar(unittest.TestCase):
                 value_from = kubernetes_asyncio.models.v1/env_var_source.v1.EnvVarSource(
                     config_map_key_ref = null, 
                     field_ref = null, 
+                    file_key_ref = null, 
                     resource_field_ref = null, 
                     secret_key_ref = null, )
             )

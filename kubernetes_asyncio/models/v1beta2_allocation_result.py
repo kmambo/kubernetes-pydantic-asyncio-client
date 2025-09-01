@@ -17,6 +17,7 @@ from __future__ import annotations
 import json
 import pprint
 import re  # noqa: F401
+from datetime import datetime
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -33,6 +34,11 @@ class V1beta2AllocationResult(BaseModel):
     AllocationResult contains attributes of an allocated resource.
     """  # noqa: E501
 
+    allocation_timestamp: Optional[datetime] = Field(
+        default=None,
+        description="Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
+        alias="allocationTimestamp",
+    )
     devices: Optional[V1beta2DeviceAllocationResult] = Field(
         default=None, description="Devices is the result of allocating devices."
     )
@@ -41,7 +47,11 @@ class V1beta2AllocationResult(BaseModel):
         description="NodeSelector defines where the allocated resources are available. If unset, they are available everywhere.",
         alias="nodeSelector",
     )
-    __properties: ClassVar[List[str]] = ["devices", "nodeSelector"]
+    __properties: ClassVar[List[str]] = [
+        "allocationTimestamp",
+        "devices",
+        "nodeSelector",
+    ]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -99,6 +109,7 @@ class V1beta2AllocationResult(BaseModel):
 
         _obj = cls.model_validate(
             {
+                "allocationTimestamp": obj.get("allocationTimestamp"),
                 "devices": (
                     V1beta2DeviceAllocationResult.from_dict(obj["devices"])
                     if obj.get("devices") is not None

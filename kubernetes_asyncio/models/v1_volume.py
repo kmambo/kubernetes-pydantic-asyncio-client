@@ -150,7 +150,7 @@ class V1Volume(BaseModel):
     )
     glusterfs: Optional[V1GlusterfsVolumeSource] = Field(
         default=None,
-        description="glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. Deprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported. More info: https://examples.k8s.io/volumes/glusterfs/README.md",
+        description="glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. Deprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported.",
     )
     host_path: Optional[V1HostPathVolumeSource] = Field(
         default=None,
@@ -163,7 +163,7 @@ class V1Volume(BaseModel):
     )
     iscsi: Optional[V1ISCSIVolumeSource] = Field(
         default=None,
-        description="iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://examples.k8s.io/volumes/iscsi/README.md",
+        description="iscsi represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes/#iscsi",
     )
     name: StrictStr = Field(
         description="name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names"
@@ -197,7 +197,7 @@ class V1Volume(BaseModel):
     )
     rbd: Optional[V1RBDVolumeSource] = Field(
         default=None,
-        description="rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer supported. More info: https://examples.k8s.io/volumes/rbd/README.md",
+        description="rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer supported.",
     )
     scale_io: Optional[V1ScaleIOVolumeSource] = Field(
         default=None,

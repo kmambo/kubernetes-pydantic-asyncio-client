@@ -22,6 +22,9 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing_extensions import Self
 
+from kubernetes_asyncio.models.v1beta2_capacity_requirements import (
+    V1beta2CapacityRequirements,
+)
 from kubernetes_asyncio.models.v1beta2_device_selector import V1beta2DeviceSelector
 from kubernetes_asyncio.models.v1beta2_device_toleration import V1beta2DeviceToleration
 
@@ -35,6 +38,10 @@ class V1beta2DeviceSubRequest(BaseModel):
         default=None,
         description="AllocationMode and its related fields define how devices are allocated to satisfy this subrequest. Supported values are:  - ExactCount: This request is for a specific number of devices.   This is the default. The exact number is provided in the   count field.  - All: This subrequest is for all of the matching devices in a pool.   Allocation will fail if some devices are already allocated,   unless adminAccess is requested.  If AllocationMode is not specified, the default mode is ExactCount. If the mode is ExactCount and count is not specified, the default count is one. Any other subrequests must specify this field.  More modes may get added in the future. Clients must refuse to handle requests with unknown modes.",
         alias="allocationMode",
+    )
+    capacity: Optional[V1beta2CapacityRequirements] = Field(
+        default=None,
+        description="Capacity define resource requirements against each capacity.  If this field is unset and the device supports multiple allocations, the default value will be applied to each capacity according to requestPolicy. For the capacity that has no requestPolicy, default is the full capacity value.  Applies to each device allocation. If Count > 1, the request fails if there aren't enough devices that meet the requirements. If AllocationMode is set to All, the request fails if there are devices that otherwise match the request, and have this capacity, with a value >= the requested amount, but which cannot be allocated to this request.",
     )
     count: Optional[StrictInt] = Field(
         default=None,
@@ -57,6 +64,7 @@ class V1beta2DeviceSubRequest(BaseModel):
     )
     __properties: ClassVar[List[str]] = [
         "allocationMode",
+        "capacity",
         "count",
         "deviceClassName",
         "name",
@@ -101,6 +109,9 @@ class V1beta2DeviceSubRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of capacity
+        if self.capacity:
+            _dict["capacity"] = self.capacity.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in selectors (list)
         _items = []
         if self.selectors:
@@ -129,6 +140,11 @@ class V1beta2DeviceSubRequest(BaseModel):
         _obj = cls.model_validate(
             {
                 "allocationMode": obj.get("allocationMode"),
+                "capacity": (
+                    V1beta2CapacityRequirements.from_dict(obj["capacity"])
+                    if obj.get("capacity") is not None
+                    else None
+                ),
                 "count": obj.get("count"),
                 "deviceClassName": (
                     obj.get("deviceClassName")

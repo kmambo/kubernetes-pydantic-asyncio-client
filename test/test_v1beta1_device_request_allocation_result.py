@@ -36,10 +36,20 @@ class TestV1beta1DeviceRequestAllocationResult(unittest.TestCase):
         if include_optional:
             return V1beta1DeviceRequestAllocationResult(
                 admin_access = True,
+                binding_conditions = [
+                    ''
+                    ],
+                binding_failure_conditions = [
+                    ''
+                    ],
+                consumed_capacity = {
+                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    },
                 device = '',
                 driver = '',
                 pool = '',
                 request = '',
+                share_id = '',
                 tolerations = [
                     null
                     ]

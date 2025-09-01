@@ -30,7 +30,7 @@ from kubernetes_asyncio.models.v1beta2_network_device_data import (
 
 class V1beta2AllocatedDeviceStatus(BaseModel):
     """
-    AllocatedDeviceStatus contains the status of an allocated device, if the driver chooses to report it. This may include driver-specific information.
+    AllocatedDeviceStatus contains the status of an allocated device, if the driver chooses to report it. This may include driver-specific information.  The combination of Driver, Pool, Device, and ShareID must match the corresponding key in Status.Allocation.Devices.
     """  # noqa: E501
 
     conditions: Optional[List[V1Condition]] = Field(
@@ -55,6 +55,11 @@ class V1beta2AllocatedDeviceStatus(BaseModel):
     pool: StrictStr = Field(
         description="This name together with the driver name and the device name field identify which device was allocated (`<driver name>/<pool name>/<device name>`).  Must not be longer than 253 characters and may contain one or more DNS sub-domains separated by slashes."
     )
+    share_id: Optional[StrictStr] = Field(
+        default=None,
+        description="ShareID uniquely identifies an individual allocation share of the device.",
+        alias="shareID",
+    )
     __properties: ClassVar[List[str]] = [
         "conditions",
         "data",
@@ -62,6 +67,7 @@ class V1beta2AllocatedDeviceStatus(BaseModel):
         "driver",
         "networkData",
         "pool",
+        "shareID",
     ]
 
     model_config = ConfigDict(
@@ -138,6 +144,7 @@ class V1beta2AllocatedDeviceStatus(BaseModel):
                     else None
                 ),
                 "pool": obj.get("pool") if obj.get("pool") is not None else "",
+                "shareID": obj.get("shareID"),
             }
         )
         return _obj

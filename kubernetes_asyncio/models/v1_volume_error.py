@@ -31,7 +31,7 @@ class V1VolumeError(BaseModel):
 
     error_code: Optional[StrictInt] = Field(
         default=None,
-        description="errorCode is a numeric gRPC code representing the error encountered during Attach or Detach operations.  This is an optional, alpha field that requires the MutableCSINodeAllocatableCount feature gate being enabled to be set.",
+        description="errorCode is a numeric gRPC code representing the error encountered during Attach or Detach operations.  This is an optional, beta field that requires the MutableCSINodeAllocatableCount feature gate being enabled to be set.",
         alias="errorCode",
     )
     message: Optional[StrictStr] = Field(

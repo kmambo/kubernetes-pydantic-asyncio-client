@@ -35,6 +35,7 @@ class TestV1beta2DeviceConstraint(unittest.TestCase):
         model = V1beta2DeviceConstraint()
         if include_optional:
             return V1beta2DeviceConstraint(
+                distinct_attribute = '',
                 match_attribute = '',
                 requests = [
                     ''

@@ -6,7 +6,7 @@ Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**endpoints** | **str** | endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod | [default to '']
+**endpoints** | **str** | endpoints is the endpoint name that details Glusterfs topology. | [default to '']
 **path** | **str** | path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod | [default to '']
 **read_only** | **bool** | readOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod | [optional] 
 

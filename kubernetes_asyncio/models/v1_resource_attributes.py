@@ -37,7 +37,7 @@ class V1ResourceAttributes(BaseModel):
 
     field_selector: Optional[V1FieldSelectorAttributes] = Field(
         default=None,
-        description="fieldSelector describes the limitation on access based on field.  It can only limit access, not broaden it.  This field  is alpha-level. To use this field, you must enable the `AuthorizeWithSelectors` feature gate (disabled by default).",
+        description="fieldSelector describes the limitation on access based on field.  It can only limit access, not broaden it.",
         alias="fieldSelector",
     )
     group: Optional[StrictStr] = Field(
@@ -46,7 +46,7 @@ class V1ResourceAttributes(BaseModel):
     )
     label_selector: Optional[V1LabelSelectorAttributes] = Field(
         default=None,
-        description="labelSelector describes the limitation on access based on labels.  It can only limit access, not broaden it.  This field  is alpha-level. To use this field, you must enable the `AuthorizeWithSelectors` feature gate (disabled by default).",
+        description="labelSelector describes the limitation on access based on labels.  It can only limit access, not broaden it.",
         alias="labelSelector",
     )
     name: Optional[StrictStr] = Field(

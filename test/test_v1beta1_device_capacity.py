@@ -35,6 +35,12 @@ class TestV1beta1DeviceCapacity(unittest.TestCase):
         model = V1beta1DeviceCapacity()
         if include_optional:
             return V1beta1DeviceCapacity(
+                request_policy = kubernetes_asyncio.models.v1beta1/capacity_request_policy.v1beta1.CapacityRequestPolicy(
+                    default = null, 
+                    valid_range = null, 
+                    valid_values = [
+                        kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        ], ),
                 value = None
             )
         else:

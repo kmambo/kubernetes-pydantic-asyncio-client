@@ -55,7 +55,10 @@ jobs:
         run: poetry build --clean --format=sdist
       - name: Upload sdist
         uses: actions/upload-artifact@v4
-        path: dist/*.tar.gz
+        with:
+          name: python-package-distributions
+          path: dist/
+
 
 
 

@@ -22,17 +22,17 @@ from kubernetes_asyncio.api_response import ApiResponse
 from kubernetes_asyncio.models.v1_api_resource_list import V1APIResourceList
 from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
 from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import (
-    V1alpha1ValidatingAdmissionPolicy,
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy import (
+    V1alpha1MutatingAdmissionPolicy,
 )
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding import (
-    V1alpha1ValidatingAdmissionPolicyBinding,
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding import (
+    V1alpha1MutatingAdmissionPolicyBinding,
 )
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding_list import (
-    V1alpha1ValidatingAdmissionPolicyBindingList,
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding_list import (
+    V1alpha1MutatingAdmissionPolicyBindingList,
 )
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_list import (
-    V1alpha1ValidatingAdmissionPolicyList,
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_list import (
+    V1alpha1MutatingAdmissionPolicyList,
 )
 from kubernetes_asyncio.rest import RESTResponseType
 
@@ -50,9 +50,9 @@ class AdmissionregistrationV1alpha1Api:
         self.api_client = api_client
 
     @validate_call
-    async def create_validating_admission_policy(
+    async def create_mutating_admission_policy(
         self,
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
+        v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -88,13 +88,13 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """create_validating_admission_policy
+    ) -> V1alpha1MutatingAdmissionPolicy:
+        """create_mutating_admission_policy
 
-        create a ValidatingAdmissionPolicy
+        create a MutatingAdmissionPolicy
 
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
+        :param v1alpha1_mutating_admission_policy: (required)
+        :type v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -125,8 +125,8 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._create_validating_admission_policy_serialize(
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
+        _param = self._create_mutating_admission_policy_serialize(
+            v1alpha1_mutating_admission_policy=v1alpha1_mutating_admission_policy,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -138,9 +138,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "202": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
+            "202": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -153,9 +153,9 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def create_validating_admission_policy_with_http_info(
+    async def create_mutating_admission_policy_with_http_info(
         self,
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
+        v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -191,13 +191,13 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """create_validating_admission_policy
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicy]:
+        """create_mutating_admission_policy
 
-        create a ValidatingAdmissionPolicy
+        create a MutatingAdmissionPolicy
 
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
+        :param v1alpha1_mutating_admission_policy: (required)
+        :type v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -228,8 +228,8 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._create_validating_admission_policy_serialize(
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
+        _param = self._create_mutating_admission_policy_serialize(
+            v1alpha1_mutating_admission_policy=v1alpha1_mutating_admission_policy,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -241,9 +241,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "202": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
+            "202": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -256,9 +256,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def create_validating_admission_policy_without_preload_content(
+    async def create_mutating_admission_policy_without_preload_content(
         self,
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
+        v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -295,12 +295,12 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """create_validating_admission_policy
+        """create_mutating_admission_policy
 
-        create a ValidatingAdmissionPolicy
+        create a MutatingAdmissionPolicy
 
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
+        :param v1alpha1_mutating_admission_policy: (required)
+        :type v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -331,8 +331,8 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._create_validating_admission_policy_serialize(
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
+        _param = self._create_mutating_admission_policy_serialize(
+            v1alpha1_mutating_admission_policy=v1alpha1_mutating_admission_policy,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -344,9 +344,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "202": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
+            "202": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -354,9 +354,9 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _create_validating_admission_policy_serialize(
+    def _create_mutating_admission_policy_serialize(
         self,
-        v1alpha1_validating_admission_policy,
+        v1alpha1_mutating_admission_policy,
         pretty,
         dry_run,
         field_manager,
@@ -401,13 +401,14 @@ class AdmissionregistrationV1alpha1Api:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if v1alpha1_validating_admission_policy is not None:
-            _body_params = v1alpha1_validating_admission_policy
+        if v1alpha1_mutating_admission_policy is not None:
+            _body_params = v1alpha1_mutating_admission_policy
 
         # set the HTTP header `Accept`
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -419,7 +420,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="POST",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -433,9 +434,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def create_validating_admission_policy_binding(
+    async def create_mutating_admission_policy_binding(
         self,
-        v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding,
+        v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -471,13 +472,13 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicyBinding:
-        """create_validating_admission_policy_binding
+    ) -> V1alpha1MutatingAdmissionPolicyBinding:
+        """create_mutating_admission_policy_binding
 
-        create a ValidatingAdmissionPolicyBinding
+        create a MutatingAdmissionPolicyBinding
 
-        :param v1alpha1_validating_admission_policy_binding: (required)
-        :type v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding
+        :param v1alpha1_mutating_admission_policy_binding: (required)
+        :type v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -508,8 +509,8 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._create_validating_admission_policy_binding_serialize(
-            v1alpha1_validating_admission_policy_binding=v1alpha1_validating_admission_policy_binding,
+        _param = self._create_mutating_admission_policy_binding_serialize(
+            v1alpha1_mutating_admission_policy_binding=v1alpha1_mutating_admission_policy_binding,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -521,9 +522,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "202": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
+            "202": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -536,9 +537,9 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def create_validating_admission_policy_binding_with_http_info(
+    async def create_mutating_admission_policy_binding_with_http_info(
         self,
-        v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding,
+        v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -574,13 +575,13 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicyBinding]:
-        """create_validating_admission_policy_binding
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicyBinding]:
+        """create_mutating_admission_policy_binding
 
-        create a ValidatingAdmissionPolicyBinding
+        create a MutatingAdmissionPolicyBinding
 
-        :param v1alpha1_validating_admission_policy_binding: (required)
-        :type v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding
+        :param v1alpha1_mutating_admission_policy_binding: (required)
+        :type v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -611,8 +612,8 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._create_validating_admission_policy_binding_serialize(
-            v1alpha1_validating_admission_policy_binding=v1alpha1_validating_admission_policy_binding,
+        _param = self._create_mutating_admission_policy_binding_serialize(
+            v1alpha1_mutating_admission_policy_binding=v1alpha1_mutating_admission_policy_binding,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -624,9 +625,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "202": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
+            "202": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -639,9 +640,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def create_validating_admission_policy_binding_without_preload_content(
+    async def create_mutating_admission_policy_binding_without_preload_content(
         self,
-        v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding,
+        v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -678,12 +679,12 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """create_validating_admission_policy_binding
+        """create_mutating_admission_policy_binding
 
-        create a ValidatingAdmissionPolicyBinding
+        create a MutatingAdmissionPolicyBinding
 
-        :param v1alpha1_validating_admission_policy_binding: (required)
-        :type v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding
+        :param v1alpha1_mutating_admission_policy_binding: (required)
+        :type v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -714,8 +715,8 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._create_validating_admission_policy_binding_serialize(
-            v1alpha1_validating_admission_policy_binding=v1alpha1_validating_admission_policy_binding,
+        _param = self._create_mutating_admission_policy_binding_serialize(
+            v1alpha1_mutating_admission_policy_binding=v1alpha1_mutating_admission_policy_binding,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -727,9 +728,9 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "202": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
+            "202": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -737,9 +738,9 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _create_validating_admission_policy_binding_serialize(
+    def _create_mutating_admission_policy_binding_serialize(
         self,
-        v1alpha1_validating_admission_policy_binding,
+        v1alpha1_mutating_admission_policy_binding,
         pretty,
         dry_run,
         field_manager,
@@ -784,13 +785,14 @@ class AdmissionregistrationV1alpha1Api:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if v1alpha1_validating_admission_policy_binding is not None:
-            _body_params = v1alpha1_validating_admission_policy_binding
+        if v1alpha1_mutating_admission_policy_binding is not None:
+            _body_params = v1alpha1_mutating_admission_policy_binding
 
         # set the HTTP header `Accept`
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -802,7 +804,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="POST",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -816,7 +818,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_collection_validating_admission_policy(
+    async def delete_collection_mutating_admission_policy(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -846,6 +848,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -909,9 +917,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> V1Status:
-        """delete_collection_validating_admission_policy
+        """delete_collection_mutating_admission_policy
 
-        delete collection of ValidatingAdmissionPolicy
+        delete collection of MutatingAdmissionPolicy
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -923,6 +931,8 @@ class AdmissionregistrationV1alpha1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -963,12 +973,13 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_collection_validating_admission_policy_serialize(
+        _param = self._delete_collection_mutating_admission_policy_serialize(
             pretty=pretty,
             var_continue=var_continue,
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -998,7 +1009,7 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def delete_collection_validating_admission_policy_with_http_info(
+    async def delete_collection_mutating_admission_policy_with_http_info(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -1028,6 +1039,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -1091,9 +1108,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[V1Status]:
-        """delete_collection_validating_admission_policy
+        """delete_collection_mutating_admission_policy
 
-        delete collection of ValidatingAdmissionPolicy
+        delete collection of MutatingAdmissionPolicy
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -1105,6 +1122,8 @@ class AdmissionregistrationV1alpha1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -1145,12 +1164,13 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_collection_validating_admission_policy_serialize(
+        _param = self._delete_collection_mutating_admission_policy_serialize(
             pretty=pretty,
             var_continue=var_continue,
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -1180,7 +1200,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_collection_validating_admission_policy_without_preload_content(
+    async def delete_collection_mutating_admission_policy_without_preload_content(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -1210,6 +1230,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -1273,9 +1299,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """delete_collection_validating_admission_policy
+        """delete_collection_mutating_admission_policy
 
-        delete collection of ValidatingAdmissionPolicy
+        delete collection of MutatingAdmissionPolicy
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -1287,6 +1313,8 @@ class AdmissionregistrationV1alpha1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -1327,12 +1355,13 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_collection_validating_admission_policy_serialize(
+        _param = self._delete_collection_mutating_admission_policy_serialize(
             pretty=pretty,
             var_continue=var_continue,
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -1357,13 +1386,14 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _delete_collection_validating_admission_policy_serialize(
+    def _delete_collection_mutating_admission_policy_serialize(
         self,
         pretty,
         var_continue,
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -1414,6 +1444,15 @@ class AdmissionregistrationV1alpha1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -1456,6 +1495,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -1467,7 +1507,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="DELETE",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1481,7 +1521,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_collection_validating_admission_policy_binding(
+    async def delete_collection_mutating_admission_policy_binding(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -1511,6 +1551,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -1574,9 +1620,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> V1Status:
-        """delete_collection_validating_admission_policy_binding
+        """delete_collection_mutating_admission_policy_binding
 
-        delete collection of ValidatingAdmissionPolicyBinding
+        delete collection of MutatingAdmissionPolicyBinding
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -1588,6 +1634,8 @@ class AdmissionregistrationV1alpha1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -1628,12 +1676,13 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_collection_validating_admission_policy_binding_serialize(
+        _param = self._delete_collection_mutating_admission_policy_binding_serialize(
             pretty=pretty,
             var_continue=var_continue,
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -1663,7 +1712,7 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def delete_collection_validating_admission_policy_binding_with_http_info(
+    async def delete_collection_mutating_admission_policy_binding_with_http_info(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -1693,6 +1742,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -1756,9 +1811,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[V1Status]:
-        """delete_collection_validating_admission_policy_binding
+        """delete_collection_mutating_admission_policy_binding
 
-        delete collection of ValidatingAdmissionPolicyBinding
+        delete collection of MutatingAdmissionPolicyBinding
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -1770,6 +1825,8 @@ class AdmissionregistrationV1alpha1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -1810,12 +1867,13 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_collection_validating_admission_policy_binding_serialize(
+        _param = self._delete_collection_mutating_admission_policy_binding_serialize(
             pretty=pretty,
             var_continue=var_continue,
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -1845,7 +1903,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_collection_validating_admission_policy_binding_without_preload_content(
+    async def delete_collection_mutating_admission_policy_binding_without_preload_content(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -1875,6 +1933,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -1938,9 +2002,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """delete_collection_validating_admission_policy_binding
+        """delete_collection_mutating_admission_policy_binding
 
-        delete collection of ValidatingAdmissionPolicyBinding
+        delete collection of MutatingAdmissionPolicyBinding
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -1952,6 +2016,8 @@ class AdmissionregistrationV1alpha1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -1992,12 +2058,13 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_collection_validating_admission_policy_binding_serialize(
+        _param = self._delete_collection_mutating_admission_policy_binding_serialize(
             pretty=pretty,
             var_continue=var_continue,
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -2022,13 +2089,14 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _delete_collection_validating_admission_policy_binding_serialize(
+    def _delete_collection_mutating_admission_policy_binding_serialize(
         self,
         pretty,
         var_continue,
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -2079,6 +2147,15 @@ class AdmissionregistrationV1alpha1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -2121,6 +2198,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -2132,7 +2210,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="DELETE",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2146,10 +2224,10 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_validating_admission_policy(
+    async def delete_mutating_admission_policy(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -2167,6 +2245,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         orphan_dependents: Annotated[
@@ -2194,11 +2278,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> V1Status:
-        """delete_validating_admission_policy
+        """delete_mutating_admission_policy
 
-        delete a ValidatingAdmissionPolicy
+        delete a MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -2206,6 +2290,8 @@ class AdmissionregistrationV1alpha1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2234,11 +2320,12 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_validating_admission_policy_serialize(
+        _param = self._delete_mutating_admission_policy_serialize(
             name=name,
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -2263,10 +2350,10 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def delete_validating_admission_policy_with_http_info(
+    async def delete_mutating_admission_policy_with_http_info(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -2284,6 +2371,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         orphan_dependents: Annotated[
@@ -2311,11 +2404,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[V1Status]:
-        """delete_validating_admission_policy
+        """delete_mutating_admission_policy
 
-        delete a ValidatingAdmissionPolicy
+        delete a MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -2323,6 +2416,8 @@ class AdmissionregistrationV1alpha1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2351,11 +2446,12 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_validating_admission_policy_serialize(
+        _param = self._delete_mutating_admission_policy_serialize(
             name=name,
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -2380,10 +2476,10 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_validating_admission_policy_without_preload_content(
+    async def delete_mutating_admission_policy_without_preload_content(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -2401,6 +2497,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         orphan_dependents: Annotated[
@@ -2428,11 +2530,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """delete_validating_admission_policy
+        """delete_mutating_admission_policy
 
-        delete a ValidatingAdmissionPolicy
+        delete a MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -2440,6 +2542,8 @@ class AdmissionregistrationV1alpha1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2468,11 +2572,12 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_validating_admission_policy_serialize(
+        _param = self._delete_mutating_admission_policy_serialize(
             name=name,
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -2492,12 +2597,13 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _delete_validating_admission_policy_serialize(
+    def _delete_mutating_admission_policy_serialize(
         self,
         name,
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -2536,6 +2642,15 @@ class AdmissionregistrationV1alpha1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -2554,6 +2669,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -2565,7 +2681,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="DELETE",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2579,12 +2695,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_validating_admission_policy_binding(
+    async def delete_mutating_admission_policy_binding(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         pretty: Annotated[
@@ -2603,6 +2719,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         orphan_dependents: Annotated[
@@ -2630,11 +2752,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> V1Status:
-        """delete_validating_admission_policy_binding
+        """delete_mutating_admission_policy_binding
 
-        delete a ValidatingAdmissionPolicyBinding
+        delete a MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -2642,6 +2764,8 @@ class AdmissionregistrationV1alpha1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2670,11 +2794,12 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_validating_admission_policy_binding_serialize(
+        _param = self._delete_mutating_admission_policy_binding_serialize(
             name=name,
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -2699,12 +2824,12 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def delete_validating_admission_policy_binding_with_http_info(
+    async def delete_mutating_admission_policy_binding_with_http_info(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         pretty: Annotated[
@@ -2723,6 +2848,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         orphan_dependents: Annotated[
@@ -2750,11 +2881,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[V1Status]:
-        """delete_validating_admission_policy_binding
+        """delete_mutating_admission_policy_binding
 
-        delete a ValidatingAdmissionPolicyBinding
+        delete a MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -2762,6 +2893,8 @@ class AdmissionregistrationV1alpha1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2790,11 +2923,12 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_validating_admission_policy_binding_serialize(
+        _param = self._delete_mutating_admission_policy_binding_serialize(
             name=name,
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -2819,12 +2953,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def delete_validating_admission_policy_binding_without_preload_content(
+    async def delete_mutating_admission_policy_binding_without_preload_content(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         pretty: Annotated[
@@ -2843,6 +2977,12 @@ class AdmissionregistrationV1alpha1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         orphan_dependents: Annotated[
@@ -2870,11 +3010,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """delete_validating_admission_policy_binding
+        """delete_mutating_admission_policy_binding
 
-        delete a ValidatingAdmissionPolicyBinding
+        delete a MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -2882,6 +3022,8 @@ class AdmissionregistrationV1alpha1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -2910,11 +3052,12 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._delete_validating_admission_policy_binding_serialize(
+        _param = self._delete_mutating_admission_policy_binding_serialize(
             name=name,
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -2934,12 +3077,13 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _delete_validating_admission_policy_binding_serialize(
+    def _delete_mutating_admission_policy_binding_serialize(
         self,
         name,
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -2978,6 +3122,15 @@ class AdmissionregistrationV1alpha1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -2996,6 +3149,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -3007,7 +3161,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="DELETE",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -3230,6 +3384,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -3255,7 +3410,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def list_validating_admission_policy(
+    async def list_mutating_admission_policy(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -3334,10 +3489,10 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicyList:
-        """list_validating_admission_policy
+    ) -> V1alpha1MutatingAdmissionPolicyList:
+        """list_mutating_admission_policy
 
-        list or watch objects of kind ValidatingAdmissionPolicy
+        list or watch objects of kind MutatingAdmissionPolicy
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -3383,7 +3538,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._list_validating_admission_policy_serialize(
+        _param = self._list_mutating_admission_policy_serialize(
             pretty=pretty,
             allow_watch_bookmarks=allow_watch_bookmarks,
             var_continue=var_continue,
@@ -3402,7 +3557,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyList",
+            "200": "V1alpha1MutatingAdmissionPolicyList",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -3415,7 +3570,7 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def list_validating_admission_policy_with_http_info(
+    async def list_mutating_admission_policy_with_http_info(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -3494,10 +3649,10 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicyList]:
-        """list_validating_admission_policy
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicyList]:
+        """list_mutating_admission_policy
 
-        list or watch objects of kind ValidatingAdmissionPolicy
+        list or watch objects of kind MutatingAdmissionPolicy
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -3543,7 +3698,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._list_validating_admission_policy_serialize(
+        _param = self._list_mutating_admission_policy_serialize(
             pretty=pretty,
             allow_watch_bookmarks=allow_watch_bookmarks,
             var_continue=var_continue,
@@ -3562,7 +3717,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyList",
+            "200": "V1alpha1MutatingAdmissionPolicyList",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -3575,7 +3730,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def list_validating_admission_policy_without_preload_content(
+    async def list_mutating_admission_policy_without_preload_content(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -3655,9 +3810,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """list_validating_admission_policy
+        """list_mutating_admission_policy
 
-        list or watch objects of kind ValidatingAdmissionPolicy
+        list or watch objects of kind MutatingAdmissionPolicy
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -3703,7 +3858,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._list_validating_admission_policy_serialize(
+        _param = self._list_mutating_admission_policy_serialize(
             pretty=pretty,
             allow_watch_bookmarks=allow_watch_bookmarks,
             var_continue=var_continue,
@@ -3722,7 +3877,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyList",
+            "200": "V1alpha1MutatingAdmissionPolicyList",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -3730,7 +3885,7 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _list_validating_admission_policy_serialize(
+    def _list_mutating_admission_policy_serialize(
         self,
         pretty,
         allow_watch_bookmarks,
@@ -3816,6 +3971,8 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -3829,7 +3986,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="GET",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -3843,7 +4000,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def list_validating_admission_policy_binding(
+    async def list_mutating_admission_policy_binding(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -3922,10 +4079,10 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicyBindingList:
-        """list_validating_admission_policy_binding
+    ) -> V1alpha1MutatingAdmissionPolicyBindingList:
+        """list_mutating_admission_policy_binding
 
-        list or watch objects of kind ValidatingAdmissionPolicyBinding
+        list or watch objects of kind MutatingAdmissionPolicyBinding
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -3971,7 +4128,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._list_validating_admission_policy_binding_serialize(
+        _param = self._list_mutating_admission_policy_binding_serialize(
             pretty=pretty,
             allow_watch_bookmarks=allow_watch_bookmarks,
             var_continue=var_continue,
@@ -3990,7 +4147,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBindingList",
+            "200": "V1alpha1MutatingAdmissionPolicyBindingList",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4003,7 +4160,7 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def list_validating_admission_policy_binding_with_http_info(
+    async def list_mutating_admission_policy_binding_with_http_info(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -4082,10 +4239,10 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicyBindingList]:
-        """list_validating_admission_policy_binding
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicyBindingList]:
+        """list_mutating_admission_policy_binding
 
-        list or watch objects of kind ValidatingAdmissionPolicyBinding
+        list or watch objects of kind MutatingAdmissionPolicyBinding
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -4131,7 +4288,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._list_validating_admission_policy_binding_serialize(
+        _param = self._list_mutating_admission_policy_binding_serialize(
             pretty=pretty,
             allow_watch_bookmarks=allow_watch_bookmarks,
             var_continue=var_continue,
@@ -4150,7 +4307,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBindingList",
+            "200": "V1alpha1MutatingAdmissionPolicyBindingList",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4163,7 +4320,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def list_validating_admission_policy_binding_without_preload_content(
+    async def list_mutating_admission_policy_binding_without_preload_content(
         self,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -4243,9 +4400,9 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """list_validating_admission_policy_binding
+        """list_mutating_admission_policy_binding
 
-        list or watch objects of kind ValidatingAdmissionPolicyBinding
+        list or watch objects of kind MutatingAdmissionPolicyBinding
 
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -4291,7 +4448,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._list_validating_admission_policy_binding_serialize(
+        _param = self._list_mutating_admission_policy_binding_serialize(
             pretty=pretty,
             allow_watch_bookmarks=allow_watch_bookmarks,
             var_continue=var_continue,
@@ -4310,7 +4467,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBindingList",
+            "200": "V1alpha1MutatingAdmissionPolicyBindingList",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4318,7 +4475,7 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _list_validating_admission_policy_binding_serialize(
+    def _list_mutating_admission_policy_binding_serialize(
         self,
         pretty,
         allow_watch_bookmarks,
@@ -4404,6 +4561,8 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -4417,7 +4576,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="GET",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4431,10 +4590,10 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def patch_validating_admission_policy(
+    async def patch_mutating_admission_policy(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         body: Dict[str, Any],
         pretty: Annotated[
@@ -4478,12 +4637,12 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """patch_validating_admission_policy
+    ) -> V1alpha1MutatingAdmissionPolicy:
+        """patch_mutating_admission_policy
 
-        partially update the specified ValidatingAdmissionPolicy
+        partially update the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param body: (required)
         :type body: object
@@ -4519,7 +4678,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_serialize(
+        _param = self._patch_mutating_admission_policy_serialize(
             name=name,
             body=body,
             pretty=pretty,
@@ -4534,8 +4693,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4548,10 +4707,10 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def patch_validating_admission_policy_with_http_info(
+    async def patch_mutating_admission_policy_with_http_info(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         body: Dict[str, Any],
         pretty: Annotated[
@@ -4595,12 +4754,12 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """patch_validating_admission_policy
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicy]:
+        """patch_mutating_admission_policy
 
-        partially update the specified ValidatingAdmissionPolicy
+        partially update the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param body: (required)
         :type body: object
@@ -4636,7 +4795,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_serialize(
+        _param = self._patch_mutating_admission_policy_serialize(
             name=name,
             body=body,
             pretty=pretty,
@@ -4651,8 +4810,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4665,10 +4824,10 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def patch_validating_admission_policy_without_preload_content(
+    async def patch_mutating_admission_policy_without_preload_content(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         body: Dict[str, Any],
         pretty: Annotated[
@@ -4713,11 +4872,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """patch_validating_admission_policy
+        """patch_mutating_admission_policy
 
-        partially update the specified ValidatingAdmissionPolicy
+        partially update the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param body: (required)
         :type body: object
@@ -4753,7 +4912,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_serialize(
+        _param = self._patch_mutating_admission_policy_serialize(
             name=name,
             body=body,
             pretty=pretty,
@@ -4768,8 +4927,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4777,7 +4936,7 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _patch_validating_admission_policy_serialize(
+    def _patch_mutating_admission_policy_serialize(
         self,
         name,
         body,
@@ -4839,6 +4998,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -4851,6 +5011,7 @@ class AdmissionregistrationV1alpha1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -4865,7 +5026,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="PATCH",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4879,12 +5040,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def patch_validating_admission_policy_binding(
+    async def patch_mutating_admission_policy_binding(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         body: Dict[str, Any],
@@ -4929,12 +5090,12 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicyBinding:
-        """patch_validating_admission_policy_binding
+    ) -> V1alpha1MutatingAdmissionPolicyBinding:
+        """patch_mutating_admission_policy_binding
 
-        partially update the specified ValidatingAdmissionPolicyBinding
+        partially update the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param body: (required)
         :type body: object
@@ -4970,7 +5131,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_binding_serialize(
+        _param = self._patch_mutating_admission_policy_binding_serialize(
             name=name,
             body=body,
             pretty=pretty,
@@ -4985,8 +5146,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -4999,12 +5160,12 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def patch_validating_admission_policy_binding_with_http_info(
+    async def patch_mutating_admission_policy_binding_with_http_info(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         body: Dict[str, Any],
@@ -5049,12 +5210,12 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicyBinding]:
-        """patch_validating_admission_policy_binding
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicyBinding]:
+        """patch_mutating_admission_policy_binding
 
-        partially update the specified ValidatingAdmissionPolicyBinding
+        partially update the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param body: (required)
         :type body: object
@@ -5090,7 +5251,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_binding_serialize(
+        _param = self._patch_mutating_admission_policy_binding_serialize(
             name=name,
             body=body,
             pretty=pretty,
@@ -5105,8 +5266,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -5119,12 +5280,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def patch_validating_admission_policy_binding_without_preload_content(
+    async def patch_mutating_admission_policy_binding_without_preload_content(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         body: Dict[str, Any],
@@ -5170,11 +5331,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """patch_validating_admission_policy_binding
+        """patch_mutating_admission_policy_binding
 
-        partially update the specified ValidatingAdmissionPolicyBinding
+        partially update the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param body: (required)
         :type body: object
@@ -5210,7 +5371,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_binding_serialize(
+        _param = self._patch_mutating_admission_policy_binding_serialize(
             name=name,
             body=body,
             pretty=pretty,
@@ -5225,8 +5386,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -5234,7 +5395,7 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _patch_validating_admission_policy_binding_serialize(
+    def _patch_mutating_admission_policy_binding_serialize(
         self,
         name,
         body,
@@ -5296,6 +5457,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -5308,6 +5470,7 @@ class AdmissionregistrationV1alpha1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -5322,7 +5485,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="PATCH",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -5336,40 +5499,15 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def patch_validating_admission_policy_status(
+    async def read_mutating_admission_policy(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
-        body: Dict[str, Any],
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
                 description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
             ),
         ] = None,
         _request_timeout: Union[
@@ -5383,25 +5521,15 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """patch_validating_admission_policy_status
+    ) -> V1alpha1MutatingAdmissionPolicy:
+        """read_mutating_admission_policy
 
-        partially update status of the specified ValidatingAdmissionPolicy
+        read the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
-        :param body: (required)
-        :type body: object
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5424,14 +5552,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_status_serialize(
+        _param = self._read_mutating_admission_policy_serialize(
             name=name,
-            body=body,
             pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5439,8 +5562,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -5453,40 +5575,15 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def patch_validating_admission_policy_status_with_http_info(
+    async def read_mutating_admission_policy_with_http_info(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
-        body: Dict[str, Any],
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
                 description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
             ),
         ] = None,
         _request_timeout: Union[
@@ -5500,25 +5597,15 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """patch_validating_admission_policy_status
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicy]:
+        """read_mutating_admission_policy
 
-        partially update status of the specified ValidatingAdmissionPolicy
+        read the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
-        :param body: (required)
-        :type body: object
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -5541,14 +5628,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._patch_validating_admission_policy_status_serialize(
+        _param = self._read_mutating_admission_policy_serialize(
             name=name,
-            body=body,
             pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -5556,8 +5638,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -5570,376 +5651,10 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def patch_validating_admission_policy_status_without_preload_content(
+    async def read_mutating_admission_policy_without_preload_content(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """patch_validating_admission_policy_status
-
-        partially update status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_validating_admission_policy_status_serialize(
-            name=name,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _patch_validating_admission_policy_status_serialize(
-        self,
-        name,
-        body,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        force,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        if force is not None:
-
-            _query_params.append(("force", force))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if body is not None:
-            _body_params = body
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params["Content-Type"] = _content_type
-        else:
-            _default_content_type = self.api_client.select_header_content_type(
-                [
-                    "application/apply-patch+yaml",
-                    "application/json-patch+json",
-                    "application/merge-patch+json",
-                    "application/strategic-merge-patch+json",
-                ]
-            )
-            if _default_content_type is not None:
-                _header_params["Content-Type"] = _default_content_type
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="PATCH",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}/status",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def read_validating_admission_policy(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """read_validating_admission_policy
-
-        read the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_validating_admission_policy_serialize(
-            name=name,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def read_validating_admission_policy_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """read_validating_admission_policy
-
-        read the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_validating_admission_policy_serialize(
-            name=name,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def read_validating_admission_policy_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
@@ -5959,11 +5674,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """read_validating_admission_policy
+        """read_mutating_admission_policy
 
-        read the specified ValidatingAdmissionPolicy
+        read the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -5989,7 +5704,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._read_validating_admission_policy_serialize(
+        _param = self._read_mutating_admission_policy_serialize(
             name=name,
             pretty=pretty,
             _request_auth=_request_auth,
@@ -5999,7 +5714,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6007,7 +5722,7 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _read_validating_admission_policy_serialize(
+    def _read_mutating_admission_policy_serialize(
         self,
         name,
         pretty,
@@ -6046,6 +5761,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -6057,7 +5773,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="GET",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -6071,12 +5787,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def read_validating_admission_policy_binding(
+    async def read_mutating_admission_policy_binding(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         pretty: Annotated[
@@ -6096,12 +5812,12 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicyBinding:
-        """read_validating_admission_policy_binding
+    ) -> V1alpha1MutatingAdmissionPolicyBinding:
+        """read_mutating_admission_policy_binding
 
-        read the specified ValidatingAdmissionPolicyBinding
+        read the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -6127,7 +5843,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._read_validating_admission_policy_binding_serialize(
+        _param = self._read_mutating_admission_policy_binding_serialize(
             name=name,
             pretty=pretty,
             _request_auth=_request_auth,
@@ -6137,7 +5853,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6150,12 +5866,12 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def read_validating_admission_policy_binding_with_http_info(
+    async def read_mutating_admission_policy_binding_with_http_info(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         pretty: Annotated[
@@ -6175,12 +5891,12 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicyBinding]:
-        """read_validating_admission_policy_binding
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicyBinding]:
+        """read_mutating_admission_policy_binding
 
-        read the specified ValidatingAdmissionPolicyBinding
+        read the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -6206,7 +5922,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._read_validating_admission_policy_binding_serialize(
+        _param = self._read_mutating_admission_policy_binding_serialize(
             name=name,
             pretty=pretty,
             _request_auth=_request_auth,
@@ -6216,7 +5932,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6229,12 +5945,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def read_validating_admission_policy_binding_without_preload_content(
+    async def read_mutating_admission_policy_binding_without_preload_content(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
         pretty: Annotated[
@@ -6255,11 +5971,11 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """read_validating_admission_policy_binding
+        """read_mutating_admission_policy_binding
 
-        read the specified ValidatingAdmissionPolicyBinding
+        read the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
@@ -6285,7 +6001,7 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._read_validating_admission_policy_binding_serialize(
+        _param = self._read_mutating_admission_policy_binding_serialize(
             name=name,
             pretty=pretty,
             _request_auth=_request_auth,
@@ -6295,7 +6011,7 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6303,7 +6019,7 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _read_validating_admission_policy_binding_serialize(
+    def _read_mutating_admission_policy_binding_serialize(
         self,
         name,
         pretty,
@@ -6342,6 +6058,7 @@ class AdmissionregistrationV1alpha1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -6353,7 +6070,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="GET",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -6367,299 +6084,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def read_validating_admission_policy_status(
+    async def replace_mutating_admission_policy(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """read_validating_admission_policy_status
-
-        read status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_validating_admission_policy_status_serialize(
-            name=name,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def read_validating_admission_policy_status_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """read_validating_admission_policy_status
-
-        read status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_validating_admission_policy_status_serialize(
-            name=name,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def read_validating_admission_policy_status_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """read_validating_admission_policy_status
-
-        read status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_validating_admission_policy_status_serialize(
-            name=name,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _read_validating_admission_policy_status_serialize(
-        self,
-        name,
-        pretty,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}/status",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def replace_validating_admission_policy(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
+        v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -6695,15 +6125,15 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """replace_validating_admission_policy
+    ) -> V1alpha1MutatingAdmissionPolicy:
+        """replace_mutating_admission_policy
 
-        replace the specified ValidatingAdmissionPolicy
+        replace the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
+        :param v1alpha1_mutating_admission_policy: (required)
+        :type v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -6734,9 +6164,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._replace_validating_admission_policy_serialize(
+        _param = self._replace_mutating_admission_policy_serialize(
             name=name,
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
+            v1alpha1_mutating_admission_policy=v1alpha1_mutating_admission_policy,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -6748,8 +6178,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6762,12 +6192,12 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def replace_validating_admission_policy_with_http_info(
+    async def replace_mutating_admission_policy_with_http_info(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
+        v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -6803,15 +6233,15 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """replace_validating_admission_policy
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicy]:
+        """replace_mutating_admission_policy
 
-        replace the specified ValidatingAdmissionPolicy
+        replace the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
+        :param v1alpha1_mutating_admission_policy: (required)
+        :type v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -6842,9 +6272,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._replace_validating_admission_policy_serialize(
+        _param = self._replace_mutating_admission_policy_serialize(
             name=name,
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
+            v1alpha1_mutating_admission_policy=v1alpha1_mutating_admission_policy,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -6856,8 +6286,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6870,12 +6300,12 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def replace_validating_admission_policy_without_preload_content(
+    async def replace_mutating_admission_policy_without_preload_content(
         self,
         name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
+            str, Field(strict=True, description="name of the MutatingAdmissionPolicy")
         ],
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
+        v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -6912,14 +6342,14 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """replace_validating_admission_policy
+        """replace_mutating_admission_policy
 
-        replace the specified ValidatingAdmissionPolicy
+        replace the specified MutatingAdmissionPolicy
 
-        :param name: name of the ValidatingAdmissionPolicy (required)
+        :param name: name of the MutatingAdmissionPolicy (required)
         :type name: str
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
+        :param v1alpha1_mutating_admission_policy: (required)
+        :type v1alpha1_mutating_admission_policy: V1alpha1MutatingAdmissionPolicy
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -6950,9 +6380,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._replace_validating_admission_policy_serialize(
+        _param = self._replace_mutating_admission_policy_serialize(
             name=name,
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
+            v1alpha1_mutating_admission_policy=v1alpha1_mutating_admission_policy,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -6964,8 +6394,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
+            "200": "V1alpha1MutatingAdmissionPolicy",
+            "201": "V1alpha1MutatingAdmissionPolicy",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -6973,10 +6403,10 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _replace_validating_admission_policy_serialize(
+    def _replace_mutating_admission_policy_serialize(
         self,
         name,
-        v1alpha1_validating_admission_policy,
+        v1alpha1_mutating_admission_policy,
         pretty,
         dry_run,
         field_manager,
@@ -7023,13 +6453,14 @@ class AdmissionregistrationV1alpha1Api:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if v1alpha1_validating_admission_policy is not None:
-            _body_params = v1alpha1_validating_admission_policy
+        if v1alpha1_mutating_admission_policy is not None:
+            _body_params = v1alpha1_mutating_admission_policy
 
         # set the HTTP header `Accept`
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -7041,7 +6472,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="PUT",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -7055,15 +6486,15 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def replace_validating_admission_policy_binding(
+    async def replace_mutating_admission_policy_binding(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
-        v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding,
+        v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -7099,15 +6530,15 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicyBinding:
-        """replace_validating_admission_policy_binding
+    ) -> V1alpha1MutatingAdmissionPolicyBinding:
+        """replace_mutating_admission_policy_binding
 
-        replace the specified ValidatingAdmissionPolicyBinding
+        replace the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
-        :param v1alpha1_validating_admission_policy_binding: (required)
-        :type v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding
+        :param v1alpha1_mutating_admission_policy_binding: (required)
+        :type v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -7138,9 +6569,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._replace_validating_admission_policy_binding_serialize(
+        _param = self._replace_mutating_admission_policy_binding_serialize(
             name=name,
-            v1alpha1_validating_admission_policy_binding=v1alpha1_validating_admission_policy_binding,
+            v1alpha1_mutating_admission_policy_binding=v1alpha1_mutating_admission_policy_binding,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -7152,8 +6583,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -7166,15 +6597,15 @@ class AdmissionregistrationV1alpha1Api:
         ).data
 
     @validate_call
-    async def replace_validating_admission_policy_binding_with_http_info(
+    async def replace_mutating_admission_policy_binding_with_http_info(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
-        v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding,
+        v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -7210,15 +6641,15 @@ class AdmissionregistrationV1alpha1Api:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicyBinding]:
-        """replace_validating_admission_policy_binding
+    ) -> ApiResponse[V1alpha1MutatingAdmissionPolicyBinding]:
+        """replace_mutating_admission_policy_binding
 
-        replace the specified ValidatingAdmissionPolicyBinding
+        replace the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
-        :param v1alpha1_validating_admission_policy_binding: (required)
-        :type v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding
+        :param v1alpha1_mutating_admission_policy_binding: (required)
+        :type v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -7249,9 +6680,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._replace_validating_admission_policy_binding_serialize(
+        _param = self._replace_mutating_admission_policy_binding_serialize(
             name=name,
-            v1alpha1_validating_admission_policy_binding=v1alpha1_validating_admission_policy_binding,
+            v1alpha1_mutating_admission_policy_binding=v1alpha1_mutating_admission_policy_binding,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -7263,8 +6694,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -7277,15 +6708,15 @@ class AdmissionregistrationV1alpha1Api:
         )
 
     @validate_call
-    async def replace_validating_admission_policy_binding_without_preload_content(
+    async def replace_mutating_admission_policy_binding_without_preload_content(
         self,
         name: Annotated[
             str,
             Field(
-                strict=True, description="name of the ValidatingAdmissionPolicyBinding"
+                strict=True, description="name of the MutatingAdmissionPolicyBinding"
             ),
         ],
-        v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding,
+        v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding,
         pretty: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -7322,14 +6753,14 @@ class AdmissionregistrationV1alpha1Api:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """replace_validating_admission_policy_binding
+        """replace_mutating_admission_policy_binding
 
-        replace the specified ValidatingAdmissionPolicyBinding
+        replace the specified MutatingAdmissionPolicyBinding
 
-        :param name: name of the ValidatingAdmissionPolicyBinding (required)
+        :param name: name of the MutatingAdmissionPolicyBinding (required)
         :type name: str
-        :param v1alpha1_validating_admission_policy_binding: (required)
-        :type v1alpha1_validating_admission_policy_binding: V1alpha1ValidatingAdmissionPolicyBinding
+        :param v1alpha1_mutating_admission_policy_binding: (required)
+        :type v1alpha1_mutating_admission_policy_binding: V1alpha1MutatingAdmissionPolicyBinding
         :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
         :type pretty: str
         :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
@@ -7360,9 +6791,9 @@ class AdmissionregistrationV1alpha1Api:
         :return: Returns the result object.
         """  # noqa: E501
 
-        _param = self._replace_validating_admission_policy_binding_serialize(
+        _param = self._replace_mutating_admission_policy_binding_serialize(
             name=name,
-            v1alpha1_validating_admission_policy_binding=v1alpha1_validating_admission_policy_binding,
+            v1alpha1_mutating_admission_policy_binding=v1alpha1_mutating_admission_policy_binding,
             pretty=pretty,
             dry_run=dry_run,
             field_manager=field_manager,
@@ -7374,8 +6805,8 @@ class AdmissionregistrationV1alpha1Api:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicyBinding",
-            "201": "V1alpha1ValidatingAdmissionPolicyBinding",
+            "200": "V1alpha1MutatingAdmissionPolicyBinding",
+            "201": "V1alpha1MutatingAdmissionPolicyBinding",
             "401": None,
         }
         response_data = await self.api_client.call_api(
@@ -7383,10 +6814,10 @@ class AdmissionregistrationV1alpha1Api:
         )
         return response_data.response
 
-    def _replace_validating_admission_policy_binding_serialize(
+    def _replace_mutating_admission_policy_binding_serialize(
         self,
         name,
-        v1alpha1_validating_admission_policy_binding,
+        v1alpha1_mutating_admission_policy_binding,
         pretty,
         dry_run,
         field_manager,
@@ -7433,13 +6864,14 @@ class AdmissionregistrationV1alpha1Api:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if v1alpha1_validating_admission_policy_binding is not None:
-            _body_params = v1alpha1_validating_admission_policy_binding
+        if v1alpha1_mutating_admission_policy_binding is not None:
+            _body_params = v1alpha1_mutating_admission_policy_binding
 
         # set the HTTP header `Accept`
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -7451,408 +6883,7 @@ class AdmissionregistrationV1alpha1Api:
 
         return self.api_client.param_serialize(
             method="PUT",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def replace_validating_admission_policy_status(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha1ValidatingAdmissionPolicy:
-        """replace_validating_admission_policy_status
-
-        replace status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_validating_admission_policy_status_serialize(
-            name=name,
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def replace_validating_admission_policy_status_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha1ValidatingAdmissionPolicy]:
-        """replace_validating_admission_policy_status
-
-        replace status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_validating_admission_policy_status_serialize(
-            name=name,
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def replace_validating_admission_policy_status_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the ValidatingAdmissionPolicy")
-        ],
-        v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """replace_validating_admission_policy_status
-
-        replace status of the specified ValidatingAdmissionPolicy
-
-        :param name: name of the ValidatingAdmissionPolicy (required)
-        :type name: str
-        :param v1alpha1_validating_admission_policy: (required)
-        :type v1alpha1_validating_admission_policy: V1alpha1ValidatingAdmissionPolicy
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_validating_admission_policy_status_serialize(
-            name=name,
-            v1alpha1_validating_admission_policy=v1alpha1_validating_admission_policy,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha1ValidatingAdmissionPolicy",
-            "201": "V1alpha1ValidatingAdmissionPolicy",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _replace_validating_admission_policy_status_serialize(
-        self,
-        name,
-        v1alpha1_validating_admission_policy,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if v1alpha1_validating_admission_policy is not None:
-            _body_params = v1alpha1_validating_admission_policy
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="PUT",
-            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}/status",
+            resource_path="/apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

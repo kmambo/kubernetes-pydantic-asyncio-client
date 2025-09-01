@@ -35,7 +35,6 @@ class TestV1alpha3AllocationResult(unittest.TestCase):
         model = V1alpha3AllocationResult()
         if include_optional:
             return V1alpha3AllocationResult(
-                controller = '',
                 devices = kubernetes_asyncio.models.v1alpha3/device_allocation_result.v1alpha3.DeviceAllocationResult(
                     config = [
                         null

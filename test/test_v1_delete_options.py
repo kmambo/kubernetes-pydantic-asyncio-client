@@ -40,6 +40,7 @@ class TestV1DeleteOptions(unittest.TestCase):
                     ''
                     ],
                 grace_period_seconds = 56,
+                ignore_store_read_error_with_cluster_breaking_potential = True,
                 kind = '',
                 orphan_dependents = True,
                 preconditions = kubernetes_asyncio.models.v1/preconditions.v1.Preconditions(

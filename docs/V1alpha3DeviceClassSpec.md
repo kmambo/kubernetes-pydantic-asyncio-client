@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **config** | [**List[V1alpha3DeviceClassConfiguration]**](V1alpha3DeviceClassConfiguration.md) | Config defines configuration parameters that apply to each device that is claimed via this class. Some classses may potentially be satisfied by multiple drivers, so each instance of a vendor configuration applies to exactly one driver.  They are passed to the driver, but are not considered while allocating the claim. | [optional] 
 **selectors** | [**List[V1alpha3DeviceSelector]**](V1alpha3DeviceSelector.md) | Each selector must be satisfied by a device which is claimed via this class. | [optional] 
-**suitable_nodes** | [**V1NodeSelector**](V1NodeSelector.md) | Only nodes matching the selector will be considered by the scheduler when trying to find a Node that fits a Pod when that Pod uses a claim that has not been allocated yet *and* that claim gets allocated through a control plane controller. It is ignored when the claim does not use a control plane controller for allocation.  Setting this field is optional. If unset, all Nodes are candidates.  This is an alpha field and requires enabling the DRAControlPlaneController feature gate. | [optional] 
 
 ## Example
 

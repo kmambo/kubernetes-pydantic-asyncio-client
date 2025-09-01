@@ -22,7 +22,6 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
-from kubernetes_asyncio.models.v1_node_selector import V1NodeSelector
 from kubernetes_asyncio.models.v1alpha3_device_class_configuration import (
     V1alpha3DeviceClassConfiguration,
 )
@@ -42,12 +41,7 @@ class V1alpha3DeviceClassSpec(BaseModel):
         default=None,
         description="Each selector must be satisfied by a device which is claimed via this class.",
     )
-    suitable_nodes: Optional[V1NodeSelector] = Field(
-        default=None,
-        description="Only nodes matching the selector will be considered by the scheduler when trying to find a Node that fits a Pod when that Pod uses a claim that has not been allocated yet *and* that claim gets allocated through a control plane controller. It is ignored when the claim does not use a control plane controller for allocation.  Setting this field is optional. If unset, all Nodes are candidates.  This is an alpha field and requires enabling the DRAControlPlaneController feature gate.",
-        alias="suitableNodes",
-    )
-    __properties: ClassVar[List[str]] = ["config", "selectors", "suitableNodes"]
+    __properties: ClassVar[List[str]] = ["config", "selectors"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -100,9 +94,6 @@ class V1alpha3DeviceClassSpec(BaseModel):
                 if _item_selectors:
                     _items.append(_item_selectors.to_dict())
             _dict["selectors"] = _items
-        # override the default output from pydantic by calling `to_dict()` of suitable_nodes
-        if self.suitable_nodes:
-            _dict["suitableNodes"] = self.suitable_nodes.to_dict()
         return _dict
 
     @classmethod
@@ -130,11 +121,6 @@ class V1alpha3DeviceClassSpec(BaseModel):
                         for _item in obj["selectors"]
                     ]
                     if obj.get("selectors") is not None
-                    else None
-                ),
-                "suitableNodes": (
-                    V1NodeSelector.from_dict(obj["suitableNodes"])
-                    if obj.get("suitableNodes") is not None
                     else None
                 ),
             }

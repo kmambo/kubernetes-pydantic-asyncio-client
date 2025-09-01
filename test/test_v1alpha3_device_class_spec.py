@@ -40,11 +40,7 @@ class TestV1alpha3DeviceClassSpec(unittest.TestCase):
                     ],
                 selectors = [
                     null
-                    ],
-                suitable_nodes = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
-                    node_selector_terms = [
-                        null
-                        ], )
+                    ]
             )
         else:
             return V1alpha3DeviceClassSpec(

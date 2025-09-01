@@ -418,7 +418,7 @@
   },
   "info": {
     "title": "Kubernetes",
-    "version": "1.31.12"
+    "version": "1.32.8"
   },
   "openapi": "3.0.0",
   "paths": {
@@ -429,6 +429,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.APIResourceList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.APIResourceList"
@@ -511,6 +516,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1beta1.SelfSubjectReview"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1beta1.SelfSubjectReview"
@@ -531,6 +541,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1beta1.SelfSubjectReview"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1beta1.SelfSubjectReview"
@@ -551,6 +566,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1beta1.SelfSubjectReview"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1beta1.SelfSubjectReview"

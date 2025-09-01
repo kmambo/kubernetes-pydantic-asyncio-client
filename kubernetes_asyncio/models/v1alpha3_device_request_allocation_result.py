@@ -19,7 +19,7 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing_extensions import Self
 
 
@@ -28,6 +28,11 @@ class V1alpha3DeviceRequestAllocationResult(BaseModel):
     DeviceRequestAllocationResult contains the allocation result for one request.
     """  # noqa: E501
 
+    admin_access: Optional[StrictBool] = Field(
+        default=None,
+        description="AdminAccess indicates that this device was allocated for administrative access. See the corresponding request field for a definition of mode.  This is an alpha field and requires enabling the DRAAdminAccess feature gate. Admin access is disabled if this field is unset or set to false, otherwise it is enabled.",
+        alias="adminAccess",
+    )
     device: StrictStr = Field(
         description="Device references one device instance via its name in the driver's resource pool. It must be a DNS label."
     )
@@ -40,7 +45,13 @@ class V1alpha3DeviceRequestAllocationResult(BaseModel):
     request: StrictStr = Field(
         description="Request is the name of the request in the claim which caused this device to be allocated. Multiple devices may have been allocated per request."
     )
-    __properties: ClassVar[List[str]] = ["device", "driver", "pool", "request"]
+    __properties: ClassVar[List[str]] = [
+        "adminAccess",
+        "device",
+        "driver",
+        "pool",
+        "request",
+    ]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,6 +103,7 @@ class V1alpha3DeviceRequestAllocationResult(BaseModel):
 
         _obj = cls.model_validate(
             {
+                "adminAccess": obj.get("adminAccess"),
                 "device": obj.get("device") if obj.get("device") is not None else "",
                 "driver": obj.get("driver") if obj.get("driver") is not None else "",
                 "pool": obj.get("pool") if obj.get("pool") is not None else "",

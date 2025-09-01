@@ -91,17 +91,17 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     aws_elastic_block_store: Optional[V1AWSElasticBlockStoreVolumeSource] = Field(
         default=None,
-        description="awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore",
+        description="awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: AWSElasticBlockStore is deprecated. All operations for the in-tree awsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore",
         alias="awsElasticBlockStore",
     )
     azure_disk: Optional[V1AzureDiskVolumeSource] = Field(
         default=None,
-        description="azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.",
+        description="azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. Deprecated: AzureDisk is deprecated. All operations for the in-tree azureDisk type are redirected to the disk.csi.azure.com CSI driver.",
         alias="azureDisk",
     )
     azure_file: Optional[V1AzureFilePersistentVolumeSource] = Field(
         default=None,
-        description="azureFile represents an Azure File Service mount on the host and bind mount to the pod.",
+        description="azureFile represents an Azure File Service mount on the host and bind mount to the pod. Deprecated: AzureFile is deprecated. All operations for the in-tree azureFile type are redirected to the file.csi.azure.com CSI driver.",
         alias="azureFile",
     )
     capacity: Optional[Dict[str, V1PodSpecOverheadValue]] = Field(
@@ -110,11 +110,11 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     cephfs: Optional[V1CephFSPersistentVolumeSource] = Field(
         default=None,
-        description="cephFS represents a Ceph FS mount on the host that shares a pod's lifetime",
+        description="cephFS represents a Ceph FS mount on the host that shares a pod's lifetime. Deprecated: CephFS is deprecated and the in-tree cephfs type is no longer supported.",
     )
     cinder: Optional[V1CinderPersistentVolumeSource] = Field(
         default=None,
-        description="cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md",
+        description="cinder represents a cinder volume attached and mounted on kubelets host machine. Deprecated: Cinder is deprecated. All operations for the in-tree cinder type are redirected to the cinder.csi.openstack.org CSI driver. More info: https://examples.k8s.io/mysql-cinder-pd/README.md",
     )
     claim_ref: Optional[V1ObjectReference] = Field(
         default=None,
@@ -123,7 +123,7 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     csi: Optional[V1CSIPersistentVolumeSource] = Field(
         default=None,
-        description="csi represents storage that is handled by an external CSI driver (Beta feature).",
+        description="csi represents storage that is handled by an external CSI driver.",
     )
     fc: Optional[V1FCVolumeSource] = Field(
         default=None,
@@ -131,21 +131,21 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     flex_volume: Optional[V1FlexPersistentVolumeSource] = Field(
         default=None,
-        description="flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.",
+        description="flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. Deprecated: FlexVolume is deprecated. Consider using a CSIDriver instead.",
         alias="flexVolume",
     )
     flocker: Optional[V1FlockerVolumeSource] = Field(
         default=None,
-        description="flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running",
+        description="flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running. Deprecated: Flocker is deprecated and the in-tree flocker type is no longer supported.",
     )
     gce_persistent_disk: Optional[V1GCEPersistentDiskVolumeSource] = Field(
         default=None,
-        description="gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk",
+        description="gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. Deprecated: GCEPersistentDisk is deprecated. All operations for the in-tree gcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk",
         alias="gcePersistentDisk",
     )
     glusterfs: Optional[V1GlusterfsPersistentVolumeSource] = Field(
         default=None,
-        description="glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://examples.k8s.io/volumes/glusterfs/README.md",
+        description="glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. Deprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported. More info: https://examples.k8s.io/volumes/glusterfs/README.md",
     )
     host_path: Optional[V1HostPathVolumeSource] = Field(
         default=None,
@@ -181,25 +181,25 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     photon_persistent_disk: Optional[V1PhotonPersistentDiskVolumeSource] = Field(
         default=None,
-        description="photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine",
+        description="photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine. Deprecated: PhotonPersistentDisk is deprecated and the in-tree photonPersistentDisk type is no longer supported.",
         alias="photonPersistentDisk",
     )
     portworx_volume: Optional[V1PortworxVolumeSource] = Field(
         default=None,
-        description="portworxVolume represents a portworx volume attached and mounted on kubelets host machine",
+        description="portworxVolume represents a portworx volume attached and mounted on kubelets host machine. Deprecated: PortworxVolume is deprecated. All operations for the in-tree portworxVolume type are redirected to the pxd.portworx.com CSI driver when the CSIMigrationPortworx feature-gate is on.",
         alias="portworxVolume",
     )
     quobyte: Optional[V1QuobyteVolumeSource] = Field(
         default=None,
-        description="quobyte represents a Quobyte mount on the host that shares a pod's lifetime",
+        description="quobyte represents a Quobyte mount on the host that shares a pod's lifetime. Deprecated: Quobyte is deprecated and the in-tree quobyte type is no longer supported.",
     )
     rbd: Optional[V1RBDPersistentVolumeSource] = Field(
         default=None,
-        description="rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md",
+        description="rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer supported. More info: https://examples.k8s.io/volumes/rbd/README.md",
     )
     scale_io: Optional[V1ScaleIOPersistentVolumeSource] = Field(
         default=None,
-        description="scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.",
+        description="scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. Deprecated: ScaleIO is deprecated and the in-tree scaleIO type is no longer supported.",
         alias="scaleIO",
     )
     storage_class_name: Optional[StrictStr] = Field(
@@ -209,7 +209,7 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     storageos: Optional[V1StorageOSPersistentVolumeSource] = Field(
         default=None,
-        description="storageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://examples.k8s.io/volumes/storageos/README.md",
+        description="storageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod. Deprecated: StorageOS is deprecated and the in-tree storageos type is no longer supported. More info: https://examples.k8s.io/volumes/storageos/README.md",
     )
     volume_attributes_class_name: Optional[StrictStr] = Field(
         default=None,
@@ -223,7 +223,7 @@ class V1PersistentVolumeSpec(BaseModel):
     )
     vsphere_volume: Optional[V1VsphereVirtualDiskVolumeSource] = Field(
         default=None,
-        description="vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine",
+        description="vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine. Deprecated: VsphereVolume is deprecated. All operations for the in-tree vsphereVolume type are redirected to the csi.vsphere.vmware.com CSI driver.",
         alias="vsphereVolume",
     )
     __properties: ClassVar[List[str]] = [

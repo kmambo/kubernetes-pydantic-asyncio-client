@@ -19,7 +19,7 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1_node_selector import V1NodeSelector
@@ -33,10 +33,6 @@ class V1alpha3AllocationResult(BaseModel):
     AllocationResult contains attributes of an allocated resource.
     """  # noqa: E501
 
-    controller: Optional[StrictStr] = Field(
-        default=None,
-        description="Controller is the name of the DRA driver which handled the allocation. That driver is also responsible for deallocating the claim. It is empty when the claim can be deallocated without involving a driver.  A driver may allocate devices provided by other drivers, so this driver name here can be different from the driver names listed for the results.  This is an alpha field and requires enabling the DRAControlPlaneController feature gate.",
-    )
     devices: Optional[V1alpha3DeviceAllocationResult] = Field(
         default=None, description="Devices is the result of allocating devices."
     )
@@ -45,7 +41,7 @@ class V1alpha3AllocationResult(BaseModel):
         description="NodeSelector defines where the allocated resources are available. If unset, they are available everywhere.",
         alias="nodeSelector",
     )
-    __properties: ClassVar[List[str]] = ["controller", "devices", "nodeSelector"]
+    __properties: ClassVar[List[str]] = ["devices", "nodeSelector"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -103,7 +99,6 @@ class V1alpha3AllocationResult(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "controller": obj.get("controller"),
                 "devices": (
                     V1alpha3DeviceAllocationResult.from_dict(obj["devices"])
                     if obj.get("devices") is not None

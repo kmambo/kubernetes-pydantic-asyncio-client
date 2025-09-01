@@ -6,8 +6,8 @@ PodDNSConfigOption defines DNS resolver options of a pod.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Required. | [optional] 
-**value** | **str** |  | [optional] 
+**name** | **str** | Name is this DNS resolver option&#39;s name. Required. | [optional] 
+**value** | **str** | Value is this DNS resolver option&#39;s value. | [optional] 
 
 ## Example
 

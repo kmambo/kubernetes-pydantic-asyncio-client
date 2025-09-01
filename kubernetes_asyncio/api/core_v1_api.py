@@ -15937,6 +15937,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -16353,6 +16354,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -16769,6 +16771,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -17185,6 +17188,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -17601,6 +17605,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -18017,6 +18022,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -18433,6 +18439,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -18849,6 +18856,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -19280,6 +19288,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -19711,6 +19720,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -20127,6 +20137,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -20543,6 +20554,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -20959,6 +20971,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -21375,6 +21388,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -21791,6 +21805,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -22207,6 +22222,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -22644,6 +22660,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -23027,6 +23044,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -23410,6 +23428,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -23472,6 +23491,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -23551,6 +23576,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -23598,6 +23625,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -23666,6 +23694,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -23743,6 +23777,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -23790,6 +23826,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -23858,6 +23895,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -23935,6 +23978,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -23982,6 +24027,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -24014,6 +24060,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -24066,6 +24113,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -24108,6 +24164,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -24170,6 +24227,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -24249,6 +24312,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -24296,6 +24361,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -24364,6 +24430,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -24441,6 +24513,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -24488,6 +24562,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -24556,6 +24631,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -24633,6 +24714,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -24680,6 +24763,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -24712,6 +24796,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -24764,6 +24849,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -24806,6 +24900,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -24868,6 +24963,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -24947,6 +25048,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -24994,6 +25097,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -25062,6 +25166,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -25139,6 +25249,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -25186,6 +25298,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -25254,6 +25367,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -25331,6 +25450,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -25378,6 +25499,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -25410,6 +25532,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -25462,6 +25585,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -25504,6 +25636,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -25566,6 +25699,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -25645,6 +25784,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -25692,6 +25833,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -25760,6 +25902,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -25837,6 +25985,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -25884,6 +26034,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -25952,6 +26103,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -26029,6 +26186,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -26076,6 +26235,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -26108,6 +26268,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -26160,6 +26321,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -26202,6 +26372,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -26264,6 +26435,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -26343,6 +26520,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -26390,6 +26569,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -26458,6 +26638,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -26535,6 +26721,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -26582,6 +26770,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -26650,6 +26839,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -26727,6 +26922,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -26774,6 +26971,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -26806,6 +27004,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -26858,6 +27057,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -26900,6 +27108,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -26962,6 +27171,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -27041,6 +27256,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -27088,6 +27305,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -27156,6 +27374,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -27233,6 +27457,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -27280,6 +27506,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -27348,6 +27575,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -27425,6 +27658,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -27472,6 +27707,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -27504,6 +27740,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -27556,6 +27793,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -27598,6 +27844,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -27660,6 +27907,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -27739,6 +27992,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -27786,6 +28041,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -27854,6 +28110,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -27931,6 +28193,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -27978,6 +28242,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -28046,6 +28311,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -28123,6 +28394,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -28170,6 +28443,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -28202,6 +28476,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -28254,6 +28529,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -28296,6 +28580,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -28358,6 +28643,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -28437,6 +28728,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -28484,6 +28777,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -28552,6 +28846,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -28629,6 +28929,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -28676,6 +28978,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -28744,6 +29047,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -28821,6 +29130,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -28868,6 +29179,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -28900,6 +29212,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -28952,6 +29265,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -28994,6 +29316,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -29056,6 +29379,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -29135,6 +29464,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -29182,6 +29513,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -29250,6 +29582,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -29327,6 +29665,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -29374,6 +29714,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -29442,6 +29783,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -29519,6 +29866,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -29566,6 +29915,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -29598,6 +29948,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -29650,6 +30001,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -29692,6 +30052,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -29754,6 +30115,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -29833,6 +30200,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -29880,6 +30249,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -29948,6 +30318,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -30025,6 +30401,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -30072,6 +30450,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -30140,6 +30519,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -30217,6 +30602,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -30264,6 +30651,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -30296,6 +30684,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -30348,6 +30737,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -30390,6 +30788,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -30452,6 +30851,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -30531,6 +30936,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -30578,6 +30985,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -30646,6 +31054,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -30723,6 +31137,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -30770,6 +31186,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -30838,6 +31255,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -30915,6 +31338,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -30962,6 +31387,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -30994,6 +31420,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -31046,6 +31473,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -31088,6 +31524,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -31150,6 +31587,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -31229,6 +31672,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -31276,6 +31721,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -31344,6 +31790,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -31421,6 +31873,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -31468,6 +31922,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -31536,6 +31991,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -31613,6 +32074,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -31660,6 +32123,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -31692,6 +32156,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -31744,6 +32209,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -31786,6 +32260,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -31841,6 +32316,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -31918,6 +32399,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -31964,6 +32447,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -32025,6 +32509,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -32100,6 +32590,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -32146,6 +32638,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -32207,6 +32700,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -32282,6 +32781,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -32328,6 +32829,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -32359,6 +32861,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -32409,6 +32912,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -32451,6 +32963,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -32506,6 +33019,12 @@ class CoreV1Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -32583,6 +33102,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -32629,6 +33150,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -32690,6 +33212,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -32765,6 +33293,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -32811,6 +33341,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -32872,6 +33403,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -32947,6 +33484,8 @@ class CoreV1Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -32993,6 +33532,7 @@ class CoreV1Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -33024,6 +33564,7 @@ class CoreV1Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -33074,6 +33615,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -33116,6 +33666,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -33162,6 +33713,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -33199,6 +33756,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -33232,6 +33791,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -33277,6 +33837,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -33314,6 +33880,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -33347,6 +33915,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -33392,6 +33961,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -33429,6 +34004,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -33462,6 +34039,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -33487,6 +34065,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -33525,6 +34104,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -33543,6 +34131,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -33596,6 +34185,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -33635,6 +34230,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -33669,6 +34266,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -33721,6 +34319,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -33760,6 +34364,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -33794,6 +34400,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -33846,6 +34453,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -33885,6 +34498,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -33919,6 +34534,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -33945,6 +34561,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -33985,6 +34602,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -34003,6 +34629,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -34056,6 +34683,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -34095,6 +34728,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -34129,6 +34764,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -34181,6 +34817,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -34220,6 +34862,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -34254,6 +34898,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -34306,6 +34951,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -34345,6 +34996,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -34379,6 +35032,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -34405,6 +35059,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -34445,6 +35100,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -34463,6 +35127,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -34516,6 +35181,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -34555,6 +35226,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -34589,6 +35262,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -34641,6 +35315,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -34680,6 +35360,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -34714,6 +35396,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -34766,6 +35449,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -34805,6 +35494,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -34839,6 +35530,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -34865,6 +35557,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -34905,6 +35598,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -34923,6 +35625,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -34976,6 +35679,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35015,6 +35724,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35049,6 +35760,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -35101,6 +35813,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35140,6 +35858,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35174,6 +35894,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -35226,6 +35947,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35265,6 +35992,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35299,6 +36028,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -35325,6 +36055,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -35365,6 +36096,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -35383,6 +36123,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -35438,6 +36179,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35477,6 +36224,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35511,6 +36260,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -35565,6 +36315,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35604,6 +36360,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35638,6 +36396,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -35692,6 +36451,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35731,6 +36496,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35765,6 +36532,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -35791,6 +36559,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -35831,6 +36600,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -35849,6 +36627,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -35902,6 +36681,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -35941,6 +36726,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -35975,6 +36762,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36027,6 +36815,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36066,6 +36860,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -36100,6 +36896,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36152,6 +36949,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36191,6 +36994,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -36225,6 +37030,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36251,6 +37057,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -36291,6 +37098,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -36309,6 +37125,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -36362,6 +37179,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36401,6 +37224,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -36435,6 +37260,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36487,6 +37313,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36526,6 +37358,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -36560,6 +37394,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36612,6 +37447,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36651,6 +37492,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -36685,6 +37528,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36711,6 +37555,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -36751,6 +37596,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -36769,6 +37623,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -36824,6 +37679,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36863,6 +37724,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -36897,6 +37760,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -36951,6 +37815,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -36990,6 +37860,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37024,6 +37896,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -37078,6 +37951,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -37117,6 +37996,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37151,6 +38032,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -37177,6 +38059,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -37217,6 +38100,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -37235,6 +38127,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -37290,6 +38183,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -37329,6 +38228,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37363,6 +38264,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -37417,6 +38319,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -37456,6 +38364,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37490,6 +38400,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -37544,6 +38455,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -37583,6 +38500,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37617,6 +38536,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -37643,6 +38563,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -37683,6 +38604,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -37701,6 +38631,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -37754,6 +38685,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -37793,6 +38730,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37827,6 +38766,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -37879,6 +38819,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -37918,6 +38864,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -37952,6 +38900,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38004,6 +38953,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38043,6 +38998,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -38077,6 +39034,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38103,6 +39061,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -38143,6 +39102,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -38161,6 +39129,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -38214,6 +39183,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38253,6 +39228,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -38287,6 +39264,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38339,6 +39317,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38378,6 +39362,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -38412,6 +39398,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38464,6 +39451,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38503,6 +39496,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -38537,6 +39532,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38563,6 +39559,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -38603,6 +39600,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -38621,6 +39627,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -38676,6 +39683,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38715,6 +39728,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -38749,6 +39764,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38803,6 +39819,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38842,6 +39864,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -38876,6 +39900,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -38930,6 +39955,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -38969,6 +40000,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39003,6 +40036,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39029,6 +40063,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -39069,6 +40104,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -39087,6 +40131,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -39133,6 +40178,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -39170,6 +40221,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39203,6 +40256,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39248,6 +40302,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -39285,6 +40345,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39318,6 +40380,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39363,6 +40426,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -39400,6 +40469,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39433,6 +40504,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39458,6 +40530,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -39496,6 +40569,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -39514,6 +40596,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -39562,6 +40645,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -39599,6 +40688,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39632,6 +40723,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39679,6 +40771,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -39716,6 +40814,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39749,6 +40849,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39796,6 +40897,12 @@ class CoreV1Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -39833,6 +40940,8 @@ class CoreV1Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -39866,6 +40975,7 @@ class CoreV1Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -39891,6 +41001,7 @@ class CoreV1Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -39929,6 +41040,15 @@ class CoreV1Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -39947,6 +41067,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -40181,6 +41302,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -40767,6 +41889,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -41355,6 +42479,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -41943,6 +43069,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -42531,6 +43659,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -43119,6 +44249,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -43707,6 +44839,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -44328,6 +45462,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -44949,6 +46085,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -45570,6 +46708,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -46191,6 +47331,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -46812,6 +47954,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -47433,6 +48577,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -48054,6 +49200,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -48675,6 +49823,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -49296,6 +50446,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -49917,6 +51069,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -50538,6 +51692,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -51159,6 +52315,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -51747,6 +52905,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -52335,6 +53495,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -52923,6 +54085,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -53511,6 +54675,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -54099,6 +55265,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -54687,6 +55855,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -55275,6 +56445,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -55863,6 +57035,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -56451,6 +57625,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -57039,6 +58215,8 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -57468,6 +58646,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -57480,6 +58659,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -57910,6 +59090,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -57922,6 +59103,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -58385,6 +59567,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -58397,6 +59580,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -58860,6 +60044,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -58872,6 +60057,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -59335,6 +60521,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -59347,6 +60534,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -59810,6 +60998,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -59822,6 +61011,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -60291,6 +61481,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -60303,6 +61494,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -60772,6 +61964,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -60784,6 +61977,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -61247,6 +62441,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -61259,6 +62454,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -61722,6 +62918,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -61734,6 +62931,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -61749,6 +62947,483 @@ class CoreV1Api:
         return self.api_client.param_serialize(
             method="PATCH",
             resource_path="/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers",
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth,
+        )
+
+    @validate_call
+    async def patch_namespaced_pod_resize(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        body: Dict[str, Any],
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        dry_run: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
+            ),
+        ] = None,
+        field_manager: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
+            ),
+        ] = None,
+        field_validation: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
+            ),
+        ] = None,
+        force: Annotated[
+            Optional[StrictBool],
+            Field(
+                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> V1Pod:
+        """patch_namespaced_pod_resize
+
+        partially update resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param body: (required)
+        :type body: object
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+        :type dry_run: str
+        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
+        :type field_manager: str
+        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
+        :type field_validation: str
+        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
+        :type force: bool
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._patch_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            body=body,
+            pretty=pretty,
+            dry_run=dry_run,
+            field_manager=field_manager,
+            field_validation=field_validation,
+            force=force,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "201": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+    @validate_call
+    async def patch_namespaced_pod_resize_with_http_info(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        body: Dict[str, Any],
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        dry_run: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
+            ),
+        ] = None,
+        field_manager: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
+            ),
+        ] = None,
+        field_validation: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
+            ),
+        ] = None,
+        force: Annotated[
+            Optional[StrictBool],
+            Field(
+                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[V1Pod]:
+        """patch_namespaced_pod_resize
+
+        partially update resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param body: (required)
+        :type body: object
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+        :type dry_run: str
+        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
+        :type field_manager: str
+        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
+        :type field_validation: str
+        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
+        :type force: bool
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._patch_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            body=body,
+            pretty=pretty,
+            dry_run=dry_run,
+            field_manager=field_manager,
+            field_validation=field_validation,
+            force=force,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "201": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+    @validate_call
+    async def patch_namespaced_pod_resize_without_preload_content(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        body: Dict[str, Any],
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        dry_run: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
+            ),
+        ] = None,
+        field_manager: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
+            ),
+        ] = None,
+        field_validation: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
+            ),
+        ] = None,
+        force: Annotated[
+            Optional[StrictBool],
+            Field(
+                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """patch_namespaced_pod_resize
+
+        partially update resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param body: (required)
+        :type body: object
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+        :type dry_run: str
+        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
+        :type field_manager: str
+        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
+        :type field_validation: str
+        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
+        :type force: bool
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._patch_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            body=body,
+            pretty=pretty,
+            dry_run=dry_run,
+            field_manager=field_manager,
+            field_validation=field_validation,
+            force=force,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "201": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+    def _patch_namespaced_pod_resize_serialize(
+        self,
+        name,
+        namespace,
+        body,
+        pretty,
+        dry_run,
+        field_manager,
+        field_validation,
+        force,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {}
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params["name"] = name
+        if namespace is not None:
+            _path_params["namespace"] = namespace
+        # process the query parameters
+        if pretty is not None:
+
+            _query_params.append(("pretty", pretty))
+
+        if dry_run is not None:
+
+            _query_params.append(("dryRun", dry_run))
+
+        if field_manager is not None:
+
+            _query_params.append(("fieldManager", field_manager))
+
+        if field_validation is not None:
+
+            _query_params.append(("fieldValidation", field_validation))
+
+        if force is not None:
+
+            _query_params.append(("force", force))
+
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if body is not None:
+            _body_params = body
+
+        # set the HTTP header `Accept`
+        if "Accept" not in _header_params:
+            _header_params["Accept"] = self.api_client.select_header_accept(
+                [
+                    "application/cbor",
+                    "application/json",
+                    "application/vnd.kubernetes.protobuf",
+                    "application/yaml",
+                ]
+            )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params["Content-Type"] = _content_type
+        else:
+            _default_content_type = self.api_client.select_header_content_type(
+                [
+                    "application/apply-patch+cbor",
+                    "application/apply-patch+yaml",
+                    "application/json-patch+json",
+                    "application/merge-patch+json",
+                    "application/strategic-merge-patch+json",
+                ]
+            )
+            if _default_content_type is not None:
+                _header_params["Content-Type"] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = []
+
+        return self.api_client.param_serialize(
+            method="PATCH",
+            resource_path="/api/v1/namespaces/{namespace}/pods/{name}/resize",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -62197,6 +63872,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -62209,6 +63885,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -62672,6 +64349,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -62684,6 +64362,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -63153,6 +64832,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -63165,6 +64845,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -63628,6 +65309,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -63640,6 +65322,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -64109,6 +65792,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -64121,6 +65805,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -64590,6 +66275,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -64602,6 +66288,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -65071,6 +66758,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -65083,6 +66771,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -65546,6 +67235,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -65558,6 +67248,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -66021,6 +67712,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -66033,6 +67725,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -66502,6 +68195,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -66514,6 +68208,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -66977,6 +68672,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -66989,6 +68685,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -67419,6 +69116,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -67431,6 +69129,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -67861,6 +69560,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -67873,6 +69573,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -68309,6 +70010,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -68321,6 +70023,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -68757,6 +70460,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -68769,6 +70473,7 @@ class CoreV1Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -69059,6 +70764,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -69340,6 +71046,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -69621,6 +71328,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -69935,6 +71643,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -70249,6 +71958,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -70563,6 +72273,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -70877,6 +72588,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -71197,6 +72909,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -71517,6 +73230,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -71831,6 +73545,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -72145,6 +73860,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -72220,10 +73936,16 @@ class CoreV1Api:
                 description="A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified."
             ),
         ] = None,
+        stream: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description='Specify which container log stream to return to the client. Acceptable values are "All", "Stdout" and "Stderr". If not specified, "All" is used, and both stdout and stderr are returned interleaved. Note that when "TailLines" is specified, "Stream" can only be set to nil or "All".'
+            ),
+        ] = None,
         tail_lines: Annotated[
             Optional[Annotated[int, Field(strict=True)]],
             Field(
-                description="If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime"
+                description='If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime. Note that when "TailLines" is specified, "Stream" can only be set to nil or "All".'
             ),
         ] = None,
         timestamps: Annotated[
@@ -72266,7 +73988,9 @@ class CoreV1Api:
         :type previous: bool
         :param since_seconds: A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified.
         :type since_seconds: int
-        :param tail_lines: If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime
+        :param stream: Specify which container log stream to return to the client. Acceptable values are \"All\", \"Stdout\" and \"Stderr\". If not specified, \"All\" is used, and both stdout and stderr are returned interleaved. Note that when \"TailLines\" is specified, \"Stream\" can only be set to nil or \"All\".
+        :type stream: str
+        :param tail_lines: If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime. Note that when \"TailLines\" is specified, \"Stream\" can only be set to nil or \"All\".
         :type tail_lines: int
         :param timestamps: If true, add an RFC3339 or RFC3339Nano timestamp at the beginning of every line of log output. Defaults to false.
         :type timestamps: bool
@@ -72302,6 +74026,7 @@ class CoreV1Api:
             pretty=pretty,
             previous=previous,
             since_seconds=since_seconds,
+            stream=stream,
             tail_lines=tail_lines,
             timestamps=timestamps,
             _request_auth=_request_auth,
@@ -72374,10 +74099,16 @@ class CoreV1Api:
                 description="A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified."
             ),
         ] = None,
+        stream: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description='Specify which container log stream to return to the client. Acceptable values are "All", "Stdout" and "Stderr". If not specified, "All" is used, and both stdout and stderr are returned interleaved. Note that when "TailLines" is specified, "Stream" can only be set to nil or "All".'
+            ),
+        ] = None,
         tail_lines: Annotated[
             Optional[Annotated[int, Field(strict=True)]],
             Field(
-                description="If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime"
+                description='If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime. Note that when "TailLines" is specified, "Stream" can only be set to nil or "All".'
             ),
         ] = None,
         timestamps: Annotated[
@@ -72420,7 +74151,9 @@ class CoreV1Api:
         :type previous: bool
         :param since_seconds: A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified.
         :type since_seconds: int
-        :param tail_lines: If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime
+        :param stream: Specify which container log stream to return to the client. Acceptable values are \"All\", \"Stdout\" and \"Stderr\". If not specified, \"All\" is used, and both stdout and stderr are returned interleaved. Note that when \"TailLines\" is specified, \"Stream\" can only be set to nil or \"All\".
+        :type stream: str
+        :param tail_lines: If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime. Note that when \"TailLines\" is specified, \"Stream\" can only be set to nil or \"All\".
         :type tail_lines: int
         :param timestamps: If true, add an RFC3339 or RFC3339Nano timestamp at the beginning of every line of log output. Defaults to false.
         :type timestamps: bool
@@ -72456,6 +74189,7 @@ class CoreV1Api:
             pretty=pretty,
             previous=previous,
             since_seconds=since_seconds,
+            stream=stream,
             tail_lines=tail_lines,
             timestamps=timestamps,
             _request_auth=_request_auth,
@@ -72528,10 +74262,16 @@ class CoreV1Api:
                 description="A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified."
             ),
         ] = None,
+        stream: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description='Specify which container log stream to return to the client. Acceptable values are "All", "Stdout" and "Stderr". If not specified, "All" is used, and both stdout and stderr are returned interleaved. Note that when "TailLines" is specified, "Stream" can only be set to nil or "All".'
+            ),
+        ] = None,
         tail_lines: Annotated[
             Optional[Annotated[int, Field(strict=True)]],
             Field(
-                description="If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime"
+                description='If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime. Note that when "TailLines" is specified, "Stream" can only be set to nil or "All".'
             ),
         ] = None,
         timestamps: Annotated[
@@ -72574,7 +74314,9 @@ class CoreV1Api:
         :type previous: bool
         :param since_seconds: A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified.
         :type since_seconds: int
-        :param tail_lines: If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime
+        :param stream: Specify which container log stream to return to the client. Acceptable values are \"All\", \"Stdout\" and \"Stderr\". If not specified, \"All\" is used, and both stdout and stderr are returned interleaved. Note that when \"TailLines\" is specified, \"Stream\" can only be set to nil or \"All\".
+        :type stream: str
+        :param tail_lines: If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime. Note that when \"TailLines\" is specified, \"Stream\" can only be set to nil or \"All\".
         :type tail_lines: int
         :param timestamps: If true, add an RFC3339 or RFC3339Nano timestamp at the beginning of every line of log output. Defaults to false.
         :type timestamps: bool
@@ -72610,6 +74352,7 @@ class CoreV1Api:
             pretty=pretty,
             previous=previous,
             since_seconds=since_seconds,
+            stream=stream,
             tail_lines=tail_lines,
             timestamps=timestamps,
             _request_auth=_request_auth,
@@ -72638,6 +74381,7 @@ class CoreV1Api:
         pretty,
         previous,
         since_seconds,
+        stream,
         tail_lines,
         timestamps,
         _request_auth,
@@ -72695,6 +74439,10 @@ class CoreV1Api:
 
             _query_params.append(("sinceSeconds", since_seconds))
 
+        if stream is not None:
+
+            _query_params.append(("stream", stream))
+
         if tail_lines is not None:
 
             _query_params.append(("tailLines", tail_lines))
@@ -72711,6 +74459,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -72724,6 +74473,321 @@ class CoreV1Api:
         return self.api_client.param_serialize(
             method="GET",
             resource_path="/api/v1/namespaces/{namespace}/pods/{name}/log",
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth,
+        )
+
+    @validate_call
+    async def read_namespaced_pod_resize(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> V1Pod:
+        """read_namespaced_pod_resize
+
+        read resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._read_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            pretty=pretty,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+    @validate_call
+    async def read_namespaced_pod_resize_with_http_info(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[V1Pod]:
+        """read_namespaced_pod_resize
+
+        read resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._read_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            pretty=pretty,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+    @validate_call
+    async def read_namespaced_pod_resize_without_preload_content(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """read_namespaced_pod_resize
+
+        read resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._read_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            pretty=pretty,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+    def _read_namespaced_pod_resize_serialize(
+        self,
+        name,
+        namespace,
+        pretty,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {}
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params["name"] = name
+        if namespace is not None:
+            _path_params["namespace"] = namespace
+        # process the query parameters
+        if pretty is not None:
+
+            _query_params.append(("pretty", pretty))
+
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+        # set the HTTP header `Accept`
+        if "Accept" not in _header_params:
+            _header_params["Accept"] = self.api_client.select_header_accept(
+                [
+                    "application/cbor",
+                    "application/json",
+                    "application/vnd.kubernetes.protobuf",
+                    "application/yaml",
+                ]
+            )
+
+        # authentication setting
+        _auth_settings: List[str] = []
+
+        return self.api_client.param_serialize(
+            method="GET",
+            resource_path="/api/v1/namespaces/{namespace}/pods/{name}/resize",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -73026,6 +75090,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -73340,6 +75405,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -73660,6 +75726,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -73974,6 +76041,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -74294,6 +76362,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -74614,6 +76683,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -74934,6 +77004,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -75248,6 +77319,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -75562,6 +77634,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -75882,6 +77955,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -76196,6 +78270,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -76477,6 +78552,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -76758,6 +78834,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -77045,6 +79122,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -77332,6 +79410,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -77727,6 +79806,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -78122,6 +80202,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -78517,6 +80598,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -78945,6 +81027,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -79373,6 +81456,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -79801,6 +81885,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -80229,6 +82314,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -80663,6 +82749,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -81097,6 +83184,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -81525,6 +83613,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -81953,6 +84042,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -81965,6 +84055,435 @@ class CoreV1Api:
         return self.api_client.param_serialize(
             method="PUT",
             resource_path="/api/v1/namespaces/{namespace}/pods/{name}/ephemeralcontainers",
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth,
+        )
+
+    @validate_call
+    async def replace_namespaced_pod_resize(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        v1_pod: V1Pod,
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        dry_run: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
+            ),
+        ] = None,
+        field_manager: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
+            ),
+        ] = None,
+        field_validation: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> V1Pod:
+        """replace_namespaced_pod_resize
+
+        replace resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param v1_pod: (required)
+        :type v1_pod: V1Pod
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+        :type dry_run: str
+        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
+        :type field_manager: str
+        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
+        :type field_validation: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._replace_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            v1_pod=v1_pod,
+            pretty=pretty,
+            dry_run=dry_run,
+            field_manager=field_manager,
+            field_validation=field_validation,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "201": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+    @validate_call
+    async def replace_namespaced_pod_resize_with_http_info(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        v1_pod: V1Pod,
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        dry_run: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
+            ),
+        ] = None,
+        field_manager: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
+            ),
+        ] = None,
+        field_validation: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[V1Pod]:
+        """replace_namespaced_pod_resize
+
+        replace resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param v1_pod: (required)
+        :type v1_pod: V1Pod
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+        :type dry_run: str
+        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
+        :type field_manager: str
+        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
+        :type field_validation: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._replace_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            v1_pod=v1_pod,
+            pretty=pretty,
+            dry_run=dry_run,
+            field_manager=field_manager,
+            field_validation=field_validation,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "201": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        await response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+    @validate_call
+    async def replace_namespaced_pod_resize_without_preload_content(
+        self,
+        name: Annotated[str, Field(strict=True, description="name of the Pod")],
+        namespace: Annotated[
+            str,
+            Field(
+                strict=True,
+                description="object name and auth scope, such as for teams and projects",
+            ),
+        ],
+        v1_pod: V1Pod,
+        pretty: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
+            ),
+        ] = None,
+        dry_run: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
+            ),
+        ] = None,
+        field_manager: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
+            ),
+        ] = None,
+        field_validation: Annotated[
+            Optional[Annotated[str, Field(strict=True)]],
+            Field(
+                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
+            ),
+        ] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
+            ],
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """replace_namespaced_pod_resize
+
+        replace resize of the specified Pod
+
+        :param name: name of the Pod (required)
+        :type name: str
+        :param namespace: object name and auth scope, such as for teams and projects (required)
+        :type namespace: str
+        :param v1_pod: (required)
+        :type v1_pod: V1Pod
+        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
+        :type pretty: str
+        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
+        :type dry_run: str
+        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
+        :type field_manager: str
+        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
+        :type field_validation: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """  # noqa: E501
+
+        _param = self._replace_namespaced_pod_resize_serialize(
+            name=name,
+            namespace=namespace,
+            v1_pod=v1_pod,
+            pretty=pretty,
+            dry_run=dry_run,
+            field_manager=field_manager,
+            field_validation=field_validation,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index,
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            "200": "V1Pod",
+            "201": "V1Pod",
+            "401": None,
+        }
+        response_data = await self.api_client.call_api(
+            *_param, _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+    def _replace_namespaced_pod_resize_serialize(
+        self,
+        name,
+        namespace,
+        v1_pod,
+        pretty,
+        dry_run,
+        field_manager,
+        field_validation,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {}
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if name is not None:
+            _path_params["name"] = name
+        if namespace is not None:
+            _path_params["namespace"] = namespace
+        # process the query parameters
+        if pretty is not None:
+
+            _query_params.append(("pretty", pretty))
+
+        if dry_run is not None:
+
+            _query_params.append(("dryRun", dry_run))
+
+        if field_manager is not None:
+
+            _query_params.append(("fieldManager", field_manager))
+
+        if field_validation is not None:
+
+            _query_params.append(("fieldValidation", field_validation))
+
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if v1_pod is not None:
+            _body_params = v1_pod
+
+        # set the HTTP header `Accept`
+        if "Accept" not in _header_params:
+            _header_params["Accept"] = self.api_client.select_header_accept(
+                [
+                    "application/cbor",
+                    "application/json",
+                    "application/vnd.kubernetes.protobuf",
+                    "application/yaml",
+                ]
+            )
+
+        # authentication setting
+        _auth_settings: List[str] = []
+
+        return self.api_client.param_serialize(
+            method="PUT",
+            resource_path="/api/v1/namespaces/{namespace}/pods/{name}/resize",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -82381,6 +84900,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -82809,6 +85329,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -83243,6 +85764,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -83671,6 +86193,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -84105,6 +86628,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -84539,6 +87063,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -84973,6 +87498,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -85401,6 +87927,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -85829,6 +88356,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -86263,6 +88791,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -86691,6 +89220,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -87086,6 +89616,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -87481,6 +90012,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -87882,6 +90414,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -88283,6 +90816,7 @@ class CoreV1Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",

@@ -35,7 +35,6 @@ class TestV1alpha3ResourceClaimSpec(unittest.TestCase):
         model = V1alpha3ResourceClaimSpec()
         if include_optional:
             return V1alpha3ResourceClaimSpec(
-                controller = '',
                 devices = kubernetes_asyncio.models.v1alpha3/device_claim.v1alpha3.DeviceClaim(
                     config = [
                         null

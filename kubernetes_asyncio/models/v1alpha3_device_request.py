@@ -31,8 +31,8 @@ class V1alpha3DeviceRequest(BaseModel):
     """  # noqa: E501
 
     admin_access: Optional[StrictBool] = Field(
-        default=False,
-        description="AdminAccess indicates that this is a claim for administrative access to the device(s). Claims with AdminAccess are expected to be used for monitoring or other management services for a device.  They ignore all ordinary claims to the device with respect to access modes and any resource allocations.",
+        default=None,
+        description="AdminAccess indicates that this is a claim for administrative access to the device(s). Claims with AdminAccess are expected to be used for monitoring or other management services for a device.  They ignore all ordinary claims to the device with respect to access modes and any resource allocations.  This is an alpha field and requires enabling the DRAAdminAccess feature gate. Admin access is disabled if this field is unset or set to false, otherwise it is enabled.",
         alias="adminAccess",
     )
     allocation_mode: Optional[StrictStr] = Field(
@@ -121,11 +121,7 @@ class V1alpha3DeviceRequest(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "adminAccess": (
-                    obj.get("adminAccess")
-                    if obj.get("adminAccess") is not None
-                    else False
-                ),
+                "adminAccess": obj.get("adminAccess"),
                 "allocationMode": obj.get("allocationMode"),
                 "count": obj.get("count"),
                 "deviceClassName": (

@@ -937,6 +937,10 @@
             "format": "int64",
             "type": "integer"
           },
+          "ignoreStoreReadErrorWithClusterBreakingPotential": {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "type": "boolean"
+          },
           "kind": {
             "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
             "type": "string"
@@ -1103,7 +1107,7 @@
           {
             "group": "coordination.k8s.io",
             "kind": "DeleteOptions",
-            "version": "v1alpha1"
+            "version": "v1alpha2"
           },
           {
             "group": "coordination.k8s.io",
@@ -1224,6 +1228,11 @@
             "group": "resource.k8s.io",
             "kind": "DeleteOptions",
             "version": "v1alpha3"
+          },
+          {
+            "group": "resource.k8s.io",
+            "kind": "DeleteOptions",
+            "version": "v1beta1"
           },
           {
             "group": "scheduling.k8s.io",
@@ -1839,7 +1848,7 @@
           {
             "group": "coordination.k8s.io",
             "kind": "WatchEvent",
-            "version": "v1alpha1"
+            "version": "v1alpha2"
           },
           {
             "group": "coordination.k8s.io",
@@ -1962,6 +1971,11 @@
             "version": "v1alpha3"
           },
           {
+            "group": "resource.k8s.io",
+            "kind": "WatchEvent",
+            "version": "v1beta1"
+          },
+          {
             "group": "scheduling.k8s.io",
             "kind": "WatchEvent",
             "version": "v1"
@@ -2022,7 +2036,7 @@
   },
   "info": {
     "title": "Kubernetes",
-    "version": "1.31.12"
+    "version": "1.32.8"
   },
   "openapi": "3.0.0",
   "paths": {
@@ -2033,6 +2047,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.APIResourceList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.APIResourceList"
@@ -2098,6 +2117,15 @@
             "name": "gracePeriodSeconds",
             "schema": {
               "type": "integer",
+              "uniqueItems": true
+            }
+          },
+          {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "in": "query",
+            "name": "ignoreStoreReadErrorWithClusterBreakingPotential",
+            "schema": {
+              "type": "boolean",
               "uniqueItems": true
             }
           },
@@ -2186,6 +2214,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -2316,6 +2349,16 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClassList"
+                }
+              },
+              "application/cbor-seq": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClassList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClassList"
@@ -2414,6 +2457,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2434,6 +2482,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2454,6 +2507,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2511,6 +2569,15 @@
             }
           },
           {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "in": "query",
+            "name": "ignoreStoreReadErrorWithClusterBreakingPotential",
+            "schema": {
+              "type": "boolean",
+              "uniqueItems": true
+            }
+          },
+          {
             "description": "Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.",
             "in": "query",
             "name": "orphanDependents",
@@ -2541,6 +2608,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -2561,6 +2633,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -2599,6 +2676,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2695,6 +2777,12 @@
         ],
         "requestBody": {
           "content": {
+            "application/apply-patch+cbor": {
+              "schema": {
+                "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
+                "type": "object"
+              }
+            },
             "application/apply-patch+yaml": {
               "schema": {
                 "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
@@ -2725,6 +2813,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2745,6 +2838,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2822,6 +2920,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2842,6 +2945,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressClass"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressClass"
@@ -2882,6 +2990,16 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressList"
+                }
+              },
+              "application/cbor-seq": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressList"
@@ -3068,6 +3186,15 @@
             }
           },
           {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "in": "query",
+            "name": "ignoreStoreReadErrorWithClusterBreakingPotential",
+            "schema": {
+              "type": "boolean",
+              "uniqueItems": true
+            }
+          },
+          {
             "description": "A selector to restrict the list of returned objects by their labels. Defaults to everything.",
             "in": "query",
             "name": "labelSelector",
@@ -3152,6 +3279,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -3282,6 +3414,16 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressList"
+                }
+              },
+              "application/cbor-seq": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.IngressList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.IngressList"
@@ -3390,6 +3532,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3410,6 +3557,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3430,6 +3582,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3487,6 +3644,15 @@
             }
           },
           {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "in": "query",
+            "name": "ignoreStoreReadErrorWithClusterBreakingPotential",
+            "schema": {
+              "type": "boolean",
+              "uniqueItems": true
+            }
+          },
+          {
             "description": "Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.",
             "in": "query",
             "name": "orphanDependents",
@@ -3517,6 +3683,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -3537,6 +3708,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -3575,6 +3751,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3681,6 +3862,12 @@
         ],
         "requestBody": {
           "content": {
+            "application/apply-patch+cbor": {
+              "schema": {
+                "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
+                "type": "object"
+              }
+            },
             "application/apply-patch+yaml": {
               "schema": {
                 "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
@@ -3711,6 +3898,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3731,6 +3923,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3808,6 +4005,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3828,6 +4030,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3868,6 +4075,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -3974,6 +4186,12 @@
         ],
         "requestBody": {
           "content": {
+            "application/apply-patch+cbor": {
+              "schema": {
+                "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
+                "type": "object"
+              }
+            },
             "application/apply-patch+yaml": {
               "schema": {
                 "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
@@ -4004,6 +4222,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -4024,6 +4247,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -4101,6 +4329,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -4121,6 +4354,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Ingress"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Ingress"
@@ -4192,6 +4430,15 @@
             "name": "gracePeriodSeconds",
             "schema": {
               "type": "integer",
+              "uniqueItems": true
+            }
+          },
+          {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "in": "query",
+            "name": "ignoreStoreReadErrorWithClusterBreakingPotential",
+            "schema": {
+              "type": "boolean",
               "uniqueItems": true
             }
           },
@@ -4280,6 +4527,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -4410,6 +4662,16 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicyList"
+                }
+              },
+              "application/cbor-seq": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicyList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicyList"
@@ -4518,6 +4780,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4538,6 +4805,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4558,6 +4830,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4615,6 +4892,15 @@
             }
           },
           {
+            "description": "if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            "in": "query",
+            "name": "ignoreStoreReadErrorWithClusterBreakingPotential",
+            "schema": {
+              "type": "boolean",
+              "uniqueItems": true
+            }
+          },
+          {
             "description": "Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.",
             "in": "query",
             "name": "orphanDependents",
@@ -4645,6 +4931,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -4665,6 +4956,11 @@
           },
           "202": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.Status"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.Status"
@@ -4703,6 +4999,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4809,6 +5110,12 @@
         ],
         "requestBody": {
           "content": {
+            "application/apply-patch+cbor": {
+              "schema": {
+                "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
+                "type": "object"
+              }
+            },
             "application/apply-patch+yaml": {
               "schema": {
                 "description": "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.",
@@ -4839,6 +5146,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4859,6 +5171,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4936,6 +5253,11 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4956,6 +5278,11 @@
           },
           "201": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicy"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicy"
@@ -4996,6 +5323,16 @@
         "responses": {
           "200": {
             "content": {
+              "application/cbor": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicyList"
+                }
+              },
+              "application/cbor-seq": {
+                "schema": {
+                  "$ref": "#/components/schemas/v1.NetworkPolicyList"
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/v1.NetworkPolicyList"

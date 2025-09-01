@@ -35,7 +35,7 @@ class V1alpha3ResourceClaimTemplateSpec(BaseModel):
 
     metadata: Optional[V1ObjectMeta] = Field(
         default=None,
-        description="ObjectMeta may contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.",
+        description="ObjectMeta may contain labels and annotations that will be copied into the ResourceClaim when creating it. No other fields are allowed and will be rejected during validation.",
     )
     spec: V1alpha3ResourceClaimSpec = Field(
         description="Spec for the ResourceClaim. The entire content is copied unchanged into the ResourceClaim that gets created from this template. The same fields as in a ResourceClaim are also valid here."

@@ -34,7 +34,9 @@ class V1Probe(BaseModel):
     """  # noqa: E501
 
     var_exec: Optional[V1ExecAction] = Field(
-        default=None, description="Exec specifies the action to take.", alias="exec"
+        default=None,
+        description="Exec specifies a command to execute in the container.",
+        alias="exec",
     )
     failure_threshold: Optional[StrictInt] = Field(
         default=None,
@@ -42,11 +44,11 @@ class V1Probe(BaseModel):
         alias="failureThreshold",
     )
     grpc: Optional[V1GRPCAction] = Field(
-        default=None, description="GRPC specifies an action involving a GRPC port."
+        default=None, description="GRPC specifies a GRPC HealthCheckRequest."
     )
     http_get: Optional[V1HTTPGetAction] = Field(
         default=None,
-        description="HTTPGet specifies the http request to perform.",
+        description="HTTPGet specifies an HTTP GET request to perform.",
         alias="httpGet",
     )
     initial_delay_seconds: Optional[StrictInt] = Field(
@@ -66,7 +68,7 @@ class V1Probe(BaseModel):
     )
     tcp_socket: Optional[V1TCPSocketAction] = Field(
         default=None,
-        description="TCPSocket specifies an action involving a TCP port.",
+        description="TCPSocket specifies a connection to a TCP port.",
         alias="tcpSocket",
     )
     termination_grace_period_seconds: Optional[StrictInt] = Field(

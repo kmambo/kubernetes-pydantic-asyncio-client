@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1PortStatus(BaseModel):
     """
-    V1PortStatus
+    PortStatus represents the error condition of a service port
     """  # noqa: E501
 
     error: Optional[StrictStr] = Field(

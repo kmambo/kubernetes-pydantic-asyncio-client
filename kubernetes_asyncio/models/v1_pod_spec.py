@@ -34,6 +34,7 @@ from kubernetes_asyncio.models.v1_pod_resource_claim import V1PodResourceClaim
 from kubernetes_asyncio.models.v1_pod_scheduling_gate import V1PodSchedulingGate
 from kubernetes_asyncio.models.v1_pod_security_context import V1PodSecurityContext
 from kubernetes_asyncio.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
+from kubernetes_asyncio.models.v1_resource_requirements import V1ResourceRequirements
 from kubernetes_asyncio.models.v1_toleration import V1Toleration
 from kubernetes_asyncio.models.v1_topology_spread_constraint import (
     V1TopologySpreadConstraint,
@@ -163,6 +164,10 @@ class V1PodSpec(BaseModel):
         description="ResourceClaims defines which ResourceClaims must be allocated and reserved before the Pod is allowed to start. The resources will be made available to those containers which consume them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.  This field is immutable.",
         alias="resourceClaims",
     )
+    resources: Optional[V1ResourceRequirements] = Field(
+        default=None,
+        description='Resources is the total amount of CPU and Memory resources required by all containers in the pod. It supports specifying Requests and Limits for "cpu" and "memory" resource names only. ResourceClaims are not supported.  This field enables fine-grained control over resource allocation for the entire pod, allowing resource sharing among containers in a pod.  This is an alpha field and requires enabling the PodLevelResources feature gate.',
+    )
     restart_policy: Optional[StrictStr] = Field(
         default=None,
         description="Restart policy for all containers within the pod. One of Always, OnFailure, Never. In some contexts, only a subset of those values may be permitted. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy",
@@ -200,7 +205,7 @@ class V1PodSpec(BaseModel):
     )
     set_hostname_as_fqdn: Optional[StrictBool] = Field(
         default=None,
-        description="If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.",
+        description="If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.",
         alias="setHostnameAsFQDN",
     )
     share_process_namespace: Optional[StrictBool] = Field(
@@ -255,6 +260,7 @@ class V1PodSpec(BaseModel):
         "priorityClassName",
         "readinessGates",
         "resourceClaims",
+        "resources",
         "restartPolicy",
         "runtimeClassName",
         "schedulerName",
@@ -373,6 +379,9 @@ class V1PodSpec(BaseModel):
                 if _item_resource_claims:
                     _items.append(_item_resource_claims.to_dict())
             _dict["resourceClaims"] = _items
+        # override the default output from pydantic by calling `to_dict()` of resources
+        if self.resources:
+            _dict["resources"] = self.resources.to_dict()
         # override the default output from pydantic by calling `to_dict()` of each item in scheduling_gates (list)
         _items = []
         if self.scheduling_gates:
@@ -497,6 +506,11 @@ class V1PodSpec(BaseModel):
                         for _item in obj["resourceClaims"]
                     ]
                     if obj.get("resourceClaims") is not None
+                    else None
+                ),
+                "resources": (
+                    V1ResourceRequirements.from_dict(obj["resources"])
+                    if obj.get("resources") is not None
                     else None
                 ),
                 "restartPolicy": obj.get("restartPolicy"),

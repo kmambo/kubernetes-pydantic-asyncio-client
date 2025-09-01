@@ -91,6 +91,16 @@ class TestV1PodSpec(unittest.TestCase):
                 resource_claims = [
                     null
                     ],
+                resources = kubernetes_asyncio.models.v1/resource_requirements.v1.ResourceRequirements(
+                    claims = [
+                        null
+                        ], 
+                    limits = {
+                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        }, 
+                    requests = {
+                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        }, ),
                 restart_policy = '',
                 runtime_class_name = '',
                 scheduler_name = '',
@@ -104,6 +114,7 @@ class TestV1PodSpec(unittest.TestCase):
                     run_as_group = 56, 
                     run_as_non_root = True, 
                     run_as_user = 56, 
+                    se_linux_change_policy = '', 
                     se_linux_options = null, 
                     seccomp_profile = null, 
                     supplemental_groups = [

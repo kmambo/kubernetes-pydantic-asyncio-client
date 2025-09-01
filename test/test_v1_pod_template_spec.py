@@ -105,6 +105,7 @@ class TestV1PodTemplateSpec(unittest.TestCase):
                     resource_claims = [
                         null
                         ], 
+                    resources = null, 
                     restart_policy = '', 
                     runtime_class_name = '', 
                     scheduler_name = '', 

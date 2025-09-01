@@ -41,7 +41,7 @@ class V1NodeStatus(BaseModel):
 
     addresses: Optional[List[V1NodeAddress]] = Field(
         default=None,
-        description="List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See https://pr.k8s.io/79391 for an example. Consumers should assume that addresses can change during the lifetime of a Node. However, there are some exceptions where this may not be possible, such as Pods that inherit a Node's address in its own status or consumers of the downward API (status.hostIP).",
+        description="List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/reference/node/node-status/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See https://pr.k8s.io/79391 for an example. Consumers should assume that addresses can change during the lifetime of a Node. However, there are some exceptions where this may not be possible, such as Pods that inherit a Node's address in its own status or consumers of the downward API (status.hostIP).",
     )
     allocatable: Optional[Dict[str, V1PodSpecOverheadValue]] = Field(
         default=None,
@@ -53,7 +53,7 @@ class V1NodeStatus(BaseModel):
     )
     conditions: Optional[List[V1NodeCondition]] = Field(
         default=None,
-        description="Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition",
+        description="Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/reference/node/node-status/#condition",
     )
     config: Optional[V1NodeConfigStatus] = Field(
         default=None,
@@ -73,7 +73,7 @@ class V1NodeStatus(BaseModel):
     )
     node_info: Optional[V1NodeSystemInfo] = Field(
         default=None,
-        description="Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info",
+        description="Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/reference/node/node-status/#info",
         alias="nodeInfo",
     )
     phase: Optional[StrictStr] = Field(

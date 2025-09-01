@@ -27,7 +27,7 @@ from kubernetes_asyncio.models.v1_secret_reference import V1SecretReference
 
 class V1CSIPersistentVolumeSource(BaseModel):
     """
-    Represents storage that is managed by an external CSI volume driver (Beta feature)
+    Represents storage that is managed by an external CSI volume driver
     """  # noqa: E501
 
     controller_expand_secret_ref: Optional[V1SecretReference] = Field(

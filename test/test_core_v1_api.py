@@ -836,6 +836,12 @@ class TestCoreV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_patch_namespaced_pod_resize(self) -> None:
+        """Test case for patch_namespaced_pod_resize
+
+        """
+        pass
+
     async def test_patch_namespaced_pod_status(self) -> None:
         """Test case for patch_namespaced_pod_status
 
@@ -998,6 +1004,12 @@ class TestCoreV1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
+    async def test_read_namespaced_pod_resize(self) -> None:
+        """Test case for read_namespaced_pod_resize
+
+        """
+        pass
+
     async def test_read_namespaced_pod_status(self) -> None:
         """Test case for read_namespaced_pod_status
 
@@ -1150,6 +1162,12 @@ class TestCoreV1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_replace_namespaced_pod_ephemeralcontainers(self) -> None:
         """Test case for replace_namespaced_pod_ephemeralcontainers
+
+        """
+        pass
+
+    async def test_replace_namespaced_pod_resize(self) -> None:
+        """Test case for replace_namespaced_pod_resize
 
         """
         pass

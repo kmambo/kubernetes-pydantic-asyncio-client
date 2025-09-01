@@ -36,10 +36,11 @@ class TestV1alpha3ResourceClaimStatus(unittest.TestCase):
         if include_optional:
             return V1alpha3ResourceClaimStatus(
                 allocation = kubernetes_asyncio.models.v1alpha3/allocation_result.v1alpha3.AllocationResult(
-                    controller = '', 
                     devices = null, 
                     node_selector = null, ),
-                deallocation_requested = True,
+                devices = [
+                    null
+                    ],
                 reserved_for = [
                     null
                     ]

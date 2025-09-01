@@ -6,10 +6,10 @@ LifecycleHandler defines a specific action that should be taken in a lifecycle h
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**var_exec** | [**V1ExecAction**](V1ExecAction.md) | Exec specifies the action to take. | [optional] 
-**http_get** | [**V1HTTPGetAction**](V1HTTPGetAction.md) | HTTPGet specifies the http request to perform. | [optional] 
-**sleep** | [**V1SleepAction**](V1SleepAction.md) | Sleep represents the duration that the container should sleep before being terminated. | [optional] 
-**tcp_socket** | [**V1TCPSocketAction**](V1TCPSocketAction.md) | Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified. | [optional] 
+**var_exec** | [**V1ExecAction**](V1ExecAction.md) | Exec specifies a command to execute in the container. | [optional] 
+**http_get** | [**V1HTTPGetAction**](V1HTTPGetAction.md) | HTTPGet specifies an HTTP GET request to perform. | [optional] 
+**sleep** | [**V1SleepAction**](V1SleepAction.md) | Sleep represents a duration that the container should sleep. | [optional] 
+**tcp_socket** | [**V1TCPSocketAction**](V1TCPSocketAction.md) | Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified. | [optional] 
 
 ## Example
 

@@ -34,8 +34,14 @@ class V1NamespaceCondition(BaseModel):
         description="Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.",
         alias="lastTransitionTime",
     )
-    message: Optional[StrictStr] = None
-    reason: Optional[StrictStr] = None
+    message: Optional[StrictStr] = Field(
+        default=None,
+        description="Human-readable message indicating details about last transition.",
+    )
+    reason: Optional[StrictStr] = Field(
+        default=None,
+        description="Unique, one-word, CamelCase reason for the condition's last transition.",
+    )
     status: StrictStr = Field(
         description="Status of the condition, one of True, False, Unknown."
     )

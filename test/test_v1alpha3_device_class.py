@@ -69,8 +69,7 @@ class TestV1alpha3DeviceClass(unittest.TestCase):
                         ], 
                     selectors = [
                         null
-                        ], 
-                    suitable_nodes = null, )
+                        ], )
             )
         else:
             return V1alpha3DeviceClass(
@@ -80,8 +79,7 @@ class TestV1alpha3DeviceClass(unittest.TestCase):
                         ], 
                     selectors = [
                         null
-                        ], 
-                    suitable_nodes = null, ),
+                        ], ),
         )
         """
 

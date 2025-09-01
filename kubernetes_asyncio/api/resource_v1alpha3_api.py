@@ -24,12 +24,6 @@ from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
 from kubernetes_asyncio.models.v1_status import V1Status
 from kubernetes_asyncio.models.v1alpha3_device_class import V1alpha3DeviceClass
 from kubernetes_asyncio.models.v1alpha3_device_class_list import V1alpha3DeviceClassList
-from kubernetes_asyncio.models.v1alpha3_pod_scheduling_context import (
-    V1alpha3PodSchedulingContext,
-)
-from kubernetes_asyncio.models.v1alpha3_pod_scheduling_context_list import (
-    V1alpha3PodSchedulingContextList,
-)
 from kubernetes_asyncio.models.v1alpha3_resource_claim import V1alpha3ResourceClaim
 from kubernetes_asyncio.models.v1alpha3_resource_claim_list import (
     V1alpha3ResourceClaimList,
@@ -418,6 +412,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -430,422 +425,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="POST",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def create_namespaced_pod_scheduling_context(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """create_namespaced_pod_scheduling_context
-
-        create a PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._create_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "202": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def create_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """create_namespaced_pod_scheduling_context
-
-        create a PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._create_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "202": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def create_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """create_namespaced_pod_scheduling_context
-
-        create a PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._create_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "202": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _create_namespaced_pod_scheduling_context_serialize(
-        self,
-        namespace,
-        v1alpha3_pod_scheduling_context,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if v1alpha3_pod_scheduling_context is not None:
-            _body_params = v1alpha3_pod_scheduling_context
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="POST",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1250,6 +829,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -1666,6 +1246,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -2049,6 +1630,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -2104,6 +1686,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -2181,6 +1769,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -2227,6 +1817,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -2288,6 +1879,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -2363,6 +1960,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -2409,6 +2008,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -2470,6 +2070,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -2545,6 +2151,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -2591,6 +2199,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -2622,6 +2231,7 @@ class ResourceV1alpha3Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -2672,6 +2282,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -2714,6 +2333,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -2726,704 +2346,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="DELETE",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def delete_collection_namespaced_pod_scheduling_context(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        grace_period_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        orphan_dependents: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added to/removed from the object\'s finalizers list. Either this field or PropagationPolicy may be set, but not both.'
-            ),
-        ] = None,
-        propagation_policy: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        v1_delete_options: Optional[V1DeleteOptions] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1Status:
-        """delete_collection_namespaced_pod_scheduling_context
-
-        delete collection of PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :type grace_period_seconds: int
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :type orphan_dependents: bool
-        :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :type propagation_policy: str
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param v1_delete_options:
-        :type v1_delete_options: V1DeleteOptions
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._delete_collection_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            pretty=pretty,
-            var_continue=var_continue,
-            dry_run=dry_run,
-            field_selector=field_selector,
-            grace_period_seconds=grace_period_seconds,
-            label_selector=label_selector,
-            limit=limit,
-            orphan_dependents=orphan_dependents,
-            propagation_policy=propagation_policy,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            v1_delete_options=v1_delete_options,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1Status",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def delete_collection_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        grace_period_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        orphan_dependents: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added to/removed from the object\'s finalizers list. Either this field or PropagationPolicy may be set, but not both.'
-            ),
-        ] = None,
-        propagation_policy: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        v1_delete_options: Optional[V1DeleteOptions] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1Status]:
-        """delete_collection_namespaced_pod_scheduling_context
-
-        delete collection of PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :type grace_period_seconds: int
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :type orphan_dependents: bool
-        :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :type propagation_policy: str
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param v1_delete_options:
-        :type v1_delete_options: V1DeleteOptions
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._delete_collection_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            pretty=pretty,
-            var_continue=var_continue,
-            dry_run=dry_run,
-            field_selector=field_selector,
-            grace_period_seconds=grace_period_seconds,
-            label_selector=label_selector,
-            limit=limit,
-            orphan_dependents=orphan_dependents,
-            propagation_policy=propagation_policy,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            v1_delete_options=v1_delete_options,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1Status",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def delete_collection_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        grace_period_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        orphan_dependents: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added to/removed from the object\'s finalizers list. Either this field or PropagationPolicy may be set, but not both.'
-            ),
-        ] = None,
-        propagation_policy: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        v1_delete_options: Optional[V1DeleteOptions] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """delete_collection_namespaced_pod_scheduling_context
-
-        delete collection of PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :type grace_period_seconds: int
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :type orphan_dependents: bool
-        :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :type propagation_policy: str
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param v1_delete_options:
-        :type v1_delete_options: V1DeleteOptions
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._delete_collection_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            pretty=pretty,
-            var_continue=var_continue,
-            dry_run=dry_run,
-            field_selector=field_selector,
-            grace_period_seconds=grace_period_seconds,
-            label_selector=label_selector,
-            limit=limit,
-            orphan_dependents=orphan_dependents,
-            propagation_policy=propagation_policy,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            v1_delete_options=v1_delete_options,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1Status",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _delete_collection_namespaced_pod_scheduling_context_serialize(
-        self,
-        namespace,
-        pretty,
-        var_continue,
-        dry_run,
-        field_selector,
-        grace_period_seconds,
-        label_selector,
-        limit,
-        orphan_dependents,
-        propagation_policy,
-        resource_version,
-        resource_version_match,
-        send_initial_events,
-        timeout_seconds,
-        v1_delete_options,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if var_continue is not None:
-
-            _query_params.append(("continue", var_continue))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_selector is not None:
-
-            _query_params.append(("fieldSelector", field_selector))
-
-        if grace_period_seconds is not None:
-
-            _query_params.append(("gracePeriodSeconds", grace_period_seconds))
-
-        if label_selector is not None:
-
-            _query_params.append(("labelSelector", label_selector))
-
-        if limit is not None:
-
-            _query_params.append(("limit", limit))
-
-        if orphan_dependents is not None:
-
-            _query_params.append(("orphanDependents", orphan_dependents))
-
-        if propagation_policy is not None:
-
-            _query_params.append(("propagationPolicy", propagation_policy))
-
-        if resource_version is not None:
-
-            _query_params.append(("resourceVersion", resource_version))
-
-        if resource_version_match is not None:
-
-            _query_params.append(("resourceVersionMatch", resource_version_match))
-
-        if send_initial_events is not None:
-
-            _query_params.append(("sendInitialEvents", send_initial_events))
-
-        if timeout_seconds is not None:
-
-            _query_params.append(("timeoutSeconds", timeout_seconds))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if v1_delete_options is not None:
-            _body_params = v1_delete_options
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="DELETE",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -3474,6 +2396,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -3553,6 +2481,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -3600,6 +2530,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -3668,6 +2599,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -3745,6 +2682,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -3792,6 +2731,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -3860,6 +2800,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -3937,6 +2883,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -3984,6 +2932,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -4016,6 +2965,7 @@ class ResourceV1alpha3Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -4068,6 +3018,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -4110,6 +3069,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -4172,6 +3132,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -4251,6 +3217,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -4298,6 +3266,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -4366,6 +3335,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         label_selector: Annotated[
             Optional[Annotated[str, Field(strict=True)]],
             Field(
@@ -4443,6 +3418,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -4490,6 +3467,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -4556,6 +3534,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -4635,6 +3619,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -4682,6 +3668,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -4714,6 +3701,7 @@ class ResourceV1alpha3Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -4766,6 +3754,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -4808,6 +3805,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -4863,6 +3861,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -4940,6 +3944,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -4986,6 +3992,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -5045,6 +4052,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -5122,6 +4135,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -5168,6 +4183,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -5227,6 +4243,12 @@ class ResourceV1alpha3Api:
             Optional[Annotated[int, Field(strict=True)]],
             Field(
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
+            ),
+        ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
             ),
         ] = None,
         label_selector: Annotated[
@@ -5304,6 +4326,8 @@ class ResourceV1alpha3Api:
         :type field_selector: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
         :type label_selector: str
         :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
@@ -5350,6 +4374,7 @@ class ResourceV1alpha3Api:
             dry_run=dry_run,
             field_selector=field_selector,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             label_selector=label_selector,
             limit=limit,
             orphan_dependents=orphan_dependents,
@@ -5381,6 +4406,7 @@ class ResourceV1alpha3Api:
         dry_run,
         field_selector,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         label_selector,
         limit,
         orphan_dependents,
@@ -5431,6 +4457,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if label_selector is not None:
 
             _query_params.append(("labelSelector", label_selector))
@@ -5473,6 +4508,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -5519,6 +4555,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -5556,6 +4598,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -5589,6 +4633,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -5634,6 +4679,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -5671,6 +4722,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -5704,6 +4757,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -5749,6 +4803,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -5786,6 +4846,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -5819,6 +4881,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -5844,6 +4907,7 @@ class ResourceV1alpha3Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -5882,6 +4946,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -5900,6 +4973,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -5912,472 +4986,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="DELETE",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def delete_namespaced_pod_scheduling_context(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        grace_period_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
-            ),
-        ] = None,
-        orphan_dependents: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added to/removed from the object\'s finalizers list. Either this field or PropagationPolicy may be set, but not both.'
-            ),
-        ] = None,
-        propagation_policy: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground."
-            ),
-        ] = None,
-        v1_delete_options: Optional[V1DeleteOptions] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """delete_namespaced_pod_scheduling_context
-
-        delete a PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :type grace_period_seconds: int
-        :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :type orphan_dependents: bool
-        :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :type propagation_policy: str
-        :param v1_delete_options:
-        :type v1_delete_options: V1DeleteOptions
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._delete_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            dry_run=dry_run,
-            grace_period_seconds=grace_period_seconds,
-            orphan_dependents=orphan_dependents,
-            propagation_policy=propagation_policy,
-            v1_delete_options=v1_delete_options,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "202": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def delete_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        grace_period_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
-            ),
-        ] = None,
-        orphan_dependents: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added to/removed from the object\'s finalizers list. Either this field or PropagationPolicy may be set, but not both.'
-            ),
-        ] = None,
-        propagation_policy: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground."
-            ),
-        ] = None,
-        v1_delete_options: Optional[V1DeleteOptions] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """delete_namespaced_pod_scheduling_context
-
-        delete a PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :type grace_period_seconds: int
-        :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :type orphan_dependents: bool
-        :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :type propagation_policy: str
-        :param v1_delete_options:
-        :type v1_delete_options: V1DeleteOptions
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._delete_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            dry_run=dry_run,
-            grace_period_seconds=grace_period_seconds,
-            orphan_dependents=orphan_dependents,
-            propagation_policy=propagation_policy,
-            v1_delete_options=v1_delete_options,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "202": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def delete_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        grace_period_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
-            ),
-        ] = None,
-        orphan_dependents: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the "orphan" finalizer will be added to/removed from the object\'s finalizers list. Either this field or PropagationPolicy may be set, but not both.'
-            ),
-        ] = None,
-        propagation_policy: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground."
-            ),
-        ] = None,
-        v1_delete_options: Optional[V1DeleteOptions] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """delete_namespaced_pod_scheduling_context
-
-        delete a PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
-        :type grace_period_seconds: int
-        :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
-        :type orphan_dependents: bool
-        :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
-        :type propagation_policy: str
-        :param v1_delete_options:
-        :type v1_delete_options: V1DeleteOptions
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._delete_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            dry_run=dry_run,
-            grace_period_seconds=grace_period_seconds,
-            orphan_dependents=orphan_dependents,
-            propagation_policy=propagation_policy,
-            v1_delete_options=v1_delete_options,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "202": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _delete_namespaced_pod_scheduling_context_serialize(
-        self,
-        name,
-        namespace,
-        pretty,
-        dry_run,
-        grace_period_seconds,
-        orphan_dependents,
-        propagation_policy,
-        v1_delete_options,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if grace_period_seconds is not None:
-
-            _query_params.append(("gracePeriodSeconds", grace_period_seconds))
-
-        if orphan_dependents is not None:
-
-            _query_params.append(("orphanDependents", orphan_dependents))
-
-        if propagation_policy is not None:
-
-            _query_params.append(("propagationPolicy", propagation_policy))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if v1_delete_options is not None:
-            _body_params = v1_delete_options
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="DELETE",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -6421,6 +5029,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -6460,6 +5074,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -6494,6 +5110,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -6548,6 +5165,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -6587,6 +5210,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -6621,6 +5246,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -6675,6 +5301,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -6714,6 +5346,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -6748,6 +5382,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -6774,6 +5409,7 @@ class ResourceV1alpha3Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -6814,6 +5450,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -6832,6 +5477,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -6887,6 +5533,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -6926,6 +5578,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -6960,6 +5614,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -7014,6 +5669,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -7053,6 +5714,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -7087,6 +5750,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -7141,6 +5805,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -7180,6 +5850,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -7214,6 +5886,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -7240,6 +5913,7 @@ class ResourceV1alpha3Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -7280,6 +5954,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -7298,6 +5981,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -7346,6 +6030,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -7383,6 +6073,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -7416,6 +6108,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -7463,6 +6156,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -7500,6 +6199,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -7533,6 +6234,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -7580,6 +6282,12 @@ class ResourceV1alpha3Api:
                 description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately."
             ),
         ] = None,
+        ignore_store_read_error_with_cluster_breaking_potential: Annotated[
+            Optional[StrictBool],
+            Field(
+                description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it"
+            ),
+        ] = None,
         orphan_dependents: Annotated[
             Optional[StrictBool],
             Field(
@@ -7617,6 +6325,8 @@ class ResourceV1alpha3Api:
         :type dry_run: str
         :param grace_period_seconds: The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.
         :type grace_period_seconds: int
+        :param ignore_store_read_error_with_cluster_breaking_potential: if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it
+        :type ignore_store_read_error_with_cluster_breaking_potential: bool
         :param orphan_dependents: Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.
         :type orphan_dependents: bool
         :param propagation_policy: Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.
@@ -7650,6 +6360,7 @@ class ResourceV1alpha3Api:
             pretty=pretty,
             dry_run=dry_run,
             grace_period_seconds=grace_period_seconds,
+            ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential,
             orphan_dependents=orphan_dependents,
             propagation_policy=propagation_policy,
             v1_delete_options=v1_delete_options,
@@ -7675,6 +6386,7 @@ class ResourceV1alpha3Api:
         pretty,
         dry_run,
         grace_period_seconds,
+        ignore_store_read_error_with_cluster_breaking_potential,
         orphan_dependents,
         propagation_policy,
         v1_delete_options,
@@ -7713,6 +6425,15 @@ class ResourceV1alpha3Api:
 
             _query_params.append(("gracePeriodSeconds", grace_period_seconds))
 
+        if ignore_store_read_error_with_cluster_breaking_potential is not None:
+
+            _query_params.append(
+                (
+                    "ignoreStoreReadErrorWithClusterBreakingPotential",
+                    ignore_store_read_error_with_cluster_breaking_potential,
+                )
+            )
+
         if orphan_dependents is not None:
 
             _query_params.append(("orphanDependents", orphan_dependents))
@@ -7731,6 +6452,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -7965,6 +6687,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -8551,6 +7274,8 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -8565,627 +7290,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="GET",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def list_namespaced_pod_scheduling_context(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        allow_watch_bookmarks: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='allowWatchBookmarks requests watch events with type "BOOKMARK". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server\'s discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.'
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        watch: Annotated[
-            Optional[StrictBool],
-            Field(
-                description="Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContextList:
-        """list_namespaced_pod_scheduling_context
-
-        list or watch objects of kind PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param allow_watch_bookmarks: allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.
-        :type allow_watch_bookmarks: bool
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :type watch: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._list_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            pretty=pretty,
-            allow_watch_bookmarks=allow_watch_bookmarks,
-            var_continue=var_continue,
-            field_selector=field_selector,
-            label_selector=label_selector,
-            limit=limit,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            watch=watch,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContextList",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def list_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        allow_watch_bookmarks: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='allowWatchBookmarks requests watch events with type "BOOKMARK". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server\'s discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.'
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        watch: Annotated[
-            Optional[StrictBool],
-            Field(
-                description="Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContextList]:
-        """list_namespaced_pod_scheduling_context
-
-        list or watch objects of kind PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param allow_watch_bookmarks: allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.
-        :type allow_watch_bookmarks: bool
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :type watch: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._list_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            pretty=pretty,
-            allow_watch_bookmarks=allow_watch_bookmarks,
-            var_continue=var_continue,
-            field_selector=field_selector,
-            label_selector=label_selector,
-            limit=limit,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            watch=watch,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContextList",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def list_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        allow_watch_bookmarks: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='allowWatchBookmarks requests watch events with type "BOOKMARK". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server\'s discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.'
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        watch: Annotated[
-            Optional[StrictBool],
-            Field(
-                description="Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """list_namespaced_pod_scheduling_context
-
-        list or watch objects of kind PodSchedulingContext
-
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param allow_watch_bookmarks: allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.
-        :type allow_watch_bookmarks: bool
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :type watch: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._list_namespaced_pod_scheduling_context_serialize(
-            namespace=namespace,
-            pretty=pretty,
-            allow_watch_bookmarks=allow_watch_bookmarks,
-            var_continue=var_continue,
-            field_selector=field_selector,
-            label_selector=label_selector,
-            limit=limit,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            watch=watch,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContextList",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _list_namespaced_pod_scheduling_context_serialize(
-        self,
-        namespace,
-        pretty,
-        allow_watch_bookmarks,
-        var_continue,
-        field_selector,
-        label_selector,
-        limit,
-        resource_version,
-        resource_version_match,
-        send_initial_events,
-        timeout_seconds,
-        watch,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if allow_watch_bookmarks is not None:
-
-            _query_params.append(("allowWatchBookmarks", allow_watch_bookmarks))
-
-        if var_continue is not None:
-
-            _query_params.append(("continue", var_continue))
-
-        if field_selector is not None:
-
-            _query_params.append(("fieldSelector", field_selector))
-
-        if label_selector is not None:
-
-            _query_params.append(("labelSelector", label_selector))
-
-        if limit is not None:
-
-            _query_params.append(("limit", limit))
-
-        if resource_version is not None:
-
-            _query_params.append(("resourceVersion", resource_version))
-
-        if resource_version_match is not None:
-
-            _query_params.append(("resourceVersionMatch", resource_version_match))
-
-        if send_initial_events is not None:
-
-            _query_params.append(("sendInitialEvents", send_initial_events))
-
-        if timeout_seconds is not None:
-
-            _query_params.append(("timeoutSeconds", timeout_seconds))
-
-        if watch is not None:
-
-            _query_params.append(("watch", watch))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/json;stream=watch",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/vnd.kubernetes.protobuf;stream=watch",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -9793,6 +7897,8 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -10414,6 +8520,8 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -10428,594 +8536,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="GET",
             resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/resourceclaimtemplates",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def list_pod_scheduling_context_for_all_namespaces(
-        self,
-        allow_watch_bookmarks: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='allowWatchBookmarks requests watch events with type "BOOKMARK". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server\'s discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.'
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        watch: Annotated[
-            Optional[StrictBool],
-            Field(
-                description="Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContextList:
-        """list_pod_scheduling_context_for_all_namespaces
-
-        list or watch objects of kind PodSchedulingContext
-
-        :param allow_watch_bookmarks: allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.
-        :type allow_watch_bookmarks: bool
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :type watch: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._list_pod_scheduling_context_for_all_namespaces_serialize(
-            allow_watch_bookmarks=allow_watch_bookmarks,
-            var_continue=var_continue,
-            field_selector=field_selector,
-            label_selector=label_selector,
-            limit=limit,
-            pretty=pretty,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            watch=watch,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContextList",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def list_pod_scheduling_context_for_all_namespaces_with_http_info(
-        self,
-        allow_watch_bookmarks: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='allowWatchBookmarks requests watch events with type "BOOKMARK". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server\'s discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.'
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        watch: Annotated[
-            Optional[StrictBool],
-            Field(
-                description="Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContextList]:
-        """list_pod_scheduling_context_for_all_namespaces
-
-        list or watch objects of kind PodSchedulingContext
-
-        :param allow_watch_bookmarks: allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.
-        :type allow_watch_bookmarks: bool
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :type watch: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._list_pod_scheduling_context_for_all_namespaces_serialize(
-            allow_watch_bookmarks=allow_watch_bookmarks,
-            var_continue=var_continue,
-            field_selector=field_selector,
-            label_selector=label_selector,
-            limit=limit,
-            pretty=pretty,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            watch=watch,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContextList",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def list_pod_scheduling_context_for_all_namespaces_without_preload_content(
-        self,
-        allow_watch_bookmarks: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='allowWatchBookmarks requests watch events with type "BOOKMARK". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server\'s discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.'
-            ),
-        ] = None,
-        var_continue: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description='The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the "next key".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.'
-            ),
-        ] = None,
-        field_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their fields. Defaults to everything."
-            ),
-        ] = None,
-        label_selector: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="A selector to restrict the list of returned objects by their labels. Defaults to everything."
-            ),
-        ] = None,
-        limit: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned."
-            ),
-        ] = None,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        resource_version: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        resource_version_match: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset"
-            ),
-        ] = None,
-        send_initial_events: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='`sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic "Bookmark" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `"k8s.io/initial-events-end": "true"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as "data at least as new as the provided `resourceVersion`"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as "consistent read" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=""` or `resourceVersion="0"` (for backward compatibility reasons) and to false otherwise.'
-            ),
-        ] = None,
-        timeout_seconds: Annotated[
-            Optional[Annotated[int, Field(strict=True)]],
-            Field(
-                description="Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity."
-            ),
-        ] = None,
-        watch: Annotated[
-            Optional[StrictBool],
-            Field(
-                description="Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """list_pod_scheduling_context_for_all_namespaces
-
-        list or watch objects of kind PodSchedulingContext
-
-        :param allow_watch_bookmarks: allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored.
-        :type allow_watch_bookmarks: bool
-        :param var_continue: The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.
-        :type var_continue: str
-        :param field_selector: A selector to restrict the list of returned objects by their fields. Defaults to everything.
-        :type field_selector: str
-        :param label_selector: A selector to restrict the list of returned objects by their labels. Defaults to everything.
-        :type label_selector: str
-        :param limit: limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.
-        :type limit: int
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param resource_version: resourceVersion sets a constraint on what resource versions a request may be served from. See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version: str
-        :param resource_version_match: resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset
-        :type resource_version_match: str
-        :param send_initial_events: `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise.
-        :type send_initial_events: bool
-        :param timeout_seconds: Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.
-        :type timeout_seconds: int
-        :param watch: Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.
-        :type watch: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._list_pod_scheduling_context_for_all_namespaces_serialize(
-            allow_watch_bookmarks=allow_watch_bookmarks,
-            var_continue=var_continue,
-            field_selector=field_selector,
-            label_selector=label_selector,
-            limit=limit,
-            pretty=pretty,
-            resource_version=resource_version,
-            resource_version_match=resource_version_match,
-            send_initial_events=send_initial_events,
-            timeout_seconds=timeout_seconds,
-            watch=watch,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContextList",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _list_pod_scheduling_context_for_all_namespaces_serialize(
-        self,
-        allow_watch_bookmarks,
-        var_continue,
-        field_selector,
-        label_selector,
-        limit,
-        pretty,
-        resource_version,
-        resource_version_match,
-        send_initial_events,
-        timeout_seconds,
-        watch,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        # process the query parameters
-        if allow_watch_bookmarks is not None:
-
-            _query_params.append(("allowWatchBookmarks", allow_watch_bookmarks))
-
-        if var_continue is not None:
-
-            _query_params.append(("continue", var_continue))
-
-        if field_selector is not None:
-
-            _query_params.append(("fieldSelector", field_selector))
-
-        if label_selector is not None:
-
-            _query_params.append(("labelSelector", label_selector))
-
-        if limit is not None:
-
-            _query_params.append(("limit", limit))
-
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if resource_version is not None:
-
-            _query_params.append(("resourceVersion", resource_version))
-
-        if resource_version_match is not None:
-
-            _query_params.append(("resourceVersionMatch", resource_version_match))
-
-        if send_initial_events is not None:
-
-            _query_params.append(("sendInitialEvents", send_initial_events))
-
-        if timeout_seconds is not None:
-
-            _query_params.append(("timeoutSeconds", timeout_seconds))
-
-        if watch is not None:
-
-            _query_params.append(("watch", watch))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/json;stream=watch",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/vnd.kubernetes.protobuf;stream=watch",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/apis/resource.k8s.io/v1alpha3/podschedulingcontexts",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -11590,6 +9110,8 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -12178,6 +9700,8 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -12766,6 +10290,8 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
+                    "application/cbor-seq",
                     "application/json",
                     "application/json;stream=watch",
                     "application/vnd.kubernetes.protobuf",
@@ -13195,6 +10721,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -13207,6 +10734,7 @@ class ResourceV1alpha3Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -13222,968 +10750,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="PATCH",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def patch_namespaced_pod_scheduling_context(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """patch_namespaced_pod_scheduling_context
-
-        partially update the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def patch_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """patch_namespaced_pod_scheduling_context
-
-        partially update the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def patch_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """patch_namespaced_pod_scheduling_context
-
-        partially update the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _patch_namespaced_pod_scheduling_context_serialize(
-        self,
-        name,
-        namespace,
-        body,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        force,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        if force is not None:
-
-            _query_params.append(("force", force))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if body is not None:
-            _body_params = body
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params["Content-Type"] = _content_type
-        else:
-            _default_content_type = self.api_client.select_header_content_type(
-                [
-                    "application/apply-patch+yaml",
-                    "application/json-patch+json",
-                    "application/merge-patch+json",
-                    "application/strategic-merge-patch+json",
-                ]
-            )
-            if _default_content_type is not None:
-                _header_params["Content-Type"] = _default_content_type
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="PATCH",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def patch_namespaced_pod_scheduling_context_status(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """patch_namespaced_pod_scheduling_context_status
-
-        partially update status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def patch_namespaced_pod_scheduling_context_status_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """patch_namespaced_pod_scheduling_context_status
-
-        partially update status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def patch_namespaced_pod_scheduling_context_status_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        body: Dict[str, Any],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch)."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        force: Annotated[
-            Optional[StrictBool],
-            Field(
-                description='Force is going to "force" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.'
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """patch_namespaced_pod_scheduling_context_status
-
-        partially update status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param body: (required)
-        :type body: object
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch).
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param force: Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests.
-        :type force: bool
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._patch_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            body=body,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            force=force,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _patch_namespaced_pod_scheduling_context_status_serialize(
-        self,
-        name,
-        namespace,
-        body,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        force,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        if force is not None:
-
-            _query_params.append(("force", force))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if body is not None:
-            _body_params = body
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params["Content-Type"] = _content_type
-        else:
-            _default_content_type = self.api_client.select_header_content_type(
-                [
-                    "application/apply-patch+yaml",
-                    "application/json-patch+json",
-                    "application/merge-patch+json",
-                    "application/strategic-merge-patch+json",
-                ]
-            )
-            if _default_content_type is not None:
-                _header_params["Content-Type"] = _default_content_type
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="PATCH",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}/status",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -14638,6 +11204,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -14650,6 +11217,7 @@ class ResourceV1alpha3Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -15119,6 +11687,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -15131,6 +11700,7 @@ class ResourceV1alpha3Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -15600,6 +12170,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -15612,6 +12183,7 @@ class ResourceV1alpha3Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -16048,6 +12620,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -16060,6 +12633,7 @@ class ResourceV1alpha3Api:
         else:
             _default_content_type = self.api_client.select_header_content_type(
                 [
+                    "application/apply-patch+cbor",
                     "application/apply-patch+yaml",
                     "application/json-patch+json",
                     "application/merge-patch+json",
@@ -16344,6 +12918,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -16356,646 +12931,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="GET",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def read_namespaced_pod_scheduling_context(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """read_namespaced_pod_scheduling_context
-
-        read the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def read_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """read_namespaced_pod_scheduling_context
-
-        read the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def read_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """read_namespaced_pod_scheduling_context
-
-        read the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _read_namespaced_pod_scheduling_context_serialize(
-        self,
-        name,
-        namespace,
-        pretty,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def read_namespaced_pod_scheduling_context_status(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """read_namespaced_pod_scheduling_context_status
-
-        read status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def read_namespaced_pod_scheduling_context_status_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """read_namespaced_pod_scheduling_context_status
-
-        read status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def read_namespaced_pod_scheduling_context_status_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """read_namespaced_pod_scheduling_context_status
-
-        read status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._read_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            pretty=pretty,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _read_namespaced_pod_scheduling_context_status_serialize(
-        self,
-        name,
-        namespace,
-        pretty,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="GET",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}/status",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -17304,6 +13239,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -17624,6 +13560,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -17944,6 +13881,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -18231,6 +14169,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -18626,6 +14565,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -18638,874 +14578,6 @@ class ResourceV1alpha3Api:
         return self.api_client.param_serialize(
             method="PUT",
             resource_path="/apis/resource.k8s.io/v1alpha3/deviceclasses/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def replace_namespaced_pod_scheduling_context(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """replace_namespaced_pod_scheduling_context
-
-        replace the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def replace_namespaced_pod_scheduling_context_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """replace_namespaced_pod_scheduling_context
-
-        replace the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def replace_namespaced_pod_scheduling_context_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """replace_namespaced_pod_scheduling_context
-
-        replace the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_namespaced_pod_scheduling_context_serialize(
-            name=name,
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _replace_namespaced_pod_scheduling_context_serialize(
-        self,
-        name,
-        namespace,
-        v1alpha3_pod_scheduling_context,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if v1alpha3_pod_scheduling_context is not None:
-            _body_params = v1alpha3_pod_scheduling_context
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="PUT",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}",
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth,
-        )
-
-    @validate_call
-    async def replace_namespaced_pod_scheduling_context_status(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1alpha3PodSchedulingContext:
-        """replace_namespaced_pod_scheduling_context_status
-
-        replace status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-    @validate_call
-    async def replace_namespaced_pod_scheduling_context_status_with_http_info(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1alpha3PodSchedulingContext]:
-        """replace_namespaced_pod_scheduling_context_status
-
-        replace status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        await response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-    @validate_call
-    async def replace_namespaced_pod_scheduling_context_status_without_preload_content(
-        self,
-        name: Annotated[
-            str, Field(strict=True, description="name of the PodSchedulingContext")
-        ],
-        namespace: Annotated[
-            str,
-            Field(
-                strict=True,
-                description="object name and auth scope, such as for teams and projects",
-            ),
-        ],
-        v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext,
-        pretty: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget)."
-            ),
-        ] = None,
-        dry_run: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed"
-            ),
-        ] = None,
-        field_manager: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint."
-            ),
-        ] = None,
-        field_validation: Annotated[
-            Optional[Annotated[str, Field(strict=True)]],
-            Field(
-                description="fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered."
-            ),
-        ] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)], Annotated[StrictFloat, Field(gt=0)]
-            ],
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """replace_namespaced_pod_scheduling_context_status
-
-        replace status of the specified PodSchedulingContext
-
-        :param name: name of the PodSchedulingContext (required)
-        :type name: str
-        :param namespace: object name and auth scope, such as for teams and projects (required)
-        :type namespace: str
-        :param v1alpha3_pod_scheduling_context: (required)
-        :type v1alpha3_pod_scheduling_context: V1alpha3PodSchedulingContext
-        :param pretty: If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget).
-        :type pretty: str
-        :param dry_run: When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
-        :type dry_run: str
-        :param field_manager: fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint.
-        :type field_manager: str
-        :param field_validation: fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered.
-        :type field_validation: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """  # noqa: E501
-
-        _param = self._replace_namespaced_pod_scheduling_context_status_serialize(
-            name=name,
-            namespace=namespace,
-            v1alpha3_pod_scheduling_context=v1alpha3_pod_scheduling_context,
-            pretty=pretty,
-            dry_run=dry_run,
-            field_manager=field_manager,
-            field_validation=field_validation,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index,
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            "200": "V1alpha3PodSchedulingContext",
-            "201": "V1alpha3PodSchedulingContext",
-            "401": None,
-        }
-        response_data = await self.api_client.call_api(
-            *_param, _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-    def _replace_namespaced_pod_scheduling_context_status_serialize(
-        self,
-        name,
-        namespace,
-        v1alpha3_pod_scheduling_context,
-        pretty,
-        dry_run,
-        field_manager,
-        field_validation,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {}
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if name is not None:
-            _path_params["name"] = name
-        if namespace is not None:
-            _path_params["namespace"] = namespace
-        # process the query parameters
-        if pretty is not None:
-
-            _query_params.append(("pretty", pretty))
-
-        if dry_run is not None:
-
-            _query_params.append(("dryRun", dry_run))
-
-        if field_manager is not None:
-
-            _query_params.append(("fieldManager", field_manager))
-
-        if field_validation is not None:
-
-            _query_params.append(("fieldValidation", field_validation))
-
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if v1alpha3_pod_scheduling_context is not None:
-            _body_params = v1alpha3_pod_scheduling_context
-
-        # set the HTTP header `Accept`
-        if "Accept" not in _header_params:
-            _header_params["Accept"] = self.api_client.select_header_accept(
-                [
-                    "application/json",
-                    "application/vnd.kubernetes.protobuf",
-                    "application/yaml",
-                ]
-            )
-
-        # authentication setting
-        _auth_settings: List[str] = []
-
-        return self.api_client.param_serialize(
-            method="PUT",
-            resource_path="/apis/resource.k8s.io/v1alpha3/namespaces/{namespace}/podschedulingcontexts/{name}/status",
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -19928,6 +15000,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -20362,6 +15435,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -20796,6 +15870,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",
@@ -21197,6 +16272,7 @@ class ResourceV1alpha3Api:
         if "Accept" not in _header_params:
             _header_params["Accept"] = self.api_client.select_header_accept(
                 [
+                    "application/cbor",
                     "application/json",
                     "application/vnd.kubernetes.protobuf",
                     "application/yaml",

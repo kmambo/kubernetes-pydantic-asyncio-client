@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1LocalVolumeSource(BaseModel):
     """
-    Local represents directly-attached storage with node affinity (Beta feature)
+    Local represents directly-attached storage with node affinity
     """  # noqa: E501
 
     fs_type: Optional[StrictStr] = Field(

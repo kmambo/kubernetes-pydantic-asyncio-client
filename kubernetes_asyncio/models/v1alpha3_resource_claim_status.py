@@ -19,9 +19,12 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
+from kubernetes_asyncio.models.v1alpha3_allocated_device_status import (
+    V1alpha3AllocatedDeviceStatus,
+)
 from kubernetes_asyncio.models.v1alpha3_allocation_result import (
     V1alpha3AllocationResult,
 )
@@ -39,21 +42,16 @@ class V1alpha3ResourceClaimStatus(BaseModel):
         default=None,
         description="Allocation is set once the claim has been allocated successfully.",
     )
-    deallocation_requested: Optional[StrictBool] = Field(
+    devices: Optional[List[V1alpha3AllocatedDeviceStatus]] = Field(
         default=None,
-        description="Indicates that a claim is to be deallocated. While this is set, no new consumers may be added to ReservedFor.  This is only used if the claim needs to be deallocated by a DRA driver. That driver then must deallocate this claim and reset the field together with clearing the Allocation field.  This is an alpha field and requires enabling the DRAControlPlaneController feature gate.",
-        alias="deallocationRequested",
+        description="Devices contains the status of each device allocated for this claim, as reported by the driver. This can include driver-specific information. Entries are owned by their respective drivers.",
     )
     reserved_for: Optional[List[V1alpha3ResourceClaimConsumerReference]] = Field(
         default=None,
-        description="ReservedFor indicates which entities are currently allowed to use the claim. A Pod which references a ResourceClaim which is not reserved for that Pod will not be started. A claim that is in use or might be in use because it has been reserved must not get deallocated.  In a cluster with multiple scheduler instances, two pods might get scheduled concurrently by different schedulers. When they reference the same ResourceClaim which already has reached its maximum number of consumers, only one pod can be scheduled.  Both schedulers try to add their pod to the claim.status.reservedFor field, but only the update that reaches the API server first gets stored. The other one fails with an error and the scheduler which issued it knows that it must put the pod back into the queue, waiting for the ResourceClaim to become usable again.  There can be at most 32 such reservations. This may get increased in the future, but not reduced.",
+        description="ReservedFor indicates which entities are currently allowed to use the claim. A Pod which references a ResourceClaim which is not reserved for that Pod will not be started. A claim that is in use or might be in use because it has been reserved must not get deallocated.  In a cluster with multiple scheduler instances, two pods might get scheduled concurrently by different schedulers. When they reference the same ResourceClaim which already has reached its maximum number of consumers, only one pod can be scheduled.  Both schedulers try to add their pod to the claim.status.reservedFor field, but only the update that reaches the API server first gets stored. The other one fails with an error and the scheduler which issued it knows that it must put the pod back into the queue, waiting for the ResourceClaim to become usable again.  There can be at most 256 such reservations. This may get increased in the future, but not reduced.",
         alias="reservedFor",
     )
-    __properties: ClassVar[List[str]] = [
-        "allocation",
-        "deallocationRequested",
-        "reservedFor",
-    ]
+    __properties: ClassVar[List[str]] = ["allocation", "devices", "reservedFor"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -95,6 +93,13 @@ class V1alpha3ResourceClaimStatus(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of allocation
         if self.allocation:
             _dict["allocation"] = self.allocation.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in devices (list)
+        _items = []
+        if self.devices:
+            for _item_devices in self.devices:
+                if _item_devices:
+                    _items.append(_item_devices.to_dict())
+            _dict["devices"] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in reserved_for (list)
         _items = []
         if self.reserved_for:
@@ -120,7 +125,14 @@ class V1alpha3ResourceClaimStatus(BaseModel):
                     if obj.get("allocation") is not None
                     else None
                 ),
-                "deallocationRequested": obj.get("deallocationRequested"),
+                "devices": (
+                    [
+                        V1alpha3AllocatedDeviceStatus.from_dict(_item)
+                        for _item in obj["devices"]
+                    ]
+                    if obj.get("devices") is not None
+                    else None
+                ),
                 "reservedFor": (
                     [
                         V1alpha3ResourceClaimConsumerReference.from_dict(_item)

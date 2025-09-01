@@ -52,7 +52,7 @@ class V1StatefulSetSpec(BaseModel):
         V1StatefulSetPersistentVolumeClaimRetentionPolicy
     ] = Field(
         default=None,
-        description="persistentVolumeClaimRetentionPolicy describes the lifecycle of persistent volume claims created from volumeClaimTemplates. By default, all persistent volume claims are created as needed and retained until manually deleted. This policy allows the lifecycle to be altered, for example by deleting persistent volume claims when their stateful set is deleted, or when their pod is scaled down. This requires the StatefulSetAutoDeletePVC feature gate to be enabled, which is beta.",
+        description="persistentVolumeClaimRetentionPolicy describes the lifecycle of persistent volume claims created from volumeClaimTemplates. By default, all persistent volume claims are created as needed and retained until manually deleted. This policy allows the lifecycle to be altered, for example by deleting persistent volume claims when their stateful set is deleted, or when their pod is scaled down.",
         alias="persistentVolumeClaimRetentionPolicy",
     )
     pod_management_policy: Optional[StrictStr] = Field(

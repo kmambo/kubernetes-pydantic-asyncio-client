@@ -34,20 +34,22 @@ class V1LifecycleHandler(BaseModel):
     """  # noqa: E501
 
     var_exec: Optional[V1ExecAction] = Field(
-        default=None, description="Exec specifies the action to take.", alias="exec"
+        default=None,
+        description="Exec specifies a command to execute in the container.",
+        alias="exec",
     )
     http_get: Optional[V1HTTPGetAction] = Field(
         default=None,
-        description="HTTPGet specifies the http request to perform.",
+        description="HTTPGet specifies an HTTP GET request to perform.",
         alias="httpGet",
     )
     sleep: Optional[V1SleepAction] = Field(
         default=None,
-        description="Sleep represents the duration that the container should sleep before being terminated.",
+        description="Sleep represents a duration that the container should sleep.",
     )
     tcp_socket: Optional[V1TCPSocketAction] = Field(
         default=None,
-        description="Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.",
+        description="Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.",
         alias="tcpSocket",
     )
     __properties: ClassVar[List[str]] = ["exec", "httpGet", "sleep", "tcpSocket"]

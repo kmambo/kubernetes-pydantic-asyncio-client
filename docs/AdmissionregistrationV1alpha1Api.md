@@ -4,37 +4,34 @@ All URIs are relative to *http://localhost:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#create_validating_admission_policy) | **POST** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies | 
-[**create_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#create_validating_admission_policy_binding) | **POST** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings | 
-[**delete_collection_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#delete_collection_validating_admission_policy) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies | 
-[**delete_collection_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#delete_collection_validating_admission_policy_binding) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings | 
-[**delete_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#delete_validating_admission_policy) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name} | 
-[**delete_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#delete_validating_admission_policy_binding) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name} | 
+[**create_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#create_mutating_admission_policy) | **POST** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies | 
+[**create_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#create_mutating_admission_policy_binding) | **POST** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings | 
+[**delete_collection_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#delete_collection_mutating_admission_policy) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies | 
+[**delete_collection_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#delete_collection_mutating_admission_policy_binding) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings | 
+[**delete_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#delete_mutating_admission_policy) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name} | 
+[**delete_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#delete_mutating_admission_policy_binding) | **DELETE** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name} | 
 [**get_api_resources**](AdmissionregistrationV1alpha1Api.md#get_api_resources) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/ | 
-[**list_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#list_validating_admission_policy) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies | 
-[**list_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#list_validating_admission_policy_binding) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings | 
-[**patch_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#patch_validating_admission_policy) | **PATCH** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name} | 
-[**patch_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#patch_validating_admission_policy_binding) | **PATCH** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name} | 
-[**patch_validating_admission_policy_status**](AdmissionregistrationV1alpha1Api.md#patch_validating_admission_policy_status) | **PATCH** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}/status | 
-[**read_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#read_validating_admission_policy) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name} | 
-[**read_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#read_validating_admission_policy_binding) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name} | 
-[**read_validating_admission_policy_status**](AdmissionregistrationV1alpha1Api.md#read_validating_admission_policy_status) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}/status | 
-[**replace_validating_admission_policy**](AdmissionregistrationV1alpha1Api.md#replace_validating_admission_policy) | **PUT** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name} | 
-[**replace_validating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#replace_validating_admission_policy_binding) | **PUT** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicybindings/{name} | 
-[**replace_validating_admission_policy_status**](AdmissionregistrationV1alpha1Api.md#replace_validating_admission_policy_status) | **PUT** /apis/admissionregistration.k8s.io/v1alpha1/validatingadmissionpolicies/{name}/status | 
+[**list_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#list_mutating_admission_policy) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies | 
+[**list_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#list_mutating_admission_policy_binding) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings | 
+[**patch_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#patch_mutating_admission_policy) | **PATCH** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name} | 
+[**patch_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#patch_mutating_admission_policy_binding) | **PATCH** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name} | 
+[**read_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#read_mutating_admission_policy) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name} | 
+[**read_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#read_mutating_admission_policy_binding) | **GET** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name} | 
+[**replace_mutating_admission_policy**](AdmissionregistrationV1alpha1Api.md#replace_mutating_admission_policy) | **PUT** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicies/{name} | 
+[**replace_mutating_admission_policy_binding**](AdmissionregistrationV1alpha1Api.md#replace_mutating_admission_policy_binding) | **PUT** /apis/admissionregistration.k8s.io/v1alpha1/mutatingadmissionpolicybindings/{name} | 
 
 
-# **create_validating_admission_policy**
-> V1alpha1ValidatingAdmissionPolicy create_validating_admission_policy(v1alpha1_validating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+# **create_mutating_admission_policy**
+> V1alpha1MutatingAdmissionPolicy create_mutating_admission_policy(v1alpha1_mutating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-create a ValidatingAdmissionPolicy
+create a MutatingAdmissionPolicy
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy import V1alpha1MutatingAdmissionPolicy
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -49,18 +46,18 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    v1alpha1_validating_admission_policy = kubernetes_asyncio.V1alpha1ValidatingAdmissionPolicy() # V1alpha1ValidatingAdmissionPolicy | 
+    v1alpha1_mutating_admission_policy = kubernetes_asyncio.V1alpha1MutatingAdmissionPolicy() # V1alpha1MutatingAdmissionPolicy | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
 
     try:
-        api_response = await api_instance.create_validating_admission_policy(v1alpha1_validating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-        print("The response of AdmissionregistrationV1alpha1Api->create_validating_admission_policy:\n")
+        api_response = await api_instance.create_mutating_admission_policy(v1alpha1_mutating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+        print("The response of AdmissionregistrationV1alpha1Api->create_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->create_validating_admission_policy: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->create_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -70,7 +67,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1alpha1_validating_admission_policy** | [**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)|  | 
+ **v1alpha1_mutating_admission_policy** | [**V1alpha1MutatingAdmissionPolicy**](V1alpha1MutatingAdmissionPolicy.md)|  | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **field_manager** | **str**| fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. | [optional] 
@@ -78,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
+[**V1alpha1MutatingAdmissionPolicy**](V1alpha1MutatingAdmissionPolicy.md)
 
 ### Authorization
 
@@ -87,7 +84,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -100,17 +97,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_validating_admission_policy_binding**
-> V1alpha1ValidatingAdmissionPolicyBinding create_validating_admission_policy_binding(v1alpha1_validating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+# **create_mutating_admission_policy_binding**
+> V1alpha1MutatingAdmissionPolicyBinding create_mutating_admission_policy_binding(v1alpha1_mutating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-create a ValidatingAdmissionPolicyBinding
+create a MutatingAdmissionPolicyBinding
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding import V1alpha1ValidatingAdmissionPolicyBinding
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding import V1alpha1MutatingAdmissionPolicyBinding
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -125,18 +122,18 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    v1alpha1_validating_admission_policy_binding = kubernetes_asyncio.V1alpha1ValidatingAdmissionPolicyBinding() # V1alpha1ValidatingAdmissionPolicyBinding | 
+    v1alpha1_mutating_admission_policy_binding = kubernetes_asyncio.V1alpha1MutatingAdmissionPolicyBinding() # V1alpha1MutatingAdmissionPolicyBinding | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
 
     try:
-        api_response = await api_instance.create_validating_admission_policy_binding(v1alpha1_validating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-        print("The response of AdmissionregistrationV1alpha1Api->create_validating_admission_policy_binding:\n")
+        api_response = await api_instance.create_mutating_admission_policy_binding(v1alpha1_mutating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+        print("The response of AdmissionregistrationV1alpha1Api->create_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->create_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->create_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -146,7 +143,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1alpha1_validating_admission_policy_binding** | [**V1alpha1ValidatingAdmissionPolicyBinding**](V1alpha1ValidatingAdmissionPolicyBinding.md)|  | 
+ **v1alpha1_mutating_admission_policy_binding** | [**V1alpha1MutatingAdmissionPolicyBinding**](V1alpha1MutatingAdmissionPolicyBinding.md)|  | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **field_manager** | **str**| fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. | [optional] 
@@ -154,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicyBinding**](V1alpha1ValidatingAdmissionPolicyBinding.md)
+[**V1alpha1MutatingAdmissionPolicyBinding**](V1alpha1MutatingAdmissionPolicyBinding.md)
 
 ### Authorization
 
@@ -163,7 +160,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -176,10 +173,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_collection_validating_admission_policy**
-> V1Status delete_collection_validating_admission_policy(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
+# **delete_collection_mutating_admission_policy**
+> V1Status delete_collection_mutating_admission_policy(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
 
-delete collection of ValidatingAdmissionPolicy
+delete collection of MutatingAdmissionPolicy
 
 ### Example
 
@@ -207,6 +204,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
     grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
+    ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
     limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
@@ -218,11 +216,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
-        api_response = await api_instance.delete_collection_validating_admission_policy(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
-        print("The response of AdmissionregistrationV1alpha1Api->delete_collection_validating_admission_policy:\n")
+        api_response = await api_instance.delete_collection_mutating_admission_policy(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
+        print("The response of AdmissionregistrationV1alpha1Api->delete_collection_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_collection_validating_admission_policy: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_collection_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -237,6 +235,7 @@ Name | Type | Description  | Notes
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
+ **ignore_store_read_error_with_cluster_breaking_potential** | **bool**| if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it | [optional] 
  **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything. | [optional] 
  **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
@@ -258,7 +257,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -269,10 +268,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_collection_validating_admission_policy_binding**
-> V1Status delete_collection_validating_admission_policy_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
+# **delete_collection_mutating_admission_policy_binding**
+> V1Status delete_collection_mutating_admission_policy_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
 
-delete collection of ValidatingAdmissionPolicyBinding
+delete collection of MutatingAdmissionPolicyBinding
 
 ### Example
 
@@ -300,6 +299,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
     grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
+    ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     label_selector = 'label_selector_example' # str | A selector to restrict the list of returned objects by their labels. Defaults to everything. (optional)
     limit = 56 # int | limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
@@ -311,11 +311,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
-        api_response = await api_instance.delete_collection_validating_admission_policy_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
-        print("The response of AdmissionregistrationV1alpha1Api->delete_collection_validating_admission_policy_binding:\n")
+        api_response = await api_instance.delete_collection_mutating_admission_policy_binding(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
+        print("The response of AdmissionregistrationV1alpha1Api->delete_collection_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_collection_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_collection_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -330,6 +330,7 @@ Name | Type | Description  | Notes
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **field_selector** | **str**| A selector to restrict the list of returned objects by their fields. Defaults to everything. | [optional] 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
+ **ignore_store_read_error_with_cluster_breaking_potential** | **bool**| if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it | [optional] 
  **label_selector** | **str**| A selector to restrict the list of returned objects by their labels. Defaults to everything. | [optional] 
  **limit** | **int**| limit is a maximum number of responses to return for a list call. If more items exist, the server will set the &#x60;continue&#x60; field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.  The server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned. | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
@@ -351,7 +352,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -362,10 +363,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_validating_admission_policy**
-> V1Status delete_validating_admission_policy(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
+# **delete_mutating_admission_policy**
+> V1Status delete_mutating_admission_policy(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
 
-delete a ValidatingAdmissionPolicy
+delete a MutatingAdmissionPolicy
 
 ### Example
 
@@ -388,20 +389,21 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
+    name = 'name_example' # str | name of the MutatingAdmissionPolicy
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
+    ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
     v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
-        api_response = await api_instance.delete_validating_admission_policy(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
-        print("The response of AdmissionregistrationV1alpha1Api->delete_validating_admission_policy:\n")
+        api_response = await api_instance.delete_mutating_admission_policy(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
+        print("The response of AdmissionregistrationV1alpha1Api->delete_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_validating_admission_policy: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -411,10 +413,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
+ **name** | **str**| name of the MutatingAdmissionPolicy | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
+ **ignore_store_read_error_with_cluster_breaking_potential** | **bool**| if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
  **v1_delete_options** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | [optional] 
@@ -430,7 +433,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -442,10 +445,10 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_validating_admission_policy_binding**
-> V1Status delete_validating_admission_policy_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
+# **delete_mutating_admission_policy_binding**
+> V1Status delete_mutating_admission_policy_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
 
-delete a ValidatingAdmissionPolicyBinding
+delete a MutatingAdmissionPolicyBinding
 
 ### Example
 
@@ -468,20 +471,21 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicyBinding
+    name = 'name_example' # str | name of the MutatingAdmissionPolicyBinding
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     grace_period_seconds = 56 # int | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
+    ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
     v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
-        api_response = await api_instance.delete_validating_admission_policy_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
-        print("The response of AdmissionregistrationV1alpha1Api->delete_validating_admission_policy_binding:\n")
+        api_response = await api_instance.delete_mutating_admission_policy_binding(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
+        print("The response of AdmissionregistrationV1alpha1Api->delete_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->delete_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -491,10 +495,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicyBinding | 
+ **name** | **str**| name of the MutatingAdmissionPolicyBinding | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **grace_period_seconds** | **int**| The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | [optional] 
+ **ignore_store_read_error_with_cluster_breaking_potential** | **bool**| if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it | [optional] 
  **orphan_dependents** | **bool**| Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | [optional] 
  **propagation_policy** | **str**| Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | [optional] 
  **v1_delete_options** | [**V1DeleteOptions**](V1DeleteOptions.md)|  | [optional] 
@@ -510,7 +515,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -573,7 +578,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -584,17 +589,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_validating_admission_policy**
-> V1alpha1ValidatingAdmissionPolicyList list_validating_admission_policy(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
+# **list_mutating_admission_policy**
+> V1alpha1MutatingAdmissionPolicyList list_mutating_admission_policy(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-list or watch objects of kind ValidatingAdmissionPolicy
+list or watch objects of kind MutatingAdmissionPolicy
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_list import V1alpha1ValidatingAdmissionPolicyList
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_list import V1alpha1MutatingAdmissionPolicyList
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -622,11 +627,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     watch = True # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
     try:
-        api_response = await api_instance.list_validating_admission_policy(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-        print("The response of AdmissionregistrationV1alpha1Api->list_validating_admission_policy:\n")
+        api_response = await api_instance.list_mutating_admission_policy(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
+        print("The response of AdmissionregistrationV1alpha1Api->list_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->list_validating_admission_policy: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->list_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -650,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicyList**](V1alpha1ValidatingAdmissionPolicyList.md)
+[**V1alpha1MutatingAdmissionPolicyList**](V1alpha1MutatingAdmissionPolicyList.md)
 
 ### Authorization
 
@@ -659,7 +664,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/json;stream=watch, application/vnd.kubernetes.protobuf, application/vnd.kubernetes.protobuf;stream=watch, application/yaml
+ - **Accept**: application/cbor, application/cbor-seq, application/json, application/json;stream=watch, application/vnd.kubernetes.protobuf, application/vnd.kubernetes.protobuf;stream=watch, application/yaml
 
 ### HTTP response details
 
@@ -670,17 +675,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_validating_admission_policy_binding**
-> V1alpha1ValidatingAdmissionPolicyBindingList list_validating_admission_policy_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
+# **list_mutating_admission_policy_binding**
+> V1alpha1MutatingAdmissionPolicyBindingList list_mutating_admission_policy_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
 
-list or watch objects of kind ValidatingAdmissionPolicyBinding
+list or watch objects of kind MutatingAdmissionPolicyBinding
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding_list import V1alpha1ValidatingAdmissionPolicyBindingList
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding_list import V1alpha1MutatingAdmissionPolicyBindingList
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -708,11 +713,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     watch = True # bool | Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion. (optional)
 
     try:
-        api_response = await api_instance.list_validating_admission_policy_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
-        print("The response of AdmissionregistrationV1alpha1Api->list_validating_admission_policy_binding:\n")
+        api_response = await api_instance.list_mutating_admission_policy_binding(pretty=pretty, allow_watch_bookmarks=allow_watch_bookmarks, var_continue=var_continue, field_selector=field_selector, label_selector=label_selector, limit=limit, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, watch=watch)
+        print("The response of AdmissionregistrationV1alpha1Api->list_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->list_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->list_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -736,7 +741,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicyBindingList**](V1alpha1ValidatingAdmissionPolicyBindingList.md)
+[**V1alpha1MutatingAdmissionPolicyBindingList**](V1alpha1MutatingAdmissionPolicyBindingList.md)
 
 ### Authorization
 
@@ -745,7 +750,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/json;stream=watch, application/vnd.kubernetes.protobuf, application/vnd.kubernetes.protobuf;stream=watch, application/yaml
+ - **Accept**: application/cbor, application/cbor-seq, application/json, application/json;stream=watch, application/vnd.kubernetes.protobuf, application/vnd.kubernetes.protobuf;stream=watch, application/yaml
 
 ### HTTP response details
 
@@ -756,17 +761,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_validating_admission_policy**
-> V1alpha1ValidatingAdmissionPolicy patch_validating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
+# **patch_mutating_admission_policy**
+> V1alpha1MutatingAdmissionPolicy patch_mutating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-partially update the specified ValidatingAdmissionPolicy
+partially update the specified MutatingAdmissionPolicy
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy import V1alpha1MutatingAdmissionPolicy
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -781,7 +786,7 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
+    name = 'name_example' # str | name of the MutatingAdmissionPolicy
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -790,11 +795,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     force = True # bool | Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests. (optional)
 
     try:
-        api_response = await api_instance.patch_validating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-        print("The response of AdmissionregistrationV1alpha1Api->patch_validating_admission_policy:\n")
+        api_response = await api_instance.patch_mutating_admission_policy(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
+        print("The response of AdmissionregistrationV1alpha1Api->patch_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->patch_validating_admission_policy: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->patch_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -804,7 +809,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
+ **name** | **str**| name of the MutatingAdmissionPolicy | 
  **body** | **object**|  | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
@@ -814,7 +819,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
+[**V1alpha1MutatingAdmissionPolicy**](V1alpha1MutatingAdmissionPolicy.md)
 
 ### Authorization
 
@@ -822,8 +827,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/apply-patch+yaml, application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Content-Type**: application/apply-patch+cbor, application/apply-patch+yaml, application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -835,17 +840,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_validating_admission_policy_binding**
-> V1alpha1ValidatingAdmissionPolicyBinding patch_validating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
+# **patch_mutating_admission_policy_binding**
+> V1alpha1MutatingAdmissionPolicyBinding patch_mutating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
 
-partially update the specified ValidatingAdmissionPolicyBinding
+partially update the specified MutatingAdmissionPolicyBinding
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding import V1alpha1ValidatingAdmissionPolicyBinding
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding import V1alpha1MutatingAdmissionPolicyBinding
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -860,7 +865,7 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicyBinding
+    name = 'name_example' # str | name of the MutatingAdmissionPolicyBinding
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -869,11 +874,11 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     force = True # bool | Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests. (optional)
 
     try:
-        api_response = await api_instance.patch_validating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-        print("The response of AdmissionregistrationV1alpha1Api->patch_validating_admission_policy_binding:\n")
+        api_response = await api_instance.patch_mutating_admission_policy_binding(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
+        print("The response of AdmissionregistrationV1alpha1Api->patch_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->patch_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->patch_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -883,7 +888,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicyBinding | 
+ **name** | **str**| name of the MutatingAdmissionPolicyBinding | 
  **body** | **object**|  | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
@@ -893,7 +898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicyBinding**](V1alpha1ValidatingAdmissionPolicyBinding.md)
+[**V1alpha1MutatingAdmissionPolicyBinding**](V1alpha1MutatingAdmissionPolicyBinding.md)
 
 ### Authorization
 
@@ -901,8 +906,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/apply-patch+yaml, application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Content-Type**: application/apply-patch+cbor, application/apply-patch+yaml, application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -914,17 +919,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_validating_admission_policy_status**
-> V1alpha1ValidatingAdmissionPolicy patch_validating_admission_policy_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
+# **read_mutating_admission_policy**
+> V1alpha1MutatingAdmissionPolicy read_mutating_admission_policy(name, pretty=pretty)
 
-partially update status of the specified ValidatingAdmissionPolicy
+read the specified MutatingAdmissionPolicy
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy import V1alpha1MutatingAdmissionPolicy
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -939,20 +944,15 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
-    body = None # object | 
+    name = 'name_example' # str | name of the MutatingAdmissionPolicy
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
-    dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
-    field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch). (optional)
-    field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
-    force = True # bool | Force is going to \"force\" Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests. (optional)
 
     try:
-        api_response = await api_instance.patch_validating_admission_policy_status(name, body, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation, force=force)
-        print("The response of AdmissionregistrationV1alpha1Api->patch_validating_admission_policy_status:\n")
+        api_response = await api_instance.read_mutating_admission_policy(name, pretty=pretty)
+        print("The response of AdmissionregistrationV1alpha1Api->read_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->patch_validating_admission_policy_status: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->read_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -962,86 +962,12 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
- **body** | **object**|  | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
- **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
- **field_manager** | **str**| fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. This field is required for apply requests (application/apply-patch) but optional for non-apply patch types (JsonPatch, MergePatch, StrategicMergePatch). | [optional] 
- **field_validation** | **str**| fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. | [optional] 
- **force** | **bool**| Force is going to \&quot;force\&quot; Apply requests. It means user will re-acquire conflicting fields owned by other people. Force flag must be unset for non-apply patch requests. | [optional] 
-
-### Return type
-
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/apply-patch+yaml, application/json-patch+json, application/merge-patch+json, application/strategic-merge-patch+json
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**201** | Created |  -  |
-**401** | Unauthorized |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **read_validating_admission_policy**
-> V1alpha1ValidatingAdmissionPolicy read_validating_admission_policy(name, pretty=pretty)
-
-read the specified ValidatingAdmissionPolicy
-
-### Example
-
-
-```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
-from kubernetes_asyncio.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost:8080
-# See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
-    host = "http://localhost:8080"
-)
-
-
-# Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
-    pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
-
-    try:
-        api_response = await api_instance.read_validating_admission_policy(name, pretty=pretty)
-        print("The response of AdmissionregistrationV1alpha1Api->read_validating_admission_policy:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->read_validating_admission_policy: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
+ **name** | **str**| name of the MutatingAdmissionPolicy | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
+[**V1alpha1MutatingAdmissionPolicy**](V1alpha1MutatingAdmissionPolicy.md)
 
 ### Authorization
 
@@ -1050,7 +976,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -1061,17 +987,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **read_validating_admission_policy_binding**
-> V1alpha1ValidatingAdmissionPolicyBinding read_validating_admission_policy_binding(name, pretty=pretty)
+# **read_mutating_admission_policy_binding**
+> V1alpha1MutatingAdmissionPolicyBinding read_mutating_admission_policy_binding(name, pretty=pretty)
 
-read the specified ValidatingAdmissionPolicyBinding
+read the specified MutatingAdmissionPolicyBinding
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding import V1alpha1ValidatingAdmissionPolicyBinding
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding import V1alpha1MutatingAdmissionPolicyBinding
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -1086,15 +1012,15 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicyBinding
+    name = 'name_example' # str | name of the MutatingAdmissionPolicyBinding
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
     try:
-        api_response = await api_instance.read_validating_admission_policy_binding(name, pretty=pretty)
-        print("The response of AdmissionregistrationV1alpha1Api->read_validating_admission_policy_binding:\n")
+        api_response = await api_instance.read_mutating_admission_policy_binding(name, pretty=pretty)
+        print("The response of AdmissionregistrationV1alpha1Api->read_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->read_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->read_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -1104,12 +1030,12 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicyBinding | 
+ **name** | **str**| name of the MutatingAdmissionPolicyBinding | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicyBinding**](V1alpha1ValidatingAdmissionPolicyBinding.md)
+[**V1alpha1MutatingAdmissionPolicyBinding**](V1alpha1MutatingAdmissionPolicyBinding.md)
 
 ### Authorization
 
@@ -1118,7 +1044,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -1129,17 +1055,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **read_validating_admission_policy_status**
-> V1alpha1ValidatingAdmissionPolicy read_validating_admission_policy_status(name, pretty=pretty)
+# **replace_mutating_admission_policy**
+> V1alpha1MutatingAdmissionPolicy replace_mutating_admission_policy(name, v1alpha1_mutating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-read status of the specified ValidatingAdmissionPolicy
+replace the specified MutatingAdmissionPolicy
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy import V1alpha1MutatingAdmissionPolicy
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -1154,87 +1080,19 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
-    pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
-
-    try:
-        api_response = await api_instance.read_validating_admission_policy_status(name, pretty=pretty)
-        print("The response of AdmissionregistrationV1alpha1Api->read_validating_admission_policy_status:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->read_validating_admission_policy_status: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
-
-### Return type
-
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**401** | Unauthorized |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_validating_admission_policy**
-> V1alpha1ValidatingAdmissionPolicy replace_validating_admission_policy(name, v1alpha1_validating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-replace the specified ValidatingAdmissionPolicy
-
-### Example
-
-
-```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
-from kubernetes_asyncio.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost:8080
-# See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
-    host = "http://localhost:8080"
-)
-
-
-# Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
-    v1alpha1_validating_admission_policy = kubernetes_asyncio.V1alpha1ValidatingAdmissionPolicy() # V1alpha1ValidatingAdmissionPolicy | 
+    name = 'name_example' # str | name of the MutatingAdmissionPolicy
+    v1alpha1_mutating_admission_policy = kubernetes_asyncio.V1alpha1MutatingAdmissionPolicy() # V1alpha1MutatingAdmissionPolicy | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
 
     try:
-        api_response = await api_instance.replace_validating_admission_policy(name, v1alpha1_validating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-        print("The response of AdmissionregistrationV1alpha1Api->replace_validating_admission_policy:\n")
+        api_response = await api_instance.replace_mutating_admission_policy(name, v1alpha1_mutating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+        print("The response of AdmissionregistrationV1alpha1Api->replace_mutating_admission_policy:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->replace_validating_admission_policy: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->replace_mutating_admission_policy: %s\n" % e)
 ```
 
 
@@ -1244,8 +1102,8 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
- **v1alpha1_validating_admission_policy** | [**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)|  | 
+ **name** | **str**| name of the MutatingAdmissionPolicy | 
+ **v1alpha1_mutating_admission_policy** | [**V1alpha1MutatingAdmissionPolicy**](V1alpha1MutatingAdmissionPolicy.md)|  | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **field_manager** | **str**| fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. | [optional] 
@@ -1253,7 +1111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
+[**V1alpha1MutatingAdmissionPolicy**](V1alpha1MutatingAdmissionPolicy.md)
 
 ### Authorization
 
@@ -1262,7 +1120,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -1274,17 +1132,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_validating_admission_policy_binding**
-> V1alpha1ValidatingAdmissionPolicyBinding replace_validating_admission_policy_binding(name, v1alpha1_validating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+# **replace_mutating_admission_policy_binding**
+> V1alpha1MutatingAdmissionPolicyBinding replace_mutating_admission_policy_binding(name, v1alpha1_mutating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
 
-replace the specified ValidatingAdmissionPolicyBinding
+replace the specified MutatingAdmissionPolicyBinding
 
 ### Example
 
 
 ```python
 import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy_binding import V1alpha1ValidatingAdmissionPolicyBinding
+from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding import V1alpha1MutatingAdmissionPolicyBinding
 from kubernetes_asyncio.rest import ApiException
 from pprint import pprint
 
@@ -1299,19 +1157,19 @@ configuration = kubernetes_asyncio.Configuration(
 async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicyBinding
-    v1alpha1_validating_admission_policy_binding = kubernetes_asyncio.V1alpha1ValidatingAdmissionPolicyBinding() # V1alpha1ValidatingAdmissionPolicyBinding | 
+    name = 'name_example' # str | name of the MutatingAdmissionPolicyBinding
+    v1alpha1_mutating_admission_policy_binding = kubernetes_asyncio.V1alpha1MutatingAdmissionPolicyBinding() # V1alpha1MutatingAdmissionPolicyBinding | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
 
     try:
-        api_response = await api_instance.replace_validating_admission_policy_binding(name, v1alpha1_validating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-        print("The response of AdmissionregistrationV1alpha1Api->replace_validating_admission_policy_binding:\n")
+        api_response = await api_instance.replace_mutating_admission_policy_binding(name, v1alpha1_mutating_admission_policy_binding, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
+        print("The response of AdmissionregistrationV1alpha1Api->replace_mutating_admission_policy_binding:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->replace_validating_admission_policy_binding: %s\n" % e)
+        print("Exception when calling AdmissionregistrationV1alpha1Api->replace_mutating_admission_policy_binding: %s\n" % e)
 ```
 
 
@@ -1321,8 +1179,8 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicyBinding | 
- **v1alpha1_validating_admission_policy_binding** | [**V1alpha1ValidatingAdmissionPolicyBinding**](V1alpha1ValidatingAdmissionPolicyBinding.md)|  | 
+ **name** | **str**| name of the MutatingAdmissionPolicyBinding | 
+ **v1alpha1_mutating_admission_policy_binding** | [**V1alpha1MutatingAdmissionPolicyBinding**](V1alpha1MutatingAdmissionPolicyBinding.md)|  | 
  **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
  **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
  **field_manager** | **str**| fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. | [optional] 
@@ -1330,7 +1188,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**V1alpha1ValidatingAdmissionPolicyBinding**](V1alpha1ValidatingAdmissionPolicyBinding.md)
+[**V1alpha1MutatingAdmissionPolicyBinding**](V1alpha1MutatingAdmissionPolicyBinding.md)
 
 ### Authorization
 
@@ -1339,84 +1197,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | OK |  -  |
-**201** | Created |  -  |
-**401** | Unauthorized |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **replace_validating_admission_policy_status**
-> V1alpha1ValidatingAdmissionPolicy replace_validating_admission_policy_status(name, v1alpha1_validating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-
-replace status of the specified ValidatingAdmissionPolicy
-
-### Example
-
-
-```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1alpha1_validating_admission_policy import V1alpha1ValidatingAdmissionPolicy
-from kubernetes_asyncio.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to http://localhost:8080
-# See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
-    host = "http://localhost:8080"
-)
-
-
-# Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = kubernetes_asyncio.AdmissionregistrationV1alpha1Api(api_client)
-    name = 'name_example' # str | name of the ValidatingAdmissionPolicy
-    v1alpha1_validating_admission_policy = kubernetes_asyncio.V1alpha1ValidatingAdmissionPolicy() # V1alpha1ValidatingAdmissionPolicy | 
-    pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
-    dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
-    field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
-    field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
-
-    try:
-        api_response = await api_instance.replace_validating_admission_policy_status(name, v1alpha1_validating_admission_policy, pretty=pretty, dry_run=dry_run, field_manager=field_manager, field_validation=field_validation)
-        print("The response of AdmissionregistrationV1alpha1Api->replace_validating_admission_policy_status:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling AdmissionregistrationV1alpha1Api->replace_validating_admission_policy_status: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| name of the ValidatingAdmissionPolicy | 
- **v1alpha1_validating_admission_policy** | [**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)|  | 
- **pretty** | **str**| If &#39;true&#39;, then the output is pretty printed. Defaults to &#39;false&#39; unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). | [optional] 
- **dry_run** | **str**| When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
- **field_manager** | **str**| fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. | [optional] 
- **field_validation** | **str**| fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. | [optional] 
-
-### Return type
-
-[**V1alpha1ValidatingAdmissionPolicy**](V1alpha1ValidatingAdmissionPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 

@@ -14,10 +14,9 @@ Do not edit the class manually.
 """  # noqa: E501
 
 
-__version__ = "1.31.12"
+__version__ = "1.32.8"
 
 # import apis into sdk package
-pass
 pass
 pass
 pass
@@ -92,6 +91,10 @@ pass
 pass
 
 # import models into sdk package
+pass
+pass
+pass
+pass
 pass
 pass
 pass

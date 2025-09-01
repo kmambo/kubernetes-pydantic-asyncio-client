@@ -45,6 +45,13 @@ class V1DeleteOptions(BaseModel):
         description="The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately.",
         alias="gracePeriodSeconds",
     )
+    ignore_store_read_error_with_cluster_breaking_potential: Optional[StrictBool] = (
+        Field(
+            default=None,
+            description="if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it",
+            alias="ignoreStoreReadErrorWithClusterBreakingPotential",
+        )
+    )
     kind: Optional[StrictStr] = Field(
         default=None,
         description="Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
@@ -67,6 +74,7 @@ class V1DeleteOptions(BaseModel):
         "apiVersion",
         "dryRun",
         "gracePeriodSeconds",
+        "ignoreStoreReadErrorWithClusterBreakingPotential",
         "kind",
         "orphanDependents",
         "preconditions",
@@ -129,6 +137,9 @@ class V1DeleteOptions(BaseModel):
                 "apiVersion": obj.get("apiVersion"),
                 "dryRun": obj.get("dryRun"),
                 "gracePeriodSeconds": obj.get("gracePeriodSeconds"),
+                "ignoreStoreReadErrorWithClusterBreakingPotential": obj.get(
+                    "ignoreStoreReadErrorWithClusterBreakingPotential"
+                ),
                 "kind": obj.get("kind"),
                 "orphanDependents": obj.get("orphanDependents"),
                 "preconditions": (

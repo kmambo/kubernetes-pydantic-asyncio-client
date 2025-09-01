@@ -27,7 +27,7 @@ from kubernetes_asyncio.models.v1_persistent_volume_spec import V1PersistentVolu
 
 class V1VolumeAttachmentSource(BaseModel):
     """
-    VolumeAttachmentSource represents a volume that should be attached. Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.
+    VolumeAttachmentSource represents a volume that should be attached. Right now only PersistentVolumes can be attached via external attacher, in the future we may allow also inline volumes in pods. Exactly one member can be set.
     """  # noqa: E501
 
     inline_volume_spec: Optional[V1PersistentVolumeSpec] = Field(

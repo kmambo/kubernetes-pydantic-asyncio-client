@@ -28,7 +28,7 @@ from kubernetes_asyncio.models.v1_object_reference import V1ObjectReference
 
 class V1Binding(BaseModel):
     """
-    Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.
+    Binding ties one object to another; for example, a pod is bound to a node by a scheduler.
     """  # noqa: E501
 
     api_version: Optional[StrictStr] = Field(

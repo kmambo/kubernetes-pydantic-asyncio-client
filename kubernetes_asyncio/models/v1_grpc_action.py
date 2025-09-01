@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1GRPCAction(BaseModel):
     """
-    V1GRPCAction
+    GRPCAction specifies an action involving a GRPC service.
     """  # noqa: E501
 
     port: StrictInt = Field(

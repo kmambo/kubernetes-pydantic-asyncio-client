@@ -28,8 +28,12 @@ class V1PodDNSConfigOption(BaseModel):
     PodDNSConfigOption defines DNS resolver options of a pod.
     """  # noqa: E501
 
-    name: Optional[StrictStr] = Field(default=None, description="Required.")
-    value: Optional[StrictStr] = None
+    name: Optional[StrictStr] = Field(
+        default=None, description="Name is this DNS resolver option's name. Required."
+    )
+    value: Optional[StrictStr] = Field(
+        default=None, description="Value is this DNS resolver option's value."
+    )
     __properties: ClassVar[List[str]] = ["name", "value"]
 
     model_config = ConfigDict(

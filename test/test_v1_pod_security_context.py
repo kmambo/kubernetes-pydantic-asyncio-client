@@ -43,6 +43,7 @@ class TestV1PodSecurityContext(unittest.TestCase):
                 run_as_group = 56,
                 run_as_non_root = True,
                 run_as_user = 56,
+                se_linux_change_policy = '',
                 se_linux_options = kubernetes_asyncio.models.v1/se_linux_options.v1.SELinuxOptions(
                     level = '', 
                     role = '', 

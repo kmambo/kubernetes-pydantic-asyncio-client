@@ -25,7 +25,7 @@ from typing_extensions import Self
 
 class V1TypedObjectReference(BaseModel):
     """
-    V1TypedObjectReference
+    TypedObjectReference contains enough information to let you locate the typed referenced object
     """  # noqa: E501
 
     api_group: Optional[StrictStr] = Field(

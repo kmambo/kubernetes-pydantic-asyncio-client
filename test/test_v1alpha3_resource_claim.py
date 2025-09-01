@@ -64,11 +64,12 @@ class TestV1alpha3ResourceClaim(unittest.TestCase):
                     self_link = '', 
                     uid = '', ),
                 spec = kubernetes_asyncio.models.v1alpha3/resource_claim_spec.v1alpha3.ResourceClaimSpec(
-                    controller = '', 
                     devices = null, ),
                 status = kubernetes_asyncio.models.v1alpha3/resource_claim_status.v1alpha3.ResourceClaimStatus(
                     allocation = null, 
-                    deallocation_requested = True, 
+                    devices = [
+                        null
+                        ], 
                     reserved_for = [
                         null
                         ], )
@@ -76,7 +77,6 @@ class TestV1alpha3ResourceClaim(unittest.TestCase):
         else:
             return V1alpha3ResourceClaim(
                 spec = kubernetes_asyncio.models.v1alpha3/resource_claim_spec.v1alpha3.ResourceClaimSpec(
-                    controller = '', 
                     devices = null, ),
         )
         """

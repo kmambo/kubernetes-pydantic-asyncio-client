@@ -71,7 +71,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 
@@ -135,7 +135,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/vnd.kubernetes.protobuf, application/yaml
+ - **Accept**: application/cbor, application/json, application/vnd.kubernetes.protobuf, application/yaml
 
 ### HTTP response details
 

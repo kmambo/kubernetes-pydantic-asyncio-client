@@ -35,6 +35,7 @@ class TestV1alpha3DeviceRequestAllocationResult(unittest.TestCase):
         model = V1alpha3DeviceRequestAllocationResult()
         if include_optional:
             return V1alpha3DeviceRequestAllocationResult(
+                admin_access = True,
                 device = '',
                 driver = '',
                 pool = '',

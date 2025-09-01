@@ -19,7 +19,7 @@ import pprint
 import re  # noqa: F401
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
 from kubernetes_asyncio.models.v1alpha3_device_claim import V1alpha3DeviceClaim
@@ -30,14 +30,10 @@ class V1alpha3ResourceClaimSpec(BaseModel):
     ResourceClaimSpec defines what is being requested in a ResourceClaim and how to configure it.
     """  # noqa: E501
 
-    controller: Optional[StrictStr] = Field(
-        default=None,
-        description="Controller is the name of the DRA driver that is meant to handle allocation of this claim. If empty, allocation is handled by the scheduler while scheduling a pod.  Must be a DNS subdomain and should end with a DNS domain owned by the vendor of the driver.  This is an alpha field and requires enabling the DRAControlPlaneController feature gate.",
-    )
     devices: Optional[V1alpha3DeviceClaim] = Field(
         default=None, description="Devices defines how to request devices."
     )
-    __properties: ClassVar[List[str]] = ["controller", "devices"]
+    __properties: ClassVar[List[str]] = ["devices"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,12 +88,11 @@ class V1alpha3ResourceClaimSpec(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "controller": obj.get("controller"),
                 "devices": (
                     V1alpha3DeviceClaim.from_dict(obj["devices"])
                     if obj.get("devices") is not None
                     else None
-                ),
+                )
             }
         )
         return _obj

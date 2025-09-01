@@ -62,13 +62,11 @@ class TestV1alpha3ResourceClaimTemplateSpec(unittest.TestCase):
                     self_link = '', 
                     uid = '', ),
                 spec = kubernetes_asyncio.models.v1alpha3/resource_claim_spec.v1alpha3.ResourceClaimSpec(
-                    controller = '', 
                     devices = null, )
             )
         else:
             return V1alpha3ResourceClaimTemplateSpec(
                 spec = kubernetes_asyncio.models.v1alpha3/resource_claim_spec.v1alpha3.ResourceClaimSpec(
-                    controller = '', 
                     devices = null, ),
         )
         """

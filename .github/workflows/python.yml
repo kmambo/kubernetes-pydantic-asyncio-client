@@ -87,13 +87,13 @@ jobs:
     steps:
       - name: Download artifact
         env:
-            ARTIFACT: ${{needs.build.outputs.build_artifacts}}
+            ARTIFACT: ${{ needs.build.outputs.build_artifacts }}
         uses: actions/download-artifact@v5
         with:
-          name: Download previously built artifact
-          path: dest/
+          path: dist/
+          artifact-ids: ${{ ARTIFACT }}
       - name: what is in dest
-        run: ls -al dest/
+        run: ls -al dist/
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' }}

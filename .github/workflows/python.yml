@@ -86,12 +86,10 @@ jobs:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
       - name: Download artifact
-        env:
-            ARTIFACT: ${{ needs.build.outputs.build_artifacts }}
         uses: actions/download-artifact@v5
         with:
           path: dist/
-          artifact-ids: ${{ ARTIFACT }}
+          artifact-ids: ${{ needs.build.outputs.build_artifacts }}
       - name: what is in dest
         run: ls -al dist/
       - name: Publish package distributions to PyPI

@@ -73,6 +73,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: dist/
+          name: dist
 
   pypi-publish:
     name: Upload release to PyPI
@@ -89,7 +90,7 @@ jobs:
         with:
           artifact-ids: ${{ needs.build.outputs.build_artifacts }}
       - name: "what is in dist?"
-        run: ls -al -R dist/
+        run: ls -al -R .
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' }}

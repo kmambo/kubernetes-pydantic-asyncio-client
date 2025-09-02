@@ -92,5 +92,9 @@ jobs:
       - name: "what is in dist?"
         run: ls -al -R .
       - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@release/v1.12
         if: ${{ github.event_name == 'workflow_dispatch' }}
+        with:
+          verbose: true
+          print-hash: true
+          packages-dir: dist/

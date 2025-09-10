@@ -18,7 +18,7 @@ on:
         options:
           - Skip
           - pypi
-          - testpypi
+          - test.pypi
         default: Skip
 
 
@@ -88,8 +88,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: ${{ inputs.publish }}
-      url: https://pypi.org/p/kubernetes-pydantic-asyncio
+      name: Publish to ${{ inputs.publish }}.org
+      url: https://${{ inputs.publish }}.org/p/kubernetes-pydantic-asyncio
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:

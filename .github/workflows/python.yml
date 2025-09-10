@@ -87,8 +87,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: Publish to ${{ inputs.publish }}.org
-      url: https://${{ inputs.publish }}.org/p/kubernetes-pydantic-asyncio
+      name: ${{ inputs.publish }}
+      url: https://pypi.org/p/kubernetes_pydantic_asyncio
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
@@ -98,8 +98,16 @@ jobs:
           artifact-ids: ${{ needs.build.outputs.build_artifacts }}
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish != 'Skip'}}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'pypi' }}
         with:
           verbose: true
           print-hash: true
           packages-dir: dist/
+      - name: Publish package distributions to test PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'test.pypi' }}
+        with:
+          verbose: true
+          print-hash: true
+          packages-dir: dist/
+          repository-url: https://test.pypi.org/legacy/

@@ -99,7 +99,7 @@ jobs:
           artifact-ids: ${{ needs.build.outputs.build_artifacts }}
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish != "Skip"}}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish != 'Skip'}}
         with:
           verbose: true
           print-hash: true

@@ -100,14 +100,15 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'pypi' }}
         with:
-          verbose: true
+          verbose: false
           print-hash: true
           packages-dir: dist/
+          repository-url: https://upload.pypi.org/legacy/
       - name: Publish package distributions to test PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'test.pypi' }}
         with:
-          verbose: true
+          verbose: false
           print-hash: true
           packages-dir: dist/
           repository-url: https://test.pypi.org/legacy/

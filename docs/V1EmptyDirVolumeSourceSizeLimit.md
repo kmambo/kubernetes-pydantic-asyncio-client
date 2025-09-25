@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_empty_dir_volume_source_size_limit import V1EmptyDirVolumeSourceSizeLimit
+from kubernetes_asyncio_pydantic.models.v1_empty_dir_volume_source_size_limit import V1EmptyDirVolumeSourceSizeLimit
 
 # TODO update the JSON string below
 json = "{}"

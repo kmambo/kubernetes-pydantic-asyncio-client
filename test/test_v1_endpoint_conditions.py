@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_endpoint_conditions import V1EndpointConditions
+from kubernetes_asyncio_pydantic.models.v1_endpoint_conditions import V1EndpointConditions
 
 class TestV1EndpointConditions(unittest.TestCase):
     """V1EndpointConditions unit test stubs"""

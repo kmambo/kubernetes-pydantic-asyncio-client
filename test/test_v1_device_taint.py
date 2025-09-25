@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_device_taint import V1DeviceTaint
+from kubernetes_asyncio_pydantic.models.v1_device_taint import V1DeviceTaint
 
 class TestV1DeviceTaint(unittest.TestCase):
     """V1DeviceTaint unit test stubs"""

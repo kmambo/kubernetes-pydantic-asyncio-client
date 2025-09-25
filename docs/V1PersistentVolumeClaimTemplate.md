@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_persistent_volume_claim_template import V1PersistentVolumeClaimTemplate
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_template import V1PersistentVolumeClaimTemplate
 
 # TODO update the JSON string below
 json = "{}"

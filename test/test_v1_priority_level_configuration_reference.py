@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_priority_level_configuration_reference import V1PriorityLevelConfigurationReference
+from kubernetes_asyncio_pydantic.models.v1_priority_level_configuration_reference import V1PriorityLevelConfigurationReference
 
 class TestV1PriorityLevelConfigurationReference(unittest.TestCase):
     """V1PriorityLevelConfigurationReference unit test stubs"""

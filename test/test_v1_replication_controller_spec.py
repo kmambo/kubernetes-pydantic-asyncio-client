@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_replication_controller_spec import V1ReplicationControllerSpec
+from kubernetes_asyncio_pydantic.models.v1_replication_controller_spec import V1ReplicationControllerSpec
 
 class TestV1ReplicationControllerSpec(unittest.TestCase):
     """V1ReplicationControllerSpec unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1ReplicationControllerSpec(unittest.TestCase):
                 selector = {
                     'key' : ''
                     },
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, )
             )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_param_ref import V1beta1ParamRef
+from kubernetes_asyncio_pydantic.models.v1beta1_param_ref import V1beta1ParamRef
 
 class TestV1beta1ParamRef(unittest.TestCase):
     """V1beta1ParamRef unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1beta1ParamRef(unittest.TestCase):
                 name = '',
                 namespace = '',
                 parameter_not_found_action = '',
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

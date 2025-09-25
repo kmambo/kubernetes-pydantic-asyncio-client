@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_metric_identifier import V2MetricIdentifier
+from kubernetes_asyncio_pydantic.models.v2_metric_identifier import V2MetricIdentifier
 
 class TestV2MetricIdentifier(unittest.TestCase):
     """V2MetricIdentifier unit test stubs"""
@@ -36,7 +36,7 @@ class TestV2MetricIdentifier(unittest.TestCase):
         if include_optional:
             return V2MetricIdentifier(
                 name = '',
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

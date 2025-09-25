@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_subject_access_review import V1SubjectAccessReview
+from kubernetes_asyncio_pydantic.models.v1_subject_access_review import V1SubjectAccessReview
 
 class TestV1SubjectAccessReview(unittest.TestCase):
     """V1SubjectAccessReview unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1SubjectAccessReview(unittest.TestCase):
             return V1SubjectAccessReview(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1SubjectAccessReview(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/subject_access_review_spec.v1.SubjectAccessReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/subject_access_review_spec.v1.SubjectAccessReviewSpec(
                     extra = {
                         'key' : [
                             ''
@@ -76,7 +76,7 @@ class TestV1SubjectAccessReview(unittest.TestCase):
                     resource_attributes = null, 
                     uid = '', 
                     user = '', ),
-                status = kubernetes_asyncio.models.v1/subject_access_review_status.v1.SubjectAccessReviewStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/subject_access_review_status.v1.SubjectAccessReviewStatus(
                     allowed = True, 
                     denied = True, 
                     evaluation_error = '', 
@@ -84,7 +84,7 @@ class TestV1SubjectAccessReview(unittest.TestCase):
             )
         else:
             return V1SubjectAccessReview(
-                spec = kubernetes_asyncio.models.v1/subject_access_review_spec.v1.SubjectAccessReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/subject_access_review_spec.v1.SubjectAccessReviewSpec(
                     extra = {
                         'key' : [
                             ''

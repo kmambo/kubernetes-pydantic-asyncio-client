@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_definition import V1CustomResourceDefinition
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_definition import V1CustomResourceDefinition
 
 class TestV1CustomResourceDefinition(unittest.TestCase):
     """V1CustomResourceDefinition unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CustomResourceDefinition(unittest.TestCase):
             return V1CustomResourceDefinition(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1CustomResourceDefinition(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/custom_resource_definition_spec.v1.CustomResourceDefinitionSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/custom_resource_definition_spec.v1.CustomResourceDefinitionSpec(
                     conversion = null, 
                     group = '', 
                     names = null, 
@@ -72,7 +72,7 @@ class TestV1CustomResourceDefinition(unittest.TestCase):
                     versions = [
                         null
                         ], ),
-                status = kubernetes_asyncio.models.v1/custom_resource_definition_status.v1.CustomResourceDefinitionStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/custom_resource_definition_status.v1.CustomResourceDefinitionStatus(
                     accepted_names = null, 
                     conditions = [
                         null
@@ -83,7 +83,7 @@ class TestV1CustomResourceDefinition(unittest.TestCase):
             )
         else:
             return V1CustomResourceDefinition(
-                spec = kubernetes_asyncio.models.v1/custom_resource_definition_spec.v1.CustomResourceDefinitionSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/custom_resource_definition_spec.v1.CustomResourceDefinitionSpec(
                     conversion = null, 
                     group = '', 
                     names = null, 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta2_cel_device_selector import V1beta2CELDeviceSelector
+from kubernetes_asyncio_pydantic.models.v1beta2_cel_device_selector import V1beta2CELDeviceSelector
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_claim_spec import V1ResourceClaimSpec
+from kubernetes_asyncio_pydantic.models.v1_resource_claim_spec import V1ResourceClaimSpec
 
 class TestV1ResourceClaimSpec(unittest.TestCase):
     """V1ResourceClaimSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1ResourceClaimSpec(unittest.TestCase):
         model = V1ResourceClaimSpec()
         if include_optional:
             return V1ResourceClaimSpec(
-                devices = kubernetes_asyncio.models.v1/device_claim.v1.DeviceClaim(
+                devices = kubernetes_asyncio_pydantic.models.v1/device_claim.v1.DeviceClaim(
                     config = [
                         null
                         ], 

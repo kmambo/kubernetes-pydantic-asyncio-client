@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cinder_persistent_volume_source import V1CinderPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_cinder_persistent_volume_source import V1CinderPersistentVolumeSource
 
 class TestV1CinderPersistentVolumeSource(unittest.TestCase):
     """V1CinderPersistentVolumeSource unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CinderPersistentVolumeSource(unittest.TestCase):
             return V1CinderPersistentVolumeSource(
                 fs_type = '',
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/secret_reference.v1.SecretReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/secret_reference.v1.SecretReference(
                     name = '', 
                     namespace = '', ),
                 volume_id = ''

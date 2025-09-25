@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.version_info import VersionInfo
+from kubernetes_asyncio_pydantic.models.version_info import VersionInfo
 
 # TODO update the JSON string below
 json = "{}"

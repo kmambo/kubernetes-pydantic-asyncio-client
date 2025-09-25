@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_managed_fields_entry import V1ManagedFieldsEntry
+from kubernetes_asyncio_pydantic.models.v1_managed_fields_entry import V1ManagedFieldsEntry
 
 class TestV1ManagedFieldsEntry(unittest.TestCase):
     """V1ManagedFieldsEntry unit test stubs"""

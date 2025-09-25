@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_stateful_set_persistent_volume_claim_retention_policy import V1StatefulSetPersistentVolumeClaimRetentionPolicy
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_persistent_volume_claim_retention_policy import V1StatefulSetPersistentVolumeClaimRetentionPolicy
 
 # TODO update the JSON string below
 json = "{}"

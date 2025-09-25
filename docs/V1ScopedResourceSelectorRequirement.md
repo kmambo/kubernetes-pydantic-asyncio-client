@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_scoped_resource_selector_requirement import V1ScopedResourceSelectorRequirement
+from kubernetes_asyncio_pydantic.models.v1_scoped_resource_selector_requirement import V1ScopedResourceSelectorRequirement
 
 # TODO update the JSON string below
 json = "{}"

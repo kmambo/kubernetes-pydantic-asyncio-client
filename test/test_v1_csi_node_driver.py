@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_node_driver import V1CSINodeDriver
+from kubernetes_asyncio_pydantic.models.v1_csi_node_driver import V1CSINodeDriver
 
 class TestV1CSINodeDriver(unittest.TestCase):
     """V1CSINodeDriver unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1CSINodeDriver(unittest.TestCase):
         model = V1CSINodeDriver()
         if include_optional:
             return V1CSINodeDriver(
-                allocatable = kubernetes_asyncio.models.v1/volume_node_resources.v1.VolumeNodeResources(
+                allocatable = kubernetes_asyncio_pydantic.models.v1/volume_node_resources.v1.VolumeNodeResources(
                     count = 56, ),
                 name = '',
                 node_id = '',

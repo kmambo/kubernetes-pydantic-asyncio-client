@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_binding import V1Binding
+from kubernetes_asyncio_pydantic.models.v1_binding import V1Binding
 
 class TestV1Binding(unittest.TestCase):
     """V1Binding unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Binding(unittest.TestCase):
             return V1Binding(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Binding(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                target = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                target = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 
@@ -74,7 +74,7 @@ class TestV1Binding(unittest.TestCase):
             )
         else:
             return V1Binding(
-                target = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                target = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 

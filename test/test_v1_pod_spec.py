@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_spec import V1PodSpec
+from kubernetes_asyncio_pydantic.models.v1_pod_spec import V1PodSpec
 
 class TestV1PodSpec(unittest.TestCase):
     """V1PodSpec unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1PodSpec(unittest.TestCase):
         if include_optional:
             return V1PodSpec(
                 active_deadline_seconds = 56,
-                affinity = kubernetes_asyncio.models.v1/affinity.v1.Affinity(
+                affinity = kubernetes_asyncio_pydantic.models.v1/affinity.v1.Affinity(
                     node_affinity = null, 
                     pod_affinity = null, 
                     pod_anti_affinity = null, ),
@@ -44,7 +44,7 @@ class TestV1PodSpec(unittest.TestCase):
                 containers = [
                     null
                     ],
-                dns_config = kubernetes_asyncio.models.v1/pod_dns_config.v1.PodDNSConfig(
+                dns_config = kubernetes_asyncio_pydantic.models.v1/pod_dns_config.v1.PodDNSConfig(
                     nameservers = [
                         ''
                         ], 
@@ -78,10 +78,10 @@ class TestV1PodSpec(unittest.TestCase):
                 node_selector = {
                     'key' : ''
                     },
-                os = kubernetes_asyncio.models.v1/pod_os.v1.PodOS(
+                os = kubernetes_asyncio_pydantic.models.v1/pod_os.v1.PodOS(
                     name = '', ),
                 overhead = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 preemption_policy = '',
                 priority = 56,
@@ -92,15 +92,15 @@ class TestV1PodSpec(unittest.TestCase):
                 resource_claims = [
                     null
                     ],
-                resources = kubernetes_asyncio.models.v1/resource_requirements.v1.ResourceRequirements(
+                resources = kubernetes_asyncio_pydantic.models.v1/resource_requirements.v1.ResourceRequirements(
                     claims = [
                         null
                         ], 
                     limits = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     requests = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 restart_policy = '',
                 runtime_class_name = '',
@@ -108,7 +108,7 @@ class TestV1PodSpec(unittest.TestCase):
                 scheduling_gates = [
                     null
                     ],
-                security_context = kubernetes_asyncio.models.v1/pod_security_context.v1.PodSecurityContext(
+                security_context = kubernetes_asyncio_pydantic.models.v1/pod_security_context.v1.PodSecurityContext(
                     app_armor_profile = null, 
                     fs_group = 56, 
                     fs_group_change_policy = '', 

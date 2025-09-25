@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_api_service import V1APIService
+from kubernetes_asyncio_pydantic.models.v1_api_service import V1APIService
 
 class TestV1APIService(unittest.TestCase):
     """V1APIService unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1APIService(unittest.TestCase):
             return V1APIService(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1APIService(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/api_service_spec.v1.APIServiceSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/api_service_spec.v1.APIServiceSpec(
                     ca_bundle = 'YQ==', 
                     group = '', 
                     group_priority_minimum = 56, 
@@ -71,7 +71,7 @@ class TestV1APIService(unittest.TestCase):
                     service = null, 
                     version = '', 
                     version_priority = 56, ),
-                status = kubernetes_asyncio.models.v1/api_service_status.v1.APIServiceStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/api_service_status.v1.APIServiceStatus(
                     conditions = [
                         null
                         ], )

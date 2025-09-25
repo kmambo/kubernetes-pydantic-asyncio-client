@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_lifecycle_handler import V1LifecycleHandler
+from kubernetes_asyncio_pydantic.models.v1_lifecycle_handler import V1LifecycleHandler
 
 # TODO update the JSON string below
 json = "{}"

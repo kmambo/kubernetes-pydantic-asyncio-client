@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_aws_elastic_block_store_volume_source import V1AWSElasticBlockStoreVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_aws_elastic_block_store_volume_source import V1AWSElasticBlockStoreVolumeSource
 
 class TestV1AWSElasticBlockStoreVolumeSource(unittest.TestCase):
     """V1AWSElasticBlockStoreVolumeSource unit test stubs"""

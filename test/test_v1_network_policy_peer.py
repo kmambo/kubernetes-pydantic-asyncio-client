@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_network_policy_peer import V1NetworkPolicyPeer
+from kubernetes_asyncio_pydantic.models.v1_network_policy_peer import V1NetworkPolicyPeer
 
 class TestV1NetworkPolicyPeer(unittest.TestCase):
     """V1NetworkPolicyPeer unit test stubs"""
@@ -35,19 +35,19 @@ class TestV1NetworkPolicyPeer(unittest.TestCase):
         model = V1NetworkPolicyPeer()
         if include_optional:
             return V1NetworkPolicyPeer(
-                ip_block = kubernetes_asyncio.models.v1/ip_block.v1.IPBlock(
+                ip_block = kubernetes_asyncio_pydantic.models.v1/ip_block.v1.IPBlock(
                     cidr = '', 
                     except = [
                         ''
                         ], ),
-                namespace_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                namespace_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                pod_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                pod_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

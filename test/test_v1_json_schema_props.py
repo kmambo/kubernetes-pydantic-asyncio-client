@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_json_schema_props import V1JSONSchemaProps
+from kubernetes_asyncio_pydantic.models.v1_json_schema_props import V1JSONSchemaProps
 
 class TestV1JSONSchemaProps(unittest.TestCase):
     """V1JSONSchemaProps unit test stubs"""
@@ -37,8 +37,8 @@ class TestV1JSONSchemaProps(unittest.TestCase):
             return V1JSONSchemaProps(
                 ref = '',
                 var_schema = '',
-                additional_items = kubernetes_asyncio.models.additional_items.additionalItems(),
-                additional_properties = kubernetes_asyncio.models.additional_properties.additionalProperties(),
+                additional_items = kubernetes_asyncio_pydantic.models.additional_items.additionalItems(),
+                additional_properties = kubernetes_asyncio_pydantic.models.additional_properties.additionalProperties(),
                 all_of = [
                     null
                     ],
@@ -56,15 +56,15 @@ class TestV1JSONSchemaProps(unittest.TestCase):
                 enum = [
                     None
                     ],
-                example = kubernetes_asyncio.models.example.example(),
+                example = kubernetes_asyncio_pydantic.models.example.example(),
                 exclusive_maximum = True,
                 exclusive_minimum = True,
-                external_docs = kubernetes_asyncio.models.v1/external_documentation.v1.ExternalDocumentation(
+                external_docs = kubernetes_asyncio_pydantic.models.v1/external_documentation.v1.ExternalDocumentation(
                     description = '', 
                     url = '', ),
                 format = '',
                 id = '',
-                items = kubernetes_asyncio.models.items.items(),
+                items = kubernetes_asyncio_pydantic.models.items.items(),
                 max_items = 56,
                 max_length = 56,
                 max_properties = 56,
@@ -74,11 +74,11 @@ class TestV1JSONSchemaProps(unittest.TestCase):
                 min_properties = 56,
                 minimum = 1.337,
                 multiple_of = 1.337,
-                var_not = kubernetes_asyncio.models.v1/json_schema_props.v1.JSONSchemaProps(
+                var_not = kubernetes_asyncio_pydantic.models.v1/json_schema_props.v1.JSONSchemaProps(
                     __ref = '', 
                     __schema = '', 
-                    additional_items = kubernetes_asyncio.models.additional_items.additionalItems(), 
-                    additional_properties = kubernetes_asyncio.models.additional_properties.additionalProperties(), 
+                    additional_items = kubernetes_asyncio_pydantic.models.additional_items.additionalItems(), 
+                    additional_properties = kubernetes_asyncio_pydantic.models.additional_properties.additionalProperties(), 
                     all_of = [
                         null
                         ], 
@@ -96,15 +96,15 @@ class TestV1JSONSchemaProps(unittest.TestCase):
                     enum = [
                         None
                         ], 
-                    example = kubernetes_asyncio.models.example.example(), 
+                    example = kubernetes_asyncio_pydantic.models.example.example(), 
                     exclusive_maximum = True, 
                     exclusive_minimum = True, 
-                    external_docs = kubernetes_asyncio.models.v1/external_documentation.v1.ExternalDocumentation(
+                    external_docs = kubernetes_asyncio_pydantic.models.v1/external_documentation.v1.ExternalDocumentation(
                         description = '', 
                         url = '', ), 
                     format = '', 
                     id = '', 
-                    items = kubernetes_asyncio.models.items.items(), 
+                    items = kubernetes_asyncio_pydantic.models.items.items(), 
                     max_items = 56, 
                     max_length = 56, 
                     max_properties = 56, 

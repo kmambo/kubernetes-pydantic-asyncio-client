@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_storage_capacity import V1CSIStorageCapacity
+from kubernetes_asyncio_pydantic.models.v1_csi_storage_capacity import V1CSIStorageCapacity
 
 class TestV1CSIStorageCapacity(unittest.TestCase):
     """V1CSIStorageCapacity unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1CSIStorageCapacity(unittest.TestCase):
                 capacity = None,
                 kind = '',
                 maximum_volume_size = None,
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -65,7 +65,7 @@ class TestV1CSIStorageCapacity(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                node_topology = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                node_topology = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

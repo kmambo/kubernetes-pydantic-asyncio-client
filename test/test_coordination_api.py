@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.coordination_api import CoordinationApi
+from kubernetes_asyncio_pydantic.api.coordination_api import CoordinationApi
 
 
 class TestCoordinationApi(unittest.IsolatedAsyncioTestCase):

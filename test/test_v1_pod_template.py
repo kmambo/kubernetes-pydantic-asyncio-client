@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_template import V1PodTemplate
+from kubernetes_asyncio_pydantic.models.v1_pod_template import V1PodTemplate
 
 class TestV1PodTemplate(unittest.TestCase):
     """V1PodTemplate unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1PodTemplate(unittest.TestCase):
             return V1PodTemplate(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1PodTemplate(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, )
             )

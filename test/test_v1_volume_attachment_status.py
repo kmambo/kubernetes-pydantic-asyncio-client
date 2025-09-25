@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_attachment_status import V1VolumeAttachmentStatus
+from kubernetes_asyncio_pydantic.models.v1_volume_attachment_status import V1VolumeAttachmentStatus
 
 class TestV1VolumeAttachmentStatus(unittest.TestCase):
     """V1VolumeAttachmentStatus unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1VolumeAttachmentStatus(unittest.TestCase):
         model = V1VolumeAttachmentStatus()
         if include_optional:
             return V1VolumeAttachmentStatus(
-                attach_error = kubernetes_asyncio.models.v1/volume_error.v1.VolumeError(
+                attach_error = kubernetes_asyncio_pydantic.models.v1/volume_error.v1.VolumeError(
                     error_code = 56, 
                     message = '', 
                     time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
@@ -43,7 +43,7 @@ class TestV1VolumeAttachmentStatus(unittest.TestCase):
                 attachment_metadata = {
                     'key' : ''
                     },
-                detach_error = kubernetes_asyncio.models.v1/volume_error.v1.VolumeError(
+                detach_error = kubernetes_asyncio_pydantic.models.v1/volume_error.v1.VolumeError(
                     error_code = 56, 
                     message = '', 
                     time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )

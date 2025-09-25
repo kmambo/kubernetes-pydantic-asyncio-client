@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_object_metric_source import V2ObjectMetricSource
+from kubernetes_asyncio_pydantic.models.v2_object_metric_source import V2ObjectMetricSource
 
 class TestV2ObjectMetricSource(unittest.TestCase):
     """V2ObjectMetricSource unit test stubs"""
@@ -35,14 +35,14 @@ class TestV2ObjectMetricSource(unittest.TestCase):
         model = V2ObjectMetricSource()
         if include_optional:
             return V2ObjectMetricSource(
-                described_object = kubernetes_asyncio.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
+                described_object = kubernetes_asyncio_pydantic.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', ),
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 
@@ -50,14 +50,14 @@ class TestV2ObjectMetricSource(unittest.TestCase):
             )
         else:
             return V2ObjectMetricSource(
-                described_object = kubernetes_asyncio.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
+                described_object = kubernetes_asyncio_pydantic.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', ),
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress import V1Ingress
+from kubernetes_asyncio_pydantic.models.v1_ingress import V1Ingress
 
 class TestV1Ingress(unittest.TestCase):
     """V1Ingress unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Ingress(unittest.TestCase):
             return V1Ingress(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Ingress(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/ingress_spec.v1.IngressSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/ingress_spec.v1.IngressSpec(
                     default_backend = null, 
                     ingress_class_name = '', 
                     rules = [
@@ -72,7 +72,7 @@ class TestV1Ingress(unittest.TestCase):
                     tls = [
                         null
                         ], ),
-                status = kubernetes_asyncio.models.v1/ingress_status.v1.IngressStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/ingress_status.v1.IngressStatus(
                     load_balancer = null, )
             )
         else:

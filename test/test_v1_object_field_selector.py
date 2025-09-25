@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_object_field_selector import V1ObjectFieldSelector
+from kubernetes_asyncio_pydantic.models.v1_object_field_selector import V1ObjectFieldSelector
 
 class TestV1ObjectFieldSelector(unittest.TestCase):
     """V1ObjectFieldSelector unit test stubs"""

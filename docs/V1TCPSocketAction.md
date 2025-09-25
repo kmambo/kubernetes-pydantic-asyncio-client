@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_tcp_socket_action import V1TCPSocketAction
+from kubernetes_asyncio_pydantic.models.v1_tcp_socket_action import V1TCPSocketAction
 
 # TODO update the JSON string below
 json = "{}"

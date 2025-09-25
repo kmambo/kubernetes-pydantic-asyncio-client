@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1alpha1_storage_version_condition import V1alpha1StorageVersionCondition
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version_condition import V1alpha1StorageVersionCondition
 
 # TODO update the JSON string below
 json = "{}"

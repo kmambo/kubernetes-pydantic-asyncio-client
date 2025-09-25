@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device import V1beta2Device
+from kubernetes_asyncio_pydantic.models.v1beta2_device import V1beta2Device
 
 class TestV1beta2Device(unittest.TestCase):
     """V1beta2Device unit test stubs"""
@@ -55,7 +55,7 @@ class TestV1beta2Device(unittest.TestCase):
                     ],
                 name = '',
                 node_name = '',
-                node_selector = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
+                node_selector = kubernetes_asyncio_pydantic.models.v1/node_selector.v1.NodeSelector(
                     node_selector_terms = [
                         null
                         ], ),

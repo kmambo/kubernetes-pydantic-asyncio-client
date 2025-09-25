@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_rbd_volume_source import V1RBDVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_rbd_volume_source import V1RBDVolumeSource
 
 class TestV1RBDVolumeSource(unittest.TestCase):
     """V1RBDVolumeSource unit test stubs"""
@@ -43,7 +43,7 @@ class TestV1RBDVolumeSource(unittest.TestCase):
                     ],
                 pool = 'rbd',
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 user = 'admin'
             )

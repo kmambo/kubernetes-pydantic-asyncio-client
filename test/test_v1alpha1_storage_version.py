@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_storage_version import V1alpha1StorageVersion
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version import V1alpha1StorageVersion
 
 class TestV1alpha1StorageVersion(unittest.TestCase):
     """V1alpha1StorageVersion unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1alpha1StorageVersion(unittest.TestCase):
             return V1alpha1StorageVersion(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -64,7 +64,7 @@ class TestV1alpha1StorageVersion(unittest.TestCase):
                     self_link = '', 
                     uid = '', ),
                 spec = None,
-                status = kubernetes_asyncio.models.v1alpha1/storage_version_status.v1alpha1.StorageVersionStatus(
+                status = kubernetes_asyncio_pydantic.models.v1alpha1/storage_version_status.v1alpha1.StorageVersionStatus(
                     common_encoding_version = '', 
                     conditions = [
                         null
@@ -76,7 +76,7 @@ class TestV1alpha1StorageVersion(unittest.TestCase):
         else:
             return V1alpha1StorageVersion(
                 spec = None,
-                status = kubernetes_asyncio.models.v1alpha1/storage_version_status.v1alpha1.StorageVersionStatus(
+                status = kubernetes_asyncio_pydantic.models.v1alpha1/storage_version_status.v1alpha1.StorageVersionStatus(
                     common_encoding_version = '', 
                     conditions = [
                         null

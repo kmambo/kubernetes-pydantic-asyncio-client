@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_eviction import V1Eviction
+from kubernetes_asyncio_pydantic.models.v1_eviction import V1Eviction
 
 class TestV1Eviction(unittest.TestCase):
     """V1Eviction unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1Eviction(unittest.TestCase):
         if include_optional:
             return V1Eviction(
                 api_version = '',
-                delete_options = kubernetes_asyncio.models.v1/delete_options.v1.DeleteOptions(
+                delete_options = kubernetes_asyncio_pydantic.models.v1/delete_options.v1.DeleteOptions(
                     api_version = '', 
                     dry_run = [
                         ''
@@ -48,7 +48,7 @@ class TestV1Eviction(unittest.TestCase):
                     preconditions = null, 
                     propagation_policy = '', ),
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

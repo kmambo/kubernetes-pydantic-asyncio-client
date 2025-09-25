@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_http_ingress_rule_value import V1HTTPIngressRuleValue
+from kubernetes_asyncio_pydantic.models.v1_http_ingress_rule_value import V1HTTPIngressRuleValue
 
 class TestV1HTTPIngressRuleValue(unittest.TestCase):
     """V1HTTPIngressRuleValue unit test stubs"""

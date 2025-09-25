@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_class_spec import V1IngressClassSpec
+from kubernetes_asyncio_pydantic.models.v1_ingress_class_spec import V1IngressClassSpec
 
 class TestV1IngressClassSpec(unittest.TestCase):
     """V1IngressClassSpec unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1IngressClassSpec(unittest.TestCase):
         if include_optional:
             return V1IngressClassSpec(
                 controller = '',
-                parameters = kubernetes_asyncio.models.v1/ingress_class_parameters_reference.v1.IngressClassParametersReference(
+                parameters = kubernetes_asyncio_pydantic.models.v1/ingress_class_parameters_reference.v1.IngressClassParametersReference(
                     api_group = '', 
                     kind = '', 
                     name = '', 

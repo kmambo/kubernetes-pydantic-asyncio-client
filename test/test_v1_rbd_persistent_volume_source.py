@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_rbd_persistent_volume_source import V1RBDPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_rbd_persistent_volume_source import V1RBDPersistentVolumeSource
 
 class TestV1RBDPersistentVolumeSource(unittest.TestCase):
     """V1RBDPersistentVolumeSource unit test stubs"""
@@ -43,7 +43,7 @@ class TestV1RBDPersistentVolumeSource(unittest.TestCase):
                     ],
                 pool = 'rbd',
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/secret_reference.v1.SecretReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/secret_reference.v1.SecretReference(
                     name = '', 
                     namespace = '', ),
                 user = 'admin'

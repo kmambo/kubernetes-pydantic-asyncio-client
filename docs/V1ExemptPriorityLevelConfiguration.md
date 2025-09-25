@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_exempt_priority_level_configuration import V1ExemptPriorityLevelConfiguration
+from kubernetes_asyncio_pydantic.models.v1_exempt_priority_level_configuration import V1ExemptPriorityLevelConfiguration
 
 # TODO update the JSON string below
 json = "{}"

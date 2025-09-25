@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_match_condition import V1beta1MatchCondition
+from kubernetes_asyncio_pydantic.models.v1beta1_match_condition import V1beta1MatchCondition
 
 class TestV1beta1MatchCondition(unittest.TestCase):
     """V1beta1MatchCondition unit test stubs"""

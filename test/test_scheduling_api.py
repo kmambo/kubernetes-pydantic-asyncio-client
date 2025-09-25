@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.scheduling_api import SchedulingApi
+from kubernetes_asyncio_pydantic.api.scheduling_api import SchedulingApi
 
 
 class TestSchedulingApi(unittest.IsolatedAsyncioTestCase):

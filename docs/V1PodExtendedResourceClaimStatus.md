@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_pod_extended_resource_claim_status import V1PodExtendedResourceClaimStatus
+from kubernetes_asyncio_pydantic.models.v1_pod_extended_resource_claim_status import V1PodExtendedResourceClaimStatus
 
 # TODO update the JSON string below
 json = "{}"

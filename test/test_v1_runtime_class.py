@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_runtime_class import V1RuntimeClass
+from kubernetes_asyncio_pydantic.models.v1_runtime_class import V1RuntimeClass
 
 class TestV1RuntimeClass(unittest.TestCase):
     """V1RuntimeClass unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1RuntimeClass(unittest.TestCase):
                 api_version = '',
                 handler = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -64,11 +64,11 @@ class TestV1RuntimeClass(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                overhead = kubernetes_asyncio.models.v1/overhead.v1.Overhead(
+                overhead = kubernetes_asyncio_pydantic.models.v1/overhead.v1.Overhead(
                     pod_fixed = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
-                scheduling = kubernetes_asyncio.models.v1/scheduling.v1.Scheduling(
+                scheduling = kubernetes_asyncio_pydantic.models.v1/scheduling.v1.Scheduling(
                     node_selector = {
                         'key' : ''
                         }, 

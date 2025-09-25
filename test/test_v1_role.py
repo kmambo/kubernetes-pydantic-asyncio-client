@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_role import V1Role
+from kubernetes_asyncio_pydantic.models.v1_role import V1Role
 
 class TestV1Role(unittest.TestCase):
     """V1Role unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Role(unittest.TestCase):
             return V1Role(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

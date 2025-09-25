@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_secret_volume_source import V1SecretVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_secret_volume_source import V1SecretVolumeSource
 
 class TestV1SecretVolumeSource(unittest.TestCase):
     """V1SecretVolumeSource unit test stubs"""

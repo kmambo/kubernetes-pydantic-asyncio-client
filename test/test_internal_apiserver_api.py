@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.internal_apiserver_api import InternalApiserverApi
+from kubernetes_asyncio_pydantic.api.internal_apiserver_api import InternalApiserverApi
 
 
 class TestInternalApiserverApi(unittest.IsolatedAsyncioTestCase):

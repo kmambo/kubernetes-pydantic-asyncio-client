@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_request_status import V1TokenRequestStatus
+from kubernetes_asyncio_pydantic.models.v1_token_request_status import V1TokenRequestStatus
 
 class TestV1TokenRequestStatus(unittest.TestCase):
     """V1TokenRequestStatus unit test stubs"""

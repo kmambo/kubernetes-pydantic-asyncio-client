@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cron_job import V1CronJob
+from kubernetes_asyncio_pydantic.models.v1_cron_job import V1CronJob
 
 class TestV1CronJob(unittest.TestCase):
     """V1CronJob unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CronJob(unittest.TestCase):
             return V1CronJob(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1CronJob(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/cron_job_spec.v1.CronJobSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/cron_job_spec.v1.CronJobSpec(
                     concurrency_policy = '', 
                     failed_jobs_history_limit = 56, 
                     job_template = null, 
@@ -72,7 +72,7 @@ class TestV1CronJob(unittest.TestCase):
                     successful_jobs_history_limit = 56, 
                     suspend = True, 
                     time_zone = '', ),
-                status = kubernetes_asyncio.models.v1/cron_job_status.v1.CronJobStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/cron_job_status.v1.CronJobStatus(
                     active = [
                         null
                         ], 

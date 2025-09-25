@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_http_ingress_rule_value import V1HTTPIngressRuleValue
+from kubernetes_asyncio_pydantic.models.v1_http_ingress_rule_value import V1HTTPIngressRuleValue
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_app_armor_profile import V1AppArmorProfile
+from kubernetes_asyncio_pydantic.models.v1_app_armor_profile import V1AppArmorProfile
 
 class TestV1AppArmorProfile(unittest.TestCase):
     """V1AppArmorProfile unit test stubs"""

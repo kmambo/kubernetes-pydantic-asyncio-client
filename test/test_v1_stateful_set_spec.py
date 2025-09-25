@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set_spec import V1StatefulSetSpec
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_spec import V1StatefulSetSpec
 
 class TestV1StatefulSetSpec(unittest.TestCase):
     """V1StatefulSetSpec unit test stubs"""
@@ -36,15 +36,15 @@ class TestV1StatefulSetSpec(unittest.TestCase):
         if include_optional:
             return V1StatefulSetSpec(
                 min_ready_seconds = 56,
-                ordinals = kubernetes_asyncio.models.v1/stateful_set_ordinals.v1.StatefulSetOrdinals(
+                ordinals = kubernetes_asyncio_pydantic.models.v1/stateful_set_ordinals.v1.StatefulSetOrdinals(
                     start = 56, ),
-                persistent_volume_claim_retention_policy = kubernetes_asyncio.models.v1/stateful_set_persistent_volume_claim_retention_policy.v1.StatefulSetPersistentVolumeClaimRetentionPolicy(
+                persistent_volume_claim_retention_policy = kubernetes_asyncio_pydantic.models.v1/stateful_set_persistent_volume_claim_retention_policy.v1.StatefulSetPersistentVolumeClaimRetentionPolicy(
                     when_deleted = '', 
                     when_scaled = '', ),
                 pod_management_policy = '',
                 replicas = 56,
                 revision_history_limit = 56,
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
@@ -52,10 +52,10 @@ class TestV1StatefulSetSpec(unittest.TestCase):
                         'key' : ''
                         }, ),
                 service_name = '',
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
-                update_strategy = kubernetes_asyncio.models.v1/stateful_set_update_strategy.v1.StatefulSetUpdateStrategy(
+                update_strategy = kubernetes_asyncio_pydantic.models.v1/stateful_set_update_strategy.v1.StatefulSetUpdateStrategy(
                     rolling_update = null, 
                     type = '', ),
                 volume_claim_templates = [
@@ -64,14 +64,14 @@ class TestV1StatefulSetSpec(unittest.TestCase):
             )
         else:
             return V1StatefulSetSpec(
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
         )

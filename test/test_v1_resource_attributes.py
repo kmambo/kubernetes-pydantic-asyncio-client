@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_attributes import V1ResourceAttributes
+from kubernetes_asyncio_pydantic.models.v1_resource_attributes import V1ResourceAttributes
 
 class TestV1ResourceAttributes(unittest.TestCase):
     """V1ResourceAttributes unit test stubs"""
@@ -35,13 +35,13 @@ class TestV1ResourceAttributes(unittest.TestCase):
         model = V1ResourceAttributes()
         if include_optional:
             return V1ResourceAttributes(
-                field_selector = kubernetes_asyncio.models.v1/field_selector_attributes.v1.FieldSelectorAttributes(
+                field_selector = kubernetes_asyncio_pydantic.models.v1/field_selector_attributes.v1.FieldSelectorAttributes(
                     raw_selector = '', 
                     requirements = [
                         null
                         ], ),
                 group = '',
-                label_selector = kubernetes_asyncio.models.v1/label_selector_attributes.v1.LabelSelectorAttributes(
+                label_selector = kubernetes_asyncio_pydantic.models.v1/label_selector_attributes.v1.LabelSelectorAttributes(
                     raw_selector = '', 
                     requirements = [
                         null

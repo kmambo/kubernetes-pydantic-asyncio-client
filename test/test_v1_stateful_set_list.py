@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set_list import V1StatefulSetList
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_list import V1StatefulSetList
 
 class TestV1StatefulSetList(unittest.TestCase):
     """V1StatefulSetList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1StatefulSetList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

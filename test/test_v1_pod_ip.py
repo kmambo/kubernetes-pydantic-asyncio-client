@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_ip import V1PodIP
+from kubernetes_asyncio_pydantic.models.v1_pod_ip import V1PodIP
 
 class TestV1PodIP(unittest.TestCase):
     """V1PodIP unit test stubs"""

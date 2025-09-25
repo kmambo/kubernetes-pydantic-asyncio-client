@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_selector_requirement import V1NodeSelectorRequirement
+from kubernetes_asyncio_pydantic.models.v1_node_selector_requirement import V1NodeSelectorRequirement
 
 class TestV1NodeSelectorRequirement(unittest.TestCase):
     """V1NodeSelectorRequirement unit test stubs"""

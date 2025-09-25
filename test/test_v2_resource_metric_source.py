@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_resource_metric_source import V2ResourceMetricSource
+from kubernetes_asyncio_pydantic.models.v2_resource_metric_source import V2ResourceMetricSource
 
 class TestV2ResourceMetricSource(unittest.TestCase):
     """V2ResourceMetricSource unit test stubs"""
@@ -36,7 +36,7 @@ class TestV2ResourceMetricSource(unittest.TestCase):
         if include_optional:
             return V2ResourceMetricSource(
                 name = '',
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 
@@ -45,7 +45,7 @@ class TestV2ResourceMetricSource(unittest.TestCase):
         else:
             return V2ResourceMetricSource(
                 name = '',
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 

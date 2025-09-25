@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_opaque_device_configuration import V1beta1OpaqueDeviceConfiguration
+from kubernetes_asyncio_pydantic.models.v1beta1_opaque_device_configuration import V1beta1OpaqueDeviceConfiguration
 
 class TestV1beta1OpaqueDeviceConfiguration(unittest.TestCase):
     """V1beta1OpaqueDeviceConfiguration unit test stubs"""

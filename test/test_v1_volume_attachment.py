@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_attachment import V1VolumeAttachment
+from kubernetes_asyncio_pydantic.models.v1_volume_attachment import V1VolumeAttachment
 
 class TestV1VolumeAttachment(unittest.TestCase):
     """V1VolumeAttachment unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1VolumeAttachment(unittest.TestCase):
             return V1VolumeAttachment(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,11 +63,11 @@ class TestV1VolumeAttachment(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/volume_attachment_spec.v1.VolumeAttachmentSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/volume_attachment_spec.v1.VolumeAttachmentSpec(
                     attacher = '', 
                     node_name = '', 
                     source = null, ),
-                status = kubernetes_asyncio.models.v1/volume_attachment_status.v1.VolumeAttachmentStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/volume_attachment_status.v1.VolumeAttachmentStatus(
                     attach_error = null, 
                     attached = True, 
                     attachment_metadata = {
@@ -77,7 +77,7 @@ class TestV1VolumeAttachment(unittest.TestCase):
             )
         else:
             return V1VolumeAttachment(
-                spec = kubernetes_asyncio.models.v1/volume_attachment_spec.v1.VolumeAttachmentSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/volume_attachment_spec.v1.VolumeAttachmentSpec(
                     attacher = '', 
                     node_name = '', 
                     source = null, ),

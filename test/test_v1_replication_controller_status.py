@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_replication_controller_status import V1ReplicationControllerStatus
+from kubernetes_asyncio_pydantic.models.v1_replication_controller_status import V1ReplicationControllerStatus
 
 class TestV1ReplicationControllerStatus(unittest.TestCase):
     """V1ReplicationControllerStatus unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_subresource_scale import V1CustomResourceSubresourceScale
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_subresource_scale import V1CustomResourceSubresourceScale
 
 class TestV1CustomResourceSubresourceScale(unittest.TestCase):
     """V1CustomResourceSubresourceScale unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_status import V1ServiceStatus
+from kubernetes_asyncio_pydantic.models.v1_service_status import V1ServiceStatus
 
 class TestV1ServiceStatus(unittest.TestCase):
     """V1ServiceStatus unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1ServiceStatus(unittest.TestCase):
                 conditions = [
                     null
                     ],
-                load_balancer = kubernetes_asyncio.models.v1/load_balancer_status.v1.LoadBalancerStatus(
+                load_balancer = kubernetes_asyncio_pydantic.models.v1/load_balancer_status.v1.LoadBalancerStatus(
                     ingress = [
                         null
                         ], )

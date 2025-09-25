@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_daemon_set_update_strategy import V1DaemonSetUpdateStrategy
+from kubernetes_asyncio_pydantic.models.v1_daemon_set_update_strategy import V1DaemonSetUpdateStrategy
 
 class TestV1DaemonSetUpdateStrategy(unittest.TestCase):
     """V1DaemonSetUpdateStrategy unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1DaemonSetUpdateStrategy(unittest.TestCase):
         model = V1DaemonSetUpdateStrategy()
         if include_optional:
             return V1DaemonSetUpdateStrategy(
-                rolling_update = kubernetes_asyncio.models.v1/rolling_update_daemon_set.v1.RollingUpdateDaemonSet(
+                rolling_update = kubernetes_asyncio_pydantic.models.v1/rolling_update_daemon_set.v1.RollingUpdateDaemonSet(
                     max_surge = null, 
                     max_unavailable = null, ),
                 type = ''

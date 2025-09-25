@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha2_lease_candidate_spec import V1alpha2LeaseCandidateSpec
+from kubernetes_asyncio_pydantic.models.v1alpha2_lease_candidate_spec import V1alpha2LeaseCandidateSpec
 
 class TestV1alpha2LeaseCandidateSpec(unittest.TestCase):
     """V1alpha2LeaseCandidateSpec unit test stubs"""

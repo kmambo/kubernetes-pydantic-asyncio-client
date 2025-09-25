@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_hpa_scaling_rules_tolerance import V2HPAScalingRulesTolerance
+from kubernetes_asyncio_pydantic.models.v2_hpa_scaling_rules_tolerance import V2HPAScalingRulesTolerance
 
 class TestV2HPAScalingRulesTolerance(unittest.TestCase):
     """V2HPAScalingRulesTolerance unit test stubs"""

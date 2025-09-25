@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_secret import V1Secret
+from kubernetes_asyncio_pydantic.models.v1_secret import V1Secret
 
 class TestV1Secret(unittest.TestCase):
     """V1Secret unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1Secret(unittest.TestCase):
                     },
                 immutable = True,
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

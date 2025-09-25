@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_rule import V1IngressRule
+from kubernetes_asyncio_pydantic.models.v1_ingress_rule import V1IngressRule
 
 class TestV1IngressRule(unittest.TestCase):
     """V1IngressRule unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1IngressRule(unittest.TestCase):
         if include_optional:
             return V1IngressRule(
                 host = '',
-                http = kubernetes_asyncio.models.v1/http_ingress_rule_value.v1.HTTPIngressRuleValue(
+                http = kubernetes_asyncio_pydantic.models.v1/http_ingress_rule_value.v1.HTTPIngressRuleValue(
                     paths = [
                         null
                         ], )

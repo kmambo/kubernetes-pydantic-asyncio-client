@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_http_ingress_path import V1HTTPIngressPath
+from kubernetes_asyncio_pydantic.models.v1_http_ingress_path import V1HTTPIngressPath
 
 class TestV1HTTPIngressPath(unittest.TestCase):
     """V1HTTPIngressPath unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1HTTPIngressPath(unittest.TestCase):
         model = V1HTTPIngressPath()
         if include_optional:
             return V1HTTPIngressPath(
-                backend = kubernetes_asyncio.models.v1/ingress_backend.v1.IngressBackend(
+                backend = kubernetes_asyncio_pydantic.models.v1/ingress_backend.v1.IngressBackend(
                     resource = null, 
                     service = null, ),
                 path = '',
@@ -43,7 +43,7 @@ class TestV1HTTPIngressPath(unittest.TestCase):
             )
         else:
             return V1HTTPIngressPath(
-                backend = kubernetes_asyncio.models.v1/ingress_backend.v1.IngressBackend(
+                backend = kubernetes_asyncio_pydantic.models.v1/ingress_backend.v1.IngressBackend(
                     resource = null, 
                     service = null, ),
                 path_type = '',

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_failure_policy_on_exit_codes_requirement import V1PodFailurePolicyOnExitCodesRequirement
+from kubernetes_asyncio_pydantic.models.v1_pod_failure_policy_on_exit_codes_requirement import V1PodFailurePolicyOnExitCodesRequirement
 
 class TestV1PodFailurePolicyOnExitCodesRequirement(unittest.TestCase):
     """V1PodFailurePolicyOnExitCodesRequirement unit test stubs"""

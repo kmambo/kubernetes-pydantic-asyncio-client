@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_volume_source import V1CSIVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_csi_volume_source import V1CSIVolumeSource
 
 class TestV1CSIVolumeSource(unittest.TestCase):
     """V1CSIVolumeSource unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CSIVolumeSource(unittest.TestCase):
             return V1CSIVolumeSource(
                 driver = '',
                 fs_type = '',
-                node_publish_secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                node_publish_secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 read_only = True,
                 volume_attributes = {

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.apiregistration_api import ApiregistrationApi
+from kubernetes_asyncio_pydantic.api.apiregistration_api import ApiregistrationApi
 
 
 class TestApiregistrationApi(unittest.IsolatedAsyncioTestCase):

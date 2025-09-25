@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_service_account_token_projection import V1ServiceAccountTokenProjection
+from kubernetes_asyncio_pydantic.models.v1_service_account_token_projection import V1ServiceAccountTokenProjection
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_windows_security_context_options import V1WindowsSecurityContextOptions
+from kubernetes_asyncio_pydantic.models.v1_windows_security_context_options import V1WindowsSecurityContextOptions
 
 class TestV1WindowsSecurityContextOptions(unittest.TestCase):
     """V1WindowsSecurityContextOptions unit test stubs"""

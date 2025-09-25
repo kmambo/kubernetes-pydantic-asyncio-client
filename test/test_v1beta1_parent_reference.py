@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_parent_reference import V1beta1ParentReference
+from kubernetes_asyncio_pydantic.models.v1beta1_parent_reference import V1beta1ParentReference
 
 class TestV1beta1ParentReference(unittest.TestCase):
     """V1beta1ParentReference unit test stubs"""

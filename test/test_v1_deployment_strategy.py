@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_deployment_strategy import V1DeploymentStrategy
+from kubernetes_asyncio_pydantic.models.v1_deployment_strategy import V1DeploymentStrategy
 
 class TestV1DeploymentStrategy(unittest.TestCase):
     """V1DeploymentStrategy unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1DeploymentStrategy(unittest.TestCase):
         model = V1DeploymentStrategy()
         if include_optional:
             return V1DeploymentStrategy(
-                rolling_update = kubernetes_asyncio.models.v1/rolling_update_deployment.v1.RollingUpdateDeployment(
+                rolling_update = kubernetes_asyncio_pydantic.models.v1/rolling_update_deployment.v1.RollingUpdateDeployment(
                     max_surge = null, 
                     max_unavailable = null, ),
                 type = ''

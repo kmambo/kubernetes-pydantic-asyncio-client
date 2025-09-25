@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
 
 # TODO update the JSON string below
 json = "{}"

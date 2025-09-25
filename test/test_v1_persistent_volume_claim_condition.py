@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume_claim_condition import V1PersistentVolumeClaimCondition
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_condition import V1PersistentVolumeClaimCondition
 
 class TestV1PersistentVolumeClaimCondition(unittest.TestCase):
     """V1PersistentVolumeClaimCondition unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_job import V1Job
+from kubernetes_asyncio_pydantic.models.v1_job import V1Job
 
 class TestV1Job(unittest.TestCase):
     """V1Job unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Job(unittest.TestCase):
             return V1Job(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Job(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/job_spec.v1.JobSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/job_spec.v1.JobSpec(
                     active_deadline_seconds = 56, 
                     backoff_limit = 56, 
                     backoff_limit_per_index = 56, 
@@ -80,7 +80,7 @@ class TestV1Job(unittest.TestCase):
                     suspend = True, 
                     template = null, 
                     ttl_seconds_after_finished = 56, ),
-                status = kubernetes_asyncio.models.v1/job_status.v1.JobStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/job_status.v1.JobStatus(
                     active = 56, 
                     completed_indexes = '', 
                     completion_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

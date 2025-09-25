@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_self_subject_rules_review import V1SelfSubjectRulesReview
+from kubernetes_asyncio_pydantic.models.v1_self_subject_rules_review import V1SelfSubjectRulesReview
 
 class TestV1SelfSubjectRulesReview(unittest.TestCase):
     """V1SelfSubjectRulesReview unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1SelfSubjectRulesReview(unittest.TestCase):
             return V1SelfSubjectRulesReview(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,9 +63,9 @@ class TestV1SelfSubjectRulesReview(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/self_subject_rules_review_spec.v1.SelfSubjectRulesReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/self_subject_rules_review_spec.v1.SelfSubjectRulesReviewSpec(
                     namespace = '', ),
-                status = kubernetes_asyncio.models.v1/subject_rules_review_status.v1.SubjectRulesReviewStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/subject_rules_review_status.v1.SubjectRulesReviewStatus(
                     evaluation_error = '', 
                     incomplete = True, 
                     non_resource_rules = [
@@ -77,7 +77,7 @@ class TestV1SelfSubjectRulesReview(unittest.TestCase):
             )
         else:
             return V1SelfSubjectRulesReview(
-                spec = kubernetes_asyncio.models.v1/self_subject_rules_review_spec.v1.SelfSubjectRulesReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/self_subject_rules_review_spec.v1.SelfSubjectRulesReviewSpec(
                     namespace = '', ),
         )
         """

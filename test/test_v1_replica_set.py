@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_replica_set import V1ReplicaSet
+from kubernetes_asyncio_pydantic.models.v1_replica_set import V1ReplicaSet
 
 class TestV1ReplicaSet(unittest.TestCase):
     """V1ReplicaSet unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1ReplicaSet(unittest.TestCase):
             return V1ReplicaSet(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,12 +63,12 @@ class TestV1ReplicaSet(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/replica_set_spec.v1.ReplicaSetSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/replica_set_spec.v1.ReplicaSetSpec(
                     min_ready_seconds = 56, 
                     replicas = 56, 
                     selector = null, 
                     template = null, ),
-                status = kubernetes_asyncio.models.v1/replica_set_status.v1.ReplicaSetStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/replica_set_status.v1.ReplicaSetStatus(
                     available_replicas = 56, 
                     conditions = [
                         null

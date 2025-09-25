@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v2_pods_metric_source import V2PodsMetricSource
+from kubernetes_asyncio_pydantic.models.v2_pods_metric_source import V2PodsMetricSource
 
 # TODO update the JSON string below
 json = "{}"

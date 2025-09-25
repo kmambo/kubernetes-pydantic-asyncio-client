@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_horizontal_pod_autoscaler_spec import V1HorizontalPodAutoscalerSpec
+from kubernetes_asyncio_pydantic.models.v1_horizontal_pod_autoscaler_spec import V1HorizontalPodAutoscalerSpec
 
 class TestV1HorizontalPodAutoscalerSpec(unittest.TestCase):
     """V1HorizontalPodAutoscalerSpec unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1HorizontalPodAutoscalerSpec(unittest.TestCase):
             return V1HorizontalPodAutoscalerSpec(
                 max_replicas = 56,
                 min_replicas = 56,
-                scale_target_ref = kubernetes_asyncio.models.v1/cross_version_object_reference.v1.CrossVersionObjectReference(
+                scale_target_ref = kubernetes_asyncio_pydantic.models.v1/cross_version_object_reference.v1.CrossVersionObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', ),
@@ -46,7 +46,7 @@ class TestV1HorizontalPodAutoscalerSpec(unittest.TestCase):
         else:
             return V1HorizontalPodAutoscalerSpec(
                 max_replicas = 56,
-                scale_target_ref = kubernetes_asyncio.models.v1/cross_version_object_reference.v1.CrossVersionObjectReference(
+                scale_target_ref = kubernetes_asyncio_pydantic.models.v1/cross_version_object_reference.v1.CrossVersionObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', ),

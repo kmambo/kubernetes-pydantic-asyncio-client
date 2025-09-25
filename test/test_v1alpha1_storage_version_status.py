@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_storage_version_status import V1alpha1StorageVersionStatus
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version_status import V1alpha1StorageVersionStatus
 
 class TestV1alpha1StorageVersionStatus(unittest.TestCase):
     """V1alpha1StorageVersionStatus unit test stubs"""

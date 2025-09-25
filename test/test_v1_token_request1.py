@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_request1 import V1TokenRequest1
+from kubernetes_asyncio_pydantic.models.v1_token_request1 import V1TokenRequest1
 
 class TestV1TokenRequest1(unittest.TestCase):
     """V1TokenRequest1 unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1TokenRequest1(unittest.TestCase):
             return V1TokenRequest1(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,19 +63,19 @@ class TestV1TokenRequest1(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/token_request_spec.v1.TokenRequestSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/token_request_spec.v1.TokenRequestSpec(
                     audiences = [
                         ''
                         ], 
                     bound_object_ref = null, 
                     expiration_seconds = 56, ),
-                status = kubernetes_asyncio.models.v1/token_request_status.v1.TokenRequestStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/token_request_status.v1.TokenRequestStatus(
                     expiration_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     token = '', )
             )
         else:
             return V1TokenRequest1(
-                spec = kubernetes_asyncio.models.v1/token_request_spec.v1.TokenRequestSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/token_request_spec.v1.TokenRequestSpec(
                     audiences = [
                         ''
                         ], 

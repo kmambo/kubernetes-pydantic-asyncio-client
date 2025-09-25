@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_validating_webhook_configuration_list import V1ValidatingWebhookConfigurationList
+from kubernetes_asyncio_pydantic.models.v1_validating_webhook_configuration_list import V1ValidatingWebhookConfigurationList
 
 # TODO update the JSON string below
 json = "{}"

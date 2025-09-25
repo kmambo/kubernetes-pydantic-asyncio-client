@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_endpoint import V1Endpoint
+from kubernetes_asyncio_pydantic.models.v1_endpoint import V1Endpoint
 
 class TestV1Endpoint(unittest.TestCase):
     """V1Endpoint unit test stubs"""
@@ -38,14 +38,14 @@ class TestV1Endpoint(unittest.TestCase):
                 addresses = [
                     ''
                     ],
-                conditions = kubernetes_asyncio.models.v1/endpoint_conditions.v1.EndpointConditions(
+                conditions = kubernetes_asyncio_pydantic.models.v1/endpoint_conditions.v1.EndpointConditions(
                     ready = True, 
                     serving = True, 
                     terminating = True, ),
                 deprecated_topology = {
                     'key' : ''
                     },
-                hints = kubernetes_asyncio.models.v1/endpoint_hints.v1.EndpointHints(
+                hints = kubernetes_asyncio_pydantic.models.v1/endpoint_hints.v1.EndpointHints(
                     for_nodes = [
                         null
                         ], 
@@ -54,7 +54,7 @@ class TestV1Endpoint(unittest.TestCase):
                         ], ),
                 hostname = '',
                 node_name = '',
-                target_ref = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                target_ref = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 

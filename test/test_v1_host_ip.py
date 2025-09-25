@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_host_ip import V1HostIP
+from kubernetes_asyncio_pydantic.models.v1_host_ip import V1HostIP
 
 class TestV1HostIP(unittest.TestCase):
     """V1HostIP unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_deployment_status import V1DeploymentStatus
+from kubernetes_asyncio_pydantic.models.v1_deployment_status import V1DeploymentStatus
 
 class TestV1DeploymentStatus(unittest.TestCase):
     """V1DeploymentStatus unit test stubs"""

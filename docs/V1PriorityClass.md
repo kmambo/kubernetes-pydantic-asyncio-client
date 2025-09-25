@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_priority_class import V1PriorityClass
+from kubernetes_asyncio_pydantic.models.v1_priority_class import V1PriorityClass
 
 # TODO update the JSON string below
 json = "{}"

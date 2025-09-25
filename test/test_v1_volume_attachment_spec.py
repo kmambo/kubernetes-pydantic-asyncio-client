@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_attachment_spec import V1VolumeAttachmentSpec
+from kubernetes_asyncio_pydantic.models.v1_volume_attachment_spec import V1VolumeAttachmentSpec
 
 class TestV1VolumeAttachmentSpec(unittest.TestCase):
     """V1VolumeAttachmentSpec unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1VolumeAttachmentSpec(unittest.TestCase):
             return V1VolumeAttachmentSpec(
                 attacher = '',
                 node_name = '',
-                source = kubernetes_asyncio.models.v1/volume_attachment_source.v1.VolumeAttachmentSource(
+                source = kubernetes_asyncio_pydantic.models.v1/volume_attachment_source.v1.VolumeAttachmentSource(
                     inline_volume_spec = null, 
                     persistent_volume_name = '', )
             )
@@ -45,7 +45,7 @@ class TestV1VolumeAttachmentSpec(unittest.TestCase):
             return V1VolumeAttachmentSpec(
                 attacher = '',
                 node_name = '',
-                source = kubernetes_asyncio.models.v1/volume_attachment_source.v1.VolumeAttachmentSource(
+                source = kubernetes_asyncio_pydantic.models.v1/volume_attachment_source.v1.VolumeAttachmentSource(
                     inline_volume_spec = null, 
                     persistent_volume_name = '', ),
         )

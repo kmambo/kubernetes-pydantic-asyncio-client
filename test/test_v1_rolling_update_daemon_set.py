@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_rolling_update_daemon_set import V1RollingUpdateDaemonSet
+from kubernetes_asyncio_pydantic.models.v1_rolling_update_daemon_set import V1RollingUpdateDaemonSet
 
 class TestV1RollingUpdateDaemonSet(unittest.TestCase):
     """V1RollingUpdateDaemonSet unit test stubs"""

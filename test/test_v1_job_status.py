@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_job_status import V1JobStatus
+from kubernetes_asyncio_pydantic.models.v1_job_status import V1JobStatus
 
 class TestV1JobStatus(unittest.TestCase):
     """V1JobStatus unit test stubs"""
@@ -47,7 +47,7 @@ class TestV1JobStatus(unittest.TestCase):
                 start_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 succeeded = 56,
                 terminating = 56,
-                uncounted_terminated_pods = kubernetes_asyncio.models.v1/uncounted_terminated_pods.v1.UncountedTerminatedPods(
+                uncounted_terminated_pods = kubernetes_asyncio_pydantic.models.v1/uncounted_terminated_pods.v1.UncountedTerminatedPods(
                     failed = [
                         ''
                         ], 

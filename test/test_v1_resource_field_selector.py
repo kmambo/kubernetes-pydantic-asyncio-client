@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_field_selector import V1ResourceFieldSelector
+from kubernetes_asyncio_pydantic.models.v1_resource_field_selector import V1ResourceFieldSelector
 
 class TestV1ResourceFieldSelector(unittest.TestCase):
     """V1ResourceFieldSelector unit test stubs"""

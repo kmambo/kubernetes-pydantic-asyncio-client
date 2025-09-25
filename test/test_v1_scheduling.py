@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_scheduling import V1Scheduling
+from kubernetes_asyncio_pydantic.models.v1_scheduling import V1Scheduling
 
 class TestV1Scheduling(unittest.TestCase):
     """V1Scheduling unit test stubs"""

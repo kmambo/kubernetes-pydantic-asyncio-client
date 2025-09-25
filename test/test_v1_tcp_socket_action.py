@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_tcp_socket_action import V1TCPSocketAction
+from kubernetes_asyncio_pydantic.models.v1_tcp_socket_action import V1TCPSocketAction
 
 class TestV1TCPSocketAction(unittest.TestCase):
     """V1TCPSocketAction unit test stubs"""

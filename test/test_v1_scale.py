@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_scale import V1Scale
+from kubernetes_asyncio_pydantic.models.v1_scale import V1Scale
 
 class TestV1Scale(unittest.TestCase):
     """V1Scale unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Scale(unittest.TestCase):
             return V1Scale(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,9 +63,9 @@ class TestV1Scale(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/scale_spec.v1.ScaleSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/scale_spec.v1.ScaleSpec(
                     replicas = 56, ),
-                status = kubernetes_asyncio.models.v1/scale_status.v1.ScaleStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/scale_status.v1.ScaleStatus(
                     replicas = 56, 
                     selector = '', )
             )

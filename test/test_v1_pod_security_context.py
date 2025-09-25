@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_security_context import V1PodSecurityContext
+from kubernetes_asyncio_pydantic.models.v1_pod_security_context import V1PodSecurityContext
 
 class TestV1PodSecurityContext(unittest.TestCase):
     """V1PodSecurityContext unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1PodSecurityContext(unittest.TestCase):
         model = V1PodSecurityContext()
         if include_optional:
             return V1PodSecurityContext(
-                app_armor_profile = kubernetes_asyncio.models.v1/app_armor_profile.v1.AppArmorProfile(
+                app_armor_profile = kubernetes_asyncio_pydantic.models.v1/app_armor_profile.v1.AppArmorProfile(
                     localhost_profile = '', 
                     type = '', ),
                 fs_group = 56,
@@ -44,12 +44,12 @@ class TestV1PodSecurityContext(unittest.TestCase):
                 run_as_non_root = True,
                 run_as_user = 56,
                 se_linux_change_policy = '',
-                se_linux_options = kubernetes_asyncio.models.v1/se_linux_options.v1.SELinuxOptions(
+                se_linux_options = kubernetes_asyncio_pydantic.models.v1/se_linux_options.v1.SELinuxOptions(
                     level = '', 
                     role = '', 
                     type = '', 
                     user = '', ),
-                seccomp_profile = kubernetes_asyncio.models.v1/seccomp_profile.v1.SeccompProfile(
+                seccomp_profile = kubernetes_asyncio_pydantic.models.v1/seccomp_profile.v1.SeccompProfile(
                     localhost_profile = '', 
                     type = '', ),
                 supplemental_groups = [
@@ -59,7 +59,7 @@ class TestV1PodSecurityContext(unittest.TestCase):
                 sysctls = [
                     null
                     ],
-                windows_options = kubernetes_asyncio.models.v1/windows_security_context_options.v1.WindowsSecurityContextOptions(
+                windows_options = kubernetes_asyncio_pydantic.models.v1/windows_security_context_options.v1.WindowsSecurityContextOptions(
                     gmsa_credential_spec = '', 
                     gmsa_credential_spec_name = '', 
                     host_process = True, 

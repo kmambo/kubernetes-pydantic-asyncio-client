@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_toleration import V1Toleration
+from kubernetes_asyncio_pydantic.models.v1_toleration import V1Toleration
 
 class TestV1Toleration(unittest.TestCase):
     """V1Toleration unit test stubs"""

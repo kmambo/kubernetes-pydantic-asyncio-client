@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_storage_version_migration_spec import V1alpha1StorageVersionMigrationSpec
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version_migration_spec import V1alpha1StorageVersionMigrationSpec
 
 class TestV1alpha1StorageVersionMigrationSpec(unittest.TestCase):
     """V1alpha1StorageVersionMigrationSpec unit test stubs"""
@@ -36,14 +36,14 @@ class TestV1alpha1StorageVersionMigrationSpec(unittest.TestCase):
         if include_optional:
             return V1alpha1StorageVersionMigrationSpec(
                 continue_token = '',
-                resource = kubernetes_asyncio.models.v1alpha1/group_version_resource.v1alpha1.GroupVersionResource(
+                resource = kubernetes_asyncio_pydantic.models.v1alpha1/group_version_resource.v1alpha1.GroupVersionResource(
                     group = '', 
                     resource = '', 
                     version = '', )
             )
         else:
             return V1alpha1StorageVersionMigrationSpec(
-                resource = kubernetes_asyncio.models.v1alpha1/group_version_resource.v1alpha1.GroupVersionResource(
+                resource = kubernetes_asyncio_pydantic.models.v1alpha1/group_version_resource.v1alpha1.GroupVersionResource(
                     group = '', 
                     resource = '', 
                     version = '', ),

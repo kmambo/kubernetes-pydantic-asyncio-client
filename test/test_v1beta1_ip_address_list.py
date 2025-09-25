@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_ip_address_list import V1beta1IPAddressList
+from kubernetes_asyncio_pydantic.models.v1beta1_ip_address_list import V1beta1IPAddressList
 
 class TestV1beta1IPAddressList(unittest.TestCase):
     """V1beta1IPAddressList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1beta1IPAddressList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

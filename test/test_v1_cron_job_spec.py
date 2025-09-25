@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cron_job_spec import V1CronJobSpec
+from kubernetes_asyncio_pydantic.models.v1_cron_job_spec import V1CronJobSpec
 
 class TestV1CronJobSpec(unittest.TestCase):
     """V1CronJobSpec unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CronJobSpec(unittest.TestCase):
             return V1CronJobSpec(
                 concurrency_policy = '',
                 failed_jobs_history_limit = 56,
-                job_template = kubernetes_asyncio.models.v1/job_template_spec.v1.JobTemplateSpec(
+                job_template = kubernetes_asyncio_pydantic.models.v1/job_template_spec.v1.JobTemplateSpec(
                     metadata = null, 
                     spec = null, ),
                 schedule = '',
@@ -48,7 +48,7 @@ class TestV1CronJobSpec(unittest.TestCase):
             )
         else:
             return V1CronJobSpec(
-                job_template = kubernetes_asyncio.models.v1/job_template_spec.v1.JobTemplateSpec(
+                job_template = kubernetes_asyncio_pydantic.models.v1/job_template_spec.v1.JobTemplateSpec(
                     metadata = null, 
                     spec = null, ),
                 schedule = '',

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_network_policy_port import V1NetworkPolicyPort
+from kubernetes_asyncio_pydantic.models.v1_network_policy_port import V1NetworkPolicyPort
 
 class TestV1NetworkPolicyPort(unittest.TestCase):
     """V1NetworkPolicyPort unit test stubs"""

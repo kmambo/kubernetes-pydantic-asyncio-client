@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_owner_reference import V1OwnerReference
+from kubernetes_asyncio_pydantic.models.v1_owner_reference import V1OwnerReference
 
 class TestV1OwnerReference(unittest.TestCase):
     """V1OwnerReference unit test stubs"""

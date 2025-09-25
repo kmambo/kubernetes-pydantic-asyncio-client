@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_param_kind import V1ParamKind
+from kubernetes_asyncio_pydantic.models.v1_param_kind import V1ParamKind
 
 class TestV1ParamKind(unittest.TestCase):
     """V1ParamKind unit test stubs"""

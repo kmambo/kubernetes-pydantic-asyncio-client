@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
 
 class TestV1PersistentVolume(unittest.TestCase):
     """V1PersistentVolume unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1PersistentVolume(unittest.TestCase):
             return V1PersistentVolume(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1PersistentVolume(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/persistent_volume_spec.v1.PersistentVolumeSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/persistent_volume_spec.v1.PersistentVolumeSpec(
                     access_modes = [
                         ''
                         ], 
@@ -71,7 +71,7 @@ class TestV1PersistentVolume(unittest.TestCase):
                     azure_disk = null, 
                     azure_file = null, 
                     capacity = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     cephfs = null, 
                     cinder = null, 
@@ -101,7 +101,7 @@ class TestV1PersistentVolume(unittest.TestCase):
                     volume_attributes_class_name = '', 
                     volume_mode = '', 
                     vsphere_volume = null, ),
-                status = kubernetes_asyncio.models.v1/persistent_volume_status.v1.PersistentVolumeStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/persistent_volume_status.v1.PersistentVolumeStatus(
                     last_phase_transition_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     message = '', 
                     phase = '', 

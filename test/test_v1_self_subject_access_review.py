@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_self_subject_access_review import V1SelfSubjectAccessReview
+from kubernetes_asyncio_pydantic.models.v1_self_subject_access_review import V1SelfSubjectAccessReview
 
 class TestV1SelfSubjectAccessReview(unittest.TestCase):
     """V1SelfSubjectAccessReview unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1SelfSubjectAccessReview(unittest.TestCase):
             return V1SelfSubjectAccessReview(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,10 +63,10 @@ class TestV1SelfSubjectAccessReview(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/self_subject_access_review_spec.v1.SelfSubjectAccessReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/self_subject_access_review_spec.v1.SelfSubjectAccessReviewSpec(
                     non_resource_attributes = null, 
                     resource_attributes = null, ),
-                status = kubernetes_asyncio.models.v1/subject_access_review_status.v1.SubjectAccessReviewStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/subject_access_review_status.v1.SubjectAccessReviewStatus(
                     allowed = True, 
                     denied = True, 
                     evaluation_error = '', 
@@ -74,7 +74,7 @@ class TestV1SelfSubjectAccessReview(unittest.TestCase):
             )
         else:
             return V1SelfSubjectAccessReview(
-                spec = kubernetes_asyncio.models.v1/self_subject_access_review_spec.v1.SelfSubjectAccessReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/self_subject_access_review_spec.v1.SelfSubjectAccessReviewSpec(
                     non_resource_attributes = null, 
                     resource_attributes = null, ),
         )

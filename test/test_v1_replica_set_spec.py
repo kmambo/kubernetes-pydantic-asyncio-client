@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_replica_set_spec import V1ReplicaSetSpec
+from kubernetes_asyncio_pydantic.models.v1_replica_set_spec import V1ReplicaSetSpec
 
 class TestV1ReplicaSetSpec(unittest.TestCase):
     """V1ReplicaSetSpec unit test stubs"""
@@ -37,20 +37,20 @@ class TestV1ReplicaSetSpec(unittest.TestCase):
             return V1ReplicaSetSpec(
                 min_ready_seconds = 56,
                 replicas = 56,
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, )
             )
         else:
             return V1ReplicaSetSpec(
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_daemon_set_condition import V1DaemonSetCondition
+from kubernetes_asyncio_pydantic.models.v1_daemon_set_condition import V1DaemonSetCondition
 
 class TestV1DaemonSetCondition(unittest.TestCase):
     """V1DaemonSetCondition unit test stubs"""

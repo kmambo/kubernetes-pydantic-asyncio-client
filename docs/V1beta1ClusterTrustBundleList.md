@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta1_cluster_trust_bundle_list import V1beta1ClusterTrustBundleList
+from kubernetes_asyncio_pydantic.models.v1beta1_cluster_trust_bundle_list import V1beta1ClusterTrustBundleList
 
 # TODO update the JSON string below
 json = "{}"

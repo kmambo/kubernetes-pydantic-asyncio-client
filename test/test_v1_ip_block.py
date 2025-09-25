@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ip_block import V1IPBlock
+from kubernetes_asyncio_pydantic.models.v1_ip_block import V1IPBlock
 
 class TestV1IPBlock(unittest.TestCase):
     """V1IPBlock unit test stubs"""

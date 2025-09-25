@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_allocated_device_status import V1beta2AllocatedDeviceStatus
+from kubernetes_asyncio_pydantic.models.v1beta2_allocated_device_status import V1beta2AllocatedDeviceStatus
 
 class TestV1beta2AllocatedDeviceStatus(unittest.TestCase):
     """V1beta2AllocatedDeviceStatus unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1beta2AllocatedDeviceStatus(unittest.TestCase):
                 data = None,
                 device = '',
                 driver = '',
-                network_data = kubernetes_asyncio.models.v1beta2/network_device_data.v1beta2.NetworkDeviceData(
+                network_data = kubernetes_asyncio_pydantic.models.v1beta2/network_device_data.v1beta2.NetworkDeviceData(
                     hardware_address = '', 
                     interface_name = '', 
                     ips = [

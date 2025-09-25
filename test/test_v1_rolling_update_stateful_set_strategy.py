@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_rolling_update_stateful_set_strategy import V1RollingUpdateStatefulSetStrategy
+from kubernetes_asyncio_pydantic.models.v1_rolling_update_stateful_set_strategy import V1RollingUpdateStatefulSetStrategy
 
 class TestV1RollingUpdateStatefulSetStrategy(unittest.TestCase):
     """V1RollingUpdateStatefulSetStrategy unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_empty_dir_volume_source import V1EmptyDirVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_empty_dir_volume_source import V1EmptyDirVolumeSource
 
 class TestV1EmptyDirVolumeSource(unittest.TestCase):
     """V1EmptyDirVolumeSource unit test stubs"""

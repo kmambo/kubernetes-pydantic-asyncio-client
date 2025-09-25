@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_metric_value_status_value import V2MetricValueStatusValue
+from kubernetes_asyncio_pydantic.models.v2_metric_value_status_value import V2MetricValueStatusValue
 
 class TestV2MetricValueStatusValue(unittest.TestCase):
     """V2MetricValueStatusValue unit test stubs"""

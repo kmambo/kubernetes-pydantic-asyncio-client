@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy import V1alpha1MutatingAdmissionPolicy
+from kubernetes_asyncio_pydantic.models.v1alpha1_mutating_admission_policy import V1alpha1MutatingAdmissionPolicy
 
 class TestV1alpha1MutatingAdmissionPolicy(unittest.TestCase):
     """V1alpha1MutatingAdmissionPolicy unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1alpha1MutatingAdmissionPolicy(unittest.TestCase):
             return V1alpha1MutatingAdmissionPolicy(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1alpha1MutatingAdmissionPolicy(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1alpha1/mutating_admission_policy_spec.v1alpha1.MutatingAdmissionPolicySpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha1/mutating_admission_policy_spec.v1alpha1.MutatingAdmissionPolicySpec(
                     failure_policy = '', 
                     match_conditions = [
                         null

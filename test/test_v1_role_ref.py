@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_role_ref import V1RoleRef
+from kubernetes_asyncio_pydantic.models.v1_role_ref import V1RoleRef
 
 class TestV1RoleRef(unittest.TestCase):
     """V1RoleRef unit test stubs"""

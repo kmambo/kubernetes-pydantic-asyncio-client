@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_limit_range_item import V1LimitRangeItem
+from kubernetes_asyncio_pydantic.models.v1_limit_range_item import V1LimitRangeItem
 
 class TestV1LimitRangeItem(unittest.TestCase):
     """V1LimitRangeItem unit test stubs"""
@@ -36,19 +36,19 @@ class TestV1LimitRangeItem(unittest.TestCase):
         if include_optional:
             return V1LimitRangeItem(
                 default = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 default_request = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 max = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 max_limit_request_ratio = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 min = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 type = ''
             )

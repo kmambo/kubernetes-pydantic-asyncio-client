@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_glusterfs_persistent_volume_source import V1GlusterfsPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_glusterfs_persistent_volume_source import V1GlusterfsPersistentVolumeSource
 
 class TestV1GlusterfsPersistentVolumeSource(unittest.TestCase):
     """V1GlusterfsPersistentVolumeSource unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_endpoint_address import V1EndpointAddress
+from kubernetes_asyncio_pydantic.models.v1_endpoint_address import V1EndpointAddress
 
 class TestV1EndpointAddress(unittest.TestCase):
     """V1EndpointAddress unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1EndpointAddress(unittest.TestCase):
                 hostname = '',
                 ip = '',
                 node_name = '',
-                target_ref = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                target_ref = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 

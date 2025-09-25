@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_spec import V1ServiceSpec
+from kubernetes_asyncio_pydantic.models.v1_service_spec import V1ServiceSpec
 
 class TestV1ServiceSpec(unittest.TestCase):
     """V1ServiceSpec unit test stubs"""
@@ -64,7 +64,7 @@ class TestV1ServiceSpec(unittest.TestCase):
                     'key' : ''
                     },
                 session_affinity = '',
-                session_affinity_config = kubernetes_asyncio.models.v1/session_affinity_config.v1.SessionAffinityConfig(
+                session_affinity_config = kubernetes_asyncio_pydantic.models.v1/session_affinity_config.v1.SessionAffinityConfig(
                     client_ip = null, ),
                 traffic_distribution = '',
                 type = ''

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_ingress_load_balancer_ingress import V1IngressLoadBalancerIngress
+from kubernetes_asyncio_pydantic.models.v1_ingress_load_balancer_ingress import V1IngressLoadBalancerIngress
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_capacity_request_policy import V1beta1CapacityRequestPolicy
+from kubernetes_asyncio_pydantic.models.v1beta1_capacity_request_policy import V1beta1CapacityRequestPolicy
 
 class TestV1beta1CapacityRequestPolicy(unittest.TestCase):
     """V1beta1CapacityRequestPolicy unit test stubs"""
@@ -36,12 +36,12 @@ class TestV1beta1CapacityRequestPolicy(unittest.TestCase):
         if include_optional:
             return V1beta1CapacityRequestPolicy(
                 default = None,
-                valid_range = kubernetes_asyncio.models.v1beta1/capacity_request_policy_range.v1beta1.CapacityRequestPolicyRange(
+                valid_range = kubernetes_asyncio_pydantic.models.v1beta1/capacity_request_policy_range.v1beta1.CapacityRequestPolicyRange(
                     max = null, 
                     min = null, 
                     step = null, ),
                 valid_values = [
-                    kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     ]
             )
         else:

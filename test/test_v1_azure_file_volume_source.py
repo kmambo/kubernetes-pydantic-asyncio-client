@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_azure_file_volume_source import V1AzureFileVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_azure_file_volume_source import V1AzureFileVolumeSource
 
 class TestV1AzureFileVolumeSource(unittest.TestCase):
     """V1AzureFileVolumeSource unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_request import V1TokenRequest
+from kubernetes_asyncio_pydantic.models.v1_token_request import V1TokenRequest
 
 class TestV1TokenRequest(unittest.TestCase):
     """V1TokenRequest unit test stubs"""

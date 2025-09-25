@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_quota_status import V1ResourceQuotaStatus
+from kubernetes_asyncio_pydantic.models.v1_resource_quota_status import V1ResourceQuotaStatus
 
 class TestV1ResourceQuotaStatus(unittest.TestCase):
     """V1ResourceQuotaStatus unit test stubs"""
@@ -36,10 +36,10 @@ class TestV1ResourceQuotaStatus(unittest.TestCase):
         if include_optional:
             return V1ResourceQuotaStatus(
                 hard = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 used = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     }
             )
         else:

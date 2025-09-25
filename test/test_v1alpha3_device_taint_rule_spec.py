@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha3_device_taint_rule_spec import V1alpha3DeviceTaintRuleSpec
+from kubernetes_asyncio_pydantic.models.v1alpha3_device_taint_rule_spec import V1alpha3DeviceTaintRuleSpec
 
 class TestV1alpha3DeviceTaintRuleSpec(unittest.TestCase):
     """V1alpha3DeviceTaintRuleSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1alpha3DeviceTaintRuleSpec(unittest.TestCase):
         model = V1alpha3DeviceTaintRuleSpec()
         if include_optional:
             return V1alpha3DeviceTaintRuleSpec(
-                device_selector = kubernetes_asyncio.models.v1alpha3/device_taint_selector.v1alpha3.DeviceTaintSelector(
+                device_selector = kubernetes_asyncio_pydantic.models.v1alpha3/device_taint_selector.v1alpha3.DeviceTaintSelector(
                     device = '', 
                     device_class_name = '', 
                     driver = '', 
@@ -43,7 +43,7 @@ class TestV1alpha3DeviceTaintRuleSpec(unittest.TestCase):
                     selectors = [
                         null
                         ], ),
-                taint = kubernetes_asyncio.models.v1alpha3/device_taint.v1alpha3.DeviceTaint(
+                taint = kubernetes_asyncio_pydantic.models.v1alpha3/device_taint.v1alpha3.DeviceTaint(
                     effect = '', 
                     key = '', 
                     time_added = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -51,7 +51,7 @@ class TestV1alpha3DeviceTaintRuleSpec(unittest.TestCase):
             )
         else:
             return V1alpha3DeviceTaintRuleSpec(
-                taint = kubernetes_asyncio.models.v1alpha3/device_taint.v1alpha3.DeviceTaint(
+                taint = kubernetes_asyncio_pydantic.models.v1alpha3/device_taint.v1alpha3.DeviceTaint(
                     effect = '', 
                     key = '', 
                     time_added = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

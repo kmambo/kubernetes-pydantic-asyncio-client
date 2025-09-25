@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_spec import V1alpha1MutatingAdmissionPolicySpec
+from kubernetes_asyncio_pydantic.models.v1alpha1_mutating_admission_policy_spec import V1alpha1MutatingAdmissionPolicySpec
 
 class TestV1alpha1MutatingAdmissionPolicySpec(unittest.TestCase):
     """V1alpha1MutatingAdmissionPolicySpec unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1alpha1MutatingAdmissionPolicySpec(unittest.TestCase):
                 match_conditions = [
                     null
                     ],
-                match_constraints = kubernetes_asyncio.models.v1alpha1/match_resources.v1alpha1.MatchResources(
+                match_constraints = kubernetes_asyncio_pydantic.models.v1alpha1/match_resources.v1alpha1.MatchResources(
                     exclude_resource_rules = [
                         null
                         ], 
@@ -52,7 +52,7 @@ class TestV1alpha1MutatingAdmissionPolicySpec(unittest.TestCase):
                 mutations = [
                     null
                     ],
-                param_kind = kubernetes_asyncio.models.v1alpha1/param_kind.v1alpha1.ParamKind(
+                param_kind = kubernetes_asyncio_pydantic.models.v1alpha1/param_kind.v1alpha1.ParamKind(
                     api_version = '', 
                     kind = '', ),
                 reinvocation_policy = '',

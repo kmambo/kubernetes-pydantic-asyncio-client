@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_state_running import V1ContainerStateRunning
+from kubernetes_asyncio_pydantic.models.v1_container_state_running import V1ContainerStateRunning
 
 class TestV1ContainerStateRunning(unittest.TestCase):
     """V1ContainerStateRunning unit test stubs"""

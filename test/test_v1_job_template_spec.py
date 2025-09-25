@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_job_template_spec import V1JobTemplateSpec
+from kubernetes_asyncio_pydantic.models.v1_job_template_spec import V1JobTemplateSpec
 
 class TestV1JobTemplateSpec(unittest.TestCase):
     """V1JobTemplateSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1JobTemplateSpec(unittest.TestCase):
         model = V1JobTemplateSpec()
         if include_optional:
             return V1JobTemplateSpec(
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -61,7 +61,7 @@ class TestV1JobTemplateSpec(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/job_spec.v1.JobSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/job_spec.v1.JobSpec(
                     active_deadline_seconds = 56, 
                     backoff_limit = 56, 
                     backoff_limit_per_index = 56, 

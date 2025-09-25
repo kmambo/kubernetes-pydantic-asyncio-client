@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
+from kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_token_request_status import V1TokenRequestStatus
+from kubernetes_asyncio_pydantic.models.v1_token_request_status import V1TokenRequestStatus
 
 # TODO update the JSON string below
 json = "{}"

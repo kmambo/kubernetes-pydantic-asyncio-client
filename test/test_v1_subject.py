@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_subject import V1Subject
+from kubernetes_asyncio_pydantic.models.v1_subject import V1Subject
 
 class TestV1Subject(unittest.TestCase):
     """V1Subject unit test stubs"""

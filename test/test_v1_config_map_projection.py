@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_config_map_projection import V1ConfigMapProjection
+from kubernetes_asyncio_pydantic.models.v1_config_map_projection import V1ConfigMapProjection
 
 class TestV1ConfigMapProjection(unittest.TestCase):
     """V1ConfigMapProjection unit test stubs"""

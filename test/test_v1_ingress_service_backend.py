@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_service_backend import V1IngressServiceBackend
+from kubernetes_asyncio_pydantic.models.v1_ingress_service_backend import V1IngressServiceBackend
 
 class TestV1IngressServiceBackend(unittest.TestCase):
     """V1IngressServiceBackend unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1IngressServiceBackend(unittest.TestCase):
         if include_optional:
             return V1IngressServiceBackend(
                 name = '',
-                port = kubernetes_asyncio.models.v1/service_backend_port.v1.ServiceBackendPort(
+                port = kubernetes_asyncio_pydantic.models.v1/service_backend_port.v1.ServiceBackendPort(
                     name = '', 
                     number = 56, )
             )

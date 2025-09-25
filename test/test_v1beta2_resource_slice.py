@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_resource_slice import V1beta2ResourceSlice
+from kubernetes_asyncio_pydantic.models.v1beta2_resource_slice import V1beta2ResourceSlice
 
 class TestV1beta2ResourceSlice(unittest.TestCase):
     """V1beta2ResourceSlice unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1beta2ResourceSlice(unittest.TestCase):
             return V1beta2ResourceSlice(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1beta2ResourceSlice(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1beta2/resource_slice_spec.v1beta2.ResourceSliceSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1beta2/resource_slice_spec.v1beta2.ResourceSliceSpec(
                     all_nodes = True, 
                     devices = [
                         null
@@ -79,7 +79,7 @@ class TestV1beta2ResourceSlice(unittest.TestCase):
             )
         else:
             return V1beta2ResourceSlice(
-                spec = kubernetes_asyncio.models.v1beta2/resource_slice_spec.v1beta2.ResourceSliceSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1beta2/resource_slice_spec.v1beta2.ResourceSliceSpec(
                     all_nodes = True, 
                     devices = [
                         null

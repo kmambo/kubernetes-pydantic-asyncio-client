@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_webhook_client_config1 import V1WebhookClientConfig1
+from kubernetes_asyncio_pydantic.models.v1_webhook_client_config1 import V1WebhookClientConfig1
 
 class TestV1WebhookClientConfig1(unittest.TestCase):
     """V1WebhookClientConfig1 unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1WebhookClientConfig1(unittest.TestCase):
         if include_optional:
             return V1WebhookClientConfig1(
                 ca_bundle = 'YQ==',
-                service = kubernetes_asyncio.models.v1/service_reference_1.v1.ServiceReference_1(
+                service = kubernetes_asyncio_pydantic.models.v1/service_reference_1.v1.ServiceReference_1(
                     name = '', 
                     namespace = '', 
                     path = '', 

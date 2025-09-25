@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_secret_reference import V1SecretReference
+from kubernetes_asyncio_pydantic.models.v1_secret_reference import V1SecretReference
 
 class TestV1SecretReference(unittest.TestCase):
     """V1SecretReference unit test stubs"""

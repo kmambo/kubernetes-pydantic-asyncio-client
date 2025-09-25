@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_device_capacity_value import V1beta1DeviceCapacityValue
+from kubernetes_asyncio_pydantic.models.v1beta1_device_capacity_value import V1beta1DeviceCapacityValue
 
 class TestV1beta1DeviceCapacityValue(unittest.TestCase):
     """V1beta1DeviceCapacityValue unit test stubs"""

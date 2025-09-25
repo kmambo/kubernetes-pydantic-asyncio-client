@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_label_selector_requirement import V1LabelSelectorRequirement
+from kubernetes_asyncio_pydantic.models.v1_label_selector_requirement import V1LabelSelectorRequirement
 
 # TODO update the JSON string below
 json = "{}"

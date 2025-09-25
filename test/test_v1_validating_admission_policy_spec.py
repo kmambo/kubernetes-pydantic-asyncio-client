@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_validating_admission_policy_spec import V1ValidatingAdmissionPolicySpec
+from kubernetes_asyncio_pydantic.models.v1_validating_admission_policy_spec import V1ValidatingAdmissionPolicySpec
 
 class TestV1ValidatingAdmissionPolicySpec(unittest.TestCase):
     """V1ValidatingAdmissionPolicySpec unit test stubs"""
@@ -42,7 +42,7 @@ class TestV1ValidatingAdmissionPolicySpec(unittest.TestCase):
                 match_conditions = [
                     null
                     ],
-                match_constraints = kubernetes_asyncio.models.v1/match_resources.v1.MatchResources(
+                match_constraints = kubernetes_asyncio_pydantic.models.v1/match_resources.v1.MatchResources(
                     exclude_resource_rules = [
                         null
                         ], 
@@ -52,7 +52,7 @@ class TestV1ValidatingAdmissionPolicySpec(unittest.TestCase):
                     resource_rules = [
                         null
                         ], ),
-                param_kind = kubernetes_asyncio.models.v1/param_kind.v1.ParamKind(
+                param_kind = kubernetes_asyncio_pydantic.models.v1/param_kind.v1.ParamKind(
                     api_version = '', 
                     kind = '', ),
                 validations = [

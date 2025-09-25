@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_config_map import V1ConfigMap
+from kubernetes_asyncio_pydantic.models.v1_config_map import V1ConfigMap
 
 # TODO update the JSON string below
 json = "{}"

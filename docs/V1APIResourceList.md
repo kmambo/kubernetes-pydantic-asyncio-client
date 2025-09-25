@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_api_resource_list import V1APIResourceList
+from kubernetes_asyncio_pydantic.models.v1_api_resource_list import V1APIResourceList
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,4 +1,4 @@
-# kubernetes_asyncio.LogsApi
+# kubernetes_asyncio_pydantic.LogsApi
 
 All URIs are relative to *http://localhost:8080*
 
@@ -15,21 +15,21 @@ Method | HTTP request | Description
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.LogsApi(api_client)
+    api_instance = kubernetes_asyncio_pydantic.LogsApi(api_client)
     logpath = 'logpath_example' # str | path to the log
 
     try:
@@ -75,21 +75,21 @@ No authorization required
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.LogsApi(api_client)
+    api_instance = kubernetes_asyncio_pydantic.LogsApi(api_client)
 
     try:
         await api_instance.log_file_list_handler()

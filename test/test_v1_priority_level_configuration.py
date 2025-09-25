@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_priority_level_configuration import V1PriorityLevelConfiguration
+from kubernetes_asyncio_pydantic.models.v1_priority_level_configuration import V1PriorityLevelConfiguration
 
 class TestV1PriorityLevelConfiguration(unittest.TestCase):
     """V1PriorityLevelConfiguration unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1PriorityLevelConfiguration(unittest.TestCase):
             return V1PriorityLevelConfiguration(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,11 +63,11 @@ class TestV1PriorityLevelConfiguration(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/priority_level_configuration_spec.v1.PriorityLevelConfigurationSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/priority_level_configuration_spec.v1.PriorityLevelConfigurationSpec(
                     exempt = null, 
                     limited = null, 
                     type = '', ),
-                status = kubernetes_asyncio.models.v1/priority_level_configuration_status.v1.PriorityLevelConfigurationStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/priority_level_configuration_status.v1.PriorityLevelConfigurationStatus(
                     conditions = [
                         null
                         ], )

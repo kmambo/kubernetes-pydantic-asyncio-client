@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_pod_dns_config_option import V1PodDNSConfigOption
+from kubernetes_asyncio_pydantic.models.v1_pod_dns_config_option import V1PodDNSConfigOption
 
 # TODO update the JSON string below
 json = "{}"

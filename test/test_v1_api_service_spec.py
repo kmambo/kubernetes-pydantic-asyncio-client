@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_api_service_spec import V1APIServiceSpec
+from kubernetes_asyncio_pydantic.models.v1_api_service_spec import V1APIServiceSpec
 
 class TestV1APIServiceSpec(unittest.TestCase):
     """V1APIServiceSpec unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1APIServiceSpec(unittest.TestCase):
                 group = '',
                 group_priority_minimum = 56,
                 insecure_skip_tls_verify = True,
-                service = kubernetes_asyncio.models.v1/service_reference_2.v1.ServiceReference_2(
+                service = kubernetes_asyncio_pydantic.models.v1/service_reference_2.v1.ServiceReference_2(
                     name = '', 
                     namespace = '', 
                     port = 56, ),

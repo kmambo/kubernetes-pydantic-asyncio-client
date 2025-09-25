@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_tls import V1IngressTLS
+from kubernetes_asyncio_pydantic.models.v1_ingress_tls import V1IngressTLS
 
 class TestV1IngressTLS(unittest.TestCase):
     """V1IngressTLS unit test stubs"""

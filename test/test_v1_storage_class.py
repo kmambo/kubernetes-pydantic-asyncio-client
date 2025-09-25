@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_storage_class import V1StorageClass
+from kubernetes_asyncio_pydantic.models.v1_storage_class import V1StorageClass
 
 class TestV1StorageClass(unittest.TestCase):
     """V1StorageClass unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1StorageClass(unittest.TestCase):
                     ],
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

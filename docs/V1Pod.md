@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
 
 # TODO update the JSON string below
 json = "{}"

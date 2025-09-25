@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_certificate_projection import V1PodCertificateProjection
+from kubernetes_asyncio_pydantic.models.v1_pod_certificate_projection import V1PodCertificateProjection
 
 class TestV1PodCertificateProjection(unittest.TestCase):
     """V1PodCertificateProjection unit test stubs"""

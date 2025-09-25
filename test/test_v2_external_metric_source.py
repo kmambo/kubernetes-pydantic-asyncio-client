@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_external_metric_source import V2ExternalMetricSource
+from kubernetes_asyncio_pydantic.models.v2_external_metric_source import V2ExternalMetricSource
 
 class TestV2ExternalMetricSource(unittest.TestCase):
     """V2ExternalMetricSource unit test stubs"""
@@ -35,10 +35,10 @@ class TestV2ExternalMetricSource(unittest.TestCase):
         model = V2ExternalMetricSource()
         if include_optional:
             return V2ExternalMetricSource(
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 
@@ -46,10 +46,10 @@ class TestV2ExternalMetricSource(unittest.TestCase):
             )
         else:
             return V2ExternalMetricSource(
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 

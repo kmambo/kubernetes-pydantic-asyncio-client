@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_downward_api_projection import V1DownwardAPIProjection
+from kubernetes_asyncio_pydantic.models.v1_downward_api_projection import V1DownwardAPIProjection
 
 class TestV1DownwardAPIProjection(unittest.TestCase):
     """V1DownwardAPIProjection unit test stubs"""

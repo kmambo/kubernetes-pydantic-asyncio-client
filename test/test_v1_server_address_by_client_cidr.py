@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
+from kubernetes_asyncio_pydantic.models.v1_server_address_by_client_cidr import V1ServerAddressByClientCIDR
 
 class TestV1ServerAddressByClientCIDR(unittest.TestCase):
     """V1ServerAddressByClientCIDR unit test stubs"""

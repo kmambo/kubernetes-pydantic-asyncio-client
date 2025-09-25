@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_request_spec import V1TokenRequestSpec
+from kubernetes_asyncio_pydantic.models.v1_token_request_spec import V1TokenRequestSpec
 
 class TestV1TokenRequestSpec(unittest.TestCase):
     """V1TokenRequestSpec unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1TokenRequestSpec(unittest.TestCase):
                 audiences = [
                     ''
                     ],
-                bound_object_ref = kubernetes_asyncio.models.v1/bound_object_reference.v1.BoundObjectReference(
+                bound_object_ref = kubernetes_asyncio_pydantic.models.v1/bound_object_reference.v1.BoundObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', 

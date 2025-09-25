@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta2_device_request_allocation_result import V1beta2DeviceRequestAllocationResult
+from kubernetes_asyncio_pydantic.models.v1beta2_device_request_allocation_result import V1beta2DeviceRequestAllocationResult
 
 # TODO update the JSON string below
 json = "{}"

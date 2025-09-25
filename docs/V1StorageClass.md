@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_storage_class import V1StorageClass
+from kubernetes_asyncio_pydantic.models.v1_storage_class import V1StorageClass
 
 # TODO update the JSON string below
 json = "{}"

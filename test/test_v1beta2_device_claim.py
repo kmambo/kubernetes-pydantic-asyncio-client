@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device_claim import V1beta2DeviceClaim
+from kubernetes_asyncio_pydantic.models.v1beta2_device_claim import V1beta2DeviceClaim
 
 class TestV1beta2DeviceClaim(unittest.TestCase):
     """V1beta2DeviceClaim unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device_selector import V1beta2DeviceSelector
+from kubernetes_asyncio_pydantic.models.v1beta2_device_selector import V1beta2DeviceSelector
 
 class TestV1beta2DeviceSelector(unittest.TestCase):
     """V1beta2DeviceSelector unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta2DeviceSelector(unittest.TestCase):
         model = V1beta2DeviceSelector()
         if include_optional:
             return V1beta2DeviceSelector(
-                cel = kubernetes_asyncio.models.v1beta2/cel_device_selector.v1beta2.CELDeviceSelector(
+                cel = kubernetes_asyncio_pydantic.models.v1beta2/cel_device_selector.v1beta2.CELDeviceSelector(
                     expression = '', )
             )
         else:

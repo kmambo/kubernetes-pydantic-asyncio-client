@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_account_token_projection import V1ServiceAccountTokenProjection
+from kubernetes_asyncio_pydantic.models.v1_service_account_token_projection import V1ServiceAccountTokenProjection
 
 class TestV1ServiceAccountTokenProjection(unittest.TestCase):
     """V1ServiceAccountTokenProjection unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_network_device_data import V1beta2NetworkDeviceData
+from kubernetes_asyncio_pydantic.models.v1beta2_network_device_data import V1beta2NetworkDeviceData
 
 class TestV1beta2NetworkDeviceData(unittest.TestCase):
     """V1beta2NetworkDeviceData unit test stubs"""

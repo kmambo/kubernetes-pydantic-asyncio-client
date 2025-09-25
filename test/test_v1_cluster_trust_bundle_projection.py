@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cluster_trust_bundle_projection import V1ClusterTrustBundleProjection
+from kubernetes_asyncio_pydantic.models.v1_cluster_trust_bundle_projection import V1ClusterTrustBundleProjection
 
 class TestV1ClusterTrustBundleProjection(unittest.TestCase):
     """V1ClusterTrustBundleProjection unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1ClusterTrustBundleProjection(unittest.TestCase):
         model = V1ClusterTrustBundleProjection()
         if include_optional:
             return V1ClusterTrustBundleProjection(
-                label_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                label_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

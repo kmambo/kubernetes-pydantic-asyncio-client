@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
+from kubernetes_asyncio_pydantic.models.v1_preferred_scheduling_term import V1PreferredSchedulingTerm
 
 class TestV1PreferredSchedulingTerm(unittest.TestCase):
     """V1PreferredSchedulingTerm unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1PreferredSchedulingTerm(unittest.TestCase):
         model = V1PreferredSchedulingTerm()
         if include_optional:
             return V1PreferredSchedulingTerm(
-                preference = kubernetes_asyncio.models.v1/node_selector_term.v1.NodeSelectorTerm(
+                preference = kubernetes_asyncio_pydantic.models.v1/node_selector_term.v1.NodeSelectorTerm(
                     match_expressions = [
                         null
                         ], 
@@ -46,7 +46,7 @@ class TestV1PreferredSchedulingTerm(unittest.TestCase):
             )
         else:
             return V1PreferredSchedulingTerm(
-                preference = kubernetes_asyncio.models.v1/node_selector_term.v1.NodeSelectorTerm(
+                preference = kubernetes_asyncio_pydantic.models.v1/node_selector_term.v1.NodeSelectorTerm(
                     match_expressions = [
                         null
                         ], 

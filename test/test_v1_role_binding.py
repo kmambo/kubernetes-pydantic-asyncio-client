@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_role_binding import V1RoleBinding
+from kubernetes_asyncio_pydantic.models.v1_role_binding import V1RoleBinding
 
 class TestV1RoleBinding(unittest.TestCase):
     """V1RoleBinding unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1RoleBinding(unittest.TestCase):
             return V1RoleBinding(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1RoleBinding(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                role_ref = kubernetes_asyncio.models.v1/role_ref.v1.RoleRef(
+                role_ref = kubernetes_asyncio_pydantic.models.v1/role_ref.v1.RoleRef(
                     api_group = '', 
                     kind = '', 
                     name = '', ),
@@ -73,7 +73,7 @@ class TestV1RoleBinding(unittest.TestCase):
             )
         else:
             return V1RoleBinding(
-                role_ref = kubernetes_asyncio.models.v1/role_ref.v1.RoleRef(
+                role_ref = kubernetes_asyncio_pydantic.models.v1/role_ref.v1.RoleRef(
                     api_group = '', 
                     kind = '', 
                     name = '', ),

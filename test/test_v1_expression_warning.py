@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_expression_warning import V1ExpressionWarning
+from kubernetes_asyncio_pydantic.models.v1_expression_warning import V1ExpressionWarning
 
 class TestV1ExpressionWarning(unittest.TestCase):
     """V1ExpressionWarning unit test stubs"""

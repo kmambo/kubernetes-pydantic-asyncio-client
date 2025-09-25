@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_validating_admission_policy import V1ValidatingAdmissionPolicy
+from kubernetes_asyncio_pydantic.models.v1_validating_admission_policy import V1ValidatingAdmissionPolicy
 
 # TODO update the JSON string below
 json = "{}"

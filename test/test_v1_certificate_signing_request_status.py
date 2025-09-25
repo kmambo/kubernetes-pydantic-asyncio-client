@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_certificate_signing_request_status import V1CertificateSigningRequestStatus
+from kubernetes_asyncio_pydantic.models.v1_certificate_signing_request_status import V1CertificateSigningRequestStatus
 
 class TestV1CertificateSigningRequestStatus(unittest.TestCase):
     """V1CertificateSigningRequestStatus unit test stubs"""

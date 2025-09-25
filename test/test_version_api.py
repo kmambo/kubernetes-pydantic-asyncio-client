@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.version_api import VersionApi
+from kubernetes_asyncio_pydantic.api.version_api import VersionApi
 
 
 class TestVersionApi(unittest.IsolatedAsyncioTestCase):

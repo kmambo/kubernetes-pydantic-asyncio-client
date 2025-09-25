@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_replica_set_status import V1ReplicaSetStatus
+from kubernetes_asyncio_pydantic.models.v1_replica_set_status import V1ReplicaSetStatus
 
 class TestV1ReplicaSetStatus(unittest.TestCase):
     """V1ReplicaSetStatus unit test stubs"""

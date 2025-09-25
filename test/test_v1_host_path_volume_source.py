@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_host_path_volume_source import V1HostPathVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_host_path_volume_source import V1HostPathVolumeSource
 
 class TestV1HostPathVolumeSource(unittest.TestCase):
     """V1HostPathVolumeSource unit test stubs"""

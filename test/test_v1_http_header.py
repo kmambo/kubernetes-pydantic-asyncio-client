@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_http_header import V1HTTPHeader
+from kubernetes_asyncio_pydantic.models.v1_http_header import V1HTTPHeader
 
 class TestV1HTTPHeader(unittest.TestCase):
     """V1HTTPHeader unit test stubs"""

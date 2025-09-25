@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_api_group import V1APIGroup
+from kubernetes_asyncio_pydantic.models.v1_api_group import V1APIGroup
 
 class TestV1APIGroup(unittest.TestCase):
     """V1APIGroup unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1APIGroup(unittest.TestCase):
                 api_version = '',
                 kind = '',
                 name = '',
-                preferred_version = kubernetes_asyncio.models.v1/group_version_for_discovery.v1.GroupVersionForDiscovery(
+                preferred_version = kubernetes_asyncio_pydantic.models.v1/group_version_for_discovery.v1.GroupVersionForDiscovery(
                     group_version = '', 
                     version = '', ),
                 server_address_by_client_cidrs = [

@@ -1,4 +1,4 @@
-# kubernetes_asyncio.AuthenticationV1Api
+# kubernetes_asyncio_pydantic.AuthenticationV1Api
 
 All URIs are relative to *http://localhost:8080*
 
@@ -18,23 +18,23 @@ create a SelfSubjectReview
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_self_subject_review import V1SelfSubjectReview
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_self_subject_review import V1SelfSubjectReview
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.AuthenticationV1Api(api_client)
-    v1_self_subject_review = kubernetes_asyncio.V1SelfSubjectReview() # V1SelfSubjectReview | 
+    api_instance = kubernetes_asyncio_pydantic.AuthenticationV1Api(api_client)
+    v1_self_subject_review = kubernetes_asyncio_pydantic.V1SelfSubjectReview() # V1SelfSubjectReview | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -94,23 +94,23 @@ create a TokenReview
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_token_review import V1TokenReview
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_token_review import V1TokenReview
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.AuthenticationV1Api(api_client)
-    v1_token_review = kubernetes_asyncio.V1TokenReview() # V1TokenReview | 
+    api_instance = kubernetes_asyncio_pydantic.AuthenticationV1Api(api_client)
+    v1_token_review = kubernetes_asyncio_pydantic.V1TokenReview() # V1TokenReview | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -170,22 +170,22 @@ get available resources
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_api_resource_list import V1APIResourceList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_api_resource_list import V1APIResourceList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.AuthenticationV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.AuthenticationV1Api(api_client)
 
     try:
         api_response = await api_instance.get_api_resources()

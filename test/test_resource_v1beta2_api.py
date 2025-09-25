@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.resource_v1beta2_api import ResourceV1beta2Api
+from kubernetes_asyncio_pydantic.api.resource_v1beta2_api import ResourceV1beta2Api
 
 
 class TestResourceV1beta2Api(unittest.IsolatedAsyncioTestCase):

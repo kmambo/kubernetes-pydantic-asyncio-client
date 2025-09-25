@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.autoscaling_api import AutoscalingApi
+from kubernetes_asyncio_pydantic.api.autoscaling_api import AutoscalingApi
 
 
 class TestAutoscalingApi(unittest.IsolatedAsyncioTestCase):

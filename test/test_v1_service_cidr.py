@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_cidr import V1ServiceCIDR
+from kubernetes_asyncio_pydantic.models.v1_service_cidr import V1ServiceCIDR
 
 class TestV1ServiceCIDR(unittest.TestCase):
     """V1ServiceCIDR unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1ServiceCIDR(unittest.TestCase):
             return V1ServiceCIDR(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,11 +63,11 @@ class TestV1ServiceCIDR(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/service_cidr_spec.v1.ServiceCIDRSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/service_cidr_spec.v1.ServiceCIDRSpec(
                     cidrs = [
                         ''
                         ], ),
-                status = kubernetes_asyncio.models.v1/service_cidr_status.v1.ServiceCIDRStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/service_cidr_status.v1.ServiceCIDRStatus(
                     conditions = [
                         null
                         ], )

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_daemon_set_condition import V1DaemonSetCondition
+from kubernetes_asyncio_pydantic.models.v1_daemon_set_condition import V1DaemonSetCondition
 
 # TODO update the JSON string below
 json = "{}"

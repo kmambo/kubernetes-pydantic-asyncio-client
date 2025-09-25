@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_restart_rule_on_exit_codes import V1ContainerRestartRuleOnExitCodes
+from kubernetes_asyncio_pydantic.models.v1_container_restart_rule_on_exit_codes import V1ContainerRestartRuleOnExitCodes
 
 class TestV1ContainerRestartRuleOnExitCodes(unittest.TestCase):
     """V1ContainerRestartRuleOnExitCodes unit test stubs"""

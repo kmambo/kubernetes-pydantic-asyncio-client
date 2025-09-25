@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_daemon_set_spec import V1DaemonSetSpec
+from kubernetes_asyncio_pydantic.models.v1_daemon_set_spec import V1DaemonSetSpec
 
 class TestV1DaemonSetSpec(unittest.TestCase):
     """V1DaemonSetSpec unit test stubs"""
@@ -37,30 +37,30 @@ class TestV1DaemonSetSpec(unittest.TestCase):
             return V1DaemonSetSpec(
                 min_ready_seconds = 56,
                 revision_history_limit = 56,
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
-                update_strategy = kubernetes_asyncio.models.v1/daemon_set_update_strategy.v1.DaemonSetUpdateStrategy(
+                update_strategy = kubernetes_asyncio_pydantic.models.v1/daemon_set_update_strategy.v1.DaemonSetUpdateStrategy(
                     rolling_update = null, 
                     type = '', )
             )
         else:
             return V1DaemonSetSpec(
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
         )

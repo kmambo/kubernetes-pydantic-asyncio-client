@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_counter import V1beta1Counter
+from kubernetes_asyncio_pydantic.models.v1beta1_counter import V1beta1Counter
 
 class TestV1beta1Counter(unittest.TestCase):
     """V1beta1Counter unit test stubs"""

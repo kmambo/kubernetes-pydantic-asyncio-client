@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flow_distinguisher_method import V1FlowDistinguisherMethod
+from kubernetes_asyncio_pydantic.models.v1_flow_distinguisher_method import V1FlowDistinguisherMethod
 
 class TestV1FlowDistinguisherMethod(unittest.TestCase):
     """V1FlowDistinguisherMethod unit test stubs"""

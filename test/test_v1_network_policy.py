@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_network_policy import V1NetworkPolicy
+from kubernetes_asyncio_pydantic.models.v1_network_policy import V1NetworkPolicy
 
 class TestV1NetworkPolicy(unittest.TestCase):
     """V1NetworkPolicy unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1NetworkPolicy(unittest.TestCase):
             return V1NetworkPolicy(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1NetworkPolicy(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/network_policy_spec.v1.NetworkPolicySpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/network_policy_spec.v1.NetworkPolicySpec(
                     egress = [
                         null
                         ], 

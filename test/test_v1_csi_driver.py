@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_driver import V1CSIDriver
+from kubernetes_asyncio_pydantic.models.v1_csi_driver import V1CSIDriver
 
 class TestV1CSIDriver(unittest.TestCase):
     """V1CSIDriver unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CSIDriver(unittest.TestCase):
             return V1CSIDriver(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1CSIDriver(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/csi_driver_spec.v1.CSIDriverSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/csi_driver_spec.v1.CSIDriverSpec(
                     attach_required = True, 
                     fs_group_policy = '', 
                     node_allocatable_update_period_seconds = 56, 
@@ -80,7 +80,7 @@ class TestV1CSIDriver(unittest.TestCase):
             )
         else:
             return V1CSIDriver(
-                spec = kubernetes_asyncio.models.v1/csi_driver_spec.v1.CSIDriverSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/csi_driver_spec.v1.CSIDriverSpec(
                     attach_required = True, 
                     fs_group_policy = '', 
                     node_allocatable_update_period_seconds = 56, 

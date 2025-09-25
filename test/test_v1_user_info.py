@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_user_info import V1UserInfo
+from kubernetes_asyncio_pydantic.models.v1_user_info import V1UserInfo
 
 class TestV1UserInfo(unittest.TestCase):
     """V1UserInfo unit test stubs"""

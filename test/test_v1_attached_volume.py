@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_attached_volume import V1AttachedVolume
+from kubernetes_asyncio_pydantic.models.v1_attached_volume import V1AttachedVolume
 
 class TestV1AttachedVolume(unittest.TestCase):
     """V1AttachedVolume unit test stubs"""

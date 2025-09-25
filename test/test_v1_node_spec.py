@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_spec import V1NodeSpec
+from kubernetes_asyncio_pydantic.models.v1_node_spec import V1NodeSpec
 
 class TestV1NodeSpec(unittest.TestCase):
     """V1NodeSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1NodeSpec(unittest.TestCase):
         model = V1NodeSpec()
         if include_optional:
             return V1NodeSpec(
-                config_source = kubernetes_asyncio.models.v1/node_config_source.v1.NodeConfigSource(
+                config_source = kubernetes_asyncio_pydantic.models.v1/node_config_source.v1.NodeConfigSource(
                     config_map = null, ),
                 external_id = '',
                 pod_cidr = '',

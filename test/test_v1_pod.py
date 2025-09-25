@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
 
 class TestV1Pod(unittest.TestCase):
     """V1Pod unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Pod(unittest.TestCase):
             return V1Pod(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Pod(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/pod_spec.v1.PodSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/pod_spec.v1.PodSpec(
                     active_deadline_seconds = 56, 
                     affinity = null, 
                     automount_service_account_token = True, 
@@ -97,7 +97,7 @@ class TestV1Pod(unittest.TestCase):
                         }, 
                     os = null, 
                     overhead = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     preemption_policy = '', 
                     priority = 56, 
@@ -131,7 +131,7 @@ class TestV1Pod(unittest.TestCase):
                     volumes = [
                         null
                         ], ),
-                status = kubernetes_asyncio.models.v1/pod_status.v1.PodStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/pod_status.v1.PodStatus(
                     conditions = [
                         null
                         ], 

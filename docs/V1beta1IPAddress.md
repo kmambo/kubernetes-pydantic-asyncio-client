@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta1_ip_address import V1beta1IPAddress
+from kubernetes_asyncio_pydantic.models.v1beta1_ip_address import V1beta1IPAddress
 
 # TODO update the JSON string below
 json = "{}"

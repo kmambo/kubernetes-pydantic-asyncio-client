@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_downward_api_volume_source import V1DownwardAPIVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_downward_api_volume_source import V1DownwardAPIVolumeSource
 
 class TestV1DownwardAPIVolumeSource(unittest.TestCase):
     """V1DownwardAPIVolumeSource unit test stubs"""

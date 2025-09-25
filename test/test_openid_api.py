@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.openid_api import OpenidApi
+from kubernetes_asyncio_pydantic.api.openid_api import OpenidApi
 
 
 class TestOpenidApi(unittest.IsolatedAsyncioTestCase):

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_volume_node_affinity import V1VolumeNodeAffinity
+from kubernetes_asyncio_pydantic.models.v1_volume_node_affinity import V1VolumeNodeAffinity
 
 # TODO update the JSON string below
 json = "{}"

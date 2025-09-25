@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_downward_api_volume_file import V1DownwardAPIVolumeFile
+from kubernetes_asyncio_pydantic.models.v1_downward_api_volume_file import V1DownwardAPIVolumeFile
 
 class TestV1DownwardAPIVolumeFile(unittest.TestCase):
     """V1DownwardAPIVolumeFile unit test stubs"""
@@ -35,12 +35,12 @@ class TestV1DownwardAPIVolumeFile(unittest.TestCase):
         model = V1DownwardAPIVolumeFile()
         if include_optional:
             return V1DownwardAPIVolumeFile(
-                field_ref = kubernetes_asyncio.models.v1/object_field_selector.v1.ObjectFieldSelector(
+                field_ref = kubernetes_asyncio_pydantic.models.v1/object_field_selector.v1.ObjectFieldSelector(
                     api_version = '', 
                     field_path = '', ),
                 mode = 56,
                 path = '',
-                resource_field_ref = kubernetes_asyncio.models.v1/resource_field_selector.v1.ResourceFieldSelector(
+                resource_field_ref = kubernetes_asyncio_pydantic.models.v1/resource_field_selector.v1.ResourceFieldSelector(
                     container_name = '', 
                     divisor = null, 
                     resource = '', )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_capacity_request_policy_range_step import V1beta1CapacityRequestPolicyRangeStep
+from kubernetes_asyncio_pydantic.models.v1beta1_capacity_request_policy_range_step import V1beta1CapacityRequestPolicyRangeStep
 
 class TestV1beta1CapacityRequestPolicyRangeStep(unittest.TestCase):
     """V1beta1CapacityRequestPolicyRangeStep unit test stubs"""

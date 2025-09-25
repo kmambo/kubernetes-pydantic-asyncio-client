@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_os import V1PodOS
+from kubernetes_asyncio_pydantic.models.v1_pod_os import V1PodOS
 
 class TestV1PodOS(unittest.TestCase):
     """V1PodOS unit test stubs"""

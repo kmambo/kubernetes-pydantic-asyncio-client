@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_definition_condition import V1CustomResourceDefinitionCondition
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_definition_condition import V1CustomResourceDefinitionCondition
 
 class TestV1CustomResourceDefinitionCondition(unittest.TestCase):
     """V1CustomResourceDefinitionCondition unit test stubs"""

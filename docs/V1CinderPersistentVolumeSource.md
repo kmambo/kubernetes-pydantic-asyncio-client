@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_cinder_persistent_volume_source import V1CinderPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_cinder_persistent_volume_source import V1CinderPersistentVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

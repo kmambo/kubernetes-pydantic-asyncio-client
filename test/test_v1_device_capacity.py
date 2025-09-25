@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_device_capacity import V1DeviceCapacity
+from kubernetes_asyncio_pydantic.models.v1_device_capacity import V1DeviceCapacity
 
 class TestV1DeviceCapacity(unittest.TestCase):
     """V1DeviceCapacity unit test stubs"""
@@ -35,11 +35,11 @@ class TestV1DeviceCapacity(unittest.TestCase):
         model = V1DeviceCapacity()
         if include_optional:
             return V1DeviceCapacity(
-                request_policy = kubernetes_asyncio.models.v1/capacity_request_policy.v1.CapacityRequestPolicy(
+                request_policy = kubernetes_asyncio_pydantic.models.v1/capacity_request_policy.v1.CapacityRequestPolicy(
                     default = null, 
                     valid_range = null, 
                     valid_values = [
-                        kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         ], ),
                 value = None
             )

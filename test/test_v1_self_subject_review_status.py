@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_self_subject_review_status import V1SelfSubjectReviewStatus
+from kubernetes_asyncio_pydantic.models.v1_self_subject_review_status import V1SelfSubjectReviewStatus
 
 class TestV1SelfSubjectReviewStatus(unittest.TestCase):
     """V1SelfSubjectReviewStatus unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1SelfSubjectReviewStatus(unittest.TestCase):
         model = V1SelfSubjectReviewStatus()
         if include_optional:
             return V1SelfSubjectReviewStatus(
-                user_info = kubernetes_asyncio.models.v1/user_info.v1.UserInfo(
+                user_info = kubernetes_asyncio_pydantic.models.v1/user_info.v1.UserInfo(
                     extra = {
                         'key' : [
                             ''

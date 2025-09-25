@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta1_service_cidr_list import V1beta1ServiceCIDRList
+from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr_list import V1beta1ServiceCIDRList
 
 # TODO update the JSON string below
 json = "{}"

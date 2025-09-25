@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_env_from_source import V1EnvFromSource
+from kubernetes_asyncio_pydantic.models.v1_env_from_source import V1EnvFromSource
 
 class TestV1EnvFromSource(unittest.TestCase):
     """V1EnvFromSource unit test stubs"""
@@ -35,11 +35,11 @@ class TestV1EnvFromSource(unittest.TestCase):
         model = V1EnvFromSource()
         if include_optional:
             return V1EnvFromSource(
-                config_map_ref = kubernetes_asyncio.models.v1/config_map_env_source.v1.ConfigMapEnvSource(
+                config_map_ref = kubernetes_asyncio_pydantic.models.v1/config_map_env_source.v1.ConfigMapEnvSource(
                     name = '', 
                     optional = True, ),
                 prefix = '',
-                secret_ref = kubernetes_asyncio.models.v1/secret_env_source.v1.SecretEnvSource(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/secret_env_source.v1.SecretEnvSource(
                     name = '', 
                     optional = True, )
             )

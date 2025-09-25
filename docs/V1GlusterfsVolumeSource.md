@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_glusterfs_volume_source import V1GlusterfsVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_glusterfs_volume_source import V1GlusterfsVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

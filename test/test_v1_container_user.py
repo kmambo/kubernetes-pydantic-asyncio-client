@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_user import V1ContainerUser
+from kubernetes_asyncio_pydantic.models.v1_container_user import V1ContainerUser
 
 class TestV1ContainerUser(unittest.TestCase):
     """V1ContainerUser unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1ContainerUser(unittest.TestCase):
         model = V1ContainerUser()
         if include_optional:
             return V1ContainerUser(
-                linux = kubernetes_asyncio.models.v1/linux_container_user.v1.LinuxContainerUser(
+                linux = kubernetes_asyncio_pydantic.models.v1/linux_container_user.v1.LinuxContainerUser(
                     gid = 56, 
                     supplemental_groups = [
                         56

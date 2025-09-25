@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_rolling_update_deployment import V1RollingUpdateDeployment
+from kubernetes_asyncio_pydantic.models.v1_rolling_update_deployment import V1RollingUpdateDeployment
 
 class TestV1RollingUpdateDeployment(unittest.TestCase):
     """V1RollingUpdateDeployment unit test stubs"""

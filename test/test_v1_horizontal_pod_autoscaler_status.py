@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_horizontal_pod_autoscaler_status import V1HorizontalPodAutoscalerStatus
+from kubernetes_asyncio_pydantic.models.v1_horizontal_pod_autoscaler_status import V1HorizontalPodAutoscalerStatus
 
 class TestV1HorizontalPodAutoscalerStatus(unittest.TestCase):
     """V1HorizontalPodAutoscalerStatus unit test stubs"""

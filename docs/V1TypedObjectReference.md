@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_typed_object_reference import V1TypedObjectReference
+from kubernetes_asyncio_pydantic.models.v1_typed_object_reference import V1TypedObjectReference
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_endpoint_slice import V1EndpointSlice
+from kubernetes_asyncio_pydantic.models.v1_endpoint_slice import V1EndpointSlice
 
 class TestV1EndpointSlice(unittest.TestCase):
     """V1EndpointSlice unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1EndpointSlice(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_scale_status import V1ScaleStatus
+from kubernetes_asyncio_pydantic.models.v1_scale_status import V1ScaleStatus
 
 class TestV1ScaleStatus(unittest.TestCase):
     """V1ScaleStatus unit test stubs"""

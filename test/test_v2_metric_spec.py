@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_metric_spec import V2MetricSpec
+from kubernetes_asyncio_pydantic.models.v2_metric_spec import V2MetricSpec
 
 class TestV2MetricSpec(unittest.TestCase):
     """V2MetricSpec unit test stubs"""
@@ -35,21 +35,21 @@ class TestV2MetricSpec(unittest.TestCase):
         model = V2MetricSpec()
         if include_optional:
             return V2MetricSpec(
-                container_resource = kubernetes_asyncio.models.v2/container_resource_metric_source.v2.ContainerResourceMetricSource(
+                container_resource = kubernetes_asyncio_pydantic.models.v2/container_resource_metric_source.v2.ContainerResourceMetricSource(
                     container = '', 
                     name = '', 
                     target = null, ),
-                external = kubernetes_asyncio.models.v2/external_metric_source.v2.ExternalMetricSource(
+                external = kubernetes_asyncio_pydantic.models.v2/external_metric_source.v2.ExternalMetricSource(
                     metric = null, 
                     target = null, ),
-                object = kubernetes_asyncio.models.v2/object_metric_source.v2.ObjectMetricSource(
+                object = kubernetes_asyncio_pydantic.models.v2/object_metric_source.v2.ObjectMetricSource(
                     described_object = null, 
                     metric = null, 
                     target = null, ),
-                pods = kubernetes_asyncio.models.v2/pods_metric_source.v2.PodsMetricSource(
+                pods = kubernetes_asyncio_pydantic.models.v2/pods_metric_source.v2.PodsMetricSource(
                     metric = null, 
                     target = null, ),
-                resource = kubernetes_asyncio.models.v2/resource_metric_source.v2.ResourceMetricSource(
+                resource = kubernetes_asyncio_pydantic.models.v2/resource_metric_source.v2.ResourceMetricSource(
                     name = '', 
                     target = null, ),
                 type = ''

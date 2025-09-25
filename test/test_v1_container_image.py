@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_image import V1ContainerImage
+from kubernetes_asyncio_pydantic.models.v1_container_image import V1ContainerImage
 
 class TestV1ContainerImage(unittest.TestCase):
     """V1ContainerImage unit test stubs"""

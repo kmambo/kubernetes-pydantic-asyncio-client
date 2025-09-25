@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_webhook_conversion import V1WebhookConversion
+from kubernetes_asyncio_pydantic.models.v1_webhook_conversion import V1WebhookConversion
 
 class TestV1WebhookConversion(unittest.TestCase):
     """V1WebhookConversion unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1WebhookConversion(unittest.TestCase):
         model = V1WebhookConversion()
         if include_optional:
             return V1WebhookConversion(
-                client_config = kubernetes_asyncio.models.v1/webhook_client_config_1.v1.WebhookClientConfig_1(
+                client_config = kubernetes_asyncio_pydantic.models.v1/webhook_client_config_1.v1.WebhookClientConfig_1(
                     ca_bundle = 'YQ==', 
                     service = null, 
                     url = '', ),

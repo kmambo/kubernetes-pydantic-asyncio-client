@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.batch_v1_api import BatchV1Api
+from kubernetes_asyncio_pydantic.api.batch_v1_api import BatchV1Api
 
 
 class TestBatchV1Api(unittest.IsolatedAsyncioTestCase):

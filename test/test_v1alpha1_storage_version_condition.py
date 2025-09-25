@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_storage_version_condition import V1alpha1StorageVersionCondition
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version_condition import V1alpha1StorageVersionCondition
 
 class TestV1alpha1StorageVersionCondition(unittest.TestCase):
     """V1alpha1StorageVersionCondition unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_node_resources import V1VolumeNodeResources
+from kubernetes_asyncio_pydantic.models.v1_volume_node_resources import V1VolumeNodeResources
 
 class TestV1VolumeNodeResources(unittest.TestCase):
     """V1VolumeNodeResources unit test stubs"""

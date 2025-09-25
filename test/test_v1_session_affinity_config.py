@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_session_affinity_config import V1SessionAffinityConfig
+from kubernetes_asyncio_pydantic.models.v1_session_affinity_config import V1SessionAffinityConfig
 
 class TestV1SessionAffinityConfig(unittest.TestCase):
     """V1SessionAffinityConfig unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1SessionAffinityConfig(unittest.TestCase):
         model = V1SessionAffinityConfig()
         if include_optional:
             return V1SessionAffinityConfig(
-                client_ip = kubernetes_asyncio.models.v1/client_ip_config.v1.ClientIPConfig(
+                client_ip = kubernetes_asyncio_pydantic.models.v1/client_ip_config.v1.ClientIPConfig(
                     timeout_seconds = 56, )
             )
         else:

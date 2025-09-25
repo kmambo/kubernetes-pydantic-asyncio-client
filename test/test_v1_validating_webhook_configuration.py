@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_validating_webhook_configuration import V1ValidatingWebhookConfiguration
+from kubernetes_asyncio_pydantic.models.v1_validating_webhook_configuration import V1ValidatingWebhookConfiguration
 
 class TestV1ValidatingWebhookConfiguration(unittest.TestCase):
     """V1ValidatingWebhookConfiguration unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1ValidatingWebhookConfiguration(unittest.TestCase):
             return V1ValidatingWebhookConfiguration(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

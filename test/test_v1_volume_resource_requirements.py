@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_resource_requirements import V1VolumeResourceRequirements
+from kubernetes_asyncio_pydantic.models.v1_volume_resource_requirements import V1VolumeResourceRequirements
 
 class TestV1VolumeResourceRequirements(unittest.TestCase):
     """V1VolumeResourceRequirements unit test stubs"""
@@ -36,10 +36,10 @@ class TestV1VolumeResourceRequirements(unittest.TestCase):
         if include_optional:
             return V1VolumeResourceRequirements(
                 limits = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 requests = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     }
             )
         else:

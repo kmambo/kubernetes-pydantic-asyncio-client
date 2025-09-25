@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_daemon_endpoints import V1NodeDaemonEndpoints
+from kubernetes_asyncio_pydantic.models.v1_node_daemon_endpoints import V1NodeDaemonEndpoints
 
 class TestV1NodeDaemonEndpoints(unittest.TestCase):
     """V1NodeDaemonEndpoints unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1NodeDaemonEndpoints(unittest.TestCase):
         model = V1NodeDaemonEndpoints()
         if include_optional:
             return V1NodeDaemonEndpoints(
-                kubelet_endpoint = kubernetes_asyncio.models.v1/daemon_endpoint.v1.DaemonEndpoint(
+                kubelet_endpoint = kubernetes_asyncio_pydantic.models.v1/daemon_endpoint.v1.DaemonEndpoint(
                     port = 56, )
             )
         else:

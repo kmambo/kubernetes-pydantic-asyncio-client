@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_replication_controller_condition import V1ReplicationControllerCondition
+from kubernetes_asyncio_pydantic.models.v1_replication_controller_condition import V1ReplicationControllerCondition
 
 # TODO update the JSON string below
 json = "{}"

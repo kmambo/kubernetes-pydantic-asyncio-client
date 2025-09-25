@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_event import V1Event
+from kubernetes_asyncio_pydantic.models.v1_event import V1Event
 
 class TestV1Event(unittest.TestCase):
     """V1Event unit test stubs"""
@@ -40,12 +40,12 @@ class TestV1Event(unittest.TestCase):
                 deprecated_count = 56,
                 deprecated_first_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 deprecated_last_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                deprecated_source = kubernetes_asyncio.models.v1/event_source.v1.EventSource(
+                deprecated_source = kubernetes_asyncio_pydantic.models.v1/event_source.v1.EventSource(
                     component = '', 
                     host = '', ),
                 event_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -73,7 +73,7 @@ class TestV1Event(unittest.TestCase):
                     uid = '', ),
                 note = '',
                 reason = '',
-                regarding = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                regarding = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 
@@ -81,7 +81,7 @@ class TestV1Event(unittest.TestCase):
                     namespace = '', 
                     resource_version = '', 
                     uid = '', ),
-                related = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                related = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 
@@ -91,7 +91,7 @@ class TestV1Event(unittest.TestCase):
                     uid = '', ),
                 reporting_controller = '',
                 reporting_instance = '',
-                series = kubernetes_asyncio.models.v1/event_series.v1.EventSeries(
+                series = kubernetes_asyncio_pydantic.models.v1/event_series.v1.EventSeries(
                     count = 56, 
                     last_observed_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
                 type = ''

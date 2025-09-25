@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_json_patch import V1beta1JSONPatch
+from kubernetes_asyncio_pydantic.models.v1beta1_json_patch import V1beta1JSONPatch
 
 class TestV1beta1JSONPatch(unittest.TestCase):
     """V1beta1JSONPatch unit test stubs"""

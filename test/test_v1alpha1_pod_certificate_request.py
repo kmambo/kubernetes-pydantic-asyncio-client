@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_pod_certificate_request import V1alpha1PodCertificateRequest
+from kubernetes_asyncio_pydantic.models.v1alpha1_pod_certificate_request import V1alpha1PodCertificateRequest
 
 class TestV1alpha1PodCertificateRequest(unittest.TestCase):
     """V1alpha1PodCertificateRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1alpha1PodCertificateRequest(unittest.TestCase):
             return V1alpha1PodCertificateRequest(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1alpha1PodCertificateRequest(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1alpha1/pod_certificate_request_spec.v1alpha1.PodCertificateRequestSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha1/pod_certificate_request_spec.v1alpha1.PodCertificateRequestSpec(
                     max_expiration_seconds = 56, 
                     node_name = '', 
                     node_uid = '', 
@@ -74,7 +74,7 @@ class TestV1alpha1PodCertificateRequest(unittest.TestCase):
                     service_account_name = '', 
                     service_account_uid = '', 
                     signer_name = '', ),
-                status = kubernetes_asyncio.models.v1alpha1/pod_certificate_request_status.v1alpha1.PodCertificateRequestStatus(
+                status = kubernetes_asyncio_pydantic.models.v1alpha1/pod_certificate_request_status.v1alpha1.PodCertificateRequestStatus(
                     begin_refresh_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     certificate_chain = '', 
                     conditions = [
@@ -85,7 +85,7 @@ class TestV1alpha1PodCertificateRequest(unittest.TestCase):
             )
         else:
             return V1alpha1PodCertificateRequest(
-                spec = kubernetes_asyncio.models.v1alpha1/pod_certificate_request_spec.v1alpha1.PodCertificateRequestSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha1/pod_certificate_request_spec.v1alpha1.PodCertificateRequestSpec(
                     max_expiration_seconds = 56, 
                     node_name = '', 
                     node_uid = '', 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_downward_api_volume_file import V1DownwardAPIVolumeFile
+from kubernetes_asyncio_pydantic.models.v1_downward_api_volume_file import V1DownwardAPIVolumeFile
 
 # TODO update the JSON string below
 json = "{}"

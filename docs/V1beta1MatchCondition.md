@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta1_match_condition import V1beta1MatchCondition
+from kubernetes_asyncio_pydantic.models.v1beta1_match_condition import V1beta1MatchCondition
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_load_balancer_status import V1IngressLoadBalancerStatus
+from kubernetes_asyncio_pydantic.models.v1_ingress_load_balancer_status import V1IngressLoadBalancerStatus
 
 class TestV1IngressLoadBalancerStatus(unittest.TestCase):
     """V1IngressLoadBalancerStatus unit test stubs"""

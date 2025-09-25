@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_config_status import V1NodeConfigStatus
+from kubernetes_asyncio_pydantic.models.v1_node_config_status import V1NodeConfigStatus
 
 class TestV1NodeConfigStatus(unittest.TestCase):
     """V1NodeConfigStatus unit test stubs"""
@@ -35,12 +35,12 @@ class TestV1NodeConfigStatus(unittest.TestCase):
         model = V1NodeConfigStatus()
         if include_optional:
             return V1NodeConfigStatus(
-                active = kubernetes_asyncio.models.v1/node_config_source.v1.NodeConfigSource(
+                active = kubernetes_asyncio_pydantic.models.v1/node_config_source.v1.NodeConfigSource(
                     config_map = null, ),
-                assigned = kubernetes_asyncio.models.v1/node_config_source.v1.NodeConfigSource(
+                assigned = kubernetes_asyncio_pydantic.models.v1/node_config_source.v1.NodeConfigSource(
                     config_map = null, ),
                 error = '',
-                last_known_good = kubernetes_asyncio.models.v1/node_config_source.v1.NodeConfigSource(
+                last_known_good = kubernetes_asyncio_pydantic.models.v1/node_config_source.v1.NodeConfigSource(
                     config_map = null, )
             )
         else:

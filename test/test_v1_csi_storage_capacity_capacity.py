@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_storage_capacity_capacity import V1CSIStorageCapacityCapacity
+from kubernetes_asyncio_pydantic.models.v1_csi_storage_capacity_capacity import V1CSIStorageCapacityCapacity
 
 class TestV1CSIStorageCapacityCapacity(unittest.TestCase):
     """V1CSIStorageCapacityCapacity unit test stubs"""

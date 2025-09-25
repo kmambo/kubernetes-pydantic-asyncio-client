@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_namespace_status import V1NamespaceStatus
+from kubernetes_asyncio_pydantic.models.v1_namespace_status import V1NamespaceStatus
 
 class TestV1NamespaceStatus(unittest.TestCase):
     """V1NamespaceStatus unit test stubs"""

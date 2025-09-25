@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_daemon_endpoint import V1DaemonEndpoint
+from kubernetes_asyncio_pydantic.models.v1_daemon_endpoint import V1DaemonEndpoint
 
 class TestV1DaemonEndpoint(unittest.TestCase):
     """V1DaemonEndpoint unit test stubs"""

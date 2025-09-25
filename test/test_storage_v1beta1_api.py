@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.storage_v1beta1_api import StorageV1beta1Api
+from kubernetes_asyncio_pydantic.api.storage_v1beta1_api import StorageV1beta1Api
 
 
 class TestStorageV1beta1Api(unittest.IsolatedAsyncioTestCase):

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_resource_claim_consumer_reference import V1ResourceClaimConsumerReference
+from kubernetes_asyncio_pydantic.models.v1_resource_claim_consumer_reference import V1ResourceClaimConsumerReference
 
 # TODO update the JSON string below
 json = "{}"

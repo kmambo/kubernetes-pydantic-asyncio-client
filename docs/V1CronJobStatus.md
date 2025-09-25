@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_cron_job_status import V1CronJobStatus
+from kubernetes_asyncio_pydantic.models.v1_cron_job_status import V1CronJobStatus
 
 # TODO update the JSON string below
 json = "{}"

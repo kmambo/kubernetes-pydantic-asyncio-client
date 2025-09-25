@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_linux_container_user import V1LinuxContainerUser
+from kubernetes_asyncio_pydantic.models.v1_linux_container_user import V1LinuxContainerUser
 
 # TODO update the JSON string below
 json = "{}"

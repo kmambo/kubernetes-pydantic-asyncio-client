@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_controller_revision import V1ControllerRevision
+from kubernetes_asyncio_pydantic.models.v1_controller_revision import V1ControllerRevision
 
 class TestV1ControllerRevision(unittest.TestCase):
     """V1ControllerRevision unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1ControllerRevision(unittest.TestCase):
                 api_version = '',
                 data = None,
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

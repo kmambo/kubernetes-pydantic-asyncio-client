@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_object_field_selector import V1ObjectFieldSelector
+from kubernetes_asyncio_pydantic.models.v1_object_field_selector import V1ObjectFieldSelector
 
 # TODO update the JSON string below
 json = "{}"

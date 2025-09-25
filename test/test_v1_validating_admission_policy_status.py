@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_validating_admission_policy_status import V1ValidatingAdmissionPolicyStatus
+from kubernetes_asyncio_pydantic.models.v1_validating_admission_policy_status import V1ValidatingAdmissionPolicyStatus
 
 class TestV1ValidatingAdmissionPolicyStatus(unittest.TestCase):
     """V1ValidatingAdmissionPolicyStatus unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1ValidatingAdmissionPolicyStatus(unittest.TestCase):
                     null
                     ],
                 observed_generation = 56,
-                type_checking = kubernetes_asyncio.models.v1/type_checking.v1.TypeChecking(
+                type_checking = kubernetes_asyncio_pydantic.models.v1/type_checking.v1.TypeChecking(
                     expression_warnings = [
                         null
                         ], )

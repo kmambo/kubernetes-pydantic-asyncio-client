@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
 
 class TestV1Status(unittest.TestCase):
     """V1Status unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Status(unittest.TestCase):
             return V1Status(
                 api_version = '',
                 code = 56,
-                details = kubernetes_asyncio.models.v1/status_details.v1.StatusDetails(
+                details = kubernetes_asyncio_pydantic.models.v1/status_details.v1.StatusDetails(
                     causes = [
                         null
                         ], 
@@ -48,7 +48,7 @@ class TestV1Status(unittest.TestCase):
                     uid = '', ),
                 kind = '',
                 message = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

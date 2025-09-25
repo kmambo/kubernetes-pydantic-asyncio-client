@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v2_metric_spec import V2MetricSpec
+from kubernetes_asyncio_pydantic.models.v2_metric_spec import V2MetricSpec
 
 # TODO update the JSON string below
 json = "{}"

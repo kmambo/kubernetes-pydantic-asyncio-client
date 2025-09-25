@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_metric_target_average_value import V2MetricTargetAverageValue
+from kubernetes_asyncio_pydantic.models.v2_metric_target_average_value import V2MetricTargetAverageValue
 
 class TestV2MetricTargetAverageValue(unittest.TestCase):
     """V2MetricTargetAverageValue unit test stubs"""

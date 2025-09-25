@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flow_schema_spec import V1FlowSchemaSpec
+from kubernetes_asyncio_pydantic.models.v1_flow_schema_spec import V1FlowSchemaSpec
 
 class TestV1FlowSchemaSpec(unittest.TestCase):
     """V1FlowSchemaSpec unit test stubs"""
@@ -35,10 +35,10 @@ class TestV1FlowSchemaSpec(unittest.TestCase):
         model = V1FlowSchemaSpec()
         if include_optional:
             return V1FlowSchemaSpec(
-                distinguisher_method = kubernetes_asyncio.models.v1/flow_distinguisher_method.v1.FlowDistinguisherMethod(
+                distinguisher_method = kubernetes_asyncio_pydantic.models.v1/flow_distinguisher_method.v1.FlowDistinguisherMethod(
                     type = '', ),
                 matching_precedence = 56,
-                priority_level_configuration = kubernetes_asyncio.models.v1/priority_level_configuration_reference.v1.PriorityLevelConfigurationReference(
+                priority_level_configuration = kubernetes_asyncio_pydantic.models.v1/priority_level_configuration_reference.v1.PriorityLevelConfigurationReference(
                     name = '', ),
                 rules = [
                     null
@@ -46,7 +46,7 @@ class TestV1FlowSchemaSpec(unittest.TestCase):
             )
         else:
             return V1FlowSchemaSpec(
-                priority_level_configuration = kubernetes_asyncio.models.v1/priority_level_configuration_reference.v1.PriorityLevelConfigurationReference(
+                priority_level_configuration = kubernetes_asyncio_pydantic.models.v1/priority_level_configuration_reference.v1.PriorityLevelConfigurationReference(
                     name = '', ),
         )
         """

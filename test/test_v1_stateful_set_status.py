@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set_status import V1StatefulSetStatus
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_status import V1StatefulSetStatus
 
 class TestV1StatefulSetStatus(unittest.TestCase):
     """V1StatefulSetStatus unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_sleep_action import V1SleepAction
+from kubernetes_asyncio_pydantic.models.v1_sleep_action import V1SleepAction
 
 class TestV1SleepAction(unittest.TestCase):
     """V1SleepAction unit test stubs"""

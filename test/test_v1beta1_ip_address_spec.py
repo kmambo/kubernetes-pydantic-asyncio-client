@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_ip_address_spec import V1beta1IPAddressSpec
+from kubernetes_asyncio_pydantic.models.v1beta1_ip_address_spec import V1beta1IPAddressSpec
 
 class TestV1beta1IPAddressSpec(unittest.TestCase):
     """V1beta1IPAddressSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta1IPAddressSpec(unittest.TestCase):
         model = V1beta1IPAddressSpec()
         if include_optional:
             return V1beta1IPAddressSpec(
-                parent_ref = kubernetes_asyncio.models.v1beta1/parent_reference.v1beta1.ParentReference(
+                parent_ref = kubernetes_asyncio_pydantic.models.v1beta1/parent_reference.v1beta1.ParentReference(
                     group = '', 
                     name = '', 
                     namespace = '', 
@@ -43,7 +43,7 @@ class TestV1beta1IPAddressSpec(unittest.TestCase):
             )
         else:
             return V1beta1IPAddressSpec(
-                parent_ref = kubernetes_asyncio.models.v1beta1/parent_reference.v1beta1.ParentReference(
+                parent_ref = kubernetes_asyncio_pydantic.models.v1beta1/parent_reference.v1beta1.ParentReference(
                     group = '', 
                     name = '', 
                     namespace = '', 

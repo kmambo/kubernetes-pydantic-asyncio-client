@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_self_subject_rules_review_spec import V1SelfSubjectRulesReviewSpec
+from kubernetes_asyncio_pydantic.models.v1_self_subject_rules_review_spec import V1SelfSubjectRulesReviewSpec
 
 class TestV1SelfSubjectRulesReviewSpec(unittest.TestCase):
     """V1SelfSubjectRulesReviewSpec unit test stubs"""

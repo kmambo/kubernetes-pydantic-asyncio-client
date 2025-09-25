@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_object_meta import V1ObjectMeta
+from kubernetes_asyncio_pydantic.models.v1_object_meta import V1ObjectMeta
 
 class TestV1ObjectMeta(unittest.TestCase):
     """V1ObjectMeta unit test stubs"""

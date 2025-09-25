@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_env_var_source import V1EnvVarSource
+from kubernetes_asyncio_pydantic.models.v1_env_var_source import V1EnvVarSource
 
 # TODO update the JSON string below
 json = "{}"

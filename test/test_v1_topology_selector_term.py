@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_topology_selector_term import V1TopologySelectorTerm
+from kubernetes_asyncio_pydantic.models.v1_topology_selector_term import V1TopologySelectorTerm
 
 class TestV1TopologySelectorTerm(unittest.TestCase):
     """V1TopologySelectorTerm unit test stubs"""

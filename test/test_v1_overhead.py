@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_overhead import V1Overhead
+from kubernetes_asyncio_pydantic.models.v1_overhead import V1Overhead
 
 class TestV1Overhead(unittest.TestCase):
     """V1Overhead unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1Overhead(unittest.TestCase):
         if include_optional:
             return V1Overhead(
                 pod_fixed = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     }
             )
         else:

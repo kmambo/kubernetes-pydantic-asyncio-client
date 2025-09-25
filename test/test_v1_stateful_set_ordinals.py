@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set_ordinals import V1StatefulSetOrdinals
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_ordinals import V1StatefulSetOrdinals
 
 class TestV1StatefulSetOrdinals(unittest.TestCase):
     """V1StatefulSetOrdinals unit test stubs"""

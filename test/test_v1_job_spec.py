@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_job_spec import V1JobSpec
+from kubernetes_asyncio_pydantic.models.v1_job_spec import V1JobSpec
 
 class TestV1JobSpec(unittest.TestCase):
     """V1JobSpec unit test stubs"""
@@ -44,31 +44,31 @@ class TestV1JobSpec(unittest.TestCase):
                 manual_selector = True,
                 max_failed_indexes = 56,
                 parallelism = 56,
-                pod_failure_policy = kubernetes_asyncio.models.v1/pod_failure_policy.v1.PodFailurePolicy(
+                pod_failure_policy = kubernetes_asyncio_pydantic.models.v1/pod_failure_policy.v1.PodFailurePolicy(
                     rules = [
                         null
                         ], ),
                 pod_replacement_policy = '',
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                success_policy = kubernetes_asyncio.models.v1/success_policy.v1.SuccessPolicy(
+                success_policy = kubernetes_asyncio_pydantic.models.v1/success_policy.v1.SuccessPolicy(
                     rules = [
                         null
                         ], ),
                 suspend = True,
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
                 ttl_seconds_after_finished = 56
             )
         else:
             return V1JobSpec(
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
         )

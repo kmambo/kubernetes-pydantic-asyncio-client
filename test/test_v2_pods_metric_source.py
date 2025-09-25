@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_pods_metric_source import V2PodsMetricSource
+from kubernetes_asyncio_pydantic.models.v2_pods_metric_source import V2PodsMetricSource
 
 class TestV2PodsMetricSource(unittest.TestCase):
     """V2PodsMetricSource unit test stubs"""
@@ -35,10 +35,10 @@ class TestV2PodsMetricSource(unittest.TestCase):
         model = V2PodsMetricSource()
         if include_optional:
             return V2PodsMetricSource(
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 
@@ -46,10 +46,10 @@ class TestV2PodsMetricSource(unittest.TestCase):
             )
         else:
             return V2PodsMetricSource(
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
-                target = kubernetes_asyncio.models.v2/metric_target.v2.MetricTarget(
+                target = kubernetes_asyncio_pydantic.models.v2/metric_target.v2.MetricTarget(
                     average_utilization = 56, 
                     average_value = null, 
                     type = '', 

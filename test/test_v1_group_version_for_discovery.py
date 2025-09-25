@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
+from kubernetes_asyncio_pydantic.models.v1_group_version_for_discovery import V1GroupVersionForDiscovery
 
 class TestV1GroupVersionForDiscovery(unittest.TestCase):
     """V1GroupVersionForDiscovery unit test stubs"""

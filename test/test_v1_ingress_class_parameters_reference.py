@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_class_parameters_reference import V1IngressClassParametersReference
+from kubernetes_asyncio_pydantic.models.v1_ingress_class_parameters_reference import V1IngressClassParametersReference
 
 class TestV1IngressClassParametersReference(unittest.TestCase):
     """V1IngressClassParametersReference unit test stubs"""

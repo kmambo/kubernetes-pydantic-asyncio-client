@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.events_api import EventsApi
+from kubernetes_asyncio_pydantic.api.events_api import EventsApi
 
 
 class TestEventsApi(unittest.IsolatedAsyncioTestCase):

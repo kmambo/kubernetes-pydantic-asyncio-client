@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_seccomp_profile import V1SeccompProfile
+from kubernetes_asyncio_pydantic.models.v1_seccomp_profile import V1SeccompProfile
 
 class TestV1SeccompProfile(unittest.TestCase):
     """V1SeccompProfile unit test stubs"""

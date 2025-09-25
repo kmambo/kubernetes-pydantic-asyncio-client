@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_file_key_selector import V1FileKeySelector
+from kubernetes_asyncio_pydantic.models.v1_file_key_selector import V1FileKeySelector
 
 class TestV1FileKeySelector(unittest.TestCase):
     """V1FileKeySelector unit test stubs"""

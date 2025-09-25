@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_status import V1ResourceStatus
+from kubernetes_asyncio_pydantic.models.v1_resource_status import V1ResourceStatus
 
 class TestV1ResourceStatus(unittest.TestCase):
     """V1ResourceStatus unit test stubs"""

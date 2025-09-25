@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_device_toleration import V1beta1DeviceToleration
+from kubernetes_asyncio_pydantic.models.v1beta1_device_toleration import V1beta1DeviceToleration
 
 class TestV1beta1DeviceToleration(unittest.TestCase):
     """V1beta1DeviceToleration unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_affinity import V1Affinity
+from kubernetes_asyncio_pydantic.models.v1_affinity import V1Affinity
 
 class TestV1Affinity(unittest.TestCase):
     """V1Affinity unit test stubs"""
@@ -35,19 +35,19 @@ class TestV1Affinity(unittest.TestCase):
         model = V1Affinity()
         if include_optional:
             return V1Affinity(
-                node_affinity = kubernetes_asyncio.models.v1/node_affinity.v1.NodeAffinity(
+                node_affinity = kubernetes_asyncio_pydantic.models.v1/node_affinity.v1.NodeAffinity(
                     preferred_during_scheduling_ignored_during_execution = [
                         null
                         ], 
                     required_during_scheduling_ignored_during_execution = null, ),
-                pod_affinity = kubernetes_asyncio.models.v1/pod_affinity.v1.PodAffinity(
+                pod_affinity = kubernetes_asyncio_pydantic.models.v1/pod_affinity.v1.PodAffinity(
                     preferred_during_scheduling_ignored_during_execution = [
                         null
                         ], 
                     required_during_scheduling_ignored_during_execution = [
                         null
                         ], ),
-                pod_anti_affinity = kubernetes_asyncio.models.v1/pod_anti_affinity.v1.PodAntiAffinity(
+                pod_anti_affinity = kubernetes_asyncio_pydantic.models.v1/pod_anti_affinity.v1.PodAntiAffinity(
                     preferred_during_scheduling_ignored_during_execution = [
                         null
                         ], 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_runtime_handler import V1NodeRuntimeHandler
+from kubernetes_asyncio_pydantic.models.v1_node_runtime_handler import V1NodeRuntimeHandler
 
 class TestV1NodeRuntimeHandler(unittest.TestCase):
     """V1NodeRuntimeHandler unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1NodeRuntimeHandler(unittest.TestCase):
         model = V1NodeRuntimeHandler()
         if include_optional:
             return V1NodeRuntimeHandler(
-                features = kubernetes_asyncio.models.v1/node_runtime_handler_features.v1.NodeRuntimeHandlerFeatures(
+                features = kubernetes_asyncio_pydantic.models.v1/node_runtime_handler_features.v1.NodeRuntimeHandlerFeatures(
                     recursive_read_only_mounts = True, 
                     user_namespaces = True, ),
                 name = ''

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_pods_metric_status import V2PodsMetricStatus
+from kubernetes_asyncio_pydantic.models.v2_pods_metric_status import V2PodsMetricStatus
 
 class TestV2PodsMetricStatus(unittest.TestCase):
     """V2PodsMetricStatus unit test stubs"""
@@ -35,21 +35,21 @@ class TestV2PodsMetricStatus(unittest.TestCase):
         model = V2PodsMetricStatus()
         if include_optional:
             return V2PodsMetricStatus(
-                current = kubernetes_asyncio.models.v2/metric_value_status.v2.MetricValueStatus(
+                current = kubernetes_asyncio_pydantic.models.v2/metric_value_status.v2.MetricValueStatus(
                     average_utilization = 56, 
                     average_value = null, 
                     value = null, ),
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, )
             )
         else:
             return V2PodsMetricStatus(
-                current = kubernetes_asyncio.models.v2/metric_value_status.v2.MetricValueStatus(
+                current = kubernetes_asyncio_pydantic.models.v2/metric_value_status.v2.MetricValueStatus(
                     average_utilization = 56, 
                     average_value = null, 
                     value = null, ),
-                metric = kubernetes_asyncio.models.v2/metric_identifier.v2.MetricIdentifier(
+                metric = kubernetes_asyncio_pydantic.models.v2/metric_identifier.v2.MetricIdentifier(
                     name = '', 
                     selector = null, ),
         )

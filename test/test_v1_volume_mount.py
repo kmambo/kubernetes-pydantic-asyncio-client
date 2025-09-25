@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_mount import V1VolumeMount
+from kubernetes_asyncio_pydantic.models.v1_volume_mount import V1VolumeMount
 
 class TestV1VolumeMount(unittest.TestCase):
     """V1VolumeMount unit test stubs"""

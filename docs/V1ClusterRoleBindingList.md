@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_cluster_role_binding_list import V1ClusterRoleBindingList
+from kubernetes_asyncio_pydantic.models.v1_cluster_role_binding_list import V1ClusterRoleBindingList
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_metric_status import V2MetricStatus
+from kubernetes_asyncio_pydantic.models.v2_metric_status import V2MetricStatus
 
 class TestV2MetricStatus(unittest.TestCase):
     """V2MetricStatus unit test stubs"""
@@ -35,21 +35,21 @@ class TestV2MetricStatus(unittest.TestCase):
         model = V2MetricStatus()
         if include_optional:
             return V2MetricStatus(
-                container_resource = kubernetes_asyncio.models.v2/container_resource_metric_status.v2.ContainerResourceMetricStatus(
+                container_resource = kubernetes_asyncio_pydantic.models.v2/container_resource_metric_status.v2.ContainerResourceMetricStatus(
                     container = '', 
                     current = null, 
                     name = '', ),
-                external = kubernetes_asyncio.models.v2/external_metric_status.v2.ExternalMetricStatus(
+                external = kubernetes_asyncio_pydantic.models.v2/external_metric_status.v2.ExternalMetricStatus(
                     current = null, 
                     metric = null, ),
-                object = kubernetes_asyncio.models.v2/object_metric_status.v2.ObjectMetricStatus(
+                object = kubernetes_asyncio_pydantic.models.v2/object_metric_status.v2.ObjectMetricStatus(
                     current = null, 
                     described_object = null, 
                     metric = null, ),
-                pods = kubernetes_asyncio.models.v2/pods_metric_status.v2.PodsMetricStatus(
+                pods = kubernetes_asyncio_pydantic.models.v2/pods_metric_status.v2.PodsMetricStatus(
                     current = null, 
                     metric = null, ),
-                resource = kubernetes_asyncio.models.v2/resource_metric_status.v2.ResourceMetricStatus(
+                resource = kubernetes_asyncio_pydantic.models.v2/resource_metric_status.v2.ResourceMetricStatus(
                     current = null, 
                     name = '', ),
                 type = ''

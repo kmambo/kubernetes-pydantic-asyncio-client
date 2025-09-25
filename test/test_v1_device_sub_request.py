@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_device_sub_request import V1DeviceSubRequest
+from kubernetes_asyncio_pydantic.models.v1_device_sub_request import V1DeviceSubRequest
 
 class TestV1DeviceSubRequest(unittest.TestCase):
     """V1DeviceSubRequest unit test stubs"""
@@ -36,9 +36,9 @@ class TestV1DeviceSubRequest(unittest.TestCase):
         if include_optional:
             return V1DeviceSubRequest(
                 allocation_mode = '',
-                capacity = kubernetes_asyncio.models.v1/capacity_requirements.v1.CapacityRequirements(
+                capacity = kubernetes_asyncio_pydantic.models.v1/capacity_requirements.v1.CapacityRequirements(
                     requests = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 count = 56,
                 device_class_name = '',

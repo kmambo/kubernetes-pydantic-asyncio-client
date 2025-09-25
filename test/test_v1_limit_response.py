@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_limit_response import V1LimitResponse
+from kubernetes_asyncio_pydantic.models.v1_limit_response import V1LimitResponse
 
 class TestV1LimitResponse(unittest.TestCase):
     """V1LimitResponse unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1LimitResponse(unittest.TestCase):
         model = V1LimitResponse()
         if include_optional:
             return V1LimitResponse(
-                queuing = kubernetes_asyncio.models.v1/queuing_configuration.v1.QueuingConfiguration(
+                queuing = kubernetes_asyncio_pydantic.models.v1/queuing_configuration.v1.QueuingConfiguration(
                     hand_size = 56, 
                     queue_length_limit = 56, 
                     queues = 56, ),

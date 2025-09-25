@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_list import V1PodList
+from kubernetes_asyncio_pydantic.models.v1_pod_list import V1PodList
 
 class TestV1PodList(unittest.TestCase):
     """V1PodList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1PodList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

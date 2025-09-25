@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_local_volume_source import V1LocalVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_local_volume_source import V1LocalVolumeSource
 
 class TestV1LocalVolumeSource(unittest.TestCase):
     """V1LocalVolumeSource unit test stubs"""

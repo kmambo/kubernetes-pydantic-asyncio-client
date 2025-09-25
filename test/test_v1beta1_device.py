@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_device import V1beta1Device
+from kubernetes_asyncio_pydantic.models.v1beta1_device import V1beta1Device
 
 class TestV1beta1Device(unittest.TestCase):
     """V1beta1Device unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta1Device(unittest.TestCase):
         model = V1beta1Device()
         if include_optional:
             return V1beta1Device(
-                basic = kubernetes_asyncio.models.v1beta1/basic_device.v1beta1.BasicDevice(
+                basic = kubernetes_asyncio_pydantic.models.v1beta1/basic_device.v1beta1.BasicDevice(
                     all_nodes = True, 
                     allow_multiple_allocations = True, 
                     attributes = {

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_scale_io_volume_source import V1ScaleIOVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_scale_io_volume_source import V1ScaleIOVolumeSource
 
 class TestV1ScaleIOVolumeSource(unittest.TestCase):
     """V1ScaleIOVolumeSource unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1ScaleIOVolumeSource(unittest.TestCase):
                 gateway = '',
                 protection_domain = '',
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 ssl_enabled = True,
                 storage_mode = 'ThinProvisioned',
@@ -50,7 +50,7 @@ class TestV1ScaleIOVolumeSource(unittest.TestCase):
         else:
             return V1ScaleIOVolumeSource(
                 gateway = '',
-                secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 system = '',
         )

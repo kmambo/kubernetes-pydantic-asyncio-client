@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_secret_env_source import V1SecretEnvSource
+from kubernetes_asyncio_pydantic.models.v1_secret_env_source import V1SecretEnvSource
 
 class TestV1SecretEnvSource(unittest.TestCase):
     """V1SecretEnvSource unit test stubs"""

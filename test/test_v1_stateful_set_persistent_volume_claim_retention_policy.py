@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set_persistent_volume_claim_retention_policy import V1StatefulSetPersistentVolumeClaimRetentionPolicy
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_persistent_volume_claim_retention_policy import V1StatefulSetPersistentVolumeClaimRetentionPolicy
 
 class TestV1StatefulSetPersistentVolumeClaimRetentionPolicy(unittest.TestCase):
     """V1StatefulSetPersistentVolumeClaimRetentionPolicy unit test stubs"""

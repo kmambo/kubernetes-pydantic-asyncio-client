@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_deployment import V1Deployment
+from kubernetes_asyncio_pydantic.models.v1_deployment import V1Deployment
 
 class TestV1Deployment(unittest.TestCase):
     """V1Deployment unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Deployment(unittest.TestCase):
             return V1Deployment(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Deployment(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/deployment_spec.v1.DeploymentSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/deployment_spec.v1.DeploymentSpec(
                     min_ready_seconds = 56, 
                     paused = True, 
                     progress_deadline_seconds = 56, 
@@ -72,7 +72,7 @@ class TestV1Deployment(unittest.TestCase):
                     selector = null, 
                     strategy = null, 
                     template = null, ),
-                status = kubernetes_asyncio.models.v1/deployment_status.v1.DeploymentStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/deployment_status.v1.DeploymentStatus(
                     available_replicas = 56, 
                     collision_count = 56, 
                     conditions = [

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_limited_priority_level_configuration import V1LimitedPriorityLevelConfiguration
+from kubernetes_asyncio_pydantic.models.v1_limited_priority_level_configuration import V1LimitedPriorityLevelConfiguration
 
 class TestV1LimitedPriorityLevelConfiguration(unittest.TestCase):
     """V1LimitedPriorityLevelConfiguration unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1LimitedPriorityLevelConfiguration(unittest.TestCase):
             return V1LimitedPriorityLevelConfiguration(
                 borrowing_limit_percent = 56,
                 lendable_percent = 56,
-                limit_response = kubernetes_asyncio.models.v1/limit_response.v1.LimitResponse(
+                limit_response = kubernetes_asyncio_pydantic.models.v1/limit_response.v1.LimitResponse(
                     queuing = null, 
                     type = '', ),
                 nominal_concurrency_shares = 56

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_subject1 import V1Subject1
+from kubernetes_asyncio_pydantic.models.v1_subject1 import V1Subject1
 
 class TestV1Subject1(unittest.TestCase):
     """V1Subject1 unit test stubs"""
@@ -35,13 +35,13 @@ class TestV1Subject1(unittest.TestCase):
         model = V1Subject1()
         if include_optional:
             return V1Subject1(
-                group = kubernetes_asyncio.models.v1/group_subject.v1.GroupSubject(
+                group = kubernetes_asyncio_pydantic.models.v1/group_subject.v1.GroupSubject(
                     name = '', ),
                 kind = '',
-                service_account = kubernetes_asyncio.models.v1/service_account_subject.v1.ServiceAccountSubject(
+                service_account = kubernetes_asyncio_pydantic.models.v1/service_account_subject.v1.ServiceAccountSubject(
                     name = '', 
                     namespace = '', ),
-                user = kubernetes_asyncio.models.v1/user_subject.v1.UserSubject(
+                user = kubernetes_asyncio_pydantic.models.v1/user_subject.v1.UserSubject(
                     name = '', )
             )
         else:

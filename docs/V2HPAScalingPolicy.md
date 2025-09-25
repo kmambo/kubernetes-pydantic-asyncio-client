@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v2_hpa_scaling_policy import V2HPAScalingPolicy
+from kubernetes_asyncio_pydantic.models.v2_hpa_scaling_policy import V2HPAScalingPolicy
 
 # TODO update the JSON string below
 json = "{}"

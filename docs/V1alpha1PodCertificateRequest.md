@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1alpha1_pod_certificate_request import V1alpha1PodCertificateRequest
+from kubernetes_asyncio_pydantic.models.v1alpha1_pod_certificate_request import V1alpha1PodCertificateRequest
 
 # TODO update the JSON string below
 json = "{}"

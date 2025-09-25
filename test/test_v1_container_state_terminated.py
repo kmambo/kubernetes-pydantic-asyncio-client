@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_state_terminated import V1ContainerStateTerminated
+from kubernetes_asyncio_pydantic.models.v1_container_state_terminated import V1ContainerStateTerminated
 
 class TestV1ContainerStateTerminated(unittest.TestCase):
     """V1ContainerStateTerminated unit test stubs"""

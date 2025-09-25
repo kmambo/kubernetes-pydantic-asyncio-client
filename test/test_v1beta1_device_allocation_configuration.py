@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_device_allocation_configuration import V1beta1DeviceAllocationConfiguration
+from kubernetes_asyncio_pydantic.models.v1beta1_device_allocation_configuration import V1beta1DeviceAllocationConfiguration
 
 class TestV1beta1DeviceAllocationConfiguration(unittest.TestCase):
     """V1beta1DeviceAllocationConfiguration unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta1DeviceAllocationConfiguration(unittest.TestCase):
         model = V1beta1DeviceAllocationConfiguration()
         if include_optional:
             return V1beta1DeviceAllocationConfiguration(
-                opaque = kubernetes_asyncio.models.v1beta1/opaque_device_configuration.v1beta1.OpaqueDeviceConfiguration(
+                opaque = kubernetes_asyncio_pydantic.models.v1beta1/opaque_device_configuration.v1beta1.OpaqueDeviceConfiguration(
                     driver = '', 
                     parameters = null, ),
                 requests = [

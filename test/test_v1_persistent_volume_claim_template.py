@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume_claim_template import V1PersistentVolumeClaimTemplate
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_template import V1PersistentVolumeClaimTemplate
 
 class TestV1PersistentVolumeClaimTemplate(unittest.TestCase):
     """V1PersistentVolumeClaimTemplate unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1PersistentVolumeClaimTemplate(unittest.TestCase):
         model = V1PersistentVolumeClaimTemplate()
         if include_optional:
             return V1PersistentVolumeClaimTemplate(
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -61,7 +61,7 @@ class TestV1PersistentVolumeClaimTemplate(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/persistent_volume_claim_spec.v1.PersistentVolumeClaimSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/persistent_volume_claim_spec.v1.PersistentVolumeClaimSpec(
                     access_modes = [
                         ''
                         ], 
@@ -76,7 +76,7 @@ class TestV1PersistentVolumeClaimTemplate(unittest.TestCase):
             )
         else:
             return V1PersistentVolumeClaimTemplate(
-                spec = kubernetes_asyncio.models.v1/persistent_volume_claim_spec.v1.PersistentVolumeClaimSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/persistent_volume_claim_spec.v1.PersistentVolumeClaimSpec(
                     access_modes = [
                         ''
                         ], 

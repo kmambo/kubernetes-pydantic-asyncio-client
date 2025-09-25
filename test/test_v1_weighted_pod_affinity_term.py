@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
+from kubernetes_asyncio_pydantic.models.v1_weighted_pod_affinity_term import V1WeightedPodAffinityTerm
 
 class TestV1WeightedPodAffinityTerm(unittest.TestCase):
     """V1WeightedPodAffinityTerm unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1WeightedPodAffinityTerm(unittest.TestCase):
         model = V1WeightedPodAffinityTerm()
         if include_optional:
             return V1WeightedPodAffinityTerm(
-                pod_affinity_term = kubernetes_asyncio.models.v1/pod_affinity_term.v1.PodAffinityTerm(
+                pod_affinity_term = kubernetes_asyncio_pydantic.models.v1/pod_affinity_term.v1.PodAffinityTerm(
                     label_selector = null, 
                     match_label_keys = [
                         ''
@@ -52,7 +52,7 @@ class TestV1WeightedPodAffinityTerm(unittest.TestCase):
             )
         else:
             return V1WeightedPodAffinityTerm(
-                pod_affinity_term = kubernetes_asyncio.models.v1/pod_affinity_term.v1.PodAffinityTerm(
+                pod_affinity_term = kubernetes_asyncio_pydantic.models.v1/pod_affinity_term.v1.PodAffinityTerm(
                     label_selector = null, 
                     match_label_keys = [
                         ''

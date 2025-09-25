@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_lifecycle_handler import V1LifecycleHandler
+from kubernetes_asyncio_pydantic.models.v1_lifecycle_handler import V1LifecycleHandler
 
 class TestV1LifecycleHandler(unittest.TestCase):
     """V1LifecycleHandler unit test stubs"""
@@ -35,11 +35,11 @@ class TestV1LifecycleHandler(unittest.TestCase):
         model = V1LifecycleHandler()
         if include_optional:
             return V1LifecycleHandler(
-                var_exec = kubernetes_asyncio.models.v1/exec_action.v1.ExecAction(
+                var_exec = kubernetes_asyncio_pydantic.models.v1/exec_action.v1.ExecAction(
                     command = [
                         ''
                         ], ),
-                http_get = kubernetes_asyncio.models.v1/http_get_action.v1.HTTPGetAction(
+                http_get = kubernetes_asyncio_pydantic.models.v1/http_get_action.v1.HTTPGetAction(
                     host = '', 
                     http_headers = [
                         null
@@ -47,9 +47,9 @@ class TestV1LifecycleHandler(unittest.TestCase):
                     path = '', 
                     port = null, 
                     scheme = '', ),
-                sleep = kubernetes_asyncio.models.v1/sleep_action.v1.SleepAction(
+                sleep = kubernetes_asyncio_pydantic.models.v1/sleep_action.v1.SleepAction(
                     seconds = 56, ),
-                tcp_socket = kubernetes_asyncio.models.v1/tcp_socket_action.v1.TCPSocketAction(
+                tcp_socket = kubernetes_asyncio_pydantic.models.v1/tcp_socket_action.v1.TCPSocketAction(
                     host = '', 
                     port = null, )
             )

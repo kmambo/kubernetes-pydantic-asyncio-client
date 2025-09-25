@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_disruption_budget import V1PodDisruptionBudget
+from kubernetes_asyncio_pydantic.models.v1_pod_disruption_budget import V1PodDisruptionBudget
 
 class TestV1PodDisruptionBudget(unittest.TestCase):
     """V1PodDisruptionBudget unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1PodDisruptionBudget(unittest.TestCase):
             return V1PodDisruptionBudget(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,12 +63,12 @@ class TestV1PodDisruptionBudget(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/pod_disruption_budget_spec.v1.PodDisruptionBudgetSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/pod_disruption_budget_spec.v1.PodDisruptionBudgetSpec(
                     max_unavailable = null, 
                     min_available = null, 
                     selector = null, 
                     unhealthy_pod_eviction_policy = '', ),
-                status = kubernetes_asyncio.models.v1/pod_disruption_budget_status.v1.PodDisruptionBudgetStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/pod_disruption_budget_status.v1.PodDisruptionBudgetStatus(
                     conditions = [
                         null
                         ], 

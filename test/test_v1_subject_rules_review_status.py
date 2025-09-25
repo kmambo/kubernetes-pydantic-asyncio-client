@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_subject_rules_review_status import V1SubjectRulesReviewStatus
+from kubernetes_asyncio_pydantic.models.v1_subject_rules_review_status import V1SubjectRulesReviewStatus
 
 class TestV1SubjectRulesReviewStatus(unittest.TestCase):
     """V1SubjectRulesReviewStatus unit test stubs"""

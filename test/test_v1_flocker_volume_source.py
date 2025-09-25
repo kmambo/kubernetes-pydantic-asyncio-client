@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flocker_volume_source import V1FlockerVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_flocker_volume_source import V1FlockerVolumeSource
 
 class TestV1FlockerVolumeSource(unittest.TestCase):
     """V1FlockerVolumeSource unit test stubs"""

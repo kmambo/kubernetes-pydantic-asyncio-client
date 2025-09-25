@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cluster_role import V1ClusterRole
+from kubernetes_asyncio_pydantic.models.v1_cluster_role import V1ClusterRole
 
 class TestV1ClusterRole(unittest.TestCase):
     """V1ClusterRole unit test stubs"""
@@ -35,13 +35,13 @@ class TestV1ClusterRole(unittest.TestCase):
         model = V1ClusterRole()
         if include_optional:
             return V1ClusterRole(
-                aggregation_rule = kubernetes_asyncio.models.v1/aggregation_rule.v1.AggregationRule(
+                aggregation_rule = kubernetes_asyncio_pydantic.models.v1/aggregation_rule.v1.AggregationRule(
                     cluster_role_selectors = [
                         null
                         ], ),
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

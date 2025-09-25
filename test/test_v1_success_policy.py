@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_success_policy import V1SuccessPolicy
+from kubernetes_asyncio_pydantic.models.v1_success_policy import V1SuccessPolicy
 
 class TestV1SuccessPolicy(unittest.TestCase):
     """V1SuccessPolicy unit test stubs"""

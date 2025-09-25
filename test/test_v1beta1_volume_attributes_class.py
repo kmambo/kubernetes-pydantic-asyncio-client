@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_volume_attributes_class import V1beta1VolumeAttributesClass
+from kubernetes_asyncio_pydantic.models.v1beta1_volume_attributes_class import V1beta1VolumeAttributesClass
 
 class TestV1beta1VolumeAttributesClass(unittest.TestCase):
     """V1beta1VolumeAttributesClass unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1beta1VolumeAttributesClass(unittest.TestCase):
                 api_version = '',
                 driver_name = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

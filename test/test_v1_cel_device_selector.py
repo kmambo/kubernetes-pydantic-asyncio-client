@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cel_device_selector import V1CELDeviceSelector
+from kubernetes_asyncio_pydantic.models.v1_cel_device_selector import V1CELDeviceSelector
 
 class TestV1CELDeviceSelector(unittest.TestCase):
     """V1CELDeviceSelector unit test stubs"""

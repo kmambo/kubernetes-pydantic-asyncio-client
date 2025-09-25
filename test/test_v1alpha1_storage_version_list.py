@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_storage_version_list import V1alpha1StorageVersionList
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version_list import V1alpha1StorageVersionList
 
 class TestV1alpha1StorageVersionList(unittest.TestCase):
     """V1alpha1StorageVersionList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1alpha1StorageVersionList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

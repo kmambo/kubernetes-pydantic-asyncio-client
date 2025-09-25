@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_slice_spec import V1ResourceSliceSpec
+from kubernetes_asyncio_pydantic.models.v1_resource_slice_spec import V1ResourceSliceSpec
 
 class TestV1ResourceSliceSpec(unittest.TestCase):
     """V1ResourceSliceSpec unit test stubs"""
@@ -41,12 +41,12 @@ class TestV1ResourceSliceSpec(unittest.TestCase):
                     ],
                 driver = '',
                 node_name = '',
-                node_selector = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
+                node_selector = kubernetes_asyncio_pydantic.models.v1/node_selector.v1.NodeSelector(
                     node_selector_terms = [
                         null
                         ], ),
                 per_device_node_selection = True,
-                pool = kubernetes_asyncio.models.v1/resource_pool.v1.ResourcePool(
+                pool = kubernetes_asyncio_pydantic.models.v1/resource_pool.v1.ResourcePool(
                     generation = 56, 
                     name = '', 
                     resource_slice_count = 56, ),
@@ -57,7 +57,7 @@ class TestV1ResourceSliceSpec(unittest.TestCase):
         else:
             return V1ResourceSliceSpec(
                 driver = '',
-                pool = kubernetes_asyncio.models.v1/resource_pool.v1.ResourcePool(
+                pool = kubernetes_asyncio_pydantic.models.v1/resource_pool.v1.ResourcePool(
                     generation = 56, 
                     name = '', 
                     resource_slice_count = 56, ),

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.networking_v1beta1_api import NetworkingV1beta1Api
+from kubernetes_asyncio_pydantic.api.networking_v1beta1_api import NetworkingV1beta1Api
 
 
 class TestNetworkingV1beta1Api(unittest.IsolatedAsyncioTestCase):

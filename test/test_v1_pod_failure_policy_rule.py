@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_failure_policy_rule import V1PodFailurePolicyRule
+from kubernetes_asyncio_pydantic.models.v1_pod_failure_policy_rule import V1PodFailurePolicyRule
 
 class TestV1PodFailurePolicyRule(unittest.TestCase):
     """V1PodFailurePolicyRule unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1PodFailurePolicyRule(unittest.TestCase):
         if include_optional:
             return V1PodFailurePolicyRule(
                 action = '',
-                on_exit_codes = kubernetes_asyncio.models.v1/pod_failure_policy_on_exit_codes_requirement.v1.PodFailurePolicyOnExitCodesRequirement(
+                on_exit_codes = kubernetes_asyncio_pydantic.models.v1/pod_failure_policy_on_exit_codes_requirement.v1.PodFailurePolicyOnExitCodesRequirement(
                     container_name = '', 
                     operator = '', 
                     values = [

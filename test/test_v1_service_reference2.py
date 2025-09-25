@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_reference2 import V1ServiceReference2
+from kubernetes_asyncio_pydantic.models.v1_service_reference2 import V1ServiceReference2
 
 class TestV1ServiceReference2(unittest.TestCase):
     """V1ServiceReference2 unit test stubs"""

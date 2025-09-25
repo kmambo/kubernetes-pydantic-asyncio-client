@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_device_class_configuration import V1DeviceClassConfiguration
+from kubernetes_asyncio_pydantic.models.v1_device_class_configuration import V1DeviceClassConfiguration
 
 class TestV1DeviceClassConfiguration(unittest.TestCase):
     """V1DeviceClassConfiguration unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1DeviceClassConfiguration(unittest.TestCase):
         model = V1DeviceClassConfiguration()
         if include_optional:
             return V1DeviceClassConfiguration(
-                opaque = kubernetes_asyncio.models.v1/opaque_device_configuration.v1.OpaqueDeviceConfiguration(
+                opaque = kubernetes_asyncio_pydantic.models.v1/opaque_device_configuration.v1.OpaqueDeviceConfiguration(
                     driver = '', 
                     parameters = null, )
             )

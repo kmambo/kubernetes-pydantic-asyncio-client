@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_namespace_condition import V1NamespaceCondition
+from kubernetes_asyncio_pydantic.models.v1_namespace_condition import V1NamespaceCondition
 
 # TODO update the JSON string below
 json = "{}"

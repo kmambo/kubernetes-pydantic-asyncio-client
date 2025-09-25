@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha2_lease_candidate import V1alpha2LeaseCandidate
+from kubernetes_asyncio_pydantic.models.v1alpha2_lease_candidate import V1alpha2LeaseCandidate
 
 class TestV1alpha2LeaseCandidate(unittest.TestCase):
     """V1alpha2LeaseCandidate unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1alpha2LeaseCandidate(unittest.TestCase):
             return V1alpha2LeaseCandidate(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1alpha2LeaseCandidate(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1alpha2/lease_candidate_spec.v1alpha2.LeaseCandidateSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha2/lease_candidate_spec.v1alpha2.LeaseCandidateSpec(
                     binary_version = '', 
                     emulation_version = '', 
                     lease_name = '', 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_horizontal_pod_autoscaler_spec import V2HorizontalPodAutoscalerSpec
+from kubernetes_asyncio_pydantic.models.v2_horizontal_pod_autoscaler_spec import V2HorizontalPodAutoscalerSpec
 
 class TestV2HorizontalPodAutoscalerSpec(unittest.TestCase):
     """V2HorizontalPodAutoscalerSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV2HorizontalPodAutoscalerSpec(unittest.TestCase):
         model = V2HorizontalPodAutoscalerSpec()
         if include_optional:
             return V2HorizontalPodAutoscalerSpec(
-                behavior = kubernetes_asyncio.models.v2/horizontal_pod_autoscaler_behavior.v2.HorizontalPodAutoscalerBehavior(
+                behavior = kubernetes_asyncio_pydantic.models.v2/horizontal_pod_autoscaler_behavior.v2.HorizontalPodAutoscalerBehavior(
                     scale_down = null, 
                     scale_up = null, ),
                 max_replicas = 56,
@@ -43,7 +43,7 @@ class TestV2HorizontalPodAutoscalerSpec(unittest.TestCase):
                     null
                     ],
                 min_replicas = 56,
-                scale_target_ref = kubernetes_asyncio.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
+                scale_target_ref = kubernetes_asyncio_pydantic.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', )
@@ -51,7 +51,7 @@ class TestV2HorizontalPodAutoscalerSpec(unittest.TestCase):
         else:
             return V2HorizontalPodAutoscalerSpec(
                 max_replicas = 56,
-                scale_target_ref = kubernetes_asyncio.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
+                scale_target_ref = kubernetes_asyncio_pydantic.models.v2/cross_version_object_reference.v2.CrossVersionObjectReference(
                     api_version = '', 
                     kind = '', 
                     name = '', ),

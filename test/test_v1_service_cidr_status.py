@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_cidr_status import V1ServiceCIDRStatus
+from kubernetes_asyncio_pydantic.models.v1_service_cidr_status import V1ServiceCIDRStatus
 
 class TestV1ServiceCIDRStatus(unittest.TestCase):
     """V1ServiceCIDRStatus unit test stubs"""

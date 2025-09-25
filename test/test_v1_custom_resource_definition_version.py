@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_definition_version import V1CustomResourceDefinitionVersion
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_definition_version import V1CustomResourceDefinitionVersion
 
 class TestV1CustomResourceDefinitionVersion(unittest.TestCase):
     """V1CustomResourceDefinitionVersion unit test stubs"""
@@ -41,14 +41,14 @@ class TestV1CustomResourceDefinitionVersion(unittest.TestCase):
                 deprecated = True,
                 deprecation_warning = '',
                 name = '',
-                var_schema = kubernetes_asyncio.models.v1/custom_resource_validation.v1.CustomResourceValidation(
+                var_schema = kubernetes_asyncio_pydantic.models.v1/custom_resource_validation.v1.CustomResourceValidation(
                     open_apiv3_schema = null, ),
                 selectable_fields = [
                     null
                     ],
                 served = True,
                 storage = True,
-                subresources = kubernetes_asyncio.models.v1/custom_resource_subresources.v1.CustomResourceSubresources(
+                subresources = kubernetes_asyncio_pydantic.models.v1/custom_resource_subresources.v1.CustomResourceSubresources(
                     scale = null, 
                     status = null, )
             )

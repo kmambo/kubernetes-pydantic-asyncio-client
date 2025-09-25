@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.intstr_int_or_string import IntstrIntOrString
+from kubernetes_asyncio_pydantic.models.intstr_int_or_string import IntstrIntOrString
 
 class TestIntstrIntOrString(unittest.TestCase):
     """IntstrIntOrString unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume_claim_spec import V1PersistentVolumeClaimSpec
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_spec import V1PersistentVolumeClaimSpec
 
 class TestV1PersistentVolumeClaimSpec(unittest.TestCase):
     """V1PersistentVolumeClaimSpec unit test stubs"""
@@ -38,23 +38,23 @@ class TestV1PersistentVolumeClaimSpec(unittest.TestCase):
                 access_modes = [
                     ''
                     ],
-                data_source = kubernetes_asyncio.models.v1/typed_local_object_reference.v1.TypedLocalObjectReference(
+                data_source = kubernetes_asyncio_pydantic.models.v1/typed_local_object_reference.v1.TypedLocalObjectReference(
                     api_group = '', 
                     kind = '', 
                     name = '', ),
-                data_source_ref = kubernetes_asyncio.models.v1/typed_object_reference.v1.TypedObjectReference(
+                data_source_ref = kubernetes_asyncio_pydantic.models.v1/typed_object_reference.v1.TypedObjectReference(
                     api_group = '', 
                     kind = '', 
                     name = '', 
                     namespace = '', ),
-                resources = kubernetes_asyncio.models.v1/volume_resource_requirements.v1.VolumeResourceRequirements(
+                resources = kubernetes_asyncio_pydantic.models.v1/volume_resource_requirements.v1.VolumeResourceRequirements(
                     limits = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     requests = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

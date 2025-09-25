@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.policy_v1_api import PolicyV1Api
+from kubernetes_asyncio_pydantic.api.policy_v1_api import PolicyV1Api
 
 
 class TestPolicyV1Api(unittest.IsolatedAsyncioTestCase):

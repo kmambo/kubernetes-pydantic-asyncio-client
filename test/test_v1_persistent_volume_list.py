@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume_list import V1PersistentVolumeList
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_list import V1PersistentVolumeList
 
 class TestV1PersistentVolumeList(unittest.TestCase):
     """V1PersistentVolumeList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1PersistentVolumeList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

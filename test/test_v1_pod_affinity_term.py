@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_affinity_term import V1PodAffinityTerm
+from kubernetes_asyncio_pydantic.models.v1_pod_affinity_term import V1PodAffinityTerm
 
 class TestV1PodAffinityTerm(unittest.TestCase):
     """V1PodAffinityTerm unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1PodAffinityTerm(unittest.TestCase):
         model = V1PodAffinityTerm()
         if include_optional:
             return V1PodAffinityTerm(
-                label_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                label_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
@@ -48,7 +48,7 @@ class TestV1PodAffinityTerm(unittest.TestCase):
                 mismatch_label_keys = [
                     ''
                     ],
-                namespace_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                namespace_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

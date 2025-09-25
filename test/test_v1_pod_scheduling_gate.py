@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_scheduling_gate import V1PodSchedulingGate
+from kubernetes_asyncio_pydantic.models.v1_pod_scheduling_gate import V1PodSchedulingGate
 
 class TestV1PodSchedulingGate(unittest.TestCase):
     """V1PodSchedulingGate unit test stubs"""

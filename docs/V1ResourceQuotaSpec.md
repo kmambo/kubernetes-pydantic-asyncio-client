@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_resource_quota_spec import V1ResourceQuotaSpec
+from kubernetes_asyncio_pydantic.models.v1_resource_quota_spec import V1ResourceQuotaSpec
 
 # TODO update the JSON string below
 json = "{}"

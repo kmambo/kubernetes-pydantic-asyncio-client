@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_scale_io_persistent_volume_source import V1ScaleIOPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_scale_io_persistent_volume_source import V1ScaleIOPersistentVolumeSource
 
 class TestV1ScaleIOPersistentVolumeSource(unittest.TestCase):
     """V1ScaleIOPersistentVolumeSource unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1ScaleIOPersistentVolumeSource(unittest.TestCase):
                 gateway = '',
                 protection_domain = '',
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/secret_reference.v1.SecretReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/secret_reference.v1.SecretReference(
                     name = '', 
                     namespace = '', ),
                 ssl_enabled = True,
@@ -51,7 +51,7 @@ class TestV1ScaleIOPersistentVolumeSource(unittest.TestCase):
         else:
             return V1ScaleIOPersistentVolumeSource(
                 gateway = '',
-                secret_ref = kubernetes_asyncio.models.v1/secret_reference.v1.SecretReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/secret_reference.v1.SecretReference(
                     name = '', 
                     namespace = '', ),
                 system = '',

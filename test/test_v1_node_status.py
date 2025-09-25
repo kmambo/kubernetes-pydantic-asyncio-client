@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_status import V1NodeStatus
+from kubernetes_asyncio_pydantic.models.v1_node_status import V1NodeStatus
 
 class TestV1NodeStatus(unittest.TestCase):
     """V1NodeStatus unit test stubs"""
@@ -39,27 +39,27 @@ class TestV1NodeStatus(unittest.TestCase):
                     null
                     ],
                 allocatable = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 capacity = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 conditions = [
                     null
                     ],
-                config = kubernetes_asyncio.models.v1/node_config_status.v1.NodeConfigStatus(
+                config = kubernetes_asyncio_pydantic.models.v1/node_config_status.v1.NodeConfigStatus(
                     active = null, 
                     assigned = null, 
                     error = '', 
                     last_known_good = null, ),
-                daemon_endpoints = kubernetes_asyncio.models.v1/node_daemon_endpoints.v1.NodeDaemonEndpoints(
+                daemon_endpoints = kubernetes_asyncio_pydantic.models.v1/node_daemon_endpoints.v1.NodeDaemonEndpoints(
                     kubelet_endpoint = null, ),
-                features = kubernetes_asyncio.models.v1/node_features.v1.NodeFeatures(
+                features = kubernetes_asyncio_pydantic.models.v1/node_features.v1.NodeFeatures(
                     supplemental_groups_policy = True, ),
                 images = [
                     null
                     ],
-                node_info = kubernetes_asyncio.models.v1/node_system_info.v1.NodeSystemInfo(
+                node_info = kubernetes_asyncio_pydantic.models.v1/node_system_info.v1.NodeSystemInfo(
                     architecture = '', 
                     boot_id = '', 
                     container_runtime_version = '', 

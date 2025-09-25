@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_limit_range import V1LimitRange
+from kubernetes_asyncio_pydantic.models.v1_limit_range import V1LimitRange
 
 class TestV1LimitRange(unittest.TestCase):
     """V1LimitRange unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1LimitRange(unittest.TestCase):
             return V1LimitRange(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1LimitRange(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/limit_range_spec.v1.LimitRangeSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/limit_range_spec.v1.LimitRangeSpec(
                     limits = [
                         null
                         ], )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_git_repo_volume_source import V1GitRepoVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_git_repo_volume_source import V1GitRepoVolumeSource
 
 class TestV1GitRepoVolumeSource(unittest.TestCase):
     """V1GitRepoVolumeSource unit test stubs"""

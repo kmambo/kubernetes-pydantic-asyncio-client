@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume_claim_status import V1PersistentVolumeClaimStatus
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_status import V1PersistentVolumeClaimStatus
 
 class TestV1PersistentVolumeClaimStatus(unittest.TestCase):
     """V1PersistentVolumeClaimStatus unit test stubs"""
@@ -42,16 +42,16 @@ class TestV1PersistentVolumeClaimStatus(unittest.TestCase):
                     'key' : ''
                     },
                 allocated_resources = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 capacity = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 conditions = [
                     null
                     ],
                 current_volume_attributes_class_name = '',
-                modify_volume_status = kubernetes_asyncio.models.v1/modify_volume_status.v1.ModifyVolumeStatus(
+                modify_volume_status = kubernetes_asyncio_pydantic.models.v1/modify_volume_status.v1.ModifyVolumeStatus(
                     status = '', 
                     target_volume_attributes_class_name = '', ),
                 phase = ''

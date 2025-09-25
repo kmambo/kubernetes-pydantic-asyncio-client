@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_secret_projection import V1SecretProjection
+from kubernetes_asyncio_pydantic.models.v1_secret_projection import V1SecretProjection
 
 class TestV1SecretProjection(unittest.TestCase):
     """V1SecretProjection unit test stubs"""

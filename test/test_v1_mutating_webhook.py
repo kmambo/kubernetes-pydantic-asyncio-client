@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_mutating_webhook import V1MutatingWebhook
+from kubernetes_asyncio_pydantic.models.v1_mutating_webhook import V1MutatingWebhook
 
 class TestV1MutatingWebhook(unittest.TestCase):
     """V1MutatingWebhook unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1MutatingWebhook(unittest.TestCase):
                 admission_review_versions = [
                     ''
                     ],
-                client_config = kubernetes_asyncio.models.v1/webhook_client_config.v1.WebhookClientConfig(
+                client_config = kubernetes_asyncio_pydantic.models.v1/webhook_client_config.v1.WebhookClientConfig(
                     ca_bundle = 'YQ==', 
                     service = null, 
                     url = '', ),
@@ -48,14 +48,14 @@ class TestV1MutatingWebhook(unittest.TestCase):
                     ],
                 match_policy = '',
                 name = '',
-                namespace_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                namespace_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                object_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                object_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
@@ -74,7 +74,7 @@ class TestV1MutatingWebhook(unittest.TestCase):
                 admission_review_versions = [
                     ''
                     ],
-                client_config = kubernetes_asyncio.models.v1/webhook_client_config.v1.WebhookClientConfig(
+                client_config = kubernetes_asyncio_pydantic.models.v1/webhook_client_config.v1.WebhookClientConfig(
                     ca_bundle = 'YQ==', 
                     service = null, 
                     url = '', ),

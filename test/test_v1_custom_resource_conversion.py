@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_conversion import V1CustomResourceConversion
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_conversion import V1CustomResourceConversion
 
 class TestV1CustomResourceConversion(unittest.TestCase):
     """V1CustomResourceConversion unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1CustomResourceConversion(unittest.TestCase):
         if include_optional:
             return V1CustomResourceConversion(
                 strategy = '',
-                webhook = kubernetes_asyncio.models.v1/webhook_conversion.v1.WebhookConversion(
+                webhook = kubernetes_asyncio_pydantic.models.v1/webhook_conversion.v1.WebhookConversion(
                     client_config = null, 
                     conversion_review_versions = [
                         ''

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_dns_config import V1PodDNSConfig
+from kubernetes_asyncio_pydantic.models.v1_pod_dns_config import V1PodDNSConfig
 
 class TestV1PodDNSConfig(unittest.TestCase):
     """V1PodDNSConfig unit test stubs"""

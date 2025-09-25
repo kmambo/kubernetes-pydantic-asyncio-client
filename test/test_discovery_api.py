@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.discovery_api import DiscoveryApi
+from kubernetes_asyncio_pydantic.api.discovery_api import DiscoveryApi
 
 
 class TestDiscoveryApi(unittest.IsolatedAsyncioTestCase):

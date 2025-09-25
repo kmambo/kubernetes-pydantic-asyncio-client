@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_component_status import V1ComponentStatus
+from kubernetes_asyncio_pydantic.models.v1_component_status import V1ComponentStatus
 
 class TestV1ComponentStatus(unittest.TestCase):
     """V1ComponentStatus unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1ComponentStatus(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

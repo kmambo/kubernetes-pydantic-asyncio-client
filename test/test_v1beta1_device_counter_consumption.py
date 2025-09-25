@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_device_counter_consumption import V1beta1DeviceCounterConsumption
+from kubernetes_asyncio_pydantic.models.v1beta1_device_counter_consumption import V1beta1DeviceCounterConsumption
 
 class TestV1beta1DeviceCounterConsumption(unittest.TestCase):
     """V1beta1DeviceCounterConsumption unit test stubs"""

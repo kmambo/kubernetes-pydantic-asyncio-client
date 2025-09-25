@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_storage_capacity_maximum_volume_size import V1CSIStorageCapacityMaximumVolumeSize
+from kubernetes_asyncio_pydantic.models.v1_csi_storage_capacity_maximum_volume_size import V1CSIStorageCapacityMaximumVolumeSize
 
 class TestV1CSIStorageCapacityMaximumVolumeSize(unittest.TestCase):
     """V1CSIStorageCapacityMaximumVolumeSize unit test stubs"""

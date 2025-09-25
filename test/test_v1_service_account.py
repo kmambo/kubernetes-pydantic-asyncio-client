@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service_account import V1ServiceAccount
+from kubernetes_asyncio_pydantic.models.v1_service_account import V1ServiceAccount
 
 class TestV1ServiceAccount(unittest.TestCase):
     """V1ServiceAccount unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1ServiceAccount(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

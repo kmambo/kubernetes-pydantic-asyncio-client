@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_review import V1TokenReview
+from kubernetes_asyncio_pydantic.models.v1_token_review import V1TokenReview
 
 class TestV1TokenReview(unittest.TestCase):
     """V1TokenReview unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1TokenReview(unittest.TestCase):
             return V1TokenReview(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,12 +63,12 @@ class TestV1TokenReview(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/token_review_spec.v1.TokenReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/token_review_spec.v1.TokenReviewSpec(
                     audiences = [
                         ''
                         ], 
                     token = '', ),
-                status = kubernetes_asyncio.models.v1/token_review_status.v1.TokenReviewStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/token_review_status.v1.TokenReviewStatus(
                     audiences = [
                         ''
                         ], 
@@ -78,7 +78,7 @@ class TestV1TokenReview(unittest.TestCase):
             )
         else:
             return V1TokenReview(
-                spec = kubernetes_asyncio.models.v1/token_review_spec.v1.TokenReviewSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/token_review_spec.v1.TokenReviewSpec(
                     audiences = [
                         ''
                         ], 

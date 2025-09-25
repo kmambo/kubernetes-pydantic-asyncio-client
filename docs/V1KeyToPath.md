@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_key_to_path import V1KeyToPath
+from kubernetes_asyncio_pydantic.models.v1_key_to_path import V1KeyToPath
 
 # TODO update the JSON string below
 json = "{}"

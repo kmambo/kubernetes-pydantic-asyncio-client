@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set import V1StatefulSet
+from kubernetes_asyncio_pydantic.models.v1_stateful_set import V1StatefulSet
 
 class TestV1StatefulSet(unittest.TestCase):
     """V1StatefulSet unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1StatefulSet(unittest.TestCase):
             return V1StatefulSet(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1StatefulSet(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/stateful_set_spec.v1.StatefulSetSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/stateful_set_spec.v1.StatefulSetSpec(
                     min_ready_seconds = 56, 
                     ordinals = null, 
                     persistent_volume_claim_retention_policy = null, 
@@ -77,7 +77,7 @@ class TestV1StatefulSet(unittest.TestCase):
                     volume_claim_templates = [
                         null
                         ], ),
-                status = kubernetes_asyncio.models.v1/stateful_set_status.v1.StatefulSetStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/stateful_set_status.v1.StatefulSetStatus(
                     available_replicas = 56, 
                     collision_count = 56, 
                     conditions = [

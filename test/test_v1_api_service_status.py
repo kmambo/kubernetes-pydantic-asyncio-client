@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_api_service_status import V1APIServiceStatus
+from kubernetes_asyncio_pydantic.models.v1_api_service_status import V1APIServiceStatus
 
 class TestV1APIServiceStatus(unittest.TestCase):
     """V1APIServiceStatus unit test stubs"""

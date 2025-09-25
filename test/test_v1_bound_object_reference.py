@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_bound_object_reference import V1BoundObjectReference
+from kubernetes_asyncio_pydantic.models.v1_bound_object_reference import V1BoundObjectReference
 
 class TestV1BoundObjectReference(unittest.TestCase):
     """V1BoundObjectReference unit test stubs"""

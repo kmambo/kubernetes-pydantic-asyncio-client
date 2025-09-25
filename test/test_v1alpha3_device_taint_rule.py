@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha3_device_taint_rule import V1alpha3DeviceTaintRule
+from kubernetes_asyncio_pydantic.models.v1alpha3_device_taint_rule import V1alpha3DeviceTaintRule
 
 class TestV1alpha3DeviceTaintRule(unittest.TestCase):
     """V1alpha3DeviceTaintRule unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1alpha3DeviceTaintRule(unittest.TestCase):
             return V1alpha3DeviceTaintRule(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,13 +63,13 @@ class TestV1alpha3DeviceTaintRule(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1alpha3/device_taint_rule_spec.v1alpha3.DeviceTaintRuleSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha3/device_taint_rule_spec.v1alpha3.DeviceTaintRuleSpec(
                     device_selector = null, 
                     taint = null, )
             )
         else:
             return V1alpha3DeviceTaintRule(
-                spec = kubernetes_asyncio.models.v1alpha3/device_taint_rule_spec.v1alpha3.DeviceTaintRuleSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha3/device_taint_rule_spec.v1alpha3.DeviceTaintRuleSpec(
                     device_selector = null, 
                     taint = null, ),
         )

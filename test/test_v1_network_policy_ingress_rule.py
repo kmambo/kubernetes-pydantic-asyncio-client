@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_network_policy_ingress_rule import V1NetworkPolicyIngressRule
+from kubernetes_asyncio_pydantic.models.v1_network_policy_ingress_rule import V1NetworkPolicyIngressRule
 
 class TestV1NetworkPolicyIngressRule(unittest.TestCase):
     """V1NetworkPolicyIngressRule unit test stubs"""

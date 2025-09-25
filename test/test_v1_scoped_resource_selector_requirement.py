@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_scoped_resource_selector_requirement import V1ScopedResourceSelectorRequirement
+from kubernetes_asyncio_pydantic.models.v1_scoped_resource_selector_requirement import V1ScopedResourceSelectorRequirement
 
 class TestV1ScopedResourceSelectorRequirement(unittest.TestCase):
     """V1ScopedResourceSelectorRequirement unit test stubs"""

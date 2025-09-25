@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_portworx_volume_source import V1PortworxVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_portworx_volume_source import V1PortworxVolumeSource
 
 class TestV1PortworxVolumeSource(unittest.TestCase):
     """V1PortworxVolumeSource unit test stubs"""

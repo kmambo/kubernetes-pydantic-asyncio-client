@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_lease import V1Lease
+from kubernetes_asyncio_pydantic.models.v1_lease import V1Lease
 
 class TestV1Lease(unittest.TestCase):
     """V1Lease unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Lease(unittest.TestCase):
             return V1Lease(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Lease(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/lease_spec.v1.LeaseSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/lease_spec.v1.LeaseSpec(
                     acquire_time = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     holder_identity = '', 
                     lease_duration_seconds = 56, 

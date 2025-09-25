@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_daemon_set import V1DaemonSet
+from kubernetes_asyncio_pydantic.models.v1_daemon_set import V1DaemonSet
 
 class TestV1DaemonSet(unittest.TestCase):
     """V1DaemonSet unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1DaemonSet(unittest.TestCase):
             return V1DaemonSet(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,13 +63,13 @@ class TestV1DaemonSet(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/daemon_set_spec.v1.DaemonSetSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/daemon_set_spec.v1.DaemonSetSpec(
                     min_ready_seconds = 56, 
                     revision_history_limit = 56, 
                     selector = null, 
                     template = null, 
                     update_strategy = null, ),
-                status = kubernetes_asyncio.models.v1/daemon_set_status.v1.DaemonSetStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/daemon_set_status.v1.DaemonSetStatus(
                     collision_count = 56, 
                     conditions = [
                         null

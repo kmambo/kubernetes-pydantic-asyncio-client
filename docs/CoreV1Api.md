@@ -1,4 +1,4 @@
-# kubernetes_asyncio.CoreV1Api
+# kubernetes_asyncio_pydantic.CoreV1Api
 
 All URIs are relative to *http://localhost:8080*
 
@@ -221,21 +221,21 @@ connect DELETE requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -290,21 +290,21 @@ connect DELETE requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -361,21 +361,21 @@ connect DELETE requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -430,21 +430,21 @@ connect DELETE requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -501,21 +501,21 @@ connect DELETE requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -568,21 +568,21 @@ connect DELETE requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -637,21 +637,21 @@ connect GET requests to attach of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodAttachOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     container = 'container_example' # str | The container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
@@ -714,21 +714,21 @@ connect GET requests to exec of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodExecOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     command = 'command_example' # str | Command is the remote command to execute. argv array. Not executed within a shell. (optional)
@@ -793,21 +793,21 @@ connect GET requests to portforward of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodPortForwardOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     ports = 56 # int | List of ports to forward Required when using WebSockets (optional)
@@ -862,21 +862,21 @@ connect GET requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -931,21 +931,21 @@ connect GET requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -1002,21 +1002,21 @@ connect GET requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -1071,21 +1071,21 @@ connect GET requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -1142,21 +1142,21 @@ connect GET requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -1209,21 +1209,21 @@ connect GET requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -1278,21 +1278,21 @@ connect HEAD requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -1347,21 +1347,21 @@ connect HEAD requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -1418,21 +1418,21 @@ connect HEAD requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -1487,21 +1487,21 @@ connect HEAD requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -1558,21 +1558,21 @@ connect HEAD requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -1625,21 +1625,21 @@ connect HEAD requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -1694,21 +1694,21 @@ connect OPTIONS requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -1763,21 +1763,21 @@ connect OPTIONS requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -1834,21 +1834,21 @@ connect OPTIONS requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -1903,21 +1903,21 @@ connect OPTIONS requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -1974,21 +1974,21 @@ connect OPTIONS requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -2041,21 +2041,21 @@ connect OPTIONS requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -2110,21 +2110,21 @@ connect PATCH requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -2179,21 +2179,21 @@ connect PATCH requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -2250,21 +2250,21 @@ connect PATCH requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -2319,21 +2319,21 @@ connect PATCH requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -2390,21 +2390,21 @@ connect PATCH requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -2457,21 +2457,21 @@ connect PATCH requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -2526,21 +2526,21 @@ connect POST requests to attach of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodAttachOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     container = 'container_example' # str | The container in which to execute the command. Defaults to only container if there is only one container in the pod. (optional)
@@ -2603,21 +2603,21 @@ connect POST requests to exec of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodExecOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     command = 'command_example' # str | Command is the remote command to execute. argv array. Not executed within a shell. (optional)
@@ -2682,21 +2682,21 @@ connect POST requests to portforward of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodPortForwardOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     ports = 56 # int | List of ports to forward Required when using WebSockets (optional)
@@ -2751,21 +2751,21 @@ connect POST requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -2820,21 +2820,21 @@ connect POST requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -2891,21 +2891,21 @@ connect POST requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -2960,21 +2960,21 @@ connect POST requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -3031,21 +3031,21 @@ connect POST requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -3098,21 +3098,21 @@ connect POST requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -3167,21 +3167,21 @@ connect PUT requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to pod. (optional)
@@ -3236,21 +3236,21 @@ connect PUT requests to proxy of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -3307,21 +3307,21 @@ connect PUT requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy. (optional)
@@ -3376,21 +3376,21 @@ connect PUT requests to proxy of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceProxyOptions
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     path = 'path_example' # str | path to the resource
@@ -3447,21 +3447,21 @@ connect PUT requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
 
@@ -3514,21 +3514,21 @@ connect PUT requests to proxy of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the NodeProxyOptions
     path = 'path_example' # str | path to the resource
     path2 = 'path_example' # str | Path is the URL path to use for the current proxy request to node. (optional)
@@ -3583,23 +3583,23 @@ create a Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
-    v1_namespace = kubernetes_asyncio.V1Namespace() # V1Namespace | 
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
+    v1_namespace = kubernetes_asyncio_pydantic.V1Namespace() # V1Namespace | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -3659,24 +3659,24 @@ create a Binding
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_binding import V1Binding
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_binding import V1Binding
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_binding = kubernetes_asyncio.V1Binding() # V1Binding | 
+    v1_binding = kubernetes_asyncio_pydantic.V1Binding() # V1Binding | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -3737,24 +3737,24 @@ create a ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_config_map import V1ConfigMap
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_config_map import V1ConfigMap
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_config_map = kubernetes_asyncio.V1ConfigMap() # V1ConfigMap | 
+    v1_config_map = kubernetes_asyncio_pydantic.V1ConfigMap() # V1ConfigMap | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -3815,24 +3815,24 @@ create Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_endpoints import V1Endpoints
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_endpoints import V1Endpoints
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_endpoints = kubernetes_asyncio.V1Endpoints() # V1Endpoints | 
+    v1_endpoints = kubernetes_asyncio_pydantic.V1Endpoints() # V1Endpoints | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -3893,24 +3893,24 @@ create an Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_event import V1Event
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_event import V1Event
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_event = kubernetes_asyncio.V1Event() # V1Event | 
+    v1_event = kubernetes_asyncio_pydantic.V1Event() # V1Event | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -3971,24 +3971,24 @@ create a LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_limit_range import V1LimitRange
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_limit_range import V1LimitRange
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_limit_range = kubernetes_asyncio.V1LimitRange() # V1LimitRange | 
+    v1_limit_range = kubernetes_asyncio_pydantic.V1LimitRange() # V1LimitRange | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4049,24 +4049,24 @@ create a PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_persistent_volume_claim = kubernetes_asyncio.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
+    v1_persistent_volume_claim = kubernetes_asyncio_pydantic.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4127,24 +4127,24 @@ create a Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod = kubernetes_asyncio.V1Pod() # V1Pod | 
+    v1_pod = kubernetes_asyncio_pydantic.V1Pod() # V1Pod | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4205,25 +4205,25 @@ create binding of a Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_binding import V1Binding
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_binding import V1Binding
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Binding
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_binding = kubernetes_asyncio.V1Binding() # V1Binding | 
+    v1_binding = kubernetes_asyncio_pydantic.V1Binding() # V1Binding | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -4285,25 +4285,25 @@ create eviction of a Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_eviction import V1Eviction
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_eviction import V1Eviction
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Eviction
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_eviction = kubernetes_asyncio.V1Eviction() # V1Eviction | 
+    v1_eviction = kubernetes_asyncio_pydantic.V1Eviction() # V1Eviction | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -4365,24 +4365,24 @@ create a PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_template import V1PodTemplate
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_template import V1PodTemplate
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod_template = kubernetes_asyncio.V1PodTemplate() # V1PodTemplate | 
+    v1_pod_template = kubernetes_asyncio_pydantic.V1PodTemplate() # V1PodTemplate | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4443,24 +4443,24 @@ create a ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_replication_controller = kubernetes_asyncio.V1ReplicationController() # V1ReplicationController | 
+    v1_replication_controller = kubernetes_asyncio_pydantic.V1ReplicationController() # V1ReplicationController | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4521,24 +4521,24 @@ create a ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_resource_quota = kubernetes_asyncio.V1ResourceQuota() # V1ResourceQuota | 
+    v1_resource_quota = kubernetes_asyncio_pydantic.V1ResourceQuota() # V1ResourceQuota | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4599,24 +4599,24 @@ create a Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_secret import V1Secret
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_secret import V1Secret
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_secret = kubernetes_asyncio.V1Secret() # V1Secret | 
+    v1_secret = kubernetes_asyncio_pydantic.V1Secret() # V1Secret | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4677,24 +4677,24 @@ create a Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_service = kubernetes_asyncio.V1Service() # V1Service | 
+    v1_service = kubernetes_asyncio_pydantic.V1Service() # V1Service | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4755,24 +4755,24 @@ create a ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_account import V1ServiceAccount
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_account import V1ServiceAccount
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_service_account = kubernetes_asyncio.V1ServiceAccount() # V1ServiceAccount | 
+    v1_service_account = kubernetes_asyncio_pydantic.V1ServiceAccount() # V1ServiceAccount | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4833,25 +4833,25 @@ create token of a ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_token_request import V1TokenRequest
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_token_request import V1TokenRequest
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the TokenRequest
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_token_request = kubernetes_asyncio.V1TokenRequest() # V1TokenRequest | 
+    v1_token_request = kubernetes_asyncio_pydantic.V1TokenRequest() # V1TokenRequest | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -4913,23 +4913,23 @@ create a Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
-    v1_node = kubernetes_asyncio.V1Node() # V1Node | 
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
+    v1_node = kubernetes_asyncio_pydantic.V1Node() # V1Node | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -4989,23 +4989,23 @@ create a PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
-    v1_persistent_volume = kubernetes_asyncio.V1PersistentVolume() # V1PersistentVolume | 
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
+    v1_persistent_volume = kubernetes_asyncio_pydantic.V1PersistentVolume() # V1PersistentVolume | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -5065,23 +5065,23 @@ delete collection of ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5097,7 +5097,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_config_map(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5162,23 +5162,23 @@ delete collection of Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5194,7 +5194,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_endpoints(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5259,23 +5259,23 @@ delete collection of Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5291,7 +5291,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_event(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5356,23 +5356,23 @@ delete collection of LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5388,7 +5388,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_limit_range(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5453,23 +5453,23 @@ delete collection of PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5485,7 +5485,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_persistent_volume_claim(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5550,23 +5550,23 @@ delete collection of Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5582,7 +5582,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_pod(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5647,23 +5647,23 @@ delete collection of PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5679,7 +5679,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_pod_template(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5744,23 +5744,23 @@ delete collection of ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5776,7 +5776,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_replication_controller(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5841,23 +5841,23 @@ delete collection of ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5873,7 +5873,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_resource_quota(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -5938,23 +5938,23 @@ delete collection of Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -5970,7 +5970,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_secret(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -6035,23 +6035,23 @@ delete collection of Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -6067,7 +6067,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_service(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -6132,23 +6132,23 @@ delete collection of ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -6164,7 +6164,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_namespaced_service_account(namespace, pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -6229,23 +6229,23 @@ delete collection of Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -6260,7 +6260,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_node(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -6324,23 +6324,23 @@ delete collection of PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -6355,7 +6355,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     resource_version_match = 'resource_version_match_example' # str | resourceVersionMatch determines how resourceVersion is applied to list calls. It is highly recommended that resourceVersionMatch be set for list calls where resourceVersion is set See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for details.  Defaults to unset (optional)
     send_initial_events = True # bool | `sendInitialEvents=true` may be set together with `watch=true`. In that case, the watch stream will begin with synthetic events to produce the current state of objects in the collection. Once all such events have been sent, a synthetic \"Bookmark\" event  will be sent. The bookmark will report the ResourceVersion (RV) corresponding to the set of objects, and be marked with `\"k8s.io/initial-events-end\": \"true\"` annotation. Afterwards, the watch stream will proceed as usual, sending watch events corresponding to changes (subsequent to the RV) to objects watched.  When `sendInitialEvents` option is set, we require `resourceVersionMatch` option to also be set. The semantic of the watch request is as following: - `resourceVersionMatch` = NotOlderThan   is interpreted as \"data at least as new as the provided `resourceVersion`\"   and the bookmark event is send when the state is synced   to a `resourceVersion` at least as fresh as the one provided by the ListOptions.   If `resourceVersion` is unset, this is interpreted as \"consistent read\" and the   bookmark event is send when the state is synced at least to the moment   when request started being processed. - `resourceVersionMatch` set to any other value or unset   Invalid error is returned.  Defaults to true if `resourceVersion=\"\"` or `resourceVersion=\"0\"` (for backward compatibility reasons) and to false otherwise. (optional)
     timeout_seconds = 56 # int | Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_collection_persistent_volume(pretty=pretty, var_continue=var_continue, dry_run=dry_run, field_selector=field_selector, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, label_selector=label_selector, limit=limit, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, resource_version=resource_version, resource_version_match=resource_version_match, send_initial_events=send_initial_events, timeout_seconds=timeout_seconds, v1_delete_options=v1_delete_options)
@@ -6419,23 +6419,23 @@ delete a Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -6443,7 +6443,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespace(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -6501,23 +6501,23 @@ delete a ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ConfigMap
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -6526,7 +6526,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_config_map(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -6585,23 +6585,23 @@ delete Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Endpoints
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -6610,7 +6610,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_endpoints(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -6669,23 +6669,23 @@ delete an Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Event
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -6694,7 +6694,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_event(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -6753,23 +6753,23 @@ delete a LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the LimitRange
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -6778,7 +6778,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_limit_range(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -6837,23 +6837,23 @@ delete a PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -6862,7 +6862,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_persistent_volume_claim(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -6921,23 +6921,23 @@ delete a Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -6946,7 +6946,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_pod(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7005,23 +7005,23 @@ delete a PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_pod_template import V1PodTemplate
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_pod_template import V1PodTemplate
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodTemplate
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -7030,7 +7030,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_pod_template(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7089,23 +7089,23 @@ delete a ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -7114,7 +7114,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_replication_controller(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7173,23 +7173,23 @@ delete a ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -7198,7 +7198,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_resource_quota(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7257,23 +7257,23 @@ delete a Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Secret
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -7282,7 +7282,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_secret(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7341,23 +7341,23 @@ delete a Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -7366,7 +7366,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_service(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7425,23 +7425,23 @@ delete a ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_service_account import V1ServiceAccount
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_service_account import V1ServiceAccount
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceAccount
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -7450,7 +7450,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_namespaced_service_account(name, namespace, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7509,23 +7509,23 @@ delete a Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_status import V1Status
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_status import V1Status
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -7533,7 +7533,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_node(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7591,23 +7591,23 @@ delete a PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
@@ -7615,7 +7615,7 @@ async with kubernetes_asyncio.ApiClient(configuration) as api_client:
     ignore_store_read_error_with_cluster_breaking_potential = True # bool | if set to true, it will trigger an unsafe deletion of the resource in case the normal deletion flow fails with a corrupt object error. A resource is considered corrupt if it can not be retrieved from the underlying storage successfully because of a) its data can not be transformed e.g. decryption failure, or b) it fails to decode into an object. NOTE: unsafe deletion ignores finalizer constraints, skips precondition checks, and removes the object from the storage. WARNING: This may potentially break the cluster if the workload associated with the resource being unsafe-deleted relies on normal deletion flow. Use only if you REALLY know what you are doing. The default value is false, and the user must opt in to enable it (optional)
     orphan_dependents = True # bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
     propagation_policy = 'propagation_policy_example' # str | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
-    v1_delete_options = kubernetes_asyncio.V1DeleteOptions() # V1DeleteOptions |  (optional)
+    v1_delete_options = kubernetes_asyncio_pydantic.V1DeleteOptions() # V1DeleteOptions |  (optional)
 
     try:
         api_response = await api_instance.delete_persistent_volume(name, pretty=pretty, dry_run=dry_run, grace_period_seconds=grace_period_seconds, ignore_store_read_error_with_cluster_breaking_potential=ignore_store_read_error_with_cluster_breaking_potential, orphan_dependents=orphan_dependents, propagation_policy=propagation_policy, v1_delete_options=v1_delete_options)
@@ -7673,22 +7673,22 @@ get available resources
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_api_resource_list import V1APIResourceList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_api_resource_list import V1APIResourceList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
 
     try:
         api_response = await api_instance.get_api_resources()
@@ -7735,22 +7735,22 @@ list objects of kind ComponentStatus
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_component_status_list import V1ComponentStatusList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_component_status_list import V1ComponentStatusList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -7821,22 +7821,22 @@ list or watch objects of kind ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_config_map_list import V1ConfigMapList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_config_map_list import V1ConfigMapList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -7907,22 +7907,22 @@ list or watch objects of kind Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_endpoints_list import V1EndpointsList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_endpoints_list import V1EndpointsList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -7993,22 +7993,22 @@ list or watch objects of kind Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_event_list import V1EventList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_event_list import V1EventList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -8079,22 +8079,22 @@ list or watch objects of kind LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_limit_range_list import V1LimitRangeList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_limit_range_list import V1LimitRangeList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -8165,22 +8165,22 @@ list or watch objects of kind Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace_list import V1NamespaceList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace_list import V1NamespaceList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -8251,22 +8251,22 @@ list or watch objects of kind ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_config_map_list import V1ConfigMapList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_config_map_list import V1ConfigMapList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8339,22 +8339,22 @@ list or watch objects of kind Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_endpoints_list import V1EndpointsList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_endpoints_list import V1EndpointsList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8427,22 +8427,22 @@ list or watch objects of kind Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_event_list import V1EventList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_event_list import V1EventList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8515,22 +8515,22 @@ list or watch objects of kind LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_limit_range_list import V1LimitRangeList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_limit_range_list import V1LimitRangeList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8603,22 +8603,22 @@ list or watch objects of kind PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim_list import V1PersistentVolumeClaimList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_list import V1PersistentVolumeClaimList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8691,22 +8691,22 @@ list or watch objects of kind Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_list import V1PodList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_list import V1PodList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8779,22 +8779,22 @@ list or watch objects of kind PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_template_list import V1PodTemplateList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_template_list import V1PodTemplateList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8867,22 +8867,22 @@ list or watch objects of kind ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller_list import V1ReplicationControllerList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller_list import V1ReplicationControllerList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -8955,22 +8955,22 @@ list or watch objects of kind ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota_list import V1ResourceQuotaList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota_list import V1ResourceQuotaList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -9043,22 +9043,22 @@ list or watch objects of kind Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_secret_list import V1SecretList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_secret_list import V1SecretList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -9131,22 +9131,22 @@ list or watch objects of kind Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_list import V1ServiceList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_list import V1ServiceList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -9219,22 +9219,22 @@ list or watch objects of kind ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_account_list import V1ServiceAccountList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_account_list import V1ServiceAccountList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
@@ -9307,22 +9307,22 @@ list or watch objects of kind Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node_list import V1NodeList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node_list import V1NodeList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -9393,22 +9393,22 @@ list or watch objects of kind PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_list import V1PersistentVolumeList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_list import V1PersistentVolumeList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
@@ -9479,22 +9479,22 @@ list or watch objects of kind PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim_list import V1PersistentVolumeClaimList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_list import V1PersistentVolumeClaimList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -9565,22 +9565,22 @@ list or watch objects of kind Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_list import V1PodList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_list import V1PodList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -9651,22 +9651,22 @@ list or watch objects of kind PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_template_list import V1PodTemplateList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_template_list import V1PodTemplateList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -9737,22 +9737,22 @@ list or watch objects of kind ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller_list import V1ReplicationControllerList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller_list import V1ReplicationControllerList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -9823,22 +9823,22 @@ list or watch objects of kind ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota_list import V1ResourceQuotaList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota_list import V1ResourceQuotaList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -9909,22 +9909,22 @@ list or watch objects of kind Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_secret_list import V1SecretList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_secret_list import V1SecretList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -9995,22 +9995,22 @@ list or watch objects of kind ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_account_list import V1ServiceAccountList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_account_list import V1ServiceAccountList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -10081,22 +10081,22 @@ list or watch objects of kind Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_list import V1ServiceList
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_list import V1ServiceList
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     allow_watch_bookmarks = True # bool | allowWatchBookmarks requests watch events with type \"BOOKMARK\". Servers that do not implement bookmarks may ignore this flag and bookmarks are sent at the server's discretion. Clients should not assume bookmarks are returned at any specific interval, nor may they assume the server will send any BOOKMARK event during a session. If this is not a watch, this field is ignored. (optional)
     var_continue = 'var_continue_example' # str | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".  This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
     field_selector = 'field_selector_example' # str | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
@@ -10167,22 +10167,22 @@ partially update the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -10246,22 +10246,22 @@ partially update status of the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -10325,22 +10325,22 @@ partially update the specified ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_config_map import V1ConfigMap
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_config_map import V1ConfigMap
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ConfigMap
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10406,22 +10406,22 @@ partially update the specified Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_endpoints import V1Endpoints
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_endpoints import V1Endpoints
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Endpoints
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10487,22 +10487,22 @@ partially update the specified Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_event import V1Event
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_event import V1Event
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Event
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10568,22 +10568,22 @@ partially update the specified LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_limit_range import V1LimitRange
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_limit_range import V1LimitRange
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the LimitRange
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10649,22 +10649,22 @@ partially update the specified PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10730,22 +10730,22 @@ partially update status of the specified PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10811,22 +10811,22 @@ partially update the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10892,22 +10892,22 @@ partially update ephemeralcontainers of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -10973,22 +10973,22 @@ partially update resize of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11054,22 +11054,22 @@ partially update status of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11135,22 +11135,22 @@ partially update the specified PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_template import V1PodTemplate
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_template import V1PodTemplate
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodTemplate
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11216,22 +11216,22 @@ partially update the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11297,22 +11297,22 @@ partially update scale of the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_scale import V1Scale
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_scale import V1Scale
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Scale
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11378,22 +11378,22 @@ partially update status of the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11459,22 +11459,22 @@ partially update the specified ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11540,22 +11540,22 @@ partially update status of the specified ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11621,22 +11621,22 @@ partially update the specified Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_secret import V1Secret
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_secret import V1Secret
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Secret
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11702,22 +11702,22 @@ partially update the specified Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11783,22 +11783,22 @@ partially update the specified ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_account import V1ServiceAccount
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_account import V1ServiceAccount
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceAccount
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11864,22 +11864,22 @@ partially update status of the specified Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     body = None # object | 
@@ -11945,22 +11945,22 @@ partially update the specified Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12024,22 +12024,22 @@ partially update status of the specified Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12103,22 +12103,22 @@ partially update the specified PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12182,22 +12182,22 @@ partially update status of the specified PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
     body = None # object | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12261,22 +12261,22 @@ read the specified ComponentStatus
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_component_status import V1ComponentStatus
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_component_status import V1ComponentStatus
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ComponentStatus
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -12329,22 +12329,22 @@ read the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -12397,22 +12397,22 @@ read status of the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -12465,22 +12465,22 @@ read the specified ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_config_map import V1ConfigMap
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_config_map import V1ConfigMap
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ConfigMap
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12535,22 +12535,22 @@ read the specified Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_endpoints import V1Endpoints
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_endpoints import V1Endpoints
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Endpoints
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12605,22 +12605,22 @@ read the specified Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_event import V1Event
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_event import V1Event
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Event
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12675,22 +12675,22 @@ read the specified LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_limit_range import V1LimitRange
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_limit_range import V1LimitRange
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the LimitRange
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12745,22 +12745,22 @@ read the specified PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12815,22 +12815,22 @@ read status of the specified PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12885,22 +12885,22 @@ read the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -12955,22 +12955,22 @@ read ephemeralcontainers of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13025,21 +13025,21 @@ read log of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     container = 'container_example' # str | The container for which to stream logs. Defaults to only container if there is one container in the pod. (optional)
@@ -13112,22 +13112,22 @@ read resize of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13182,22 +13182,22 @@ read status of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13252,22 +13252,22 @@ read the specified PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_template import V1PodTemplate
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_template import V1PodTemplate
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodTemplate
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13322,22 +13322,22 @@ read the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13392,22 +13392,22 @@ read scale of the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_scale import V1Scale
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_scale import V1Scale
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Scale
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13462,22 +13462,22 @@ read status of the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13532,22 +13532,22 @@ read the specified ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13602,22 +13602,22 @@ read status of the specified ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13672,22 +13672,22 @@ read the specified Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_secret import V1Secret
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_secret import V1Secret
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Secret
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13742,22 +13742,22 @@ read the specified Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13812,22 +13812,22 @@ read the specified ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_account import V1ServiceAccount
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_account import V1ServiceAccount
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceAccount
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13882,22 +13882,22 @@ read status of the specified Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
@@ -13952,22 +13952,22 @@ read the specified Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -14020,22 +14020,22 @@ read status of the specified Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -14088,22 +14088,22 @@ read the specified PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -14156,22 +14156,22 @@ read status of the specified PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
 
@@ -14224,24 +14224,24 @@ replace the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
-    v1_namespace = kubernetes_asyncio.V1Namespace() # V1Namespace | 
+    v1_namespace = kubernetes_asyncio_pydantic.V1Namespace() # V1Namespace | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14301,24 +14301,24 @@ replace finalize of the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
-    v1_namespace = kubernetes_asyncio.V1Namespace() # V1Namespace | 
+    v1_namespace = kubernetes_asyncio_pydantic.V1Namespace() # V1Namespace | 
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
     field_validation = 'field_validation_example' # str | fieldValidation instructs the server on how to handle objects in the request (POST/PUT/PATCH) containing unknown or duplicate fields. Valid values are: - Ignore: This will ignore any unknown fields that are silently dropped from the object, and will ignore all but the last duplicate field that the decoder encounters. This is the default behavior prior to v1.23. - Warn: This will send a warning via the standard warning response header for each unknown field that is dropped from the object, and for each duplicate field that is encountered. The request will still succeed if there are no other errors, and will only persist the last of any duplicate fields. This is the default in v1.23+ - Strict: This will fail the request with a BadRequest error if any unknown fields would be dropped from the object, or if any duplicate fields are present. The error returned from the server will contain all unknown and duplicate fields encountered. (optional)
@@ -14378,24 +14378,24 @@ replace status of the specified Namespace
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Namespace
-    v1_namespace = kubernetes_asyncio.V1Namespace() # V1Namespace | 
+    v1_namespace = kubernetes_asyncio_pydantic.V1Namespace() # V1Namespace | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14455,25 +14455,25 @@ replace the specified ConfigMap
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_config_map import V1ConfigMap
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_config_map import V1ConfigMap
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ConfigMap
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_config_map = kubernetes_asyncio.V1ConfigMap() # V1ConfigMap | 
+    v1_config_map = kubernetes_asyncio_pydantic.V1ConfigMap() # V1ConfigMap | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14534,25 +14534,25 @@ replace the specified Endpoints
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_endpoints import V1Endpoints
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_endpoints import V1Endpoints
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Endpoints
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_endpoints = kubernetes_asyncio.V1Endpoints() # V1Endpoints | 
+    v1_endpoints = kubernetes_asyncio_pydantic.V1Endpoints() # V1Endpoints | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14613,25 +14613,25 @@ replace the specified Event
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_event import V1Event
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_event import V1Event
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Event
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_event = kubernetes_asyncio.V1Event() # V1Event | 
+    v1_event = kubernetes_asyncio_pydantic.V1Event() # V1Event | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14692,25 +14692,25 @@ replace the specified LimitRange
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_limit_range import V1LimitRange
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_limit_range import V1LimitRange
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the LimitRange
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_limit_range = kubernetes_asyncio.V1LimitRange() # V1LimitRange | 
+    v1_limit_range = kubernetes_asyncio_pydantic.V1LimitRange() # V1LimitRange | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14771,25 +14771,25 @@ replace the specified PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_persistent_volume_claim = kubernetes_asyncio.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
+    v1_persistent_volume_claim = kubernetes_asyncio_pydantic.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14850,25 +14850,25 @@ replace status of the specified PersistentVolumeClaim
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolumeClaim
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_persistent_volume_claim = kubernetes_asyncio.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
+    v1_persistent_volume_claim = kubernetes_asyncio_pydantic.V1PersistentVolumeClaim() # V1PersistentVolumeClaim | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -14929,25 +14929,25 @@ replace the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod = kubernetes_asyncio.V1Pod() # V1Pod | 
+    v1_pod = kubernetes_asyncio_pydantic.V1Pod() # V1Pod | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15008,25 +15008,25 @@ replace ephemeralcontainers of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod = kubernetes_asyncio.V1Pod() # V1Pod | 
+    v1_pod = kubernetes_asyncio_pydantic.V1Pod() # V1Pod | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15087,25 +15087,25 @@ replace resize of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod = kubernetes_asyncio.V1Pod() # V1Pod | 
+    v1_pod = kubernetes_asyncio_pydantic.V1Pod() # V1Pod | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15166,25 +15166,25 @@ replace status of the specified Pod
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod import V1Pod
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod import V1Pod
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Pod
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod = kubernetes_asyncio.V1Pod() # V1Pod | 
+    v1_pod = kubernetes_asyncio_pydantic.V1Pod() # V1Pod | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15245,25 +15245,25 @@ replace the specified PodTemplate
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_pod_template import V1PodTemplate
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_pod_template import V1PodTemplate
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PodTemplate
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_pod_template = kubernetes_asyncio.V1PodTemplate() # V1PodTemplate | 
+    v1_pod_template = kubernetes_asyncio_pydantic.V1PodTemplate() # V1PodTemplate | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15324,25 +15324,25 @@ replace the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_replication_controller = kubernetes_asyncio.V1ReplicationController() # V1ReplicationController | 
+    v1_replication_controller = kubernetes_asyncio_pydantic.V1ReplicationController() # V1ReplicationController | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15403,25 +15403,25 @@ replace scale of the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_scale import V1Scale
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_scale import V1Scale
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Scale
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_scale = kubernetes_asyncio.V1Scale() # V1Scale | 
+    v1_scale = kubernetes_asyncio_pydantic.V1Scale() # V1Scale | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15482,25 +15482,25 @@ replace status of the specified ReplicationController
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_replication_controller import V1ReplicationController
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_replication_controller import V1ReplicationController
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ReplicationController
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_replication_controller = kubernetes_asyncio.V1ReplicationController() # V1ReplicationController | 
+    v1_replication_controller = kubernetes_asyncio_pydantic.V1ReplicationController() # V1ReplicationController | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15561,25 +15561,25 @@ replace the specified ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_resource_quota = kubernetes_asyncio.V1ResourceQuota() # V1ResourceQuota | 
+    v1_resource_quota = kubernetes_asyncio_pydantic.V1ResourceQuota() # V1ResourceQuota | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15640,25 +15640,25 @@ replace status of the specified ResourceQuota
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ResourceQuota
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_resource_quota = kubernetes_asyncio.V1ResourceQuota() # V1ResourceQuota | 
+    v1_resource_quota = kubernetes_asyncio_pydantic.V1ResourceQuota() # V1ResourceQuota | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15719,25 +15719,25 @@ replace the specified Secret
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_secret import V1Secret
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_secret import V1Secret
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Secret
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_secret = kubernetes_asyncio.V1Secret() # V1Secret | 
+    v1_secret = kubernetes_asyncio_pydantic.V1Secret() # V1Secret | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15798,25 +15798,25 @@ replace the specified Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_service = kubernetes_asyncio.V1Service() # V1Service | 
+    v1_service = kubernetes_asyncio_pydantic.V1Service() # V1Service | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15877,25 +15877,25 @@ replace the specified ServiceAccount
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service_account import V1ServiceAccount
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service_account import V1ServiceAccount
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the ServiceAccount
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_service_account = kubernetes_asyncio.V1ServiceAccount() # V1ServiceAccount | 
+    v1_service_account = kubernetes_asyncio_pydantic.V1ServiceAccount() # V1ServiceAccount | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -15956,25 +15956,25 @@ replace status of the specified Service
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_service import V1Service
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Service
     namespace = 'namespace_example' # str | object name and auth scope, such as for teams and projects
-    v1_service = kubernetes_asyncio.V1Service() # V1Service | 
+    v1_service = kubernetes_asyncio_pydantic.V1Service() # V1Service | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -16035,24 +16035,24 @@ replace the specified Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
-    v1_node = kubernetes_asyncio.V1Node() # V1Node | 
+    v1_node = kubernetes_asyncio_pydantic.V1Node() # V1Node | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -16112,24 +16112,24 @@ replace status of the specified Node
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_node import V1Node
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the Node
-    v1_node = kubernetes_asyncio.V1Node() # V1Node | 
+    v1_node = kubernetes_asyncio_pydantic.V1Node() # V1Node | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -16189,24 +16189,24 @@ replace the specified PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
-    v1_persistent_volume = kubernetes_asyncio.V1PersistentVolume() # V1PersistentVolume | 
+    v1_persistent_volume = kubernetes_asyncio_pydantic.V1PersistentVolume() # V1PersistentVolume | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)
@@ -16266,24 +16266,24 @@ replace status of the specified PersistentVolume
 
 
 ```python
-import kubernetes_asyncio
-from kubernetes_asyncio.models.v1_persistent_volume import V1PersistentVolume
-from kubernetes_asyncio.rest import ApiException
+import kubernetes_asyncio_pydantic
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume import V1PersistentVolume
+from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost:8080
 # See configuration.py for a list of all supported configuration parameters.
-configuration = kubernetes_asyncio.Configuration(
+configuration = kubernetes_asyncio_pydantic.Configuration(
     host = "http://localhost:8080"
 )
 
 
 # Enter a context with an instance of the API client
-async with kubernetes_asyncio.ApiClient(configuration) as api_client:
+async with kubernetes_asyncio_pydantic.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = kubernetes_asyncio.CoreV1Api(api_client)
+    api_instance = kubernetes_asyncio_pydantic.CoreV1Api(api_client)
     name = 'name_example' # str | name of the PersistentVolume
-    v1_persistent_volume = kubernetes_asyncio.V1PersistentVolume() # V1PersistentVolume | 
+    v1_persistent_volume = kubernetes_asyncio_pydantic.V1PersistentVolume() # V1PersistentVolume | 
     pretty = 'pretty_example' # str | If 'true', then the output is pretty printed. Defaults to 'false' unless the user-agent indicates a browser or command-line HTTP tool (curl and wget). (optional)
     dry_run = 'dry_run_example' # str | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed (optional)
     field_manager = 'field_manager_example' # str | fieldManager is a name associated with the actor or entity that is making these changes. The value must be less than or 128 characters long, and only contain printable characters, as defined by https://golang.org/pkg/unicode/#IsPrint. (optional)

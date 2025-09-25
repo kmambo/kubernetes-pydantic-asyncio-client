@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_service import V1Service
+from kubernetes_asyncio_pydantic.models.v1_service import V1Service
 
 class TestV1Service(unittest.TestCase):
     """V1Service unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Service(unittest.TestCase):
             return V1Service(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Service(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/service_spec.v1.ServiceSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/service_spec.v1.ServiceSpec(
                     allocate_load_balancer_node_ports = True, 
                     cluster_ip = '', 
                     cluster_ips = [
@@ -96,7 +96,7 @@ class TestV1Service(unittest.TestCase):
                     session_affinity_config = null, 
                     traffic_distribution = '', 
                     type = '', ),
-                status = kubernetes_asyncio.models.v1/service_status.v1.ServiceStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/service_status.v1.ServiceStatus(
                     conditions = [
                         null
                         ], 

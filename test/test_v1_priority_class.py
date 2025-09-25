@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_priority_class import V1PriorityClass
+from kubernetes_asyncio_pydantic.models.v1_priority_class import V1PriorityClass
 
 class TestV1PriorityClass(unittest.TestCase):
     """V1PriorityClass unit test stubs"""
@@ -39,7 +39,7 @@ class TestV1PriorityClass(unittest.TestCase):
                 description = '',
                 global_default = True,
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

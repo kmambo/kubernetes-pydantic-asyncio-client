@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_photon_persistent_disk_volume_source import V1PhotonPersistentDiskVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_photon_persistent_disk_volume_source import V1PhotonPersistentDiskVolumeSource
 
 class TestV1PhotonPersistentDiskVolumeSource(unittest.TestCase):
     """V1PhotonPersistentDiskVolumeSource unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_definition_status import V1CustomResourceDefinitionStatus
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_definition_status import V1CustomResourceDefinitionStatus
 
 class TestV1CustomResourceDefinitionStatus(unittest.TestCase):
     """V1CustomResourceDefinitionStatus unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1CustomResourceDefinitionStatus(unittest.TestCase):
         model = V1CustomResourceDefinitionStatus()
         if include_optional:
             return V1CustomResourceDefinitionStatus(
-                accepted_names = kubernetes_asyncio.models.v1/custom_resource_definition_names.v1.CustomResourceDefinitionNames(
+                accepted_names = kubernetes_asyncio_pydantic.models.v1/custom_resource_definition_names.v1.CustomResourceDefinitionNames(
                     categories = [
                         ''
                         ], 

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_ingress_class_parameters_reference import V1IngressClassParametersReference
+from kubernetes_asyncio_pydantic.models.v1_ingress_class_parameters_reference import V1IngressClassParametersReference
 
 # TODO update the JSON string below
 json = "{}"

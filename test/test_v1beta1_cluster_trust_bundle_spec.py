@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_cluster_trust_bundle_spec import V1beta1ClusterTrustBundleSpec
+from kubernetes_asyncio_pydantic.models.v1beta1_cluster_trust_bundle_spec import V1beta1ClusterTrustBundleSpec
 
 class TestV1beta1ClusterTrustBundleSpec(unittest.TestCase):
     """V1beta1ClusterTrustBundleSpec unit test stubs"""

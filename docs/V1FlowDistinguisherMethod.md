@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_flow_distinguisher_method import V1FlowDistinguisherMethod
+from kubernetes_asyncio_pydantic.models.v1_flow_distinguisher_method import V1FlowDistinguisherMethod
 
 # TODO update the JSON string below
 json = "{}"

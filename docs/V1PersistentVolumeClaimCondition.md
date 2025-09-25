@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_persistent_volume_claim_condition import V1PersistentVolumeClaimCondition
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim_condition import V1PersistentVolumeClaimCondition
 
 # TODO update the JSON string below
 json = "{}"

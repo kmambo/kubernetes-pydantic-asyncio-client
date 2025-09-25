@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flow_schema import V1FlowSchema
+from kubernetes_asyncio_pydantic.models.v1_flow_schema import V1FlowSchema
 
 class TestV1FlowSchema(unittest.TestCase):
     """V1FlowSchema unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1FlowSchema(unittest.TestCase):
             return V1FlowSchema(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,14 +63,14 @@ class TestV1FlowSchema(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/flow_schema_spec.v1.FlowSchemaSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/flow_schema_spec.v1.FlowSchemaSpec(
                     distinguisher_method = null, 
                     matching_precedence = 56, 
                     priority_level_configuration = null, 
                     rules = [
                         null
                         ], ),
-                status = kubernetes_asyncio.models.v1/flow_schema_status.v1.FlowSchemaStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/flow_schema_status.v1.FlowSchemaStatus(
                     conditions = [
                         null
                         ], )

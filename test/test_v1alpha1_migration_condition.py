@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_migration_condition import V1alpha1MigrationCondition
+from kubernetes_asyncio_pydantic.models.v1alpha1_migration_condition import V1alpha1MigrationCondition
 
 class TestV1alpha1MigrationCondition(unittest.TestCase):
     """V1alpha1MigrationCondition unit test stubs"""

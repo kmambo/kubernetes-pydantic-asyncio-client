@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_limit_range_spec import V1LimitRangeSpec
+from kubernetes_asyncio_pydantic.models.v1_limit_range_spec import V1LimitRangeSpec
 
 class TestV1LimitRangeSpec(unittest.TestCase):
     """V1LimitRangeSpec unit test stubs"""

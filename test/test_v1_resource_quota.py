@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_quota import V1ResourceQuota
+from kubernetes_asyncio_pydantic.models.v1_resource_quota import V1ResourceQuota
 
 class TestV1ResourceQuota(unittest.TestCase):
     """V1ResourceQuota unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1ResourceQuota(unittest.TestCase):
             return V1ResourceQuota(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,20 +63,20 @@ class TestV1ResourceQuota(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/resource_quota_spec.v1.ResourceQuotaSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/resource_quota_spec.v1.ResourceQuotaSpec(
                     hard = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     scope_selector = null, 
                     scopes = [
                         ''
                         ], ),
-                status = kubernetes_asyncio.models.v1/resource_quota_status.v1.ResourceQuotaStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/resource_quota_status.v1.ResourceQuotaStatus(
                     hard = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     used = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, )
             )
         else:

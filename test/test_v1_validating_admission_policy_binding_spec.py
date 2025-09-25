@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_validating_admission_policy_binding_spec import V1ValidatingAdmissionPolicyBindingSpec
+from kubernetes_asyncio_pydantic.models.v1_validating_admission_policy_binding_spec import V1ValidatingAdmissionPolicyBindingSpec
 
 class TestV1ValidatingAdmissionPolicyBindingSpec(unittest.TestCase):
     """V1ValidatingAdmissionPolicyBindingSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1ValidatingAdmissionPolicyBindingSpec(unittest.TestCase):
         model = V1ValidatingAdmissionPolicyBindingSpec()
         if include_optional:
             return V1ValidatingAdmissionPolicyBindingSpec(
-                match_resources = kubernetes_asyncio.models.v1/match_resources.v1.MatchResources(
+                match_resources = kubernetes_asyncio_pydantic.models.v1/match_resources.v1.MatchResources(
                     exclude_resource_rules = [
                         null
                         ], 
@@ -45,7 +45,7 @@ class TestV1ValidatingAdmissionPolicyBindingSpec(unittest.TestCase):
                     resource_rules = [
                         null
                         ], ),
-                param_ref = kubernetes_asyncio.models.v1/param_ref.v1.ParamRef(
+                param_ref = kubernetes_asyncio_pydantic.models.v1/param_ref.v1.ParamRef(
                     name = '', 
                     namespace = '', 
                     parameter_not_found_action = '', 

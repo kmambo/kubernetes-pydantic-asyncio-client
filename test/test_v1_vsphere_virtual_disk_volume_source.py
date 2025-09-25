@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_vsphere_virtual_disk_volume_source import V1VsphereVirtualDiskVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_vsphere_virtual_disk_volume_source import V1VsphereVirtualDiskVolumeSource
 
 class TestV1VsphereVirtualDiskVolumeSource(unittest.TestCase):
     """V1VsphereVirtualDiskVolumeSource unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.version_info import VersionInfo
+from kubernetes_asyncio_pydantic.models.version_info import VersionInfo
 
 class TestVersionInfo(unittest.TestCase):
     """VersionInfo unit test stubs"""

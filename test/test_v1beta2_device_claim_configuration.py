@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device_claim_configuration import V1beta2DeviceClaimConfiguration
+from kubernetes_asyncio_pydantic.models.v1beta2_device_claim_configuration import V1beta2DeviceClaimConfiguration
 
 class TestV1beta2DeviceClaimConfiguration(unittest.TestCase):
     """V1beta2DeviceClaimConfiguration unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta2DeviceClaimConfiguration(unittest.TestCase):
         model = V1beta2DeviceClaimConfiguration()
         if include_optional:
             return V1beta2DeviceClaimConfiguration(
-                opaque = kubernetes_asyncio.models.v1beta2/opaque_device_configuration.v1beta2.OpaqueDeviceConfiguration(
+                opaque = kubernetes_asyncio_pydantic.models.v1beta2/opaque_device_configuration.v1beta2.OpaqueDeviceConfiguration(
                     driver = '', 
                     parameters = null, ),
                 requests = [

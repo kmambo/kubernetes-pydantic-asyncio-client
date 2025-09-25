@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_gce_persistent_disk_volume_source import V1GCEPersistentDiskVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_gce_persistent_disk_volume_source import V1GCEPersistentDiskVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_status import V1ContainerStatus
+from kubernetes_asyncio_pydantic.models.v1_container_status import V1ContainerStatus
 
 class TestV1ContainerStatus(unittest.TestCase):
     """V1ContainerStatus unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1ContainerStatus(unittest.TestCase):
         if include_optional:
             return V1ContainerStatus(
                 allocated_resources = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 allocated_resources_status = [
                     null
@@ -44,30 +44,30 @@ class TestV1ContainerStatus(unittest.TestCase):
                 container_id = '',
                 image = '',
                 image_id = '',
-                last_state = kubernetes_asyncio.models.v1/container_state.v1.ContainerState(
+                last_state = kubernetes_asyncio_pydantic.models.v1/container_state.v1.ContainerState(
                     running = null, 
                     terminated = null, 
                     waiting = null, ),
                 name = '',
                 ready = True,
-                resources = kubernetes_asyncio.models.v1/resource_requirements.v1.ResourceRequirements(
+                resources = kubernetes_asyncio_pydantic.models.v1/resource_requirements.v1.ResourceRequirements(
                     claims = [
                         null
                         ], 
                     limits = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     requests = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 restart_count = 56,
                 started = True,
-                state = kubernetes_asyncio.models.v1/container_state.v1.ContainerState(
+                state = kubernetes_asyncio_pydantic.models.v1/container_state.v1.ContainerState(
                     running = null, 
                     terminated = null, 
                     waiting = null, ),
                 stop_signal = '',
-                user = kubernetes_asyncio.models.v1/container_user.v1.ContainerUser(
+                user = kubernetes_asyncio_pydantic.models.v1/container_user.v1.ContainerUser(
                     linux = null, ),
                 volume_mounts = [
                     null

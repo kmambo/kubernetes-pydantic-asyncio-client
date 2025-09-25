@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device_constraint import V1beta2DeviceConstraint
+from kubernetes_asyncio_pydantic.models.v1beta2_device_constraint import V1beta2DeviceConstraint
 
 class TestV1beta2DeviceConstraint(unittest.TestCase):
     """V1beta2DeviceConstraint unit test stubs"""

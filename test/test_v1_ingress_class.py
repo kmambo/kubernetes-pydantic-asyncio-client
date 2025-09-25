@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_class import V1IngressClass
+from kubernetes_asyncio_pydantic.models.v1_ingress_class import V1IngressClass
 
 class TestV1IngressClass(unittest.TestCase):
     """V1IngressClass unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1IngressClass(unittest.TestCase):
             return V1IngressClass(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1IngressClass(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/ingress_class_spec.v1.IngressClassSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/ingress_class_spec.v1.IngressClassSpec(
                     controller = '', 
                     parameters = null, )
             )

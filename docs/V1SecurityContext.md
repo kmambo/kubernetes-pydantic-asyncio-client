@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_security_context import V1SecurityContext
+from kubernetes_asyncio_pydantic.models.v1_security_context import V1SecurityContext
 
 # TODO update the JSON string below
 json = "{}"

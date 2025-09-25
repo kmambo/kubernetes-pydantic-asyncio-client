@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta2_opaque_device_configuration import V1beta2OpaqueDeviceConfiguration
+from kubernetes_asyncio_pydantic.models.v1beta2_opaque_device_configuration import V1beta2OpaqueDeviceConfiguration
 
 # TODO update the JSON string below
 json = "{}"

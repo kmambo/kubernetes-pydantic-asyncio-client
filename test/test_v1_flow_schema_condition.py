@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flow_schema_condition import V1FlowSchemaCondition
+from kubernetes_asyncio_pydantic.models.v1_flow_schema_condition import V1FlowSchemaCondition
 
 class TestV1FlowSchemaCondition(unittest.TestCase):
     """V1FlowSchemaCondition unit test stubs"""

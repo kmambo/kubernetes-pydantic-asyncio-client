@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_capabilities import V1Capabilities
+from kubernetes_asyncio_pydantic.models.v1_capabilities import V1Capabilities
 
 class TestV1Capabilities(unittest.TestCase):
     """V1Capabilities unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_container_resize_policy import V1ContainerResizePolicy
+from kubernetes_asyncio_pydantic.models.v1_container_resize_policy import V1ContainerResizePolicy
 
 # TODO update the JSON string below
 json = "{}"

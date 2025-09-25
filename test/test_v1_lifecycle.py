@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_lifecycle import V1Lifecycle
+from kubernetes_asyncio_pydantic.models.v1_lifecycle import V1Lifecycle
 
 class TestV1Lifecycle(unittest.TestCase):
     """V1Lifecycle unit test stubs"""
@@ -35,12 +35,12 @@ class TestV1Lifecycle(unittest.TestCase):
         model = V1Lifecycle()
         if include_optional:
             return V1Lifecycle(
-                post_start = kubernetes_asyncio.models.v1/lifecycle_handler.v1.LifecycleHandler(
+                post_start = kubernetes_asyncio_pydantic.models.v1/lifecycle_handler.v1.LifecycleHandler(
                     exec = null, 
                     http_get = null, 
                     sleep = null, 
                     tcp_socket = null, ),
-                pre_stop = kubernetes_asyncio.models.v1/lifecycle_handler.v1.LifecycleHandler(
+                pre_stop = kubernetes_asyncio_pydantic.models.v1/lifecycle_handler.v1.LifecycleHandler(
                     exec = null, 
                     http_get = null, 
                     sleep = null, 

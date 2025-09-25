@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_key_to_path import V1KeyToPath
+from kubernetes_asyncio_pydantic.models.v1_key_to_path import V1KeyToPath
 
 class TestV1KeyToPath(unittest.TestCase):
     """V1KeyToPath unit test stubs"""

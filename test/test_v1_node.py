@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node import V1Node
+from kubernetes_asyncio_pydantic.models.v1_node import V1Node
 
 class TestV1Node(unittest.TestCase):
     """V1Node unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Node(unittest.TestCase):
             return V1Node(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1Node(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/node_spec.v1.NodeSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/node_spec.v1.NodeSpec(
                     config_source = null, 
                     external_id = '', 
                     pod_cidr = '', 
@@ -75,15 +75,15 @@ class TestV1Node(unittest.TestCase):
                         null
                         ], 
                     unschedulable = True, ),
-                status = kubernetes_asyncio.models.v1/node_status.v1.NodeStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/node_status.v1.NodeStatus(
                     addresses = [
                         null
                         ], 
                     allocatable = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     capacity = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     conditions = [
                         null

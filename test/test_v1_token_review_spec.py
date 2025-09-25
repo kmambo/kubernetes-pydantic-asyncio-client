@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_review_spec import V1TokenReviewSpec
+from kubernetes_asyncio_pydantic.models.v1_token_review_spec import V1TokenReviewSpec
 
 class TestV1TokenReviewSpec(unittest.TestCase):
     """V1TokenReviewSpec unit test stubs"""

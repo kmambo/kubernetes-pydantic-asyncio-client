@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_http_get_action import V1HTTPGetAction
+from kubernetes_asyncio_pydantic.models.v1_http_get_action import V1HTTPGetAction
 
 class TestV1HTTPGetAction(unittest.TestCase):
     """V1HTTPGetAction unit test stubs"""

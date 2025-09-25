@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_azure_file_persistent_volume_source import V1AzureFilePersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_azure_file_persistent_volume_source import V1AzureFilePersistentVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

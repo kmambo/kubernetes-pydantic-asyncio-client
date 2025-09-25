@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ceph_fs_persistent_volume_source import V1CephFSPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_ceph_fs_persistent_volume_source import V1CephFSPersistentVolumeSource
 
 class TestV1CephFSPersistentVolumeSource(unittest.TestCase):
     """V1CephFSPersistentVolumeSource unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1CephFSPersistentVolumeSource(unittest.TestCase):
                 path = '',
                 read_only = True,
                 secret_file = '',
-                secret_ref = kubernetes_asyncio.models.v1/secret_reference.v1.SecretReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/secret_reference.v1.SecretReference(
                     name = '', 
                     namespace = '', ),
                 user = ''

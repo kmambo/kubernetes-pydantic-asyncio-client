@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_for_node import V1ForNode
+from kubernetes_asyncio_pydantic.models.v1_for_node import V1ForNode
 
 class TestV1ForNode(unittest.TestCase):
     """V1ForNode unit test stubs"""

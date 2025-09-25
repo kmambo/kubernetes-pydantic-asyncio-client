@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_status_cause import V1StatusCause
+from kubernetes_asyncio_pydantic.models.v1_status_cause import V1StatusCause
 
 class TestV1StatusCause(unittest.TestCase):
     """V1StatusCause unit test stubs"""

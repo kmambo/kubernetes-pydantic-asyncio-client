@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_stateful_set_spec import V1StatefulSetSpec
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_spec import V1StatefulSetSpec
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.flowcontrol_apiserver_v1_api import FlowcontrolApiserverV1Api
+from kubernetes_asyncio_pydantic.api.flowcontrol_apiserver_v1_api import FlowcontrolApiserverV1Api
 
 
 class TestFlowcontrolApiserverV1Api(unittest.IsolatedAsyncioTestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_restart_rule import V1ContainerRestartRule
+from kubernetes_asyncio_pydantic.models.v1_container_restart_rule import V1ContainerRestartRule
 
 class TestV1ContainerRestartRule(unittest.TestCase):
     """V1ContainerRestartRule unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1ContainerRestartRule(unittest.TestCase):
         if include_optional:
             return V1ContainerRestartRule(
                 action = '',
-                exit_codes = kubernetes_asyncio.models.v1/container_restart_rule_on_exit_codes.v1.ContainerRestartRuleOnExitCodes(
+                exit_codes = kubernetes_asyncio_pydantic.models.v1/container_restart_rule_on_exit_codes.v1.ContainerRestartRuleOnExitCodes(
                     operator = '', 
                     values = [
                         56

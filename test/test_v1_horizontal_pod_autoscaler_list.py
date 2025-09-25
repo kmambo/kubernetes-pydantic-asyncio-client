@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_horizontal_pod_autoscaler_list import V1HorizontalPodAutoscalerList
+from kubernetes_asyncio_pydantic.models.v1_horizontal_pod_autoscaler_list import V1HorizontalPodAutoscalerList
 
 class TestV1HorizontalPodAutoscalerList(unittest.TestCase):
     """V1HorizontalPodAutoscalerList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1HorizontalPodAutoscalerList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

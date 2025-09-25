@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_system_info import V1NodeSystemInfo
+from kubernetes_asyncio_pydantic.models.v1_node_system_info import V1NodeSystemInfo
 
 class TestV1NodeSystemInfo(unittest.TestCase):
     """V1NodeSystemInfo unit test stubs"""
@@ -44,7 +44,7 @@ class TestV1NodeSystemInfo(unittest.TestCase):
                 machine_id = '',
                 operating_system = '',
                 os_image = '',
-                swap = kubernetes_asyncio.models.v1/node_swap_status.v1.NodeSwapStatus(
+                swap = kubernetes_asyncio_pydantic.models.v1/node_swap_status.v1.NodeSwapStatus(
                     capacity = 56, ),
                 system_uuid = ''
             )

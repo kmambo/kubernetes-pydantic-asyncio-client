@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_modify_volume_status import V1ModifyVolumeStatus
+from kubernetes_asyncio_pydantic.models.v1_modify_volume_status import V1ModifyVolumeStatus
 
 class TestV1ModifyVolumeStatus(unittest.TestCase):
     """V1ModifyVolumeStatus unit test stubs"""

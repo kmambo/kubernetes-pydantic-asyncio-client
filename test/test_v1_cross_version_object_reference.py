@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cross_version_object_reference import V1CrossVersionObjectReference
+from kubernetes_asyncio_pydantic.models.v1_cross_version_object_reference import V1CrossVersionObjectReference
 
 class TestV1CrossVersionObjectReference(unittest.TestCase):
     """V1CrossVersionObjectReference unit test stubs"""

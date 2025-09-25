@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_cluster_trust_bundle import V1beta1ClusterTrustBundle
+from kubernetes_asyncio_pydantic.models.v1beta1_cluster_trust_bundle import V1beta1ClusterTrustBundle
 
 class TestV1beta1ClusterTrustBundle(unittest.TestCase):
     """V1beta1ClusterTrustBundle unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1beta1ClusterTrustBundle(unittest.TestCase):
             return V1beta1ClusterTrustBundle(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,13 +63,13 @@ class TestV1beta1ClusterTrustBundle(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1beta1/cluster_trust_bundle_spec.v1beta1.ClusterTrustBundleSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1beta1/cluster_trust_bundle_spec.v1beta1.ClusterTrustBundleSpec(
                     signer_name = '', 
                     trust_bundle = '', )
             )
         else:
             return V1beta1ClusterTrustBundle(
-                spec = kubernetes_asyncio.models.v1beta1/cluster_trust_bundle_spec.v1beta1.ClusterTrustBundleSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1beta1/cluster_trust_bundle_spec.v1beta1.ClusterTrustBundleSpec(
                     signer_name = '', 
                     trust_bundle = '', ),
         )

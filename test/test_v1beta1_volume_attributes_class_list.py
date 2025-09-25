@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_volume_attributes_class_list import V1beta1VolumeAttributesClassList
+from kubernetes_asyncio_pydantic.models.v1beta1_volume_attributes_class_list import V1beta1VolumeAttributesClassList
 
 class TestV1beta1VolumeAttributesClassList(unittest.TestCase):
     """V1beta1VolumeAttributesClassList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1beta1VolumeAttributesClassList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

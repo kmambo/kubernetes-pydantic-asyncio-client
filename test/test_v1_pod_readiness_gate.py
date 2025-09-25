@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_readiness_gate import V1PodReadinessGate
+from kubernetes_asyncio_pydantic.models.v1_pod_readiness_gate import V1PodReadinessGate
 
 class TestV1PodReadinessGate(unittest.TestCase):
     """V1PodReadinessGate unit test stubs"""

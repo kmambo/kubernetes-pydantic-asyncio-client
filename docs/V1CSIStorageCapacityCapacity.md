@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_csi_storage_capacity_capacity import V1CSIStorageCapacityCapacity
+from kubernetes_asyncio_pydantic.models.v1_csi_storage_capacity_capacity import V1CSIStorageCapacityCapacity
 
 # TODO update the JSON string below
 json = "{}"

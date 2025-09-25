@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_limit_response import V1LimitResponse
+from kubernetes_asyncio_pydantic.models.v1_limit_response import V1LimitResponse
 
 # TODO update the JSON string below
 json = "{}"

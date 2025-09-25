@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_subject_access_review_spec import V1SubjectAccessReviewSpec
+from kubernetes_asyncio_pydantic.models.v1_subject_access_review_spec import V1SubjectAccessReviewSpec
 
 class TestV1SubjectAccessReviewSpec(unittest.TestCase):
     """V1SubjectAccessReviewSpec unit test stubs"""
@@ -43,10 +43,10 @@ class TestV1SubjectAccessReviewSpec(unittest.TestCase):
                 groups = [
                     ''
                     ],
-                non_resource_attributes = kubernetes_asyncio.models.v1/non_resource_attributes.v1.NonResourceAttributes(
+                non_resource_attributes = kubernetes_asyncio_pydantic.models.v1/non_resource_attributes.v1.NonResourceAttributes(
                     path = '', 
                     verb = '', ),
-                resource_attributes = kubernetes_asyncio.models.v1/resource_attributes.v1.ResourceAttributes(
+                resource_attributes = kubernetes_asyncio_pydantic.models.v1/resource_attributes.v1.ResourceAttributes(
                     field_selector = null, 
                     group = '', 
                     label_selector = null, 

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_csi_persistent_volume_source import V1CSIPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_csi_persistent_volume_source import V1CSIPersistentVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

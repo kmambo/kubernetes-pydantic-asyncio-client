@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_storage_os_persistent_volume_source import V1StorageOSPersistentVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_storage_os_persistent_volume_source import V1StorageOSPersistentVolumeSource
 
 class TestV1StorageOSPersistentVolumeSource(unittest.TestCase):
     """V1StorageOSPersistentVolumeSource unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1StorageOSPersistentVolumeSource(unittest.TestCase):
             return V1StorageOSPersistentVolumeSource(
                 fs_type = '',
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/object_reference.v1.ObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/object_reference.v1.ObjectReference(
                     api_version = '', 
                     field_path = '', 
                     kind = '', 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v2_cross_version_object_reference import V2CrossVersionObjectReference
+from kubernetes_asyncio_pydantic.models.v2_cross_version_object_reference import V2CrossVersionObjectReference
 
 # TODO update the JSON string below
 json = "{}"

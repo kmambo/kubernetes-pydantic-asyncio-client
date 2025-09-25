@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_device_class import V1beta1DeviceClass
+from kubernetes_asyncio_pydantic.models.v1beta1_device_class import V1beta1DeviceClass
 
 class TestV1beta1DeviceClass(unittest.TestCase):
     """V1beta1DeviceClass unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1beta1DeviceClass(unittest.TestCase):
             return V1beta1DeviceClass(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1beta1DeviceClass(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1beta1/device_class_spec.v1beta1.DeviceClassSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1beta1/device_class_spec.v1beta1.DeviceClassSpec(
                     config = [
                         null
                         ], 
@@ -74,7 +74,7 @@ class TestV1beta1DeviceClass(unittest.TestCase):
             )
         else:
             return V1beta1DeviceClass(
-                spec = kubernetes_asyncio.models.v1beta1/device_class_spec.v1beta1.DeviceClassSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1beta1/device_class_spec.v1beta1.DeviceClassSpec(
                     config = [
                         null
                         ], 

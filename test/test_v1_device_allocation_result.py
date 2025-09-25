@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_device_allocation_result import V1DeviceAllocationResult
+from kubernetes_asyncio_pydantic.models.v1_device_allocation_result import V1DeviceAllocationResult
 
 class TestV1DeviceAllocationResult(unittest.TestCase):
     """V1DeviceAllocationResult unit test stubs"""

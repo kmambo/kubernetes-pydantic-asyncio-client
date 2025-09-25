@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ephemeral_volume_source import V1EphemeralVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_ephemeral_volume_source import V1EphemeralVolumeSource
 
 class TestV1EphemeralVolumeSource(unittest.TestCase):
     """V1EphemeralVolumeSource unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1EphemeralVolumeSource(unittest.TestCase):
         model = V1EphemeralVolumeSource()
         if include_optional:
             return V1EphemeralVolumeSource(
-                volume_claim_template = kubernetes_asyncio.models.v1/persistent_volume_claim_template.v1.PersistentVolumeClaimTemplate(
+                volume_claim_template = kubernetes_asyncio_pydantic.models.v1/persistent_volume_claim_template.v1.PersistentVolumeClaimTemplate(
                     metadata = null, 
                     spec = null, )
             )

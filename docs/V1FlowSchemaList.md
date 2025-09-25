@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_flow_schema_list import V1FlowSchemaList
+from kubernetes_asyncio_pydantic.models.v1_flow_schema_list import V1FlowSchemaList
 
 # TODO update the JSON string below
 json = "{}"

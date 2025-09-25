@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_error import V1VolumeError
+from kubernetes_asyncio_pydantic.models.v1_volume_error import V1VolumeError
 
 class TestV1VolumeError(unittest.TestCase):
     """V1VolumeError unit test stubs"""

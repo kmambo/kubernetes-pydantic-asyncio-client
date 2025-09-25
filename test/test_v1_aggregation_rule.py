@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_aggregation_rule import V1AggregationRule
+from kubernetes_asyncio_pydantic.models.v1_aggregation_rule import V1AggregationRule
 
 class TestV1AggregationRule(unittest.TestCase):
     """V1AggregationRule unit test stubs"""

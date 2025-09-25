@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_namespace import V1Namespace
+from kubernetes_asyncio_pydantic.models.v1_namespace import V1Namespace
 
 class TestV1Namespace(unittest.TestCase):
     """V1Namespace unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1Namespace(unittest.TestCase):
             return V1Namespace(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,11 +63,11 @@ class TestV1Namespace(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/namespace_spec.v1.NamespaceSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/namespace_spec.v1.NamespaceSpec(
                     finalizers = [
                         ''
                         ], ),
-                status = kubernetes_asyncio.models.v1/namespace_status.v1.NamespaceStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/namespace_status.v1.NamespaceStatus(
                     conditions = [
                         null
                         ], 

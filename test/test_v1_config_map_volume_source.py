@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_config_map_volume_source import V1ConfigMapVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_config_map_volume_source import V1ConfigMapVolumeSource
 
 class TestV1ConfigMapVolumeSource(unittest.TestCase):
     """V1ConfigMapVolumeSource unit test stubs"""

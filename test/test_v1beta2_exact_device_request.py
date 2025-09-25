@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_exact_device_request import V1beta2ExactDeviceRequest
+from kubernetes_asyncio_pydantic.models.v1beta2_exact_device_request import V1beta2ExactDeviceRequest
 
 class TestV1beta2ExactDeviceRequest(unittest.TestCase):
     """V1beta2ExactDeviceRequest unit test stubs"""
@@ -37,9 +37,9 @@ class TestV1beta2ExactDeviceRequest(unittest.TestCase):
             return V1beta2ExactDeviceRequest(
                 admin_access = True,
                 allocation_mode = '',
-                capacity = kubernetes_asyncio.models.v1beta2/capacity_requirements.v1beta2.CapacityRequirements(
+                capacity = kubernetes_asyncio_pydantic.models.v1beta2/capacity_requirements.v1beta2.CapacityRequirements(
                     requests = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 count = 56,
                 device_class_name = '',

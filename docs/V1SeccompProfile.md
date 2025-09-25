@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_seccomp_profile import V1SeccompProfile
+from kubernetes_asyncio_pydantic.models.v1_seccomp_profile import V1SeccompProfile
 
 # TODO update the JSON string below
 json = "{}"

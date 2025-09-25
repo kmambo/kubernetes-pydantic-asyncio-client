@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_nfs_volume_source import V1NFSVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_nfs_volume_source import V1NFSVolumeSource
 
 class TestV1NFSVolumeSource(unittest.TestCase):
     """V1NFSVolumeSource unit test stubs"""

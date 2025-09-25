@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_horizontal_pod_autoscaler import V1HorizontalPodAutoscaler
+from kubernetes_asyncio_pydantic.models.v1_horizontal_pod_autoscaler import V1HorizontalPodAutoscaler
 
 class TestV1HorizontalPodAutoscaler(unittest.TestCase):
     """V1HorizontalPodAutoscaler unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1HorizontalPodAutoscaler(unittest.TestCase):
             return V1HorizontalPodAutoscaler(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,12 +63,12 @@ class TestV1HorizontalPodAutoscaler(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/horizontal_pod_autoscaler_spec.v1.HorizontalPodAutoscalerSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/horizontal_pod_autoscaler_spec.v1.HorizontalPodAutoscalerSpec(
                     max_replicas = 56, 
                     min_replicas = 56, 
                     scale_target_ref = null, 
                     target_cpu_utilization_percentage = 56, ),
-                status = kubernetes_asyncio.models.v1/horizontal_pod_autoscaler_status.v1.HorizontalPodAutoscalerStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/horizontal_pod_autoscaler_status.v1.HorizontalPodAutoscalerStatus(
                     current_cpu_utilization_percentage = 56, 
                     current_replicas = 56, 
                     desired_replicas = 56, 

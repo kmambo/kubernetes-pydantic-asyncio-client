@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_deployment_spec import V1DeploymentSpec
+from kubernetes_asyncio_pydantic.models.v1_deployment_spec import V1DeploymentSpec
 
 class TestV1DeploymentSpec(unittest.TestCase):
     """V1DeploymentSpec unit test stubs"""
@@ -40,30 +40,30 @@ class TestV1DeploymentSpec(unittest.TestCase):
                 progress_deadline_seconds = 56,
                 replicas = 56,
                 revision_history_limit = 56,
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                strategy = kubernetes_asyncio.models.v1/deployment_strategy.v1.DeploymentStrategy(
+                strategy = kubernetes_asyncio_pydantic.models.v1/deployment_strategy.v1.DeploymentStrategy(
                     rolling_update = null, 
                     type = '', ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, )
             )
         else:
             return V1DeploymentSpec(
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                template = kubernetes_asyncio.models.v1/pod_template_spec.v1.PodTemplateSpec(
+                template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),
         )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_subject_access_review_status import V1SubjectAccessReviewStatus
+from kubernetes_asyncio_pydantic.models.v1_subject_access_review_status import V1SubjectAccessReviewStatus
 
 class TestV1SubjectAccessReviewStatus(unittest.TestCase):
     """V1SubjectAccessReviewStatus unit test stubs"""

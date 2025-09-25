@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_se_linux_options import V1SELinuxOptions
+from kubernetes_asyncio_pydantic.models.v1_se_linux_options import V1SELinuxOptions
 
 class TestV1SELinuxOptions(unittest.TestCase):
     """V1SELinuxOptions unit test stubs"""

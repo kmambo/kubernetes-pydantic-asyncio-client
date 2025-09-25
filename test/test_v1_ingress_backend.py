@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_backend import V1IngressBackend
+from kubernetes_asyncio_pydantic.models.v1_ingress_backend import V1IngressBackend
 
 class TestV1IngressBackend(unittest.TestCase):
     """V1IngressBackend unit test stubs"""
@@ -35,11 +35,11 @@ class TestV1IngressBackend(unittest.TestCase):
         model = V1IngressBackend()
         if include_optional:
             return V1IngressBackend(
-                resource = kubernetes_asyncio.models.v1/typed_local_object_reference.v1.TypedLocalObjectReference(
+                resource = kubernetes_asyncio_pydantic.models.v1/typed_local_object_reference.v1.TypedLocalObjectReference(
                     api_group = '', 
                     kind = '', 
                     name = '', ),
-                service = kubernetes_asyncio.models.v1/ingress_service_backend.v1.IngressServiceBackend(
+                service = kubernetes_asyncio_pydantic.models.v1/ingress_service_backend.v1.IngressServiceBackend(
                     name = '', 
                     port = null, )
             )

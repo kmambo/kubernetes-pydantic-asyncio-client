@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_endpoint_port1 import V1EndpointPort1
+from kubernetes_asyncio_pydantic.models.v1_endpoint_port1 import V1EndpointPort1
 
 class TestV1EndpointPort1(unittest.TestCase):
     """V1EndpointPort1 unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device_request_allocation_result import V1beta2DeviceRequestAllocationResult
+from kubernetes_asyncio_pydantic.models.v1beta2_device_request_allocation_result import V1beta2DeviceRequestAllocationResult
 
 class TestV1beta2DeviceRequestAllocationResult(unittest.TestCase):
     """V1beta2DeviceRequestAllocationResult unit test stubs"""
@@ -43,7 +43,7 @@ class TestV1beta2DeviceRequestAllocationResult(unittest.TestCase):
                     ''
                     ],
                 consumed_capacity = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
                 device = '',
                 driver = '',

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_definition_spec import V1CustomResourceDefinitionSpec
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_definition_spec import V1CustomResourceDefinitionSpec
 
 class TestV1CustomResourceDefinitionSpec(unittest.TestCase):
     """V1CustomResourceDefinitionSpec unit test stubs"""
@@ -35,11 +35,11 @@ class TestV1CustomResourceDefinitionSpec(unittest.TestCase):
         model = V1CustomResourceDefinitionSpec()
         if include_optional:
             return V1CustomResourceDefinitionSpec(
-                conversion = kubernetes_asyncio.models.v1/custom_resource_conversion.v1.CustomResourceConversion(
+                conversion = kubernetes_asyncio_pydantic.models.v1/custom_resource_conversion.v1.CustomResourceConversion(
                     strategy = '', 
                     webhook = null, ),
                 group = '',
-                names = kubernetes_asyncio.models.v1/custom_resource_definition_names.v1.CustomResourceDefinitionNames(
+                names = kubernetes_asyncio_pydantic.models.v1/custom_resource_definition_names.v1.CustomResourceDefinitionNames(
                     categories = [
                         ''
                         ], 
@@ -59,7 +59,7 @@ class TestV1CustomResourceDefinitionSpec(unittest.TestCase):
         else:
             return V1CustomResourceDefinitionSpec(
                 group = '',
-                names = kubernetes_asyncio.models.v1/custom_resource_definition_names.v1.CustomResourceDefinitionNames(
+                names = kubernetes_asyncio_pydantic.models.v1/custom_resource_definition_names.v1.CustomResourceDefinitionNames(
                     categories = [
                         ''
                         ], 

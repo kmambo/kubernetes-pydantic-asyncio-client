@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
+from kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value import V1PodSpecOverheadValue
 
 class TestV1PodSpecOverheadValue(unittest.TestCase):
     """V1PodSpecOverheadValue unit test stubs"""

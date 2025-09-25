@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_resource_claim_consumer_reference import V1beta1ResourceClaimConsumerReference
+from kubernetes_asyncio_pydantic.models.v1beta1_resource_claim_consumer_reference import V1beta1ResourceClaimConsumerReference
 
 class TestV1beta1ResourceClaimConsumerReference(unittest.TestCase):
     """V1beta1ResourceClaimConsumerReference unit test stubs"""

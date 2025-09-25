@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_selectable_field import V1SelectableField
+from kubernetes_asyncio_pydantic.models.v1_selectable_field import V1SelectableField
 
 class TestV1SelectableField(unittest.TestCase):
     """V1SelectableField unit test stubs"""

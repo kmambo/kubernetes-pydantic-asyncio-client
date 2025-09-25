@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_container_resource_metric_status import V2ContainerResourceMetricStatus
+from kubernetes_asyncio_pydantic.models.v2_container_resource_metric_status import V2ContainerResourceMetricStatus
 
 class TestV2ContainerResourceMetricStatus(unittest.TestCase):
     """V2ContainerResourceMetricStatus unit test stubs"""
@@ -36,7 +36,7 @@ class TestV2ContainerResourceMetricStatus(unittest.TestCase):
         if include_optional:
             return V2ContainerResourceMetricStatus(
                 container = '',
-                current = kubernetes_asyncio.models.v2/metric_value_status.v2.MetricValueStatus(
+                current = kubernetes_asyncio_pydantic.models.v2/metric_value_status.v2.MetricValueStatus(
                     average_utilization = 56, 
                     average_value = null, 
                     value = null, ),
@@ -45,7 +45,7 @@ class TestV2ContainerResourceMetricStatus(unittest.TestCase):
         else:
             return V2ContainerResourceMetricStatus(
                 container = '',
-                current = kubernetes_asyncio.models.v2/metric_value_status.v2.MetricValueStatus(
+                current = kubernetes_asyncio_pydantic.models.v2/metric_value_status.v2.MetricValueStatus(
                     average_utilization = 56, 
                     average_value = null, 
                     value = null, ),

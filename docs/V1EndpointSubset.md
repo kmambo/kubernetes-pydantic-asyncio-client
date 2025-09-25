@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_endpoint_subset import V1EndpointSubset
+from kubernetes_asyncio_pydantic.models.v1_endpoint_subset import V1EndpointSubset
 
 # TODO update the JSON string below
 json = "{}"

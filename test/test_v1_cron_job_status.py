@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_cron_job_status import V1CronJobStatus
+from kubernetes_asyncio_pydantic.models.v1_cron_job_status import V1CronJobStatus
 
 class TestV1CronJobStatus(unittest.TestCase):
     """V1CronJobStatus unit test stubs"""

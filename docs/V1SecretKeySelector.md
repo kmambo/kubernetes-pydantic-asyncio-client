@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_secret_key_selector import V1SecretKeySelector
+from kubernetes_asyncio_pydantic.models.v1_secret_key_selector import V1SecretKeySelector
 
 # TODO update the JSON string below
 json = "{}"

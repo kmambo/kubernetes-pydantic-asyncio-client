@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_sleep_action import V1SleepAction
+from kubernetes_asyncio_pydantic.models.v1_sleep_action import V1SleepAction
 
 # TODO update the JSON string below
 json = "{}"

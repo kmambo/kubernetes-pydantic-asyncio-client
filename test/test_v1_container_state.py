@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_state import V1ContainerState
+from kubernetes_asyncio_pydantic.models.v1_container_state import V1ContainerState
 
 class TestV1ContainerState(unittest.TestCase):
     """V1ContainerState unit test stubs"""
@@ -35,9 +35,9 @@ class TestV1ContainerState(unittest.TestCase):
         model = V1ContainerState()
         if include_optional:
             return V1ContainerState(
-                running = kubernetes_asyncio.models.v1/container_state_running.v1.ContainerStateRunning(
+                running = kubernetes_asyncio_pydantic.models.v1/container_state_running.v1.ContainerStateRunning(
                     started_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
-                terminated = kubernetes_asyncio.models.v1/container_state_terminated.v1.ContainerStateTerminated(
+                terminated = kubernetes_asyncio_pydantic.models.v1/container_state_terminated.v1.ContainerStateTerminated(
                     container_id = '', 
                     exit_code = 56, 
                     finished_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -45,7 +45,7 @@ class TestV1ContainerState(unittest.TestCase):
                     reason = '', 
                     signal = 56, 
                     started_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), ),
-                waiting = kubernetes_asyncio.models.v1/container_state_waiting.v1.ContainerStateWaiting(
+                waiting = kubernetes_asyncio_pydantic.models.v1/container_state_waiting.v1.ContainerStateWaiting(
                     message = '', 
                     reason = '', )
             )

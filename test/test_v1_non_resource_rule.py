@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_non_resource_rule import V1NonResourceRule
+from kubernetes_asyncio_pydantic.models.v1_non_resource_rule import V1NonResourceRule
 
 class TestV1NonResourceRule(unittest.TestCase):
     """V1NonResourceRule unit test stubs"""

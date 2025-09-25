@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_network_policy_spec import V1NetworkPolicySpec
+from kubernetes_asyncio_pydantic.models.v1_network_policy_spec import V1NetworkPolicySpec
 
 class TestV1NetworkPolicySpec(unittest.TestCase):
     """V1NetworkPolicySpec unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1NetworkPolicySpec(unittest.TestCase):
                 ingress = [
                     null
                     ],
-                pod_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                pod_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

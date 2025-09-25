@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_endpoint_hints import V1EndpointHints
+from kubernetes_asyncio_pydantic.models.v1_endpoint_hints import V1EndpointHints
 
 class TestV1EndpointHints(unittest.TestCase):
     """V1EndpointHints unit test stubs"""

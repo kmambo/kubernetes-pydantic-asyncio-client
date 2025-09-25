@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_toleration import V1Toleration
+from kubernetes_asyncio_pydantic.models.v1_toleration import V1Toleration
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_pool import V1ResourcePool
+from kubernetes_asyncio_pydantic.models.v1_resource_pool import V1ResourcePool
 
 class TestV1ResourcePool(unittest.TestCase):
     """V1ResourcePool unit test stubs"""

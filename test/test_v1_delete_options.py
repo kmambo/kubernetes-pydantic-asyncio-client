@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_delete_options import V1DeleteOptions
+from kubernetes_asyncio_pydantic.models.v1_delete_options import V1DeleteOptions
 
 class TestV1DeleteOptions(unittest.TestCase):
     """V1DeleteOptions unit test stubs"""
@@ -43,7 +43,7 @@ class TestV1DeleteOptions(unittest.TestCase):
                 ignore_store_read_error_with_cluster_breaking_potential = True,
                 kind = '',
                 orphan_dependents = True,
-                preconditions = kubernetes_asyncio.models.v1/preconditions.v1.Preconditions(
+                preconditions = kubernetes_asyncio_pydantic.models.v1/preconditions.v1.Preconditions(
                     resource_version = '', 
                     uid = '', ),
                 propagation_policy = ''

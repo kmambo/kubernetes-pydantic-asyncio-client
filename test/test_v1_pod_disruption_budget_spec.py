@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_disruption_budget_spec import V1PodDisruptionBudgetSpec
+from kubernetes_asyncio_pydantic.models.v1_pod_disruption_budget_spec import V1PodDisruptionBudgetSpec
 
 class TestV1PodDisruptionBudgetSpec(unittest.TestCase):
     """V1PodDisruptionBudgetSpec unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1PodDisruptionBudgetSpec(unittest.TestCase):
             return V1PodDisruptionBudgetSpec(
                 max_unavailable = None,
                 min_available = None,
-                selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

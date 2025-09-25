@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.rbac_authorization_v1_api import RbacAuthorizationV1Api
+from kubernetes_asyncio_pydantic.api.rbac_authorization_v1_api import RbacAuthorizationV1Api
 
 
 class TestRbacAuthorizationV1Api(unittest.IsolatedAsyncioTestCase):

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_self_subject_review import V1SelfSubjectReview
+from kubernetes_asyncio_pydantic.models.v1_self_subject_review import V1SelfSubjectReview
 
 class TestV1SelfSubjectReview(unittest.TestCase):
     """V1SelfSubjectReview unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1SelfSubjectReview(unittest.TestCase):
             return V1SelfSubjectReview(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1SelfSubjectReview(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                status = kubernetes_asyncio.models.v1/self_subject_review_status.v1.SelfSubjectReviewStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/self_subject_review_status.v1.SelfSubjectReviewStatus(
                     user_info = null, )
             )
         else:

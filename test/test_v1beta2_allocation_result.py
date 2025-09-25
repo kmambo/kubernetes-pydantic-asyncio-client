@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_allocation_result import V1beta2AllocationResult
+from kubernetes_asyncio_pydantic.models.v1beta2_allocation_result import V1beta2AllocationResult
 
 class TestV1beta2AllocationResult(unittest.TestCase):
     """V1beta2AllocationResult unit test stubs"""
@@ -36,14 +36,14 @@ class TestV1beta2AllocationResult(unittest.TestCase):
         if include_optional:
             return V1beta2AllocationResult(
                 allocation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                devices = kubernetes_asyncio.models.v1beta2/device_allocation_result.v1beta2.DeviceAllocationResult(
+                devices = kubernetes_asyncio_pydantic.models.v1beta2/device_allocation_result.v1beta2.DeviceAllocationResult(
                     config = [
                         null
                         ], 
                     results = [
                         null
                         ], ),
-                node_selector = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
+                node_selector = kubernetes_asyncio_pydantic.models.v1/node_selector.v1.NodeSelector(
                     node_selector_terms = [
                         null
                         ], )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.core_api import CoreApi
+from kubernetes_asyncio_pydantic.api.core_api import CoreApi
 
 
 class TestCoreApi(unittest.IsolatedAsyncioTestCase):

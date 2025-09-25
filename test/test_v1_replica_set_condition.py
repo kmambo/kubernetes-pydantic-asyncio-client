@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_replica_set_condition import V1ReplicaSetCondition
+from kubernetes_asyncio_pydantic.models.v1_replica_set_condition import V1ReplicaSetCondition
 
 class TestV1ReplicaSetCondition(unittest.TestCase):
     """V1ReplicaSetCondition unit test stubs"""

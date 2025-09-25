@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_downward_api_projection import V1DownwardAPIProjection
+from kubernetes_asyncio_pydantic.models.v1_downward_api_projection import V1DownwardAPIProjection
 
 # TODO update the JSON string below
 json = "{}"

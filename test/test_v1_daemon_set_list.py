@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_daemon_set_list import V1DaemonSetList
+from kubernetes_asyncio_pydantic.models.v1_daemon_set_list import V1DaemonSetList
 
 class TestV1DaemonSetList(unittest.TestCase):
     """V1DaemonSetList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1DaemonSetList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

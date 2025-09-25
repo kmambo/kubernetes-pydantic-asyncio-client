@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_expression_warning import V1ExpressionWarning
+from kubernetes_asyncio_pydantic.models.v1_expression_warning import V1ExpressionWarning
 
 # TODO update the JSON string below
 json = "{}"

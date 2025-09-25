@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_group_version_resource import V1alpha1GroupVersionResource
+from kubernetes_asyncio_pydantic.models.v1alpha1_group_version_resource import V1alpha1GroupVersionResource
 
 class TestV1alpha1GroupVersionResource(unittest.TestCase):
     """V1alpha1GroupVersionResource unit test stubs"""

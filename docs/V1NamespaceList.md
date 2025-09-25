@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_namespace_list import V1NamespaceList
+from kubernetes_asyncio_pydantic.models.v1_namespace_list import V1NamespaceList
 
 # TODO update the JSON string below
 json = "{}"

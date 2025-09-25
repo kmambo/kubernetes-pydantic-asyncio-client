@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_label_selector_attributes import V1LabelSelectorAttributes
+from kubernetes_asyncio_pydantic.models.v1_label_selector_attributes import V1LabelSelectorAttributes
 
 class TestV1LabelSelectorAttributes(unittest.TestCase):
     """V1LabelSelectorAttributes unit test stubs"""

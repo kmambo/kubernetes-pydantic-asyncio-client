@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_affinity import V1NodeAffinity
+from kubernetes_asyncio_pydantic.models.v1_node_affinity import V1NodeAffinity
 
 class TestV1NodeAffinity(unittest.TestCase):
     """V1NodeAffinity unit test stubs"""
@@ -38,7 +38,7 @@ class TestV1NodeAffinity(unittest.TestCase):
                 preferred_during_scheduling_ignored_during_execution = [
                     null
                     ],
-                required_during_scheduling_ignored_during_execution = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
+                required_during_scheduling_ignored_during_execution = kubernetes_asyncio_pydantic.models.v1/node_selector.v1.NodeSelector(
                     node_selector_terms = [
                         null
                         ], )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.certificates_api import CertificatesApi
+from kubernetes_asyncio_pydantic.api.certificates_api import CertificatesApi
 
 
 class TestCertificatesApi(unittest.IsolatedAsyncioTestCase):

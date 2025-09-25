@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_network_policy_list import V1NetworkPolicyList
+from kubernetes_asyncio_pydantic.models.v1_network_policy_list import V1NetworkPolicyList
 
 # TODO update the JSON string below
 json = "{}"

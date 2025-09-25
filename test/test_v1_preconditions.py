@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_preconditions import V1Preconditions
+from kubernetes_asyncio_pydantic.models.v1_preconditions import V1Preconditions
 
 class TestV1Preconditions(unittest.TestCase):
     """V1Preconditions unit test stubs"""

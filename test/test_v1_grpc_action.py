@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_grpc_action import V1GRPCAction
+from kubernetes_asyncio_pydantic.models.v1_grpc_action import V1GRPCAction
 
 class TestV1GRPCAction(unittest.TestCase):
     """V1GRPCAction unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_uncounted_terminated_pods import V1UncountedTerminatedPods
+from kubernetes_asyncio_pydantic.models.v1_uncounted_terminated_pods import V1UncountedTerminatedPods
 
 class TestV1UncountedTerminatedPods(unittest.TestCase):
     """V1UncountedTerminatedPods unit test stubs"""

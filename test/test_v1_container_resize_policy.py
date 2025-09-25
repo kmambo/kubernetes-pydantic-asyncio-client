@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_resize_policy import V1ContainerResizePolicy
+from kubernetes_asyncio_pydantic.models.v1_container_resize_policy import V1ContainerResizePolicy
 
 class TestV1ContainerResizePolicy(unittest.TestCase):
     """V1ContainerResizePolicy unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_certificate_signing_request import V1CertificateSigningRequest
+from kubernetes_asyncio_pydantic.models.v1_certificate_signing_request import V1CertificateSigningRequest
 
 class TestV1CertificateSigningRequest(unittest.TestCase):
     """V1CertificateSigningRequest unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CertificateSigningRequest(unittest.TestCase):
             return V1CertificateSigningRequest(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1CertificateSigningRequest(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/certificate_signing_request_spec.v1.CertificateSigningRequestSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/certificate_signing_request_spec.v1.CertificateSigningRequestSpec(
                     expiration_seconds = 56, 
                     extra = {
                         'key' : [
@@ -80,7 +80,7 @@ class TestV1CertificateSigningRequest(unittest.TestCase):
                         ''
                         ], 
                     username = '', ),
-                status = kubernetes_asyncio.models.v1/certificate_signing_request_status.v1.CertificateSigningRequestStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/certificate_signing_request_status.v1.CertificateSigningRequestStatus(
                     certificate = 'YQ==', 
                     conditions = [
                         null
@@ -88,7 +88,7 @@ class TestV1CertificateSigningRequest(unittest.TestCase):
             )
         else:
             return V1CertificateSigningRequest(
-                spec = kubernetes_asyncio.models.v1/certificate_signing_request_spec.v1.CertificateSigningRequestSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/certificate_signing_request_spec.v1.CertificateSigningRequestSpec(
                     expiration_seconds = 56, 
                     extra = {
                         'key' : [

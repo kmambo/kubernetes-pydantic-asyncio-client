@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_exec_action import V1ExecAction
+from kubernetes_asyncio_pydantic.models.v1_exec_action import V1ExecAction
 
 class TestV1ExecAction(unittest.TestCase):
     """V1ExecAction unit test stubs"""

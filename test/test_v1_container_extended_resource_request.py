@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_container_extended_resource_request import V1ContainerExtendedResourceRequest
+from kubernetes_asyncio_pydantic.models.v1_container_extended_resource_request import V1ContainerExtendedResourceRequest
 
 class TestV1ContainerExtendedResourceRequest(unittest.TestCase):
     """V1ContainerExtendedResourceRequest unit test stubs"""

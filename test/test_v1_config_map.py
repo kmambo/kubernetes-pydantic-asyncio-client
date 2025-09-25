@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_config_map import V1ConfigMap
+from kubernetes_asyncio_pydantic.models.v1_config_map import V1ConfigMap
 
 class TestV1ConfigMap(unittest.TestCase):
     """V1ConfigMap unit test stubs"""
@@ -44,7 +44,7 @@ class TestV1ConfigMap(unittest.TestCase):
                     },
                 immutable = True,
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_external_documentation import V1ExternalDocumentation
+from kubernetes_asyncio_pydantic.models.v1_external_documentation import V1ExternalDocumentation
 
 class TestV1ExternalDocumentation(unittest.TestCase):
     """V1ExternalDocumentation unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
+from kubernetes_asyncio_pydantic.models.v1_persistent_volume_claim import V1PersistentVolumeClaim
 
 class TestV1PersistentVolumeClaim(unittest.TestCase):
     """V1PersistentVolumeClaim unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1PersistentVolumeClaim(unittest.TestCase):
             return V1PersistentVolumeClaim(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1PersistentVolumeClaim(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/persistent_volume_claim_spec.v1.PersistentVolumeClaimSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/persistent_volume_claim_spec.v1.PersistentVolumeClaimSpec(
                     access_modes = [
                         ''
                         ], 
@@ -75,7 +75,7 @@ class TestV1PersistentVolumeClaim(unittest.TestCase):
                     volume_attributes_class_name = '', 
                     volume_mode = '', 
                     volume_name = '', ),
-                status = kubernetes_asyncio.models.v1/persistent_volume_claim_status.v1.PersistentVolumeClaimStatus(
+                status = kubernetes_asyncio_pydantic.models.v1/persistent_volume_claim_status.v1.PersistentVolumeClaimStatus(
                     access_modes = [
                         ''
                         ], 
@@ -83,10 +83,10 @@ class TestV1PersistentVolumeClaim(unittest.TestCase):
                         'key' : ''
                         }, 
                     allocated_resources = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     capacity = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     conditions = [
                         null

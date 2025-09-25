@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_capacity_requirements import V1beta2CapacityRequirements
+from kubernetes_asyncio_pydantic.models.v1beta2_capacity_requirements import V1beta2CapacityRequirements
 
 class TestV1beta2CapacityRequirements(unittest.TestCase):
     """V1beta2CapacityRequirements unit test stubs"""
@@ -36,7 +36,7 @@ class TestV1beta2CapacityRequirements(unittest.TestCase):
         if include_optional:
             return V1beta2CapacityRequirements(
                 requests = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     }
             )
         else:

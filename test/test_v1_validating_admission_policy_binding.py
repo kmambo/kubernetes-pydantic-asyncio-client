@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_validating_admission_policy_binding import V1ValidatingAdmissionPolicyBinding
+from kubernetes_asyncio_pydantic.models.v1_validating_admission_policy_binding import V1ValidatingAdmissionPolicyBinding
 
 class TestV1ValidatingAdmissionPolicyBinding(unittest.TestCase):
     """V1ValidatingAdmissionPolicyBinding unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1ValidatingAdmissionPolicyBinding(unittest.TestCase):
             return V1ValidatingAdmissionPolicyBinding(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,7 +63,7 @@ class TestV1ValidatingAdmissionPolicyBinding(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/validating_admission_policy_binding_spec.v1.ValidatingAdmissionPolicyBindingSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/validating_admission_policy_binding_spec.v1.ValidatingAdmissionPolicyBindingSpec(
                     match_resources = null, 
                     param_ref = null, 
                     policy_name = '', 

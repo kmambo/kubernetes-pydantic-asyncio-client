@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flow_schema_status import V1FlowSchemaStatus
+from kubernetes_asyncio_pydantic.models.v1_flow_schema_status import V1FlowSchemaStatus
 
 class TestV1FlowSchemaStatus(unittest.TestCase):
     """V1FlowSchemaStatus unit test stubs"""

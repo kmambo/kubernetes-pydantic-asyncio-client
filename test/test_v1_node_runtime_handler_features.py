@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_runtime_handler_features import V1NodeRuntimeHandlerFeatures
+from kubernetes_asyncio_pydantic.models.v1_node_runtime_handler_features import V1NodeRuntimeHandlerFeatures
 
 class TestV1NodeRuntimeHandlerFeatures(unittest.TestCase):
     """V1NodeRuntimeHandlerFeatures unit test stubs"""

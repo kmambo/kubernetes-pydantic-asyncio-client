@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_api_resource import V1APIResource
+from kubernetes_asyncio_pydantic.models.v1_api_resource import V1APIResource
 
 class TestV1APIResource(unittest.TestCase):
     """V1APIResource unit test stubs"""

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_non_resource_rule import V1NonResourceRule
+from kubernetes_asyncio_pydantic.models.v1_non_resource_rule import V1NonResourceRule
 
 # TODO update the JSON string below
 json = "{}"

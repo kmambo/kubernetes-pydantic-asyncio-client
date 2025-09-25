@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_event_series1 import V1EventSeries1
+from kubernetes_asyncio_pydantic.models.v1_event_series1 import V1EventSeries1
 
 class TestV1EventSeries1(unittest.TestCase):
     """V1EventSeries1 unit test stubs"""

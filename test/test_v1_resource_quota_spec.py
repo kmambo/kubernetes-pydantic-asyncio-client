@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_quota_spec import V1ResourceQuotaSpec
+from kubernetes_asyncio_pydantic.models.v1_resource_quota_spec import V1ResourceQuotaSpec
 
 class TestV1ResourceQuotaSpec(unittest.TestCase):
     """V1ResourceQuotaSpec unit test stubs"""
@@ -36,9 +36,9 @@ class TestV1ResourceQuotaSpec(unittest.TestCase):
         if include_optional:
             return V1ResourceQuotaSpec(
                 hard = {
-                    'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                    'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                     },
-                scope_selector = kubernetes_asyncio.models.v1/scope_selector.v1.ScopeSelector(
+                scope_selector = kubernetes_asyncio_pydantic.models.v1/scope_selector.v1.ScopeSelector(
                     match_expressions = [
                         null
                         ], ),

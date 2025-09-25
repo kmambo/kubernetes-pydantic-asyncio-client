@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_host_alias import V1HostAlias
+from kubernetes_asyncio_pydantic.models.v1_host_alias import V1HostAlias
 
 class TestV1HostAlias(unittest.TestCase):
     """V1HostAlias unit test stubs"""

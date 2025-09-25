@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_apply_configuration import V1alpha1ApplyConfiguration
+from kubernetes_asyncio_pydantic.models.v1alpha1_apply_configuration import V1alpha1ApplyConfiguration
 
 class TestV1alpha1ApplyConfiguration(unittest.TestCase):
     """V1alpha1ApplyConfiguration unit test stubs"""

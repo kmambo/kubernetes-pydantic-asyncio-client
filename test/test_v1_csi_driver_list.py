@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_driver_list import V1CSIDriverList
+from kubernetes_asyncio_pydantic.models.v1_csi_driver_list import V1CSIDriverList
 
 class TestV1CSIDriverList(unittest.TestCase):
     """V1CSIDriverList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1CSIDriverList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

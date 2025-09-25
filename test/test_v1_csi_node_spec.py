@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_node_spec import V1CSINodeSpec
+from kubernetes_asyncio_pydantic.models.v1_csi_node_spec import V1CSINodeSpec
 
 class TestV1CSINodeSpec(unittest.TestCase):
     """V1CSINodeSpec unit test stubs"""

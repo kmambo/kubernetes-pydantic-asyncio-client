@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_node import V1CSINode
+from kubernetes_asyncio_pydantic.models.v1_csi_node import V1CSINode
 
 class TestV1CSINode(unittest.TestCase):
     """V1CSINode unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1CSINode(unittest.TestCase):
             return V1CSINode(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,14 +63,14 @@ class TestV1CSINode(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/csi_node_spec.v1.CSINodeSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/csi_node_spec.v1.CSINodeSpec(
                     drivers = [
                         null
                         ], )
             )
         else:
             return V1CSINode(
-                spec = kubernetes_asyncio.models.v1/csi_node_spec.v1.CSINodeSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/csi_node_spec.v1.CSINodeSpec(
                     drivers = [
                         null
                         ], ),

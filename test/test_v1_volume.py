@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume import V1Volume
+from kubernetes_asyncio_pydantic.models.v1_volume import V1Volume
 
 class TestV1Volume(unittest.TestCase):
     """V1Volume unit test stubs"""
@@ -35,23 +35,23 @@ class TestV1Volume(unittest.TestCase):
         model = V1Volume()
         if include_optional:
             return V1Volume(
-                aws_elastic_block_store = kubernetes_asyncio.models.v1/aws_elastic_block_store_volume_source.v1.AWSElasticBlockStoreVolumeSource(
+                aws_elastic_block_store = kubernetes_asyncio_pydantic.models.v1/aws_elastic_block_store_volume_source.v1.AWSElasticBlockStoreVolumeSource(
                     fs_type = '', 
                     partition = 56, 
                     read_only = True, 
                     volume_id = '', ),
-                azure_disk = kubernetes_asyncio.models.v1/azure_disk_volume_source.v1.AzureDiskVolumeSource(
+                azure_disk = kubernetes_asyncio_pydantic.models.v1/azure_disk_volume_source.v1.AzureDiskVolumeSource(
                     caching_mode = 'ReadWrite', 
                     disk_name = '', 
                     disk_uri = '', 
                     fs_type = 'ext4', 
                     kind = 'Shared', 
                     read_only = True, ),
-                azure_file = kubernetes_asyncio.models.v1/azure_file_volume_source.v1.AzureFileVolumeSource(
+                azure_file = kubernetes_asyncio_pydantic.models.v1/azure_file_volume_source.v1.AzureFileVolumeSource(
                     read_only = True, 
                     secret_name = '', 
                     share_name = '', ),
-                cephfs = kubernetes_asyncio.models.v1/ceph_fs_volume_source.v1.CephFSVolumeSource(
+                cephfs = kubernetes_asyncio_pydantic.models.v1/ceph_fs_volume_source.v1.CephFSVolumeSource(
                     monitors = [
                         ''
                         ], 
@@ -60,19 +60,19 @@ class TestV1Volume(unittest.TestCase):
                     secret_file = '', 
                     secret_ref = null, 
                     user = '', ),
-                cinder = kubernetes_asyncio.models.v1/cinder_volume_source.v1.CinderVolumeSource(
+                cinder = kubernetes_asyncio_pydantic.models.v1/cinder_volume_source.v1.CinderVolumeSource(
                     fs_type = '', 
                     read_only = True, 
                     secret_ref = null, 
                     volume_id = '', ),
-                config_map = kubernetes_asyncio.models.v1/config_map_volume_source.v1.ConfigMapVolumeSource(
+                config_map = kubernetes_asyncio_pydantic.models.v1/config_map_volume_source.v1.ConfigMapVolumeSource(
                     default_mode = 56, 
                     items = [
                         null
                         ], 
                     name = '', 
                     optional = True, ),
-                csi = kubernetes_asyncio.models.v1/csi_volume_source.v1.CSIVolumeSource(
+                csi = kubernetes_asyncio_pydantic.models.v1/csi_volume_source.v1.CSIVolumeSource(
                     driver = '', 
                     fs_type = '', 
                     node_publish_secret_ref = null, 
@@ -80,17 +80,17 @@ class TestV1Volume(unittest.TestCase):
                     volume_attributes = {
                         'key' : ''
                         }, ),
-                downward_api = kubernetes_asyncio.models.v1/downward_api_volume_source.v1.DownwardAPIVolumeSource(
+                downward_api = kubernetes_asyncio_pydantic.models.v1/downward_api_volume_source.v1.DownwardAPIVolumeSource(
                     default_mode = 56, 
                     items = [
                         null
                         ], ),
-                empty_dir = kubernetes_asyncio.models.v1/empty_dir_volume_source.v1.EmptyDirVolumeSource(
+                empty_dir = kubernetes_asyncio_pydantic.models.v1/empty_dir_volume_source.v1.EmptyDirVolumeSource(
                     medium = '', 
                     size_limit = null, ),
-                ephemeral = kubernetes_asyncio.models.v1/ephemeral_volume_source.v1.EphemeralVolumeSource(
+                ephemeral = kubernetes_asyncio_pydantic.models.v1/ephemeral_volume_source.v1.EphemeralVolumeSource(
                     volume_claim_template = null, ),
-                fc = kubernetes_asyncio.models.v1/fc_volume_source.v1.FCVolumeSource(
+                fc = kubernetes_asyncio_pydantic.models.v1/fc_volume_source.v1.FCVolumeSource(
                     fs_type = '', 
                     lun = 56, 
                     read_only = True, 
@@ -100,7 +100,7 @@ class TestV1Volume(unittest.TestCase):
                     wwids = [
                         ''
                         ], ),
-                flex_volume = kubernetes_asyncio.models.v1/flex_volume_source.v1.FlexVolumeSource(
+                flex_volume = kubernetes_asyncio_pydantic.models.v1/flex_volume_source.v1.FlexVolumeSource(
                     driver = '', 
                     fs_type = '', 
                     options = {
@@ -108,29 +108,29 @@ class TestV1Volume(unittest.TestCase):
                         }, 
                     read_only = True, 
                     secret_ref = null, ),
-                flocker = kubernetes_asyncio.models.v1/flocker_volume_source.v1.FlockerVolumeSource(
+                flocker = kubernetes_asyncio_pydantic.models.v1/flocker_volume_source.v1.FlockerVolumeSource(
                     dataset_name = '', 
                     dataset_uuid = '', ),
-                gce_persistent_disk = kubernetes_asyncio.models.v1/gce_persistent_disk_volume_source.v1.GCEPersistentDiskVolumeSource(
+                gce_persistent_disk = kubernetes_asyncio_pydantic.models.v1/gce_persistent_disk_volume_source.v1.GCEPersistentDiskVolumeSource(
                     fs_type = '', 
                     partition = 56, 
                     pd_name = '', 
                     read_only = True, ),
-                git_repo = kubernetes_asyncio.models.v1/git_repo_volume_source.v1.GitRepoVolumeSource(
+                git_repo = kubernetes_asyncio_pydantic.models.v1/git_repo_volume_source.v1.GitRepoVolumeSource(
                     directory = '', 
                     repository = '', 
                     revision = '', ),
-                glusterfs = kubernetes_asyncio.models.v1/glusterfs_volume_source.v1.GlusterfsVolumeSource(
+                glusterfs = kubernetes_asyncio_pydantic.models.v1/glusterfs_volume_source.v1.GlusterfsVolumeSource(
                     endpoints = '', 
                     path = '', 
                     read_only = True, ),
-                host_path = kubernetes_asyncio.models.v1/host_path_volume_source.v1.HostPathVolumeSource(
+                host_path = kubernetes_asyncio_pydantic.models.v1/host_path_volume_source.v1.HostPathVolumeSource(
                     path = '', 
                     type = '', ),
-                image = kubernetes_asyncio.models.v1/image_volume_source.v1.ImageVolumeSource(
+                image = kubernetes_asyncio_pydantic.models.v1/image_volume_source.v1.ImageVolumeSource(
                     pull_policy = '', 
                     reference = '', ),
-                iscsi = kubernetes_asyncio.models.v1/iscsi_volume_source.v1.ISCSIVolumeSource(
+                iscsi = kubernetes_asyncio_pydantic.models.v1/iscsi_volume_source.v1.ISCSIVolumeSource(
                     chap_auth_discovery = True, 
                     chap_auth_session = True, 
                     fs_type = '', 
@@ -145,33 +145,33 @@ class TestV1Volume(unittest.TestCase):
                     secret_ref = null, 
                     target_portal = '', ),
                 name = '',
-                nfs = kubernetes_asyncio.models.v1/nfs_volume_source.v1.NFSVolumeSource(
+                nfs = kubernetes_asyncio_pydantic.models.v1/nfs_volume_source.v1.NFSVolumeSource(
                     path = '', 
                     read_only = True, 
                     server = '', ),
-                persistent_volume_claim = kubernetes_asyncio.models.v1/persistent_volume_claim_volume_source.v1.PersistentVolumeClaimVolumeSource(
+                persistent_volume_claim = kubernetes_asyncio_pydantic.models.v1/persistent_volume_claim_volume_source.v1.PersistentVolumeClaimVolumeSource(
                     claim_name = '', 
                     read_only = True, ),
-                photon_persistent_disk = kubernetes_asyncio.models.v1/photon_persistent_disk_volume_source.v1.PhotonPersistentDiskVolumeSource(
+                photon_persistent_disk = kubernetes_asyncio_pydantic.models.v1/photon_persistent_disk_volume_source.v1.PhotonPersistentDiskVolumeSource(
                     fs_type = '', 
                     pd_id = '', ),
-                portworx_volume = kubernetes_asyncio.models.v1/portworx_volume_source.v1.PortworxVolumeSource(
+                portworx_volume = kubernetes_asyncio_pydantic.models.v1/portworx_volume_source.v1.PortworxVolumeSource(
                     fs_type = '', 
                     read_only = True, 
                     volume_id = '', ),
-                projected = kubernetes_asyncio.models.v1/projected_volume_source.v1.ProjectedVolumeSource(
+                projected = kubernetes_asyncio_pydantic.models.v1/projected_volume_source.v1.ProjectedVolumeSource(
                     default_mode = 56, 
                     sources = [
                         null
                         ], ),
-                quobyte = kubernetes_asyncio.models.v1/quobyte_volume_source.v1.QuobyteVolumeSource(
+                quobyte = kubernetes_asyncio_pydantic.models.v1/quobyte_volume_source.v1.QuobyteVolumeSource(
                     group = '', 
                     read_only = True, 
                     registry = '', 
                     tenant = '', 
                     user = '', 
                     volume = '', ),
-                rbd = kubernetes_asyncio.models.v1/rbd_volume_source.v1.RBDVolumeSource(
+                rbd = kubernetes_asyncio_pydantic.models.v1/rbd_volume_source.v1.RBDVolumeSource(
                     fs_type = '', 
                     image = '', 
                     keyring = '/etc/ceph/keyring', 
@@ -182,7 +182,7 @@ class TestV1Volume(unittest.TestCase):
                     read_only = True, 
                     secret_ref = null, 
                     user = 'admin', ),
-                scale_io = kubernetes_asyncio.models.v1/scale_io_volume_source.v1.ScaleIOVolumeSource(
+                scale_io = kubernetes_asyncio_pydantic.models.v1/scale_io_volume_source.v1.ScaleIOVolumeSource(
                     fs_type = 'xfs', 
                     gateway = '', 
                     protection_domain = '', 
@@ -193,20 +193,20 @@ class TestV1Volume(unittest.TestCase):
                     storage_pool = '', 
                     system = '', 
                     volume_name = '', ),
-                secret = kubernetes_asyncio.models.v1/secret_volume_source.v1.SecretVolumeSource(
+                secret = kubernetes_asyncio_pydantic.models.v1/secret_volume_source.v1.SecretVolumeSource(
                     default_mode = 56, 
                     items = [
                         null
                         ], 
                     optional = True, 
                     secret_name = '', ),
-                storageos = kubernetes_asyncio.models.v1/storage_os_volume_source.v1.StorageOSVolumeSource(
+                storageos = kubernetes_asyncio_pydantic.models.v1/storage_os_volume_source.v1.StorageOSVolumeSource(
                     fs_type = '', 
                     read_only = True, 
                     secret_ref = null, 
                     volume_name = '', 
                     volume_namespace = '', ),
-                vsphere_volume = kubernetes_asyncio.models.v1/vsphere_virtual_disk_volume_source.v1.VsphereVirtualDiskVolumeSource(
+                vsphere_volume = kubernetes_asyncio_pydantic.models.v1/vsphere_virtual_disk_volume_source.v1.VsphereVirtualDiskVolumeSource(
                     fs_type = '', 
                     storage_policy_id = '', 
                     storage_policy_name = '', 

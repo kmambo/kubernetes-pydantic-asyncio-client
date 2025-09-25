@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_webhook_client_config import V1WebhookClientConfig
+from kubernetes_asyncio_pydantic.models.v1_webhook_client_config import V1WebhookClientConfig
 
 # TODO update the JSON string below
 json = "{}"

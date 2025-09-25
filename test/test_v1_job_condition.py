@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_job_condition import V1JobCondition
+from kubernetes_asyncio_pydantic.models.v1_job_condition import V1JobCondition
 
 class TestV1JobCondition(unittest.TestCase):
     """V1JobCondition unit test stubs"""

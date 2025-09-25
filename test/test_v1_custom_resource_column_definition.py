@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_column_definition import V1CustomResourceColumnDefinition
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_column_definition import V1CustomResourceColumnDefinition
 
 class TestV1CustomResourceColumnDefinition(unittest.TestCase):
     """V1CustomResourceColumnDefinition unit test stubs"""

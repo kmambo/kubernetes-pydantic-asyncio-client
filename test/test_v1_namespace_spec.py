@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_namespace_spec import V1NamespaceSpec
+from kubernetes_asyncio_pydantic.models.v1_namespace_spec import V1NamespaceSpec
 
 class TestV1NamespaceSpec(unittest.TestCase):
     """V1NamespaceSpec unit test stubs"""

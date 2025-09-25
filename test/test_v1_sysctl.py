@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_sysctl import V1Sysctl
+from kubernetes_asyncio_pydantic.models.v1_sysctl import V1Sysctl
 
 class TestV1Sysctl(unittest.TestCase):
     """V1Sysctl unit test stubs"""

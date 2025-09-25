@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_disruption_budget_list import V1PodDisruptionBudgetList
+from kubernetes_asyncio_pydantic.models.v1_pod_disruption_budget_list import V1PodDisruptionBudgetList
 
 class TestV1PodDisruptionBudgetList(unittest.TestCase):
     """V1PodDisruptionBudgetList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1PodDisruptionBudgetList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

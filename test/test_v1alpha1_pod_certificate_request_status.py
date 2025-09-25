@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_pod_certificate_request_status import V1alpha1PodCertificateRequestStatus
+from kubernetes_asyncio_pydantic.models.v1alpha1_pod_certificate_request_status import V1alpha1PodCertificateRequestStatus
 
 class TestV1alpha1PodCertificateRequestStatus(unittest.TestCase):
     """V1alpha1PodCertificateRequestStatus unit test stubs"""

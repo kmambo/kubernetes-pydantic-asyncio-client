@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1beta1_capacity_request_policy_range import V1beta1CapacityRequestPolicyRange
+from kubernetes_asyncio_pydantic.models.v1beta1_capacity_request_policy_range import V1beta1CapacityRequestPolicyRange
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_network_policy_port import V1NetworkPolicyPort
+from kubernetes_asyncio_pydantic.models.v1_network_policy_port import V1NetworkPolicyPort
 
 # TODO update the JSON string below
 json = "{}"

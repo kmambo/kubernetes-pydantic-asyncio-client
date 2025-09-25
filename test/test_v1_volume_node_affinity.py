@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_node_affinity import V1VolumeNodeAffinity
+from kubernetes_asyncio_pydantic.models.v1_volume_node_affinity import V1VolumeNodeAffinity
 
 class TestV1VolumeNodeAffinity(unittest.TestCase):
     """V1VolumeNodeAffinity unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1VolumeNodeAffinity(unittest.TestCase):
         model = V1VolumeNodeAffinity()
         if include_optional:
             return V1VolumeNodeAffinity(
-                required = kubernetes_asyncio.models.v1/node_selector.v1.NodeSelector(
+                required = kubernetes_asyncio_pydantic.models.v1/node_selector.v1.NodeSelector(
                     node_selector_terms = [
                         null
                         ], )

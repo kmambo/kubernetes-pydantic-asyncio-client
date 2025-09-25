@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_health import V1ResourceHealth
+from kubernetes_asyncio_pydantic.models.v1_resource_health import V1ResourceHealth
 
 class TestV1ResourceHealth(unittest.TestCase):
     """V1ResourceHealth unit test stubs"""

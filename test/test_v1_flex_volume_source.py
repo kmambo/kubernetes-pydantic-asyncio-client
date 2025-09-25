@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_flex_volume_source import V1FlexVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_flex_volume_source import V1FlexVolumeSource
 
 class TestV1FlexVolumeSource(unittest.TestCase):
     """V1FlexVolumeSource unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1FlexVolumeSource(unittest.TestCase):
                     'key' : ''
                     },
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', )
             )
         else:

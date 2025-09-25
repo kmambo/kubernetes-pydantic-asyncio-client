@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_status import V1PodStatus
+from kubernetes_asyncio_pydantic.models.v1_pod_status import V1PodStatus
 
 class TestV1PodStatus(unittest.TestCase):
     """V1PodStatus unit test stubs"""
@@ -44,7 +44,7 @@ class TestV1PodStatus(unittest.TestCase):
                 ephemeral_container_statuses = [
                     null
                     ],
-                extended_resource_claim_status = kubernetes_asyncio.models.v1/pod_extended_resource_claim_status.v1.PodExtendedResourceClaimStatus(
+                extended_resource_claim_status = kubernetes_asyncio_pydantic.models.v1/pod_extended_resource_claim_status.v1.PodExtendedResourceClaimStatus(
                     request_mappings = [
                         null
                         ], 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_claim_template import V1ResourceClaimTemplate
+from kubernetes_asyncio_pydantic.models.v1_resource_claim_template import V1ResourceClaimTemplate
 
 class TestV1ResourceClaimTemplate(unittest.TestCase):
     """V1ResourceClaimTemplate unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1ResourceClaimTemplate(unittest.TestCase):
             return V1ResourceClaimTemplate(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,13 +63,13 @@ class TestV1ResourceClaimTemplate(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/resource_claim_template_spec.v1.ResourceClaimTemplateSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/resource_claim_template_spec.v1.ResourceClaimTemplateSpec(
                     metadata = null, 
                     spec = null, )
             )
         else:
             return V1ResourceClaimTemplate(
-                spec = kubernetes_asyncio.models.v1/resource_claim_template_spec.v1.ResourceClaimTemplateSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/resource_claim_template_spec.v1.ResourceClaimTemplateSpec(
                     metadata = null, 
                     spec = null, ),
         )

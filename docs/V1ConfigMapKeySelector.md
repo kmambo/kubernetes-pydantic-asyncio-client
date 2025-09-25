@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_config_map_key_selector import V1ConfigMapKeySelector
+from kubernetes_asyncio_pydantic.models.v1_config_map_key_selector import V1ConfigMapKeySelector
 
 # TODO update the JSON string below
 json = "{}"

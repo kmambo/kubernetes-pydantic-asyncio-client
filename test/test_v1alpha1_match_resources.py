@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_match_resources import V1alpha1MatchResources
+from kubernetes_asyncio_pydantic.models.v1alpha1_match_resources import V1alpha1MatchResources
 
 class TestV1alpha1MatchResources(unittest.TestCase):
     """V1alpha1MatchResources unit test stubs"""
@@ -39,14 +39,14 @@ class TestV1alpha1MatchResources(unittest.TestCase):
                     null
                     ],
                 match_policy = '',
-                namespace_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                namespace_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 
                     match_labels = {
                         'key' : ''
                         }, ),
-                object_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                object_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

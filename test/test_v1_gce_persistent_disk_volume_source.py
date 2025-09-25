@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_gce_persistent_disk_volume_source import V1GCEPersistentDiskVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_gce_persistent_disk_volume_source import V1GCEPersistentDiskVolumeSource
 
 class TestV1GCEPersistentDiskVolumeSource(unittest.TestCase):
     """V1GCEPersistentDiskVolumeSource unit test stubs"""

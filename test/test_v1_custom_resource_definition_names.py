@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_definition_names import V1CustomResourceDefinitionNames
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_definition_names import V1CustomResourceDefinitionNames
 
 class TestV1CustomResourceDefinitionNames(unittest.TestCase):
     """V1CustomResourceDefinitionNames unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_resource_claim_status import V1beta2ResourceClaimStatus
+from kubernetes_asyncio_pydantic.models.v1beta2_resource_claim_status import V1beta2ResourceClaimStatus
 
 class TestV1beta2ResourceClaimStatus(unittest.TestCase):
     """V1beta2ResourceClaimStatus unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta2ResourceClaimStatus(unittest.TestCase):
         model = V1beta2ResourceClaimStatus()
         if include_optional:
             return V1beta2ResourceClaimStatus(
-                allocation = kubernetes_asyncio.models.v1beta2/allocation_result.v1beta2.AllocationResult(
+                allocation = kubernetes_asyncio_pydantic.models.v1beta2/allocation_result.v1beta2.AllocationResult(
                     allocation_timestamp = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     devices = null, 
                     node_selector = null, ),

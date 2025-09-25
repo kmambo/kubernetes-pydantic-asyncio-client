@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ceph_fs_volume_source import V1CephFSVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_ceph_fs_volume_source import V1CephFSVolumeSource
 
 class TestV1CephFSVolumeSource(unittest.TestCase):
     """V1CephFSVolumeSource unit test stubs"""
@@ -41,7 +41,7 @@ class TestV1CephFSVolumeSource(unittest.TestCase):
                 path = '',
                 read_only = True,
                 secret_file = '',
-                secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 user = ''
             )

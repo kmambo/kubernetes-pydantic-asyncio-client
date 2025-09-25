@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_selector_term import V1NodeSelectorTerm
+from kubernetes_asyncio_pydantic.models.v1_node_selector_term import V1NodeSelectorTerm
 
 class TestV1NodeSelectorTerm(unittest.TestCase):
     """V1NodeSelectorTerm unit test stubs"""

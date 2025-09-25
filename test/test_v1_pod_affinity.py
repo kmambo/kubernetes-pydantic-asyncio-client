@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_affinity import V1PodAffinity
+from kubernetes_asyncio_pydantic.models.v1_pod_affinity import V1PodAffinity
 
 class TestV1PodAffinity(unittest.TestCase):
     """V1PodAffinity unit test stubs"""

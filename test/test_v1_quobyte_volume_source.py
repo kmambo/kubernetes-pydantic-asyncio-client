@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_quobyte_volume_source import V1QuobyteVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_quobyte_volume_source import V1QuobyteVolumeSource
 
 class TestV1QuobyteVolumeSource(unittest.TestCase):
     """V1QuobyteVolumeSource unit test stubs"""

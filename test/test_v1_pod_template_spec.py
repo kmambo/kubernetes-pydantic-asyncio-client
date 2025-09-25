@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_template_spec import V1PodTemplateSpec
+from kubernetes_asyncio_pydantic.models.v1_pod_template_spec import V1PodTemplateSpec
 
 class TestV1PodTemplateSpec(unittest.TestCase):
     """V1PodTemplateSpec unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1PodTemplateSpec(unittest.TestCase):
         model = V1PodTemplateSpec()
         if include_optional:
             return V1PodTemplateSpec(
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -61,7 +61,7 @@ class TestV1PodTemplateSpec(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1/pod_spec.v1.PodSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1/pod_spec.v1.PodSpec(
                     active_deadline_seconds = 56, 
                     affinity = null, 
                     automount_service_account_token = True, 
@@ -95,7 +95,7 @@ class TestV1PodTemplateSpec(unittest.TestCase):
                         }, 
                     os = null, 
                     overhead = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     preemption_policy = '', 
                     priority = 56, 

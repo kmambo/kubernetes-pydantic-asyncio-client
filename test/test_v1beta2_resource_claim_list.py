@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_resource_claim_list import V1beta2ResourceClaimList
+from kubernetes_asyncio_pydantic.models.v1beta2_resource_claim_list import V1beta2ResourceClaimList
 
 class TestV1beta2ResourceClaimList(unittest.TestCase):
     """V1beta2ResourceClaimList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1beta2ResourceClaimList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

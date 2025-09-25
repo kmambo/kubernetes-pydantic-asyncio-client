@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.authorization_v1_api import AuthorizationV1Api
+from kubernetes_asyncio_pydantic.api.authorization_v1_api import AuthorizationV1Api
 
 
 class TestAuthorizationV1Api(unittest.IsolatedAsyncioTestCase):

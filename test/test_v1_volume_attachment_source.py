@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_attachment_source import V1VolumeAttachmentSource
+from kubernetes_asyncio_pydantic.models.v1_volume_attachment_source import V1VolumeAttachmentSource
 
 class TestV1VolumeAttachmentSource(unittest.TestCase):
     """V1VolumeAttachmentSource unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1VolumeAttachmentSource(unittest.TestCase):
         model = V1VolumeAttachmentSource()
         if include_optional:
             return V1VolumeAttachmentSource(
-                inline_volume_spec = kubernetes_asyncio.models.v1/persistent_volume_spec.v1.PersistentVolumeSpec(
+                inline_volume_spec = kubernetes_asyncio_pydantic.models.v1/persistent_volume_spec.v1.PersistentVolumeSpec(
                     access_modes = [
                         ''
                         ], 
@@ -43,7 +43,7 @@ class TestV1VolumeAttachmentSource(unittest.TestCase):
                     azure_disk = null, 
                     azure_file = null, 
                     capacity = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     cephfs = null, 
                     cinder = null, 

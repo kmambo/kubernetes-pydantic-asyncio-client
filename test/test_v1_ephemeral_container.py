@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ephemeral_container import V1EphemeralContainer
+from kubernetes_asyncio_pydantic.models.v1_ephemeral_container import V1EphemeralContainer
 
 class TestV1EphemeralContainer(unittest.TestCase):
     """V1EphemeralContainer unit test stubs"""
@@ -49,11 +49,11 @@ class TestV1EphemeralContainer(unittest.TestCase):
                     ],
                 image = '',
                 image_pull_policy = '',
-                lifecycle = kubernetes_asyncio.models.v1/lifecycle.v1.Lifecycle(
+                lifecycle = kubernetes_asyncio_pydantic.models.v1/lifecycle.v1.Lifecycle(
                     post_start = null, 
                     pre_stop = null, 
                     stop_signal = '', ),
-                liveness_probe = kubernetes_asyncio.models.v1/probe.v1.Probe(
+                liveness_probe = kubernetes_asyncio_pydantic.models.v1/probe.v1.Probe(
                     exec = null, 
                     failure_threshold = 56, 
                     grpc = null, 
@@ -68,7 +68,7 @@ class TestV1EphemeralContainer(unittest.TestCase):
                 ports = [
                     null
                     ],
-                readiness_probe = kubernetes_asyncio.models.v1/probe.v1.Probe(
+                readiness_probe = kubernetes_asyncio_pydantic.models.v1/probe.v1.Probe(
                     exec = null, 
                     failure_threshold = 56, 
                     grpc = null, 
@@ -82,21 +82,21 @@ class TestV1EphemeralContainer(unittest.TestCase):
                 resize_policy = [
                     null
                     ],
-                resources = kubernetes_asyncio.models.v1/resource_requirements.v1.ResourceRequirements(
+                resources = kubernetes_asyncio_pydantic.models.v1/resource_requirements.v1.ResourceRequirements(
                     claims = [
                         null
                         ], 
                     limits = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, 
                     requests = {
-                        'key' : kubernetes_asyncio.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
+                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 restart_policy = '',
                 restart_policy_rules = [
                     null
                     ],
-                security_context = kubernetes_asyncio.models.v1/security_context.v1.SecurityContext(
+                security_context = kubernetes_asyncio_pydantic.models.v1/security_context.v1.SecurityContext(
                     allow_privilege_escalation = True, 
                     app_armor_profile = null, 
                     capabilities = null, 
@@ -109,7 +109,7 @@ class TestV1EphemeralContainer(unittest.TestCase):
                     se_linux_options = null, 
                     seccomp_profile = null, 
                     windows_options = null, ),
-                startup_probe = kubernetes_asyncio.models.v1/probe.v1.Probe(
+                startup_probe = kubernetes_asyncio_pydantic.models.v1/probe.v1.Probe(
                     exec = null, 
                     failure_threshold = 56, 
                     grpc = null, 

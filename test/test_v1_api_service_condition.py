@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_api_service_condition import V1APIServiceCondition
+from kubernetes_asyncio_pydantic.models.v1_api_service_condition import V1APIServiceCondition
 
 class TestV1APIServiceCondition(unittest.TestCase):
     """V1APIServiceCondition unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_validation import V1Validation
+from kubernetes_asyncio_pydantic.models.v1_validation import V1Validation
 
 class TestV1Validation(unittest.TestCase):
     """V1Validation unit test stubs"""

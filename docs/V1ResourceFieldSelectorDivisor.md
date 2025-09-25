@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_resource_field_selector_divisor import V1ResourceFieldSelectorDivisor
+from kubernetes_asyncio_pydantic.models.v1_resource_field_selector_divisor import V1ResourceFieldSelectorDivisor
 
 # TODO update the JSON string below
 json = "{}"

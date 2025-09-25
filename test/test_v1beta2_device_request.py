@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta2_device_request import V1beta2DeviceRequest
+from kubernetes_asyncio_pydantic.models.v1beta2_device_request import V1beta2DeviceRequest
 
 class TestV1beta2DeviceRequest(unittest.TestCase):
     """V1beta2DeviceRequest unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1beta2DeviceRequest(unittest.TestCase):
         model = V1beta2DeviceRequest()
         if include_optional:
             return V1beta2DeviceRequest(
-                exactly = kubernetes_asyncio.models.v1beta2/exact_device_request.v1beta2.ExactDeviceRequest(
+                exactly = kubernetes_asyncio_pydantic.models.v1beta2/exact_device_request.v1beta2.ExactDeviceRequest(
                     admin_access = True, 
                     allocation_mode = '', 
                     capacity = null, 

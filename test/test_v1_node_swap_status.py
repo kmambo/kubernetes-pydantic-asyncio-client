@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_node_swap_status import V1NodeSwapStatus
+from kubernetes_asyncio_pydantic.models.v1_node_swap_status import V1NodeSwapStatus
 
 class TestV1NodeSwapStatus(unittest.TestCase):
     """V1NodeSwapStatus unit test stubs"""

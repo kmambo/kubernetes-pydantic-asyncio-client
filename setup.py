@@ -20,7 +20,7 @@ from setuptools import setup, find_packages  # noqa: H301
 #
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
-NAME = "kubernetes_asyncio"
+NAME = "kubernetes_asyncio_pydantic"
 VERSION = "1.34.0"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
@@ -47,5 +47,5 @@ setup(
     long_description="""\
     merged spec
     """,  # noqa: E501
-    package_data={"kubernetes_asyncio": ["py.typed"]},
+    package_data={"kubernetes_asyncio_pydantic": ["py.typed"]},
 )

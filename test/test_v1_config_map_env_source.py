@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_config_map_env_source import V1ConfigMapEnvSource
+from kubernetes_asyncio_pydantic.models.v1_config_map_env_source import V1ConfigMapEnvSource
 
 class TestV1ConfigMapEnvSource(unittest.TestCase):
     """V1ConfigMapEnvSource unit test stubs"""

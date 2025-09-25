@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.storagemigration_api import StoragemigrationApi
+from kubernetes_asyncio_pydantic.api.storagemigration_api import StoragemigrationApi
 
 
 class TestStoragemigrationApi(unittest.IsolatedAsyncioTestCase):

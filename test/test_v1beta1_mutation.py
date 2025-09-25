@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1beta1_mutation import V1beta1Mutation
+from kubernetes_asyncio_pydantic.models.v1beta1_mutation import V1beta1Mutation
 
 class TestV1beta1Mutation(unittest.TestCase):
     """V1beta1Mutation unit test stubs"""
@@ -35,9 +35,9 @@ class TestV1beta1Mutation(unittest.TestCase):
         model = V1beta1Mutation()
         if include_optional:
             return V1beta1Mutation(
-                apply_configuration = kubernetes_asyncio.models.v1beta1/apply_configuration.v1beta1.ApplyConfiguration(
+                apply_configuration = kubernetes_asyncio_pydantic.models.v1beta1/apply_configuration.v1beta1.ApplyConfiguration(
                     expression = '', ),
-                json_patch = kubernetes_asyncio.models.v1beta1/json_patch.v1beta1.JSONPatch(
+                json_patch = kubernetes_asyncio_pydantic.models.v1beta1/json_patch.v1beta1.JSONPatch(
                     expression = '', ),
                 patch_type = ''
             )

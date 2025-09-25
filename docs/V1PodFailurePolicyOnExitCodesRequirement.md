@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_pod_failure_policy_on_exit_codes_requirement import V1PodFailurePolicyOnExitCodesRequirement
+from kubernetes_asyncio_pydantic.models.v1_pod_failure_policy_on_exit_codes_requirement import V1PodFailurePolicyOnExitCodesRequirement
 
 # TODO update the JSON string below
 json = "{}"

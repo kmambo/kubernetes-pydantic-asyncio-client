@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v2_horizontal_pod_autoscaler import V2HorizontalPodAutoscaler
+from kubernetes_asyncio_pydantic.models.v2_horizontal_pod_autoscaler import V2HorizontalPodAutoscaler
 
 # TODO update the JSON string below
 json = "{}"

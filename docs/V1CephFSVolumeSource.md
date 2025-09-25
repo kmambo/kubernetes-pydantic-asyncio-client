@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_ceph_fs_volume_source import V1CephFSVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_ceph_fs_volume_source import V1CephFSVolumeSource
 
 # TODO update the JSON string below
 json = "{}"

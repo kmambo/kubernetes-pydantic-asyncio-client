@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_policy_rules_with_subjects import V1PolicyRulesWithSubjects
+from kubernetes_asyncio_pydantic.models.v1_policy_rules_with_subjects import V1PolicyRulesWithSubjects
 
 class TestV1PolicyRulesWithSubjects(unittest.TestCase):
     """V1PolicyRulesWithSubjects unit test stubs"""

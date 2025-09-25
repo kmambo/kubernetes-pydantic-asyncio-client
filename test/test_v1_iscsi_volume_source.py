@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_iscsi_volume_source import V1ISCSIVolumeSource
+from kubernetes_asyncio_pydantic.models.v1_iscsi_volume_source import V1ISCSIVolumeSource
 
 class TestV1ISCSIVolumeSource(unittest.TestCase):
     """V1ISCSIVolumeSource unit test stubs"""
@@ -46,7 +46,7 @@ class TestV1ISCSIVolumeSource(unittest.TestCase):
                     ''
                     ],
                 read_only = True,
-                secret_ref = kubernetes_asyncio.models.v1/local_object_reference.v1.LocalObjectReference(
+                secret_ref = kubernetes_asyncio_pydantic.models.v1/local_object_reference.v1.LocalObjectReference(
                     name = '', ),
                 target_portal = ''
             )

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1alpha1_mutating_admission_policy_binding_list import V1alpha1MutatingAdmissionPolicyBindingList
+from kubernetes_asyncio_pydantic.models.v1alpha1_mutating_admission_policy_binding_list import V1alpha1MutatingAdmissionPolicyBindingList
 
 # TODO update the JSON string below
 json = "{}"

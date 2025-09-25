@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_ingress_port_status import V1IngressPortStatus
+from kubernetes_asyncio_pydantic.models.v1_ingress_port_status import V1IngressPortStatus
 
 class TestV1IngressPortStatus(unittest.TestCase):
     """V1IngressPortStatus unit test stubs"""

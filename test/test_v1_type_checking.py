@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_type_checking import V1TypeChecking
+from kubernetes_asyncio_pydantic.models.v1_type_checking import V1TypeChecking
 
 class TestV1TypeChecking(unittest.TestCase):
     """V1TypeChecking unit test stubs"""

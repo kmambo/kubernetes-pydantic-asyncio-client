@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_topology_selector_label_requirement import V1TopologySelectorLabelRequirement
+from kubernetes_asyncio_pydantic.models.v1_topology_selector_label_requirement import V1TopologySelectorLabelRequirement
 
 class TestV1TopologySelectorLabelRequirement(unittest.TestCase):
     """V1TopologySelectorLabelRequirement unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_custom_resource_subresources import V1CustomResourceSubresources
+from kubernetes_asyncio_pydantic.models.v1_custom_resource_subresources import V1CustomResourceSubresources
 
 class TestV1CustomResourceSubresources(unittest.TestCase):
     """V1CustomResourceSubresources unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1CustomResourceSubresources(unittest.TestCase):
         model = V1CustomResourceSubresources()
         if include_optional:
             return V1CustomResourceSubresources(
-                scale = kubernetes_asyncio.models.v1/custom_resource_subresource_scale.v1.CustomResourceSubresourceScale(
+                scale = kubernetes_asyncio_pydantic.models.v1/custom_resource_subresource_scale.v1.CustomResourceSubresourceScale(
                     label_selector_path = '', 
                     spec_replicas_path = '', 
                     status_replicas_path = '', ),

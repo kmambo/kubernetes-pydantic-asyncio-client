@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_secret_key_selector import V1SecretKeySelector
+from kubernetes_asyncio_pydantic.models.v1_secret_key_selector import V1SecretKeySelector
 
 class TestV1SecretKeySelector(unittest.TestCase):
     """V1SecretKeySelector unit test stubs"""

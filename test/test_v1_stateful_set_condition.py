@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_stateful_set_condition import V1StatefulSetCondition
+from kubernetes_asyncio_pydantic.models.v1_stateful_set_condition import V1StatefulSetCondition
 
 class TestV1StatefulSetCondition(unittest.TestCase):
     """V1StatefulSetCondition unit test stubs"""

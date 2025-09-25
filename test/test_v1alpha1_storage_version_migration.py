@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha1_storage_version_migration import V1alpha1StorageVersionMigration
+from kubernetes_asyncio_pydantic.models.v1alpha1_storage_version_migration import V1alpha1StorageVersionMigration
 
 class TestV1alpha1StorageVersionMigration(unittest.TestCase):
     """V1alpha1StorageVersionMigration unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1alpha1StorageVersionMigration(unittest.TestCase):
             return V1alpha1StorageVersionMigration(
                 api_version = '',
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/object_meta.v1.ObjectMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/object_meta.v1.ObjectMeta(
                     annotations = {
                         'key' : ''
                         }, 
@@ -63,10 +63,10 @@ class TestV1alpha1StorageVersionMigration(unittest.TestCase):
                     resource_version = '', 
                     self_link = '', 
                     uid = '', ),
-                spec = kubernetes_asyncio.models.v1alpha1/storage_version_migration_spec.v1alpha1.StorageVersionMigrationSpec(
+                spec = kubernetes_asyncio_pydantic.models.v1alpha1/storage_version_migration_spec.v1alpha1.StorageVersionMigrationSpec(
                     continue_token = '', 
                     resource = null, ),
-                status = kubernetes_asyncio.models.v1alpha1/storage_version_migration_status.v1alpha1.StorageVersionMigrationStatus(
+                status = kubernetes_asyncio_pydantic.models.v1alpha1/storage_version_migration_status.v1alpha1.StorageVersionMigrationStatus(
                     conditions = [
                         null
                         ], 

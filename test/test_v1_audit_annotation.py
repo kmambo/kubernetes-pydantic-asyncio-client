@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_audit_annotation import V1AuditAnnotation
+from kubernetes_asyncio_pydantic.models.v1_audit_annotation import V1AuditAnnotation
 
 class TestV1AuditAnnotation(unittest.TestCase):
     """V1AuditAnnotation unit test stubs"""

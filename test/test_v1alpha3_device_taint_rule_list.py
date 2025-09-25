@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1alpha3_device_taint_rule_list import V1alpha3DeviceTaintRuleList
+from kubernetes_asyncio_pydantic.models.v1alpha3_device_taint_rule_list import V1alpha3DeviceTaintRuleList
 
 class TestV1alpha3DeviceTaintRuleList(unittest.TestCase):
     """V1alpha3DeviceTaintRuleList unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1alpha3DeviceTaintRuleList(unittest.TestCase):
                     null
                     ],
                 kind = '',
-                metadata = kubernetes_asyncio.models.v1/list_meta.v1.ListMeta(
+                metadata = kubernetes_asyncio_pydantic.models.v1/list_meta.v1.ListMeta(
                     continue = '', 
                     remaining_item_count = 56, 
                     resource_version = '', 

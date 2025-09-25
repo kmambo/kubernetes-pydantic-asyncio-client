@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_token_review_status import V1TokenReviewStatus
+from kubernetes_asyncio_pydantic.models.v1_token_review_status import V1TokenReviewStatus
 
 class TestV1TokenReviewStatus(unittest.TestCase):
     """V1TokenReviewStatus unit test stubs"""
@@ -40,7 +40,7 @@ class TestV1TokenReviewStatus(unittest.TestCase):
                     ],
                 authenticated = True,
                 error = '',
-                user = kubernetes_asyncio.models.v1/user_info.v1.UserInfo(
+                user = kubernetes_asyncio_pydantic.models.v1/user_info.v1.UserInfo(
                     extra = {
                         'key' : [
                             ''

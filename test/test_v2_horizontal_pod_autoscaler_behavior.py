@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v2_horizontal_pod_autoscaler_behavior import V2HorizontalPodAutoscalerBehavior
+from kubernetes_asyncio_pydantic.models.v2_horizontal_pod_autoscaler_behavior import V2HorizontalPodAutoscalerBehavior
 
 class TestV2HorizontalPodAutoscalerBehavior(unittest.TestCase):
     """V2HorizontalPodAutoscalerBehavior unit test stubs"""
@@ -35,14 +35,14 @@ class TestV2HorizontalPodAutoscalerBehavior(unittest.TestCase):
         model = V2HorizontalPodAutoscalerBehavior()
         if include_optional:
             return V2HorizontalPodAutoscalerBehavior(
-                scale_down = kubernetes_asyncio.models.v2/hpa_scaling_rules.v2.HPAScalingRules(
+                scale_down = kubernetes_asyncio_pydantic.models.v2/hpa_scaling_rules.v2.HPAScalingRules(
                     policies = [
                         null
                         ], 
                     select_policy = '', 
                     stabilization_window_seconds = 56, 
                     tolerance = null, ),
-                scale_up = kubernetes_asyncio.models.v2/hpa_scaling_rules.v2.HPAScalingRules(
+                scale_up = kubernetes_asyncio_pydantic.models.v2/hpa_scaling_rules.v2.HPAScalingRules(
                     policies = [
                         null
                         ], 

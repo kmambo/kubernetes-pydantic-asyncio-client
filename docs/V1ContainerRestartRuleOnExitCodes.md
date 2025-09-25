@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from kubernetes_asyncio.models.v1_container_restart_rule_on_exit_codes import V1ContainerRestartRuleOnExitCodes
+from kubernetes_asyncio_pydantic.models.v1_container_restart_rule_on_exit_codes import V1ContainerRestartRuleOnExitCodes
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_volume_projection import V1VolumeProjection
+from kubernetes_asyncio_pydantic.models.v1_volume_projection import V1VolumeProjection
 
 class TestV1VolumeProjection(unittest.TestCase):
     """V1VolumeProjection unit test stubs"""
@@ -35,36 +35,36 @@ class TestV1VolumeProjection(unittest.TestCase):
         model = V1VolumeProjection()
         if include_optional:
             return V1VolumeProjection(
-                cluster_trust_bundle = kubernetes_asyncio.models.v1/cluster_trust_bundle_projection.v1.ClusterTrustBundleProjection(
+                cluster_trust_bundle = kubernetes_asyncio_pydantic.models.v1/cluster_trust_bundle_projection.v1.ClusterTrustBundleProjection(
                     label_selector = null, 
                     name = '', 
                     optional = True, 
                     path = '', 
                     signer_name = '', ),
-                config_map = kubernetes_asyncio.models.v1/config_map_projection.v1.ConfigMapProjection(
+                config_map = kubernetes_asyncio_pydantic.models.v1/config_map_projection.v1.ConfigMapProjection(
                     items = [
                         null
                         ], 
                     name = '', 
                     optional = True, ),
-                downward_api = kubernetes_asyncio.models.v1/downward_api_projection.v1.DownwardAPIProjection(
+                downward_api = kubernetes_asyncio_pydantic.models.v1/downward_api_projection.v1.DownwardAPIProjection(
                     items = [
                         null
                         ], ),
-                pod_certificate = kubernetes_asyncio.models.v1/pod_certificate_projection.v1.PodCertificateProjection(
+                pod_certificate = kubernetes_asyncio_pydantic.models.v1/pod_certificate_projection.v1.PodCertificateProjection(
                     certificate_chain_path = '', 
                     credential_bundle_path = '', 
                     key_path = '', 
                     key_type = '', 
                     max_expiration_seconds = 56, 
                     signer_name = '', ),
-                secret = kubernetes_asyncio.models.v1/secret_projection.v1.SecretProjection(
+                secret = kubernetes_asyncio_pydantic.models.v1/secret_projection.v1.SecretProjection(
                     items = [
                         null
                         ], 
                     name = '', 
                     optional = True, ),
-                service_account_token = kubernetes_asyncio.models.v1/service_account_token_projection.v1.ServiceAccountTokenProjection(
+                service_account_token = kubernetes_asyncio_pydantic.models.v1/service_account_token_projection.v1.ServiceAccountTokenProjection(
                     audience = '', 
                     expiration_seconds = 56, 
                     path = '', )

@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_env_var import V1EnvVar
+from kubernetes_asyncio_pydantic.models.v1_env_var import V1EnvVar
 
 class TestV1EnvVar(unittest.TestCase):
     """V1EnvVar unit test stubs"""
@@ -37,7 +37,7 @@ class TestV1EnvVar(unittest.TestCase):
             return V1EnvVar(
                 name = '',
                 value = '',
-                value_from = kubernetes_asyncio.models.v1/env_var_source.v1.EnvVarSource(
+                value_from = kubernetes_asyncio_pydantic.models.v1/env_var_source.v1.EnvVarSource(
                     config_map_key_ref = null, 
                     field_ref = null, 
                     file_key_ref = null, 

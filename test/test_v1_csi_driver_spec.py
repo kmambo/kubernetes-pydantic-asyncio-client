@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_csi_driver_spec import V1CSIDriverSpec
+from kubernetes_asyncio_pydantic.models.v1_csi_driver_spec import V1CSIDriverSpec
 
 class TestV1CSIDriverSpec(unittest.TestCase):
     """V1CSIDriverSpec unit test stubs"""

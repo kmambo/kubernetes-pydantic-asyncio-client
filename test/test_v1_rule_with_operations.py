@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_rule_with_operations import V1RuleWithOperations
+from kubernetes_asyncio_pydantic.models.v1_rule_with_operations import V1RuleWithOperations
 
 class TestV1RuleWithOperations(unittest.TestCase):
     """V1RuleWithOperations unit test stubs"""

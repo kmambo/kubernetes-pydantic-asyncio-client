@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_pod_failure_policy import V1PodFailurePolicy
+from kubernetes_asyncio_pydantic.models.v1_pod_failure_policy import V1PodFailurePolicy
 
 class TestV1PodFailurePolicy(unittest.TestCase):
     """V1PodFailurePolicy unit test stubs"""

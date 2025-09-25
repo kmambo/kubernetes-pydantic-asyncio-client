@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.api.well_known_api import WellKnownApi
+from kubernetes_asyncio_pydantic.api.well_known_api import WellKnownApi
 
 
 class TestWellKnownApi(unittest.IsolatedAsyncioTestCase):

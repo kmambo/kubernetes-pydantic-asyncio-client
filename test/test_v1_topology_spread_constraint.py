@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_topology_spread_constraint import V1TopologySpreadConstraint
+from kubernetes_asyncio_pydantic.models.v1_topology_spread_constraint import V1TopologySpreadConstraint
 
 class TestV1TopologySpreadConstraint(unittest.TestCase):
     """V1TopologySpreadConstraint unit test stubs"""
@@ -35,7 +35,7 @@ class TestV1TopologySpreadConstraint(unittest.TestCase):
         model = V1TopologySpreadConstraint()
         if include_optional:
             return V1TopologySpreadConstraint(
-                label_selector = kubernetes_asyncio.models.v1/label_selector.v1.LabelSelector(
+                label_selector = kubernetes_asyncio_pydantic.models.v1/label_selector.v1.LabelSelector(
                     match_expressions = [
                         null
                         ], 

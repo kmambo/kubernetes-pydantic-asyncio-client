@@ -14,7 +14,7 @@
 
 import unittest
 
-from kubernetes_asyncio.models.v1_resource_field_selector_divisor import V1ResourceFieldSelectorDivisor
+from kubernetes_asyncio_pydantic.models.v1_resource_field_selector_divisor import V1ResourceFieldSelectorDivisor
 
 class TestV1ResourceFieldSelectorDivisor(unittest.TestCase):
     """V1ResourceFieldSelectorDivisor unit test stubs"""

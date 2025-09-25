@@ -1,0 +1,7 @@
+(node:16767) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Validating spec (/Users/partho/kubernetes-python-client-project-root/kubernetes-client-gen-upstream/output/spec/apis__internal.apiserver.k8s.io__v1alpha1_openapi.json)
+Warnings: 
+	- Unused model: v1.WatchEvent
+
+[info] Spec has 1 recommendation(s).

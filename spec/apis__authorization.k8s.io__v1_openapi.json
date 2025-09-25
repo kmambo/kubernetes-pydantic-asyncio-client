@@ -928,7 +928,7 @@
   },
   "info": {
     "title": "Kubernetes",
-    "version": "1.34.0"
+    "version": "1.34.1"
   },
   "openapi": "3.0.0",
   "paths": {

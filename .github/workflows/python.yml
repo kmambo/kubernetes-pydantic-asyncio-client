@@ -2,8 +2,12 @@ name: Python - Test and build
 
 on:
   push:
+    paths-ignore:
+      - '.github/workflows/python.yml'
 
   pull_request:
+    paths-ignore:
+      - '.github/workflows/python.yml'
 
   workflow_dispatch:
     inputs:
@@ -95,7 +99,9 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v5
         with:
-          artifact-ids: ${{ needs.build.outputs.build_artifacts }}
+          artifact-ids: ${{ needs.build.outputs.artifact-id }}
+          name: dist
+          path: dist/
       - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'pypi' }}

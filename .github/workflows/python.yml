@@ -1,4 +1,4 @@
-name: Python - Test and build
+name: Python package - Test, build and (optionally) publish
 
 on:
   push:
@@ -25,7 +25,6 @@ on:
 jobs:
   build:
     name: Build distributions
-    run-name: Test and build package
     runs-on: ubuntu-latest
     environment:
       name: build

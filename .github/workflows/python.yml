@@ -2,12 +2,8 @@ name: Python - Test and build
 
 on:
   push:
-    paths-ignore:
-      - '.github/workflows/python.yml'
 
   pull_request:
-    paths-ignore:
-      - '.github/workflows/python.yml'
 
   workflow_dispatch:
     inputs:
@@ -29,13 +25,15 @@ on:
 jobs:
   build:
     name: Build distributions
+    run-name: Test and build package
     runs-on: ubuntu-latest
+    environment:
+      name: build
     permissions:
       contents: read
     strategy:
       matrix:
         python-version: [ "3.13" ]
-        poetry-version: [ "latest" ]
       fail-fast: false
     outputs:
       build_artifacts: ${{ steps.artifact-upload-step.outputs.artifact-id }}
@@ -45,42 +43,42 @@ jobs:
         with:
           ref: ${{ github.event_name == 'workflow_dispatch' &&  inputs.tag_name || '' }}
       - name: Set up Python ${{ matrix.python-version }}
+        id: setup-python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: Setup poetry
-        uses: abatilo/actions-poetry@v4
+        uses: snok/install-poetry@v1
         with:
-          poetry-version: ${{ matrix.poetry-version }}
-      - name: Setup a local virtual environment (if no poetry.toml file)
-        run: |
-          poetry config virtualenvs.create true --local
-          poetry config virtualenvs.in-project true --local
+          version: ${{ vars.POETRY_VERSION }}
+          virtualenvs-in-project: true
+          virtualenvs-create: true
       - uses: actions/cache@v4
         name: Define a cache for the virtual environment based on the dependencies lock file
         with:
           path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
+          key: venv-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - name: Install the project dependencies
-        run: poetry install --no-root
+        run: poetry install --no-root --sync --no-interaction
       - name: Test with pytest (with coverage)
         run: |
           poetry run pytest \
             --cov=kubernetes_asyncio \
-            --cov-report=xml:coverage-${{ matrix.python-version }}.xml \
-            --cov-report html:htmlcov-${{ matrix.python-version }}
+            --cov-report=xml:coverage-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }} \
+            --cov-report html:htmlcov-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - name: Upload pytest test results
         uses: actions/upload-artifact@v4
         with:
           name: pytest-results-${{ matrix.python-version }}
           path: |
-            coverage-${{ matrix.python-version }}.xml
-            htmlcov-${{ matrix.python-version }}
+            coverage-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}.xml
+            htmlcov-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
           # Use always() to always run this step to publish test results when there are test failures
         if: ${{ always() }}
-      - name: Build sdist
+      - name: Build package
         run: poetry build --clean
       - name: artifact-upload-step
+        id: artifact-upload-step
         uses: actions/upload-artifact@v4
         with:
           path: dist/
@@ -99,7 +97,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v5
         with:
-          artifact-ids: ${{ needs.build.outputs.artifact-id }}
+          artifact-ids: ${{ needs.build.artifact-upload-step.outputs.artifact-id }}
           name: dist
           path: dist/
       - name: Publish package distributions to PyPI

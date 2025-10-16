@@ -84,7 +84,6 @@ class TestV1Pod(unittest.TestCase):
                     host_pid = True, 
                     host_users = True, 
                     hostname = '', 
-                    hostname_override = '', 
                     image_pull_secrets = [
                         null
                         ], 
@@ -141,7 +140,6 @@ class TestV1Pod(unittest.TestCase):
                     ephemeral_container_statuses = [
                         null
                         ], 
-                    extended_resource_claim_status = null, 
                     host_ip = '', 
                     host_ips = [
                         null
@@ -151,7 +149,6 @@ class TestV1Pod(unittest.TestCase):
                         ], 
                     message = '', 
                     nominated_node_name = '', 
-                    observed_generation = 56, 
                     phase = '', 
                     pod_ip = '', 
                     pod_ips = [

@@ -1,4 +1,4 @@
-(node:25486) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(node:12375) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 Validating spec (/Users/partho/kubernetes-python-client-project-root/kubernetes-client-gen-upstream/output/spec/apis__authorization.k8s.io_openapi.json)
 No validation issues detected.

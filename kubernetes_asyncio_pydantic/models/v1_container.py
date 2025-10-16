@@ -26,9 +26,6 @@ from kubernetes_asyncio_pydantic.models.v1_container_port import V1ContainerPort
 from kubernetes_asyncio_pydantic.models.v1_container_resize_policy import (
     V1ContainerResizePolicy,
 )
-from kubernetes_asyncio_pydantic.models.v1_container_restart_rule import (
-    V1ContainerRestartRule,
-)
 from kubernetes_asyncio_pydantic.models.v1_env_from_source import V1EnvFromSource
 from kubernetes_asyncio_pydantic.models.v1_env_var import V1EnvVar
 from kubernetes_asyncio_pydantic.models.v1_lifecycle import V1Lifecycle
@@ -60,7 +57,7 @@ class V1Container(BaseModel):
     )
     env_from: Optional[List[V1EnvFromSource]] = Field(
         default=None,
-        description="List of sources to populate environment variables in the container. The keys defined within a source may consist of any printable ASCII characters except '='. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.",
+        description="List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.",
         alias="envFrom",
     )
     image: Optional[StrictStr] = Field(
@@ -104,13 +101,8 @@ class V1Container(BaseModel):
     )
     restart_policy: Optional[StrictStr] = Field(
         default=None,
-        description='RestartPolicy defines the restart behavior of individual containers in a pod. This overrides the pod-level restart policy. When this field is not specified, the restart behavior is defined by the Pod\'s restart policy and the container type. Additionally, setting the RestartPolicy as "Always" for the init container will have the following effect: this init container will be continually restarted on exit until all regular containers have terminated. Once all regular containers have completed, all init containers with restartPolicy "Always" will be shut down. This lifecycle differs from normal init containers and is often referred to as a "sidecar" container. Although this init container still starts in the init container sequence, it does not wait for the container to complete before proceeding to the next init container. Instead, the next init container starts immediately after this init container is started, or after any startupProbe has successfully completed.',
+        description='RestartPolicy defines the restart behavior of individual containers in a pod. This field may only be set for init containers, and the only allowed value is "Always". For non-init containers or when this field is not specified, the restart behavior is defined by the Pod\'s restart policy and the container type. Setting the RestartPolicy as "Always" for the init container will have the following effect: this init container will be continually restarted on exit until all regular containers have terminated. Once all regular containers have completed, all init containers with restartPolicy "Always" will be shut down. This lifecycle differs from normal init containers and is often referred to as a "sidecar" container. Although this init container still starts in the init container sequence, it does not wait for the container to complete before proceeding to the next init container. Instead, the next init container starts immediately after this init container is started, or after any startupProbe has successfully completed.',
         alias="restartPolicy",
-    )
-    restart_policy_rules: Optional[List[V1ContainerRestartRule]] = Field(
-        default=None,
-        description="Represents a list of rules to be checked to determine if the container should be restarted on exit. The rules are evaluated in order. Once a rule matches a container exit condition, the remaining rules are ignored. If no rule matches the container exit condition, the Container-level restart policy determines the whether the container is restarted or not. Constraints on the rules: - At most 20 rules are allowed. - Rules can have the same action. - Identical rules are not forbidden in validations. When rules are specified, container MUST set RestartPolicy explicitly even it if matches the Pod's RestartPolicy.",
-        alias="restartPolicyRules",
     )
     security_context: Optional[V1SecurityContext] = Field(
         default=None,
@@ -175,7 +167,6 @@ class V1Container(BaseModel):
         "resizePolicy",
         "resources",
         "restartPolicy",
-        "restartPolicyRules",
         "securityContext",
         "startupProbe",
         "stdin",
@@ -265,13 +256,6 @@ class V1Container(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of resources
         if self.resources:
             _dict["resources"] = self.resources.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in restart_policy_rules (list)
-        _items = []
-        if self.restart_policy_rules:
-            for _item_restart_policy_rules in self.restart_policy_rules:
-                if _item_restart_policy_rules:
-                    _items.append(_item_restart_policy_rules.to_dict())
-            _dict["restartPolicyRules"] = _items
         # override the default output from pydantic by calling `to_dict()` of security_context
         if self.security_context:
             _dict["securityContext"] = self.security_context.to_dict()
@@ -354,14 +338,6 @@ class V1Container(BaseModel):
                     else None
                 ),
                 "restartPolicy": obj.get("restartPolicy"),
-                "restartPolicyRules": (
-                    [
-                        V1ContainerRestartRule.from_dict(_item)
-                        for _item in obj["restartPolicyRules"]
-                    ]
-                    if obj.get("restartPolicyRules") is not None
-                    else None
-                ),
                 "securityContext": (
                     V1SecurityContext.from_dict(obj["securityContext"])
                     if obj.get("securityContext") is not None

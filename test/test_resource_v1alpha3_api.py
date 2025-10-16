@@ -26,20 +26,74 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
     async def asyncTearDown(self) -> None:
         await self.api.api_client.close()
 
-    async def test_create_device_taint_rule(self) -> None:
-        """Test case for create_device_taint_rule
+    async def test_create_device_class(self) -> None:
+        """Test case for create_device_class
 
         """
         pass
 
-    async def test_delete_collection_device_taint_rule(self) -> None:
-        """Test case for delete_collection_device_taint_rule
+    async def test_create_namespaced_resource_claim(self) -> None:
+        """Test case for create_namespaced_resource_claim
 
         """
         pass
 
-    async def test_delete_device_taint_rule(self) -> None:
-        """Test case for delete_device_taint_rule
+    async def test_create_namespaced_resource_claim_template(self) -> None:
+        """Test case for create_namespaced_resource_claim_template
+
+        """
+        pass
+
+    async def test_create_resource_slice(self) -> None:
+        """Test case for create_resource_slice
+
+        """
+        pass
+
+    async def test_delete_collection_device_class(self) -> None:
+        """Test case for delete_collection_device_class
+
+        """
+        pass
+
+    async def test_delete_collection_namespaced_resource_claim(self) -> None:
+        """Test case for delete_collection_namespaced_resource_claim
+
+        """
+        pass
+
+    async def test_delete_collection_namespaced_resource_claim_template(self) -> None:
+        """Test case for delete_collection_namespaced_resource_claim_template
+
+        """
+        pass
+
+    async def test_delete_collection_resource_slice(self) -> None:
+        """Test case for delete_collection_resource_slice
+
+        """
+        pass
+
+    async def test_delete_device_class(self) -> None:
+        """Test case for delete_device_class
+
+        """
+        pass
+
+    async def test_delete_namespaced_resource_claim(self) -> None:
+        """Test case for delete_namespaced_resource_claim
+
+        """
+        pass
+
+    async def test_delete_namespaced_resource_claim_template(self) -> None:
+        """Test case for delete_namespaced_resource_claim_template
+
+        """
+        pass
+
+    async def test_delete_resource_slice(self) -> None:
+        """Test case for delete_resource_slice
 
         """
         pass
@@ -50,26 +104,128 @@ class TestResourceV1alpha3Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_list_device_taint_rule(self) -> None:
-        """Test case for list_device_taint_rule
+    async def test_list_device_class(self) -> None:
+        """Test case for list_device_class
 
         """
         pass
 
-    async def test_patch_device_taint_rule(self) -> None:
-        """Test case for patch_device_taint_rule
+    async def test_list_namespaced_resource_claim(self) -> None:
+        """Test case for list_namespaced_resource_claim
 
         """
         pass
 
-    async def test_read_device_taint_rule(self) -> None:
-        """Test case for read_device_taint_rule
+    async def test_list_namespaced_resource_claim_template(self) -> None:
+        """Test case for list_namespaced_resource_claim_template
 
         """
         pass
 
-    async def test_replace_device_taint_rule(self) -> None:
-        """Test case for replace_device_taint_rule
+    async def test_list_resource_claim_for_all_namespaces(self) -> None:
+        """Test case for list_resource_claim_for_all_namespaces
+
+        """
+        pass
+
+    async def test_list_resource_claim_template_for_all_namespaces(self) -> None:
+        """Test case for list_resource_claim_template_for_all_namespaces
+
+        """
+        pass
+
+    async def test_list_resource_slice(self) -> None:
+        """Test case for list_resource_slice
+
+        """
+        pass
+
+    async def test_patch_device_class(self) -> None:
+        """Test case for patch_device_class
+
+        """
+        pass
+
+    async def test_patch_namespaced_resource_claim(self) -> None:
+        """Test case for patch_namespaced_resource_claim
+
+        """
+        pass
+
+    async def test_patch_namespaced_resource_claim_status(self) -> None:
+        """Test case for patch_namespaced_resource_claim_status
+
+        """
+        pass
+
+    async def test_patch_namespaced_resource_claim_template(self) -> None:
+        """Test case for patch_namespaced_resource_claim_template
+
+        """
+        pass
+
+    async def test_patch_resource_slice(self) -> None:
+        """Test case for patch_resource_slice
+
+        """
+        pass
+
+    async def test_read_device_class(self) -> None:
+        """Test case for read_device_class
+
+        """
+        pass
+
+    async def test_read_namespaced_resource_claim(self) -> None:
+        """Test case for read_namespaced_resource_claim
+
+        """
+        pass
+
+    async def test_read_namespaced_resource_claim_status(self) -> None:
+        """Test case for read_namespaced_resource_claim_status
+
+        """
+        pass
+
+    async def test_read_namespaced_resource_claim_template(self) -> None:
+        """Test case for read_namespaced_resource_claim_template
+
+        """
+        pass
+
+    async def test_read_resource_slice(self) -> None:
+        """Test case for read_resource_slice
+
+        """
+        pass
+
+    async def test_replace_device_class(self) -> None:
+        """Test case for replace_device_class
+
+        """
+        pass
+
+    async def test_replace_namespaced_resource_claim(self) -> None:
+        """Test case for replace_namespaced_resource_claim
+
+        """
+        pass
+
+    async def test_replace_namespaced_resource_claim_status(self) -> None:
+        """Test case for replace_namespaced_resource_claim_status
+
+        """
+        pass
+
+    async def test_replace_namespaced_resource_claim_template(self) -> None:
+        """Test case for replace_namespaced_resource_claim_template
+
+        """
+        pass
+
+    async def test_replace_resource_slice(self) -> None:
+        """Test case for replace_resource_slice
 
         """
         pass

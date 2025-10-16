@@ -76,8 +76,7 @@ class TestV1ReplicaSet(unittest.TestCase):
                     fully_labeled_replicas = 56, 
                     observed_generation = 56, 
                     ready_replicas = 56, 
-                    replicas = 56, 
-                    terminating_replicas = 56, )
+                    replicas = 56, )
             )
         else:
             return V1ReplicaSet(

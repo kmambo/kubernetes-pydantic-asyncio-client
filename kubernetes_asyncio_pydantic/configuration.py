@@ -191,7 +191,7 @@ class Configuration:
         debug: Optional[bool] = None,
     ) -> None:
         """Constructor"""
-        self._base_path = "http://localhost:8080" if host is None else host
+        self._base_path = "http://localhost" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -506,7 +506,7 @@ class Configuration:
             "OS: {env}\n"
             "Python Version: {pyversion}\n"
             "Version of the API: 1.0.0\n"
-            "SDK Package Version: 1.34.1".format(
+            "SDK Package Version: 32.1.0".format(
                 env=sys.platform, pyversion=sys.version
             )
         )
@@ -518,7 +518,7 @@ class Configuration:
         """
         return [
             {
-                "url": "http://localhost:8080",
+                "url": "",
                 "description": "No description provided",
             }
         ]

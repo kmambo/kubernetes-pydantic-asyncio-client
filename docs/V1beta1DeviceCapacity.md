@@ -6,7 +6,6 @@ DeviceCapacity describes a quantity associated with a device.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**request_policy** | [**V1beta1CapacityRequestPolicy**](V1beta1CapacityRequestPolicy.md) | RequestPolicy defines how this DeviceCapacity must be consumed when the device is allowed to be shared by multiple allocations.  The Device must have allowMultipleAllocations set to true in order to set a requestPolicy.  If unset, capacity requests are unconstrained: requests can consume any amount of capacity, as long as the total consumed across all allocations does not exceed the device&#39;s defined capacity. If request is also unset, default is the full capacity value. | [optional] 
 **value** | [**V1beta1DeviceCapacityValue**](V1beta1DeviceCapacityValue.md) |  | 
 
 ## Example

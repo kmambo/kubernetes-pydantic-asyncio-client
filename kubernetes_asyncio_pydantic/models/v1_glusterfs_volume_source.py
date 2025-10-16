@@ -29,7 +29,7 @@ class V1GlusterfsVolumeSource(BaseModel):
     """  # noqa: E501
 
     endpoints: StrictStr = Field(
-        description="endpoints is the endpoint name that details Glusterfs topology."
+        description="endpoints is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"
     )
     path: StrictStr = Field(
         description="path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod"

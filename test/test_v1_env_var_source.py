@@ -42,11 +42,6 @@ class TestV1EnvVarSource(unittest.TestCase):
                 field_ref = kubernetes_asyncio_pydantic.models.v1/object_field_selector.v1.ObjectFieldSelector(
                     api_version = '', 
                     field_path = '', ),
-                file_key_ref = kubernetes_asyncio_pydantic.models.v1/file_key_selector.v1.FileKeySelector(
-                    key = '', 
-                    optional = True, 
-                    path = '', 
-                    volume_name = '', ),
                 resource_field_ref = kubernetes_asyncio_pydantic.models.v1/resource_field_selector.v1.ResourceFieldSelector(
                     container_name = '', 
                     divisor = null, 

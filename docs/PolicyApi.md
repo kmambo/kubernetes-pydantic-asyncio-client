@@ -1,6 +1,6 @@
 # kubernetes_asyncio_pydantic.PolicyApi
 
-All URIs are relative to *http://localhost:8080*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,10 +21,10 @@ from kubernetes_asyncio_pydantic.models.v1_api_group import V1APIGroup
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 

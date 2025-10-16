@@ -26,38 +26,38 @@ class TestAdmissionregistrationV1beta1Api(unittest.IsolatedAsyncioTestCase):
     async def asyncTearDown(self) -> None:
         await self.api.api_client.close()
 
-    async def test_create_mutating_admission_policy(self) -> None:
-        """Test case for create_mutating_admission_policy
+    async def test_create_validating_admission_policy(self) -> None:
+        """Test case for create_validating_admission_policy
 
         """
         pass
 
-    async def test_create_mutating_admission_policy_binding(self) -> None:
-        """Test case for create_mutating_admission_policy_binding
+    async def test_create_validating_admission_policy_binding(self) -> None:
+        """Test case for create_validating_admission_policy_binding
 
         """
         pass
 
-    async def test_delete_collection_mutating_admission_policy(self) -> None:
-        """Test case for delete_collection_mutating_admission_policy
+    async def test_delete_collection_validating_admission_policy(self) -> None:
+        """Test case for delete_collection_validating_admission_policy
 
         """
         pass
 
-    async def test_delete_collection_mutating_admission_policy_binding(self) -> None:
-        """Test case for delete_collection_mutating_admission_policy_binding
+    async def test_delete_collection_validating_admission_policy_binding(self) -> None:
+        """Test case for delete_collection_validating_admission_policy_binding
 
         """
         pass
 
-    async def test_delete_mutating_admission_policy(self) -> None:
-        """Test case for delete_mutating_admission_policy
+    async def test_delete_validating_admission_policy(self) -> None:
+        """Test case for delete_validating_admission_policy
 
         """
         pass
 
-    async def test_delete_mutating_admission_policy_binding(self) -> None:
-        """Test case for delete_mutating_admission_policy_binding
+    async def test_delete_validating_admission_policy_binding(self) -> None:
+        """Test case for delete_validating_admission_policy_binding
 
         """
         pass
@@ -68,50 +68,68 @@ class TestAdmissionregistrationV1beta1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_list_mutating_admission_policy(self) -> None:
-        """Test case for list_mutating_admission_policy
+    async def test_list_validating_admission_policy(self) -> None:
+        """Test case for list_validating_admission_policy
 
         """
         pass
 
-    async def test_list_mutating_admission_policy_binding(self) -> None:
-        """Test case for list_mutating_admission_policy_binding
+    async def test_list_validating_admission_policy_binding(self) -> None:
+        """Test case for list_validating_admission_policy_binding
 
         """
         pass
 
-    async def test_patch_mutating_admission_policy(self) -> None:
-        """Test case for patch_mutating_admission_policy
+    async def test_patch_validating_admission_policy(self) -> None:
+        """Test case for patch_validating_admission_policy
 
         """
         pass
 
-    async def test_patch_mutating_admission_policy_binding(self) -> None:
-        """Test case for patch_mutating_admission_policy_binding
+    async def test_patch_validating_admission_policy_binding(self) -> None:
+        """Test case for patch_validating_admission_policy_binding
 
         """
         pass
 
-    async def test_read_mutating_admission_policy(self) -> None:
-        """Test case for read_mutating_admission_policy
+    async def test_patch_validating_admission_policy_status(self) -> None:
+        """Test case for patch_validating_admission_policy_status
 
         """
         pass
 
-    async def test_read_mutating_admission_policy_binding(self) -> None:
-        """Test case for read_mutating_admission_policy_binding
+    async def test_read_validating_admission_policy(self) -> None:
+        """Test case for read_validating_admission_policy
 
         """
         pass
 
-    async def test_replace_mutating_admission_policy(self) -> None:
-        """Test case for replace_mutating_admission_policy
+    async def test_read_validating_admission_policy_binding(self) -> None:
+        """Test case for read_validating_admission_policy_binding
 
         """
         pass
 
-    async def test_replace_mutating_admission_policy_binding(self) -> None:
-        """Test case for replace_mutating_admission_policy_binding
+    async def test_read_validating_admission_policy_status(self) -> None:
+        """Test case for read_validating_admission_policy_status
+
+        """
+        pass
+
+    async def test_replace_validating_admission_policy(self) -> None:
+        """Test case for replace_validating_admission_policy
+
+        """
+        pass
+
+    async def test_replace_validating_admission_policy_binding(self) -> None:
+        """Test case for replace_validating_admission_policy_binding
+
+        """
+        pass
+
+    async def test_replace_validating_admission_policy_status(self) -> None:
+        """Test case for replace_validating_admission_policy_status
 
         """
         pass

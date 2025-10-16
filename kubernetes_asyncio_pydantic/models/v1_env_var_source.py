@@ -25,7 +25,6 @@ from typing_extensions import Self
 from kubernetes_asyncio_pydantic.models.v1_config_map_key_selector import (
     V1ConfigMapKeySelector,
 )
-from kubernetes_asyncio_pydantic.models.v1_file_key_selector import V1FileKeySelector
 from kubernetes_asyncio_pydantic.models.v1_object_field_selector import (
     V1ObjectFieldSelector,
 )
@@ -52,11 +51,6 @@ class V1EnvVarSource(BaseModel):
         description="Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.",
         alias="fieldRef",
     )
-    file_key_ref: Optional[V1FileKeySelector] = Field(
-        default=None,
-        description="FileKeyRef selects a key of the env file. Requires the EnvFiles feature gate to be enabled.",
-        alias="fileKeyRef",
-    )
     resource_field_ref: Optional[V1ResourceFieldSelector] = Field(
         default=None,
         description="Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.",
@@ -70,7 +64,6 @@ class V1EnvVarSource(BaseModel):
     __properties: ClassVar[List[str]] = [
         "configMapKeyRef",
         "fieldRef",
-        "fileKeyRef",
         "resourceFieldRef",
         "secretKeyRef",
     ]
@@ -118,9 +111,6 @@ class V1EnvVarSource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of field_ref
         if self.field_ref:
             _dict["fieldRef"] = self.field_ref.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of file_key_ref
-        if self.file_key_ref:
-            _dict["fileKeyRef"] = self.file_key_ref.to_dict()
         # override the default output from pydantic by calling `to_dict()` of resource_field_ref
         if self.resource_field_ref:
             _dict["resourceFieldRef"] = self.resource_field_ref.to_dict()
@@ -148,11 +138,6 @@ class V1EnvVarSource(BaseModel):
                 "fieldRef": (
                     V1ObjectFieldSelector.from_dict(obj["fieldRef"])
                     if obj.get("fieldRef") is not None
-                    else None
-                ),
-                "fileKeyRef": (
-                    V1FileKeySelector.from_dict(obj["fileKeyRef"])
-                    if obj.get("fileKeyRef") is not None
                     else None
                 ),
                 "resourceFieldRef": (

@@ -1,6 +1,6 @@
 # kubernetes_asyncio_pydantic.NetworkingV1beta1Api
 
-All URIs are relative to *http://localhost:8080*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -38,10 +38,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_ip_address import V1beta1IPAddre
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -114,10 +114,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -191,10 +191,10 @@ from kubernetes_asyncio_pydantic.models.v1_status import V1Status
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -286,10 +286,10 @@ from kubernetes_asyncio_pydantic.models.v1_status import V1Status
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -381,10 +381,10 @@ from kubernetes_asyncio_pydantic.models.v1_status import V1Status
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -463,10 +463,10 @@ from kubernetes_asyncio_pydantic.models.v1_status import V1Status
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -544,10 +544,10 @@ from kubernetes_asyncio_pydantic.models.v1_api_resource_list import V1APIResourc
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -606,10 +606,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_ip_address_list import V1beta1IP
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -692,10 +692,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr_list import V1beta1
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -778,10 +778,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_ip_address import V1beta1IPAddre
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -857,10 +857,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -936,10 +936,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -1015,10 +1015,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_ip_address import V1beta1IPAddre
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -1083,10 +1083,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -1151,10 +1151,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -1219,10 +1219,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_ip_address import V1beta1IPAddre
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -1296,10 +1296,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 
@@ -1373,10 +1373,10 @@ from kubernetes_asyncio_pydantic.models.v1beta1_service_cidr import V1beta1Servi
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 

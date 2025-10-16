@@ -32,12 +32,6 @@ class TestCertificatesV1alpha1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_create_namespaced_pod_certificate_request(self) -> None:
-        """Test case for create_namespaced_pod_certificate_request
-
-        """
-        pass
-
     async def test_delete_cluster_trust_bundle(self) -> None:
         """Test case for delete_cluster_trust_bundle
 
@@ -46,18 +40,6 @@ class TestCertificatesV1alpha1Api(unittest.IsolatedAsyncioTestCase):
 
     async def test_delete_collection_cluster_trust_bundle(self) -> None:
         """Test case for delete_collection_cluster_trust_bundle
-
-        """
-        pass
-
-    async def test_delete_collection_namespaced_pod_certificate_request(self) -> None:
-        """Test case for delete_collection_namespaced_pod_certificate_request
-
-        """
-        pass
-
-    async def test_delete_namespaced_pod_certificate_request(self) -> None:
-        """Test case for delete_namespaced_pod_certificate_request
 
         """
         pass
@@ -74,32 +56,8 @@ class TestCertificatesV1alpha1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_list_namespaced_pod_certificate_request(self) -> None:
-        """Test case for list_namespaced_pod_certificate_request
-
-        """
-        pass
-
-    async def test_list_pod_certificate_request_for_all_namespaces(self) -> None:
-        """Test case for list_pod_certificate_request_for_all_namespaces
-
-        """
-        pass
-
     async def test_patch_cluster_trust_bundle(self) -> None:
         """Test case for patch_cluster_trust_bundle
-
-        """
-        pass
-
-    async def test_patch_namespaced_pod_certificate_request(self) -> None:
-        """Test case for patch_namespaced_pod_certificate_request
-
-        """
-        pass
-
-    async def test_patch_namespaced_pod_certificate_request_status(self) -> None:
-        """Test case for patch_namespaced_pod_certificate_request_status
 
         """
         pass
@@ -110,32 +68,8 @@ class TestCertificatesV1alpha1Api(unittest.IsolatedAsyncioTestCase):
         """
         pass
 
-    async def test_read_namespaced_pod_certificate_request(self) -> None:
-        """Test case for read_namespaced_pod_certificate_request
-
-        """
-        pass
-
-    async def test_read_namespaced_pod_certificate_request_status(self) -> None:
-        """Test case for read_namespaced_pod_certificate_request_status
-
-        """
-        pass
-
     async def test_replace_cluster_trust_bundle(self) -> None:
         """Test case for replace_cluster_trust_bundle
-
-        """
-        pass
-
-    async def test_replace_namespaced_pod_certificate_request(self) -> None:
-        """Test case for replace_namespaced_pod_certificate_request
-
-        """
-        pass
-
-    async def test_replace_namespaced_pod_certificate_request_status(self) -> None:
-        """Test case for replace_namespaced_pod_certificate_request_status
 
         """
         pass

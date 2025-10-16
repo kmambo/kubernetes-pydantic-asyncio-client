@@ -20,15 +20,12 @@ import re  # noqa: F401
 from datetime import datetime
 from typing import Any, ClassVar, Dict, List, Optional, Set
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing_extensions import Self
 
 from kubernetes_asyncio_pydantic.models.v1_container_status import V1ContainerStatus
 from kubernetes_asyncio_pydantic.models.v1_host_ip import V1HostIP
 from kubernetes_asyncio_pydantic.models.v1_pod_condition import V1PodCondition
-from kubernetes_asyncio_pydantic.models.v1_pod_extended_resource_claim_status import (
-    V1PodExtendedResourceClaimStatus,
-)
 from kubernetes_asyncio_pydantic.models.v1_pod_ip import V1PodIP
 from kubernetes_asyncio_pydantic.models.v1_pod_resource_claim_status import (
     V1PodResourceClaimStatus,
@@ -54,11 +51,6 @@ class V1PodStatus(BaseModel):
         description="Statuses for any ephemeral containers that have run in this pod. Each ephemeral container in the pod should have at most one status in this list, and all statuses should be for containers in the pod. However this is not enforced. If a status for a non-existent container is present in the list, or the list has duplicate names, the behavior of various Kubernetes components is not defined and those statuses might be ignored. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status",
         alias="ephemeralContainerStatuses",
     )
-    extended_resource_claim_status: Optional[V1PodExtendedResourceClaimStatus] = Field(
-        default=None,
-        description="Status of extended resource claim backed by DRA.",
-        alias="extendedResourceClaimStatus",
-    )
     host_ip: Optional[StrictStr] = Field(
         default=None,
         description="hostIP holds the IP address of the host to which the pod is assigned. Empty if the pod has not started yet. A pod can be assigned to a node that has a problem in kubelet which in turns mean that HostIP will not be updated even if there is a node is assigned to pod",
@@ -82,11 +74,6 @@ class V1PodStatus(BaseModel):
         default=None,
         description="nominatedNodeName is set only when this pod preempts other pods on the node, but it cannot be scheduled right away as preemption victims receive their graceful termination periods. This field does not guarantee that the pod will be scheduled on this node. Scheduler may decide to place the pod elsewhere if other nodes become available sooner. Scheduler may also decide to give the resources on this node to a higher priority pod that is created after preemption. As a result, this field may be different than PodSpec.nodeName when the pod is scheduled.",
         alias="nominatedNodeName",
-    )
-    observed_generation: Optional[StrictInt] = Field(
-        default=None,
-        description="If set, this represents the .metadata.generation that the pod status was set based upon. This is an alpha field. Enable PodObservedGenerationTracking to be able to use this field.",
-        alias="observedGeneration",
     )
     phase: Optional[StrictStr] = Field(
         default=None,
@@ -113,7 +100,7 @@ class V1PodStatus(BaseModel):
     )
     resize: Optional[StrictStr] = Field(
         default=None,
-        description='Status of resources resize desired for pod\'s containers. It is empty if no resources resize is pending. Any changes to container resources will automatically set this to "Proposed" Deprecated: Resize status is moved to two pod conditions PodResizePending and PodResizeInProgress. PodResizePending will track states where the spec has been resized, but the Kubelet has not yet allocated the resources. PodResizeInProgress will track in-progress resizes, and should be present whenever allocated resources != acknowledged resources.',
+        description='Status of resources resize desired for pod\'s containers. It is empty if no resources resize is pending. Any changes to container resources will automatically set this to "Proposed"',
     )
     resource_claim_statuses: Optional[List[V1PodResourceClaimStatus]] = Field(
         default=None,
@@ -129,13 +116,11 @@ class V1PodStatus(BaseModel):
         "conditions",
         "containerStatuses",
         "ephemeralContainerStatuses",
-        "extendedResourceClaimStatus",
         "hostIP",
         "hostIPs",
         "initContainerStatuses",
         "message",
         "nominatedNodeName",
-        "observedGeneration",
         "phase",
         "podIP",
         "podIPs",
@@ -204,11 +189,6 @@ class V1PodStatus(BaseModel):
                 if _item_ephemeral_container_statuses:
                     _items.append(_item_ephemeral_container_statuses.to_dict())
             _dict["ephemeralContainerStatuses"] = _items
-        # override the default output from pydantic by calling `to_dict()` of extended_resource_claim_status
-        if self.extended_resource_claim_status:
-            _dict["extendedResourceClaimStatus"] = (
-                self.extended_resource_claim_status.to_dict()
-            )
         # override the default output from pydantic by calling `to_dict()` of each item in host_ips (list)
         _items = []
         if self.host_ips:
@@ -271,13 +251,6 @@ class V1PodStatus(BaseModel):
                     if obj.get("ephemeralContainerStatuses") is not None
                     else None
                 ),
-                "extendedResourceClaimStatus": (
-                    V1PodExtendedResourceClaimStatus.from_dict(
-                        obj["extendedResourceClaimStatus"]
-                    )
-                    if obj.get("extendedResourceClaimStatus") is not None
-                    else None
-                ),
                 "hostIP": obj.get("hostIP"),
                 "hostIPs": (
                     [V1HostIP.from_dict(_item) for _item in obj["hostIPs"]]
@@ -294,7 +267,6 @@ class V1PodStatus(BaseModel):
                 ),
                 "message": obj.get("message"),
                 "nominatedNodeName": obj.get("nominatedNodeName"),
-                "observedGeneration": obj.get("observedGeneration"),
                 "phase": obj.get("phase"),
                 "podIP": obj.get("podIP"),
                 "podIPs": (

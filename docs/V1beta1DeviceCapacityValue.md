@@ -1,6 +1,6 @@
 # V1beta1DeviceCapacityValue
 
-Value defines how much of a certain capacity that device has.  This field reflects the fixed total capacity and does not change. The consumed amount is tracked separately by scheduler and does not affect this value.
+Value defines how much of a certain device capacity is available.
 
 ## Properties
 

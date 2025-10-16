@@ -1,6 +1,6 @@
 # kubernetes_asyncio_pydantic.VersionApi
 
-All URIs are relative to *http://localhost:8080*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 # **get_code**
 > VersionInfo get_code()
 
-get the version information for this server
+get the code version
 
 ### Example
 
@@ -21,10 +21,10 @@ from kubernetes_asyncio_pydantic.models.version_info import VersionInfo
 from kubernetes_asyncio_pydantic.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost:8080
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kubernetes_asyncio_pydantic.Configuration(
-    host = "http://localhost:8080"
+    host = "http://localhost"
 )
 
 

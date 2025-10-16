@@ -6,7 +6,6 @@ AllocationResult contains attributes of an allocated resource.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**allocation_timestamp** | **datetime** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] 
 **devices** | [**V1beta1DeviceAllocationResult**](V1beta1DeviceAllocationResult.md) | Devices is the result of allocating devices. | [optional] 
 **node_selector** | [**V1NodeSelector**](V1NodeSelector.md) | NodeSelector defines where the allocated resources are available. If unset, they are available everywhere. | [optional] 
 

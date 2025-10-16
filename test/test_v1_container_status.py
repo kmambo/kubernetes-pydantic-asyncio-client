@@ -66,7 +66,6 @@ class TestV1ContainerStatus(unittest.TestCase):
                     running = null, 
                     terminated = null, 
                     waiting = null, ),
-                stop_signal = '',
                 user = kubernetes_asyncio_pydantic.models.v1/container_user.v1.ContainerUser(
                     linux = null, ),
                 volume_mounts = [

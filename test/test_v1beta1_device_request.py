@@ -37,25 +37,16 @@ class TestV1beta1DeviceRequest(unittest.TestCase):
             return V1beta1DeviceRequest(
                 admin_access = True,
                 allocation_mode = '',
-                capacity = kubernetes_asyncio_pydantic.models.v1beta1/capacity_requirements.v1beta1.CapacityRequirements(
-                    requests = {
-                        'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
-                        }, ),
                 count = 56,
                 device_class_name = '',
-                first_available = [
-                    null
-                    ],
                 name = '',
                 selectors = [
-                    null
-                    ],
-                tolerations = [
                     null
                     ]
             )
         else:
             return V1beta1DeviceRequest(
+                device_class_name = '',
                 name = '',
         )
         """

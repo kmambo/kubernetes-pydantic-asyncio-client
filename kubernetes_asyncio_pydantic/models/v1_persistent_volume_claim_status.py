@@ -63,12 +63,12 @@ class V1PersistentVolumeClaimStatus(BaseModel):
     )
     current_volume_attributes_class_name: Optional[StrictStr] = Field(
         default=None,
-        description="currentVolumeAttributesClassName is the current name of the VolumeAttributesClass the PVC is using. When unset, there is no VolumeAttributeClass applied to this PersistentVolumeClaim",
+        description="currentVolumeAttributesClassName is the current name of the VolumeAttributesClass the PVC is using. When unset, there is no VolumeAttributeClass applied to this PersistentVolumeClaim This is a beta field and requires enabling VolumeAttributesClass feature (off by default).",
         alias="currentVolumeAttributesClassName",
     )
     modify_volume_status: Optional[V1ModifyVolumeStatus] = Field(
         default=None,
-        description="ModifyVolumeStatus represents the status object of ControllerModifyVolume operation. When this is unset, there is no ModifyVolume operation being attempted.",
+        description="ModifyVolumeStatus represents the status object of ControllerModifyVolume operation. When this is unset, there is no ModifyVolume operation being attempted. This is a beta field and requires enabling VolumeAttributesClass feature (off by default).",
         alias="modifyVolumeStatus",
     )
     phase: Optional[StrictStr] = Field(

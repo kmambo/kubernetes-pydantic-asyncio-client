@@ -90,11 +90,6 @@ class V1ContainerStatus(BaseModel):
         default=None,
         description="State holds details about the container's current condition.",
     )
-    stop_signal: Optional[StrictStr] = Field(
-        default=None,
-        description="StopSignal reports the effective stop signal for this container",
-        alias="stopSignal",
-    )
     user: Optional[V1ContainerUser] = Field(
         default=None,
         description="User represents user identity information initially attached to the first process of the container",
@@ -115,7 +110,6 @@ class V1ContainerStatus(BaseModel):
         "restartCount",
         "started",
         "state",
-        "stopSignal",
         "user",
         "volumeMounts",
     ]
@@ -247,7 +241,6 @@ class V1ContainerStatus(BaseModel):
                     if obj.get("state") is not None
                     else None
                 ),
-                "stopSignal": obj.get("stopSignal"),
                 "user": (
                     V1ContainerUser.from_dict(obj["user"])
                     if obj.get("user") is not None

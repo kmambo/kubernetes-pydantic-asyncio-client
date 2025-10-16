@@ -51,8 +51,7 @@ class TestV1Container(unittest.TestCase):
                 image_pull_policy = '',
                 lifecycle = kubernetes_asyncio_pydantic.models.v1/lifecycle.v1.Lifecycle(
                     post_start = null, 
-                    pre_stop = null, 
-                    stop_signal = '', ),
+                    pre_stop = null, ),
                 liveness_probe = kubernetes_asyncio_pydantic.models.v1/probe.v1.Probe(
                     exec = null, 
                     failure_threshold = 56, 
@@ -93,9 +92,6 @@ class TestV1Container(unittest.TestCase):
                         'key' : kubernetes_asyncio_pydantic.models.v1_pod_spec_overhead_value.v1_PodSpec_overhead_value()
                         }, ),
                 restart_policy = '',
-                restart_policy_rules = [
-                    null
-                    ],
                 security_context = kubernetes_asyncio_pydantic.models.v1/security_context.v1.SecurityContext(
                     allow_privilege_escalation = True, 
                     app_armor_profile = null, 

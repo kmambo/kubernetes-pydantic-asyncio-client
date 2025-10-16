@@ -71,6 +71,7 @@ class TestV1StatefulSetSpec(unittest.TestCase):
                     match_labels = {
                         'key' : ''
                         }, ),
+                service_name = '',
                 template = kubernetes_asyncio_pydantic.models.v1/pod_template_spec.v1.PodTemplateSpec(
                     metadata = null, 
                     spec = null, ),

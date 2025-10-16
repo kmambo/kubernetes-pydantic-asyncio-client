@@ -22,8 +22,6 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing_extensions import Self
 
-from kubernetes_asyncio_pydantic.models.v1_node_swap_status import V1NodeSwapStatus
-
 
 class V1NodeSystemInfo(BaseModel):
     """
@@ -60,9 +58,6 @@ class V1NodeSystemInfo(BaseModel):
         description="OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).",
         alias="osImage",
     )
-    swap: Optional[V1NodeSwapStatus] = Field(
-        default=None, description="Swap Info reported by the node."
-    )
     system_uuid: StrictStr = Field(
         description="SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-us/red_hat_subscription_management/1/html/rhsm/uuid",
         alias="systemUUID",
@@ -77,7 +72,6 @@ class V1NodeSystemInfo(BaseModel):
         "machineID",
         "operatingSystem",
         "osImage",
-        "swap",
         "systemUUID",
     ]
 
@@ -118,9 +112,6 @@ class V1NodeSystemInfo(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of swap
-        if self.swap:
-            _dict["swap"] = self.swap.to_dict()
         return _dict
 
     @classmethod
@@ -169,11 +160,6 @@ class V1NodeSystemInfo(BaseModel):
                     else ""
                 ),
                 "osImage": obj.get("osImage") if obj.get("osImage") is not None else "",
-                "swap": (
-                    V1NodeSwapStatus.from_dict(obj["swap"])
-                    if obj.get("swap") is not None
-                    else None
-                ),
                 "systemUUID": (
                     obj.get("systemUUID") if obj.get("systemUUID") is not None else ""
                 ),

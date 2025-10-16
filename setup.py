@@ -21,7 +21,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "kubernetes_asyncio_pydantic"
-VERSION = "1.34.1"
+VERSION = "32.1.0"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
     "urllib3 >= 2.1.0, < 3.0.0",
@@ -30,7 +30,6 @@ REQUIRES = [
     "aiohttp-retry >= 2.8.3",
     "pydantic >= 2",
     "typing-extensions >= 4.7.1",
-    "lazy-imports >= 1, < 2",
 ]
 
 setup(

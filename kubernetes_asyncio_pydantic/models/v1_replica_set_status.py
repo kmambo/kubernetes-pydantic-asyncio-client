@@ -34,7 +34,7 @@ class V1ReplicaSetStatus(BaseModel):
 
     available_replicas: Optional[StrictInt] = Field(
         default=None,
-        description="The number of available non-terminating pods (ready for at least minReadySeconds) for this replica set.",
+        description="The number of available replicas (ready for at least minReadySeconds) for this replica set.",
         alias="availableReplicas",
     )
     conditions: Optional[List[V1ReplicaSetCondition]] = Field(
@@ -43,7 +43,7 @@ class V1ReplicaSetStatus(BaseModel):
     )
     fully_labeled_replicas: Optional[StrictInt] = Field(
         default=None,
-        description="The number of non-terminating pods that have labels matching the labels of the pod template of the replicaset.",
+        description="The number of pods that have labels matching the labels of the pod template of the replicaset.",
         alias="fullyLabeledReplicas",
     )
     observed_generation: Optional[StrictInt] = Field(
@@ -53,16 +53,11 @@ class V1ReplicaSetStatus(BaseModel):
     )
     ready_replicas: Optional[StrictInt] = Field(
         default=None,
-        description="The number of non-terminating pods targeted by this ReplicaSet with a Ready Condition.",
+        description="readyReplicas is the number of pods targeted by this ReplicaSet with a Ready Condition.",
         alias="readyReplicas",
     )
     replicas: StrictInt = Field(
-        description="Replicas is the most recently observed number of non-terminating pods. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset"
-    )
-    terminating_replicas: Optional[StrictInt] = Field(
-        default=None,
-        description="The number of terminating pods for this replica set. Terminating pods have a non-null .metadata.deletionTimestamp and have not yet reached the Failed or Succeeded .status.phase.  This is an alpha field. Enable DeploymentReplicaSetTerminatingReplicas to be able to use this field.",
-        alias="terminatingReplicas",
+        description="Replicas is the most recently observed number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller"
     )
     __properties: ClassVar[List[str]] = [
         "availableReplicas",
@@ -71,7 +66,6 @@ class V1ReplicaSetStatus(BaseModel):
         "observedGeneration",
         "readyReplicas",
         "replicas",
-        "terminatingReplicas",
     ]
 
     model_config = ConfigDict(
@@ -146,7 +140,6 @@ class V1ReplicaSetStatus(BaseModel):
                 "replicas": (
                     obj.get("replicas") if obj.get("replicas") is not None else 0
                 ),
-                "terminatingReplicas": obj.get("terminatingReplicas"),
             }
         )
         return _obj

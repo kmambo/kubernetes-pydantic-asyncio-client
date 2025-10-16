@@ -22,7 +22,6 @@ from typing import Any, ClassVar, Dict, List, Optional, Set
 from pydantic import BaseModel, ConfigDict, Field
 from typing_extensions import Self
 
-from kubernetes_asyncio_pydantic.models.v1_for_node import V1ForNode
 from kubernetes_asyncio_pydantic.models.v1_for_zone import V1ForZone
 
 
@@ -31,17 +30,12 @@ class V1EndpointHints(BaseModel):
     EndpointHints provides hints describing how an endpoint should be consumed.
     """  # noqa: E501
 
-    for_nodes: Optional[List[V1ForNode]] = Field(
-        default=None,
-        description="forNodes indicates the node(s) this endpoint should be consumed by when using topology aware routing. May contain a maximum of 8 entries. This is an Alpha feature and is only used when the PreferSameTrafficDistribution feature gate is enabled.",
-        alias="forNodes",
-    )
     for_zones: Optional[List[V1ForZone]] = Field(
         default=None,
-        description="forZones indicates the zone(s) this endpoint should be consumed by when using topology aware routing. May contain a maximum of 8 entries.",
+        description="forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing.",
         alias="forZones",
     )
-    __properties: ClassVar[List[str]] = ["forNodes", "forZones"]
+    __properties: ClassVar[List[str]] = ["forZones"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -80,13 +74,6 @@ class V1EndpointHints(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in for_nodes (list)
-        _items = []
-        if self.for_nodes:
-            for _item_for_nodes in self.for_nodes:
-                if _item_for_nodes:
-                    _items.append(_item_for_nodes.to_dict())
-            _dict["forNodes"] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in for_zones (list)
         _items = []
         if self.for_zones:
@@ -107,16 +94,11 @@ class V1EndpointHints(BaseModel):
 
         _obj = cls.model_validate(
             {
-                "forNodes": (
-                    [V1ForNode.from_dict(_item) for _item in obj["forNodes"]]
-                    if obj.get("forNodes") is not None
-                    else None
-                ),
                 "forZones": (
                     [V1ForZone.from_dict(_item) for _item in obj["forZones"]]
                     if obj.get("forZones") is not None
                     else None
-                ),
+                )
             }
         )
         return _obj

@@ -51,13 +51,6 @@ class TestV1VolumeProjection(unittest.TestCase):
                     items = [
                         null
                         ], ),
-                pod_certificate = kubernetes_asyncio_pydantic.models.v1/pod_certificate_projection.v1.PodCertificateProjection(
-                    certificate_chain_path = '', 
-                    credential_bundle_path = '', 
-                    key_path = '', 
-                    key_type = '', 
-                    max_expiration_seconds = 56, 
-                    signer_name = '', ),
                 secret = kubernetes_asyncio_pydantic.models.v1/secret_projection.v1.SecretProjection(
                     items = [
                         null

@@ -35,32 +35,12 @@ class TestV1beta1BasicDevice(unittest.TestCase):
         model = V1beta1BasicDevice()
         if include_optional:
             return V1beta1BasicDevice(
-                all_nodes = True,
-                allow_multiple_allocations = True,
                 attributes = {
                     'key' : null
                     },
-                binding_conditions = [
-                    ''
-                    ],
-                binding_failure_conditions = [
-                    ''
-                    ],
-                binds_to_node = True,
                 capacity = {
                     'key' : null
-                    },
-                consumes_counters = [
-                    null
-                    ],
-                node_name = '',
-                node_selector = kubernetes_asyncio_pydantic.models.v1/node_selector.v1.NodeSelector(
-                    node_selector_terms = [
-                        null
-                        ], ),
-                taints = [
-                    null
-                    ]
+                    }
             )
         else:
             return V1beta1BasicDevice(

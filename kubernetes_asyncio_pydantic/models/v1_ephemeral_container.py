@@ -26,9 +26,6 @@ from kubernetes_asyncio_pydantic.models.v1_container_port import V1ContainerPort
 from kubernetes_asyncio_pydantic.models.v1_container_resize_policy import (
     V1ContainerResizePolicy,
 )
-from kubernetes_asyncio_pydantic.models.v1_container_restart_rule import (
-    V1ContainerRestartRule,
-)
 from kubernetes_asyncio_pydantic.models.v1_env_from_source import V1EnvFromSource
 from kubernetes_asyncio_pydantic.models.v1_env_var import V1EnvVar
 from kubernetes_asyncio_pydantic.models.v1_lifecycle import V1Lifecycle
@@ -60,7 +57,7 @@ class V1EphemeralContainer(BaseModel):
     )
     env_from: Optional[List[V1EnvFromSource]] = Field(
         default=None,
-        description="List of sources to populate environment variables in the container. The keys defined within a source may consist of any printable ASCII characters except '='. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.",
+        description="List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.",
         alias="envFrom",
     )
     image: Optional[StrictStr] = Field(
@@ -102,13 +99,8 @@ class V1EphemeralContainer(BaseModel):
     )
     restart_policy: Optional[StrictStr] = Field(
         default=None,
-        description="Restart policy for the container to manage the restart behavior of each container within a pod. You cannot set this field on ephemeral containers.",
+        description="Restart policy for the container to manage the restart behavior of each container within a pod. This may only be set for init containers. You cannot set this field on ephemeral containers.",
         alias="restartPolicy",
-    )
-    restart_policy_rules: Optional[List[V1ContainerRestartRule]] = Field(
-        default=None,
-        description="Represents a list of rules to be checked to determine if the container should be restarted on exit. You cannot set this field on ephemeral containers.",
-        alias="restartPolicyRules",
     )
     security_context: Optional[V1SecurityContext] = Field(
         default=None,
@@ -178,7 +170,6 @@ class V1EphemeralContainer(BaseModel):
         "resizePolicy",
         "resources",
         "restartPolicy",
-        "restartPolicyRules",
         "securityContext",
         "startupProbe",
         "stdin",
@@ -269,13 +260,6 @@ class V1EphemeralContainer(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of resources
         if self.resources:
             _dict["resources"] = self.resources.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of each item in restart_policy_rules (list)
-        _items = []
-        if self.restart_policy_rules:
-            for _item_restart_policy_rules in self.restart_policy_rules:
-                if _item_restart_policy_rules:
-                    _items.append(_item_restart_policy_rules.to_dict())
-            _dict["restartPolicyRules"] = _items
         # override the default output from pydantic by calling `to_dict()` of security_context
         if self.security_context:
             _dict["securityContext"] = self.security_context.to_dict()
@@ -358,14 +342,6 @@ class V1EphemeralContainer(BaseModel):
                     else None
                 ),
                 "restartPolicy": obj.get("restartPolicy"),
-                "restartPolicyRules": (
-                    [
-                        V1ContainerRestartRule.from_dict(_item)
-                        for _item in obj["restartPolicyRules"]
-                    ]
-                    if obj.get("restartPolicyRules") is not None
-                    else None
-                ),
                 "securityContext": (
                     V1SecurityContext.from_dict(obj["securityContext"])
                     if obj.get("securityContext") is not None

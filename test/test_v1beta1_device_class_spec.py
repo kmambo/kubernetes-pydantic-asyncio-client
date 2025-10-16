@@ -38,7 +38,6 @@ class TestV1beta1DeviceClassSpec(unittest.TestCase):
                 config = [
                     null
                     ],
-                extended_resource_name = '',
                 selectors = [
                     null
                     ]

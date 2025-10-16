@@ -76,8 +76,7 @@ class V1StatefulSetSpec(BaseModel):
     selector: V1LabelSelector = Field(
         description="selector is a label query over pods that should match the replica count. It must match the pod template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors"
     )
-    service_name: Optional[StrictStr] = Field(
-        default="",
+    service_name: StrictStr = Field(
         description='serviceName is the name of the service that governs this StatefulSet. This service must exist before the StatefulSet, and is responsible for the network identity of the set. Pods get DNS/hostnames that follow the pattern: pod-specific-string.serviceName.default.svc.cluster.local where "pod-specific-string" is managed by the StatefulSet controller.',
         alias="serviceName",
     )
